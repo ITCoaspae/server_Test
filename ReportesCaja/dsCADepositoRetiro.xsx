@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="-656" zoom="100">
+    <CAFacturas_XmlElement left="9498" top="292" width="5292" height="2963" selected="0" zOrder="1" index="0" expanded="1" />
+    <CAT_ASOCIADOS_XmlElement left="345" top="344" width="5292" height="2963" selected="0" zOrder="2" index="1" expanded="1" />
+    <AhMovimientos_XmlElement left="11536" top="6434" width="5292" height="2963" selected="0" zOrder="13" index="2" expanded="1" />
+    <CADet_Facturas_XmlElement left="1826" top="5794" width="5291" height="4233" selected="0" zOrder="4" index="3" expanded="1" />
+    <CAFacturasAhMovimientos_XmlKeyref left="9276" top="5823" width="503" height="503" selected="0" zOrder="14" />
+    <CAT_ASOCIADOSCAFacturas_XmlKeyref left="5650" top="3348" width="503" height="503" selected="0" zOrder="5" />
+    <CAFacturasCADet_Facturas_XmlKeyref left="7478" top="5333" width="503" height="503" selected="0" zOrder="9" />
+</XSDDesignerLayout>

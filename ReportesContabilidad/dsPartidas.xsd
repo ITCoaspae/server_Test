@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsPartidas" targetNamespace="http://tempuri.org/dsPartidas.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsPartidas.xsd" xmlns:mstns="http://tempuri.org/dsPartidas.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsPartidas" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="DIARIO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Num_Partida" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Tipo_Partida" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:double" minOccurs="0" />
+							<xs:element name="Abono" type="xs:double" minOccurs="0" />
+							<xs:element name="Autorizado" type="xs:string" minOccurs="0" />
+							<xs:element name="Usu_Digita" type="xs:string" minOccurs="0" />
+							<xs:element name="Usu_Autoriza" type="xs:string" minOccurs="0" />
+							<xs:element name="Fec_Autoriza" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="IdEstado" type="xs:string" minOccurs="0" />
+							<xs:element name="Prefijo" type="xs:string" minOccurs="0" />
+							<xs:element name="Inicial" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DET_DIARIO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" type="xs:int" />
+							<xs:element name="Num_Partida" type="xs:string" />
+							<xs:element name="IdDepto" type="xs:string" minOccurs="0" />
+							<xs:element name="Cod_CBeneficio" type="xs:string" minOccurs="0" />
+							<xs:element name="Cod_CCosto" type="xs:string" minOccurs="0" />
+							<xs:element name="IdCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="Descrip" type="xs:string" minOccurs="0" />
+							<xs:element name="IdSucursal" type="xs:string" minOccurs="0" />
+							<xs:element name="Concepto" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Abono" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Cta_Dependencia" type="xs:string" minOccurs="0" />
+							<xs:element name="DescripCtaDepend" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Mes" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:int" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Reporte" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsPartidasKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DIARIO" />
+			<xs:field xpath="mstns:Num_Partida" />
+		</xs:unique>
+		<xs:unique name="dsPartidasKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DET_DIARIO" />
+			<xs:field xpath="mstns:Correlativo" />
+			<xs:field xpath="mstns:Num_Partida" />
+		</xs:unique>
+		<xs:keyref name="DIARIODET_DIARIO" refer="dsPartidasKey1">
+			<xs:selector xpath=".//mstns:DET_DIARIO" />
+			<xs:field xpath="mstns:Num_Partida" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

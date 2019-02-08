@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="429" viewPortTop="103" zoom="100">
+    <CAFacturas_XmlElement left="1429" top="344" width="5291" height="7620" selected="0" zOrder="3" index="0" expanded="1" />
+    <AhMovimientos_XmlElement left="11164" top="608" width="5292" height="6773" selected="0" zOrder="1" index="1" expanded="1" />
+    <Reporte_XmlElement left="9634" top="8176" width="5292" height="2963" selected="0" zOrder="2" index="2" expanded="1" />
+    <CAFacturasAhMovimientos_XmlKeyref left="7764" top="7291" width="503" height="503" selected="0" zOrder="4" />
+</XSDDesignerLayout>

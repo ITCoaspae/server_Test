@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="526" zoom="100">
+    <AhCuentasAhorro_XmlElement left="3599" top="2672" width="7725" height="6350" selected="0" zOrder="0" index="0" expanded="1" />
+    <Reporte_XmlElement left="11721" top="2752" width="5292" height="4233" selected="0" zOrder="1" index="1" expanded="1" />
+</XSDDesignerLayout>

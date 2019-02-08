@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsListadoEmpleados" targetNamespace="http://tempuri.org/dsListadoEmpleados.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsListadoEmpleados.xsd"
+	xmlns:mstns="http://tempuri.org/dsListadoEmpleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsListadoEmpleados" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PLEmpleados">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodEmpleado" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Sexo" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaIngreso" type="xs:date" minOccurs="0" />
+							<xs:element name="EstadoCivil" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCargo" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoEmpleado" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaRetiro" type="xs:date" minOccurs="0" />
+							<xs:element name="FechaNac" type="xs:date" minOccurs="0" />
+							<xs:element name="LugarNac" type="xs:string" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaExtDUI" type="xs:date" minOccurs="0" />
+							<xs:element name="LugarExtDUI" type="xs:string" minOccurs="0" />
+							<xs:element name="NIT" type="xs:string" minOccurs="0" />
+							<xs:element name="NIP" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="CodInstitucion" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="CarnetElectoral" type="xs:string" minOccurs="0" />
+							<xs:element name="Direccion" type="xs:string" minOccurs="0" />
+							<xs:element name="Telefonos" type="xs:string" minOccurs="0" />
+							<xs:element name="Celular" type="xs:string" minOccurs="0" />
+							<xs:element name="Ap_Materno" type="xs:string" minOccurs="0" />
+							<xs:element name="Ap_Paterno" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre_ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="CodAFP" type="xs:string" minOccurs="0" />
+							<xs:element name="NoAFP" type="xs:string" minOccurs="0" />
+							<xs:element name="SeguroColectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="Estado" type="xs:string" minOccurs="0" />
+							<xs:element name="CodRetiro" type="xs:string" minOccurs="0" />
+							<xs:element name="GradoAcademico" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="421" viewPortTop="-788" zoom="100">
+    <AhMovimientos_XmlElement left="8996" top="6059" width="5291" height="8043" selected="0" zOrder="3" index="0" expanded="1" />
+    <CAFacturas_XmlElement left="1984" top="212" width="5292" height="6773" selected="0" zOrder="4" index="1" expanded="1" />
+    <CADet_Facturas_XmlElement left="14049" top="714" width="5292" height="2964" selected="0" zOrder="5" index="2" expanded="1" />
+    <CAT_ASOCIADOS_XmlElement left="14578" top="3943" width="5292" height="2963" selected="0" zOrder="7" index="3" expanded="1" />
+    <AhTiposAhorro_XmlElement left="1985" top="7891" width="5292" height="2963" selected="0" zOrder="21" index="4" expanded="1" />
+    <Reporte_XmlElement left="15107" top="7705" width="5292" height="2963" selected="0" zOrder="30" index="5" expanded="1" />
+    <CAFacturasAhMovimientos_XmlKeyref left="7395" top="6893" width="503" height="503" selected="0" zOrder="13" />
+    <AhTiposAhorroAhMovimientos_XmlKeyref left="6893" top="11750" width="503" height="503" selected="0" zOrder="22" />
+    <CAT_ASOCIADOSCAFacturas_XmlKeyref left="10676" top="4260" width="503" height="503" selected="0" zOrder="17" />
+    <CAFacturasCADet_Facturas_XmlKeyref left="10212" top="1521" width="503" height="503" selected="0" zOrder="9" />
+    <AhTiposAhorroCADet_Facturas_XmlKeyref left="10412" top="14884" width="503" height="503" selected="0" zOrder="27" />
+</XSDDesignerLayout>

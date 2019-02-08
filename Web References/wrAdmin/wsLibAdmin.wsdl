@@ -1,0 +1,2937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibAdmin" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibAdmin" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibAdmin">
+      <s:element name="VerificarCambioContraseña">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarCambioContraseñaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificarCambioContraseñaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPermisoProcesos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRol" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPermisoProcesosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConsultarPermisoProcesosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRolesUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRol" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRolesUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarRolesUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPermisosProcesoRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idProceso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPermisosProcesoRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="consultarPermisosProcesoRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_CentroCostos_Sucursal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_CentroCostos_SucursalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_CentroCostos_SucursalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoNsultar_ADMTipoMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoNsultar_ADMTipoMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CoNsultar_ADMTipoMensajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMTipoMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMTipoMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insertar_ADMTipoMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMTipoMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMTipoMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Actualizar_ADMTipoMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMTipoMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMTipoMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Eliminar_ADMTipoMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_ADMMensajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asunto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insertar_ADMMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asunto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Actualizar_ADMMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Eliminar_ADMMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMEnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMEnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_ADMEnvioMensajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMEnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMEnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insertar_ADMEnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMEnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdMsj" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMEnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Actualizar_ADMEnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMEnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMEnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Eliminar_ADMEnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMDet_EnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdDet_EnvioMsj" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remitente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ADMDet_EnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_ADMDet_EnvioMensajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMDet_EnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remitente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertar_ADMDet_EnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insertar_ADMDet_EnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMDet_EnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDet_EnvioMsj" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remitente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_ADMDet_EnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Actualizar_ADMDet_EnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMDet_EnvioMensajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDet_EnvioMsj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_ADMDet_EnvioMensajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Eliminar_ADMDet_EnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaptacionDPF_Acumulado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaFin" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaptacionDPF_AcumuladoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CaptacionDPF_AcumuladoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaMenuPrivilegios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaMenuPrivilegiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaMenuPrivilegiosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaMenuProcesos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaMenuProcesosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargaMenuProcesosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="tns:Modulos" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Modulos">
+        <s:restriction base="s:string">
+          <s:enumeration value="ActivoFijo" />
+          <s:enumeration value="Administrativo" />
+          <s:enumeration value="Ahorros" />
+          <s:enumeration value="Aportaciones" />
+          <s:enumeration value="Asociados" />
+          <s:enumeration value="Bancos" />
+          <s:enumeration value="Caja" />
+          <s:enumeration value="Cobranza" />
+          <s:enumeration value="Contabilidad" />
+          <s:enumeration value="Creditos" />
+          <s:enumeration value="Garantias" />
+          <s:enumeration value="General" />
+          <s:enumeration value="Gerencial" />
+          <s:enumeration value="Planillas" />
+          <s:enumeration value="Todos" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CargarAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CargarAppResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CierraSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CierraSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CierraSesionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAcceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAccesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarAccesoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAccesoProceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAccesoProcesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarAccesoProcesoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pcampos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarAppResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBitacora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTipoBusqueda" type="tns:TipoBusquedaBitacora" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaFin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="tns:Modulos" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTabla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TipoBusquedaBitacora">
+        <s:restriction base="s:string">
+          <s:enumeration value="porModulo" />
+          <s:enumeration value="porRangoFechas" />
+          <s:enumeration value="porRangoFechasyModulo" />
+          <s:enumeration value="porTabla" />
+          <s:enumeration value="porUsuario" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ConsultarBitacoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBitacoraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBitacoraxFiltro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBitacoraxFiltroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBitacoraxFiltroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarUsuarioxRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarUsuarioxRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarUsuarioxRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEEncripta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pDato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEEncriptaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEEncriptaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAcceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAccesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarAccesoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAccesoProceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAccesoProcesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarAccesoProcesoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuarioxRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuarioxRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarUsuarioxRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Empresa">
+        <s:complexType />
+      </s:element>
+      <s:element name="EmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EscribeLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sTexto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EscribeLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EscribeLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fecha">
+        <s:complexType />
+      </s:element>
+      <s:element name="FechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FechaResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraMatrizProgramas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraMatrizProgramasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneraMatrizProgramasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAcceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCodRol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPrograma" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaAcceso" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuarioAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAccesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarAccesoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAccesoProceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCodRol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdProceso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaAcceso" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuarioAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAccesoProcesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarAccesoProcesoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pClave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecValDesde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecValHasta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuarioxRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuarioxRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarUsuarioxRolResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAcceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuarioAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAccesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarAccesoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAccesoProceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuarioAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAccesoProcesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarAccesoProcesoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarClave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pClave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isReset" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarClaveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarRolResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarUsarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecValDesde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecValHasta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarUsariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarUsariosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarUsariosxRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarUsariosxRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarUsariosxRolResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerAplicaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTipos" type="tns:TipoApp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TipoApp">
+        <s:restriction base="s:string">
+          <s:enumeration value="Final" />
+          <s:enumeration value="Prueba" />
+          <s:enumeration value="Todos" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ObtenerAplicacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerAplicacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PorcentajeIVA">
+        <s:complexType />
+      </s:element>
+      <s:element name="PorcentajeIVAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PorcentajeIVAResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reporte_Prestamos_Gerenciales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaFin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCodTipoCredito" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodosGt" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCodGestor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reporte_Prestamos_GerencialesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reporte_Prestamos_GerencialesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerficaDerechos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdProceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerficaDerechosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerficaDerechosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDomain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaSesionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VerificarCambioContraseñaSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarCambioContraseña" />
+  </wsdl:message>
+  <wsdl:message name="VerificarCambioContraseñaSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarCambioContraseñaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPermisoProcesosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPermisoProcesos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPermisoProcesosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPermisoProcesosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRolesUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarRolesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRolesUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarRolesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarPermisosProcesoRolSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarPermisosProcesoRol" />
+  </wsdl:message>
+  <wsdl:message name="consultarPermisosProcesoRolSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarPermisosProcesoRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_CentroCostos_SucursalSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_CentroCostos_Sucursal" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_CentroCostos_SucursalSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_CentroCostos_SucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CoNsultar_ADMTipoMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:CoNsultar_ADMTipoMensajes" />
+  </wsdl:message>
+  <wsdl:message name="CoNsultar_ADMTipoMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:CoNsultar_ADMTipoMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMTipoMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMTipoMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMTipoMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMTipoMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMTipoMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMTipoMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMTipoMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMTipoMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMTipoMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMTipoMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMTipoMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMTipoMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMEnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMEnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMEnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMEnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMEnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMEnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMEnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMEnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMEnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMEnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMEnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMEnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMEnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMEnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMEnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMEnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMDet_EnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMDet_EnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ADMDet_EnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_ADMDet_EnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMDet_EnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMDet_EnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Insertar_ADMDet_EnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Insertar_ADMDet_EnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMDet_EnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMDet_EnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_ADMDet_EnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_ADMDet_EnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMDet_EnvioMensajesSoapIn">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMDet_EnvioMensajes" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_ADMDet_EnvioMensajesSoapOut">
+    <wsdl:part name="parameters" element="tns:Eliminar_ADMDet_EnvioMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CaptacionDPF_AcumuladoSoapIn">
+    <wsdl:part name="parameters" element="tns:CaptacionDPF_Acumulado" />
+  </wsdl:message>
+  <wsdl:message name="CaptacionDPF_AcumuladoSoapOut">
+    <wsdl:part name="parameters" element="tns:CaptacionDPF_AcumuladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaMenuPrivilegiosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaMenuPrivilegios" />
+  </wsdl:message>
+  <wsdl:message name="CargaMenuPrivilegiosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaMenuPrivilegiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaMenuProcesosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaMenuProcesos" />
+  </wsdl:message>
+  <wsdl:message name="CargaMenuProcesosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaMenuProcesosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarAppSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarApp" />
+  </wsdl:message>
+  <wsdl:message name="CargarAppSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="CierraSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:CierraSesion" />
+  </wsdl:message>
+  <wsdl:message name="CierraSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:CierraSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarAcceso" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAccesoProcesoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarAccesoProceso" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAccesoProcesoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarAccesoProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAppSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarApp" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAppSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacora" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraxFiltroSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacoraxFiltro" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraxFiltroSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacoraxFiltroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarRol" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuarioxRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarioxRol" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuarioxRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarioxRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="DEEncriptaSoapIn">
+    <wsdl:part name="parameters" element="tns:DEEncripta" />
+  </wsdl:message>
+  <wsdl:message name="DEEncriptaSoapOut">
+    <wsdl:part name="parameters" element="tns:DEEncriptaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarAcceso" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAccesoProcesoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarAccesoProceso" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAccesoProcesoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarAccesoProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarRol" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioxRolSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioxRol" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioxRolSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioxRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:Empresa" />
+  </wsdl:message>
+  <wsdl:message name="EmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EscribeLogSoapIn">
+    <wsdl:part name="parameters" element="tns:EscribeLog" />
+  </wsdl:message>
+  <wsdl:message name="EscribeLogSoapOut">
+    <wsdl:part name="parameters" element="tns:EscribeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="FechaSoapIn">
+    <wsdl:part name="parameters" element="tns:Fecha" />
+  </wsdl:message>
+  <wsdl:message name="FechaSoapOut">
+    <wsdl:part name="parameters" element="tns:FechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeneraMatrizProgramasSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneraMatrizProgramas" />
+  </wsdl:message>
+  <wsdl:message name="GeneraMatrizProgramasSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneraMatrizProgramasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarAcceso" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAccesoProcesoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarAccesoProceso" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAccesoProcesoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarAccesoProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarRol" />
+  </wsdl:message>
+  <wsdl:message name="InsertarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioxRolSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioxRol" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioxRolSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioxRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarAcceso" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAccesoProcesoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarAccesoProceso" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAccesoProcesoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarAccesoProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarClave" />
+  </wsdl:message>
+  <wsdl:message name="ModificarClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarRol" />
+  </wsdl:message>
+  <wsdl:message name="ModificarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarUsariosSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarUsarios" />
+  </wsdl:message>
+  <wsdl:message name="ModificarUsariosSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarUsariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarUsariosxRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarUsariosxRol" />
+  </wsdl:message>
+  <wsdl:message name="ModificarUsariosxRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarUsariosxRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerAplicacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerAplicaciones" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerAplicacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerAplicacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PorcentajeIVASoapIn">
+    <wsdl:part name="parameters" element="tns:PorcentajeIVA" />
+  </wsdl:message>
+  <wsdl:message name="PorcentajeIVASoapOut">
+    <wsdl:part name="parameters" element="tns:PorcentajeIVAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Reporte_Prestamos_GerencialesSoapIn">
+    <wsdl:part name="parameters" element="tns:Reporte_Prestamos_Gerenciales" />
+  </wsdl:message>
+  <wsdl:message name="Reporte_Prestamos_GerencialesSoapOut">
+    <wsdl:part name="parameters" element="tns:Reporte_Prestamos_GerencialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerficaDerechosSoapIn">
+    <wsdl:part name="parameters" element="tns:VerficaDerechos" />
+  </wsdl:message>
+  <wsdl:message name="VerficaDerechosSoapOut">
+    <wsdl:part name="parameters" element="tns:VerficaDerechosResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaSesion" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="VerificaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsLibAdminSoap">
+    <wsdl:operation name="VerificarCambioContraseña">
+      <wsdl:input message="tns:VerificarCambioContraseñaSoapIn" />
+      <wsdl:output message="tns:VerificarCambioContraseñaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPermisoProcesos">
+      <wsdl:input message="tns:ConsultarPermisoProcesosSoapIn" />
+      <wsdl:output message="tns:ConsultarPermisoProcesosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRolesUsuario">
+      <wsdl:input message="tns:ConsultarRolesUsuarioSoapIn" />
+      <wsdl:output message="tns:ConsultarRolesUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarPermisosProcesoRol">
+      <wsdl:input message="tns:consultarPermisosProcesoRolSoapIn" />
+      <wsdl:output message="tns:consultarPermisosProcesoRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_CentroCostos_Sucursal">
+      <wsdl:input message="tns:Consultar_CentroCostos_SucursalSoapIn" />
+      <wsdl:output message="tns:Consultar_CentroCostos_SucursalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoNsultar_ADMTipoMensajes">
+      <wsdl:input message="tns:CoNsultar_ADMTipoMensajesSoapIn" />
+      <wsdl:output message="tns:CoNsultar_ADMTipoMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMTipoMensajes">
+      <wsdl:input message="tns:Insertar_ADMTipoMensajesSoapIn" />
+      <wsdl:output message="tns:Insertar_ADMTipoMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMTipoMensajes">
+      <wsdl:input message="tns:Actualizar_ADMTipoMensajesSoapIn" />
+      <wsdl:output message="tns:Actualizar_ADMTipoMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMTipoMensajes">
+      <wsdl:input message="tns:Eliminar_ADMTipoMensajesSoapIn" />
+      <wsdl:output message="tns:Eliminar_ADMTipoMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMMensajes">
+      <wsdl:input message="tns:Consultar_ADMMensajesSoapIn" />
+      <wsdl:output message="tns:Consultar_ADMMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMMensajes">
+      <wsdl:input message="tns:Insertar_ADMMensajesSoapIn" />
+      <wsdl:output message="tns:Insertar_ADMMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMMensajes">
+      <wsdl:input message="tns:Actualizar_ADMMensajesSoapIn" />
+      <wsdl:output message="tns:Actualizar_ADMMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMMensajes">
+      <wsdl:input message="tns:Eliminar_ADMMensajesSoapIn" />
+      <wsdl:output message="tns:Eliminar_ADMMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMEnvioMensajes">
+      <wsdl:input message="tns:Consultar_ADMEnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Consultar_ADMEnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMEnvioMensajes">
+      <wsdl:input message="tns:Insertar_ADMEnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Insertar_ADMEnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMEnvioMensajes">
+      <wsdl:input message="tns:Actualizar_ADMEnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Actualizar_ADMEnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMEnvioMensajes">
+      <wsdl:input message="tns:Eliminar_ADMEnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Eliminar_ADMEnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMDet_EnvioMensajes">
+      <wsdl:input message="tns:Consultar_ADMDet_EnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Consultar_ADMDet_EnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMDet_EnvioMensajes">
+      <wsdl:input message="tns:Insertar_ADMDet_EnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Insertar_ADMDet_EnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMDet_EnvioMensajes">
+      <wsdl:input message="tns:Actualizar_ADMDet_EnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Actualizar_ADMDet_EnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMDet_EnvioMensajes">
+      <wsdl:input message="tns:Eliminar_ADMDet_EnvioMensajesSoapIn" />
+      <wsdl:output message="tns:Eliminar_ADMDet_EnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CaptacionDPF_Acumulado">
+      <wsdl:input message="tns:CaptacionDPF_AcumuladoSoapIn" />
+      <wsdl:output message="tns:CaptacionDPF_AcumuladoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuPrivilegios">
+      <wsdl:input message="tns:CargaMenuPrivilegiosSoapIn" />
+      <wsdl:output message="tns:CargaMenuPrivilegiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuProcesos">
+      <wsdl:input message="tns:CargaMenuProcesosSoapIn" />
+      <wsdl:output message="tns:CargaMenuProcesosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarApp">
+      <wsdl:input message="tns:CargarAppSoapIn" />
+      <wsdl:output message="tns:CargarAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CierraSesion">
+      <wsdl:input message="tns:CierraSesionSoapIn" />
+      <wsdl:output message="tns:CierraSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAcceso">
+      <wsdl:input message="tns:ConsultarAccesoSoapIn" />
+      <wsdl:output message="tns:ConsultarAccesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAccesoProceso">
+      <wsdl:input message="tns:ConsultarAccesoProcesoSoapIn" />
+      <wsdl:output message="tns:ConsultarAccesoProcesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarApp">
+      <wsdl:input message="tns:ConsultarAppSoapIn" />
+      <wsdl:output message="tns:ConsultarAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacora">
+      <wsdl:input message="tns:ConsultarBitacoraSoapIn" />
+      <wsdl:output message="tns:ConsultarBitacoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraxFiltro">
+      <wsdl:input message="tns:ConsultarBitacoraxFiltroSoapIn" />
+      <wsdl:output message="tns:ConsultarBitacoraxFiltroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRol">
+      <wsdl:input message="tns:ConsultarRolSoapIn" />
+      <wsdl:output message="tns:ConsultarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuario">
+      <wsdl:input message="tns:ConsultarUsuarioSoapIn" />
+      <wsdl:output message="tns:ConsultarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarioxRol">
+      <wsdl:input message="tns:ConsultarUsuarioxRolSoapIn" />
+      <wsdl:output message="tns:ConsultarUsuarioxRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DEEncripta">
+      <wsdl:input message="tns:DEEncriptaSoapIn" />
+      <wsdl:output message="tns:DEEncriptaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAcceso">
+      <wsdl:input message="tns:EliminarAccesoSoapIn" />
+      <wsdl:output message="tns:EliminarAccesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAccesoProceso">
+      <wsdl:input message="tns:EliminarAccesoProcesoSoapIn" />
+      <wsdl:output message="tns:EliminarAccesoProcesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <wsdl:input message="tns:EliminarRolSoapIn" />
+      <wsdl:output message="tns:EliminarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input message="tns:EliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:EliminarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuarioxRol">
+      <wsdl:input message="tns:EliminarUsuarioxRolSoapIn" />
+      <wsdl:output message="tns:EliminarUsuarioxRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Empresa">
+      <wsdl:input message="tns:EmpresaSoapIn" />
+      <wsdl:output message="tns:EmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EscribeLog">
+      <wsdl:input message="tns:EscribeLogSoapIn" />
+      <wsdl:output message="tns:EscribeLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fecha">
+      <wsdl:input message="tns:FechaSoapIn" />
+      <wsdl:output message="tns:FechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneraMatrizProgramas">
+      <wsdl:input message="tns:GeneraMatrizProgramasSoapIn" />
+      <wsdl:output message="tns:GeneraMatrizProgramasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAcceso">
+      <wsdl:input message="tns:InsertarAccesoSoapIn" />
+      <wsdl:output message="tns:InsertarAccesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAccesoProceso">
+      <wsdl:input message="tns:InsertarAccesoProcesoSoapIn" />
+      <wsdl:output message="tns:InsertarAccesoProcesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarRol">
+      <wsdl:input message="tns:InsertarRolSoapIn" />
+      <wsdl:output message="tns:InsertarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <wsdl:input message="tns:InsertarUsuarioSoapIn" />
+      <wsdl:output message="tns:InsertarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuarioxRol">
+      <wsdl:input message="tns:InsertarUsuarioxRolSoapIn" />
+      <wsdl:output message="tns:InsertarUsuarioxRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAcceso">
+      <wsdl:input message="tns:ModificarAccesoSoapIn" />
+      <wsdl:output message="tns:ModificarAccesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAccesoProceso">
+      <wsdl:input message="tns:ModificarAccesoProcesoSoapIn" />
+      <wsdl:output message="tns:ModificarAccesoProcesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarClave">
+      <wsdl:input message="tns:ModificarClaveSoapIn" />
+      <wsdl:output message="tns:ModificarClaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarRol">
+      <wsdl:input message="tns:ModificarRolSoapIn" />
+      <wsdl:output message="tns:ModificarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsarios">
+      <wsdl:input message="tns:ModificarUsariosSoapIn" />
+      <wsdl:output message="tns:ModificarUsariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsariosxRol">
+      <wsdl:input message="tns:ModificarUsariosxRolSoapIn" />
+      <wsdl:output message="tns:ModificarUsariosxRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAplicaciones">
+      <wsdl:input message="tns:ObtenerAplicacionesSoapIn" />
+      <wsdl:output message="tns:ObtenerAplicacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PorcentajeIVA">
+      <wsdl:input message="tns:PorcentajeIVASoapIn" />
+      <wsdl:output message="tns:PorcentajeIVASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Prestamos_Gerenciales">
+      <wsdl:input message="tns:Reporte_Prestamos_GerencialesSoapIn" />
+      <wsdl:output message="tns:Reporte_Prestamos_GerencialesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerficaDerechos">
+      <wsdl:input message="tns:VerficaDerechosSoapIn" />
+      <wsdl:output message="tns:VerficaDerechosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSesion">
+      <wsdl:input message="tns:VerificaSesionSoapIn" />
+      <wsdl:output message="tns:VerificaSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaUsuario">
+      <wsdl:input message="tns:VerificaUsuarioSoapIn" />
+      <wsdl:output message="tns:VerificaUsuarioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsLibAdminSoap" type="tns:wsLibAdminSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCambioContraseña">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificarCambioContraseña" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPermisoProcesos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarPermisoProcesos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRolesUsuario">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarRolesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPermisosProcesoRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/consultarPermisosProcesoRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_CentroCostos_Sucursal">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_CentroCostos_Sucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoNsultar_ADMTipoMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CoNsultar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMTipoMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMTipoMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMTipoMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMEnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMEnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMEnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMEnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMDet_EnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMDet_EnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMDet_EnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMDet_EnvioMensajes">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaptacionDPF_Acumulado">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CaptacionDPF_Acumulado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuPrivilegios">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargaMenuPrivilegios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuProcesos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargaMenuProcesos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarApp">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargarApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CierraSesion">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CierraSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAcceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAccesoProceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarApp">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacora">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarBitacora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraxFiltro">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarBitacoraxFiltro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuario">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarioxRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEEncripta">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/DEEncripta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAcceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAccesoProceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuarioxRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empresa">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Empresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EscribeLog">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EscribeLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fecha">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Fecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneraMatrizProgramas">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/GeneraMatrizProgramas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAcceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAccesoProceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuarioxRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAcceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAccesoProceso">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarClave">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsarios">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarUsarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsariosxRol">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarUsariosxRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAplicaciones">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ObtenerAplicaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PorcentajeIVA">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/PorcentajeIVA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Prestamos_Gerenciales">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Reporte_Prestamos_Gerenciales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerficaDerechos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerficaDerechos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSesion">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificaSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaUsuario">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLibAdminSoap12" type="tns:wsLibAdminSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCambioContraseña">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificarCambioContraseña" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPermisoProcesos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarPermisoProcesos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRolesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarRolesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPermisosProcesoRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/consultarPermisosProcesoRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_CentroCostos_Sucursal">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_CentroCostos_Sucursal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoNsultar_ADMTipoMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CoNsultar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMTipoMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMTipoMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMTipoMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMTipoMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMEnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMEnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMEnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMEnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMEnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_ADMDet_EnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Consultar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ADMDet_EnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Insertar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ADMDet_EnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Actualizar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ADMDet_EnvioMensajes">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaptacionDPF_Acumulado">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CaptacionDPF_Acumulado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuPrivilegios">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargaMenuPrivilegios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaMenuProcesos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargaMenuProcesos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarApp">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CargarApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CierraSesion">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CierraSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAcceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAccesoProceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarApp">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacora">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarBitacora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraxFiltro">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarBitacoraxFiltro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarioxRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ConsultarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEEncripta">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/DEEncripta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAcceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAccesoProceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuarioxRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EliminarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empresa">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Empresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EscribeLog">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/EscribeLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fecha">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Fecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneraMatrizProgramas">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/GeneraMatrizProgramas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAcceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAccesoProceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuarioxRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/InsertarUsuarioxRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAcceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAccesoProceso">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarAccesoProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarClave">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsarios">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarUsarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsariosxRol">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ModificarUsariosxRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAplicaciones">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/ObtenerAplicaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PorcentajeIVA">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/PorcentajeIVA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Prestamos_Gerenciales">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Reporte_Prestamos_Gerenciales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerficaDerechos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerficaDerechos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSesion">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificaSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/VerificaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsLibAdmin">
+    <wsdl:port name="wsLibAdminSoap" binding="tns:wsLibAdminSoap">
+      <soap:address location="http://localhost:57126/wsLibAdmin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsLibAdminSoap12" binding="tns:wsLibAdminSoap12">
+      <soap12:address location="http://localhost:57126/wsLibAdmin.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

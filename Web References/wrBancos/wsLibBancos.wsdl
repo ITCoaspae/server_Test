@@ -1,0 +1,2876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibBancos" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibBancos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibBancos">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="validarDenominacionesBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idBoveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="uno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cinco" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="diez" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="veinte" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cincuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="monedaUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fraccion" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarDenominacionesBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validarDenominacionesBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcCatCtasContablesCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRol" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcCatCtasContablesChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBcCatCtasContablesChequesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarBcCatCtasContablesCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codsucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaCreacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioActu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaActu" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarBcCatCtasContablesChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarBcCatCtasContablesChequesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarBcCatCtasContablesCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codsucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaCreacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioActu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaActu" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCtasContCheques" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarBcCatCtasContablesChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificarBcCatCtasContablesChequesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarBcCatCtasContablesCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCtasContCheques" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarBcCatCtasContablesChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminarBcCatCtasContablesChequesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarDetalleRemesaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="correlativo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noRemesa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioRemesa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaRemesa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarDetalleRemesaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarDetalleRemesaBancoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiosEfectivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_boveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoAntEnt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoEnt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoActualEnt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaldoAntRec" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRec" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoActualRec" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUnoEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincoEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiezEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinteEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuentaEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCienEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUnoEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionarioEnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUnoRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincoRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiezRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinteRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuentaRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCienRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUnoRec" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionarioRec" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiosEfectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambiosEfectivoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="movimientosBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idBoveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaMov" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numPartida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoAnterior" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoActual" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anulado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcionPartida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefijo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoPartida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="annio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_CBeneficio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_CCosto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="corrPartida" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idMovimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCinco" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiez" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinte" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionario" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="movimientosBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="movimientosBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarBcMovimientosBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idBoveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaMov" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numPartida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoAnterior" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoActual" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anulado" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarBcMovimientosBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarBcMovimientosBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarBcMovimientosBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idBoveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaMov" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numPartida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoAnterior" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldoActual" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anulado" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="correlativo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCinco" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiez" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinte" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionario" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioActu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaActu" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarBcMovimientosBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificarBcMovimientosBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarBcMovimientosBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="correlativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarBcMovimientosBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminarBcMovimientosBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarBcMovimientosBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarBcMovimientosBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarBcMovimientosBovedaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcSucursales_TransaccionesBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSucursalesTransacciones" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcSucursales_TransaccionesBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBcSucursales_TransaccionesBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcSucursales_TransaccionesBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodTransaccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSucursalTransaccionBov" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcSucursales_TransaccionesBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBcSucursales_TransaccionesBovedaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBcSucursales_TransaccionesBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSucursalTransaccionBoveda" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBcSucursales_TransaccionesBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarBcSucursales_TransaccionesBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcSucursales_TransaccionesBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCuentaC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcSucursales_TransaccionesBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBcSucursales_TransaccionesBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivarSolicitudBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aprobada" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioAut" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaAut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaAut" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivarSolicitudBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivarSolicitudBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarMontoMaxBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarMontoMaxBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarMontoMaxBovedaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarMontoMinBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRetirar" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarMontoMinBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarMontoMinBovedaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcSolicitudes_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCajero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Aprobada" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Psucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoMovCaja" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcSolicitudes_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBcSolicitudes_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcSolicitudes_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodSolicitud" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCajero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoCaja" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Aprobada" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Psucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioAutoriza" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaAutoriza" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaAutoriza" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoMovCaja" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcSolicitudes_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarBcSolicitudes_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcSolicitudes_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodSolicitud" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Psucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcSolicitudes_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBcSolicitudes_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcSolicitudes_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioAutoriza" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCajero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoCaja" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Psucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcSolicitudes_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBcSolicitudes_BovedaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaldoMin" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaldoMax" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioActu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaActu" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCinco" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiez" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinte" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionario" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBcBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_Boveda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaldoMin" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaldoMax" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioActu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaActu" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCinco" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesDiez" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesVeinte" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCincuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadBilletesCien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadMonedasUno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoMonedaFraccionario" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarBcBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_Boveda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBcBovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_Boveda" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBcBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBcBovedaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcCatTransacciones_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefijoPartida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBcCatTransacciones_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBcCatTransacciones_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcCatTransacciones_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefijoPartida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarBcCatTransacciones_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarBcCatTransacciones_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcCatTransacciones_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBcCatTransacciones_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBcCatTransacciones_BovedaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCCatTransacciones_Boveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="codTransaccion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCCatTransacciones_BovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBCCatTransacciones_BovedaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_BcMovCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdMovimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Num_Partida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaMov" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_BcMovChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_BcMovChequesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBCDet_SaldosBancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_DetSalBancos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBCDet_SaldosBancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBCDet_SaldosBancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBCDet_SaldosBancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_DetSalBancos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_SaldosBancos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodTransaccion" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaTran" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo_Ant" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo_Actu" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdMovimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Origen" type="s1:char" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBCDet_SaldosBancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarBCDet_SaldosBancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBCDet_SaldosBancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_SaldosBancos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodTransaccion" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaTran" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo_Ant" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo_Actu" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdMovimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="origen" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBCDet_SaldosBancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBCDet_SaldosBancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCDet_SaldosBancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_DetSalBancos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaFin" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdMovimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Origen" type="s1:char" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCDet_SaldosBancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBCDet_SaldosBancosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBCSaldos_Bancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_SaldosBancos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarBCSaldos_BancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarBCSaldos_BancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBCSaldos_Bancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdBanco" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fech_Ult_Mov" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarBCSaldos_BancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarBCSaldos_BancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBCSaldos_Bancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdBanco" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fech_Ult_Mov" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarBCSaldos_BancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarBCSaldos_BancosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCSaldos_Bancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_SaldosBancos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCtaBanco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCuenta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBCSaldos_BancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBCSaldos_BancosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulaCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGeneraPartida" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numPartida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulaChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AnulaChequeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminaChequeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaCuentaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaCuentaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminaCuentaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImprimeCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNumCheque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPartida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pAnulado" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImprimeChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImprimeChequeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaChequeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaCuentaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaCuentaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertaCuentaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaChequeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaBancoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerBancoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerChequeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCuentaBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCuentaBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCuentaBancoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPartida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCheque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPartidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPartidaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepChequesEmitidos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepChequesEmitidosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepChequesEmitidosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrasladaPartidasCheques">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrasladaPartidasChequesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrasladaPartidasChequesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validarDenominacionesBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:validarDenominacionesBoveda" />
+  </wsdl:message>
+  <wsdl:message name="validarDenominacionesBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:validarDenominacionesBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcCatCtasContablesChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBcCatCtasContablesCheques" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcCatCtasContablesChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBcCatCtasContablesChequesResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarBcCatCtasContablesChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarBcCatCtasContablesCheques" />
+  </wsdl:message>
+  <wsdl:message name="insertarBcCatCtasContablesChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarBcCatCtasContablesChequesResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarBcCatCtasContablesChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:modificarBcCatCtasContablesCheques" />
+  </wsdl:message>
+  <wsdl:message name="modificarBcCatCtasContablesChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:modificarBcCatCtasContablesChequesResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarBcCatCtasContablesChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarBcCatCtasContablesCheques" />
+  </wsdl:message>
+  <wsdl:message name="eliminarBcCatCtasContablesChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarBcCatCtasContablesChequesResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleRemesaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarDetalleRemesaBanco" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleRemesaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarDetalleRemesaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiosEfectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiosEfectivo" />
+  </wsdl:message>
+  <wsdl:message name="CambiosEfectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiosEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="movimientosBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:movimientosBoveda" />
+  </wsdl:message>
+  <wsdl:message name="movimientosBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:movimientosBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarBcMovimientosBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarBcMovimientosBoveda" />
+  </wsdl:message>
+  <wsdl:message name="insertarBcMovimientosBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarBcMovimientosBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarBcMovimientosBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificarBcMovimientosBoveda" />
+  </wsdl:message>
+  <wsdl:message name="modificarBcMovimientosBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificarBcMovimientosBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarBcMovimientosBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarBcMovimientosBoveda" />
+  </wsdl:message>
+  <wsdl:message name="eliminarBcMovimientosBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarBcMovimientosBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarBcMovimientosBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarBcMovimientosBoveda" />
+  </wsdl:message>
+  <wsdl:message name="consultarBcMovimientosBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarBcMovimientosBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcSucursales_TransaccionesBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBcSucursales_TransaccionesBoveda" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcSucursales_TransaccionesBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBcSucursales_TransaccionesBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcSucursales_TransaccionesBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBcSucursales_TransaccionesBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcSucursales_TransaccionesBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBcSucursales_TransaccionesBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBcSucursales_TransaccionesBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarBcSucursales_TransaccionesBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBcSucursales_TransaccionesBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarBcSucursales_TransaccionesBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcSucursales_TransaccionesBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBcSucursales_TransaccionesBoveda" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcSucursales_TransaccionesBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBcSucursales_TransaccionesBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivarSolicitudBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivarSolicitudBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ActivarSolicitudBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivarSolicitudBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoMaxBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarMontoMaxBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoMaxBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarMontoMaxBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoMinBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarMontoMinBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoMinBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarMontoMinBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcSolicitudes_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBcSolicitudes_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcSolicitudes_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBcSolicitudes_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcSolicitudes_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarBcSolicitudes_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcSolicitudes_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarBcSolicitudes_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcSolicitudes_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBcSolicitudes_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcSolicitudes_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBcSolicitudes_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcSolicitudes_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBcSolicitudes_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcSolicitudes_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBcSolicitudes_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBcBoveda" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBcBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarBcBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarBcBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBcBoveda" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBcBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBcBoveda" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBcBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBcBovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcCatTransacciones_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBcCatTransacciones_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBcCatTransacciones_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBcCatTransacciones_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcCatTransacciones_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarBcCatTransacciones_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="ModificarBcCatTransacciones_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarBcCatTransacciones_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcCatTransacciones_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBcCatTransacciones_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBcCatTransacciones_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBcCatTransacciones_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCCatTransacciones_BovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBCCatTransacciones_Boveda" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCCatTransacciones_BovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBCCatTransacciones_BovedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_BcMovChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_BcMovCheques" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_BcMovChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_BcMovChequesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBCDet_SaldosBancosSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBCDet_SaldosBancos" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBCDet_SaldosBancosSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBCDet_SaldosBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBCDet_SaldosBancosSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarBCDet_SaldosBancos" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBCDet_SaldosBancosSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarBCDet_SaldosBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBCDet_SaldosBancosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBCDet_SaldosBancos" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBCDet_SaldosBancosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBCDet_SaldosBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCDet_SaldosBancosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBCDet_SaldosBancos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCDet_SaldosBancosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBCDet_SaldosBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBCSaldos_BancosSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarBCSaldos_Bancos" />
+  </wsdl:message>
+  <wsdl:message name="EliminarBCSaldos_BancosSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarBCSaldos_BancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBCSaldos_BancosSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarBCSaldos_Bancos" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarBCSaldos_BancosSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarBCSaldos_BancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBCSaldos_BancosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarBCSaldos_Bancos" />
+  </wsdl:message>
+  <wsdl:message name="InsertarBCSaldos_BancosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarBCSaldos_BancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCSaldos_BancosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBCSaldos_Bancos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBCSaldos_BancosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBCSaldos_BancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulaChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulaCheque" />
+  </wsdl:message>
+  <wsdl:message name="AnulaChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulaChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminaBanco" />
+  </wsdl:message>
+  <wsdl:message name="EliminaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminaChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminaCheque" />
+  </wsdl:message>
+  <wsdl:message name="EliminaChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminaChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminaCuentaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminaCuentaBanco" />
+  </wsdl:message>
+  <wsdl:message name="EliminaCuentaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminaCuentaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImprimeChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:ImprimeCheque" />
+  </wsdl:message>
+  <wsdl:message name="ImprimeChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:ImprimeChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaBanco" />
+  </wsdl:message>
+  <wsdl:message name="InsertaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaCheque" />
+  </wsdl:message>
+  <wsdl:message name="InsertaChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaCuentaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaCuentaBanco" />
+  </wsdl:message>
+  <wsdl:message name="InsertaCuentaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaCuentaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaBanco" />
+  </wsdl:message>
+  <wsdl:message name="ModificaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaCheque" />
+  </wsdl:message>
+  <wsdl:message name="ModificaChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaBanco" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerBanco" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCheque" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCuentaBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaBanco" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCuentaBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPartidaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPartida" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPartidaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepChequesEmitidosSoapIn">
+    <wsdl:part name="parameters" element="tns:RepChequesEmitidos" />
+  </wsdl:message>
+  <wsdl:message name="RepChequesEmitidosSoapOut">
+    <wsdl:part name="parameters" element="tns:RepChequesEmitidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrasladaPartidasChequesSoapIn">
+    <wsdl:part name="parameters" element="tns:TrasladaPartidasCheques" />
+  </wsdl:message>
+  <wsdl:message name="TrasladaPartidasChequesSoapOut">
+    <wsdl:part name="parameters" element="tns:TrasladaPartidasChequesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsLibBancosSoap">
+    <wsdl:operation name="validarDenominacionesBoveda">
+      <wsdl:input message="tns:validarDenominacionesBovedaSoapIn" />
+      <wsdl:output message="tns:validarDenominacionesBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcCatCtasContablesCheques">
+      <wsdl:input message="tns:ConsultarBcCatCtasContablesChequesSoapIn" />
+      <wsdl:output message="tns:ConsultarBcCatCtasContablesChequesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcCatCtasContablesCheques">
+      <wsdl:input message="tns:insertarBcCatCtasContablesChequesSoapIn" />
+      <wsdl:output message="tns:insertarBcCatCtasContablesChequesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcCatCtasContablesCheques">
+      <wsdl:input message="tns:modificarBcCatCtasContablesChequesSoapIn" />
+      <wsdl:output message="tns:modificarBcCatCtasContablesChequesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcCatCtasContablesCheques">
+      <wsdl:input message="tns:eliminarBcCatCtasContablesChequesSoapIn" />
+      <wsdl:output message="tns:eliminarBcCatCtasContablesChequesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleRemesaBanco">
+      <wsdl:input message="tns:insertarDetalleRemesaBancoSoapIn" />
+      <wsdl:output message="tns:insertarDetalleRemesaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiosEfectivo">
+      <wsdl:input message="tns:CambiosEfectivoSoapIn" />
+      <wsdl:output message="tns:CambiosEfectivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="movimientosBoveda">
+      <wsdl:input message="tns:movimientosBovedaSoapIn" />
+      <wsdl:output message="tns:movimientosBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcMovimientosBoveda">
+      <wsdl:input message="tns:insertarBcMovimientosBovedaSoapIn" />
+      <wsdl:output message="tns:insertarBcMovimientosBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcMovimientosBoveda">
+      <wsdl:input message="tns:modificarBcMovimientosBovedaSoapIn" />
+      <wsdl:output message="tns:modificarBcMovimientosBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcMovimientosBoveda">
+      <wsdl:input message="tns:eliminarBcMovimientosBovedaSoapIn" />
+      <wsdl:output message="tns:eliminarBcMovimientosBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarBcMovimientosBoveda">
+      <wsdl:input message="tns:consultarBcMovimientosBovedaSoapIn" />
+      <wsdl:output message="tns:consultarBcMovimientosBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSucursales_TransaccionesBoveda">
+      <wsdl:input message="tns:EliminarBcSucursales_TransaccionesBovedaSoapIn" />
+      <wsdl:output message="tns:EliminarBcSucursales_TransaccionesBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSucursales_TransaccionesBoveda">
+      <wsdl:input message="tns:ConsultarBcSucursales_TransaccionesBovedaSoapIn" />
+      <wsdl:output message="tns:ConsultarBcSucursales_TransaccionesBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBcSucursales_TransaccionesBoveda">
+      <wsdl:input message="tns:ActualizarBcSucursales_TransaccionesBovedaSoapIn" />
+      <wsdl:output message="tns:ActualizarBcSucursales_TransaccionesBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSucursales_TransaccionesBoveda">
+      <wsdl:input message="tns:InsertarBcSucursales_TransaccionesBovedaSoapIn" />
+      <wsdl:output message="tns:InsertarBcSucursales_TransaccionesBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivarSolicitudBoveda">
+      <wsdl:input message="tns:ActivarSolicitudBovedaSoapIn" />
+      <wsdl:output message="tns:ActivarSolicitudBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMaxBoveda">
+      <wsdl:input message="tns:ValidarMontoMaxBovedaSoapIn" />
+      <wsdl:output message="tns:ValidarMontoMaxBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMinBoveda">
+      <wsdl:input message="tns:ValidarMontoMinBovedaSoapIn" />
+      <wsdl:output message="tns:ValidarMontoMinBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSolicitudes_Boveda">
+      <wsdl:input message="tns:InsertarBcSolicitudes_BovedaSoapIn" />
+      <wsdl:output message="tns:InsertarBcSolicitudes_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcSolicitudes_Boveda">
+      <wsdl:input message="tns:ModificarBcSolicitudes_BovedaSoapIn" />
+      <wsdl:output message="tns:ModificarBcSolicitudes_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSolicitudes_Boveda">
+      <wsdl:input message="tns:EliminarBcSolicitudes_BovedaSoapIn" />
+      <wsdl:output message="tns:EliminarBcSolicitudes_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSolicitudes_Boveda">
+      <wsdl:input message="tns:ConsultarBcSolicitudes_BovedaSoapIn" />
+      <wsdl:output message="tns:ConsultarBcSolicitudes_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcBoveda">
+      <wsdl:input message="tns:InsertarBcBovedaSoapIn" />
+      <wsdl:output message="tns:InsertarBcBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcBoveda">
+      <wsdl:input message="tns:ModificarBcBovedaSoapIn" />
+      <wsdl:output message="tns:ModificarBcBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcBoveda">
+      <wsdl:input message="tns:EliminarBcBovedaSoapIn" />
+      <wsdl:output message="tns:EliminarBcBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcBoveda">
+      <wsdl:input message="tns:ConsultarBcBovedaSoapIn" />
+      <wsdl:output message="tns:ConsultarBcBovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcCatTransacciones_Boveda">
+      <wsdl:input message="tns:InsertarBcCatTransacciones_BovedaSoapIn" />
+      <wsdl:output message="tns:InsertarBcCatTransacciones_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcCatTransacciones_Boveda">
+      <wsdl:input message="tns:ModificarBcCatTransacciones_BovedaSoapIn" />
+      <wsdl:output message="tns:ModificarBcCatTransacciones_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcCatTransacciones_Boveda">
+      <wsdl:input message="tns:EliminarBcCatTransacciones_BovedaSoapIn" />
+      <wsdl:output message="tns:EliminarBcCatTransacciones_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCCatTransacciones_Boveda">
+      <wsdl:input message="tns:ConsultarBCCatTransacciones_BovedaSoapIn" />
+      <wsdl:output message="tns:ConsultarBCCatTransacciones_BovedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_BcMovCheques">
+      <wsdl:input message="tns:Consultar_BcMovChequesSoapIn" />
+      <wsdl:output message="tns:Consultar_BcMovChequesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCDet_SaldosBancos">
+      <wsdl:input message="tns:EliminarBCDet_SaldosBancosSoapIn" />
+      <wsdl:output message="tns:EliminarBCDet_SaldosBancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCDet_SaldosBancos">
+      <wsdl:input message="tns:ActualizarBCDet_SaldosBancosSoapIn" />
+      <wsdl:output message="tns:ActualizarBCDet_SaldosBancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCDet_SaldosBancos">
+      <wsdl:input message="tns:InsertarBCDet_SaldosBancosSoapIn" />
+      <wsdl:output message="tns:InsertarBCDet_SaldosBancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCDet_SaldosBancos">
+      <wsdl:input message="tns:ConsultarBCDet_SaldosBancosSoapIn" />
+      <wsdl:output message="tns:ConsultarBCDet_SaldosBancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCSaldos_Bancos">
+      <wsdl:input message="tns:EliminarBCSaldos_BancosSoapIn" />
+      <wsdl:output message="tns:EliminarBCSaldos_BancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCSaldos_Bancos">
+      <wsdl:input message="tns:ActualizarBCSaldos_BancosSoapIn" />
+      <wsdl:output message="tns:ActualizarBCSaldos_BancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCSaldos_Bancos">
+      <wsdl:input message="tns:InsertarBCSaldos_BancosSoapIn" />
+      <wsdl:output message="tns:InsertarBCSaldos_BancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCSaldos_Bancos">
+      <wsdl:input message="tns:ConsultarBCSaldos_BancosSoapIn" />
+      <wsdl:output message="tns:ConsultarBCSaldos_BancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulaCheque">
+      <wsdl:input message="tns:AnulaChequeSoapIn" />
+      <wsdl:output message="tns:AnulaChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaBanco">
+      <wsdl:input message="tns:EliminaBancoSoapIn" />
+      <wsdl:output message="tns:EliminaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCheque">
+      <wsdl:input message="tns:EliminaChequeSoapIn" />
+      <wsdl:output message="tns:EliminaChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCuentaBanco">
+      <wsdl:input message="tns:EliminaCuentaBancoSoapIn" />
+      <wsdl:output message="tns:EliminaCuentaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImprimeCheque">
+      <wsdl:input message="tns:ImprimeChequeSoapIn" />
+      <wsdl:output message="tns:ImprimeChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaBanco">
+      <wsdl:input message="tns:InsertaBancoSoapIn" />
+      <wsdl:output message="tns:InsertaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCheque">
+      <wsdl:input message="tns:InsertaChequeSoapIn" />
+      <wsdl:output message="tns:InsertaChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCuentaBanco">
+      <wsdl:input message="tns:InsertaCuentaBancoSoapIn" />
+      <wsdl:output message="tns:InsertaCuentaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaBanco">
+      <wsdl:input message="tns:ModificaBancoSoapIn" />
+      <wsdl:output message="tns:ModificaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCheque">
+      <wsdl:input message="tns:ModificaChequeSoapIn" />
+      <wsdl:output message="tns:ModificaChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaBanco">
+      <wsdl:input message="tns:ModificaCuentaBancoSoapIn" />
+      <wsdl:output message="tns:ModificaCuentaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBanco">
+      <wsdl:input message="tns:ObtenerBancoSoapIn" />
+      <wsdl:output message="tns:ObtenerBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCheque">
+      <wsdl:input message="tns:ObtenerChequeSoapIn" />
+      <wsdl:output message="tns:ObtenerChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaBanco">
+      <wsdl:input message="tns:ObtenerCuentaBancoSoapIn" />
+      <wsdl:output message="tns:ObtenerCuentaBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartida">
+      <wsdl:input message="tns:ObtenerPartidaSoapIn" />
+      <wsdl:output message="tns:ObtenerPartidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepChequesEmitidos">
+      <wsdl:input message="tns:RepChequesEmitidosSoapIn" />
+      <wsdl:output message="tns:RepChequesEmitidosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrasladaPartidasCheques">
+      <wsdl:input message="tns:TrasladaPartidasChequesSoapIn" />
+      <wsdl:output message="tns:TrasladaPartidasChequesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsLibBancosSoap" type="tns:wsLibBancosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validarDenominacionesBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/validarDenominacionesBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcCatCtasContablesCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcCatCtasContablesCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcCatCtasContablesCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/modificarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcCatCtasContablesCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/eliminarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleRemesaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarDetalleRemesaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiosEfectivo">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/CambiosEfectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="movimientosBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/movimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcMovimientosBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcMovimientosBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/modificarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcMovimientosBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/eliminarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarBcMovimientosBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/consultarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSucursales_TransaccionesBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSucursales_TransaccionesBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBcSucursales_TransaccionesBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSucursales_TransaccionesBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarSolicitudBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActivarSolicitudBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMaxBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ValidarMontoMaxBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMinBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ValidarMontoMinBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSolicitudes_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcSolicitudes_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSolicitudes_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSolicitudes_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcCatTransacciones_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcCatTransacciones_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcCatTransacciones_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCCatTransacciones_Boveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_BcMovCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/Consultar_BcMovCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCDet_SaldosBancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCDet_SaldosBancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCDet_SaldosBancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCDet_SaldosBancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCSaldos_Bancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCSaldos_Bancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCSaldos_Bancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCSaldos_Bancos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulaCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/AnulaCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCuentaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImprimeCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ImprimeCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCuentaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCheque">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaBanco">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartida">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerPartida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepChequesEmitidos">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/RepChequesEmitidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrasladaPartidasCheques">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/TrasladaPartidasCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLibBancosSoap12" type="tns:wsLibBancosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validarDenominacionesBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/validarDenominacionesBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcCatCtasContablesCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcCatCtasContablesCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcCatCtasContablesCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/modificarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcCatCtasContablesCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/eliminarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleRemesaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarDetalleRemesaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiosEfectivo">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/CambiosEfectivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="movimientosBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/movimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarBcMovimientosBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarBcMovimientosBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/modificarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarBcMovimientosBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/eliminarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarBcMovimientosBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/consultarBcMovimientosBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSucursales_TransaccionesBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSucursales_TransaccionesBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBcSucursales_TransaccionesBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSucursales_TransaccionesBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcSucursales_TransaccionesBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarSolicitudBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActivarSolicitudBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMaxBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ValidarMontoMaxBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoMinBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ValidarMontoMinBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcSolicitudes_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcSolicitudes_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcSolicitudes_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcSolicitudes_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcSolicitudes_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBcBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBcBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBcCatTransacciones_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarBcCatTransacciones_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBcCatTransacciones_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBcCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCCatTransacciones_Boveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCCatTransacciones_Boveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_BcMovCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/Consultar_BcMovCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCDet_SaldosBancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCDet_SaldosBancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCDet_SaldosBancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCDet_SaldosBancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCDet_SaldosBancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBCSaldos_Bancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBCSaldos_Bancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ActualizarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarBCSaldos_Bancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBCSaldos_Bancos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ConsultarBCSaldos_Bancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulaCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/AnulaCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaCuentaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/EliminaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImprimeCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ImprimeCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaCuentaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/InsertaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ModificaCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCheque">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaBanco">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerCuentaBanco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartida">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/ObtenerPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepChequesEmitidos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/RepChequesEmitidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrasladaPartidasCheques">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/TrasladaPartidasCheques" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsLibBancos">
+    <wsdl:port name="wsLibBancosSoap" binding="tns:wsLibBancosSoap">
+      <soap:address location="http://localhost:57126/wsLibBancos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsLibBancosSoap12" binding="tns:wsLibBancosSoap12">
+      <soap12:address location="http://localhost:57126/wsLibBancos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

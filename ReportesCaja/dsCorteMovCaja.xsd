@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCorteMovCaja" targetNamespace="http://tempuri.org/dsCorteMovCaja.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCorteMovCaja.xsd" xmlns:mstns="http://tempuri.org/dsCorteMovCaja.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCorteMovCaja" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PLCorteCaja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NoCaja" type="xs:int" minOccurs="0" />
+							<xs:element name="CodCajero" type="xs:int" minOccurs="0" />
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FondoInicial" type="xs:double" minOccurs="0" />
+							<xs:element name="IngresoFondo" type="xs:double" minOccurs="0" />
+							<xs:element name="Remisiones" type="xs:double" minOccurs="0" />
+							<xs:element name="Facturas" type="xs:double" minOccurs="0" />
+							<xs:element name="CreditoFiscal" type="xs:double" minOccurs="0" />
+							<xs:element name="DepositosAhorro" type="xs:double" minOccurs="0" />
+							<xs:element name="CambioCheque" type="xs:double" minOccurs="0" />
+							<xs:element name="RetirosAhorro" type="xs:double" minOccurs="0" />
+							<xs:element name="RecibosDividendos" type="xs:double" minOccurs="0" />
+							<xs:element name="RetiroCbCheque" type="xs:double" minOccurs="0" />
+							<xs:element name="EfectivoCajero" type="xs:double" minOccurs="0" />
+							<xs:element name="ValorChequeCajero" type="xs:double" minOccurs="0" />
+							<xs:element name="NombreCajero" type="xs:string" minOccurs="0" />
+							<xs:element name="FacturasCh" type="xs:double" minOccurs="0" />
+							<xs:element name="CreditoFiscalCh" type="xs:double" minOccurs="0" />
+							<xs:element name="DepositosAhorroCh" type="xs:double" minOccurs="0" />
+							<xs:element name="RetirosAhorroCh" type="xs:double" minOccurs="0" />
+							<xs:element name="RecibosDividendosCh" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

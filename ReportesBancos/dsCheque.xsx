@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="0" zoom="100">
+    <Reporte_XmlElement left="12567" top="3043" width="5292" height="3809" selected="0" zOrder="1" index="0" expanded="1" />
+    <Cheques_XmlElement left="4260" top="3731" width="6562" height="5503" selected="0" zOrder="2" index="1" expanded="1" />
+    <Det_Cheques_XmlElement left="4710" top="11192" width="5292" height="3810" selected="0" zOrder="4" index="2" expanded="1" />
+</XSDDesignerLayout>

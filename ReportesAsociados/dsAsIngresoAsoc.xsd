@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsAsIngresoAsoc" targetNamespace="http://tempuri.org/dsAsIngresoAsoc.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsAsIngresoAsoc.xsd" xmlns:mstns="http://tempuri.org/dsAsIngresoAsoc.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsAsIngresoAsoc" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Periodo" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma1" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo1" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma2" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo2" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma3" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo3" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma4" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo4" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma5" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo5" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma6" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo6" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma7" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo7" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma8" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo8" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma9" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo9" type="xs:string" minOccurs="0" />
+							<xs:element name="Comite" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreRealiza" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreRevisa" type="xs:string" minOccurs="0" />
+							<xs:element name="CargoRealiza" type="xs:string" minOccurs="0" />
+							<xs:element name="CargoRevisa" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Asociados">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Dui" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="CodEjecMercadeo" type="xs:string" minOccurs="0" />
+							<xs:element name="Ejecutivo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodProfesion" type="xs:string" minOccurs="0" />
+							<xs:element name="Profesion" type="xs:string" minOccurs="0" />
+							<xs:element name="Salario" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Fotos" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Nit" type="xs:string" minOccurs="0" />
+							<xs:element name="CopiaDui" type="xs:string" minOccurs="0" />
+							<xs:element name="NoFactura" type="xs:string" minOccurs="0" />
+							<xs:element name="CuotaAportacion" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TelOficina" type="xs:string" minOccurs="0" />
+							<xs:element name="TelCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsPosteo" targetNamespace="http://tempuri.org/dsPosteo.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsPosteo.xsd" xmlns:mstns="http://tempuri.org/dsPosteo.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsPosteo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="AhMovimientos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="CodTransaccion" type="xs:string" minOccurs="0" />
+							<xs:element name="NoLibreta" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="TipoPago" type="xs:string" />
+							<xs:element name="SaldoAnterior" type="xs:double" minOccurs="0" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodTipo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCajero" type="xs:string" minOccurs="0" />
+							<xs:element name="PagoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="IdMovimiento" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Tipo" type="xs:string" minOccurs="0" />
+							<xs:element name="Num" type="xs:int" minOccurs="0" />
+							<xs:element name="Posteado" type="xs:string" minOccurs="0" />
+							<xs:element name="IdBanco" type="xs:int" minOccurs="0" />
+							<xs:element name="Origen" type="xs:string" minOccurs="0" />
+							<xs:element name="Hora" type="xs:string" minOccurs="0" />
+							<xs:element name="NoDPF" type="xs:string" minOccurs="0" />
+							<xs:element name="Corr_Libreta" type="xs:int" minOccurs="0" />
+							<xs:element name="IdLibreta" type="xs:int" minOccurs="0" />
+							<xs:element name="NombreAhorrante" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

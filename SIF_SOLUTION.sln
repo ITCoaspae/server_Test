@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SIF_ERP", "SIF_ERP.vbproj", "{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{04015B99-C6E3-465E-91DB-9B561B2B660D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wsSIF", "..\wsSIF\", "{586020CA-A1C5-4ECC-B012-F95990627A21}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{b68bbb99-e7bd-4d73-8324-5b87967245fa}|sifLib.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57126"
+		Debug.AspNetCompiler.PhysicalPath = "..\wsSIF\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57126\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57126"
+		Release.AspNetCompiler.PhysicalPath = "..\wsSIF\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57126\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57126"
+		SlnRelativePath = "..\wsSIF\"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sifLib", "..\SifLib\sifLib.vbproj", "{B68BBB99-E7BD-4D73-8324-5B87967245FA}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "..\Setup2\Setup2.vdproj", "{616EE3EC-5370-43ED-87AD-AF6FBD4DD45A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Debug|x86.ActiveCfg = Debug|x86
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Debug|x86.Build.0 = Debug|x86
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Release|x86.ActiveCfg = Release|x86
+		{73A51A10-86BA-488D-BA49-CD1B5B2DD20F}.Release|x86.Build.0 = Release|x86
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Debug|Any CPU.ActiveCfg = Debug
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Debug|x86.ActiveCfg = Debug
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Debug|x86.Build.0 = Debug
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Debug|x86.Deploy.0 = Debug
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Release|Any CPU.ActiveCfg = Debug
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Release|x86.ActiveCfg = Release
+		{04015B99-C6E3-465E-91DB-9B561B2B660D}.Release|x86.Build.0 = Release
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Debug|x86.Build.0 = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Release|x86.ActiveCfg = Debug|Any CPU
+		{586020CA-A1C5-4ECC-B012-F95990627A21}.Release|x86.Build.0 = Debug|Any CPU
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Debug|x86.ActiveCfg = Debug|x86
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Debug|x86.Build.0 = Debug|x86
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Release|x86.ActiveCfg = Release|x86
+		{B68BBB99-E7BD-4D73-8324-5B87967245FA}.Release|x86.Build.0 = Release|x86
+		{616EE3EC-5370-43ED-87AD-AF6FBD4DD45A}.Debug|Any CPU.ActiveCfg = Debug
+		{616EE3EC-5370-43ED-87AD-AF6FBD4DD45A}.Debug|x86.ActiveCfg = Debug
+		{616EE3EC-5370-43ED-87AD-AF6FBD4DD45A}.Release|Any CPU.ActiveCfg = Debug
+		{616EE3EC-5370-43ED-87AD-AF6FBD4DD45A}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

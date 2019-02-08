@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsRepColocacionCreditos" targetNamespace="http://tempuri.org/dsRepColocacionCreditos.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsRepColocacionCreditos.xsd"
+	xmlns:mstns="http://tempuri.org/dsRepColocacionCreditos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsRepColocacionCreditos" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PRPrestamos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NumSolicitud" type="xs:int" minOccurs="0" />
+							<xs:element name="CodEjecutivo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoSocio" type="xs:string" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="Monto" type="xs:float" minOccurs="0" />
+							<xs:element name="SaldoCapital" type="xs:float" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:float" minOccurs="0" />
+							<xs:element name="FechaOtorgamiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaVencimiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="PlazoMeses" type="xs:int" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Ejecutivo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Fechas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FechaInicio" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaFin" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:date" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="CodSucursal" type="xs:string" minOccurs="0" />
+							<xs:element name="Sucursal" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

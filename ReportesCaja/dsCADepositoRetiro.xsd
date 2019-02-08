@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCADepositoRetiro" targetNamespace="http://tempuri.org/dsCADepositoRetiro.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCADepositoRetiro.xsd"
+	xmlns:mstns="http://tempuri.org/dsCADepositoRetiro.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCADepositoRetiro" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CAFacturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="Fec_Mov" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Vta_Gravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NoGravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_Total" type="xs:double" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Impreso" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="DocPago" type="xs:string" minOccurs="0" />
+							<xs:element name="ESTADO" type="xs:string" minOccurs="0" />
+							<xs:element name="Devolucion" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaDevolucion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CAT_ASOCIADOS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DUI" type="xs:string" />
+							<xs:element name="Correlativo" type="xs:int" />
+							<xs:element name="NoSocio" type="xs:string" />
+							<xs:element name="CodAntiguo" type="xs:string" minOccurs="0" />
+							<xs:element name="NIT" type="xs:string" minOccurs="0" />
+							<xs:element name="ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="LugarExtDUI" type="xs:string" />
+							<xs:element name="FechaExtDUI" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NumPasaporte" type="xs:string" minOccurs="0" />
+							<xs:element name="EstadoIngreso" type="xs:string" />
+							<xs:element name="Apellido1" type="xs:string" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" />
+							<xs:element name="Fecha_Nac" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Direccion" type="xs:string" minOccurs="0" />
+							<xs:element name="TelCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="TelOficina" type="xs:string" minOccurs="0" />
+							<xs:element name="ExtensionOfic" type="xs:string" minOccurs="0" />
+							<xs:element name="Celular" type="xs:string" minOccurs="0" />
+							<xs:element name="Email" type="xs:string" minOccurs="0" />
+							<xs:element name="CodProfesion" type="xs:string" minOccurs="0" />
+							<xs:element name="TituloObtenido" type="xs:string" minOccurs="0" />
+							<xs:element name="CodNacionalidad" type="xs:string" minOccurs="0" />
+							<xs:element name="LugarTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="DepartamentoTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaInicioTrab" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DireccionTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:string" minOccurs="0" />
+							<xs:element name="Salario" type="xs:double" minOccurs="0" />
+							<xs:element name="EstadoCivil" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreConyugue" type="xs:string" minOccurs="0" />
+							<xs:element name="NumGrupoFam" type="xs:int" minOccurs="0" />
+							<xs:element name="NumDependientes" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="CasaPropia" type="xs:string" minOccurs="0" />
+							<xs:element name="TrabajoPropio" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoActividad" type="xs:string" minOccurs="0" />
+							<xs:element name="OtrosIngresos" type="xs:double" minOccurs="0" />
+							<xs:element name="OrigenOtrosIngresos" type="xs:string" minOccurs="0" />
+							<xs:element name="CodMunicipio" type="xs:string" minOccurs="0" />
+							<xs:element name="CodDepartamento" type="xs:string" minOccurs="0" />
+							<xs:element name="FueDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="PeriodoFueDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="Directivo" type="xs:string" minOccurs="0" />
+							<xs:element name="PeriodoDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="EstadoAsociado" type="xs:string" minOccurs="0" />
+							<xs:element name="CodEjecMercadeo" type="xs:string" minOccurs="0" />
+							<xs:element name="Imagen" type="xs:string" minOccurs="0" />
+							<xs:element name="Firmas" type="xs:string" minOccurs="0" />
+							<xs:element name="Sexo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCuerpoDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="RegistroFiscal" type="xs:string" minOccurs="0" />
+							<xs:element name="Giro" type="xs:string" minOccurs="0" />
+							<xs:element name="Categoria" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Candidato" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Aspirante" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Asociado" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AhMovimientos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="NoLibreta" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="TipoPago" type="xs:string" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodTipo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="UsuarioCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="PagoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="IdMovimiento" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CADet_Facturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="CodItem" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Cantidad" type="xs:int" minOccurs="0" />
+							<xs:element name="Monto_Pago" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotal_Exento" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotal_Gravado" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Vta" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Descuento" type="xs:double" minOccurs="0" />
+							<xs:element name="Mes" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoMov" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoAhorro" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="Cantidad_en_Letras" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsCADepositoRetiroKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+		</xs:unique>
+		<xs:unique name="dsCADepositoRetiroKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAT_ASOCIADOS" />
+			<xs:field xpath="mstns:DUI" />
+		</xs:unique>
+		<xs:keyref name="CAT_ASOCIADOSCAFacturas" refer="dsCADepositoRetiroKey2">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:DUI" />
+		</xs:keyref>
+		<xs:unique name="dsCADepositoRetiroKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+		<xs:unique name="dsCADepositoRetiroKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CADet_Facturas" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+		<xs:keyref name="CAFacturasCADet_Facturas" refer="dsCADepositoRetiroKey1">
+			<xs:selector xpath=".//mstns:CADet_Facturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+		</xs:keyref>
+		<xs:keyref name="CAFacturasAhMovimientos" refer="dsCADepositoRetiroKey1">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

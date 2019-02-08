@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCartaInformativa" targetNamespace="http://tempuri.org/dsCartaInformativa.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCartaInformativa.xsd"
+	xmlns:mstns="http://tempuri.org/dsCartaInformativa.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCartaInformativa" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Comentario" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaCarta" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PRPrestamos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodPrestamo" type="xs:string" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTablaAmortiza" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoCredito" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaActa" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NoActa" type="xs:string" minOccurs="0" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="PlazoMeses" type="xs:int" minOccurs="0" />
+							<xs:element name="Tasa_Interes" type="xs:double" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="Destino" type="xs:string" minOccurs="0" />
+							<xs:element name="Garantia" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPagaduria" type="xs:string" minOccurs="0" />
+							<xs:element name="Pagaduria" type="xs:string" minOccurs="0" />
+							<xs:element name="NumSolicitud" type="xs:string" minOccurs="0" />
+							<xs:element name="CondicionesEspeciales" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

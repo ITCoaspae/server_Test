@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsDatosEmpleados" targetNamespace="http://tempuri.org/dsDatosEmpleados.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsDatosEmpleados.xsd"
+	xmlns:mstns="http://tempuri.org/dsDatosEmpleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsDatosEmpleados" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="plempleados">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodEmpleado" type="xs:string" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Sexo" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaIngreso" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="EstadoCivil" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCargo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoPersonal" type="xs:int" minOccurs="0" />
+							<xs:element name="FechaRetiro" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaNac" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="LugarNac" type="xs:string" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaExtDUI" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="LugarExtDUI" type="xs:string" minOccurs="0" />
+							<xs:element name="NIT" type="xs:string" minOccurs="0" />
+							<xs:element name="NIP" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="CodInstitucion" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="Direccion" type="xs:string" minOccurs="0" />
+							<xs:element name="Telefonos" type="xs:string" minOccurs="0" />
+							<xs:element name="Celular" type="xs:string" minOccurs="0" />
+							<xs:element name="Ap_Materno" type="xs:string" minOccurs="0" />
+							<xs:element name="Ap_Paterno" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre_ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPension" type="xs:string" minOccurs="0" />
+							<xs:element name="NoAFP" type="xs:string" minOccurs="0" />
+							<xs:element name="SeguroColectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="Estado" type="xs:string" minOccurs="0" />
+							<xs:element name="CodRetiro" type="xs:string" minOccurs="0" />
+							<xs:element name="GradoAcademico" type="xs:string" minOccurs="0" />
+							<xs:element name="NumLicencia" type="xs:string" minOccurs="0" />
+							<xs:element name="NoPlaza" type="xs:string" minOccurs="0" />
+							<xs:element name="CodDepartamento" type="xs:string" minOccurs="0" />
+							<xs:element name="CodArea" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaInicial" type="xs:date" minOccurs="0" />
+							<xs:element name="FechaFinal" type="xs:date" minOccurs="0" />
+							<xs:element name="SueldoVariable" type="xs:string" minOccurs="0" />
+							<xs:element name="SueldoMensual" type="xs:float" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:string" minOccurs="0" />
+							<xs:element name="DiasTrabajados" type="xs:int" minOccurs="0" />
+							<xs:element name="Bonificacion" type="xs:float" minOccurs="0" />
+							<xs:element name="ValorHora" type="xs:float" minOccurs="0" />
+							<xs:element name="NoHoras" type="xs:int" minOccurs="0" />
+							<xs:element name="Departamento" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="key2">
+			<xs:selector xpath=".//mstns:plempleados" />
+			<xs:field xpath="mstns:CodEmpleado" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

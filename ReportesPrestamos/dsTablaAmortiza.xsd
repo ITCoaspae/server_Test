@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsTablaAmortiza" targetNamespace="http://tempuri.org/dsTablaAmortiza.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsTablaAmortiza.xsd" xmlns:mstns="http://tempuri.org/dsTablaAmortiza.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsTablaAmortiza" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PRDetTablaAmortiza">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" type="xs:int" />
+							<xs:element name="CodTablaAmortiza" type="xs:string" />
+							<xs:element name="FechaCuota" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="MontoCuota" type="xs:double" minOccurs="0" />
+							<xs:element name="AbonoCapital" type="xs:double" minOccurs="0" />
+							<xs:element name="SaldoCapital" type="xs:double" minOccurs="0" />
+							<xs:element name="Interes" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="Dias" type="xs:int" minOccurs="0" />
+							<xs:element name="SeguroDeuda" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroDaniosyLA" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroVida" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroDesempleo" type="xs:double" minOccurs="0" />
+							<xs:element name="Aportacion" type="xs:double" minOccurs="0" />
+							<xs:element name="Ahorro" type="xs:double" minOccurs="0" />
+							<xs:element name="ComisionManejo" type="xs:double" minOccurs="0" />
+							<xs:element name="Otros" type="xs:double" minOccurs="0" />
+							<xs:element name="Cancelada" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

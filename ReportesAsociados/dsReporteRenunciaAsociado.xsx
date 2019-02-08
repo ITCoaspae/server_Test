@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="0" zoom="100">
+    <DatosRenunciaAsociado_XmlElement left="1535" top="1984" width="8519" height="6774" selected="0" zOrder="1" index="0" expanded="1" />
+    <DatosCuentaAhorroAsociado_XmlElement left="10610" top="609" width="9895" height="3386" selected="0" zOrder="2" index="1" expanded="1" />
+    <DatosCuentasPrestamoAsociado_XmlElement left="10557" top="4180" width="11324" height="5080" selected="0" zOrder="4" index="2" expanded="1" />
+    <Reporte_XmlElement left="22860" top="1746" width="6350" height="7197" selected="0" zOrder="6" index="3" expanded="1" />
+</XSDDesignerLayout>

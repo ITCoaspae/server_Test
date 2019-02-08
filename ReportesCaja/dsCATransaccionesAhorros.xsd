@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCARetiroAhorros" targetNamespace="http://tempuri.org/dsCARetiroAhorros.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCARetiroAhorros.xsd"
+	xmlns:mstns="http://tempuri.org/dsCARetiroAhorros.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCARetiroAhorros" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CAFacturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="Fec_Mov" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Vta_Gravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NoGravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_Total" type="xs:double" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Impreso" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="DocPago" type="xs:string" minOccurs="0" />
+							<xs:element name="ESTADO" type="xs:string" minOccurs="0" />
+							<xs:element name="Devolucion" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaDevolucion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AhMovimientos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="NoLibreta" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="TipoPago" type="xs:string" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodTipo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="UsuarioCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="PagoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="IdMovimiento" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Titulo_Retiro" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo_Deposito" type="xs:string" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsCARetiroAhorrosKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+		</xs:unique>
+		<xs:unique name="dsCARetiroAhorrosKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+		<xs:keyref name="CAFacturasAhMovimientos" refer="dsCARetiroAhorrosKey1">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

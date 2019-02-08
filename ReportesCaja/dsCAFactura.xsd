@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCAFactura" targetNamespace="http://tempuri.org/dsCAFactura.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCAFactura.xsd" xmlns:mstns="http://tempuri.org/dsCAFactura.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCAFactura" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CAT_ASOCIADOS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DUI" type="xs:string" />
+							<xs:element name="Correlativo" type="xs:int" />
+							<xs:element name="NoSocio" type="xs:string" />
+							<xs:element name="CodAntiguo" type="xs:string" minOccurs="0" />
+							<xs:element name="NIT" type="xs:string" minOccurs="0" />
+							<xs:element name="ISSS" type="xs:string" minOccurs="0" />
+							<xs:element name="LugarExtDUI" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaExtDUI" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NumPasaporte" type="xs:string" minOccurs="0" />
+							<xs:element name="EstadoIngreso" type="xs:string" />
+							<xs:element name="Apellido1" type="xs:string" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" />
+							<xs:element name="Fecha_Nac" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Direccion" type="xs:string" minOccurs="0" />
+							<xs:element name="TelCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="TelOficina" type="xs:string" minOccurs="0" />
+							<xs:element name="ExtensionOfic" type="xs:string" minOccurs="0" />
+							<xs:element name="Celular" type="xs:string" minOccurs="0" />
+							<xs:element name="Email" type="xs:string" minOccurs="0" />
+							<xs:element name="CodProfesion" type="xs:string" minOccurs="0" />
+							<xs:element name="TituloObtenido" type="xs:string" minOccurs="0" />
+							<xs:element name="CodNacionalidad" type="xs:string" minOccurs="0" />
+							<xs:element name="LugarTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="DepartamentoTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaInicioTrab" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DireccionTrabajo" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:string" minOccurs="0" />
+							<xs:element name="Salario" type="xs:double" minOccurs="0" />
+							<xs:element name="EstadoCivil" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreConyugue" type="xs:string" minOccurs="0" />
+							<xs:element name="NumGrupoFam" type="xs:int" minOccurs="0" />
+							<xs:element name="NumDependientes" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="CasaPropia" type="xs:string" minOccurs="0" />
+							<xs:element name="TrabajoPropio" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoActividad" type="xs:string" minOccurs="0" />
+							<xs:element name="OtrosIngresos" type="xs:double" minOccurs="0" />
+							<xs:element name="OrigenOtrosIngresos" type="xs:string" minOccurs="0" />
+							<xs:element name="CodMunicipio" type="xs:string" minOccurs="0" />
+							<xs:element name="CodDepartamento" type="xs:string" minOccurs="0" />
+							<xs:element name="FueDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="PeriodoFueDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="Directivo" type="xs:string" minOccurs="0" />
+							<xs:element name="PeriodoDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="EstadoAsociado" type="xs:string" minOccurs="0" />
+							<xs:element name="CodEjecMercadeo" type="xs:string" minOccurs="0" />
+							<xs:element name="Imagen" type="xs:string" minOccurs="0" />
+							<xs:element name="Firmas" type="xs:string" minOccurs="0" />
+							<xs:element name="Sexo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCuerpoDirectivo" type="xs:string" minOccurs="0" />
+							<xs:element name="RegistroFiscal" type="xs:string" minOccurs="0" />
+							<xs:element name="Giro" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Candidato" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Aspirante" type="xs:string" minOccurs="0" />
+							<xs:element name="Observaciones_Asociado" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AhCuentasAhorro">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Dui" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="Titular2" type="xs:string" minOccurs="0" />
+							<xs:element name="PartidaNacTitular2" type="xs:string" minOccurs="0" />
+							<xs:element name="NoLibretaAnterior" type="xs:string" minOccurs="0" />
+							<xs:element name="NoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaInicioApertura" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaApertura" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaCierre" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaVencimiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaPrimeraCuota" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="MontoApertura" type="xs:double" minOccurs="0" />
+							<xs:element name="Plazo" type="xs:int" minOccurs="0" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Cuota" type="xs:double" minOccurs="0" />
+							<xs:element name="NoCuotas" type="xs:int" minOccurs="0" />
+							<xs:element name="CodDestino" type="xs:string" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodEjecutivo" type="xs:string" minOccurs="0" />
+							<xs:element name="Saldo_CuentaAhorro" type="xs:double" minOccurs="0" />
+							<xs:element name="SaldoDisponible_CuentaAhorro" type="xs:double" minOccurs="0" />
+							<xs:element name="NoCuotasPagadas" type="xs:int" minOccurs="0" />
+							<xs:element name="SaldoInteresPendiente" type="xs:double" minOccurs="0" />
+							<xs:element name="Estado" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="ComisionxUsoRed" type="xs:double" minOccurs="0" />
+							<xs:element name="Pignorado" type="xs:string" minOccurs="0" />
+							<xs:element name="MontoPignorado" type="xs:double" minOccurs="0" />
+							<xs:element name="PorcentajePignora" type="xs:double" minOccurs="0" />
+							<xs:element name="MotivoCancelacion" type="xs:string" minOccurs="0" />
+							<xs:element name="DiasGracia" type="xs:int" minOccurs="0" />
+							<xs:element name="IdCertificadoDPF" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuentaAnterior" type="xs:string" minOccurs="0" />
+							<xs:element name="cta_aho" type="xs:string" minOccurs="0" />
+							<xs:element name="Prorrogado" type="xs:string" minOccurs="0" />
+							<xs:element name="CobroDomicilio" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoDocTit2" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaCancelacion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CodEjecCanc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AhTiposAhorro">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="Descripcion" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="SaldoAnterior" type="xs:double" minOccurs="0" />
+							<xs:element name="Dato" type="xs:string" minOccurs="0" />
+							<xs:element name="DatoII" type="xs:string" minOccurs="0" />
+							<xs:element name="Valor" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CAFacturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="Annio" type="xs:decimal" />
+							<xs:element name="Tipo" type="xs:string" />
+							<xs:element name="Fec_Mov" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Vta_Gravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NoGravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NIva" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_Total" type="xs:double" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Impreso" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="DocPago" type="xs:string" minOccurs="0" />
+							<xs:element name="Estado" type="xs:string" minOccurs="0" />
+							<xs:element name="Devolucion" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaDevolucion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NoReserva" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCheque" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCtaBanco" type="xs:string" minOccurs="0" />
+							<xs:element name="IdBanco" type="xs:int" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:int" minOccurs="0" />
+							<xs:element name="Girador" type="xs:string" minOccurs="0" />
+							<xs:element name="Paguese" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CADet_Facturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="CodItem" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Cantidad" type="xs:int" minOccurs="0" />
+							<xs:element name="Monto_Pago" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotal_Exento" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotal_Gravado" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotal_SIva" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Vta" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Descuento" type="xs:double" minOccurs="0" />
+							<xs:element name="Mes" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoMov" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoAhorro" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="Tipo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AhMovimientos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="CodTransaccion" type="xs:string" minOccurs="0" />
+							<xs:element name="NoLibreta" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="TipoPago" type="xs:string" />
+							<xs:element name="SaldoAnterior" type="xs:double" minOccurs="0" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodTipo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:int" minOccurs="0" />
+							<xs:element name="CodCajero" type="xs:int" minOccurs="0" />
+							<xs:element name="PagoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="IdMovimiento" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Tipo" type="xs:string" minOccurs="0" />
+							<xs:element name="Num" type="xs:int" minOccurs="0" />
+							<xs:element name="Posteado" type="xs:string" minOccurs="0" />
+							<xs:element name="IdBanco" type="xs:long" minOccurs="0" />
+							<xs:element name="Origen" type="xs:string" minOccurs="0" />
+							<xs:element name="Hora" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CAMaestroCajeros">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodCajero" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="CodEmpleado" type="xs:string" minOccurs="0" />
+							<xs:element name="Usuario" type="xs:string" minOccurs="0" />
+							<xs:element name="Password" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaIngreso" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaFinalizacion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Activo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodSucursal" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="key1">
+			<xs:selector xpath=".//mstns:CAT_ASOCIADOS" />
+			<xs:field xpath="mstns:DUI" />
+		</xs:key>
+		<xs:keyref name="CAT_ASOCIADOSAhCuentasAhorro" refer="key1">
+			<xs:selector xpath=".//mstns:AhCuentasAhorro" />
+			<xs:field xpath="mstns:Dui" />
+		</xs:keyref>
+		<xs:unique name="dsCAFacturaKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:AhTiposAhorro" />
+			<xs:field xpath="mstns:CodTipoAhorro" />
+		</xs:unique>
+		<xs:keyref name="AhTiposAhorroAhCuentasAhorro" refer="dsCAFacturaKey3">
+			<xs:selector xpath=".//mstns:AhCuentasAhorro" />
+			<xs:field xpath="mstns:CodTipoAhorro" />
+		</xs:keyref>
+		<xs:key name="key2">
+			<xs:selector xpath=".//mstns:AhCuentasAhorro" />
+			<xs:field xpath="mstns:CodTipoAhorro" />
+			<xs:field xpath="mstns:NoCuenta" />
+		</xs:key>
+		<xs:unique name="dsCAFacturaKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+			<xs:field xpath="mstns:Tipo" />
+		</xs:unique>
+		<xs:unique name="dsCAFacturaKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CADet_Facturas" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+		<xs:keyref name="CAFacturasCADet_Facturas" refer="dsCAFacturaKey1">
+			<xs:selector xpath=".//mstns:CADet_Facturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+			<xs:field xpath="mstns:Tipo" />
+		</xs:keyref>
+		<xs:keyref name="CAT_ASOCIADOSCAFacturas" refer="key1">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:DUI" />
+		</xs:keyref>
+		<xs:unique name="dsCAFacturaKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+		<xs:unique name="dsCAFacturaKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAMaestroCajeros" />
+			<xs:field xpath="mstns:CodCajero" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

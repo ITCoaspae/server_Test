@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="1028" viewPortTop="0" zoom="100">
+    <Reporte_XmlElement left="11166" top="1720" width="5662" height="4234" selected="0" zOrder="2" index="0" expanded="1" />
+    <Datos_XmlElement left="2434" top="1667" width="7197" height="9313" selected="0" zOrder="3" index="1" expanded="1" />
+    <Fiadores_XmlElement left="11192" top="6138" width="5609" height="3386" selected="0" zOrder="4" index="2" expanded="1" />
+    <DatosFiadores_XmlKeyref left="10160" top="6826" width="503" height="503" selected="0" zOrder="8" />
+</XSDDesignerLayout>

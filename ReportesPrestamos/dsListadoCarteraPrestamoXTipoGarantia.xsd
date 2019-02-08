@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsListadoCarteraPrestamoXTipoGarantia" targetNamespace="http://tempuri.org/dsListadoCarteraPrestamoXTipoGarantia.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsListadoCarteraPrestamoXTipoGarantia.xsd"
+	xmlns:mstns="http://tempuri.org/dsListadoCarteraPrestamoXTipoGarantia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsListadoCarteraPrestamoXTipoGarantia" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PRPrestamos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NoSocio" type="xs:string" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Categoria" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="Monto" type="xs:string" minOccurs="0" />
+							<xs:element name="SaldoCapital" type="xs:double" minOccurs="0" />
+							<xs:element name="FechaOtorgamiento" type="xs:date" minOccurs="0" />
+							<xs:element name="FechaVencimiento" type="xs:date" minOccurs="0" />
+							<xs:element name="FechaUltimoPago" type="xs:date" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="PorcentajeRiesgo" type="xs:double" minOccurs="0" />
+							<xs:element name="ValorReserva" type="xs:double" minOccurs="0" />
+							<xs:element name="DescTipoCredito" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoCredito" type="xs:string" minOccurs="0" />
+							<xs:element name="DescCodGarantia" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTipoGarantia" type="xs:string" minOccurs="0" />
+							<xs:element name="DescCodTipoGarantia" type="xs:string" minOccurs="0" />
+							<xs:element name="Cuota" type="xs:float" minOccurs="0" />
+							<xs:element name="Monto_Garantia" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

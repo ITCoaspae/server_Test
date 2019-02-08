@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsTablaAmortizaSimulada" targetNamespace="http://tempuri.org/dsTablaAmortizaSimulada.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsTablaAmortizaSimulada.xsd"
+	xmlns:mstns="http://tempuri.org/dsTablaAmortizaSimulada.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsTablaAmortizaSimulada" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Amortiza">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cuota_Num" type="xs:int" minOccurs="0" />
+							<xs:element name="FechaPago" type="xs:date" minOccurs="0" />
+							<xs:element name="Cuota_Prestamo" type="xs:double" minOccurs="0" />
+							<xs:element name="Interes" type="xs:double" minOccurs="0" />
+							<xs:element name="Cuota_Interes" type="xs:double" minOccurs="0" />
+							<xs:element name="Abono_Capital" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroDeuda" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroDanios" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroVida" type="xs:double" minOccurs="0" />
+							<xs:element name="SeguroDesempleo" type="xs:double" minOccurs="0" />
+							<xs:element name="Aportacion" type="xs:double" minOccurs="0" />
+							<xs:element name="Ahorros" type="xs:double" minOccurs="0" />
+							<xs:element name="ComisionManejo" type="xs:double" minOccurs="0" />
+							<xs:element name="Cuota_Total" type="xs:double" minOccurs="0" />
+							<xs:element name="Solo_Interes" type="xs:int" minOccurs="0" />
+							<xs:element name="Dias_Interes" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

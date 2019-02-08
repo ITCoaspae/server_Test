@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsImpresionLibretaAh" targetNamespace="http://tempuri.org/dsImpresionLibretaAh.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsImpresionLibretaAh.xsd"
+	xmlns:mstns="http://tempuri.org/dsImpresionLibretaAh.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsImpresionLibretaAh" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="AhMovimientos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodTipoAhorro" type="xs:string" />
+							<xs:element name="NoCuenta" type="xs:string" />
+							<xs:element name="NoLibreta" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="TipoPago" type="xs:string" />
+							<xs:element name="Monto" type="xs:double" minOccurs="0" />
+							<xs:element name="Saldo" type="xs:double" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:double" minOccurs="0" />
+							<xs:element name="CodTipo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="UsuarioCaja" type="xs:string" minOccurs="0" />
+							<xs:element name="PagoLibreta" type="xs:string" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="IdMovimiento" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsImpresionLibretaAhKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:AhMovimientos" />
+			<xs:field xpath="mstns:Correlativo" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="720" viewPortTop="-207" zoom="100">
+    <CAFacturas_XmlElement left="1959" top="926" width="5292" height="2963" selected="0" zOrder="2" index="0" expanded="1" />
+    <CADet_Facturas_XmlElement left="10212" top="845" width="5292" height="2963" selected="0" zOrder="3" index="1" expanded="1" />
+    <CAT_ASOCIADOS_XmlElement left="8547" top="4153" width="7620" height="2963" selected="0" zOrder="5" index="2" expanded="1" />
+    <CAItemsFact_XmlElement left="2434" top="4419" width="5768" height="4656" selected="0" zOrder="7" index="3" expanded="1" />
+    <PRPrestamos_XmlElement left="16378" top="793" width="6297" height="6350" selected="0" zOrder="9" index="4" expanded="1" />
+    <Reporte_XmlElement left="1164" top="9234" width="7462" height="2963" selected="0" zOrder="10" index="5" expanded="1" />
+    <DatosAhorro_XmlElement left="10214" top="8625" width="7144" height="3387" selected="0" zOrder="12" index="6" expanded="1" />
+    <CAItemsFactCADet_Facturas_XmlKeyref left="8956" top="7898" width="503" height="503" selected="0" zOrder="18" />
+    <CAFacturasCADet_Facturas_XmlKeyref left="8347" top="2898" width="503" height="503" selected="0" zOrder="13" />
+</XSDDesignerLayout>

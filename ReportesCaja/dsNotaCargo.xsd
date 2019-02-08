@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsNotaCargo" targetNamespace="http://tempuri.org/dsNotaCargo.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsNotaCargo.xsd" xmlns:mstns="http://tempuri.org/dsNotaCargo.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsNotaCargo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CADatos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Dui" type="xs:string" minOccurs="0" />
+							<xs:element name="NoSocio" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="ValorTransferencia" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Observacion" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuentaO" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuentaD" type="xs:string" minOccurs="0" />
+							<xs:element name="MontoLetras" type="xs:string" minOccurs="0" />
+							<xs:element name="CodTransferencia" type="xs:string" minOccurs="0" />
+							<xs:element name="Responsable" type="xs:string" minOccurs="0" />
+							<xs:element name="Hora" type="xs:string" minOccurs="0" />
+							<xs:element name="NoDocumento" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoCuentaO" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoCuentaD" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

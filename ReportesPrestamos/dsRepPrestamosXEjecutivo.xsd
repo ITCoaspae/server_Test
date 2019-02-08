@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsRepPrestamosXEjecutivo" targetNamespace="http://tempuri.org/dsRepPrestamosXEjecutivo.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsRepPrestamosXEjecutivo.xsd"
+	xmlns:mstns="http://tempuri.org/dsRepPrestamosXEjecutivo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsRepPrestamosXEjecutivo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CREntregaSolicitudCredito">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NumSolicitud" type="xs:int" minOccurs="0" />
+							<xs:element name="CodEjecutivo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodPrestamo" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="NoSocio" type="xs:string" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaOtorgamiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaVencimiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaUltimoPago" type="xs:string" minOccurs="0" />
+							<xs:element name="Cuota" type="xs:float" minOccurs="0" />
+							<xs:element name="Monto" type="xs:float" minOccurs="0" />
+							<xs:element name="Monto_Garantia" type="xs:float" minOccurs="0" />
+							<xs:element name="Categoria" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

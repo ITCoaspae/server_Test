@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsCertificadoDPF" targetNamespace="http://tempuri.org/dsCertificadoDPF.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsCertificadoDPF.xsd"
+	xmlns:mstns="http://tempuri.org/dsCertificadoDPF.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsCertificadoDPF" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Datos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Correlativo" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="Departamento" type="xs:string" minOccurs="0" />
+							<xs:element name="Municipio" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Edad" type="xs:int" minOccurs="0" />
+							<xs:element name="Direccion" type="xs:string" minOccurs="0" />
+							<xs:element name="EstadoCivil" type="xs:string" minOccurs="0" />
+							<xs:element name="Profesion" type="xs:string" minOccurs="0" />
+							<xs:element name="Dui" type="xs:string" minOccurs="0" />
+							<xs:element name="NoSocio" type="xs:string" minOccurs="0" />
+							<xs:element name="LugarExtDui" type="xs:string" minOccurs="0" />
+							<xs:element name="Monto" type="xs:decimal" minOccurs="0" />
+							<xs:element name="MontoLetras" type="xs:string" minOccurs="0" />
+							<xs:element name="Plazo" type="xs:int" minOccurs="0" />
+							<xs:element name="NoCertificado" type="xs:string" minOccurs="0" />
+							<xs:element name="TasaInteres" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NoCuentaDepInt" type="xs:string" minOccurs="0" />
+							<xs:element name="TitularCuentaDepInt" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB1" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco1" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje1" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB2" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco2" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje2" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB3" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco3" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje3" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB4" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco4" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje4" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB5" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco5" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje5" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB6" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco6" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje6" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB7" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco7" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje7" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB8" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco8" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje8" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB9" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco9" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje9" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB10" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco10" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje10" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB11" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco11" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje11" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB12" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco12" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje12" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB13" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco13" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje13" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB14" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco14" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje14" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB15" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco15" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje15" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB16" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco16" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje16" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB17" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco17" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje17" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB18" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco18" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje18" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB19" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco19" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje19" type="xs:string" minOccurs="0" />
+							<xs:element name="NombreB20" type="xs:string" minOccurs="0" />
+							<xs:element name="Parentesco20" type="xs:string" minOccurs="0" />
+							<xs:element name="Porcentaje20" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaVencimiento" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FechaApertura" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="1717" viewPortTop="0" zoom="100">
+    <PREstadoCuenta_XmlElement left="1323" top="1005" width="8096" height="11430" selected="0" zOrder="1" index="0" expanded="1" />
+    <PRReporte_XmlElement left="10054" top="1005" width="5239" height="3810" selected="0" zOrder="2" index="1" expanded="1" />
+    <PRPrestamos_XmlElement left="15716" top="1005" width="7409" height="8044" selected="0" zOrder="4" index="2" expanded="1" />
+    <CRTiposCredito_XmlElement left="23538" top="1000" width="7302" height="4657" selected="0" zOrder="14" index="3" expanded="1" />
+    <CAT_ASOCIADOS_XmlElement left="31300" top="1058" width="5292" height="4234" selected="0" zOrder="9" index="4" expanded="1" />
+    <PRPrestamosPREstadoCuenta_XmlKeyref left="12415" top="4982" width="503" height="503" selected="0" zOrder="5" />
+    <CAT_ASOCIADOSPRPrestamos_XmlKeyref left="26938" top="6146" width="503" height="503" selected="0" zOrder="10" />
+</XSDDesignerLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsBCCheqEmitidos" targetNamespace="http://tempuri.org/dsBCCheqEmitidos.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsBCCheqEmitidos.xsd"
+	xmlns:mstns="http://tempuri.org/dsBCCheqEmitidos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsBCCheqEmitidos" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Mes" type="xs:string" minOccurs="0" />
+							<xs:element name="Annio" type="xs:int" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Reporte" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BCMOV_CHEQUES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="Num_Partida" type="xs:string" minOccurs="0" />
+							<xs:element name="IdEstado" type="xs:string" minOccurs="0" />
+							<xs:element name="IdCtaBanco" type="xs:string" minOccurs="0" />
+							<xs:element name="IdTipoMov" type="xs:string" minOccurs="0" />
+							<xs:element name="Fecha_Mov" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Concepto" type="xs:string" minOccurs="0" />
+							<xs:element name="Cantidad" type="xs:double" minOccurs="0" />
+							<xs:element name="Ciudad" type="xs:string" minOccurs="0" />
+							<xs:element name="Paguese" type="xs:string" minOccurs="0" />
+							<xs:element name="Usu_Mov" type="xs:string" minOccurs="0" />
+							<xs:element name="Fecha_Anulac" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Usu_Anulac" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BCCTAS_BANCOS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdCtaBanco" type="xs:string" />
+							<xs:element name="IdCuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="IdBanco" type="xs:long" minOccurs="0" />
+							<xs:element name="Nom_Cuenta" type="xs:string" minOccurs="0" />
+							<xs:element name="Fec_Apertura" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Corr_Cheque" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsBCCheqEmitidosKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BCMOV_CHEQUES" />
+			<xs:field xpath="mstns:IdMovimiento" />
+		</xs:unique>
+		<xs:unique name="dsBCCheqEmitidosKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BCCTAS_BANCOS" />
+			<xs:field xpath="mstns:IdCtaBanco" />
+		</xs:unique>
+		<xs:keyref name="BCCTAS_BANCOSBCMOV_CHEQUES" refer="dsBCCheqEmitidosKey2">
+			<xs:selector xpath=".//mstns:BCMOV_CHEQUES" />
+			<xs:field xpath="mstns:IdCtaBanco" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

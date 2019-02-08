@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsReferenciaLaboral" targetNamespace="http://tempuri.org/dsReferenciaLaboral.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsReferenciaLaboral.xsd"
+	xmlns:mstns="http://tempuri.org/dsReferenciaLaboral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsReferenciaLaboral" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Fecha" type="xs:string" minOccurs="0" />
+							<xs:element name="Firma" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PLPlanilla">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodEmpleado" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido1" type="xs:string" minOccurs="0" />
+							<xs:element name="Apellido2" type="xs:string" minOccurs="0" />
+							<xs:element name="ApellidoCas" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombres" type="xs:string" minOccurs="0" />
+							<xs:element name="Sexo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodCargo" type="xs:string" minOccurs="0" />
+							<xs:element name="Cargo" type="xs:string" minOccurs="0" />
+							<xs:element name="CodDepartamento" type="xs:string" minOccurs="0" />
+							<xs:element name="Departamento" type="xs:string" minOccurs="0" />
+							<xs:element name="SueldoBase" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FechaIngreso" type="xs:date" minOccurs="0" />
+							<xs:element name="SalarioLetras" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaRetiro" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

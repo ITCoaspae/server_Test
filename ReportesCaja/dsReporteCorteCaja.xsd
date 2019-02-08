@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsReporteCorteCaja" targetNamespace="http://tempuri.org/dsReporteCorteCaja.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/dsReporteCorteCaja.xsd"
+	xmlns:mstns="http://tempuri.org/dsReporteCorteCaja.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsReporteCorteCaja" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SubTotales">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SubTotalEfectivo" type="xs:double" minOccurs="0" />
+							<xs:element name="SubTotalCheque" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CAFacturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IdMovimiento" type="xs:string" />
+							<xs:element name="Annio" type="xs:decimal" />
+							<xs:element name="Tipo" type="xs:string" />
+							<xs:element name="Fec_Mov" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DUI" type="xs:string" minOccurs="0" />
+							<xs:element name="Vta_Gravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NoGravada" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_NIva" type="xs:double" minOccurs="0" />
+							<xs:element name="Total_Iva" type="xs:double" minOccurs="0" />
+							<xs:element name="Vta_Total" type="xs:double" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Impreso" type="xs:string" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="DocPago" type="xs:string" minOccurs="0" />
+							<xs:element name="Estado" type="xs:string" minOccurs="0" />
+							<xs:element name="Devolucion" type="xs:string" minOccurs="0" />
+							<xs:element name="FechaDevolucion" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NoReserva" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCheque" type="xs:string" minOccurs="0" />
+							<xs:element name="NoCtaBanco" type="xs:string" minOccurs="0" />
+							<xs:element name="IdBanco" type="xs:int" minOccurs="0" />
+							<xs:element name="NoCaja" type="xs:int" minOccurs="0" />
+							<xs:element name="CodCajero" type="xs:int" minOccurs="0" />
+							<xs:element name="Girador" type="xs:string" minOccurs="0" />
+							<xs:element name="Paguese" type="xs:string" minOccurs="0" />
+							<xs:element name="Hora" type="xs:string" minOccurs="0" />
+							<xs:element name="CodSucursal" type="xs:string" minOccurs="0" />
+							<xs:element name="Autoriza" type="xs:string" minOccurs="0" />
+							<xs:element name="Nom_Banco" type="xs:string" minOccurs="0" />
+							<xs:element name="Cajero" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre_FormaPago" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reporte">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Empresa" type="xs:string" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="CodSucursal" type="xs:string" minOccurs="0" />
+							<xs:element name="Sucursal" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsReporteCorteCajaKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CAFacturas" />
+			<xs:field xpath="mstns:IdMovimiento" />
+			<xs:field xpath="mstns:Annio" />
+			<xs:field xpath="mstns:Tipo" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

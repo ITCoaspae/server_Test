@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="1823" viewPortTop="0" zoom="100">
+    <Reporte_XmlElement left="13335" top="3651" width="5980" height="2964" selected="0" zOrder="1" index="0" expanded="1" />
+    <BCMOV_CHEQUES_XmlElement left="5503" top="3440" width="7568" height="2963" selected="0" zOrder="2" index="1" expanded="1" />
+    <BCCTAS_BANCOS_XmlElement left="7885" top="9340" width="6879" height="2963" selected="0" zOrder="4" index="2" expanded="1" />
+    <BCCTAS_BANCOSBCMOV_CHEQUES_XmlKeyref left="5887" top="7620" width="503" height="503" selected="0" zOrder="6" />
+</XSDDesignerLayout>
