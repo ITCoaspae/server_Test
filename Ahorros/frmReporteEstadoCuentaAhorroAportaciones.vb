@@ -1,8 +1,14 @@
 Public Class frmReporteEstadoCuentaAhorroAportaciones
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-
+    Dim ahorro As New wrAhorro.wsLibAhorro
     Private vTipo As String, vCodTipoAhorro As String, pVar As Boolean
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbCuentas As MetroFramework.Controls.MetroComboBox
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -29,214 +35,161 @@ Public Class frmReporteEstadoCuentaAhorroAportaciones
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents dtpFechaInicio As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtpFechaFin As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtNoCuenta As System.Windows.Forms.TextBox
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
     Friend WithEvents txtAsociado As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtTipoCuenta As System.Windows.Forms.TextBox
-    Friend WithEvents chkDPF As System.Windows.Forms.CheckBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.chkDPF = New System.Windows.Forms.CheckBox()
-        Me.txtTipoCuenta = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtAsociado = New System.Windows.Forms.TextBox()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
-        Me.txtNoCuenta = New System.Windows.Forms.TextBox()
         Me.dtpFechaFin = New System.Windows.Forms.DateTimePicker()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.GroupBox1.SuspendLayout()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.cbCuentas = New MetroFramework.Controls.MetroComboBox()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.chkDPF)
-        Me.GroupBox1.Controls.Add(Me.txtTipoCuenta)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtAsociado)
-        Me.GroupBox1.Controls.Add(Me.txtDui)
-        Me.GroupBox1.Controls.Add(Me.txtNoCuenta)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaFin)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.dtpFechaInicio)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(590, 110)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        '
-        'chkDPF
-        '
-        Me.chkDPF.Location = New System.Drawing.Point(474, 9)
-        Me.chkDPF.Name = "chkDPF"
-        Me.chkDPF.Size = New System.Drawing.Size(104, 16)
-        Me.chkDPF.TabIndex = 177
-        Me.chkDPF.Text = "Visualizar &DPF"
-        '
-        'txtTipoCuenta
-        '
-        Me.txtTipoCuenta.BackColor = System.Drawing.Color.White
-        Me.txtTipoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTipoCuenta.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoCuenta.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtTipoCuenta.Location = New System.Drawing.Point(267, 78)
-        Me.txtTipoCuenta.Multiline = True
-        Me.txtTipoCuenta.Name = "txtTipoCuenta"
-        Me.txtTipoCuenta.ReadOnly = True
-        Me.txtTipoCuenta.Size = New System.Drawing.Size(309, 20)
-        Me.txtTipoCuenta.TabIndex = 5
-        '
-        'Label5
-        '
-        Me.Label5.Location = New System.Drawing.Point(267, 61)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(94, 16)
-        Me.Label5.TabIndex = 144
-        Me.Label5.Text = "Tipo de Cuenta:"
-        '
-        'Label4
-        '
-        Me.Label4.Location = New System.Drawing.Point(268, 16)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 17)
-        Me.Label4.TabIndex = 143
-        Me.Label4.Text = "Nombre:"
         '
         'txtAsociado
         '
         Me.txtAsociado.BackColor = System.Drawing.Color.White
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(267, 34)
+        Me.txtAsociado.ForeColor = System.Drawing.Color.Black
+        Me.txtAsociado.Location = New System.Drawing.Point(92, 88)
         Me.txtAsociado.Multiline = True
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(310, 20)
-        Me.txtAsociado.TabIndex = 4
+        Me.txtAsociado.Size = New System.Drawing.Size(413, 20)
+        Me.txtAsociado.TabIndex = 3
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(122, 32)
+        Me.txtDui.Location = New System.Drawing.Point(90, 63)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(138, 20)
+        Me.txtDui.Size = New System.Drawing.Size(138, 16)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
-        '
-        'txtNoCuenta
-        '
-        Me.txtNoCuenta.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.txtNoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNoCuenta.Location = New System.Drawing.Point(122, 78)
-        Me.txtNoCuenta.Name = "txtNoCuenta"
-        Me.txtNoCuenta.ReadOnly = True
-        Me.txtNoCuenta.Size = New System.Drawing.Size(139, 20)
-        Me.txtNoCuenta.TabIndex = 3
         '
         'dtpFechaFin
         '
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(13, 79)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(367, 114)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(91, 20)
-        Me.dtpFechaFin.TabIndex = 2
-        '
-        'Label6
-        '
-        Me.Label6.Location = New System.Drawing.Point(11, 61)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 15)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "Fecha Fin:"
+        Me.dtpFechaFin.Size = New System.Drawing.Size(138, 20)
+        Me.dtpFechaFin.TabIndex = 7
         '
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(11, 31)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(92, 114)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(92, 20)
-        Me.dtpFechaInicio.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.Location = New System.Drawing.Point(120, 64)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 16)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "No Cuenta:"
-        '
-        'Label2
-        '
-        Me.Label2.Location = New System.Drawing.Point(120, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "DUI:"
-        '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(10, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Fecha Inicio:"
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(139, 20)
+        Me.dtpFechaInicio.TabIndex = 5
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(530, 179)
+        Me.MetroButton1.Location = New System.Drawing.Point(422, 169)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(83, 28)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroButton1.TabIndex = 225
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton1.TabIndex = 12
         Me.MetroButton1.Text = "Reporte"
         Me.MetroButton1.UseSelectable = True
         Me.MetroButton1.UseStyleColors = True
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(19, 63)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(30, 19)
+        Me.MetroLabel1.TabIndex = 0
+        Me.MetroLabel1.Text = "DUI"
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(19, 88)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(62, 19)
+        Me.MetroLabel2.TabIndex = 2
+        Me.MetroLabel2.Text = "Nombre:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.Location = New System.Drawing.Point(19, 114)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(48, 19)
+        Me.MetroLabel3.TabIndex = 4
+        Me.MetroLabel3.Text = "Desde:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(326, 114)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(41, 19)
+        Me.MetroLabel4.TabIndex = 6
+        Me.MetroLabel4.Text = "Hasta"
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(19, 138)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(78, 19)
+        Me.MetroLabel6.TabIndex = 10
+        Me.MetroLabel6.Text = "No. Cuenta:"
+        '
+        'cbCuentas
+        '
+        Me.cbCuentas.FormattingEnabled = True
+        Me.cbCuentas.ItemHeight = 23
+        Me.cbCuentas.Location = New System.Drawing.Point(92, 138)
+        Me.cbCuentas.Name = "cbCuentas"
+        Me.cbCuentas.Size = New System.Drawing.Size(413, 29)
+        Me.cbCuentas.Style = MetroFramework.MetroColorStyle.Teal
+        Me.cbCuentas.TabIndex = 11
+        Me.cbCuentas.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.cbCuentas.UseCustomBackColor = True
+        Me.cbCuentas.UseCustomForeColor = True
+        Me.cbCuentas.UseSelectable = True
+        Me.cbCuentas.UseStyleColors = True
         '
         'frmReporteEstadoCuentaAhorroAportaciones
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(634, 222)
+        Me.ClientSize = New System.Drawing.Size(631, 288)
+        Me.Controls.Add(Me.cbCuentas)
+        Me.Controls.Add(Me.MetroLabel6)
+        Me.Controls.Add(Me.MetroLabel4)
+        Me.Controls.Add(Me.MetroLabel3)
+        Me.Controls.Add(Me.dtpFechaFin)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.MetroButton1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.txtAsociado)
+        Me.Controls.Add(Me.txtDui)
+        Me.Controls.Add(Me.dtpFechaInicio)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(634, 222)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(634, 222)
         Me.Name = "frmReporteEstadoCuentaAhorroAportaciones"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
-        Me.Text = "Estado de Cuentas de Ahorro"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Style = MetroFramework.MetroColorStyle.Teal
+        Me.Text = "Estado de Cuenta de Ahorros"
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -279,41 +232,41 @@ Public Class frmReporteEstadoCuentaAhorroAportaciones
         End Try
     End Sub
 
-    Private Sub txtNoCuenta_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNoCuenta.DoubleClick
+    'Private Sub txtNoCuenta_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
 
-        Dim frm As New frmAGenerico
-        Dim sTexto As String
-        frm.Text = "Buscar Cuenta"
-        Dim oAh As wrAhorro.wsLibAhorro, ds As New Data.DataSet("Ahorro"), dr As DataRow
-        Try
-            oAh = New wrAhorro.wsLibAhorro
-            If Me.vTipo = "A" Then
-                If pVar = False Then
-                    ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and (Left(CodTipoAhorro,1)<>'1' and Left(CodTipoAhorro,1)<>'2')", "NoCuenta", sUsuario, sPassword, sSucursal)
-                ElseIf pVar = True Then
-                    ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and Left(CodTipoAhorro,1)<>'1'", "NoCuenta", sUsuario, sPassword, sSucursal)
-                End If
-            ElseIf Me.vTipo = "P" Then
-                ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and Left(CodTipoAhorro,1)='1'", "NoCuenta", sUsuario, sPassword, sSucursal)
-            End If
-            frm.Datos = ds
-            frm.ColSeleccion = 0
-            frm.RefrescarGrid()
-            frm.ShowDialog()
-            If frm.Resultado.Trim = "" Then
-            ElseIf frm.Resultado.Trim <> "" Then
-                sTexto = frm.Resultado3.Trim
-                ds = oAh.ConsultarCuentaAhorroTipoAhorro("a.CodTipoAhorro,b.Descripcion as Tipo_Ahorro,a.NoCuenta,a.NoCuentaAnterior,a.FechaApertura,a.Cuota,a.SaldoDisponible_CuentaAhorro as Saldo__", "a.NoCuenta='" & sTexto.Trim & "'", "a.NoCuenta", sUsuario, sPassword, sSucursal)
-                dr = ds.Tables("AhCuentasAhorro").Rows(0)
-                Me.txtNoCuenta.Text = IIf(IsDBNull(dr("NoCuenta")), 0, dr("NoCuenta"))
-                vCodTipoAhorro = IIf(IsDBNull(dr("CodTipoAhorro")), "", dr("CodTipoAhorro"))
-                Me.txtTipoCuenta.Text = dr("Tipo_Ahorro")
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+    '    Dim frm As New frmAGenerico
+    '    Dim sTexto As String
+    '    frm.Text = "Buscar Cuenta"
+    '    Dim oAh As wrAhorro.wsLibAhorro, ds As New Data.DataSet("Ahorro"), dr As DataRow
+    '    Try
+    '        oAh = New wrAhorro.wsLibAhorro
+    '        If Me.vTipo = "A" Then
+    '            If pVar = False Then
+    '                ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and (Left(CodTipoAhorro,1)<>'1' and Left(CodTipoAhorro,1)<>'2')", "NoCuenta", sUsuario, sPassword, sSucursal)
+    '            ElseIf pVar = True Then
+    '                ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and Left(CodTipoAhorro,1)<>'1'", "NoCuenta", sUsuario, sPassword, sSucursal)
+    '            End If
+    '        ElseIf Me.vTipo = "P" Then
+    '            ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and Left(CodTipoAhorro,1)='1'", "NoCuenta", sUsuario, sPassword, sSucursal)
+    '        End If
+    '        frm.Datos = ds
+    '        frm.ColSeleccion = 0
+    '        frm.RefrescarGrid()
+    '        frm.ShowDialog()
+    '        If frm.Resultado.Trim = "" Then
+    '        ElseIf frm.Resultado.Trim <> "" Then
+    '            sTexto = frm.Resultado3.Trim
+    '            ds = oAh.ConsultarCuentaAhorroTipoAhorro("a.CodTipoAhorro,b.Descripcion as Tipo_Ahorro,a.NoCuenta,a.NoCuentaAnterior,a.FechaApertura,a.Cuota,a.SaldoDisponible_CuentaAhorro as Saldo__", "a.NoCuenta='" & sTexto.Trim & "'", "a.NoCuenta", sUsuario, sPassword, sSucursal)
+    '            dr = ds.Tables("AhCuentasAhorro").Rows(0)
+    '            Me.txtNoCuenta.Text = IIf(IsDBNull(dr("NoCuenta")), 0, dr("NoCuenta"))
+    '            vCodTipoAhorro = IIf(IsDBNull(dr("CodTipoAhorro")), "", dr("CodTipoAhorro"))
+    '            Me.txtTipoCuenta.Text = dr("Tipo_Ahorro")
+    '        End If
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End Try
 
-    End Sub
+    'End Sub
 
     Private Sub txtDui_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDui.Click
         Try
@@ -329,23 +282,53 @@ Public Class frmReporteEstadoCuentaAhorroAportaciones
     End Sub
 
     Private Sub txtDui_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDui.KeyPress
-        If e.KeyChar = Convert.ToChar(Keys.Enter) Then txtDui_LostFocus(sender, e)
+        If (e.KeyChar = Convert.ToChar(Keys.Enter) Or e.KeyChar = Convert.ToChar(Keys.Return)) Then SendKeys.Send("{TAB}")
+        'If e.KeyChar = Convert.ToChar(Keys.Enter) Then txtDui_LostFocus(sender, e)
     End Sub
 
     Private Sub txtDui_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDui.LostFocus
         Dim sTexto As String
+        '--------------------CAMBIO APLICADO 31/08/2019  PROG01 ----------------------------
+        '--------------------SOLICITADO POR GERENCIA PARA CLASIFICAR CLIENTES VIP-----------
         Try
             sTexto = Me.txtDui.Value
             If sTexto = "" Then      'Filtrar Registros
             ElseIf sTexto <> "" Then
+
                 Dim oAsoc As New wrAsociados.wsLibAsoc, ds As New Data.DataSet, dr As DataRow
-                ds = oAsoc.ConsultarAsociado("DUI,Nombres,Apellido1,Apellido2,ApellidoCas", "DUI='" & sTexto & "'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
+                ds = oAsoc.ConsultarAsociadoVIP("DUI,Nombre", "DUI='" & sTexto & "'", "DUI,Nombre", sUsuario, sPassword, sSucursal)
                 If ds.Tables(0).Rows.Count > 0 Then
                     dr = ds.Tables(0).Rows(0)
-                    Me.txtDui.Value = Trim(dr("DUI"))
-                    Me.txtAsociado.Text = Trim(dr("Nombres")) & ", " & dr("Apellido1") & " " & dr("Apellido2") & " " & dr("ApellidoCas")
+                    Dim ofrmAut As New frmMsAutorizacion
+                    ofrmAut.TipoPermiso = "P"
+                    ofrmAut.NumPrograma = "VIP001"
+                    ofrmAut.ShowDialog()
+                    If ofrmAut.Autoriza = True Then
+                        '=========================================================================================
+                        Dim oAsoc1 As New wrAsociados.wsLibAsoc, ds1 As New Data.DataSet, dr1 As DataRow
+                        ds1 = oAsoc1.ConsultarAsociado("DUI,Nombres,Apellido1,Apellido2,ApellidoCas", "DUI='" & sTexto & "'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
+                        If ds1.Tables(0).Rows.Count > 0 Then
+                            dr1 = ds1.Tables(0).Rows(0)
+                            Me.txtDui.Value = Trim(dr("DUI"))
+                            Me.txtAsociado.Text = Trim(dr1("Nombres")) & ", " & dr1("Apellido1") & " " & dr1("Apellido2") & " " & dr1("ApellidoCas")
+                            llenarCuentas()
+                        End If
+                    Else
+                        MetroFramework.MetroMessageBox.Show(Me, "Seleccionar Usuario que autoriza la consulta del Cliente VIP.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Hand)
+                    End If
+                Else
+                    Dim oAsoc2 As New wrAsociados.wsLibAsoc, ds2 As New Data.DataSet, dr2 As DataRow
+                    ds2 = oAsoc2.ConsultarAsociado("DUI,Nombres,Apellido1,Apellido2,ApellidoCas", "DUI='" & sTexto & "'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
+                    If ds2.Tables(0).Rows.Count > 0 Then
+                        dr2 = ds2.Tables(0).Rows(0)
+                        Me.txtDui.Value = Trim(dr2("DUI"))
+                        Me.txtAsociado.Text = Trim(dr2("Nombres")) & ", " & dr2("Apellido1") & " " & dr2("Apellido2") & " " & dr2("ApellidoCas")
+                        llenarCuentas()
+                    End If
                 End If
+
             End If
+            '-------------- FIN DEL CAMBIO DE CLIENTE VIP
         Catch ex As Exception
         End Try
     End Sub
@@ -353,38 +336,63 @@ Public Class frmReporteEstadoCuentaAhorroAportaciones
 
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
-        Dim oItem As New wrAhorro.wsLibAhorro
+
         Dim ds As New Data.DataSet
         Try
-            ds = oItem.ReporteEstadoCuentaAhorroAportaciones("'" & Trim(Me.txtDui.Text) & "'", "'" & Trim(Me.txtNoCuenta.Text) & "'", vCodTipoAhorro, Me.dtpFechaInicio.Value.ToLongDateString, Me.dtpFechaFin.Value.ToLongDateString, sUsuario, sPassword, sSucursal)
+            Dim dtsAhorro As New DataSet
+            dtsAhorro = ahorro.ConsultarCuentaAhorro("codTipoAhorro", " Nocuenta = '" & cbCuentas.SelectedValue & "'", "Nocuenta", sUsuario, sPassword, sSucursal)
+
+            vCodTipoAhorro = dtsAhorro.Tables(0).Rows(0).Item(0)
+            ds = ahorro.ReporteEstadoCuentaAhorroAportaciones("'" & Trim(Me.txtDui.Text) & "'", "'" & cbCuentas.SelectedValue & "'", vCodTipoAhorro, Me.dtpFechaInicio.Value.ToLongDateString, Me.dtpFechaFin.Value.ToLongDateString, sUsuario, sPassword, sSucursal)
             Dim ofrm As New frmVisor(ds, 20, 0)
             ofrm.ShowDialog()
             pVar = False
-            Me.chkDPF.Checked = False
+            ' Me.chkDPF.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
-    Private Sub chkDPF_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkDPF.LostFocus
-        If Me.chkDPF.Checked = True And pVar = False Then
-            Dim ofrmAut As New frmMsAutorizacion
-            ofrmAut.TipoPermiso = "P"
-            ofrmAut.NumPrograma = "AHN012"
-            ofrmAut.ShowDialog()
-            If ofrmAut.Autoriza = True Then
-                pVar = True
-                ofrmAut.Autoriza = False
-                ofrmAut.Dispose()
-            Else
-                Me.chkDPF.Checked = False
-                ofrmAut.Dispose()
-            End If
-        End If
-    End Sub
+    'Private Sub chkDPF_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+    '    If Me.chkDPF.Checked = True And pVar = False Then
+    '        Dim ofrmAut As New frmMsAutorizacion
+    '        ofrmAut.TipoPermiso = "P"
+    '        ofrmAut.NumPrograma = "AHN012"
+    '        ofrmAut.ShowDialog()
+    '        If ofrmAut.Autoriza = True Then
+    '            pVar = True
+    '            ofrmAut.Autoriza = False
+    '            ofrmAut.Dispose()
+    '        Else
+    '            Me.chkDPF.Checked = False
+    '            ofrmAut.Dispose()
+    '        End If
+    '    End If
+    'End Sub
 
     Private Sub frmReporteEstadoCuentaAhorroAportaciones_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         pVar = False
     End Sub
+    Protected Sub llenarCuentas()
+        Dim dts As New DataSet
+        dts = ahorro.ConsultarCuentaAhorro("NoCuenta,codTipoAhorro ", "Dui='" & Me.txtDui.Value & "' ", "NoCuenta", sUsuario, sPassword, sSucursal)
+        cbCuentas.DataSource = dts.Tables(0)
+        cbCuentas.DisplayMember = "NoCuenta"
+        cbCuentas.ValueMember = "NoCuenta"
 
+    End Sub
+
+    Private Sub txtDui_TextChanged(sender As Object, e As EventArgs) Handles txtDui.TextChanged
+
+    End Sub
+
+    Private Sub cbTipoAhorro_Validated(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub frmReporteEstadoCuentaAhorroAportaciones_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

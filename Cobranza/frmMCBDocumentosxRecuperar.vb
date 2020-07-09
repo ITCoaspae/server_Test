@@ -75,18 +75,18 @@ Public Class frmMCBDocumentosxRecuperar
         Me.GroupBox2.Controls.Add(Me.rbtNoActa)
         Me.GroupBox2.Controls.Add(Me.rbtCodPrestamo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(751, 94)
+        Me.GroupBox2.Size = New System.Drawing.Size(901, 108)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Documentos por:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(657, 48)
+        Me.MetroButton1.Location = New System.Drawing.Point(788, 55)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 33)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 188
         Me.MetroButton1.Text = "Mostrar"
@@ -98,18 +98,18 @@ Public Class frmMCBDocumentosxRecuperar
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(490, 57)
+        Me.txtNombres.Location = New System.Drawing.Point(588, 66)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(152, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(182, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(332, 24)
+        Me.rbNombres.Location = New System.Drawing.Point(398, 28)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(152, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(183, 27)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -119,32 +119,32 @@ Public Class frmMCBDocumentosxRecuperar
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(332, 56)
+        Me.cbNombres.Location = New System.Drawing.Point(398, 65)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(152, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(183, 24)
         Me.cbNombres.TabIndex = 5
         '
         'txtNoActa
         '
-        Me.txtNoActa.Location = New System.Drawing.Point(174, 56)
+        Me.txtNoActa.Location = New System.Drawing.Point(209, 65)
         Me.txtNoActa.Name = "txtNoActa"
-        Me.txtNoActa.Size = New System.Drawing.Size(152, 20)
+        Me.txtNoActa.Size = New System.Drawing.Size(182, 22)
         Me.txtNoActa.TabIndex = 3
         '
         'txtCodPrestamo
         '
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(19, 65)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(183, 22)
         Me.txtCodPrestamo.TabIndex = 1
         '
         'rbTodos
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(657, 18)
+        Me.rbTodos.Location = New System.Drawing.Point(788, 21)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(75, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(90, 27)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "&Todos"
@@ -153,9 +153,9 @@ Public Class frmMCBDocumentosxRecuperar
         'rbtNoActa
         '
         Me.rbtNoActa.BackColor = System.Drawing.Color.White
-        Me.rbtNoActa.Location = New System.Drawing.Point(181, 24)
+        Me.rbtNoActa.Location = New System.Drawing.Point(217, 28)
         Me.rbtNoActa.Name = "rbtNoActa"
-        Me.rbtNoActa.Size = New System.Drawing.Size(145, 24)
+        Me.rbtNoActa.Size = New System.Drawing.Size(174, 27)
         Me.rbtNoActa.TabIndex = 2
         Me.rbtNoActa.Text = "&Número de Acta"
         Me.rbtNoActa.UseVisualStyleBackColor = False
@@ -163,9 +163,9 @@ Public Class frmMCBDocumentosxRecuperar
         'rbtCodPrestamo
         '
         Me.rbtCodPrestamo.BackColor = System.Drawing.Color.White
-        Me.rbtCodPrestamo.Location = New System.Drawing.Point(16, 24)
+        Me.rbtCodPrestamo.Location = New System.Drawing.Point(19, 28)
         Me.rbtCodPrestamo.Name = "rbtCodPrestamo"
-        Me.rbtCodPrestamo.Size = New System.Drawing.Size(159, 24)
+        Me.rbtCodPrestamo.Size = New System.Drawing.Size(191, 27)
         Me.rbtCodPrestamo.TabIndex = 0
         Me.rbtCodPrestamo.Text = "&Código de Prestamo"
         Me.rbtCodPrestamo.UseVisualStyleBackColor = False
@@ -178,18 +178,19 @@ Public Class frmMCBDocumentosxRecuperar
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "25,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 197)
+        Me.fg.Location = New System.Drawing.Point(28, 227)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Size = New System.Drawing.Size(754, 191)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(899, 228)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 42
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(23, 163)
+        Me.MetroButton2.Location = New System.Drawing.Point(28, 188)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton2.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton2.TabIndex = 186
         Me.MetroButton2.Text = "Agregar"
@@ -199,9 +200,9 @@ Public Class frmMCBDocumentosxRecuperar
         '
         'MetroButton3
         '
-        Me.MetroButton3.Location = New System.Drawing.Point(104, 163)
+        Me.MetroButton3.Location = New System.Drawing.Point(125, 188)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton3.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton3.TabIndex = 187
         Me.MetroButton3.Text = "Modificar"
@@ -211,9 +212,9 @@ Public Class frmMCBDocumentosxRecuperar
         '
         'frmMCBDocumentosxRecuperar
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(800, 425)
+        Me.ClientSize = New System.Drawing.Size(955, 528)
         Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.MetroButton3)
         Me.Controls.Add(Me.GroupBox2)
@@ -320,7 +321,7 @@ Public Class frmMCBDocumentosxRecuperar
             ofrm.ShowDialog()
             ActualizarGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -333,7 +334,7 @@ Public Class frmMCBDocumentosxRecuperar
             ofrm.ShowDialog()
             ActualizarGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -385,7 +386,7 @@ Public Class frmMCBDocumentosxRecuperar
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

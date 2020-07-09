@@ -43,19 +43,21 @@ Public Class frmCBConsultaTablaAmortizaSimulada
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 63)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 73)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(475, 250)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(466, 231)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 60
         '
         'btnImprimir1
         '
         Me.btnImprimir1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnImprimir1.Location = New System.Drawing.Point(423, 319)
+        Me.btnImprimir1.Location = New System.Drawing.Point(404, 311)
         Me.btnImprimir1.Name = "btnImprimir1"
-        Me.btnImprimir1.Size = New System.Drawing.Size(75, 28)
+        Me.btnImprimir1.Size = New System.Drawing.Size(90, 32)
         Me.btnImprimir1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImprimir1.TabIndex = 64
         Me.btnImprimir1.Text = "Imprimir"
@@ -65,7 +67,7 @@ Public Class frmCBConsultaTablaAmortizaSimulada
         '
         'frmCBConsultaTablaAmortizaSimulada
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(521, 370)
         Me.Controls.Add(Me.btnImprimir1)
@@ -118,7 +120,7 @@ Public Class frmCBConsultaTablaAmortizaSimulada
             Dim ofrm As New frmVisor(ds, 39, 0)
             ofrm.Show()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

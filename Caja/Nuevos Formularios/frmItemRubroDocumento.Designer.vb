@@ -34,9 +34,10 @@ Partial Class frmItemRubroDocumento
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(31, 78)
+        Me.btnAgregar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(100, 34)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 68
         Me.btnAgregar1.Text = "Agregar"
@@ -46,9 +47,10 @@ Partial Class frmItemRubroDocumento
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(139, 78)
+        Me.btnModificar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(100, 34)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 67
         Me.btnModificar1.Text = "Modificar"
@@ -58,9 +60,10 @@ Partial Class frmItemRubroDocumento
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(247, 78)
+        Me.btnEliminar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(100, 34)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 66
         Me.btnEliminar1.Text = "Eliminar"
@@ -72,20 +75,20 @@ Partial Class frmItemRubroDocumento
         '
         Me.dgRubros.AllowUserToAddRows = False
         Me.dgRubros.AllowUserToDeleteRows = False
+        Me.dgRubros.AllowUserToResizeRows = False
         Me.dgRubros.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgRubros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
         Me.dgRubros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.dgRubros.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRubros.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgRubros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.dgRubros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgRubros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.dgRubros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgRubros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
@@ -94,28 +97,29 @@ Partial Class frmItemRubroDocumento
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgRubros.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgRubros.EnableHeadersVisualStyles = False
         Me.dgRubros.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgRubros.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRubros.Location = New System.Drawing.Point(20, 97)
+        Me.dgRubros.Location = New System.Drawing.Point(27, 119)
+        Me.dgRubros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgRubros.Name = "dgRubros"
         Me.dgRubros.ReadOnly = True
         Me.dgRubros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgRubros.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgRubros.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgRubros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgRubros.Size = New System.Drawing.Size(435, 115)
+        Me.dgRubros.Size = New System.Drawing.Size(580, 142)
         Me.dgRubros.Style = MetroFramework.MetroColorStyle.Teal
         Me.dgRubros.TabIndex = 70
         Me.dgRubros.Theme = MetroFramework.MetroThemeStyle.Light
@@ -125,15 +129,17 @@ Partial Class frmItemRubroDocumento
         '
         'frmItemRubroDocumento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(466, 264)
+        Me.ClientSize = New System.Drawing.Size(621, 325)
         Me.Controls.Add(Me.dgRubros)
         Me.Controls.Add(Me.btnAgregar1)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnEliminar1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmItemRubroDocumento"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.ShowIcon = False
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento"

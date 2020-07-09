@@ -216,9 +216,9 @@ Public Class frmMsDetBeneficiarios
         '
         'Label4
         '
-        Me.Label4.BackColor = System.Drawing.Color.Khaki
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Maroon
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(298, 429)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(151, 19)
@@ -294,9 +294,9 @@ Public Class frmMsDetBeneficiarios
         '
         'lblPorcentaje
         '
-        Me.lblPorcentaje.BackColor = System.Drawing.Color.Khaki
+        Me.lblPorcentaje.BackColor = System.Drawing.Color.White
         Me.lblPorcentaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPorcentaje.ForeColor = System.Drawing.Color.Maroon
+        Me.lblPorcentaje.ForeColor = System.Drawing.Color.Black
         Me.lblPorcentaje.Location = New System.Drawing.Point(455, 429)
         Me.lblPorcentaje.Name = "lblPorcentaje"
         Me.lblPorcentaje.Size = New System.Drawing.Size(83, 23)
@@ -509,6 +509,7 @@ Public Class frmMsDetBeneficiarios
         Me.MinimizeBox = False
         Me.Name = "frmMsDetBeneficiarios"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Detalle de Beneficiarios"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -581,7 +582,7 @@ Public Class frmMsDetBeneficiarios
                 Me.nUpDBenef.Maximum = 100 - vPorcent
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -697,10 +698,13 @@ Public Class frmMsDetBeneficiarios
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-
-
+    Private Sub frmMsDetBeneficiarios_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

@@ -26,7 +26,6 @@ Public Class frmMInhabilitacion
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
     Friend WithEvents txtNombres As System.Windows.Forms.TextBox
     Friend WithEvents rbNombres As System.Windows.Forms.RadioButton
@@ -44,7 +43,6 @@ Public Class frmMInhabilitacion
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMInhabilitacion))
         Me.fgInhabilita = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnMostrar1 = New MetroFramework.Controls.MetroButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
@@ -59,7 +57,6 @@ Public Class frmMInhabilitacion
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
         CType(Me.fgInhabilita, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,37 +68,19 @@ Public Class frmMInhabilitacion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgInhabilita.BackColor = System.Drawing.Color.White
         Me.fgInhabilita.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgInhabilita.Location = New System.Drawing.Point(23, 181)
+        Me.fgInhabilita.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fgInhabilita.Location = New System.Drawing.Point(23, 200)
         Me.fgInhabilita.Name = "fgInhabilita"
-        Me.fgInhabilita.Size = New System.Drawing.Size(649, 209)
-        Me.fgInhabilita.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgInhabilita.Styles"))
+        Me.fgInhabilita.Rows.DefaultSize = 21
+        Me.fgInhabilita.Size = New System.Drawing.Size(653, 354)
+        Me.fgInhabilita.StyleInfo = resources.GetString("fgInhabilita.StyleInfo")
         Me.fgInhabilita.TabIndex = 33
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.btnMostrar1)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbTodos)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 78)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Búsqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(570, 40)
+        Me.btnMostrar1.Location = New System.Drawing.Point(586, 129)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 19
         Me.btnMostrar1.Text = "Mostrar"
@@ -111,33 +90,33 @@ Public Class frmMInhabilitacion
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 48)
+        Me.txtDui.Location = New System.Drawing.Point(124, 65)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(111, 20)
+        Me.txtDui.Size = New System.Drawing.Size(188, 20)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(133, 48)
+        Me.txtNoSocio.Location = New System.Drawing.Point(488, 66)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(102, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(188, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'txtNombres
         '
-        Me.txtNombres.Location = New System.Drawing.Point(369, 47)
+        Me.txtNombres.Location = New System.Drawing.Point(318, 101)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(183, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(358, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
-        Me.rbNombres.Location = New System.Drawing.Point(241, 24)
+        Me.rbNombres.Location = New System.Drawing.Point(23, 96)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(122, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(90, 27)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "Nombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -146,9 +125,9 @@ Public Class frmMInhabilitacion
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(369, 17)
+        Me.rbTodos.Location = New System.Drawing.Point(23, 129)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(182, 27)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -158,17 +137,17 @@ Public Class frmMInhabilitacion
         '
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(241, 47)
+        Me.cbNombres.Location = New System.Drawing.Point(124, 99)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(122, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(188, 24)
         Me.cbNombres.TabIndex = 5
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(133, 24)
+        Me.rbNoSocio.Location = New System.Drawing.Point(360, 63)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(102, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(122, 27)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -176,18 +155,18 @@ Public Class frmMInhabilitacion
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(16, 24)
+        Me.rbDui.Location = New System.Drawing.Point(23, 63)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(111, 24)
+        Me.rbDui.Size = New System.Drawing.Size(59, 27)
         Me.rbDui.TabIndex = 0
-        Me.rbDui.Text = "DUI de Asociado"
+        Me.rbDui.Text = "DUI"
         Me.rbDui.UseVisualStyleBackColor = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 147)
+        Me.btnConsultar1.Location = New System.Drawing.Point(314, 162)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 72
         Me.btnConsultar1.Text = "Consultar"
@@ -196,9 +175,9 @@ Public Class frmMInhabilitacion
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 147)
+        Me.btnEliminar1.Location = New System.Drawing.Point(217, 162)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 71
         Me.btnEliminar1.Text = "Eliminar"
@@ -207,9 +186,9 @@ Public Class frmMInhabilitacion
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 147)
+        Me.btnModificar1.Location = New System.Drawing.Point(120, 162)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 70
         Me.btnModificar1.Text = "Modificar"
@@ -218,9 +197,9 @@ Public Class frmMInhabilitacion
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 147)
+        Me.btnAgregar1.Location = New System.Drawing.Point(23, 162)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 69
         Me.btnAgregar1.Text = "Agregar"
@@ -229,21 +208,29 @@ Public Class frmMInhabilitacion
         '
         'frmMInhabilitacion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(695, 413)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(704, 660)
+        Me.Controls.Add(Me.btnMostrar1)
         Me.Controls.Add(Me.btnConsultar1)
+        Me.Controls.Add(Me.rbTodos)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.rbNombres)
+        Me.Controls.Add(Me.cbNombres)
+        Me.Controls.Add(Me.txtDui)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.rbNoSocio)
         Me.Controls.Add(Me.fgInhabilita)
+        Me.Controls.Add(Me.rbDui)
         Me.Name = "frmMInhabilitacion"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Proceso de Inhabilitación de Asociados"
         CType(Me.fgInhabilita, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -497,6 +484,12 @@ Public Class frmMInhabilitacion
             txtNombres.Enabled = False
             txtNoSocio.Enabled = False
             cbNombres.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMInhabilitacion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

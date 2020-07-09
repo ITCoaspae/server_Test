@@ -198,14 +198,14 @@ Public Class frmProcesarDividendos
         Me.c1nNoCuotasMora.CustomFormat = "###,##0.00"
         Me.c1nNoCuotasMora.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nNoCuotasMora.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nNoCuotasMora.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nNoCuotasMora.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nNoCuotasMora.Increment = New Decimal(New Integer() {100, 0, 0, 0})
         Me.c1nNoCuotasMora.Location = New System.Drawing.Point(418, 50)
         Me.c1nNoCuotasMora.Name = "c1nNoCuotasMora"
         Me.c1nNoCuotasMora.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nNoCuotasMora.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nNoCuotasMora.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nNoCuotasMora.Size = New System.Drawing.Size(134, 26)
+        Me.c1nNoCuotasMora.Size = New System.Drawing.Size(134, 23)
         Me.c1nNoCuotasMora.TabIndex = 2
         Me.c1nNoCuotasMora.Tag = Nothing
         Me.c1nNoCuotasMora.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -246,7 +246,7 @@ Public Class frmProcesarDividendos
         Me.txtDui.Location = New System.Drawing.Point(257, 100)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(125, 25)
+        Me.txtDui.Size = New System.Drawing.Size(125, 21)
         Me.txtDui.TabIndex = 5
         Me.txtDui.Tag = Nothing
         Me.txtDui.Value = ""
@@ -334,17 +334,17 @@ Public Class frmProcesarDividendos
         'c1nInteres
         '
         Me.c1nInteres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1nInteres.CustomFormat = "#0.00"
+        Me.c1nInteres.CustomFormat = "#00.00"
         Me.c1nInteres.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nInteres.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nInteres.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nInteres.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nInteres.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.c1nInteres.Location = New System.Drawing.Point(251, 95)
         Me.c1nInteres.Name = "c1nInteres"
         Me.c1nInteres.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nInteres.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nInteres.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nInteres.Size = New System.Drawing.Size(96, 26)
+        Me.c1nInteres.Size = New System.Drawing.Size(96, 23)
         Me.c1nInteres.TabIndex = 3
         Me.c1nInteres.Tag = Nothing
         Me.c1nInteres.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -353,17 +353,17 @@ Public Class frmProcesarDividendos
         'c1nAportaciones
         '
         Me.c1nAportaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1nAportaciones.CustomFormat = "#0.00"
+        Me.c1nAportaciones.CustomFormat = "#00.00"
         Me.c1nAportaciones.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nAportaciones.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nAportaciones.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nAportaciones.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nAportaciones.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.c1nAportaciones.Location = New System.Drawing.Point(251, 67)
         Me.c1nAportaciones.Name = "c1nAportaciones"
         Me.c1nAportaciones.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nAportaciones.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nAportaciones.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nAportaciones.Size = New System.Drawing.Size(96, 26)
+        Me.c1nAportaciones.Size = New System.Drawing.Size(96, 23)
         Me.c1nAportaciones.TabIndex = 2
         Me.c1nAportaciones.Tag = Nothing
         Me.c1nAportaciones.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -390,17 +390,17 @@ Public Class frmProcesarDividendos
         'c1nDistribuye
         '
         Me.c1nDistribuye.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1nDistribuye.CustomFormat = "#0.00"
+        Me.c1nDistribuye.CustomFormat = "#00.00"
         Me.c1nDistribuye.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nDistribuye.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nDistribuye.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nDistribuye.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nDistribuye.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.c1nDistribuye.Location = New System.Drawing.Point(652, 95)
         Me.c1nDistribuye.Name = "c1nDistribuye"
         Me.c1nDistribuye.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nDistribuye.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nDistribuye.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nDistribuye.Size = New System.Drawing.Size(96, 26)
+        Me.c1nDistribuye.Size = New System.Drawing.Size(96, 23)
         Me.c1nDistribuye.TabIndex = 5
         Me.c1nDistribuye.Tag = Nothing
         Me.c1nDistribuye.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -409,17 +409,17 @@ Public Class frmProcesarDividendos
         'c1nCapitaliza
         '
         Me.c1nCapitaliza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1nCapitaliza.CustomFormat = "#0.00"
+        Me.c1nCapitaliza.CustomFormat = "#00.00"
         Me.c1nCapitaliza.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nCapitaliza.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nCapitaliza.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nCapitaliza.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nCapitaliza.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.c1nCapitaliza.Location = New System.Drawing.Point(652, 67)
         Me.c1nCapitaliza.Name = "c1nCapitaliza"
         Me.c1nCapitaliza.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nCapitaliza.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nCapitaliza.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nCapitaliza.Size = New System.Drawing.Size(96, 26)
+        Me.c1nCapitaliza.Size = New System.Drawing.Size(96, 23)
         Me.c1nCapitaliza.TabIndex = 4
         Me.c1nCapitaliza.Tag = Nothing
         Me.c1nCapitaliza.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -471,14 +471,14 @@ Public Class frmProcesarDividendos
         Me.c1nExcedentes.CustomFormat = "###,###,##0.00"
         Me.c1nExcedentes.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nExcedentes.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nExcedentes.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nExcedentes.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nExcedentes.Increment = New Decimal(New Integer() {100, 0, 0, 0})
         Me.c1nExcedentes.Location = New System.Drawing.Point(457, 18)
         Me.c1nExcedentes.Name = "c1nExcedentes"
         Me.c1nExcedentes.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nExcedentes.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nExcedentes.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nExcedentes.Size = New System.Drawing.Size(115, 27)
+        Me.c1nExcedentes.Size = New System.Drawing.Size(115, 23)
         Me.c1nExcedentes.TabIndex = 1
         Me.c1nExcedentes.Tag = Nothing
         Me.c1nExcedentes.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -521,6 +521,7 @@ Public Class frmProcesarDividendos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgExp.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None
         Me.fgExp.ColumnInfo = "3,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgExp.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fgExp.Location = New System.Drawing.Point(1530, 202)
         Me.fgExp.Name = "fgExp"
         Me.fgExp.Rows.Count = 1
@@ -557,12 +558,13 @@ Public Class frmProcesarDividendos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None
         Me.fg.ColumnInfo = "3,0,0,0,0,105,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fg.Location = New System.Drawing.Point(4, 51)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
         Me.fg.Rows.DefaultSize = 21
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
-        Me.fg.Size = New System.Drawing.Size(631, 247)
+        Me.fg.Size = New System.Drawing.Size(631, 250)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 4
         '
@@ -577,6 +579,7 @@ Public Class frmProcesarDividendos
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.Size = New System.Drawing.Size(771, 529)
+        Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroTabControl1.TabIndex = 12
         Me.MetroTabControl1.UseSelectable = True
         '
@@ -679,7 +682,7 @@ Public Class frmProcesarDividendos
         Me.MetroTabPage2.HorizontalScrollbarSize = 12
         Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(640, 347)
+        Me.MetroTabPage2.Size = New System.Drawing.Size(763, 487)
         Me.MetroTabPage2.TabIndex = 1
         Me.MetroTabPage2.Text = "Verificación - Aplicación de dividendos no cobrados"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
@@ -752,6 +755,7 @@ Public Class frmProcesarDividendos
         Me.Name = "frmProcesarDividendos"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "  Proceso de Distribución de Dividendos"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -974,8 +978,21 @@ Public Class frmProcesarDividendos
                 Me.txtDui.Value = Trim(dr("DUI"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub c1nCapitaliza_TextChanged(sender As Object, e As EventArgs) Handles c1nCapitaliza.TextChanged
+
+    End Sub
+
+    Private Sub frmProcesarDividendos_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

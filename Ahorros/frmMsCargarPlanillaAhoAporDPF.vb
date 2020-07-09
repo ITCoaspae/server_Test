@@ -56,8 +56,8 @@ Public Class frmMsCargarPlanillaAhoAporDPF
     End Function
     Protected Function Validar_Nocuenta(ByVal NoCuenta As String) As Boolean
         Dim Caracter As String
-        If NoCuenta.Trim.Length = 12 Then
-            For i As Integer = 0 To NoCuenta.Length - 1
+
+        For i As Integer = 0 To NoCuenta.Length - 1
                 Caracter = NoCuenta.Chars(i)
                 If CInt(Caracter) >= 0 And CInt(Caracter) <= 9 Then
                     Return True
@@ -66,9 +66,7 @@ Public Class frmMsCargarPlanillaAhoAporDPF
                     Exit Function
                 End If
             Next
-        Else
-            Return False
-        End If
+
     End Function
     Protected Function Validar_registros() As Boolean
         Dim dui, Nocuenta As Boolean
@@ -159,13 +157,13 @@ Public Class frmMsCargarPlanillaAhoAporDPF
         LlenarCBBancos("IdCtaBanco,NOM_Cuenta", "Nom_Banco", sUsuario, sPassword, sSucursal)
         LlenarPagadurias("Nombre,CodPagaduria", "", "Nombre")
 
-        If Tipo = 1 Then
-            Hoja = "Aportacion"
-        ElseIf Tipo = 2 Then
-            Hoja = "DPF"
-        Else
-            Hoja = "Ahorro"
-        End If
+        'If Tipo = 1 Then
+        '    Hoja = "Aportacion"
+        'ElseIf Tipo = 2 Then
+        '    Hoja = "DPF"
+        'Else
+        '    Hoja = "Ahorro"
+        'End If
     End Sub
     Private Sub btnProcesar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -176,8 +174,8 @@ Public Class frmMsCargarPlanillaAhoAporDPF
             Dim dt As DataTable
             Dim dts As New DataSet
             dt = New DataTable("cuentas")
-            dt.Columns.Add("DUI")
-            dt.Columns.Add("NoCuenta")
+            dt.Columns.Add("dui")
+            dt.Columns.Add("nocuenta")
             'dtTransferencias.Columns.Add("Cta Origen")
             dt.Columns.Add("cuota")
 
@@ -216,7 +214,7 @@ Public Class frmMsCargarPlanillaAhoAporDPF
             '    LlenarDg(ObjDataset)
             'End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema", MsgBoxStyle.Critical)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -233,6 +231,7 @@ Public Class frmMsCargarPlanillaAhoAporDPF
                                                                          Me.cbCtaOrigen.SelectedValue.ToString, sUsuario, ObjDataset)
                     If Msj.Equals("Carga realizada exitosamente") = True Then
                         MsgBox(Msj, MsgBoxStyle.Information, "Módulo - Ahorros")
+                        Me.DataGridView1.DataSource = Nothing
                     Else
                         MsgBox(Msj, MsgBoxStyle.Critical, "Por favor comunicarse con el administrador del sistema.")
                     End If
@@ -241,7 +240,7 @@ Public Class frmMsCargarPlanillaAhoAporDPF
                 MsgBox("el orden de las columnas o los nombres no coinciden con el formato requerido.", MsgBoxStyle.Critical, "prueba")
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema", MsgBoxStyle.Critical)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -272,5 +271,11 @@ Public Class frmMsCargarPlanillaAhoAporDPF
         MsgBox("Archivo " & archivo.ToString & " creado en: " & ruta, MsgBoxStyle.Information)
 
 
+    End Sub
+
+    Private Sub frmMsCargarPlanillaAhoAporDPF_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

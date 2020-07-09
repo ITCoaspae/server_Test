@@ -36,7 +36,7 @@
             ofrm.ShowDialog()
             LlenarDg(0, 0, "0")
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -58,7 +58,7 @@
                 LlenarDg(0, 0, "0")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -75,7 +75,7 @@
                     MsgBox("El registro no pudo ser eliminado, por favor comunicarse con el administrador del sistema", MsgBoxStyle.Information, "Módulo - Créditos")
                 End If
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
     End Sub

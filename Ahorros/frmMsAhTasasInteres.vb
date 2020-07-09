@@ -75,9 +75,9 @@ Public Class frmMsAhTasasInteres
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Green
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(496, 152)
+        Me.GroupBox1.Size = New System.Drawing.Size(595, 175)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalle Tasas de Interés:"
@@ -91,9 +91,9 @@ Public Class frmMsAhTasasInteres
         Me.GroupBox3.Controls.Add(Me.c1nTasaPlaneada)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 88)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 102)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(480, 56)
+        Me.GroupBox3.Size = New System.Drawing.Size(576, 64)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Datos de Tasa de interés:"
@@ -102,9 +102,9 @@ Public Class frmMsAhTasasInteres
         '
         Me.Label7.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(424, 24)
+        Me.Label7.Location = New System.Drawing.Point(509, 28)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(16, 16)
+        Me.Label7.Size = New System.Drawing.Size(19, 18)
         Me.Label7.TabIndex = 89
         Me.Label7.Text = "%"
         Me.Label7.Visible = False
@@ -113,35 +113,34 @@ Public Class frmMsAhTasasInteres
         '
         Me.Label6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(200, 24)
+        Me.Label6.Location = New System.Drawing.Point(240, 28)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(16, 16)
+        Me.Label6.Size = New System.Drawing.Size(19, 18)
         Me.Label6.TabIndex = 88
         Me.Label6.Text = "%"
         '
         'c1nTasaActiva
         '
         Me.c1nTasaActiva.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.c1nTasaActiva.Increment = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.c1nTasaActiva.Location = New System.Drawing.Point(104, 24)
+        Me.c1nTasaActiva.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nTasaActiva.Location = New System.Drawing.Point(125, 28)
         Me.c1nTasaActiva.Name = "c1nTasaActiva"
         Me.c1nTasaActiva.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nTasaActiva.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nTasaActiva.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nTasaActiva.ShowDropDownButton = False
-        Me.c1nTasaActiva.ShowUpDownButtons = False
-        Me.c1nTasaActiva.Size = New System.Drawing.Size(88, 20)
+        Me.c1nTasaActiva.Size = New System.Drawing.Size(105, 24)
         Me.c1nTasaActiva.TabIndex = 0
         Me.c1nTasaActiva.Tag = Nothing
         Me.c1nTasaActiva.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nTasaActiva.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(248, 24)
+        Me.Label5.Location = New System.Drawing.Point(298, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 16)
+        Me.Label5.Size = New System.Drawing.Size(105, 18)
         Me.Label5.TabIndex = 85
         Me.Label5.Text = "Tasa Planeada:"
         Me.Label5.Visible = False
@@ -149,27 +148,26 @@ Public Class frmMsAhTasasInteres
         'c1nTasaPlaneada
         '
         Me.c1nTasaPlaneada.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.c1nTasaPlaneada.Increment = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.c1nTasaPlaneada.Location = New System.Drawing.Point(336, 24)
+        Me.c1nTasaPlaneada.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nTasaPlaneada.Location = New System.Drawing.Point(403, 28)
         Me.c1nTasaPlaneada.Name = "c1nTasaPlaneada"
         Me.c1nTasaPlaneada.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nTasaPlaneada.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nTasaPlaneada.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nTasaPlaneada.ShowDropDownButton = False
-        Me.c1nTasaPlaneada.ShowUpDownButtons = False
-        Me.c1nTasaPlaneada.Size = New System.Drawing.Size(80, 20)
+        Me.c1nTasaPlaneada.Size = New System.Drawing.Size(96, 24)
         Me.c1nTasaPlaneada.TabIndex = 1
         Me.c1nTasaPlaneada.Tag = Nothing
         Me.c1nTasaPlaneada.Value = New Decimal(New Integer() {0, 0, 0, 0})
         Me.c1nTasaPlaneada.Visible = False
+        Me.c1nTasaPlaneada.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(8, 24)
+        Me.Label4.Location = New System.Drawing.Point(10, 28)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 16)
+        Me.Label4.Size = New System.Drawing.Size(105, 18)
         Me.Label4.TabIndex = 84
         Me.Label4.Text = "Tasa Vigente:"
         '
@@ -180,9 +178,9 @@ Public Class frmMsAhTasasInteres
         Me.GroupBox2.Controls.Add(Me.dtpFechaInicio)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 16)
+        Me.GroupBox2.Location = New System.Drawing.Point(10, 18)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(480, 64)
+        Me.GroupBox2.Size = New System.Drawing.Size(576, 74)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Fechas de aplicación para Tasa de interés:"
@@ -191,18 +189,18 @@ Public Class frmMsAhTasasInteres
         '
         Me.dtpFechaFin.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(336, 24)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(403, 28)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaFin.Size = New System.Drawing.Size(106, 23)
         Me.dtpFechaFin.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(256, 24)
+        Me.Label3.Location = New System.Drawing.Point(307, 28)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 16)
+        Me.Label3.Size = New System.Drawing.Size(106, 18)
         Me.Label3.TabIndex = 82
         Me.Label3.Text = "Fecha de Fin:"
         '
@@ -210,48 +208,48 @@ Public Class frmMsAhTasasInteres
         '
         Me.dtpFechaInicio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(104, 24)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(125, 28)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(105, 23)
         Me.dtpFechaInicio.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(8, 24)
+        Me.Label2.Location = New System.Drawing.Point(10, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 16)
+        Me.Label2.Size = New System.Drawing.Size(124, 18)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Fecha de Inicio:"
         '
         'txtCodigo
         '
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodigo.Location = New System.Drawing.Point(112, 16)
+        Me.txtCodigo.Location = New System.Drawing.Point(134, 18)
         Me.txtCodigo.MaxLength = 5
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
-        Me.txtCodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(120, 23)
         Me.txtCodigo.TabIndex = 0
         Me.txtCodigo.Visible = False
         '
         'Label1
         '
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(16, 16)
+        Me.Label1.Location = New System.Drawing.Point(19, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 16)
+        Me.Label1.Size = New System.Drawing.Size(87, 19)
         Me.Label1.TabIndex = 78
         Me.Label1.Text = "Correlativo:"
         Me.Label1.Visible = False
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(439, 221)
+        Me.btnGuardar.Location = New System.Drawing.Point(527, 255)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(80, 28)
-        Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnGuardar.Size = New System.Drawing.Size(96, 32)
+        Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar.TabIndex = 215
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseSelectable = True
@@ -259,9 +257,9 @@ Public Class frmMsAhTasasInteres
         '
         'frmMsAhTasasInteres
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(537, 261)
+        Me.ClientSize = New System.Drawing.Size(652, 310)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
@@ -269,12 +267,11 @@ Public Class frmMsAhTasasInteres
         Me.Name = "frmMsAhTasasInteres"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = " Parámetros Generales - Tasas de Interés DPF"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         CType(Me.c1nTasaActiva, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1nTasaPlaneada, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
@@ -309,7 +306,7 @@ Public Class frmMsAhTasasInteres
                 Me.Dispose()
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -335,4 +332,9 @@ Public Class frmMsAhTasasInteres
 
     End Sub
 
+    Private Sub frmMsAhTasasInteres_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

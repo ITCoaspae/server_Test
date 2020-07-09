@@ -55,30 +55,30 @@ Public Class frmMsAhFechasCap
         '
         Me.txtCodTipoAhorro.AcceptsReturn = True
         Me.txtCodTipoAhorro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodTipoAhorro.Location = New System.Drawing.Point(117, 58)
+        Me.txtCodTipoAhorro.Location = New System.Drawing.Point(149, 67)
         Me.txtCodTipoAhorro.MaxLength = 10
         Me.txtCodTipoAhorro.Name = "txtCodTipoAhorro"
-        Me.txtCodTipoAhorro.Size = New System.Drawing.Size(80, 20)
+        Me.txtCodTipoAhorro.Size = New System.Drawing.Size(87, 22)
         Me.txtCodTipoAhorro.TabIndex = 128
         '
         'txtTipoAhorro
         '
         Me.txtTipoAhorro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoAhorro.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoAhorro.Location = New System.Drawing.Point(203, 58)
+        Me.txtTipoAhorro.Location = New System.Drawing.Point(244, 67)
         Me.txtTipoAhorro.MaxLength = 110
         Me.txtTipoAhorro.Name = "txtTipoAhorro"
         Me.txtTipoAhorro.ReadOnly = True
-        Me.txtTipoAhorro.Size = New System.Drawing.Size(400, 20)
+        Me.txtTipoAhorro.Size = New System.Drawing.Size(480, 23)
         Me.txtTipoAhorro.TabIndex = 129
         '
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(23, 60)
+        Me.Label6.Location = New System.Drawing.Point(28, 69)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 16)
+        Me.Label6.Size = New System.Drawing.Size(115, 19)
         Me.Label6.TabIndex = 130
         Me.Label6.Text = "Tipo de Ahorro:"
         '
@@ -90,12 +90,15 @@ Public Class frmMsAhFechasCap
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgFechas.BackColor = System.Drawing.Color.White
         Me.fgFechas.ColumnInfo = "3,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgFechas.Location = New System.Drawing.Point(23, 118)
+        Me.fgFechas.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fgFechas.ForeColor = System.Drawing.Color.Black
+        Me.fgFechas.Location = New System.Drawing.Point(31, 135)
         Me.fgFechas.Name = "fgFechas"
         Me.fgFechas.Rows.Count = 1
+        Me.fgFechas.Rows.DefaultSize = 21
         Me.fgFechas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgFechas.Size = New System.Drawing.Size(580, 165)
-        Me.fgFechas.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgFechas.Styles"))
+        Me.fgFechas.Size = New System.Drawing.Size(691, 124)
+        Me.fgFechas.StyleInfo = resources.GetString("fgFechas.StyleInfo")
         Me.fgFechas.TabIndex = 132
         '
         'Label11
@@ -103,27 +106,26 @@ Public Class frmMsAhFechasCap
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(23, 88)
+        Me.Label11.Location = New System.Drawing.Point(28, 97)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(88, 16)
+        Me.Label11.Size = New System.Drawing.Size(105, 18)
         Me.Label11.TabIndex = 135
         Me.Label11.Text = "Mes:"
         '
         'dtpFecha
         '
         Me.dtpFecha.CustomFormat = ""
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(117, 84)
+        Me.dtpFecha.Location = New System.Drawing.Point(149, 96)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(324, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(381, 22)
         Me.dtpFecha.TabIndex = 1
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(447, 84)
+        Me.btNProcesar1.Location = New System.Drawing.Point(536, 97)
         Me.btNProcesar1.Name = "btNProcesar1"
-        Me.btNProcesar1.Size = New System.Drawing.Size(75, 28)
-        Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btNProcesar1.Size = New System.Drawing.Size(90, 32)
+        Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNProcesar1.TabIndex = 171
         Me.btNProcesar1.Text = "Agregar"
         Me.btNProcesar1.UseSelectable = True
@@ -131,10 +133,10 @@ Public Class frmMsAhFechasCap
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(528, 84)
+        Me.MetroButton1.Location = New System.Drawing.Point(634, 97)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 172
         Me.MetroButton1.Text = "Eliminar"
         Me.MetroButton1.UseSelectable = True
@@ -142,9 +144,9 @@ Public Class frmMsAhFechasCap
         '
         'frmMsAhFechasCap
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(620, 306)
+        Me.ClientSize = New System.Drawing.Size(745, 365)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btNProcesar1)
         Me.Controls.Add(Me.dtpFecha)
@@ -158,7 +160,7 @@ Public Class frmMsAhFechasCap
         Me.Name = "frmMsAhFechasCap"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Fechas de Capitalización"
         CType(Me.fgFechas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -277,7 +279,7 @@ Public Class frmMsAhFechasCap
 
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -293,10 +295,13 @@ Public Class frmMsAhFechasCap
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-
-
+    Private Sub frmMsAhFechasCap_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

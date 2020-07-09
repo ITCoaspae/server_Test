@@ -1,7 +1,7 @@
-Imports LibSynFinCoop.Contabilidad
+
 
 Public Class frmMCatCostos
-    Inherits frmCat 'SIF_ERP.frmCat
+    Inherits frmCat
     Private ds As Data.DataSet = New Data.DataSet, iRow As Integer
 
 #Region " Código generado por el Diseñador de Windows Forms "

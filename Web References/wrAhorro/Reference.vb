@@ -25,116 +25,12 @@ Imports System.Xml.Serialization
 Namespace wrAhorro
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code"),  _
      System.Web.Services.WebServiceBindingAttribute(Name:="wsLibAhorroSoap", [Namespace]:="http://tempuri.org/wsSif/wsLibAhorro")>  _
     Partial Public Class wsLibAhorro
         Inherits System.Web.Services.Protocols.SoapHttpClientProtocol
-        
-        Private RepValorFecha_AhorrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private RepVencimientosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ReversionAhorrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ReversionAportacionesOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ReversionMovimientosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ReversionMovimientosxTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private SaldosAhorrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private SaldosAhorros_RangoOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private TransferenciaAutomaticaCuentasOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private TransferenciaCuentasOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private Vencimientos_DPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private VencimientosDiarios_DPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private VencimientosDiarios_DPF_ProyectadosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private VerificaSumaMontoDetalleTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarCuentaPignoradaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarDestinoOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarDet_PlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarDetalleTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarFechasCapitalizacionOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarPlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarReposicionCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarReposicionLibretaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminarTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminaRutasCobroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private EliminaTasasInteresOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ExportacionDatos_AhorrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ExportacionDatos_DPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private GeneraNoCuentaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private Gerencial_Cartera_DPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private Gerencial_MovCuentasAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InicializacionLibretaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertaParametrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarAutorizadoRetiroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarBeneficiariosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarComisionesOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarCuentaPignoradaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarDestinoOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarDet_PlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarFechasCapitalizacionOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarPlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarReposicionCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarReposicionLibretaOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarRutasCobroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertarTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private InsertaTasasInteresOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ModificaComisionesOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ModificaParametrosOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ModificarAhCuentasAhorroOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private ModificarAutorizadoRetiroOperationCompleted As System.Threading.SendOrPostCallback
         
         Private ModificarBeneficiariosOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -222,6 +118,10 @@ Namespace wrAhorro
         
         Private ReporteEstadoCuentaAhorroAportacionesOperationCompleted As System.Threading.SendOrPostCallback
         
+        Private ConsultarCuentaAportacionOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ReporteEstadoCuentaAportacionesOperationCompleted As System.Threading.SendOrPostCallback
+        
         Private ReporteImpresionLibretaAhorrosOperationCompleted As System.Threading.SendOrPostCallback
         
         Private ReportePagoInteresDiariaDPOperationCompleted As System.Threading.SendOrPostCallback
@@ -230,11 +130,45 @@ Namespace wrAhorro
         
         Private ReporteTodasCuentasOperationCompleted As System.Threading.SendOrPostCallback
         
+        Private RepValorFecha_AhorrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private RepVencimientosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ReversionAhorrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ReversionAportacionesOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ReversionMovimientosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ReversionMovimientosxTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private SaldosAhorrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private SaldosAhorros_RangoOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private TransferenciaAutomaticaCuentasOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private TransferenciaCuentasOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private Vencimientos_DPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private VencimientosDiarios_DPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private VencimientosDiarios_DPF_ProyectadosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private VerificaSumaMontoDetalleTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
+        
         Private insertarAsocTransferenciasAutomaticasOperationCompleted As System.Threading.SendOrPostCallback
         
         Private modificarAsocTransferenciasAutomaticasOperationCompleted As System.Threading.SendOrPostCallback
         
         Private consultarAsocTransferenciasAutomaticasOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private pignorarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private despignorarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private insertarCuentaDPFOperationCompleted As System.Threading.SendOrPostCallback
         
         Private recuperarHojaLibreataOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -247,6 +181,8 @@ Namespace wrAhorro
         Private RptContratoAhorrosOperationCompleted As System.Threading.SendOrPostCallback
         
         Private generarNoCuentaTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ingresarReposicionCertificadoPlazoOperationCompleted As System.Threading.SendOrPostCallback
         
         Private procesarProvisionAhorroOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -344,6 +280,8 @@ Namespace wrAhorro
         
         Private ConsultarCuentaAhorroTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
         
+        Private ConsultarCuentaAhorroDPFOperationCompleted As System.Threading.SendOrPostCallback
+        
         Private ConsultarCuentaPignoradaOperationCompleted As System.Threading.SendOrPostCallback
         
         Private ConsultarDestinoOperationCompleted As System.Threading.SendOrPostCallback
@@ -396,6 +334,82 @@ Namespace wrAhorro
         
         Private EliminarCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
         
+        Private EliminarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarCuentaPignoradaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarDestinoOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarDet_PlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarDetalleTransferenciaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarFechasCapitalizacionOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarPlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarReposicionCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarReposicionLibretaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminarTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminaRutasCobroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private EliminaTasasInteresOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ExportacionDatos_AhorrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ExportacionDatos_DPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private GeneraNoCuentaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private Gerencial_Cartera_DPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private Gerencial_MovCuentasAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InicializacionLibretaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertaParametrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarAutorizadoRetiroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarBeneficiariosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarComisionesOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarCuentaAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarCuentaPignoradaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarDestinoOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarDet_PlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarFechasCapitalizacionOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarPlanAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarReposicionCertificadosDPFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarReposicionLibretaOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarRutasCobroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertarTipoAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private InsertaTasasInteresOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ModificaComisionesOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ModificaParametrosOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ModificarAhCuentasAhorroOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ModificarAutorizadoRetiroOperationCompleted As System.Threading.SendOrPostCallback
+        
         Private useDefaultCredentialsSetExplicitly As Boolean
         
         '''<remarks/>
@@ -433,162 +447,6 @@ Namespace wrAhorro
                 Me.useDefaultCredentialsSetExplicitly = true
             End Set
         End Property
-        
-        '''<remarks/>
-        Public Event RepValorFecha_AhorrosCompleted As RepValorFecha_AhorrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event RepVencimientosCompleted As RepVencimientosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ReversionAhorrosCompleted As ReversionAhorrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ReversionAportacionesCompleted As ReversionAportacionesCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ReversionMovimientosCompleted As ReversionMovimientosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ReversionMovimientosxTransferenciaCompleted As ReversionMovimientosxTransferenciaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event SaldosAhorrosCompleted As SaldosAhorrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event SaldosAhorros_RangoCompleted As SaldosAhorros_RangoCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event TransferenciaAutomaticaCuentasCompleted As TransferenciaAutomaticaCuentasCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event TransferenciaCuentasCompleted As TransferenciaCuentasCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event Vencimientos_DPFCompleted As Vencimientos_DPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event VencimientosDiarios_DPFCompleted As VencimientosDiarios_DPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event VencimientosDiarios_DPF_ProyectadosCompleted As VencimientosDiarios_DPF_ProyectadosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event VerificaSumaMontoDetalleTransferenciaCompleted As VerificaSumaMontoDetalleTransferenciaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarCuentaAhorroCompleted As EliminarCuentaAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarCuentaPignoradaCompleted As EliminarCuentaPignoradaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarDestinoCompleted As EliminarDestinoCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarDet_PlanAhorroCompleted As EliminarDet_PlanAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarDetalleTransferenciaCompleted As EliminarDetalleTransferenciaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarFechasCapitalizacionCompleted As EliminarFechasCapitalizacionCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarPlanAhorroCompleted As EliminarPlanAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarReposicionCertificadosDPFCompleted As EliminarReposicionCertificadosDPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarReposicionLibretaCompleted As EliminarReposicionLibretaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminarTipoAhorroCompleted As EliminarTipoAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminaRutasCobroCompleted As EliminaRutasCobroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event EliminaTasasInteresCompleted As EliminaTasasInteresCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ExportacionDatos_AhorrosCompleted As ExportacionDatos_AhorrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ExportacionDatos_DPFCompleted As ExportacionDatos_DPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event GeneraNoCuentaCompleted As GeneraNoCuentaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event Gerencial_Cartera_DPFCompleted As Gerencial_Cartera_DPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event Gerencial_MovCuentasAhorroCompleted As Gerencial_MovCuentasAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InicializacionLibretaCompleted As InicializacionLibretaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertaParametrosCompleted As InsertaParametrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarAutorizadoRetiroCompleted As InsertarAutorizadoRetiroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarBeneficiariosCompleted As InsertarBeneficiariosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarCertificadosDPFCompleted As InsertarCertificadosDPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarComisionesCompleted As InsertarComisionesCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarCuentaAhorroCompleted As InsertarCuentaAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarCuentaPignoradaCompleted As InsertarCuentaPignoradaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarDestinoCompleted As InsertarDestinoCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarDet_PlanAhorroCompleted As InsertarDet_PlanAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarFechasCapitalizacionCompleted As InsertarFechasCapitalizacionCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarPlanAhorroCompleted As InsertarPlanAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarReposicionCertificadosDPFCompleted As InsertarReposicionCertificadosDPFCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarReposicionLibretaCompleted As InsertarReposicionLibretaCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarRutasCobroCompleted As InsertarRutasCobroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertarTipoAhorroCompleted As InsertarTipoAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event InsertaTasasInteresCompleted As InsertaTasasInteresCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ModificaComisionesCompleted As ModificaComisionesCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ModificaParametrosCompleted As ModificaParametrosCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ModificarAhCuentasAhorroCompleted As ModificarAhCuentasAhorroCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event ModificarAutorizadoRetiroCompleted As ModificarAutorizadoRetiroCompletedEventHandler
         
         '''<remarks/>
         Public Event ModificarBeneficiariosCompleted As ModificarBeneficiariosCompletedEventHandler
@@ -720,6 +578,12 @@ Namespace wrAhorro
         Public Event ReporteEstadoCuentaAhorroAportacionesCompleted As ReporteEstadoCuentaAhorroAportacionesCompletedEventHandler
         
         '''<remarks/>
+        Public Event ConsultarCuentaAportacionCompleted As ConsultarCuentaAportacionCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ReporteEstadoCuentaAportacionesCompleted As ReporteEstadoCuentaAportacionesCompletedEventHandler
+        
+        '''<remarks/>
         Public Event ReporteImpresionLibretaAhorrosCompleted As ReporteImpresionLibretaAhorrosCompletedEventHandler
         
         '''<remarks/>
@@ -732,6 +596,48 @@ Namespace wrAhorro
         Public Event ReporteTodasCuentasCompleted As ReporteTodasCuentasCompletedEventHandler
         
         '''<remarks/>
+        Public Event RepValorFecha_AhorrosCompleted As RepValorFecha_AhorrosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event RepVencimientosCompleted As RepVencimientosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ReversionAhorrosCompleted As ReversionAhorrosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ReversionAportacionesCompleted As ReversionAportacionesCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ReversionMovimientosCompleted As ReversionMovimientosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ReversionMovimientosxTransferenciaCompleted As ReversionMovimientosxTransferenciaCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event SaldosAhorrosCompleted As SaldosAhorrosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event SaldosAhorros_RangoCompleted As SaldosAhorros_RangoCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event TransferenciaAutomaticaCuentasCompleted As TransferenciaAutomaticaCuentasCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event TransferenciaCuentasCompleted As TransferenciaCuentasCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event Vencimientos_DPFCompleted As Vencimientos_DPFCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event VencimientosDiarios_DPFCompleted As VencimientosDiarios_DPFCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event VencimientosDiarios_DPF_ProyectadosCompleted As VencimientosDiarios_DPF_ProyectadosCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event VerificaSumaMontoDetalleTransferenciaCompleted As VerificaSumaMontoDetalleTransferenciaCompletedEventHandler
+        
+        '''<remarks/>
         Public Event insertarAsocTransferenciasAutomaticasCompleted As insertarAsocTransferenciasAutomaticasCompletedEventHandler
         
         '''<remarks/>
@@ -739,6 +645,15 @@ Namespace wrAhorro
         
         '''<remarks/>
         Public Event consultarAsocTransferenciasAutomaticasCompleted As consultarAsocTransferenciasAutomaticasCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event pignorarCuentaAhorroCompleted As pignorarCuentaAhorroCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event despignorarCuentaAhorroCompleted As despignorarCuentaAhorroCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event insertarCuentaDPFCompleted As insertarCuentaDPFCompletedEventHandler
         
         '''<remarks/>
         Public Event recuperarHojaLibreataCompleted As recuperarHojaLibreataCompletedEventHandler
@@ -757,6 +672,9 @@ Namespace wrAhorro
         
         '''<remarks/>
         Public Event generarNoCuentaTipoAhorroCompleted As generarNoCuentaTipoAhorroCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event ingresarReposicionCertificadoPlazoCompleted As ingresarReposicionCertificadoPlazoCompletedEventHandler
         
         '''<remarks/>
         Public Event procesarProvisionAhorroCompleted As procesarProvisionAhorroCompletedEventHandler
@@ -903,6 +821,9 @@ Namespace wrAhorro
         Public Event ConsultarCuentaAhorroTipoAhorroCompleted As ConsultarCuentaAhorroTipoAhorroCompletedEventHandler
         
         '''<remarks/>
+        Public Event ConsultarCuentaAhorroDPFCompleted As ConsultarCuentaAhorroDPFCompletedEventHandler
+        
+        '''<remarks/>
         Public Event ConsultarCuentaPignoradaCompleted As ConsultarCuentaPignoradaCompletedEventHandler
         
         '''<remarks/>
@@ -981,2099 +902,118 @@ Namespace wrAhorro
         Public Event EliminarCertificadosDPFCompleted As EliminarCertificadosDPFCompletedEventHandler
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/RepValorFecha_Ahorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function RepValorFecha_Ahorros(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
+        Public Event EliminarCuentaAhorroCompleted As EliminarCuentaAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginRepValorFecha_Ahorros(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
+        Public Event EliminarCuentaPignoradaCompleted As EliminarCuentaPignoradaCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndRepValorFecha_Ahorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
+        Public Event EliminarDestinoCompleted As EliminarDestinoCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub RepValorFecha_AhorrosAsync(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.RepValorFecha_AhorrosAsync(pFecha, pFecha2, pUs, pPa, pSucursal, Nothing)
-        End Sub
+        Public Event EliminarDet_PlanAhorroCompleted As EliminarDet_PlanAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub RepValorFecha_AhorrosAsync(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.RepValorFecha_AhorrosOperationCompleted Is Nothing) Then
-                Me.RepValorFecha_AhorrosOperationCompleted = AddressOf Me.OnRepValorFecha_AhorrosOperationCompleted
-            End If
-            Me.InvokeAsync("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal}, Me.RepValorFecha_AhorrosOperationCompleted, userState)
-        End Sub
+        Public Event EliminarDetalleTransferenciaCompleted As EliminarDetalleTransferenciaCompletedEventHandler
         
-        Private Sub OnRepValorFecha_AhorrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.RepValorFecha_AhorrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent RepValorFecha_AhorrosCompleted(Me, New RepValorFecha_AhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/RepVencimientos", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function RepVencimientos(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginRepVencimientos(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndRepVencimientos(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub RepVencimientosAsync(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.RepVencimientosAsync(pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub RepVencimientosAsync(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.RepVencimientosOperationCompleted Is Nothing) Then
-                Me.RepVencimientosOperationCompleted = AddressOf Me.OnRepVencimientosOperationCompleted
-            End If
-            Me.InvokeAsync("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal}, Me.RepVencimientosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnRepVencimientosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.RepVencimientosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent RepVencimientosCompleted(Me, New RepVencimientosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionAhorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ReversionAhorros(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
-            Dim results() As Object = Me.Invoke("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginReversionAhorros( _
-                    ByVal pCodReversion As String,  _
-                    ByVal pNoCuenta As String,  _
-                    ByVal pCodTipoAhorro As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pTipoMov As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pNoDocumento As String,  _
-                    ByVal pAnnio As Integer,  _
-                    ByVal pTipo As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pObs As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal callback As System.AsyncCallback,  _
-                    ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndReversionAhorros(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionAhorrosAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ReversionAhorrosAsync(pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionAhorrosAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ReversionAhorrosOperationCompleted Is Nothing) Then
-                Me.ReversionAhorrosOperationCompleted = AddressOf Me.OnReversionAhorrosOperationCompleted
-            End If
-            Me.InvokeAsync("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, Me.ReversionAhorrosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnReversionAhorrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ReversionAhorrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ReversionAhorrosCompleted(Me, New ReversionAhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionAportaciones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ReversionAportaciones(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
-            Dim results() As Object = Me.Invoke("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginReversionAportaciones( _
-                    ByVal pCodReversion As String,  _
-                    ByVal pNoCuenta As String,  _
-                    ByVal pCodTipoAhorro As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pTipoMov As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pNoDocumento As String,  _
-                    ByVal pAnnio As Integer,  _
-                    ByVal pTipo As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pObs As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal callback As System.AsyncCallback,  _
-                    ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndReversionAportaciones(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionAportacionesAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ReversionAportacionesAsync(pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionAportacionesAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ReversionAportacionesOperationCompleted Is Nothing) Then
-                Me.ReversionAportacionesOperationCompleted = AddressOf Me.OnReversionAportacionesOperationCompleted
-            End If
-            Me.InvokeAsync("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, Me.ReversionAportacionesOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnReversionAportacionesOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ReversionAportacionesCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ReversionAportacionesCompleted(Me, New ReversionAportacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionMovimientos", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ReversionMovimientos(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
-            Dim results() As Object = Me.Invoke("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginReversionMovimientos(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndReversionMovimientos(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionMovimientosAsync(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ReversionMovimientosAsync(pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionMovimientosAsync(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ReversionMovimientosOperationCompleted Is Nothing) Then
-                Me.ReversionMovimientosOperationCompleted = AddressOf Me.OnReversionMovimientosOperationCompleted
-            End If
-            Me.InvokeAsync("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, Me.ReversionMovimientosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnReversionMovimientosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ReversionMovimientosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ReversionMovimientosCompleted(Me, New ReversionMovimientosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionMovimientosxTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ReversionMovimientosxTransferencia(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
-            Dim results() As Object = Me.Invoke("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginReversionMovimientosxTransferencia(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndReversionMovimientosxTransferencia(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionMovimientosxTransferenciaAsync(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ReversionMovimientosxTransferenciaAsync(pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ReversionMovimientosxTransferenciaAsync(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ReversionMovimientosxTransferenciaOperationCompleted Is Nothing) Then
-                Me.ReversionMovimientosxTransferenciaOperationCompleted = AddressOf Me.OnReversionMovimientosxTransferenciaOperationCompleted
-            End If
-            Me.InvokeAsync("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, Me.ReversionMovimientosxTransferenciaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnReversionMovimientosxTransferenciaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ReversionMovimientosxTransferenciaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ReversionMovimientosxTransferenciaCompleted(Me, New ReversionMovimientosxTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/SaldosAhorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function SaldosAhorros(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginSaldosAhorros(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndSaldosAhorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub SaldosAhorrosAsync(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.SaldosAhorrosAsync(pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub SaldosAhorrosAsync(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.SaldosAhorrosOperationCompleted Is Nothing) Then
-                Me.SaldosAhorrosOperationCompleted = AddressOf Me.OnSaldosAhorrosOperationCompleted
-            End If
-            Me.InvokeAsync("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, Me.SaldosAhorrosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnSaldosAhorrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.SaldosAhorrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent SaldosAhorrosCompleted(Me, New SaldosAhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/SaldosAhorros_Rango", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function SaldosAhorros_Rango(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginSaldosAhorros_Rango(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndSaldosAhorros_Rango(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub SaldosAhorros_RangoAsync(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.SaldosAhorros_RangoAsync(pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub SaldosAhorros_RangoAsync(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.SaldosAhorros_RangoOperationCompleted Is Nothing) Then
-                Me.SaldosAhorros_RangoOperationCompleted = AddressOf Me.OnSaldosAhorros_RangoOperationCompleted
-            End If
-            Me.InvokeAsync("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, Me.SaldosAhorros_RangoOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnSaldosAhorros_RangoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.SaldosAhorros_RangoCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent SaldosAhorros_RangoCompleted(Me, New SaldosAhorros_RangoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/TransferenciaAutomaticaCuentas", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function TransferenciaAutomaticaCuentas(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String) As String
-            Dim results() As Object = Me.Invoke("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginTransferenciaAutomaticaCuentas(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndTransferenciaAutomaticaCuentas(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub TransferenciaAutomaticaCuentasAsync(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String)
-            Me.TransferenciaAutomaticaCuentasAsync(pFecha, pUsuario, pPassword, pSucursal, codCosto, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub TransferenciaAutomaticaCuentasAsync(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String, ByVal userState As Object)
-            If (Me.TransferenciaAutomaticaCuentasOperationCompleted Is Nothing) Then
-                Me.TransferenciaAutomaticaCuentasOperationCompleted = AddressOf Me.OnTransferenciaAutomaticaCuentasOperationCompleted
-            End If
-            Me.InvokeAsync("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto}, Me.TransferenciaAutomaticaCuentasOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnTransferenciaAutomaticaCuentasOperationCompleted(ByVal arg As Object)
-            If (Not (Me.TransferenciaAutomaticaCuentasCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent TransferenciaAutomaticaCuentasCompleted(Me, New TransferenciaAutomaticaCuentasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/TransferenciaCuentas", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function TransferenciaCuentas( _
-                    ByVal pNoDoc As String,  _
-                    ByVal pTipoTransferencia As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pDui As String,  _
-                    ByVal pNoSocio As String,  _
-                    ByVal pResponsable As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pObservacion As String,  _
-                    ByVal pNoCuentaOrigen As String,  _
-                    ByVal pCodTransferencia As String,  _
-                    ByVal pIdCuenta As String,  _
-                    ByVal pTipoMovimiento As String,  _
-                    ByVal dsDetalle As System.Data.DataSet,  _
-                    ByVal pCodTransaccion As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pNombreAsociado As String,  _
-                    ByVal pMembresia As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal CodCosto As String) As String
-            Dim results() As Object = Me.Invoke("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginTransferenciaCuentas( _
-                    ByVal pNoDoc As String,  _
-                    ByVal pTipoTransferencia As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pDui As String,  _
-                    ByVal pNoSocio As String,  _
-                    ByVal pResponsable As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pObservacion As String,  _
-                    ByVal pNoCuentaOrigen As String,  _
-                    ByVal pCodTransferencia As String,  _
-                    ByVal pIdCuenta As String,  _
-                    ByVal pTipoMovimiento As String,  _
-                    ByVal dsDetalle As System.Data.DataSet,  _
-                    ByVal pCodTransaccion As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pNombreAsociado As String,  _
-                    ByVal pMembresia As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal CodCosto As String,  _
-                    ByVal callback As System.AsyncCallback,  _
-                    ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndTransferenciaCuentas(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub TransferenciaCuentasAsync( _
-                    ByVal pNoDoc As String,  _
-                    ByVal pTipoTransferencia As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pDui As String,  _
-                    ByVal pNoSocio As String,  _
-                    ByVal pResponsable As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pObservacion As String,  _
-                    ByVal pNoCuentaOrigen As String,  _
-                    ByVal pCodTransferencia As String,  _
-                    ByVal pIdCuenta As String,  _
-                    ByVal pTipoMovimiento As String,  _
-                    ByVal dsDetalle As System.Data.DataSet,  _
-                    ByVal pCodTransaccion As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pNombreAsociado As String,  _
-                    ByVal pMembresia As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal CodCosto As String)
-            Me.TransferenciaCuentasAsync(pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub TransferenciaCuentasAsync( _
-                    ByVal pNoDoc As String,  _
-                    ByVal pTipoTransferencia As String,  _
-                    ByVal pFecha As Date,  _
-                    ByVal pDui As String,  _
-                    ByVal pNoSocio As String,  _
-                    ByVal pResponsable As String,  _
-                    ByVal pMonto As Double,  _
-                    ByVal pObservacion As String,  _
-                    ByVal pNoCuentaOrigen As String,  _
-                    ByVal pCodTransferencia As String,  _
-                    ByVal pIdCuenta As String,  _
-                    ByVal pTipoMovimiento As String,  _
-                    ByVal dsDetalle As System.Data.DataSet,  _
-                    ByVal pCodTransaccion As String,  _
-                    ByVal pOrigen As String,  _
-                    ByVal pNombreAsociado As String,  _
-                    ByVal pMembresia As String,  _
-                    ByVal pUsuario As String,  _
-                    ByVal pPassword As String,  _
-                    ByVal pSucursal As String,  _
-                    ByVal CodCosto As String,  _
-                    ByVal userState As Object)
-            If (Me.TransferenciaCuentasOperationCompleted Is Nothing) Then
-                Me.TransferenciaCuentasOperationCompleted = AddressOf Me.OnTransferenciaCuentasOperationCompleted
-            End If
-            Me.InvokeAsync("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto}, Me.TransferenciaCuentasOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnTransferenciaCuentasOperationCompleted(ByVal arg As Object)
-            If (Not (Me.TransferenciaCuentasCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent TransferenciaCuentasCompleted(Me, New TransferenciaCuentasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Vencimientos_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Vencimientos_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginVencimientos_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndVencimientos_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub Vencimientos_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.Vencimientos_DPFAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub Vencimientos_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.Vencimientos_DPFOperationCompleted Is Nothing) Then
-                Me.Vencimientos_DPFOperationCompleted = AddressOf Me.OnVencimientos_DPFOperationCompleted
-            End If
-            Me.InvokeAsync("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.Vencimientos_DPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnVencimientos_DPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.Vencimientos_DPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent Vencimientos_DPFCompleted(Me, New Vencimientos_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VencimientosDiarios_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function VencimientosDiarios_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginVencimientosDiarios_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndVencimientosDiarios_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub VencimientosDiarios_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.VencimientosDiarios_DPFAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub VencimientosDiarios_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.VencimientosDiarios_DPFOperationCompleted Is Nothing) Then
-                Me.VencimientosDiarios_DPFOperationCompleted = AddressOf Me.OnVencimientosDiarios_DPFOperationCompleted
-            End If
-            Me.InvokeAsync("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.VencimientosDiarios_DPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnVencimientosDiarios_DPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.VencimientosDiarios_DPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent VencimientosDiarios_DPFCompleted(Me, New VencimientosDiarios_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VencimientosDiarios_DPF_Proyectados", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function VencimientosDiarios_DPF_Proyectados(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginVencimientosDiarios_DPF_Proyectados(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndVencimientosDiarios_DPF_Proyectados(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub VencimientosDiarios_DPF_ProyectadosAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.VencimientosDiarios_DPF_ProyectadosAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub VencimientosDiarios_DPF_ProyectadosAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted Is Nothing) Then
-                Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted = AddressOf Me.OnVencimientosDiarios_DPF_ProyectadosOperationCompleted
-            End If
-            Me.InvokeAsync("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnVencimientosDiarios_DPF_ProyectadosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.VencimientosDiarios_DPF_ProyectadosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent VencimientosDiarios_DPF_ProyectadosCompleted(Me, New VencimientosDiarios_DPF_ProyectadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VerificaSumaMontoDetalleTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function VerificaSumaMontoDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet) As Double
-            Dim results() As Object = Me.Invoke("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle})
-            Return CType(results(0),Double)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginVerificaSumaMontoDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndVerificaSumaMontoDetalleTransferencia(ByVal asyncResult As System.IAsyncResult) As Double
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Double)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub VerificaSumaMontoDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet)
-            Me.VerificaSumaMontoDetalleTransferenciaAsync(dsDetalle, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub VerificaSumaMontoDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal userState As Object)
-            If (Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted Is Nothing) Then
-                Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted = AddressOf Me.OnVerificaSumaMontoDetalleTransferenciaOperationCompleted
-            End If
-            Me.InvokeAsync("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle}, Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnVerificaSumaMontoDetalleTransferenciaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.VerificaSumaMontoDetalleTransferenciaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent VerificaSumaMontoDetalleTransferenciaCompleted(Me, New VerificaSumaMontoDetalleTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarCuentaAhorro(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarCuentaAhorro(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarCuentaAhorroAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarCuentaAhorroAsync(pCorrelativo, pKey, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarCuentaAhorroAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarCuentaAhorroOperationCompleted Is Nothing) Then
-                Me.EliminarCuentaAhorroOperationCompleted = AddressOf Me.OnEliminarCuentaAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, Me.EliminarCuentaAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarCuentaAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarCuentaAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarCuentaAhorroCompleted(Me, New EliminarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarCuentaPignorada", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarCuentaPignorada(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarCuentaPignorada(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarCuentaPignorada(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarCuentaPignoradaAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarCuentaPignoradaAsync(pCorrelativo, pKey, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarCuentaPignoradaAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarCuentaPignoradaOperationCompleted Is Nothing) Then
-                Me.EliminarCuentaPignoradaOperationCompleted = AddressOf Me.OnEliminarCuentaPignoradaOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, Me.EliminarCuentaPignoradaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarCuentaPignoradaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarCuentaPignoradaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarCuentaPignoradaCompleted(Me, New EliminarCuentaPignoradaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDestino", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarDestino(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarDestino(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarDestino(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDestinoAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarDestinoAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDestinoAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarDestinoOperationCompleted Is Nothing) Then
-                Me.EliminarDestinoOperationCompleted = AddressOf Me.OnEliminarDestinoOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarDestinoOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarDestinoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarDestinoCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarDestinoCompleted(Me, New EliminarDestinoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDet_PlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarDet_PlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarDet_PlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarDet_PlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDet_PlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarDet_PlanAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDet_PlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarDet_PlanAhorroOperationCompleted Is Nothing) Then
-                Me.EliminarDet_PlanAhorroOperationCompleted = AddressOf Me.OnEliminarDet_PlanAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarDet_PlanAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarDet_PlanAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarDet_PlanAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarDet_PlanAhorroCompleted(Me, New EliminarDet_PlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDetalleTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarDetalleTransferencia(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer)
-            Me.EliminarDetalleTransferenciaAsync(dsDetalle, pNumero, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer, ByVal userState As Object)
-            If (Me.EliminarDetalleTransferenciaOperationCompleted Is Nothing) Then
-                Me.EliminarDetalleTransferenciaOperationCompleted = AddressOf Me.OnEliminarDetalleTransferenciaOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero}, Me.EliminarDetalleTransferenciaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarDetalleTransferenciaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarDetalleTransferenciaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarDetalleTransferenciaCompleted(Me, New EliminarDetalleTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarFechasCapitalizacion", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarFechasCapitalizacion(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarFechasCapitalizacion(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarFechasCapitalizacion(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarFechasCapitalizacionAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarFechasCapitalizacionAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarFechasCapitalizacionAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarFechasCapitalizacionOperationCompleted Is Nothing) Then
-                Me.EliminarFechasCapitalizacionOperationCompleted = AddressOf Me.OnEliminarFechasCapitalizacionOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarFechasCapitalizacionOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarFechasCapitalizacionOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarFechasCapitalizacionCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarFechasCapitalizacionCompleted(Me, New EliminarFechasCapitalizacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarPlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarPlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarPlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarPlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarPlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarPlanAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarPlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarPlanAhorroOperationCompleted Is Nothing) Then
-                Me.EliminarPlanAhorroOperationCompleted = AddressOf Me.OnEliminarPlanAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarPlanAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarPlanAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarPlanAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarPlanAhorroCompleted(Me, New EliminarPlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarReposicionCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarReposicionCertificadosDPF(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarReposicionCertificadosDPF(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarReposicionCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarReposicionCertificadosDPFAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarReposicionCertificadosDPFAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarReposicionCertificadosDPFAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarReposicionCertificadosDPFOperationCompleted Is Nothing) Then
-                Me.EliminarReposicionCertificadosDPFOperationCompleted = AddressOf Me.OnEliminarReposicionCertificadosDPFOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarReposicionCertificadosDPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarReposicionCertificadosDPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarReposicionCertificadosDPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarReposicionCertificadosDPFCompleted(Me, New EliminarReposicionCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarReposicionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarReposicionLibreta(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarReposicionLibreta(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarReposicionLibreta(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarReposicionLibretaAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarReposicionLibretaAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarReposicionLibretaAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarReposicionLibretaOperationCompleted Is Nothing) Then
-                Me.EliminarReposicionLibretaOperationCompleted = AddressOf Me.OnEliminarReposicionLibretaOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarReposicionLibretaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarReposicionLibretaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarReposicionLibretaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarReposicionLibretaCompleted(Me, New EliminarReposicionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarTipoAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminarTipoAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminarTipoAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminarTipoAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarTipoAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.EliminarTipoAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminarTipoAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminarTipoAhorroOperationCompleted Is Nothing) Then
-                Me.EliminarTipoAhorroOperationCompleted = AddressOf Me.OnEliminarTipoAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarTipoAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminarTipoAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminarTipoAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminarTipoAhorroCompleted(Me, New EliminarTipoAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminaRutasCobro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminaRutasCobro(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminaRutasCobro(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminaRutasCobro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminaRutasCobroAsync(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.EliminaRutasCobroAsync(pCodRutaCobro, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminaRutasCobroAsync(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminaRutasCobroOperationCompleted Is Nothing) Then
-                Me.EliminaRutasCobroOperationCompleted = AddressOf Me.OnEliminaRutasCobroOperationCompleted
-            End If
-            Me.InvokeAsync("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal}, Me.EliminaRutasCobroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminaRutasCobroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminaRutasCobroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminaRutasCobroCompleted(Me, New EliminaRutasCobroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminaTasasInteres", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function EliminaTasasInteres(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginEliminaTasasInteres(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndEliminaTasasInteres(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub EliminaTasasInteresAsync(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.EliminaTasasInteresAsync(pCorrelativo, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub EliminaTasasInteresAsync(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.EliminaTasasInteresOperationCompleted Is Nothing) Then
-                Me.EliminaTasasInteresOperationCompleted = AddressOf Me.OnEliminaTasasInteresOperationCompleted
-            End If
-            Me.InvokeAsync("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal}, Me.EliminaTasasInteresOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnEliminaTasasInteresOperationCompleted(ByVal arg As Object)
-            If (Not (Me.EliminaTasasInteresCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent EliminaTasasInteresCompleted(Me, New EliminaTasasInteresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ExportacionDatos_Ahorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ExportacionDatos_Ahorros(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginExportacionDatos_Ahorros(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndExportacionDatos_Ahorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ExportacionDatos_AhorrosAsync(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ExportacionDatos_AhorrosAsync(pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ExportacionDatos_AhorrosAsync(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ExportacionDatos_AhorrosOperationCompleted Is Nothing) Then
-                Me.ExportacionDatos_AhorrosOperationCompleted = AddressOf Me.OnExportacionDatos_AhorrosOperationCompleted
-            End If
-            Me.InvokeAsync("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal}, Me.ExportacionDatos_AhorrosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnExportacionDatos_AhorrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ExportacionDatos_AhorrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ExportacionDatos_AhorrosCompleted(Me, New ExportacionDatos_AhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ExportacionDatos_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ExportacionDatos_DPF(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginExportacionDatos_DPF(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndExportacionDatos_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub ExportacionDatos_DPFAsync(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ExportacionDatos_DPFAsync(pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub ExportacionDatos_DPFAsync(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ExportacionDatos_DPFOperationCompleted Is Nothing) Then
-                Me.ExportacionDatos_DPFOperationCompleted = AddressOf Me.OnExportacionDatos_DPFOperationCompleted
-            End If
-            Me.InvokeAsync("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal}, Me.ExportacionDatos_DPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnExportacionDatos_DPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ExportacionDatos_DPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ExportacionDatos_DPFCompleted(Me, New ExportacionDatos_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/GeneraNoCuenta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function GeneraNoCuenta(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String) As String
-            Dim results() As Object = Me.Invoke("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginGeneraNoCuenta(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndGeneraNoCuenta(ByVal asyncResult As System.IAsyncResult) As String
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub GeneraNoCuentaAsync(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String)
-            Me.GeneraNoCuentaAsync(pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub GeneraNoCuentaAsync(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String, ByVal userState As Object)
-            If (Me.GeneraNoCuentaOperationCompleted Is Nothing) Then
-                Me.GeneraNoCuentaOperationCompleted = AddressOf Me.OnGeneraNoCuentaOperationCompleted
-            End If
-            Me.InvokeAsync("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc}, Me.GeneraNoCuentaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnGeneraNoCuentaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.GeneraNoCuentaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent GeneraNoCuentaCompleted(Me, New GeneraNoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Gerencial_Cartera_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Gerencial_Cartera_DPF(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginGerencial_Cartera_DPF(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndGerencial_Cartera_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub Gerencial_Cartera_DPFAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.Gerencial_Cartera_DPFAsync(pFechaIni, pFechaFin, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub Gerencial_Cartera_DPFAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.Gerencial_Cartera_DPFOperationCompleted Is Nothing) Then
-                Me.Gerencial_Cartera_DPFOperationCompleted = AddressOf Me.OnGerencial_Cartera_DPFOperationCompleted
-            End If
-            Me.InvokeAsync("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, Me.Gerencial_Cartera_DPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnGerencial_Cartera_DPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.Gerencial_Cartera_DPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent Gerencial_Cartera_DPFCompleted(Me, New Gerencial_Cartera_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Gerencial_MovCuentasAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Gerencial_MovCuentasAhorro(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginGerencial_MovCuentasAhorro(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndGerencial_MovCuentasAhorro(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub Gerencial_MovCuentasAhorroAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.Gerencial_MovCuentasAhorroAsync(pFechaIni, pFechaFin, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub Gerencial_MovCuentasAhorroAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.Gerencial_MovCuentasAhorroOperationCompleted Is Nothing) Then
-                Me.Gerencial_MovCuentasAhorroOperationCompleted = AddressOf Me.OnGerencial_MovCuentasAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, Me.Gerencial_MovCuentasAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnGerencial_MovCuentasAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.Gerencial_MovCuentasAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent Gerencial_MovCuentasAhorroCompleted(Me, New Gerencial_MovCuentasAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InicializacionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InicializacionLibreta(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInicializacionLibreta(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInicializacionLibreta(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InicializacionLibretaAsync(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InicializacionLibretaAsync(pDui, pNoCuenta, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InicializacionLibretaAsync(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InicializacionLibretaOperationCompleted Is Nothing) Then
-                Me.InicializacionLibretaOperationCompleted = AddressOf Me.OnInicializacionLibretaOperationCompleted
-            End If
-            Me.InvokeAsync("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal}, Me.InicializacionLibretaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInicializacionLibretaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InicializacionLibretaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InicializacionLibretaCompleted(Me, New InicializacionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertaParametros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertaParametros(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertaParametros(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertaParametros(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertaParametrosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.InsertaParametrosAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertaParametrosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertaParametrosOperationCompleted Is Nothing) Then
-                Me.InsertaParametrosOperationCompleted = AddressOf Me.OnInsertaParametrosOperationCompleted
-            End If
-            Me.InvokeAsync("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertaParametrosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertaParametrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertaParametrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertaParametrosCompleted(Me, New InsertaParametrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarAutorizadoRetiro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarAutorizadoRetiro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarAutorizadoRetiro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarAutorizadoRetiro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarAutorizadoRetiroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarAutorizadoRetiroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarAutorizadoRetiroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarAutorizadoRetiroOperationCompleted Is Nothing) Then
-                Me.InsertarAutorizadoRetiroOperationCompleted = AddressOf Me.OnInsertarAutorizadoRetiroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarAutorizadoRetiroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarAutorizadoRetiroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarAutorizadoRetiroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarAutorizadoRetiroCompleted(Me, New InsertarAutorizadoRetiroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarBeneficiarios", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarBeneficiarios(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarBeneficiarios(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarBeneficiarios(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarBeneficiariosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarBeneficiariosAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
         '''<remarks/>
-        Public Overloads Sub InsertarBeneficiariosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarBeneficiariosOperationCompleted Is Nothing) Then
-                Me.InsertarBeneficiariosOperationCompleted = AddressOf Me.OnInsertarBeneficiariosOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarBeneficiariosOperationCompleted, userState)
-        End Sub
+        Public Event EliminarFechasCapitalizacionCompleted As EliminarFechasCapitalizacionCompletedEventHandler
         
-        Private Sub OnInsertarBeneficiariosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarBeneficiariosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarBeneficiariosCompleted(Me, New InsertarBeneficiariosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarCertificadosDPFAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarCertificadosDPFOperationCompleted Is Nothing) Then
-                Me.InsertarCertificadosDPFOperationCompleted = AddressOf Me.OnInsertarCertificadosDPFOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCertificadosDPFOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarCertificadosDPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarCertificadosDPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarCertificadosDPFCompleted(Me, New InsertarCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarComisiones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarComisiones(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarComisiones(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarComisiones(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarComisionesAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.InsertarComisionesAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarComisionesAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarComisionesOperationCompleted Is Nothing) Then
-                Me.InsertarComisionesOperationCompleted = AddressOf Me.OnInsertarComisionesOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertarComisionesOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarComisionesOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarComisionesCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarComisionesCompleted(Me, New InsertarComisionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarCuentaAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarCuentaAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCuentaAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarCuentaAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCuentaAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarCuentaAhorroOperationCompleted Is Nothing) Then
-                Me.InsertarCuentaAhorroOperationCompleted = AddressOf Me.OnInsertarCuentaAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCuentaAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarCuentaAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarCuentaAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarCuentaAhorroCompleted(Me, New InsertarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCuentaPignorada", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarCuentaPignorada(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarCuentaPignorada(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarCuentaPignorada(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCuentaPignoradaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarCuentaPignoradaAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarCuentaPignoradaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarCuentaPignoradaOperationCompleted Is Nothing) Then
-                Me.InsertarCuentaPignoradaOperationCompleted = AddressOf Me.OnInsertarCuentaPignoradaOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCuentaPignoradaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarCuentaPignoradaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarCuentaPignoradaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarCuentaPignoradaCompleted(Me, New InsertarCuentaPignoradaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarDestino", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarDestino(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarDestino(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarDestino(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarDestinoAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarDestinoAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarDestinoAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarDestinoOperationCompleted Is Nothing) Then
-                Me.InsertarDestinoOperationCompleted = AddressOf Me.OnInsertarDestinoOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarDestinoOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarDestinoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarDestinoCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarDestinoCompleted(Me, New InsertarDestinoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarDet_PlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarDet_PlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarDet_PlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarDet_PlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
         '''<remarks/>
-        Public Overloads Sub InsertarDet_PlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarDet_PlanAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
+        Public Event EliminarPlanAhorroCompleted As EliminarPlanAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub InsertarDet_PlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarDet_PlanAhorroOperationCompleted Is Nothing) Then
-                Me.InsertarDet_PlanAhorroOperationCompleted = AddressOf Me.OnInsertarDet_PlanAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarDet_PlanAhorroOperationCompleted, userState)
-        End Sub
+        Public Event EliminarReposicionCertificadosDPFCompleted As EliminarReposicionCertificadosDPFCompletedEventHandler
         
-        Private Sub OnInsertarDet_PlanAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarDet_PlanAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarDet_PlanAhorroCompleted(Me, New InsertarDet_PlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarFechasCapitalizacion", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarFechasCapitalizacion(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarFechasCapitalizacion(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarFechasCapitalizacion(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarFechasCapitalizacionAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarFechasCapitalizacionAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarFechasCapitalizacionAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarFechasCapitalizacionOperationCompleted Is Nothing) Then
-                Me.InsertarFechasCapitalizacionOperationCompleted = AddressOf Me.OnInsertarFechasCapitalizacionOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarFechasCapitalizacionOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarFechasCapitalizacionOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarFechasCapitalizacionCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarFechasCapitalizacionCompleted(Me, New InsertarFechasCapitalizacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarPlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarPlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarPlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarPlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarPlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarPlanAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarPlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarPlanAhorroOperationCompleted Is Nothing) Then
-                Me.InsertarPlanAhorroOperationCompleted = AddressOf Me.OnInsertarPlanAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarPlanAhorroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarPlanAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarPlanAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarPlanAhorroCompleted(Me, New InsertarPlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarReposicionCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarReposicionCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarReposicionCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarReposicionCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarReposicionCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarReposicionCertificadosDPFAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
         '''<remarks/>
-        Public Overloads Sub InsertarReposicionCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarReposicionCertificadosDPFOperationCompleted Is Nothing) Then
-                Me.InsertarReposicionCertificadosDPFOperationCompleted = AddressOf Me.OnInsertarReposicionCertificadosDPFOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarReposicionCertificadosDPFOperationCompleted, userState)
-        End Sub
+        Public Event EliminarReposicionLibretaCompleted As EliminarReposicionLibretaCompletedEventHandler
         
-        Private Sub OnInsertarReposicionCertificadosDPFOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarReposicionCertificadosDPFCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarReposicionCertificadosDPFCompleted(Me, New InsertarReposicionCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarReposicionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarReposicionLibreta(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarReposicionLibreta(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarReposicionLibreta(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarReposicionLibretaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarReposicionLibretaAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarReposicionLibretaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarReposicionLibretaOperationCompleted Is Nothing) Then
-                Me.InsertarReposicionLibretaOperationCompleted = AddressOf Me.OnInsertarReposicionLibretaOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarReposicionLibretaOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarReposicionLibretaOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarReposicionLibretaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarReposicionLibretaCompleted(Me, New InsertarReposicionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarRutasCobro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarRutasCobro(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Function BeginInsertarRutasCobro(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
-        
-        '''<remarks/>
-        Public Function EndInsertarRutasCobro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarRutasCobroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.InsertarRutasCobroAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub InsertarRutasCobroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarRutasCobroOperationCompleted Is Nothing) Then
-                Me.InsertarRutasCobroOperationCompleted = AddressOf Me.OnInsertarRutasCobroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertarRutasCobroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertarRutasCobroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarRutasCobroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarRutasCobroCompleted(Me, New InsertarRutasCobroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarTipoAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertarTipoAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event EliminarTipoAhorroCompleted As EliminarTipoAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginInsertarTipoAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
+        Public Event EliminaRutasCobroCompleted As EliminaRutasCobroCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndInsertarTipoAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event EliminaTasasInteresCompleted As EliminaTasasInteresCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub InsertarTipoAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.InsertarTipoAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
+        Public Event ExportacionDatos_AhorrosCompleted As ExportacionDatos_AhorrosCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub InsertarTipoAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertarTipoAhorroOperationCompleted Is Nothing) Then
-                Me.InsertarTipoAhorroOperationCompleted = AddressOf Me.OnInsertarTipoAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarTipoAhorroOperationCompleted, userState)
-        End Sub
+        Public Event ExportacionDatos_DPFCompleted As ExportacionDatos_DPFCompletedEventHandler
         
-        Private Sub OnInsertarTipoAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertarTipoAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertarTipoAhorroCompleted(Me, New InsertarTipoAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertaTasasInteres", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function InsertaTasasInteres(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
-        
         '''<remarks/>
-        Public Function BeginInsertaTasasInteres(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
+        Public Event GeneraNoCuentaCompleted As GeneraNoCuentaCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndInsertaTasasInteres(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event Gerencial_Cartera_DPFCompleted As Gerencial_Cartera_DPFCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub InsertaTasasInteresAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.InsertaTasasInteresAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
+        Public Event Gerencial_MovCuentasAhorroCompleted As Gerencial_MovCuentasAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub InsertaTasasInteresAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.InsertaTasasInteresOperationCompleted Is Nothing) Then
-                Me.InsertaTasasInteresOperationCompleted = AddressOf Me.OnInsertaTasasInteresOperationCompleted
-            End If
-            Me.InvokeAsync("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertaTasasInteresOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnInsertaTasasInteresOperationCompleted(ByVal arg As Object)
-            If (Not (Me.InsertaTasasInteresCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent InsertaTasasInteresCompleted(Me, New InsertaTasasInteresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
+        Public Event InicializacionLibretaCompleted As InicializacionLibretaCompletedEventHandler
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificaComisiones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ModificaComisiones(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertaParametrosCompleted As InsertaParametrosCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginModificaComisiones(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
+        Public Event InsertarAutorizadoRetiroCompleted As InsertarAutorizadoRetiroCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndModificaComisiones(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertarBeneficiariosCompleted As InsertarBeneficiariosCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificaComisionesAsync(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ModificaComisionesAsync(pCamposyValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
+        Public Event InsertarCertificadosDPFCompleted As InsertarCertificadosDPFCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificaComisionesAsync(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ModificaComisionesOperationCompleted Is Nothing) Then
-                Me.ModificaComisionesOperationCompleted = AddressOf Me.OnModificaComisionesOperationCompleted
-            End If
-            Me.InvokeAsync("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal}, Me.ModificaComisionesOperationCompleted, userState)
-        End Sub
+        Public Event InsertarComisionesCompleted As InsertarComisionesCompletedEventHandler
         
-        Private Sub OnModificaComisionesOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ModificaComisionesCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ModificaComisionesCompleted(Me, New ModificaComisionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificaParametros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ModificaParametros(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertarCuentaAhorroCompleted As InsertarCuentaAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginModificaParametros(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
+        Public Event InsertarCuentaPignoradaCompleted As InsertarCuentaPignoradaCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndModificaParametros(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertarDestinoCompleted As InsertarDestinoCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificaParametrosAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ModificaParametrosAsync(pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
+        Public Event InsertarDet_PlanAhorroCompleted As InsertarDet_PlanAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificaParametrosAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ModificaParametrosOperationCompleted Is Nothing) Then
-                Me.ModificaParametrosOperationCompleted = AddressOf Me.OnModificaParametrosOperationCompleted
-            End If
-            Me.InvokeAsync("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal}, Me.ModificaParametrosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnModificaParametrosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ModificaParametrosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ModificaParametrosCompleted(Me, New ModificaParametrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
+        Public Event InsertarFechasCapitalizacionCompleted As InsertarFechasCapitalizacionCompletedEventHandler
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificarAhCuentasAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ModificarAhCuentasAhorro(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertarPlanAhorroCompleted As InsertarPlanAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginModificarAhCuentasAhorro(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal}, callback, asyncState)
-        End Function
+        Public Event InsertarReposicionCertificadosDPFCompleted As InsertarReposicionCertificadosDPFCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndModificarAhCuentasAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertarReposicionLibretaCompleted As InsertarReposicionLibretaCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificarAhCuentasAhorroAsync(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
-            Me.ModificarAhCuentasAhorroAsync(pCamposValores, pFiltro, pUsuario, pPassword, pSucursal, Nothing)
-        End Sub
+        Public Event InsertarRutasCobroCompleted As InsertarRutasCobroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificarAhCuentasAhorroAsync(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ModificarAhCuentasAhorroOperationCompleted Is Nothing) Then
-                Me.ModificarAhCuentasAhorroOperationCompleted = AddressOf Me.OnModificarAhCuentasAhorroOperationCompleted
-            End If
-            Me.InvokeAsync("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal}, Me.ModificarAhCuentasAhorroOperationCompleted, userState)
-        End Sub
+        Public Event InsertarTipoAhorroCompleted As InsertarTipoAhorroCompletedEventHandler
         
-        Private Sub OnModificarAhCuentasAhorroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ModificarAhCuentasAhorroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ModificarAhCuentasAhorroCompleted(Me, New ModificarAhCuentasAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificarAutorizadoRetiro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function ModificarAutorizadoRetiro(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
-            Dim results() As Object = Me.Invoke("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal})
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event InsertaTasasInteresCompleted As InsertaTasasInteresCompletedEventHandler
         
         '''<remarks/>
-        Public Function BeginModificarAutorizadoRetiro(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal}, callback, asyncState)
-        End Function
+        Public Event ModificaComisionesCompleted As ModificaComisionesCompletedEventHandler
         
         '''<remarks/>
-        Public Function EndModificarAutorizadoRetiro(ByVal asyncResult As System.IAsyncResult) As Boolean
-            Dim results() As Object = Me.EndInvoke(asyncResult)
-            Return CType(results(0),Boolean)
-        End Function
+        Public Event ModificaParametrosCompleted As ModificaParametrosCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificarAutorizadoRetiroAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
-            Me.ModificarAutorizadoRetiroAsync(pCorrelativo, pCamposyValores, pUs, pPa, pSucursal, Nothing)
-        End Sub
+        Public Event ModificarAhCuentasAhorroCompleted As ModificarAhCuentasAhorroCompletedEventHandler
         
         '''<remarks/>
-        Public Overloads Sub ModificarAutorizadoRetiroAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
-            If (Me.ModificarAutorizadoRetiroOperationCompleted Is Nothing) Then
-                Me.ModificarAutorizadoRetiroOperationCompleted = AddressOf Me.OnModificarAutorizadoRetiroOperationCompleted
-            End If
-            Me.InvokeAsync("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal}, Me.ModificarAutorizadoRetiroOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnModificarAutorizadoRetiroOperationCompleted(ByVal arg As Object)
-            If (Not (Me.ModificarAutorizadoRetiroCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent ModificarAutorizadoRetiroCompleted(Me, New ModificarAutorizadoRetiroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
+        Public Event ModificarAutorizadoRetiroCompleted As ModificarAutorizadoRetiroCompletedEventHandler
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificarBeneficiarios", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
@@ -4710,6 +2650,82 @@ Namespace wrAhorro
         End Sub
         
         '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ConsultarCuentaAportacion", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ConsultarCuentaAportacion(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ConsultarCuentaAportacion", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginConsultarCuentaAportacion(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ConsultarCuentaAportacion", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndConsultarCuentaAportacion(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ConsultarCuentaAportacionAsync(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.ConsultarCuentaAportacionAsync(pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ConsultarCuentaAportacionAsync(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ConsultarCuentaAportacionOperationCompleted Is Nothing) Then
+                Me.ConsultarCuentaAportacionOperationCompleted = AddressOf Me.OnConsultarCuentaAportacionOperationCompleted
+            End If
+            Me.InvokeAsync("ConsultarCuentaAportacion", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal}, Me.ConsultarCuentaAportacionOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnConsultarCuentaAportacionOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ConsultarCuentaAportacionCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ConsultarCuentaAportacionCompleted(Me, New ConsultarCuentaAportacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReporteEstadoCuentaAportaciones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ReporteEstadoCuentaAportaciones(ByVal pDUI As String, ByVal pNoCuenta As String, ByVal pTipoAhorro As String, ByVal pFechaInicio As Date, ByVal pFechaFin As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ReporteEstadoCuentaAportaciones", New Object() {pDUI, pNoCuenta, pTipoAhorro, pFechaInicio, pFechaFin, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginReporteEstadoCuentaAportaciones(ByVal pDUI As String, ByVal pNoCuenta As String, ByVal pTipoAhorro As String, ByVal pFechaInicio As Date, ByVal pFechaFin As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ReporteEstadoCuentaAportaciones", New Object() {pDUI, pNoCuenta, pTipoAhorro, pFechaInicio, pFechaFin, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndReporteEstadoCuentaAportaciones(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ReporteEstadoCuentaAportacionesAsync(ByVal pDUI As String, ByVal pNoCuenta As String, ByVal pTipoAhorro As String, ByVal pFechaInicio As Date, ByVal pFechaFin As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ReporteEstadoCuentaAportacionesAsync(pDUI, pNoCuenta, pTipoAhorro, pFechaInicio, pFechaFin, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ReporteEstadoCuentaAportacionesAsync(ByVal pDUI As String, ByVal pNoCuenta As String, ByVal pTipoAhorro As String, ByVal pFechaInicio As Date, ByVal pFechaFin As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ReporteEstadoCuentaAportacionesOperationCompleted Is Nothing) Then
+                Me.ReporteEstadoCuentaAportacionesOperationCompleted = AddressOf Me.OnReporteEstadoCuentaAportacionesOperationCompleted
+            End If
+            Me.InvokeAsync("ReporteEstadoCuentaAportaciones", New Object() {pDUI, pNoCuenta, pTipoAhorro, pFechaInicio, pFechaFin, pUsuario, pPassword, pSucursal}, Me.ReporteEstadoCuentaAportacionesOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnReporteEstadoCuentaAportacionesOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ReporteEstadoCuentaAportacionesCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ReporteEstadoCuentaAportacionesCompleted(Me, New ReporteEstadoCuentaAportacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReporteImpresionLibretaAhorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function ReporteImpresionLibretaAhorros(ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
             Dim results() As Object = Me.Invoke("ReporteImpresionLibretaAhorros", New Object() {pFiltro, pUsuario, pPassword, pSucursal})
@@ -4862,6 +2878,657 @@ Namespace wrAhorro
         End Sub
         
         '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/RepValorFecha_Ahorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function RepValorFecha_Ahorros(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginRepValorFecha_Ahorros(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndRepValorFecha_Ahorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub RepValorFecha_AhorrosAsync(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.RepValorFecha_AhorrosAsync(pFecha, pFecha2, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub RepValorFecha_AhorrosAsync(ByVal pFecha As Date, ByVal pFecha2 As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.RepValorFecha_AhorrosOperationCompleted Is Nothing) Then
+                Me.RepValorFecha_AhorrosOperationCompleted = AddressOf Me.OnRepValorFecha_AhorrosOperationCompleted
+            End If
+            Me.InvokeAsync("RepValorFecha_Ahorros", New Object() {pFecha, pFecha2, pUs, pPa, pSucursal}, Me.RepValorFecha_AhorrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnRepValorFecha_AhorrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.RepValorFecha_AhorrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent RepValorFecha_AhorrosCompleted(Me, New RepValorFecha_AhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/RepVencimientos", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function RepVencimientos(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginRepVencimientos(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndRepVencimientos(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub RepVencimientosAsync(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.RepVencimientosAsync(pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub RepVencimientosAsync(ByVal pFecIni As Date, ByVal pFecFin As Date, ByVal pCodTipoAhorro As String, ByVal pTodosTiposAhorro As Boolean, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.RepVencimientosOperationCompleted Is Nothing) Then
+                Me.RepVencimientosOperationCompleted = AddressOf Me.OnRepVencimientosOperationCompleted
+            End If
+            Me.InvokeAsync("RepVencimientos", New Object() {pFecIni, pFecFin, pCodTipoAhorro, pTodosTiposAhorro, pUsuario, pPassword, pSucursal}, Me.RepVencimientosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnRepVencimientosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.RepVencimientosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent RepVencimientosCompleted(Me, New RepVencimientosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionAhorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ReversionAhorros(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
+            Dim results() As Object = Me.Invoke("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginReversionAhorros( _
+                    ByVal pCodReversion As String,  _
+                    ByVal pNoCuenta As String,  _
+                    ByVal pCodTipoAhorro As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pTipoMov As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pNoDocumento As String,  _
+                    ByVal pAnnio As Integer,  _
+                    ByVal pTipo As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pObs As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal callback As System.AsyncCallback,  _
+                    ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndReversionAhorros(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionAhorrosAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ReversionAhorrosAsync(pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionAhorrosAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ReversionAhorrosOperationCompleted Is Nothing) Then
+                Me.ReversionAhorrosOperationCompleted = AddressOf Me.OnReversionAhorrosOperationCompleted
+            End If
+            Me.InvokeAsync("ReversionAhorros", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, Me.ReversionAhorrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnReversionAhorrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ReversionAhorrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ReversionAhorrosCompleted(Me, New ReversionAhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionAportaciones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ReversionAportaciones(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
+            Dim results() As Object = Me.Invoke("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginReversionAportaciones( _
+                    ByVal pCodReversion As String,  _
+                    ByVal pNoCuenta As String,  _
+                    ByVal pCodTipoAhorro As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pTipoMov As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pNoDocumento As String,  _
+                    ByVal pAnnio As Integer,  _
+                    ByVal pTipo As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pObs As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal callback As System.AsyncCallback,  _
+                    ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndReversionAportaciones(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionAportacionesAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ReversionAportacionesAsync(pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionAportacionesAsync(ByVal pCodReversion As String, ByVal pNoCuenta As String, ByVal pCodTipoAhorro As String, ByVal pFecha As Date, ByVal pTipoMov As String, ByVal pMonto As Double, ByVal pNoDocumento As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pOrigen As String, ByVal pObs As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ReversionAportacionesOperationCompleted Is Nothing) Then
+                Me.ReversionAportacionesOperationCompleted = AddressOf Me.OnReversionAportacionesOperationCompleted
+            End If
+            Me.InvokeAsync("ReversionAportaciones", New Object() {pCodReversion, pNoCuenta, pCodTipoAhorro, pFecha, pTipoMov, pMonto, pNoDocumento, pAnnio, pTipo, pOrigen, pObs, pUsuario, pPassword, pSucursal}, Me.ReversionAportacionesOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnReversionAportacionesOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ReversionAportacionesCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ReversionAportacionesCompleted(Me, New ReversionAportacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionMovimientos", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ReversionMovimientos(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
+            Dim results() As Object = Me.Invoke("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginReversionMovimientos(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndReversionMovimientos(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionMovimientosAsync(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ReversionMovimientosAsync(pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionMovimientosAsync(ByVal pNoDoc As String, ByVal pAnnio As Integer, ByVal pTipo As String, ByVal pFecha As Date, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ReversionMovimientosOperationCompleted Is Nothing) Then
+                Me.ReversionMovimientosOperationCompleted = AddressOf Me.OnReversionMovimientosOperationCompleted
+            End If
+            Me.InvokeAsync("ReversionMovimientos", New Object() {pNoDoc, pAnnio, pTipo, pFecha, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, Me.ReversionMovimientosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnReversionMovimientosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ReversionMovimientosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ReversionMovimientosCompleted(Me, New ReversionMovimientosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ReversionMovimientosxTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ReversionMovimientosxTransferencia(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As String
+            Dim results() As Object = Me.Invoke("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginReversionMovimientosxTransferencia(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndReversionMovimientosxTransferencia(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionMovimientosxTransferenciaAsync(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ReversionMovimientosxTransferenciaAsync(pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ReversionMovimientosxTransferenciaAsync(ByVal pNoDoc As String, ByVal pFecTransf As Date, ByVal pFecha As Date, ByVal pNoReversion As String, ByVal pNoCaja As Integer, ByVal pCodCajero As Integer, ByVal pObservacion As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ReversionMovimientosxTransferenciaOperationCompleted Is Nothing) Then
+                Me.ReversionMovimientosxTransferenciaOperationCompleted = AddressOf Me.OnReversionMovimientosxTransferenciaOperationCompleted
+            End If
+            Me.InvokeAsync("ReversionMovimientosxTransferencia", New Object() {pNoDoc, pFecTransf, pFecha, pNoReversion, pNoCaja, pCodCajero, pObservacion, pUsuario, pPassword, pSucursal}, Me.ReversionMovimientosxTransferenciaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnReversionMovimientosxTransferenciaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ReversionMovimientosxTransferenciaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ReversionMovimientosxTransferenciaCompleted(Me, New ReversionMovimientosxTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/SaldosAhorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function SaldosAhorros(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginSaldosAhorros(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndSaldosAhorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub SaldosAhorrosAsync(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.SaldosAhorrosAsync(pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub SaldosAhorrosAsync(ByVal pFechaIni As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.SaldosAhorrosOperationCompleted Is Nothing) Then
+                Me.SaldosAhorrosOperationCompleted = AddressOf Me.OnSaldosAhorrosOperationCompleted
+            End If
+            Me.InvokeAsync("SaldosAhorros", New Object() {pFechaIni, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, Me.SaldosAhorrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnSaldosAhorrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.SaldosAhorrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent SaldosAhorrosCompleted(Me, New SaldosAhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/SaldosAhorros_Rango", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function SaldosAhorros_Rango(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginSaldosAhorros_Rango(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndSaldosAhorros_Rango(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub SaldosAhorros_RangoAsync(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.SaldosAhorros_RangoAsync(pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub SaldosAhorros_RangoAsync(ByVal pFechaIni As Date, ByVal pFechaFin As Date, ByVal pTipoAhorro As TiposAhorroReporteMovimientos, ByVal pFiltrarCanceladas As Boolean, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.SaldosAhorros_RangoOperationCompleted Is Nothing) Then
+                Me.SaldosAhorros_RangoOperationCompleted = AddressOf Me.OnSaldosAhorros_RangoOperationCompleted
+            End If
+            Me.InvokeAsync("SaldosAhorros_Rango", New Object() {pFechaIni, pFechaFin, pTipoAhorro, pFiltrarCanceladas, pUs, pPa, pSucursal}, Me.SaldosAhorros_RangoOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnSaldosAhorros_RangoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.SaldosAhorros_RangoCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent SaldosAhorros_RangoCompleted(Me, New SaldosAhorros_RangoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/TransferenciaAutomaticaCuentas", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function TransferenciaAutomaticaCuentas(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String) As String
+            Dim results() As Object = Me.Invoke("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginTransferenciaAutomaticaCuentas(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndTransferenciaAutomaticaCuentas(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub TransferenciaAutomaticaCuentasAsync(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String)
+            Me.TransferenciaAutomaticaCuentasAsync(pFecha, pUsuario, pPassword, pSucursal, codCosto, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub TransferenciaAutomaticaCuentasAsync(ByVal pFecha As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal codCosto As String, ByVal userState As Object)
+            If (Me.TransferenciaAutomaticaCuentasOperationCompleted Is Nothing) Then
+                Me.TransferenciaAutomaticaCuentasOperationCompleted = AddressOf Me.OnTransferenciaAutomaticaCuentasOperationCompleted
+            End If
+            Me.InvokeAsync("TransferenciaAutomaticaCuentas", New Object() {pFecha, pUsuario, pPassword, pSucursal, codCosto}, Me.TransferenciaAutomaticaCuentasOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnTransferenciaAutomaticaCuentasOperationCompleted(ByVal arg As Object)
+            If (Not (Me.TransferenciaAutomaticaCuentasCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent TransferenciaAutomaticaCuentasCompleted(Me, New TransferenciaAutomaticaCuentasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/TransferenciaCuentas", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function TransferenciaCuentas( _
+                    ByVal pNoDoc As String,  _
+                    ByVal pTipoTransferencia As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pDui As String,  _
+                    ByVal pNoSocio As String,  _
+                    ByVal pResponsable As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pObservacion As String,  _
+                    ByVal pNoCuentaOrigen As String,  _
+                    ByVal pCodTransferencia As String,  _
+                    ByVal pIdCuenta As String,  _
+                    ByVal pTipoMovimiento As String,  _
+                    ByVal dsDetalle As System.Data.DataSet,  _
+                    ByVal pCodTransaccion As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pNombreAsociado As String,  _
+                    ByVal pMembresia As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal CodCosto As String) As String
+            Dim results() As Object = Me.Invoke("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginTransferenciaCuentas( _
+                    ByVal pNoDoc As String,  _
+                    ByVal pTipoTransferencia As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pDui As String,  _
+                    ByVal pNoSocio As String,  _
+                    ByVal pResponsable As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pObservacion As String,  _
+                    ByVal pNoCuentaOrigen As String,  _
+                    ByVal pCodTransferencia As String,  _
+                    ByVal pIdCuenta As String,  _
+                    ByVal pTipoMovimiento As String,  _
+                    ByVal dsDetalle As System.Data.DataSet,  _
+                    ByVal pCodTransaccion As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pNombreAsociado As String,  _
+                    ByVal pMembresia As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal CodCosto As String,  _
+                    ByVal callback As System.AsyncCallback,  _
+                    ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndTransferenciaCuentas(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub TransferenciaCuentasAsync( _
+                    ByVal pNoDoc As String,  _
+                    ByVal pTipoTransferencia As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pDui As String,  _
+                    ByVal pNoSocio As String,  _
+                    ByVal pResponsable As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pObservacion As String,  _
+                    ByVal pNoCuentaOrigen As String,  _
+                    ByVal pCodTransferencia As String,  _
+                    ByVal pIdCuenta As String,  _
+                    ByVal pTipoMovimiento As String,  _
+                    ByVal dsDetalle As System.Data.DataSet,  _
+                    ByVal pCodTransaccion As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pNombreAsociado As String,  _
+                    ByVal pMembresia As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal CodCosto As String)
+            Me.TransferenciaCuentasAsync(pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub TransferenciaCuentasAsync( _
+                    ByVal pNoDoc As String,  _
+                    ByVal pTipoTransferencia As String,  _
+                    ByVal pFecha As Date,  _
+                    ByVal pDui As String,  _
+                    ByVal pNoSocio As String,  _
+                    ByVal pResponsable As String,  _
+                    ByVal pMonto As Double,  _
+                    ByVal pObservacion As String,  _
+                    ByVal pNoCuentaOrigen As String,  _
+                    ByVal pCodTransferencia As String,  _
+                    ByVal pIdCuenta As String,  _
+                    ByVal pTipoMovimiento As String,  _
+                    ByVal dsDetalle As System.Data.DataSet,  _
+                    ByVal pCodTransaccion As String,  _
+                    ByVal pOrigen As String,  _
+                    ByVal pNombreAsociado As String,  _
+                    ByVal pMembresia As String,  _
+                    ByVal pUsuario As String,  _
+                    ByVal pPassword As String,  _
+                    ByVal pSucursal As String,  _
+                    ByVal CodCosto As String,  _
+                    ByVal userState As Object)
+            If (Me.TransferenciaCuentasOperationCompleted Is Nothing) Then
+                Me.TransferenciaCuentasOperationCompleted = AddressOf Me.OnTransferenciaCuentasOperationCompleted
+            End If
+            Me.InvokeAsync("TransferenciaCuentas", New Object() {pNoDoc, pTipoTransferencia, pFecha, pDui, pNoSocio, pResponsable, pMonto, pObservacion, pNoCuentaOrigen, pCodTransferencia, pIdCuenta, pTipoMovimiento, dsDetalle, pCodTransaccion, pOrigen, pNombreAsociado, pMembresia, pUsuario, pPassword, pSucursal, CodCosto}, Me.TransferenciaCuentasOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnTransferenciaCuentasOperationCompleted(ByVal arg As Object)
+            If (Not (Me.TransferenciaCuentasCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent TransferenciaCuentasCompleted(Me, New TransferenciaCuentasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Vencimientos_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function Vencimientos_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginVencimientos_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndVencimientos_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub Vencimientos_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.Vencimientos_DPFAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub Vencimientos_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.Vencimientos_DPFOperationCompleted Is Nothing) Then
+                Me.Vencimientos_DPFOperationCompleted = AddressOf Me.OnVencimientos_DPFOperationCompleted
+            End If
+            Me.InvokeAsync("Vencimientos_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.Vencimientos_DPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnVencimientos_DPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.Vencimientos_DPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent Vencimientos_DPFCompleted(Me, New Vencimientos_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VencimientosDiarios_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function VencimientosDiarios_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginVencimientosDiarios_DPF(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndVencimientosDiarios_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub VencimientosDiarios_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.VencimientosDiarios_DPFAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub VencimientosDiarios_DPFAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.VencimientosDiarios_DPFOperationCompleted Is Nothing) Then
+                Me.VencimientosDiarios_DPFOperationCompleted = AddressOf Me.OnVencimientosDiarios_DPFOperationCompleted
+            End If
+            Me.InvokeAsync("VencimientosDiarios_DPF", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.VencimientosDiarios_DPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnVencimientosDiarios_DPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.VencimientosDiarios_DPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent VencimientosDiarios_DPFCompleted(Me, New VencimientosDiarios_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VencimientosDiarios_DPF_Proyectados", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function VencimientosDiarios_DPF_Proyectados(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginVencimientosDiarios_DPF_Proyectados(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndVencimientosDiarios_DPF_Proyectados(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub VencimientosDiarios_DPF_ProyectadosAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.VencimientosDiarios_DPF_ProyectadosAsync(pFechaIni, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub VencimientosDiarios_DPF_ProyectadosAsync(ByVal pFechaIni As Date, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted Is Nothing) Then
+                Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted = AddressOf Me.OnVencimientosDiarios_DPF_ProyectadosOperationCompleted
+            End If
+            Me.InvokeAsync("VencimientosDiarios_DPF_Proyectados", New Object() {pFechaIni, pUs, pPa, pSucursal}, Me.VencimientosDiarios_DPF_ProyectadosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnVencimientosDiarios_DPF_ProyectadosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.VencimientosDiarios_DPF_ProyectadosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent VencimientosDiarios_DPF_ProyectadosCompleted(Me, New VencimientosDiarios_DPF_ProyectadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/VerificaSumaMontoDetalleTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function VerificaSumaMontoDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet) As Double
+            Dim results() As Object = Me.Invoke("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle})
+            Return CType(results(0),Double)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginVerificaSumaMontoDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndVerificaSumaMontoDetalleTransferencia(ByVal asyncResult As System.IAsyncResult) As Double
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Double)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub VerificaSumaMontoDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet)
+            Me.VerificaSumaMontoDetalleTransferenciaAsync(dsDetalle, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub VerificaSumaMontoDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal userState As Object)
+            If (Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted Is Nothing) Then
+                Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted = AddressOf Me.OnVerificaSumaMontoDetalleTransferenciaOperationCompleted
+            End If
+            Me.InvokeAsync("VerificaSumaMontoDetalleTransferencia", New Object() {dsDetalle}, Me.VerificaSumaMontoDetalleTransferenciaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnVerificaSumaMontoDetalleTransferenciaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.VerificaSumaMontoDetalleTransferenciaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent VerificaSumaMontoDetalleTransferenciaCompleted(Me, New VerificaSumaMontoDetalleTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/insertarAsocTransferenciasAutomaticas", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function insertarAsocTransferenciasAutomaticas(ByVal nocuentaOrigen As String, ByVal noCuentaDestino As String, ByVal fechaTransferencia As Date, ByVal montoTransferencia As Double, ByVal activo As Boolean, ByVal usuarioIngresa As String, ByVal fechaIngreso As Date, ByVal pcIngresa As String, ByVal usuario As String, ByVal contra As String, ByVal sucursal As String) As Integer
             Dim results() As Object = Me.Invoke("insertarAsocTransferenciasAutomaticas", New Object() {nocuentaOrigen, noCuentaDestino, fechaTransferencia, montoTransferencia, activo, usuarioIngresa, fechaIngreso, pcIngresa, usuario, contra, sucursal})
@@ -4972,6 +3639,120 @@ Namespace wrAhorro
             If (Not (Me.consultarAsocTransferenciasAutomaticasCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
                 RaiseEvent consultarAsocTransferenciasAutomaticasCompleted(Me, New consultarAsocTransferenciasAutomaticasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/pignorarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function pignorarCuentaAhorro(ByVal nocuenta As String, ByVal codPrestamo As String, ByVal montopignorado As Double, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal estado As String, ByVal usuarioIngreas As String) As Integer
+            Dim results() As Object = Me.Invoke("pignorarCuentaAhorro", New Object() {nocuenta, codPrestamo, montopignorado, fechaInicio, fechaFin, estado, usuarioIngreas})
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginpignorarCuentaAhorro(ByVal nocuenta As String, ByVal codPrestamo As String, ByVal montopignorado As Double, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal estado As String, ByVal usuarioIngreas As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("pignorarCuentaAhorro", New Object() {nocuenta, codPrestamo, montopignorado, fechaInicio, fechaFin, estado, usuarioIngreas}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndpignorarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Integer
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub pignorarCuentaAhorroAsync(ByVal nocuenta As String, ByVal codPrestamo As String, ByVal montopignorado As Double, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal estado As String, ByVal usuarioIngreas As String)
+            Me.pignorarCuentaAhorroAsync(nocuenta, codPrestamo, montopignorado, fechaInicio, fechaFin, estado, usuarioIngreas, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub pignorarCuentaAhorroAsync(ByVal nocuenta As String, ByVal codPrestamo As String, ByVal montopignorado As Double, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal estado As String, ByVal usuarioIngreas As String, ByVal userState As Object)
+            If (Me.pignorarCuentaAhorroOperationCompleted Is Nothing) Then
+                Me.pignorarCuentaAhorroOperationCompleted = AddressOf Me.OnpignorarCuentaAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("pignorarCuentaAhorro", New Object() {nocuenta, codPrestamo, montopignorado, fechaInicio, fechaFin, estado, usuarioIngreas}, Me.pignorarCuentaAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnpignorarCuentaAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.pignorarCuentaAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent pignorarCuentaAhorroCompleted(Me, New pignorarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/despignorarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function despignorarCuentaAhorro(ByVal correlativo As Integer, ByVal user As String, ByVal pass As String, ByVal sucursal As String) As Integer
+            Dim results() As Object = Me.Invoke("despignorarCuentaAhorro", New Object() {correlativo, user, pass, sucursal})
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Function BegindespignorarCuentaAhorro(ByVal correlativo As Integer, ByVal user As String, ByVal pass As String, ByVal sucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("despignorarCuentaAhorro", New Object() {correlativo, user, pass, sucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EnddespignorarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Integer
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub despignorarCuentaAhorroAsync(ByVal correlativo As Integer, ByVal user As String, ByVal pass As String, ByVal sucursal As String)
+            Me.despignorarCuentaAhorroAsync(correlativo, user, pass, sucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub despignorarCuentaAhorroAsync(ByVal correlativo As Integer, ByVal user As String, ByVal pass As String, ByVal sucursal As String, ByVal userState As Object)
+            If (Me.despignorarCuentaAhorroOperationCompleted Is Nothing) Then
+                Me.despignorarCuentaAhorroOperationCompleted = AddressOf Me.OndespignorarCuentaAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("despignorarCuentaAhorro", New Object() {correlativo, user, pass, sucursal}, Me.despignorarCuentaAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OndespignorarCuentaAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.despignorarCuentaAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent despignorarCuentaAhorroCompleted(Me, New despignorarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/insertarCuentaDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function insertarCuentaDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal camposCertificado As String, ByVal valoresCertificado As String) As Boolean
+            Dim results() As Object = Me.Invoke("insertarCuentaDPF", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal, camposCertificado, valoresCertificado})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BegininsertarCuentaDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal camposCertificado As String, ByVal valoresCertificado As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("insertarCuentaDPF", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal, camposCertificado, valoresCertificado}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndinsertarCuentaDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub insertarCuentaDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal camposCertificado As String, ByVal valoresCertificado As String)
+            Me.insertarCuentaDPFAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, camposCertificado, valoresCertificado, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub insertarCuentaDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal camposCertificado As String, ByVal valoresCertificado As String, ByVal userState As Object)
+            If (Me.insertarCuentaDPFOperationCompleted Is Nothing) Then
+                Me.insertarCuentaDPFOperationCompleted = AddressOf Me.OninsertarCuentaDPFOperationCompleted
+            End If
+            Me.InvokeAsync("insertarCuentaDPF", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal, camposCertificado, valoresCertificado}, Me.insertarCuentaDPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OninsertarCuentaDPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.insertarCuentaDPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent insertarCuentaDPFCompleted(Me, New insertarCuentaDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
@@ -5204,6 +3985,44 @@ Namespace wrAhorro
         End Sub
         
         '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ingresarReposicionCertificadoPlazo", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ingresarReposicionCertificadoPlazo(ByVal noCuenta As String, ByVal idCertificadoNew As String, ByVal idCertificadoOld As String, ByVal fecha As Date, ByVal causa As Integer, ByVal observacion As String, ByVal usuario As String) As Integer
+            Dim results() As Object = Me.Invoke("ingresarReposicionCertificadoPlazo", New Object() {noCuenta, idCertificadoNew, idCertificadoOld, fecha, causa, observacion, usuario})
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginingresarReposicionCertificadoPlazo(ByVal noCuenta As String, ByVal idCertificadoNew As String, ByVal idCertificadoOld As String, ByVal fecha As Date, ByVal causa As Integer, ByVal observacion As String, ByVal usuario As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ingresarReposicionCertificadoPlazo", New Object() {noCuenta, idCertificadoNew, idCertificadoOld, fecha, causa, observacion, usuario}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndingresarReposicionCertificadoPlazo(ByVal asyncResult As System.IAsyncResult) As Integer
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Integer)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ingresarReposicionCertificadoPlazoAsync(ByVal noCuenta As String, ByVal idCertificadoNew As String, ByVal idCertificadoOld As String, ByVal fecha As Date, ByVal causa As Integer, ByVal observacion As String, ByVal usuario As String)
+            Me.ingresarReposicionCertificadoPlazoAsync(noCuenta, idCertificadoNew, idCertificadoOld, fecha, causa, observacion, usuario, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ingresarReposicionCertificadoPlazoAsync(ByVal noCuenta As String, ByVal idCertificadoNew As String, ByVal idCertificadoOld As String, ByVal fecha As Date, ByVal causa As Integer, ByVal observacion As String, ByVal usuario As String, ByVal userState As Object)
+            If (Me.ingresarReposicionCertificadoPlazoOperationCompleted Is Nothing) Then
+                Me.ingresarReposicionCertificadoPlazoOperationCompleted = AddressOf Me.OningresarReposicionCertificadoPlazoOperationCompleted
+            End If
+            Me.InvokeAsync("ingresarReposicionCertificadoPlazo", New Object() {noCuenta, idCertificadoNew, idCertificadoOld, fecha, causa, observacion, usuario}, Me.ingresarReposicionCertificadoPlazoOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OningresarReposicionCertificadoPlazoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ingresarReposicionCertificadoPlazoCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ingresarReposicionCertificadoPlazoCompleted(Me, New ingresarReposicionCertificadoPlazoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/procesarProvisionAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function procesarProvisionAhorro(ByVal todas As Integer, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal noCuenta As String) As String
             Dim results() As Object = Me.Invoke("procesarProvisionAhorro", New Object() {todas, fechaInicio, fechaFin, noCuenta})
@@ -5357,14 +4176,14 @@ Namespace wrAhorro
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/consultarDatosLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function consultarDatosLibreta(ByVal noCuenta As String) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("consultarDatosLibreta", New Object() {noCuenta})
+        Public Function consultarDatosLibreta(ByVal noCuenta As String, ByVal DUI As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("consultarDatosLibreta", New Object() {noCuenta, DUI})
             Return CType(results(0),System.Data.DataSet)
         End Function
         
         '''<remarks/>
-        Public Function BeginconsultarDatosLibreta(ByVal noCuenta As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
-            Return Me.BeginInvoke("consultarDatosLibreta", New Object() {noCuenta}, callback, asyncState)
+        Public Function BeginconsultarDatosLibreta(ByVal noCuenta As String, ByVal DUI As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("consultarDatosLibreta", New Object() {noCuenta, DUI}, callback, asyncState)
         End Function
         
         '''<remarks/>
@@ -5374,16 +4193,16 @@ Namespace wrAhorro
         End Function
         
         '''<remarks/>
-        Public Overloads Sub consultarDatosLibretaAsync(ByVal noCuenta As String)
-            Me.consultarDatosLibretaAsync(noCuenta, Nothing)
+        Public Overloads Sub consultarDatosLibretaAsync(ByVal noCuenta As String, ByVal DUI As String)
+            Me.consultarDatosLibretaAsync(noCuenta, DUI, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub consultarDatosLibretaAsync(ByVal noCuenta As String, ByVal userState As Object)
+        Public Overloads Sub consultarDatosLibretaAsync(ByVal noCuenta As String, ByVal DUI As String, ByVal userState As Object)
             If (Me.consultarDatosLibretaOperationCompleted Is Nothing) Then
                 Me.consultarDatosLibretaOperationCompleted = AddressOf Me.OnconsultarDatosLibretaOperationCompleted
             End If
-            Me.InvokeAsync("consultarDatosLibreta", New Object() {noCuenta}, Me.consultarDatosLibretaOperationCompleted, userState)
+            Me.InvokeAsync("consultarDatosLibreta", New Object() {noCuenta, DUI}, Me.consultarDatosLibretaOperationCompleted, userState)
         End Sub
         
         Private Sub OnconsultarDatosLibretaOperationCompleted(ByVal arg As Object)
@@ -7179,6 +5998,44 @@ Namespace wrAhorro
         End Sub
         
         '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ConsultarCuentaAhorroDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ConsultarCuentaAhorroDPF(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ConsultarCuentaAhorroDPF", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginConsultarCuentaAhorroDPF(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ConsultarCuentaAhorroDPF", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndConsultarCuentaAhorroDPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ConsultarCuentaAhorroDPFAsync(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.ConsultarCuentaAhorroDPFAsync(pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ConsultarCuentaAhorroDPFAsync(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ConsultarCuentaAhorroDPFOperationCompleted Is Nothing) Then
+                Me.ConsultarCuentaAhorroDPFOperationCompleted = AddressOf Me.OnConsultarCuentaAhorroDPFOperationCompleted
+            End If
+            Me.InvokeAsync("ConsultarCuentaAhorroDPF", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal}, Me.ConsultarCuentaAhorroDPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnConsultarCuentaAhorroDPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ConsultarCuentaAhorroDPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ConsultarCuentaAhorroDPFCompleted(Me, New ConsultarCuentaAhorroDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ConsultarCuentaPignorada", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function ConsultarCuentaPignorada(ByVal pListaCampos As String, ByVal pFiltro As String, ByVal pOrden As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
             Dim results() As Object = Me.Invoke("ConsultarCuentaPignorada", New Object() {pListaCampos, pFiltro, pOrden, pUs, pPa, pSucursal})
@@ -8167,6 +7024,1450 @@ Namespace wrAhorro
         End Sub
         
         '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarCuentaAhorro(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarCuentaAhorro(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarCuentaAhorroAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarCuentaAhorroAsync(pCorrelativo, pKey, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarCuentaAhorroAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarCuentaAhorroOperationCompleted Is Nothing) Then
+                Me.EliminarCuentaAhorroOperationCompleted = AddressOf Me.OnEliminarCuentaAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarCuentaAhorro", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, Me.EliminarCuentaAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarCuentaAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarCuentaAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarCuentaAhorroCompleted(Me, New EliminarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarCuentaPignorada", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarCuentaPignorada(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarCuentaPignorada(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarCuentaPignorada(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarCuentaPignoradaAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarCuentaPignoradaAsync(pCorrelativo, pKey, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarCuentaPignoradaAsync(ByVal pCorrelativo As String, ByVal pKey As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarCuentaPignoradaOperationCompleted Is Nothing) Then
+                Me.EliminarCuentaPignoradaOperationCompleted = AddressOf Me.OnEliminarCuentaPignoradaOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarCuentaPignorada", New Object() {pCorrelativo, pKey, pUs, pPa, pSucursal}, Me.EliminarCuentaPignoradaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarCuentaPignoradaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarCuentaPignoradaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarCuentaPignoradaCompleted(Me, New EliminarCuentaPignoradaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDestino", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarDestino(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarDestino(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarDestino(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDestinoAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarDestinoAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDestinoAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarDestinoOperationCompleted Is Nothing) Then
+                Me.EliminarDestinoOperationCompleted = AddressOf Me.OnEliminarDestinoOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarDestino", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarDestinoOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarDestinoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarDestinoCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarDestinoCompleted(Me, New EliminarDestinoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDet_PlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarDet_PlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarDet_PlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarDet_PlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDet_PlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarDet_PlanAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDet_PlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarDet_PlanAhorroOperationCompleted Is Nothing) Then
+                Me.EliminarDet_PlanAhorroOperationCompleted = AddressOf Me.OnEliminarDet_PlanAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarDet_PlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarDet_PlanAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarDet_PlanAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarDet_PlanAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarDet_PlanAhorroCompleted(Me, New EliminarDet_PlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarDetalleTransferencia", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarDetalleTransferencia(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarDetalleTransferencia(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer)
+            Me.EliminarDetalleTransferenciaAsync(dsDetalle, pNumero, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarDetalleTransferenciaAsync(ByVal dsDetalle As System.Data.DataSet, ByVal pNumero As Integer, ByVal userState As Object)
+            If (Me.EliminarDetalleTransferenciaOperationCompleted Is Nothing) Then
+                Me.EliminarDetalleTransferenciaOperationCompleted = AddressOf Me.OnEliminarDetalleTransferenciaOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarDetalleTransferencia", New Object() {dsDetalle, pNumero}, Me.EliminarDetalleTransferenciaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarDetalleTransferenciaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarDetalleTransferenciaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarDetalleTransferenciaCompleted(Me, New EliminarDetalleTransferenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarFechasCapitalizacion", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarFechasCapitalizacion(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarFechasCapitalizacion(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarFechasCapitalizacion(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarFechasCapitalizacionAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarFechasCapitalizacionAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarFechasCapitalizacionAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarFechasCapitalizacionOperationCompleted Is Nothing) Then
+                Me.EliminarFechasCapitalizacionOperationCompleted = AddressOf Me.OnEliminarFechasCapitalizacionOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarFechasCapitalizacion", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarFechasCapitalizacionOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarFechasCapitalizacionOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarFechasCapitalizacionCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarFechasCapitalizacionCompleted(Me, New EliminarFechasCapitalizacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarPlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarPlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarPlanAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarPlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarPlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarPlanAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarPlanAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarPlanAhorroOperationCompleted Is Nothing) Then
+                Me.EliminarPlanAhorroOperationCompleted = AddressOf Me.OnEliminarPlanAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarPlanAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarPlanAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarPlanAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarPlanAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarPlanAhorroCompleted(Me, New EliminarPlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarReposicionCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarReposicionCertificadosDPF(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarReposicionCertificadosDPF(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarReposicionCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarReposicionCertificadosDPFAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarReposicionCertificadosDPFAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarReposicionCertificadosDPFAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarReposicionCertificadosDPFOperationCompleted Is Nothing) Then
+                Me.EliminarReposicionCertificadosDPFOperationCompleted = AddressOf Me.OnEliminarReposicionCertificadosDPFOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarReposicionCertificadosDPF", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarReposicionCertificadosDPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarReposicionCertificadosDPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarReposicionCertificadosDPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarReposicionCertificadosDPFCompleted(Me, New EliminarReposicionCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarReposicionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarReposicionLibreta(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarReposicionLibreta(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarReposicionLibreta(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarReposicionLibretaAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarReposicionLibretaAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarReposicionLibretaAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarReposicionLibretaOperationCompleted Is Nothing) Then
+                Me.EliminarReposicionLibretaOperationCompleted = AddressOf Me.OnEliminarReposicionLibretaOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarReposicionLibreta", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarReposicionLibretaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarReposicionLibretaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarReposicionLibretaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarReposicionLibretaCompleted(Me, New EliminarReposicionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminarTipoAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminarTipoAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminarTipoAhorro(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminarTipoAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarTipoAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.EliminarTipoAhorroAsync(pCorrelativo, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminarTipoAhorroAsync(ByVal pCorrelativo As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminarTipoAhorroOperationCompleted Is Nothing) Then
+                Me.EliminarTipoAhorroOperationCompleted = AddressOf Me.OnEliminarTipoAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("EliminarTipoAhorro", New Object() {pCorrelativo, pUs, pPa, pSucursal}, Me.EliminarTipoAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminarTipoAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminarTipoAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminarTipoAhorroCompleted(Me, New EliminarTipoAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminaRutasCobro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminaRutasCobro(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminaRutasCobro(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminaRutasCobro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminaRutasCobroAsync(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.EliminaRutasCobroAsync(pCodRutaCobro, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminaRutasCobroAsync(ByVal pCodRutaCobro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminaRutasCobroOperationCompleted Is Nothing) Then
+                Me.EliminaRutasCobroOperationCompleted = AddressOf Me.OnEliminaRutasCobroOperationCompleted
+            End If
+            Me.InvokeAsync("EliminaRutasCobro", New Object() {pCodRutaCobro, pUsuario, pPassword, pSucursal}, Me.EliminaRutasCobroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminaRutasCobroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminaRutasCobroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminaRutasCobroCompleted(Me, New EliminaRutasCobroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/EliminaTasasInteres", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function EliminaTasasInteres(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginEliminaTasasInteres(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndEliminaTasasInteres(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub EliminaTasasInteresAsync(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.EliminaTasasInteresAsync(pCorrelativo, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub EliminaTasasInteresAsync(ByVal pCorrelativo As Long, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.EliminaTasasInteresOperationCompleted Is Nothing) Then
+                Me.EliminaTasasInteresOperationCompleted = AddressOf Me.OnEliminaTasasInteresOperationCompleted
+            End If
+            Me.InvokeAsync("EliminaTasasInteres", New Object() {pCorrelativo, pUsuario, pPassword, pSucursal}, Me.EliminaTasasInteresOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnEliminaTasasInteresOperationCompleted(ByVal arg As Object)
+            If (Not (Me.EliminaTasasInteresCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent EliminaTasasInteresCompleted(Me, New EliminaTasasInteresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ExportacionDatos_Ahorros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ExportacionDatos_Ahorros(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginExportacionDatos_Ahorros(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndExportacionDatos_Ahorros(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ExportacionDatos_AhorrosAsync(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ExportacionDatos_AhorrosAsync(pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ExportacionDatos_AhorrosAsync(ByVal pTodos As Boolean, ByVal pFiltro As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ExportacionDatos_AhorrosOperationCompleted Is Nothing) Then
+                Me.ExportacionDatos_AhorrosOperationCompleted = AddressOf Me.OnExportacionDatos_AhorrosOperationCompleted
+            End If
+            Me.InvokeAsync("ExportacionDatos_Ahorros", New Object() {pTodos, pFiltro, pR1, pR2, pUsuario, pPassword, pSucursal}, Me.ExportacionDatos_AhorrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnExportacionDatos_AhorrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ExportacionDatos_AhorrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ExportacionDatos_AhorrosCompleted(Me, New ExportacionDatos_AhorrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ExportacionDatos_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ExportacionDatos_DPF(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginExportacionDatos_DPF(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndExportacionDatos_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ExportacionDatos_DPFAsync(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ExportacionDatos_DPFAsync(pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ExportacionDatos_DPFAsync(ByVal pTodos As Boolean, ByVal pContrato As Boolean, ByVal pNoCuenta As String, ByVal pR1 As Date, ByVal pR2 As Date, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ExportacionDatos_DPFOperationCompleted Is Nothing) Then
+                Me.ExportacionDatos_DPFOperationCompleted = AddressOf Me.OnExportacionDatos_DPFOperationCompleted
+            End If
+            Me.InvokeAsync("ExportacionDatos_DPF", New Object() {pTodos, pContrato, pNoCuenta, pR1, pR2, pUsuario, pPassword, pSucursal}, Me.ExportacionDatos_DPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnExportacionDatos_DPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ExportacionDatos_DPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ExportacionDatos_DPFCompleted(Me, New ExportacionDatos_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/GeneraNoCuenta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function GeneraNoCuenta(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String) As String
+            Dim results() As Object = Me.Invoke("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginGeneraNoCuenta(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndGeneraNoCuenta(ByVal asyncResult As System.IAsyncResult) As String
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub GeneraNoCuentaAsync(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String)
+            Me.GeneraNoCuentaAsync(pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub GeneraNoCuentaAsync(ByVal pTipo As String, ByVal pSucursal As String, ByVal pTipoProducto As String, ByVal pMes As Integer, ByVal pAnio As Integer, ByVal pUs As String, ByVal pPa As String, ByVal pSuc As String, ByVal userState As Object)
+            If (Me.GeneraNoCuentaOperationCompleted Is Nothing) Then
+                Me.GeneraNoCuentaOperationCompleted = AddressOf Me.OnGeneraNoCuentaOperationCompleted
+            End If
+            Me.InvokeAsync("GeneraNoCuenta", New Object() {pTipo, pSucursal, pTipoProducto, pMes, pAnio, pUs, pPa, pSuc}, Me.GeneraNoCuentaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnGeneraNoCuentaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.GeneraNoCuentaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent GeneraNoCuentaCompleted(Me, New GeneraNoCuentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Gerencial_Cartera_DPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function Gerencial_Cartera_DPF(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginGerencial_Cartera_DPF(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndGerencial_Cartera_DPF(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub Gerencial_Cartera_DPFAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.Gerencial_Cartera_DPFAsync(pFechaIni, pFechaFin, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub Gerencial_Cartera_DPFAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.Gerencial_Cartera_DPFOperationCompleted Is Nothing) Then
+                Me.Gerencial_Cartera_DPFOperationCompleted = AddressOf Me.OnGerencial_Cartera_DPFOperationCompleted
+            End If
+            Me.InvokeAsync("Gerencial_Cartera_DPF", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, Me.Gerencial_Cartera_DPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnGerencial_Cartera_DPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.Gerencial_Cartera_DPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent Gerencial_Cartera_DPFCompleted(Me, New Gerencial_Cartera_DPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/Gerencial_MovCuentasAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function Gerencial_MovCuentasAhorro(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginGerencial_MovCuentasAhorro(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndGerencial_MovCuentasAhorro(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub Gerencial_MovCuentasAhorroAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.Gerencial_MovCuentasAhorroAsync(pFechaIni, pFechaFin, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub Gerencial_MovCuentasAhorroAsync(ByVal pFechaIni As Date, ByVal pFechaFin As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.Gerencial_MovCuentasAhorroOperationCompleted Is Nothing) Then
+                Me.Gerencial_MovCuentasAhorroOperationCompleted = AddressOf Me.OnGerencial_MovCuentasAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("Gerencial_MovCuentasAhorro", New Object() {pFechaIni, pFechaFin, pUs, pPa, pSucursal}, Me.Gerencial_MovCuentasAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnGerencial_MovCuentasAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.Gerencial_MovCuentasAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent Gerencial_MovCuentasAhorroCompleted(Me, New Gerencial_MovCuentasAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InicializacionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InicializacionLibreta(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInicializacionLibreta(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInicializacionLibreta(ByVal asyncResult As System.IAsyncResult) As System.Data.DataSet
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InicializacionLibretaAsync(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InicializacionLibretaAsync(pDui, pNoCuenta, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InicializacionLibretaAsync(ByVal pDui As String, ByVal pNoCuenta As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InicializacionLibretaOperationCompleted Is Nothing) Then
+                Me.InicializacionLibretaOperationCompleted = AddressOf Me.OnInicializacionLibretaOperationCompleted
+            End If
+            Me.InvokeAsync("InicializacionLibreta", New Object() {pDui, pNoCuenta, pUs, pPa, pSucursal}, Me.InicializacionLibretaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInicializacionLibretaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InicializacionLibretaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InicializacionLibretaCompleted(Me, New InicializacionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertaParametros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertaParametros(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertaParametros(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertaParametros(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertaParametrosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.InsertaParametrosAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertaParametrosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertaParametrosOperationCompleted Is Nothing) Then
+                Me.InsertaParametrosOperationCompleted = AddressOf Me.OnInsertaParametrosOperationCompleted
+            End If
+            Me.InvokeAsync("InsertaParametros", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertaParametrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertaParametrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertaParametrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertaParametrosCompleted(Me, New InsertaParametrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarAutorizadoRetiro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarAutorizadoRetiro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarAutorizadoRetiro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarAutorizadoRetiro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarAutorizadoRetiroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarAutorizadoRetiroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarAutorizadoRetiroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarAutorizadoRetiroOperationCompleted Is Nothing) Then
+                Me.InsertarAutorizadoRetiroOperationCompleted = AddressOf Me.OnInsertarAutorizadoRetiroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarAutorizadoRetiro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarAutorizadoRetiroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarAutorizadoRetiroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarAutorizadoRetiroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarAutorizadoRetiroCompleted(Me, New InsertarAutorizadoRetiroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarBeneficiarios", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarBeneficiarios(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarBeneficiarios(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarBeneficiarios(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarBeneficiariosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarBeneficiariosAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarBeneficiariosAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarBeneficiariosOperationCompleted Is Nothing) Then
+                Me.InsertarBeneficiariosOperationCompleted = AddressOf Me.OnInsertarBeneficiariosOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarBeneficiarios", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarBeneficiariosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarBeneficiariosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarBeneficiariosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarBeneficiariosCompleted(Me, New InsertarBeneficiariosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarCertificadosDPFAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarCertificadosDPFOperationCompleted Is Nothing) Then
+                Me.InsertarCertificadosDPFOperationCompleted = AddressOf Me.OnInsertarCertificadosDPFOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCertificadosDPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarCertificadosDPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarCertificadosDPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarCertificadosDPFCompleted(Me, New InsertarCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarComisiones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarComisiones(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarComisiones(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarComisiones(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarComisionesAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.InsertarComisionesAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarComisionesAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarComisionesOperationCompleted Is Nothing) Then
+                Me.InsertarComisionesOperationCompleted = AddressOf Me.OnInsertarComisionesOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarComisiones", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertarComisionesOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarComisionesOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarComisionesCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarComisionesCompleted(Me, New InsertarComisionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCuentaAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarCuentaAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarCuentaAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarCuentaAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCuentaAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarCuentaAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCuentaAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarCuentaAhorroOperationCompleted Is Nothing) Then
+                Me.InsertarCuentaAhorroOperationCompleted = AddressOf Me.OnInsertarCuentaAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarCuentaAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCuentaAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarCuentaAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarCuentaAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarCuentaAhorroCompleted(Me, New InsertarCuentaAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarCuentaPignorada", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarCuentaPignorada(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarCuentaPignorada(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarCuentaPignorada(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCuentaPignoradaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarCuentaPignoradaAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarCuentaPignoradaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarCuentaPignoradaOperationCompleted Is Nothing) Then
+                Me.InsertarCuentaPignoradaOperationCompleted = AddressOf Me.OnInsertarCuentaPignoradaOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarCuentaPignorada", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarCuentaPignoradaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarCuentaPignoradaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarCuentaPignoradaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarCuentaPignoradaCompleted(Me, New InsertarCuentaPignoradaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarDestino", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarDestino(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarDestino(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarDestino(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarDestinoAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarDestinoAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarDestinoAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarDestinoOperationCompleted Is Nothing) Then
+                Me.InsertarDestinoOperationCompleted = AddressOf Me.OnInsertarDestinoOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarDestino", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarDestinoOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarDestinoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarDestinoCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarDestinoCompleted(Me, New InsertarDestinoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarDet_PlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarDet_PlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarDet_PlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarDet_PlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarDet_PlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarDet_PlanAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarDet_PlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarDet_PlanAhorroOperationCompleted Is Nothing) Then
+                Me.InsertarDet_PlanAhorroOperationCompleted = AddressOf Me.OnInsertarDet_PlanAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarDet_PlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarDet_PlanAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarDet_PlanAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarDet_PlanAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarDet_PlanAhorroCompleted(Me, New InsertarDet_PlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarFechasCapitalizacion", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarFechasCapitalizacion(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarFechasCapitalizacion(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarFechasCapitalizacion(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarFechasCapitalizacionAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarFechasCapitalizacionAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarFechasCapitalizacionAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarFechasCapitalizacionOperationCompleted Is Nothing) Then
+                Me.InsertarFechasCapitalizacionOperationCompleted = AddressOf Me.OnInsertarFechasCapitalizacionOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarFechasCapitalizacion", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarFechasCapitalizacionOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarFechasCapitalizacionOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarFechasCapitalizacionCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarFechasCapitalizacionCompleted(Me, New InsertarFechasCapitalizacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarPlanAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarPlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarPlanAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarPlanAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarPlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarPlanAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarPlanAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarPlanAhorroOperationCompleted Is Nothing) Then
+                Me.InsertarPlanAhorroOperationCompleted = AddressOf Me.OnInsertarPlanAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarPlanAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarPlanAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarPlanAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarPlanAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarPlanAhorroCompleted(Me, New InsertarPlanAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarReposicionCertificadosDPF", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarReposicionCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarReposicionCertificadosDPF(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarReposicionCertificadosDPF(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarReposicionCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarReposicionCertificadosDPFAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarReposicionCertificadosDPFAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarReposicionCertificadosDPFOperationCompleted Is Nothing) Then
+                Me.InsertarReposicionCertificadosDPFOperationCompleted = AddressOf Me.OnInsertarReposicionCertificadosDPFOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarReposicionCertificadosDPF", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarReposicionCertificadosDPFOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarReposicionCertificadosDPFOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarReposicionCertificadosDPFCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarReposicionCertificadosDPFCompleted(Me, New InsertarReposicionCertificadosDPFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarReposicionLibreta", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarReposicionLibreta(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarReposicionLibreta(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarReposicionLibreta(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarReposicionLibretaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarReposicionLibretaAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarReposicionLibretaAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarReposicionLibretaOperationCompleted Is Nothing) Then
+                Me.InsertarReposicionLibretaOperationCompleted = AddressOf Me.OnInsertarReposicionLibretaOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarReposicionLibreta", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarReposicionLibretaOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarReposicionLibretaOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarReposicionLibretaCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarReposicionLibretaCompleted(Me, New InsertarReposicionLibretaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarRutasCobro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarRutasCobro(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarRutasCobro(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarRutasCobro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarRutasCobroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.InsertarRutasCobroAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarRutasCobroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarRutasCobroOperationCompleted Is Nothing) Then
+                Me.InsertarRutasCobroOperationCompleted = AddressOf Me.OnInsertarRutasCobroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarRutasCobro", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertarRutasCobroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarRutasCobroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarRutasCobroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarRutasCobroCompleted(Me, New InsertarRutasCobroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertarTipoAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertarTipoAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertarTipoAhorro(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertarTipoAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarTipoAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.InsertarTipoAhorroAsync(pCampos, pValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertarTipoAhorroAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertarTipoAhorroOperationCompleted Is Nothing) Then
+                Me.InsertarTipoAhorroOperationCompleted = AddressOf Me.OnInsertarTipoAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("InsertarTipoAhorro", New Object() {pCampos, pValores, pUs, pPa, pSucursal}, Me.InsertarTipoAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertarTipoAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertarTipoAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertarTipoAhorroCompleted(Me, New InsertarTipoAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/InsertaTasasInteres", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function InsertaTasasInteres(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginInsertaTasasInteres(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndInsertaTasasInteres(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub InsertaTasasInteresAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.InsertaTasasInteresAsync(pCampos, pValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub InsertaTasasInteresAsync(ByVal pCampos As String, ByVal pValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.InsertaTasasInteresOperationCompleted Is Nothing) Then
+                Me.InsertaTasasInteresOperationCompleted = AddressOf Me.OnInsertaTasasInteresOperationCompleted
+            End If
+            Me.InvokeAsync("InsertaTasasInteres", New Object() {pCampos, pValores, pUsuario, pPassword, pSucursal}, Me.InsertaTasasInteresOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnInsertaTasasInteresOperationCompleted(ByVal arg As Object)
+            If (Not (Me.InsertaTasasInteresCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent InsertaTasasInteresCompleted(Me, New InsertaTasasInteresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificaComisiones", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ModificaComisiones(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginModificaComisiones(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndModificaComisiones(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ModificaComisionesAsync(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ModificaComisionesAsync(pCamposyValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ModificaComisionesAsync(ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ModificaComisionesOperationCompleted Is Nothing) Then
+                Me.ModificaComisionesOperationCompleted = AddressOf Me.OnModificaComisionesOperationCompleted
+            End If
+            Me.InvokeAsync("ModificaComisiones", New Object() {pCamposyValores, pUsuario, pPassword, pSucursal}, Me.ModificaComisionesOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnModificaComisionesOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ModificaComisionesCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ModificaComisionesCompleted(Me, New ModificaComisionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificaParametros", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ModificaParametros(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginModificaParametros(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndModificaParametros(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ModificaParametrosAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ModificaParametrosAsync(pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ModificaParametrosAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ModificaParametrosOperationCompleted Is Nothing) Then
+                Me.ModificaParametrosOperationCompleted = AddressOf Me.OnModificaParametrosOperationCompleted
+            End If
+            Me.InvokeAsync("ModificaParametros", New Object() {pCorrelativo, pCamposyValores, pUsuario, pPassword, pSucursal}, Me.ModificaParametrosOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnModificaParametrosOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ModificaParametrosCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ModificaParametrosCompleted(Me, New ModificaParametrosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificarAhCuentasAhorro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ModificarAhCuentasAhorro(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginModificarAhCuentasAhorro(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndModificarAhCuentasAhorro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ModificarAhCuentasAhorroAsync(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String)
+            Me.ModificarAhCuentasAhorroAsync(pCamposValores, pFiltro, pUsuario, pPassword, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ModificarAhCuentasAhorroAsync(ByVal pCamposValores As String, ByVal pFiltro As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ModificarAhCuentasAhorroOperationCompleted Is Nothing) Then
+                Me.ModificarAhCuentasAhorroOperationCompleted = AddressOf Me.OnModificarAhCuentasAhorroOperationCompleted
+            End If
+            Me.InvokeAsync("ModificarAhCuentasAhorro", New Object() {pCamposValores, pFiltro, pUsuario, pPassword, pSucursal}, Me.ModificarAhCuentasAhorroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnModificarAhCuentasAhorroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ModificarAhCuentasAhorroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ModificarAhCuentasAhorroCompleted(Me, New ModificarAhCuentasAhorroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/wsSif/wsLibAhorro/ModificarAutorizadoRetiro", RequestNamespace:="http://tempuri.org/wsSif/wsLibAhorro", ResponseNamespace:="http://tempuri.org/wsSif/wsLibAhorro", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ModificarAutorizadoRetiro(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String) As Boolean
+            Dim results() As Object = Me.Invoke("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal})
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Function BeginModificarAutorizadoRetiro(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal callback As System.AsyncCallback, ByVal asyncState As Object) As System.IAsyncResult
+            Return Me.BeginInvoke("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal}, callback, asyncState)
+        End Function
+        
+        '''<remarks/>
+        Public Function EndModificarAutorizadoRetiro(ByVal asyncResult As System.IAsyncResult) As Boolean
+            Dim results() As Object = Me.EndInvoke(asyncResult)
+            Return CType(results(0),Boolean)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ModificarAutorizadoRetiroAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String)
+            Me.ModificarAutorizadoRetiroAsync(pCorrelativo, pCamposyValores, pUs, pPa, pSucursal, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ModificarAutorizadoRetiroAsync(ByVal pCorrelativo As String, ByVal pCamposyValores As String, ByVal pUs As String, ByVal pPa As String, ByVal pSucursal As String, ByVal userState As Object)
+            If (Me.ModificarAutorizadoRetiroOperationCompleted Is Nothing) Then
+                Me.ModificarAutorizadoRetiroOperationCompleted = AddressOf Me.OnModificarAutorizadoRetiroOperationCompleted
+            End If
+            Me.InvokeAsync("ModificarAutorizadoRetiro", New Object() {pCorrelativo, pCamposyValores, pUs, pPa, pSucursal}, Me.ModificarAutorizadoRetiroOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnModificarAutorizadoRetiroOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ModificarAutorizadoRetiroCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ModificarAutorizadoRetiroCompleted(Me, New ModificarAutorizadoRetiroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
         Public Shadows Sub CancelAsync(ByVal userState As Object)
             MyBase.CancelAsync(userState)
         End Sub
@@ -8186,7 +8487,20 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0"),  _
+     System.SerializableAttribute(),  _
+     System.Xml.Serialization.XmlTypeAttribute([Namespace]:="http://tempuri.org/wsSif/wsLibAhorro")>  _
+    Public Enum TipoCuenta
+        
+        '''<remarks/>
+        Ahorro
+        
+        '''<remarks/>
+        Aportacion
+    End Enum
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0"),  _
      System.SerializableAttribute(),  _
      System.Xml.Serialization.XmlTypeAttribute([Namespace]:="http://tempuri.org/wsSif/wsLibAhorro")>  _
     Public Enum TiposAhorroReporteMovimientos
@@ -8208,20 +8522,7 @@ Namespace wrAhorro
     End Enum
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0"),  _
-     System.SerializableAttribute(),  _
-     System.Xml.Serialization.XmlTypeAttribute([Namespace]:="http://tempuri.org/wsSif/wsLibAhorro")>  _
-    Public Enum TipoCuenta
-        
-        '''<remarks/>
-        Ahorro
-        
-        '''<remarks/>
-        Aportacion
-    End Enum
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0"),  _
      System.SerializableAttribute(),  _
      System.Xml.Serialization.XmlTypeAttribute([Namespace]:="http://tempuri.org/wsSif/wsLibAhorro")>  _
     Public Enum TipoReporte
@@ -8237,1415 +8538,11 @@ Namespace wrAhorro
     End Enum
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub RepValorFecha_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As RepValorFecha_AhorrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class RepValorFecha_AhorrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub RepVencimientosCompletedEventHandler(ByVal sender As Object, ByVal e As RepVencimientosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class RepVencimientosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ReversionAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionAhorrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ReversionAhorrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ReversionAportacionesCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionAportacionesCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ReversionAportacionesCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ReversionMovimientosCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionMovimientosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ReversionMovimientosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ReversionMovimientosxTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionMovimientosxTransferenciaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ReversionMovimientosxTransferenciaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub SaldosAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As SaldosAhorrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class SaldosAhorrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub SaldosAhorros_RangoCompletedEventHandler(ByVal sender As Object, ByVal e As SaldosAhorros_RangoCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class SaldosAhorros_RangoCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub TransferenciaAutomaticaCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As TransferenciaAutomaticaCuentasCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class TransferenciaAutomaticaCuentasCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub TransferenciaCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As TransferenciaCuentasCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class TransferenciaCuentasCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub Vencimientos_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Vencimientos_DPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class Vencimientos_DPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub VencimientosDiarios_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As VencimientosDiarios_DPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class VencimientosDiarios_DPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub VencimientosDiarios_DPF_ProyectadosCompletedEventHandler(ByVal sender As Object, ByVal e As VencimientosDiarios_DPF_ProyectadosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class VencimientosDiarios_DPF_ProyectadosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub VerificaSumaMontoDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As VerificaSumaMontoDetalleTransferenciaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class VerificaSumaMontoDetalleTransferenciaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Double
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Double)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarCuentaAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarCuentaAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarCuentaPignoradaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarCuentaPignoradaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDestinoCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarDestinoCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDet_PlanAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarDet_PlanAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDetalleTransferenciaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarDetalleTransferenciaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarFechasCapitalizacionCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarFechasCapitalizacionCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarPlanAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarPlanAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarReposicionCertificadosDPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarReposicionCertificadosDPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarReposicionLibretaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarReposicionLibretaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarTipoAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminarTipoAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminaRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaRutasCobroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminaRutasCobroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub EliminaTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaTasasInteresCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class EliminaTasasInteresCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ExportacionDatos_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As ExportacionDatos_AhorrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ExportacionDatos_AhorrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ExportacionDatos_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As ExportacionDatos_DPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ExportacionDatos_DPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub GeneraNoCuentaCompletedEventHandler(ByVal sender As Object, ByVal e As GeneraNoCuentaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class GeneraNoCuentaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub Gerencial_Cartera_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Gerencial_Cartera_DPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class Gerencial_Cartera_DPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub Gerencial_MovCuentasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As Gerencial_MovCuentasAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class Gerencial_MovCuentasAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InicializacionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As InicializacionLibretaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InicializacionLibretaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertaParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As InsertaParametrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertaParametrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarAutorizadoRetiroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarAutorizadoRetiroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarBeneficiariosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarBeneficiariosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCertificadosDPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarCertificadosDPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarComisionesCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarComisionesCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCuentaAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarCuentaAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCuentaPignoradaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarCuentaPignoradaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarDestinoCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarDestinoCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarDet_PlanAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarDet_PlanAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarFechasCapitalizacionCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarFechasCapitalizacionCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarPlanAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarPlanAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarReposicionCertificadosDPFCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarReposicionCertificadosDPFCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarReposicionLibretaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarReposicionLibretaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarRutasCobroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarRutasCobroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarTipoAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertarTipoAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub InsertaTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As InsertaTasasInteresCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class InsertaTasasInteresCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ModificaComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As ModificaComisionesCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ModificaComisionesCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ModificaParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As ModificaParametrosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ModificaParametrosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ModificarAhCuentasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarAhCuentasAhorroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ModificarAhCuentasAhorroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
-    Public Delegate Sub ModificarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarAutorizadoRetiroCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class ModificarAutorizadoRetiroCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Boolean
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Boolean)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarBeneficiariosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarBeneficiariosCompletedEventArgs
@@ -9668,11 +8565,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarCertificadosDPFCompletedEventArgs
@@ -9695,11 +8592,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarCuentaAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarCuentaAhorroCompletedEventArgs
@@ -9722,11 +8619,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarCuentaPignoradaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarCuentaPignoradaCompletedEventArgs
@@ -9749,11 +8646,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarDestinoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarDestinoCompletedEventArgs
@@ -9776,11 +8673,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarDet_PlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarDet_PlanAhorroCompletedEventArgs
@@ -9803,11 +8700,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarDetalleTransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarDetalleTransferenciaCompletedEventArgs
@@ -9830,11 +8727,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarFechasCapitalizacionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarFechasCapitalizacionCompletedEventArgs
@@ -9857,11 +8754,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarPlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarPlanAhorroCompletedEventArgs
@@ -9884,11 +8781,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarPRPrestamosCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarPRPrestamosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarPRPrestamosCompletedEventArgs
@@ -9911,11 +8808,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarReposicionCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarReposicionCertificadosDPFCompletedEventArgs
@@ -9938,11 +8835,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarReposicionLibretaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarReposicionLibretaCompletedEventArgs
@@ -9965,11 +8862,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarRutasCobroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarRutasCobroCompletedEventArgs
@@ -9992,11 +8889,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificarTipoAhorroCompletedEventArgs
@@ -10019,11 +8916,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ModificaTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As ModificaTasasInteresCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ModificaTasasInteresCompletedEventArgs
@@ -10046,11 +8943,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub MostrarMovimientosCompletedEventHandler(ByVal sender As Object, ByVal e As MostrarMovimientosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class MostrarMovimientosCompletedEventArgs
@@ -10073,11 +8970,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub MovimientosAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As MovimientosAhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class MovimientosAhorrosCompletedEventArgs
@@ -10100,11 +8997,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoAutorizadoRetiroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoAutorizadoRetiroCompletedEventArgs
@@ -10127,11 +9024,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoBeneficiariosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoBeneficiariosCompletedEventArgs
@@ -10154,11 +9051,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoCertificadosDPFCompletedEventArgs
@@ -10181,11 +9078,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoCuentaAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoCuentaAhorroCompletedEventArgs
@@ -10208,11 +9105,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoDestinoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoDestinoCompletedEventArgs
@@ -10235,11 +9132,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoDet_PlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoDet_PlanAhorroCompletedEventArgs
@@ -10262,11 +9159,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoPlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoPlanAhorroCompletedEventArgs
@@ -10289,11 +9186,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoReposicionCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoReposicionCertificadosDPFCompletedEventArgs
@@ -10316,11 +9213,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoReposicionLibretaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoReposicionLibretaCompletedEventArgs
@@ -10343,11 +9240,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoTipoAhorroCompletedEventArgs
@@ -10370,11 +9267,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerCorrelativoTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerCorrelativoTransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerCorrelativoTransferenciaCompletedEventArgs
@@ -10397,11 +9294,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerDetalleTransferenciaVacioCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerDetalleTransferenciaVacioCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerDetalleTransferenciaVacioCompletedEventArgs
@@ -10424,11 +9321,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtenerEstructuraSeleccionCompletedEventHandler(ByVal sender As Object, ByVal e As ObtenerEstructuraSeleccionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtenerEstructuraSeleccionCompletedEventArgs
@@ -10451,11 +9348,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ObtieneDigitoVerificadorCompletedEventHandler(ByVal sender As Object, ByVal e As ObtieneDigitoVerificadorCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ObtieneDigitoVerificadorCompletedEventArgs
@@ -10478,11 +9375,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Orden_DescuentoCompletedEventHandler(ByVal sender As Object, ByVal e As Orden_DescuentoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Orden_DescuentoCompletedEventArgs
@@ -10505,11 +9402,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub PignoracionCuentasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As PignoracionCuentasAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class PignoracionCuentasAhorroCompletedEventArgs
@@ -10532,11 +9429,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As PlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class PlanAhorroCompletedEventArgs
@@ -10559,11 +9456,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub PosteoMovimientosCompletedEventHandler(ByVal sender As Object, ByVal e As PosteoMovimientosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class PosteoMovimientosCompletedEventArgs
@@ -10586,11 +9483,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ProcesoProrrogaCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As ProcesoProrrogaCuentasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ProcesoProrrogaCuentasCompletedEventArgs
@@ -10613,11 +9510,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Provisiones_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As Provisiones_AhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Provisiones_AhorrosCompletedEventArgs
@@ -10640,11 +9537,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RepCancelacion_TransfCompletedEventHandler(ByVal sender As Object, ByVal e As RepCancelacion_TransfCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RepCancelacion_TransfCompletedEventArgs
@@ -10667,11 +9564,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RepCobroInactividadCompletedEventHandler(ByVal sender As Object, ByVal e As RepCobroInactividadCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RepCobroInactividadCompletedEventArgs
@@ -10694,11 +9591,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RepCtasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As RepCtasAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RepCtasAhorroCompletedEventArgs
@@ -10721,11 +9618,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Reporte_CuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As Reporte_CuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Reporte_CuentasInactivasCompletedEventArgs
@@ -10748,11 +9645,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Reporte_Datos_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Reporte_Datos_DPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Reporte_Datos_DPFCompletedEventArgs
@@ -10775,11 +9672,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ReporteEstadoCuentaAhorroAportacionesCompletedEventHandler(ByVal sender As Object, ByVal e As ReporteEstadoCuentaAhorroAportacionesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ReporteEstadoCuentaAhorroAportacionesCompletedEventArgs
@@ -10802,11 +9699,65 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ConsultarCuentaAportacionCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaAportacionCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ConsultarCuentaAportacionCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ReporteEstadoCuentaAportacionesCompletedEventHandler(ByVal sender As Object, ByVal e As ReporteEstadoCuentaAportacionesCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ReporteEstadoCuentaAportacionesCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ReporteImpresionLibretaAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As ReporteImpresionLibretaAhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ReporteImpresionLibretaAhorrosCompletedEventArgs
@@ -10829,11 +9780,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ReportePagoInteresDiariaDPCompletedEventHandler(ByVal sender As Object, ByVal e As ReportePagoInteresDiariaDPCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ReportePagoInteresDiariaDPCompletedEventArgs
@@ -10856,11 +9807,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ReporteTasasPasivasCompletedEventHandler(ByVal sender As Object, ByVal e As ReporteTasasPasivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ReporteTasasPasivasCompletedEventArgs
@@ -10883,11 +9834,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ReporteTodasCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As ReporteTodasCuentasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ReporteTodasCuentasCompletedEventArgs
@@ -10910,11 +9861,389 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub RepValorFecha_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As RepValorFecha_AhorrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class RepValorFecha_AhorrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub RepVencimientosCompletedEventHandler(ByVal sender As Object, ByVal e As RepVencimientosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class RepVencimientosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ReversionAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionAhorrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ReversionAhorrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ReversionAportacionesCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionAportacionesCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ReversionAportacionesCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ReversionMovimientosCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionMovimientosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ReversionMovimientosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ReversionMovimientosxTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ReversionMovimientosxTransferenciaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ReversionMovimientosxTransferenciaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub SaldosAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As SaldosAhorrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class SaldosAhorrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub SaldosAhorros_RangoCompletedEventHandler(ByVal sender As Object, ByVal e As SaldosAhorros_RangoCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class SaldosAhorros_RangoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub TransferenciaAutomaticaCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As TransferenciaAutomaticaCuentasCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class TransferenciaAutomaticaCuentasCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub TransferenciaCuentasCompletedEventHandler(ByVal sender As Object, ByVal e As TransferenciaCuentasCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class TransferenciaCuentasCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub Vencimientos_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Vencimientos_DPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class Vencimientos_DPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub VencimientosDiarios_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As VencimientosDiarios_DPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class VencimientosDiarios_DPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub VencimientosDiarios_DPF_ProyectadosCompletedEventHandler(ByVal sender As Object, ByVal e As VencimientosDiarios_DPF_ProyectadosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class VencimientosDiarios_DPF_ProyectadosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub VerificaSumaMontoDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As VerificaSumaMontoDetalleTransferenciaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class VerificaSumaMontoDetalleTransferenciaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Double
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Double)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub insertarAsocTransferenciasAutomaticasCompletedEventHandler(ByVal sender As Object, ByVal e As insertarAsocTransferenciasAutomaticasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class insertarAsocTransferenciasAutomaticasCompletedEventArgs
@@ -10937,11 +10266,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub modificarAsocTransferenciasAutomaticasCompletedEventHandler(ByVal sender As Object, ByVal e As modificarAsocTransferenciasAutomaticasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class modificarAsocTransferenciasAutomaticasCompletedEventArgs
@@ -10964,11 +10293,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarAsocTransferenciasAutomaticasCompletedEventHandler(ByVal sender As Object, ByVal e As consultarAsocTransferenciasAutomaticasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarAsocTransferenciasAutomaticasCompletedEventArgs
@@ -10991,11 +10320,92 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub pignorarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As pignorarCuentaAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class pignorarCuentaAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Integer
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Integer)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub despignorarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As despignorarCuentaAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class despignorarCuentaAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Integer
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Integer)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub insertarCuentaDPFCompletedEventHandler(ByVal sender As Object, ByVal e As insertarCuentaDPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class insertarCuentaDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub recuperarHojaLibreataCompletedEventHandler(ByVal sender As Object, ByVal e As recuperarHojaLibreataCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class recuperarHojaLibreataCompletedEventArgs
@@ -11018,11 +10428,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub postearMovimientosAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As postearMovimientosAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class postearMovimientosAhorroCompletedEventArgs
@@ -11045,11 +10455,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub movimientosPendientesPostearCompletedEventHandler(ByVal sender As Object, ByVal e As movimientosPendientesPostearCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class movimientosPendientesPostearCompletedEventArgs
@@ -11072,11 +10482,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RptContratoDepositoPlazoCompletedEventHandler(ByVal sender As Object, ByVal e As RptContratoDepositoPlazoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RptContratoDepositoPlazoCompletedEventArgs
@@ -11099,11 +10509,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RptContratoAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As RptContratoAhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RptContratoAhorrosCompletedEventArgs
@@ -11126,11 +10536,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub generarNoCuentaTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As generarNoCuentaTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class generarNoCuentaTipoAhorroCompletedEventArgs
@@ -11153,11 +10563,38 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ingresarReposicionCertificadoPlazoCompletedEventHandler(ByVal sender As Object, ByVal e As ingresarReposicionCertificadoPlazoCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ingresarReposicionCertificadoPlazoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Integer
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Integer)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub procesarProvisionAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As procesarProvisionAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class procesarProvisionAhorroCompletedEventArgs
@@ -11180,11 +10617,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarAhCuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As consultarAhCuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarAhCuentasInactivasCompletedEventArgs
@@ -11207,11 +10644,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub activarCuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As activarCuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class activarCuentasInactivasCompletedEventArgs
@@ -11234,11 +10671,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarAhContratos_AhorroCompletedEventHandler(ByVal sender As Object, ByVal e As consultarAhContratos_AhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarAhContratos_AhorroCompletedEventArgs
@@ -11261,11 +10698,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarDatosLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As consultarDatosLibretaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarDatosLibretaCompletedEventArgs
@@ -11288,11 +10725,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub QuitarPosteosCompletedEventHandler(ByVal sender As Object, ByVal e As QuitarPosteosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class QuitarPosteosCompletedEventArgs
@@ -11315,11 +10752,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub AsociadosISRCompletedEventHandler(ByVal sender As Object, ByVal e As AsociadosISRCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AsociadosISRCompletedEventArgs
@@ -11342,11 +10779,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarAhAutorizacionTasasDpfCompletedEventHandler(ByVal sender As Object, ByVal e As consultarAhAutorizacionTasasDpfCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarAhAutorizacionTasasDpfCompletedEventArgs
@@ -11369,11 +10806,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub eliminarAhAutorizacionTasasDpfCompletedEventHandler(ByVal sender As Object, ByVal e As eliminarAhAutorizacionTasasDpfCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class eliminarAhAutorizacionTasasDpfCompletedEventArgs
@@ -11396,11 +10833,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub modificarAhAutorizacionTasasDpfCompletedEventHandler(ByVal sender As Object, ByVal e As modificarAhAutorizacionTasasDpfCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class modificarAhAutorizacionTasasDpfCompletedEventArgs
@@ -11423,11 +10860,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub insertarAhAutorizacionTasasDpfCompletedEventHandler(ByVal sender As Object, ByVal e As insertarAhAutorizacionTasasDpfCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class insertarAhAutorizacionTasasDpfCompletedEventArgs
@@ -11450,11 +10887,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub consultarTiposAhorrosActivosCompletedEventHandler(ByVal sender As Object, ByVal e As consultarTiposAhorrosActivosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class consultarTiposAhorrosActivosCompletedEventArgs
@@ -11477,11 +10914,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RetiroAhorrosChequeCompletedEventHandler(ByVal sender As Object, ByVal e As RetiroAhorrosChequeCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RetiroAhorrosChequeCompletedEventArgs
@@ -11504,11 +10941,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Temp_Consultar_CtasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As Temp_Consultar_CtasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Temp_Consultar_CtasInactivasCompletedEventArgs
@@ -11531,11 +10968,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarAhMovimientosCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarAhMovimientosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarAhMovimientosCompletedEventArgs
@@ -11558,11 +10995,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarMov_AportacionesDifCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarMov_AportacionesDifCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarMov_AportacionesDifCompletedEventArgs
@@ -11585,11 +11022,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarMov_AhorrosDifCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarMov_AhorrosDifCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarMov_AhorrosDifCompletedEventArgs
@@ -11612,11 +11049,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Transferencia_IntDpf_CuotaAportacionesCompletedEventHandler(ByVal sender As Object, ByVal e As Transferencia_IntDpf_CuotaAportacionesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Transferencia_IntDpf_CuotaAportacionesCompletedEventArgs
@@ -11639,11 +11076,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Cargar_PlanillaCompletedEventHandler(ByVal sender As Object, ByVal e As Cargar_PlanillaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Cargar_PlanillaCompletedEventArgs
@@ -11666,11 +11103,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RptTransferenciasAutoAhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As RptTransferenciasAutoAhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RptTransferenciasAutoAhorrosCompletedEventArgs
@@ -11693,11 +11130,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCtasTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCtasTransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCtasTransferenciaCompletedEventArgs
@@ -11720,11 +11157,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub TrasnferenciasAutomaticas_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As TrasnferenciasAutomaticas_AhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class TrasnferenciasAutomaticas_AhorrosCompletedEventArgs
@@ -11747,11 +11184,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub AsignarPrestamo_TransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As AsignarPrestamo_TransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AsignarPrestamo_TransferenciaCompletedEventArgs
@@ -11774,11 +11211,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ValidarCtas_TransferenciasAutomaticasCompletedEventHandler(ByVal sender As Object, ByVal e As ValidarCtas_TransferenciasAutomaticasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ValidarCtas_TransferenciasAutomaticasCompletedEventArgs
@@ -11801,11 +11238,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub RPT_TASAPASIVACompletedEventHandler(ByVal sender As Object, ByVal e As RPT_TASAPASIVACompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class RPT_TASAPASIVACompletedEventArgs
@@ -11828,11 +11265,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub SALDO_CUENTASAHORROCompletedEventHandler(ByVal sender As Object, ByVal e As SALDO_CUENTASAHORROCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class SALDO_CUENTASAHORROCompletedEventArgs
@@ -11855,11 +11292,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub SALDO_CUENTASAPORTACIONESCompletedEventHandler(ByVal sender As Object, ByVal e As SALDO_CUENTASAPORTACIONESCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class SALDO_CUENTASAPORTACIONESCompletedEventArgs
@@ -11882,11 +11319,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub SALDO_CUENTASDPFCompletedEventHandler(ByVal sender As Object, ByVal e As SALDO_CUENTASDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class SALDO_CUENTASDPFCompletedEventArgs
@@ -11909,11 +11346,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ActualizaCuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As ActualizaCuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ActualizaCuentasInactivasCompletedEventArgs
@@ -11936,11 +11373,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ActualizaEstructuraCuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As ActualizaEstructuraCuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ActualizaEstructuraCuentasInactivasCompletedEventArgs
@@ -11963,11 +11400,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ActualizaListadoCuentasInactivasCompletedEventHandler(ByVal sender As Object, ByVal e As ActualizaListadoCuentasInactivasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ActualizaListadoCuentasInactivasCompletedEventArgs
@@ -11990,11 +11427,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub AgregarDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As AgregarDetalleTransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AgregarDetalleTransferenciaCompletedEventArgs
@@ -12017,11 +11454,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub AlmacenaEstructuraSeleccionCompletedEventHandler(ByVal sender As Object, ByVal e As AlmacenaEstructuraSeleccionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AlmacenaEstructuraSeleccionCompletedEventArgs
@@ -12044,11 +11481,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub AutorizaDatosCompletedEventHandler(ByVal sender As Object, ByVal e As AutorizaDatosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AutorizaDatosCompletedEventArgs
@@ -12071,11 +11508,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub CalculoProvisionInteresesCompletedEventHandler(ByVal sender As Object, ByVal e As CalculoProvisionInteresesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class CalculoProvisionInteresesCompletedEventArgs
@@ -12098,11 +11535,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub CancelarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As CancelarCuentaAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class CancelarCuentaAhorroCompletedEventArgs
@@ -12125,11 +11562,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub CargarDatosPrestamosPignoradosCompletedEventHandler(ByVal sender As Object, ByVal e As CargarDatosPrestamosPignoradosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class CargarDatosPrestamosPignoradosCompletedEventArgs
@@ -12152,11 +11589,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Cartera_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Cartera_DPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Cartera_DPFCompletedEventArgs
@@ -12179,11 +11616,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Comp_Reversiones_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As Comp_Reversiones_AhorrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Comp_Reversiones_AhorrosCompletedEventArgs
@@ -12206,11 +11643,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultaPosteoCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultaPosteoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultaPosteoCompletedEventArgs
@@ -12233,11 +11670,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarAutorizadoRetiroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarAutorizadoRetiroCompletedEventArgs
@@ -12260,11 +11697,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarBeneficiariosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarBeneficiariosCompletedEventArgs
@@ -12287,11 +11724,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCertificadosDPFCompletedEventArgs
@@ -12314,11 +11751,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarComisionesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarComisionesCompletedEventArgs
@@ -12341,11 +11778,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCtasAhorroDUICompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCtasAhorroDUICompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCtasAhorroDUICompletedEventArgs
@@ -12368,11 +11805,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCuentaAhorroCompletedEventArgs
@@ -12395,11 +11832,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCuentaAhorroAgrupadaParametroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaAhorroAgrupadaParametroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCuentaAhorroAgrupadaParametroCompletedEventArgs
@@ -12422,11 +11859,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCuentaAhorroTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaAhorroTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCuentaAhorroTipoAhorroCompletedEventArgs
@@ -12449,11 +11886,38 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ConsultarCuentaAhorroDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaAhorroDPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ConsultarCuentaAhorroDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarCuentaPignoradaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarCuentaPignoradaCompletedEventArgs
@@ -12476,11 +11940,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarDestinoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarDestinoCompletedEventArgs
@@ -12503,11 +11967,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarDet_PlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarDet_PlanAhorroCompletedEventArgs
@@ -12530,11 +11994,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarFechaCuotaPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarFechaCuotaPlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarFechaCuotaPlanAhorroCompletedEventArgs
@@ -12557,11 +12021,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarFechasCapitalizacionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarFechasCapitalizacionCompletedEventArgs
@@ -12584,11 +12048,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarFechasCapitalizacionTipoCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarFechasCapitalizacionTipoCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarFechasCapitalizacionTipoCompletedEventArgs
@@ -12611,11 +12075,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarParametrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarParametrosCompletedEventArgs
@@ -12638,11 +12102,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarParametrosxTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarParametrosxTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarParametrosxTipoAhorroCompletedEventArgs
@@ -12665,11 +12129,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarPignoracionCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarPignoracionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarPignoracionCompletedEventArgs
@@ -12692,11 +12156,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarPlanAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarPlanAhorroCompletedEventArgs
@@ -12719,11 +12183,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarProvisionesCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarProvisionesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarProvisionesCompletedEventArgs
@@ -12746,11 +12210,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarReposicionCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarReposicionCertificadosDPFCompletedEventArgs
@@ -12773,11 +12237,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarReposicionLibretaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarReposicionLibretaCompletedEventArgs
@@ -12800,11 +12264,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarRutasCobroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarRutasCobroCompletedEventArgs
@@ -12827,11 +12291,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarTasasInteresCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarTasasInteresCompletedEventArgs
@@ -12854,11 +12318,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarTipoAhorroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarTipoAhorroCompletedEventArgs
@@ -12881,11 +12345,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub ConsultarTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As ConsultarTransferenciaCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ConsultarTransferenciaCompletedEventArgs
@@ -12908,11 +12372,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub CorrelativoAhReversionCompletedEventHandler(ByVal sender As Object, ByVal e As CorrelativoAhReversionCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class CorrelativoAhReversionCompletedEventArgs
@@ -12935,11 +12399,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Cuentas_CanceladasCompletedEventHandler(ByVal sender As Object, ByVal e As Cuentas_CanceladasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Cuentas_CanceladasCompletedEventArgs
@@ -12962,11 +12426,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub Cuentas_PignoradasCompletedEventHandler(ByVal sender As Object, ByVal e As Cuentas_PignoradasCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Cuentas_PignoradasCompletedEventArgs
@@ -12989,11 +12453,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub DPF_AnuladosCompletedEventHandler(ByVal sender As Object, ByVal e As DPF_AnuladosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class DPF_AnuladosCompletedEventArgs
@@ -13016,11 +12480,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub EliminaComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaComisionesCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class EliminaComisionesCompletedEventArgs
@@ -13043,11 +12507,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub EliminaParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaParametrosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class EliminaParametrosCompletedEventArgs
@@ -13070,11 +12534,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub EliminarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarAutorizadoRetiroCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class EliminarAutorizadoRetiroCompletedEventArgs
@@ -13097,11 +12561,11 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub EliminarBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarBeneficiariosCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class EliminarBeneficiariosCompletedEventArgs
@@ -13124,14 +12588,1040 @@ Namespace wrAhorro
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
     Public Delegate Sub EliminarCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarCertificadosDPFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class EliminarCertificadosDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarCuentaAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarCuentaAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarCuentaPignoradaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarCuentaPignoradaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDestinoCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarDestinoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDet_PlanAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarDet_PlanAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarDetalleTransferenciaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarDetalleTransferenciaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarDetalleTransferenciaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarFechasCapitalizacionCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarFechasCapitalizacionCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarPlanAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarPlanAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarReposicionCertificadosDPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarReposicionCertificadosDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarReposicionLibretaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarReposicionLibretaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminarTipoAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminarTipoAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminaRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaRutasCobroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminaRutasCobroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub EliminaTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As EliminaTasasInteresCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class EliminaTasasInteresCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ExportacionDatos_AhorrosCompletedEventHandler(ByVal sender As Object, ByVal e As ExportacionDatos_AhorrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ExportacionDatos_AhorrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ExportacionDatos_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As ExportacionDatos_DPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ExportacionDatos_DPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub GeneraNoCuentaCompletedEventHandler(ByVal sender As Object, ByVal e As GeneraNoCuentaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class GeneraNoCuentaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub Gerencial_Cartera_DPFCompletedEventHandler(ByVal sender As Object, ByVal e As Gerencial_Cartera_DPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class Gerencial_Cartera_DPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub Gerencial_MovCuentasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As Gerencial_MovCuentasAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class Gerencial_MovCuentasAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InicializacionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As InicializacionLibretaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InicializacionLibretaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertaParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As InsertaParametrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertaParametrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarAutorizadoRetiroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarAutorizadoRetiroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarBeneficiariosCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarBeneficiariosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarBeneficiariosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCertificadosDPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarCertificadosDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarComisionesCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarComisionesCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarCuentaAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCuentaAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarCuentaAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarCuentaPignoradaCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarCuentaPignoradaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarCuentaPignoradaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarDestinoCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarDestinoCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarDestinoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarDet_PlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarDet_PlanAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarDet_PlanAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarFechasCapitalizacionCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarFechasCapitalizacionCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarFechasCapitalizacionCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarPlanAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarPlanAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarPlanAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarReposicionCertificadosDPFCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarReposicionCertificadosDPFCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarReposicionCertificadosDPFCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarReposicionLibretaCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarReposicionLibretaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarReposicionLibretaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarRutasCobroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarRutasCobroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarRutasCobroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertarTipoAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As InsertarTipoAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertarTipoAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub InsertaTasasInteresCompletedEventHandler(ByVal sender As Object, ByVal e As InsertaTasasInteresCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class InsertaTasasInteresCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ModificaComisionesCompletedEventHandler(ByVal sender As Object, ByVal e As ModificaComisionesCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ModificaComisionesCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ModificaParametrosCompletedEventHandler(ByVal sender As Object, ByVal e As ModificaParametrosCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ModificaParametrosCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ModificarAhCuentasAhorroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarAhCuentasAhorroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ModificarAhCuentasAhorroCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Boolean
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Boolean)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")>  _
+    Public Delegate Sub ModificarAutorizadoRetiroCompletedEventHandler(ByVal sender As Object, ByVal e As ModificarAutorizadoRetiroCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ModificarAutorizadoRetiroCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
         
         Private results() As Object

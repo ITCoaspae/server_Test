@@ -591,7 +591,7 @@ Public Class frmMPartidasAut
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -611,7 +611,7 @@ Public Class frmMPartidasAut
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -637,7 +637,7 @@ Public Class frmMPartidasAut
                 MsgBox(Contador.ToString + " Partidas Trasladadas con exito. " & vbCrLf & vbCrLf & ErrorPartidas & " No trasladadas", MsgBoxStyle.Information, "Traslado de Partidas")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -682,7 +682,7 @@ Public Class frmMPartidasAut
             dts = Conta.consultarCaDiario(campos, filtro, sUsuario, sPassword, sSucursal)
             Me.dgPartAut2.DataSource = dts.Tables(0)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
 
@@ -706,7 +706,7 @@ Public Class frmMPartidasAut
                 Next
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

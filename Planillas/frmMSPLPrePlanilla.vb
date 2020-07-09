@@ -198,7 +198,7 @@ Public Class frmMSPLPrePlanilla
             GenerarPlanilla()
             Me.MetroButton2.Enabled = True
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -208,7 +208,7 @@ Public Class frmMSPLPrePlanilla
                 MsgBox("Exportación Realizada Exitossamente", MsgBoxStyle.Information, "Módulo - Planillas")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
@@ -230,7 +230,7 @@ Public Class frmMSPLPrePlanilla
                     'End If
                 End If
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
     End Sub

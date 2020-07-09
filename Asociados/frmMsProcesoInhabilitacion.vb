@@ -111,25 +111,25 @@ Public Class frmMsProcesoInhabilitacion
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label60)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(768, 64)
+        Me.GroupBox1.Size = New System.Drawing.Size(921, 74)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(552, 35)
+        Me.Label4.Location = New System.Drawing.Point(662, 40)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(32, 16)
+        Me.Label4.Size = New System.Drawing.Size(39, 19)
         Me.Label4.TabIndex = 212
         Me.Label4.Text = "al:"
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(416, 35)
+        Me.Label3.Location = New System.Drawing.Point(499, 40)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(32, 16)
+        Me.Label3.Size = New System.Drawing.Size(39, 19)
         Me.Label3.TabIndex = 211
         Me.Label3.Text = "Del:"
         '
@@ -137,33 +137,33 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.dtpAl.CustomFormat = "dd/MM/yyyy"
         Me.dtpAl.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpAl.Location = New System.Drawing.Point(584, 32)
+        Me.dtpAl.Location = New System.Drawing.Point(701, 37)
         Me.dtpAl.Name = "dtpAl"
-        Me.dtpAl.Size = New System.Drawing.Size(88, 20)
+        Me.dtpAl.Size = New System.Drawing.Size(105, 22)
         Me.dtpAl.TabIndex = 3
         '
         'dtpDel
         '
         Me.dtpDel.CustomFormat = "dd/MM/yyyy"
         Me.dtpDel.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDel.Location = New System.Drawing.Point(448, 32)
+        Me.dtpDel.Location = New System.Drawing.Point(538, 37)
         Me.dtpDel.Name = "dtpDel"
-        Me.dtpDel.Size = New System.Drawing.Size(88, 20)
+        Me.dtpDel.Size = New System.Drawing.Size(105, 22)
         Me.dtpDel.TabIndex = 2
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(416, 16)
+        Me.Label2.Location = New System.Drawing.Point(499, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 16)
+        Me.Label2.Size = New System.Drawing.Size(173, 19)
         Me.Label2.TabIndex = 208
         Me.Label2.Text = "Período de Inhabilitación:"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Location = New System.Drawing.Point(383, 8)
+        Me.GroupBox2.Location = New System.Drawing.Point(460, 9)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(2, 48)
+        Me.GroupBox2.Size = New System.Drawing.Size(2, 56)
         Me.GroupBox2.TabIndex = 207
         Me.GroupBox2.TabStop = False
         '
@@ -171,17 +171,17 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.cbTipoInhabilitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipoInhabilitacion.Items.AddRange(New Object() {"Aportaciones", "Préstamos"})
-        Me.cbTipoInhabilitacion.Location = New System.Drawing.Point(16, 32)
+        Me.cbTipoInhabilitacion.Location = New System.Drawing.Point(19, 37)
         Me.cbTipoInhabilitacion.Name = "cbTipoInhabilitacion"
-        Me.cbTipoInhabilitacion.Size = New System.Drawing.Size(208, 21)
+        Me.cbTipoInhabilitacion.Size = New System.Drawing.Size(250, 24)
         Me.cbTipoInhabilitacion.TabIndex = 0
         '
         'chkTodos
         '
         Me.chkTodos.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkTodos.Location = New System.Drawing.Point(688, 8)
+        Me.chkTodos.Location = New System.Drawing.Point(826, 9)
         Me.chkTodos.Name = "chkTodos"
-        Me.chkTodos.Size = New System.Drawing.Size(72, 24)
+        Me.chkTodos.Size = New System.Drawing.Size(86, 28)
         Me.chkTodos.TabIndex = 4
         Me.chkTodos.Text = "&Todos"
         '
@@ -189,16 +189,16 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.dtpFecha.CustomFormat = "dd/MM/yyyy"
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(240, 32)
+        Me.dtpFecha.Location = New System.Drawing.Point(288, 37)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 22)
         Me.dtpFecha.TabIndex = 1
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(240, 16)
+        Me.Label1.Location = New System.Drawing.Point(288, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 16)
+        Me.Label1.Size = New System.Drawing.Size(77, 19)
         Me.Label1.TabIndex = 206
         Me.Label1.Text = "A la fecha:"
         '
@@ -206,9 +206,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.Label60.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label60.ForeColor = System.Drawing.Color.Black
-        Me.Label60.Location = New System.Drawing.Point(16, 16)
+        Me.Label60.Location = New System.Drawing.Point(19, 18)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(112, 16)
+        Me.Label60.Size = New System.Drawing.Size(135, 19)
         Me.Label60.TabIndex = 205
         Me.Label60.Text = "Inhabilitación por:"
         '
@@ -219,15 +219,17 @@ Public Class frmMsProcesoInhabilitacion
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fg.BackColor = System.Drawing.SystemColors.Window
         Me.fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None
         Me.fg.ColumnInfo = "3,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 225)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 260)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 21
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
-        Me.fg.Size = New System.Drawing.Size(767, 208)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Size = New System.Drawing.Size(921, 141)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'GroupBox3
@@ -239,9 +241,9 @@ Public Class frmMsProcesoInhabilitacion
         Me.GroupBox3.Controls.Add(Me.txtNoActaJV)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(23, 133)
+        Me.GroupBox3.Location = New System.Drawing.Point(28, 153)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(370, 52)
+        Me.GroupBox3.Size = New System.Drawing.Size(444, 60)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Dictamen de la Junta de Vigilancia"
@@ -250,9 +252,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.dtpFecJV.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecJV.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecJV.Location = New System.Drawing.Point(264, 24)
+        Me.dtpFecJV.Location = New System.Drawing.Point(317, 28)
         Me.dtpFecJV.Name = "dtpFecJV"
-        Me.dtpFecJV.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecJV.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecJV.TabIndex = 1
         Me.dtpFecJV.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -260,9 +262,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(184, 24)
+        Me.Label5.Location = New System.Drawing.Point(221, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.Size = New System.Drawing.Size(86, 18)
         Me.Label5.TabIndex = 101
         Me.Label5.Text = "Fecha Acta:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -271,18 +273,18 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(16, 24)
+        Me.Label7.Location = New System.Drawing.Point(19, 28)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 16)
+        Me.Label7.Size = New System.Drawing.Size(87, 18)
         Me.Label7.TabIndex = 99
         Me.Label7.Text = "No. de Acta:"
         '
         'txtNoActaJV
         '
-        Me.txtNoActaJV.Location = New System.Drawing.Point(88, 24)
+        Me.txtNoActaJV.Location = New System.Drawing.Point(106, 28)
         Me.txtNoActaJV.MaxLength = 20
         Me.txtNoActaJV.Name = "txtNoActaJV"
-        Me.txtNoActaJV.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaJV.Size = New System.Drawing.Size(105, 23)
         Me.txtNoActaJV.TabIndex = 0
         '
         'GroupBox4
@@ -294,9 +296,9 @@ Public Class frmMsProcesoInhabilitacion
         Me.GroupBox4.Controls.Add(Me.txtNoActaCA)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(407, 133)
+        Me.GroupBox4.Location = New System.Drawing.Point(488, 153)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(384, 52)
+        Me.GroupBox4.Size = New System.Drawing.Size(461, 60)
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Dictamen del Consejo de Administración"
@@ -305,9 +307,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.dtpFecCA.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecCA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecCA.Location = New System.Drawing.Point(280, 24)
+        Me.dtpFecCA.Location = New System.Drawing.Point(336, 28)
         Me.dtpFecCA.Name = "dtpFecCA"
-        Me.dtpFecCA.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecCA.Size = New System.Drawing.Size(106, 23)
         Me.dtpFecCA.TabIndex = 1
         Me.dtpFecCA.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -315,9 +317,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(200, 24)
+        Me.Label6.Location = New System.Drawing.Point(240, 28)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 16)
+        Me.Label6.Size = New System.Drawing.Size(86, 18)
         Me.Label6.TabIndex = 101
         Me.Label6.Text = "Fecha Acta:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -326,25 +328,25 @@ Public Class frmMsProcesoInhabilitacion
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(16, 24)
+        Me.Label8.Location = New System.Drawing.Point(19, 28)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 16)
+        Me.Label8.Size = New System.Drawing.Size(87, 18)
         Me.Label8.TabIndex = 99
         Me.Label8.Text = "No. de Acta:"
         '
         'txtNoActaCA
         '
-        Me.txtNoActaCA.Location = New System.Drawing.Point(88, 24)
+        Me.txtNoActaCA.Location = New System.Drawing.Point(106, 28)
         Me.txtNoActaCA.MaxLength = 20
         Me.txtNoActaCA.Name = "txtNoActaCA"
-        Me.txtNoActaCA.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaCA.Size = New System.Drawing.Size(105, 23)
         Me.txtNoActaCA.TabIndex = 0
         '
         'btnExportar1
         '
-        Me.btnExportar1.Location = New System.Drawing.Point(336, 191)
+        Me.btnExportar1.Location = New System.Drawing.Point(403, 220)
         Me.btnExportar1.Name = "btnExportar1"
-        Me.btnExportar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnExportar1.Size = New System.Drawing.Size(90, 33)
         Me.btnExportar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnExportar1.TabIndex = 37
         Me.btnExportar1.Text = "Guardar"
@@ -353,9 +355,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         'btnInhabilitacion1
         '
-        Me.btnInhabilitacion1.Location = New System.Drawing.Point(212, 191)
+        Me.btnInhabilitacion1.Location = New System.Drawing.Point(254, 220)
         Me.btnInhabilitacion1.Name = "btnInhabilitacion1"
-        Me.btnInhabilitacion1.Size = New System.Drawing.Size(118, 28)
+        Me.btnInhabilitacion1.Size = New System.Drawing.Size(142, 33)
         Me.btnInhabilitacion1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnInhabilitacion1.TabIndex = 36
         Me.btnInhabilitacion1.Text = "Inhabilitación"
@@ -364,9 +366,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         'btnVerificar1
         '
-        Me.btnVerificar1.Location = New System.Drawing.Point(131, 191)
+        Me.btnVerificar1.Location = New System.Drawing.Point(157, 220)
         Me.btnVerificar1.Name = "btnVerificar1"
-        Me.btnVerificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnVerificar1.Size = New System.Drawing.Size(90, 33)
         Me.btnVerificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnVerificar1.TabIndex = 35
         Me.btnVerificar1.Text = "Verificación"
@@ -375,9 +377,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         'btnImprimir1
         '
-        Me.btnImprimir1.Location = New System.Drawing.Point(417, 191)
+        Me.btnImprimir1.Location = New System.Drawing.Point(500, 220)
         Me.btnImprimir1.Name = "btnImprimir1"
-        Me.btnImprimir1.Size = New System.Drawing.Size(75, 28)
+        Me.btnImprimir1.Size = New System.Drawing.Size(90, 33)
         Me.btnImprimir1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImprimir1.TabIndex = 38
         Me.btnImprimir1.Text = "Imprimir"
@@ -386,9 +388,9 @@ Public Class frmMsProcesoInhabilitacion
         '
         'btRehabilitacion1
         '
-        Me.btRehabilitacion1.Location = New System.Drawing.Point(23, 191)
+        Me.btRehabilitacion1.Location = New System.Drawing.Point(28, 220)
         Me.btRehabilitacion1.Name = "btRehabilitacion1"
-        Me.btRehabilitacion1.Size = New System.Drawing.Size(102, 28)
+        Me.btRehabilitacion1.Size = New System.Drawing.Size(122, 33)
         Me.btRehabilitacion1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btRehabilitacion1.TabIndex = 39
         Me.btRehabilitacion1.Text = "Rehabilitación"
@@ -397,8 +399,8 @@ Public Class frmMsProcesoInhabilitacion
         '
         'frmMsProcesoInhabilitacion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(813, 456)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(976, 456)
         Me.Controls.Add(Me.btRehabilitacion1)
         Me.Controls.Add(Me.btnImprimir1)
         Me.Controls.Add(Me.btnExportar1)
@@ -413,6 +415,7 @@ Public Class frmMsProcesoInhabilitacion
         Me.Name = "frmMsProcesoInhabilitacion"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Inhabilitación de Asociados"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
@@ -575,5 +578,9 @@ Public Class frmMsProcesoInhabilitacion
     End Sub
 
 
-
+    Private Sub frmMsProcesoInhabilitacion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

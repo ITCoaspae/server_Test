@@ -70,9 +70,9 @@ Public Class frmMsExportar
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.dtpFecha2)
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(307, 136)
+        Me.GroupBox1.Size = New System.Drawing.Size(368, 157)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -80,34 +80,34 @@ Public Class frmMsExportar
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Navy
-        Me.Label4.Location = New System.Drawing.Point(16, 72)
+        Me.Label4.Location = New System.Drawing.Point(19, 83)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(280, 16)
+        Me.Label4.Size = New System.Drawing.Size(336, 19)
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Seleccione una opción para filtrar la exportación:"
         '
         'rbAmbos
         '
-        Me.rbAmbos.Location = New System.Drawing.Point(208, 96)
+        Me.rbAmbos.Location = New System.Drawing.Point(250, 111)
         Me.rbAmbos.Name = "rbAmbos"
-        Me.rbAmbos.Size = New System.Drawing.Size(80, 16)
+        Me.rbAmbos.Size = New System.Drawing.Size(96, 18)
         Me.rbAmbos.TabIndex = 4
         Me.rbAmbos.Text = "Am&bos"
         '
         'rbRetirados
         '
-        Me.rbRetirados.Location = New System.Drawing.Point(112, 96)
+        Me.rbRetirados.Location = New System.Drawing.Point(134, 111)
         Me.rbRetirados.Name = "rbRetirados"
-        Me.rbRetirados.Size = New System.Drawing.Size(80, 16)
+        Me.rbRetirados.Size = New System.Drawing.Size(96, 18)
         Me.rbRetirados.TabIndex = 3
         Me.rbRetirados.Text = "&Retirados"
         '
         'rbActivos
         '
         Me.rbActivos.Checked = True
-        Me.rbActivos.Location = New System.Drawing.Point(16, 96)
+        Me.rbActivos.Location = New System.Drawing.Point(19, 111)
         Me.rbActivos.Name = "rbActivos"
-        Me.rbActivos.Size = New System.Drawing.Size(80, 16)
+        Me.rbActivos.Size = New System.Drawing.Size(96, 18)
         Me.rbActivos.TabIndex = 2
         Me.rbActivos.TabStop = True
         Me.rbActivos.Text = "&Activos"
@@ -116,25 +116,25 @@ Public Class frmMsExportar
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Navy
-        Me.Label3.Location = New System.Drawing.Point(16, 16)
+        Me.Label3.Location = New System.Drawing.Point(19, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(280, 16)
+        Me.Label3.Size = New System.Drawing.Size(336, 19)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Digite los rangos para fecha de Ingreso del Asociado:"
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(16, 40)
+        Me.Label2.Location = New System.Drawing.Point(19, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 16)
+        Me.Label2.Size = New System.Drawing.Size(39, 19)
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Del:"
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(160, 40)
+        Me.Label1.Location = New System.Drawing.Point(192, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 16)
+        Me.Label1.Size = New System.Drawing.Size(58, 19)
         Me.Label1.TabIndex = 38
         Me.Label1.Text = "al:"
         '
@@ -143,9 +143,9 @@ Public Class frmMsExportar
         Me.dtpFecha2.CustomFormat = ""
         Me.dtpFecha2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha2.Location = New System.Drawing.Point(208, 40)
+        Me.dtpFecha2.Location = New System.Drawing.Point(250, 46)
         Me.dtpFecha2.Name = "dtpFecha2"
-        Me.dtpFecha2.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha2.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecha2.TabIndex = 1
         '
         'dtpFecha
@@ -153,9 +153,9 @@ Public Class frmMsExportar
         Me.dtpFecha.CustomFormat = ""
         Me.dtpFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(48, 40)
+        Me.dtpFecha.Location = New System.Drawing.Point(58, 46)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecha.TabIndex = 0
         '
         'C1fgrdPrestamos
@@ -165,19 +165,20 @@ Public Class frmMsExportar
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "30,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Caption:""CodPrestamo"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Caption:""Dui"";}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(-65, 146)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(-71, 146)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(32, 8)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(38, 10)
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 7
         Me.C1fgrdPrestamos.Visible = False
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(223, 205)
+        Me.btnProcesar1.Location = New System.Drawing.Point(268, 237)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(107, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(128, 32)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 43
         Me.btnProcesar1.Text = "&Exportar datos"
@@ -187,9 +188,9 @@ Public Class frmMsExportar
         '
         'frmMsExportar
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(354, 288)
+        Me.ClientSize = New System.Drawing.Size(438, 288)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.C1fgrdPrestamos)
@@ -260,7 +261,7 @@ Public Class frmMsExportar
                     End Try
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

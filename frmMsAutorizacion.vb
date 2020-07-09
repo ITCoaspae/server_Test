@@ -165,6 +165,7 @@ Public Class frmMsAutorizacion
         End Get
         Set(ByVal Value As Boolean)
             vAutoriza = Value
+            vAutoriza = False
         End Set
     End Property
 
@@ -202,24 +203,30 @@ Public Class frmMsAutorizacion
                 End If
             Else
                 MessageBox.Show(vResponse, "Autenticación del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
+                'vAutoriza = False
+                'Me.txtPassword.Text = ""
+                'Me.txtPassword.Focus()
                 vAutoriza = False
-                Me.txtPassword.Text = ""
-                Me.txtPassword.Focus()
+                Me.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            vAutoriza = False
+            Me.Dispose()
         End Try
     End Sub
 
     Private Sub txtUsuario_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtUsuario.KeyPress
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then
             Me.txtPassword.Focus()
+            vAutoriza = False
         End If
     End Sub
 
     Private Sub txtPassword_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPassword.KeyPress
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then
             btnAceptar_Click(sender, e)
+
         End If
     End Sub
 

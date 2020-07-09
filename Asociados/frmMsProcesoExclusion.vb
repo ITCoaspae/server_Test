@@ -79,9 +79,9 @@ Public Class frmMsProcesoExclusion
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(740, 44)
+        Me.GroupBox1.Size = New System.Drawing.Size(888, 50)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -89,16 +89,16 @@ Public Class frmMsProcesoExclusion
         '
         Me.dtpFecha.CustomFormat = "dd/MM/yyyy"
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(136, 16)
+        Me.dtpFecha.Location = New System.Drawing.Point(163, 18)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 22)
         Me.dtpFecha.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(16, 16)
+        Me.Label1.Location = New System.Drawing.Point(19, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 16)
+        Me.Label1.Size = New System.Drawing.Size(144, 19)
         Me.Label1.TabIndex = 206
         Me.Label1.Text = "Fecha de Exclusión:"
         '
@@ -109,15 +109,16 @@ Public Class frmMsProcesoExclusion
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fg.BackColor = System.Drawing.SystemColors.Window
         Me.fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None
         Me.fg.ColumnInfo = "3,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 205)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 237)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 21
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
-        Me.fg.Size = New System.Drawing.Size(740, 185)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Size = New System.Drawing.Size(889, 186)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'GroupBox3
@@ -129,9 +130,9 @@ Public Class frmMsProcesoExclusion
         Me.GroupBox3.Controls.Add(Me.txtNoActaJV)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(23, 113)
+        Me.GroupBox3.Location = New System.Drawing.Point(28, 130)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(357, 52)
+        Me.GroupBox3.Size = New System.Drawing.Size(428, 60)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Dictamen de la Junta de Vigilancia"
@@ -140,9 +141,9 @@ Public Class frmMsProcesoExclusion
         '
         Me.dtpFecJV.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecJV.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecJV.Location = New System.Drawing.Point(264, 24)
+        Me.dtpFecJV.Location = New System.Drawing.Point(317, 28)
         Me.dtpFecJV.Name = "dtpFecJV"
-        Me.dtpFecJV.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecJV.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecJV.TabIndex = 1
         Me.dtpFecJV.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -150,9 +151,9 @@ Public Class frmMsProcesoExclusion
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(184, 24)
+        Me.Label5.Location = New System.Drawing.Point(221, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.Size = New System.Drawing.Size(86, 18)
         Me.Label5.TabIndex = 101
         Me.Label5.Text = "Fecha Acta:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -161,18 +162,18 @@ Public Class frmMsProcesoExclusion
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(16, 24)
+        Me.Label7.Location = New System.Drawing.Point(19, 28)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 16)
+        Me.Label7.Size = New System.Drawing.Size(87, 18)
         Me.Label7.TabIndex = 99
         Me.Label7.Text = "No. de Acta:"
         '
         'txtNoActaJV
         '
-        Me.txtNoActaJV.Location = New System.Drawing.Point(88, 24)
+        Me.txtNoActaJV.Location = New System.Drawing.Point(106, 28)
         Me.txtNoActaJV.MaxLength = 20
         Me.txtNoActaJV.Name = "txtNoActaJV"
-        Me.txtNoActaJV.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaJV.Size = New System.Drawing.Size(105, 23)
         Me.txtNoActaJV.TabIndex = 0
         '
         'GroupBox4
@@ -184,9 +185,9 @@ Public Class frmMsProcesoExclusion
         Me.GroupBox4.Controls.Add(Me.txtNoActaCA)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(392, 113)
+        Me.GroupBox4.Location = New System.Drawing.Point(470, 130)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(371, 52)
+        Me.GroupBox4.Size = New System.Drawing.Size(446, 60)
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Dictamen del Consejo de Administración"
@@ -195,9 +196,9 @@ Public Class frmMsProcesoExclusion
         '
         Me.dtpFecCA.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecCA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecCA.Location = New System.Drawing.Point(260, 22)
+        Me.dtpFecCA.Location = New System.Drawing.Point(312, 25)
         Me.dtpFecCA.Name = "dtpFecCA"
-        Me.dtpFecCA.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecCA.Size = New System.Drawing.Size(106, 23)
         Me.dtpFecCA.TabIndex = 1
         Me.dtpFecCA.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -205,9 +206,9 @@ Public Class frmMsProcesoExclusion
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(182, 25)
+        Me.Label6.Location = New System.Drawing.Point(218, 29)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 16)
+        Me.Label6.Size = New System.Drawing.Size(87, 18)
         Me.Label6.TabIndex = 101
         Me.Label6.Text = "Fecha Acta:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -216,25 +217,25 @@ Public Class frmMsProcesoExclusion
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(16, 24)
+        Me.Label8.Location = New System.Drawing.Point(19, 28)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 16)
+        Me.Label8.Size = New System.Drawing.Size(87, 18)
         Me.Label8.TabIndex = 99
         Me.Label8.Text = "No. de Acta:"
         '
         'txtNoActaCA
         '
-        Me.txtNoActaCA.Location = New System.Drawing.Point(88, 24)
+        Me.txtNoActaCA.Location = New System.Drawing.Point(106, 28)
         Me.txtNoActaCA.MaxLength = 20
         Me.txtNoActaCA.Name = "txtNoActaCA"
-        Me.txtNoActaCA.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaCA.Size = New System.Drawing.Size(105, 23)
         Me.txtNoActaCA.TabIndex = 0
         '
         'btnExportar1
         '
-        Me.btnExportar1.Location = New System.Drawing.Point(228, 171)
+        Me.btnExportar1.Location = New System.Drawing.Point(274, 197)
         Me.btnExportar1.Name = "btnExportar1"
-        Me.btnExportar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnExportar1.Size = New System.Drawing.Size(90, 33)
         Me.btnExportar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnExportar1.TabIndex = 34
         Me.btnExportar1.Text = "Anular"
@@ -243,9 +244,9 @@ Public Class frmMsProcesoExclusion
         '
         'btnInhabilitacion1
         '
-        Me.btnInhabilitacion1.Location = New System.Drawing.Point(104, 171)
+        Me.btnInhabilitacion1.Location = New System.Drawing.Point(125, 197)
         Me.btnInhabilitacion1.Name = "btnInhabilitacion1"
-        Me.btnInhabilitacion1.Size = New System.Drawing.Size(118, 28)
+        Me.btnInhabilitacion1.Size = New System.Drawing.Size(141, 33)
         Me.btnInhabilitacion1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnInhabilitacion1.TabIndex = 33
         Me.btnInhabilitacion1.Text = "Generar Exclusión"
@@ -254,9 +255,9 @@ Public Class frmMsProcesoExclusion
         '
         'btnVerificar1
         '
-        Me.btnVerificar1.Location = New System.Drawing.Point(23, 171)
+        Me.btnVerificar1.Location = New System.Drawing.Point(28, 197)
         Me.btnVerificar1.Name = "btnVerificar1"
-        Me.btnVerificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnVerificar1.Size = New System.Drawing.Size(90, 33)
         Me.btnVerificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnVerificar1.TabIndex = 32
         Me.btnVerificar1.Text = "Verificación"
@@ -265,8 +266,8 @@ Public Class frmMsProcesoExclusion
         '
         'frmMsProcesoExclusion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(786, 413)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(944, 472)
         Me.Controls.Add(Me.btnExportar1)
         Me.Controls.Add(Me.btnInhabilitacion1)
         Me.Controls.Add(Me.btnVerificar1)
@@ -279,6 +280,7 @@ Public Class frmMsProcesoExclusion
         Me.Name = "frmMsProcesoExclusion"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Exclusión de Asociados"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
@@ -366,4 +368,9 @@ Public Class frmMsProcesoExclusion
         End If
     End Sub
 
+    Private Sub frmMsProcesoExclusion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

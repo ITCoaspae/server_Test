@@ -457,7 +457,7 @@ Public Class frmMPartidas
             cmbTipoPartidas.SelectedIndex = 0
             cmbEstado.SelectedIndex = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -496,7 +496,7 @@ Public Class frmMPartidas
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim frm As frmPartida = New frmPartida
         frm.Prefijo = ""
-        'frm.Accion = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
+        'frm.Accion = Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
         frm.Accion = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarPartida
         frm.StartPosition = FormStartPosition.CenterScreen
         frm.ShowDialog()
@@ -514,7 +514,7 @@ Public Class frmMPartidas
             Else
                 frm.Prefijo = ""
             End If
-            'frm.Accion = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
+            'frm.Accion = Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
             frm.Accion = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarPartida
             frm.IdModifica = Me.IdPartida.Trim
             frm.StartPosition = FormStartPosition.CenterScreen
@@ -553,7 +553,7 @@ Public Class frmMPartidas
             Me.Cursor = Cursors.WaitCursor
 
             Dim ofrm As New frmVisorRep
-            'ofrm.Reporte = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.PartidasDiario
+            'ofrm.Reporte = Contabilidad.clsContab.ReportesContabilidad.PartidasDiario
             ofrm.Reporte = sifLib.Contabilidad.clsContabs.ReportesContabilidad.PartidasDiario
             ofrm.FechaIni = Date.Today
             ofrm.sFechaI = Date.Today.ToString
@@ -561,7 +561,7 @@ Public Class frmMPartidas
             ofrm.sFechaF = Date.Today.ToString
             ofrm.NumPartidaIni = Me.IdPartida.Trim
             ofrm.NumPartidaFin = Me.IdPartida.Trim
-            ofrm.MdiParent = ofrmMain
+            
             ofrm.Show()
             Me.Cursor = Cursors.Default
 

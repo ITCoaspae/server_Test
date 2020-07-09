@@ -56,4 +56,10 @@ Public Class frmVisorRs_Contratos
         Me.rsVisor.ServerReport.SetParameters(ArrayParametros)
         Me.rsVisor.RefreshReport()
     End Sub
+
+    Private Sub frmVisorRs_Contratos_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

@@ -80,7 +80,7 @@
                 llenarDgCorrelativos(Me.cbSucursales.SelectedValue, 0, 0, 0, 2)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnAgregar_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -96,7 +96,7 @@
                 llenarDgCorrelativos(Me.cbSucursales.SelectedValue, 0, 0, 0, 2)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnModificar_Click_1(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -130,7 +130,7 @@
                 End If
             End With
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
@@ -143,7 +143,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -176,8 +176,14 @@
                 .ShowDialog()
             End With
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMCorrelativosDocumentosCaja_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 #End Region
 End Class

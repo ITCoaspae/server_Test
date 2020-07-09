@@ -208,7 +208,7 @@ Public Class frmRptConcentracionGestion
                 ofrm.Show()
             ElseIf vTipo = "M" Then 'COBRO MENSUAL POR EJECUTIVO
                 Dim oPrest As New wrPrestamo.wsLibPrest, ds As New DataSet
-                ds = oPrest.CarteraPrestamos_Gestor(Me.dtpR1.Value, Me.dtpR2.Value, Me.txtCodGestor.Text.Trim, Me.chkTodos.Checked, "M", sUsuario, sPassword, sSucursal)
+                ds = oPrest.CarteraPrestamos_Gestor(Me.dtpR1.Value.ToShortDateString, Me.dtpR2.Value.ToShortDateString, Me.txtCodGestor.Text.Trim, Me.chkTodos.Checked, "M", sUsuario, sPassword, sSucursal)
                 Dim ofrm As New frmVisor(ds, 121, 0)
                 ofrm.ShowDialog()
             ElseIf vTipo = "A" Then 'REPORTE DE ASOCIADOS EN MORA
@@ -238,7 +238,7 @@ Public Class frmRptConcentracionGestion
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

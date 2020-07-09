@@ -24,6 +24,7 @@ Partial Class uifEfectivo
     Private Sub InitializeComponent()
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarA = New MetroFramework.Controls.MetroButton()
         Me.txtDireccionInv = New MetroFramework.Controls.MetroTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cbProfesionInv = New MetroFramework.Controls.MetroComboBox()
@@ -52,6 +53,7 @@ Partial Class uifEfectivo
         Me.chkDistCliente = New System.Windows.Forms.CheckBox()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarB = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
         Me.txtDirNomb = New MetroFramework.Controls.MetroTextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -81,6 +83,7 @@ Partial Class uifEfectivo
         Me.chkPerJur = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarJurB = New MetroFramework.Controls.MetroButton()
         Me.txtNRCNomb = New MetroFramework.Controls.MetroTextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.txtNitNomb = New MetroFramework.Controls.MetroTextBox()
@@ -95,6 +98,7 @@ Partial Class uifEfectivo
         Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage4 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarC = New MetroFramework.Controls.MetroButton()
         Me.chkJurBene = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel9 = New MetroFramework.Controls.MetroLabel()
         Me.txtDirBene = New MetroFramework.Controls.MetroTextBox()
@@ -124,6 +128,7 @@ Partial Class uifEfectivo
         Me.Label41 = New System.Windows.Forms.Label()
         Me.MetroLabel8 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage5 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarCJur = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel12 = New MetroFramework.Controls.MetroLabel()
         Me.txtNrcBene = New MetroFramework.Controls.MetroTextBox()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -138,6 +143,8 @@ Partial Class uifEfectivo
         Me.Label46 = New System.Windows.Forms.Label()
         Me.MetroLabel11 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage6 = New MetroFramework.Controls.MetroTabPage()
+        Me.btnGuardarTran = New MetroFramework.Controls.MetroButton()
+        Me.txtTipoTran = New MetroFramework.Controls.MetroTextBox()
         Me.dtpFehaEnvioReporte = New MetroFramework.Controls.MetroDateTime()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.txtCargoCol = New MetroFramework.Controls.MetroTextBox()
@@ -153,7 +160,6 @@ Partial Class uifEfectivo
         Me.txtConcepto = New MetroFramework.Controls.MetroTextBox()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.txtClaseProducto = New MetroFramework.Controls.MetroTextBox()
-        Me.ctTipoTran = New MetroFramework.Controls.MetroComboBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.txtNumProdcuto = New MetroFramework.Controls.MetroTextBox()
@@ -171,16 +177,16 @@ Partial Class uifEfectivo
         Me.MetroLabel13 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTabPage7 = New MetroFramework.Controls.MetroTabPage()
         Me.btnSaveObligado = New MetroFramework.Controls.MetroButton()
-        Me.MetroTextBox44 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNRCSO = New MetroFramework.Controls.MetroTextBox()
         Me.Label69 = New System.Windows.Forms.Label()
-        Me.MetroTextBox45 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNITSO = New MetroFramework.Controls.MetroTextBox()
         Me.Label70 = New System.Windows.Forms.Label()
-        Me.MetroTextBox46 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox47 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtDescripcionActEcoSO = New MetroFramework.Controls.MetroTextBox()
+        Me.txtCodActEcoSO = New MetroFramework.Controls.MetroTextBox()
         Me.Label74 = New System.Windows.Forms.Label()
-        Me.MetroTextBox42 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtDirComSO = New MetroFramework.Controls.MetroTextBox()
         Me.Label67 = New System.Windows.Forms.Label()
-        Me.MetroTextBox43 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtRazonSO = New MetroFramework.Controls.MetroTextBox()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.MetroLabel15 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTextBox40 = New MetroFramework.Controls.MetroTextBox()
@@ -224,7 +230,7 @@ Partial Class uifEfectivo
         Me.MetroTabControl1.Location = New System.Drawing.Point(20, 60)
         Me.MetroTabControl1.Multiline = True
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 0
+        Me.MetroTabControl1.SelectedIndex = 2
         Me.MetroTabControl1.Size = New System.Drawing.Size(753, 650)
         Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Teal
@@ -234,6 +240,7 @@ Partial Class uifEfectivo
         'MetroTabPage1
         '
         Me.MetroTabPage1.BackColor = System.Drawing.Color.White
+        Me.MetroTabPage1.Controls.Add(Me.btnGuardarA)
         Me.MetroTabPage1.Controls.Add(Me.txtDireccionInv)
         Me.MetroTabPage1.Controls.Add(Me.Label12)
         Me.MetroTabPage1.Controls.Add(Me.cbProfesionInv)
@@ -274,6 +281,19 @@ Partial Class uifEfectivo
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.VerticalScrollbarSize = 10
         '
+        'btnGuardarA
+        '
+        Me.btnGuardarA.Location = New System.Drawing.Point(619, 458)
+        Me.btnGuardarA.Name = "btnGuardarA"
+        Me.btnGuardarA.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarA.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarA.TabIndex = 92
+        Me.btnGuardarA.Text = "Guardar"
+        Me.btnGuardarA.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarA.UseCustomBackColor = True
+        Me.btnGuardarA.UseSelectable = True
+        Me.btnGuardarA.UseStyleColors = True
+        '
         'txtDireccionInv
         '
         '
@@ -300,7 +320,7 @@ Partial Class uifEfectivo
         Me.txtDireccionInv.SelectionStart = 0
         Me.txtDireccionInv.ShortcutsEnabled = True
         Me.txtDireccionInv.Size = New System.Drawing.Size(708, 64)
-        Me.txtDireccionInv.TabIndex = 27
+        Me.txtDireccionInv.TabIndex = 26
         Me.txtDireccionInv.UseSelectable = True
         Me.txtDireccionInv.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtDireccionInv.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -311,7 +331,7 @@ Partial Class uifEfectivo
         Me.Label12.Location = New System.Drawing.Point(8, 368)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(67, 17)
-        Me.Label12.TabIndex = 26
+        Me.Label12.TabIndex = 25
         Me.Label12.Text = "Dirección"
         '
         'cbProfesionInv
@@ -321,7 +341,7 @@ Partial Class uifEfectivo
         Me.cbProfesionInv.Location = New System.Drawing.Point(9, 335)
         Me.cbProfesionInv.Name = "cbProfesionInv"
         Me.cbProfesionInv.Size = New System.Drawing.Size(710, 30)
-        Me.cbProfesionInv.TabIndex = 25
+        Me.cbProfesionInv.TabIndex = 24
         Me.cbProfesionInv.UseSelectable = True
         '
         'Label11
@@ -330,7 +350,7 @@ Partial Class uifEfectivo
         Me.Label11.Location = New System.Drawing.Point(8, 315)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(72, 17)
-        Me.Label11.TabIndex = 24
+        Me.Label11.TabIndex = 23
         Me.Label11.Text = "Profesión:"
         '
         'txtNoDocInv
@@ -358,7 +378,7 @@ Partial Class uifEfectivo
         Me.txtNoDocInv.SelectionStart = 0
         Me.txtNoDocInv.ShortcutsEnabled = True
         Me.txtNoDocInv.Size = New System.Drawing.Size(232, 30)
-        Me.txtNoDocInv.TabIndex = 23
+        Me.txtNoDocInv.TabIndex = 22
         Me.txtNoDocInv.UseSelectable = True
         Me.txtNoDocInv.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtNoDocInv.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -369,17 +389,18 @@ Partial Class uifEfectivo
         Me.Label10.Location = New System.Drawing.Point(484, 262)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(128, 17)
-        Me.Label10.TabIndex = 22
+        Me.Label10.TabIndex = 21
         Me.Label10.Text = "No. de documento:"
         '
         'cbTipoDocInv
         '
         Me.cbTipoDocInv.FormattingEnabled = True
         Me.cbTipoDocInv.ItemHeight = 24
+        Me.cbTipoDocInv.Items.AddRange(New Object() {"DUI", "NIT"})
         Me.cbTipoDocInv.Location = New System.Drawing.Point(249, 282)
         Me.cbTipoDocInv.Name = "cbTipoDocInv"
         Me.cbTipoDocInv.Size = New System.Drawing.Size(232, 30)
-        Me.cbTipoDocInv.TabIndex = 21
+        Me.cbTipoDocInv.TabIndex = 20
         Me.cbTipoDocInv.UseSelectable = True
         '
         'Label9
@@ -388,7 +409,7 @@ Partial Class uifEfectivo
         Me.Label9.Location = New System.Drawing.Point(246, 262)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(134, 17)
-        Me.Label9.TabIndex = 20
+        Me.Label9.TabIndex = 19
         Me.Label9.Text = "Tipo de documento:"
         '
         'cbEstadoFamInv
@@ -398,7 +419,7 @@ Partial Class uifEfectivo
         Me.cbEstadoFamInv.Location = New System.Drawing.Point(11, 282)
         Me.cbEstadoFamInv.Name = "cbEstadoFamInv"
         Me.cbEstadoFamInv.Size = New System.Drawing.Size(232, 30)
-        Me.cbEstadoFamInv.TabIndex = 19
+        Me.cbEstadoFamInv.TabIndex = 18
         Me.cbEstadoFamInv.UseSelectable = True
         '
         'Label8
@@ -407,7 +428,7 @@ Partial Class uifEfectivo
         Me.Label8.Location = New System.Drawing.Point(8, 262)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(105, 17)
-        Me.Label8.TabIndex = 18
+        Me.Label8.TabIndex = 17
         Me.Label8.Text = "Estado familiar:"
         '
         'cbNacionalidadInv
@@ -417,7 +438,7 @@ Partial Class uifEfectivo
         Me.cbNacionalidadInv.Location = New System.Drawing.Point(249, 229)
         Me.cbNacionalidadInv.Name = "cbNacionalidadInv"
         Me.cbNacionalidadInv.Size = New System.Drawing.Size(470, 30)
-        Me.cbNacionalidadInv.TabIndex = 17
+        Me.cbNacionalidadInv.TabIndex = 16
         Me.cbNacionalidadInv.UseSelectable = True
         '
         'Label7
@@ -426,17 +447,17 @@ Partial Class uifEfectivo
         Me.Label7.Location = New System.Drawing.Point(246, 209)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 17)
-        Me.Label7.TabIndex = 16
+        Me.Label7.TabIndex = 15
         Me.Label7.Text = "Nacionalidad"
         '
         'dtpNacInv
         '
         Me.dtpNacInv.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpNacInv.Location = New System.Drawing.Point(11, 229)
-        Me.dtpNacInv.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpNacInv.MinimumSize = New System.Drawing.Size(4, 30)
         Me.dtpNacInv.Name = "dtpNacInv"
         Me.dtpNacInv.Size = New System.Drawing.Size(232, 30)
-        Me.dtpNacInv.TabIndex = 15
+        Me.dtpNacInv.TabIndex = 14
         '
         'Label6
         '
@@ -444,7 +465,7 @@ Partial Class uifEfectivo
         Me.Label6.Location = New System.Drawing.Point(13, 209)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(143, 17)
-        Me.Label6.TabIndex = 14
+        Me.Label6.TabIndex = 13
         Me.Label6.Text = "Fecha de nacimiento:"
         '
         'cbDepartamentoInv
@@ -473,7 +494,7 @@ Partial Class uifEfectivo
         Me.cbMunicipioInv.Location = New System.Drawing.Point(410, 176)
         Me.cbMunicipioInv.Name = "cbMunicipioInv"
         Me.cbMunicipioInv.Size = New System.Drawing.Size(309, 30)
-        Me.cbMunicipioInv.TabIndex = 13
+        Me.cbMunicipioInv.TabIndex = 12
         Me.cbMunicipioInv.UseSelectable = True
         '
         'Label4
@@ -638,6 +659,7 @@ Partial Class uifEfectivo
         '
         'MetroTabPage2
         '
+        Me.MetroTabPage2.Controls.Add(Me.btnGuardarB)
         Me.MetroTabPage2.Controls.Add(Me.MetroLabel5)
         Me.MetroTabPage2.Controls.Add(Me.txtDirNomb)
         Me.MetroTabPage2.Controls.Add(Me.Label18)
@@ -678,6 +700,19 @@ Partial Class uifEfectivo
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.VerticalScrollbarSize = 10
         '
+        'btnGuardarB
+        '
+        Me.btnGuardarB.Location = New System.Drawing.Point(627, 462)
+        Me.btnGuardarB.Name = "btnGuardarB"
+        Me.btnGuardarB.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarB.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarB.TabIndex = 93
+        Me.btnGuardarB.Text = "Guardar"
+        Me.btnGuardarB.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarB.UseCustomBackColor = True
+        Me.btnGuardarB.UseSelectable = True
+        Me.btnGuardarB.UseStyleColors = True
+        '
         'MetroLabel5
         '
         Me.MetroLabel5.AutoSize = True
@@ -688,16 +723,17 @@ Partial Class uifEfectivo
         Me.MetroLabel5.Name = "MetroLabel5"
         Me.MetroLabel5.Size = New System.Drawing.Size(181, 25)
         Me.MetroLabel5.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroLabel5.TabIndex = 43
+        Me.MetroLabel5.TabIndex = 2
         Me.MetroLabel5.Text = "B-1 Persona Natural"
         '
         'txtDirNomb
         '
+        Me.txtDirNomb.BackColor = System.Drawing.Color.Gainsboro
         '
         '
         '
         Me.txtDirNomb.CustomButton.Image = Nothing
-        Me.txtDirNomb.CustomButton.Location = New System.Drawing.Point(646, 2)
+        Me.txtDirNomb.CustomButton.Location = New System.Drawing.Point(648, 2)
         Me.txtDirNomb.CustomButton.Name = ""
         Me.txtDirNomb.CustomButton.Size = New System.Drawing.Size(59, 59)
         Me.txtDirNomb.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
@@ -705,6 +741,7 @@ Partial Class uifEfectivo
         Me.txtDirNomb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtDirNomb.CustomButton.UseSelectable = True
         Me.txtDirNomb.CustomButton.Visible = False
+        Me.txtDirNomb.Enabled = False
         Me.txtDirNomb.Lines = New String(-1) {}
         Me.txtDirNomb.Location = New System.Drawing.Point(17, 392)
         Me.txtDirNomb.MaxLength = 32767
@@ -716,8 +753,8 @@ Partial Class uifEfectivo
         Me.txtDirNomb.SelectionLength = 0
         Me.txtDirNomb.SelectionStart = 0
         Me.txtDirNomb.ShortcutsEnabled = True
-        Me.txtDirNomb.Size = New System.Drawing.Size(708, 64)
-        Me.txtDirNomb.TabIndex = 42
+        Me.txtDirNomb.Size = New System.Drawing.Size(710, 64)
+        Me.txtDirNomb.TabIndex = 27
         Me.txtDirNomb.UseSelectable = True
         Me.txtDirNomb.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtDirNomb.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -729,17 +766,18 @@ Partial Class uifEfectivo
         Me.Label18.Location = New System.Drawing.Point(16, 372)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(67, 17)
-        Me.Label18.TabIndex = 41
+        Me.Label18.TabIndex = 26
         Me.Label18.Text = "Dirección"
         '
         'cbProfesionNomb
         '
+        Me.cbProfesionNomb.Enabled = False
         Me.cbProfesionNomb.FormattingEnabled = True
         Me.cbProfesionNomb.ItemHeight = 24
         Me.cbProfesionNomb.Location = New System.Drawing.Point(17, 339)
         Me.cbProfesionNomb.Name = "cbProfesionNomb"
         Me.cbProfesionNomb.Size = New System.Drawing.Size(710, 30)
-        Me.cbProfesionNomb.TabIndex = 40
+        Me.cbProfesionNomb.TabIndex = 25
         Me.cbProfesionNomb.UseSelectable = True
         '
         'Label19
@@ -749,11 +787,12 @@ Partial Class uifEfectivo
         Me.Label19.Location = New System.Drawing.Point(14, 319)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(72, 17)
-        Me.Label19.TabIndex = 39
+        Me.Label19.TabIndex = 24
         Me.Label19.Text = "Profesión:"
         '
         'txtNoDocNomb
         '
+        Me.txtNoDocNomb.BackColor = System.Drawing.Color.Gainsboro
         '
         '
         '
@@ -766,6 +805,7 @@ Partial Class uifEfectivo
         Me.txtNoDocNomb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtNoDocNomb.CustomButton.UseSelectable = True
         Me.txtNoDocNomb.CustomButton.Visible = False
+        Me.txtNoDocNomb.Enabled = False
         Me.txtNoDocNomb.Lines = New String(-1) {}
         Me.txtNoDocNomb.Location = New System.Drawing.Point(493, 286)
         Me.txtNoDocNomb.MaxLength = 32767
@@ -777,7 +817,7 @@ Partial Class uifEfectivo
         Me.txtNoDocNomb.SelectionStart = 0
         Me.txtNoDocNomb.ShortcutsEnabled = True
         Me.txtNoDocNomb.Size = New System.Drawing.Size(232, 30)
-        Me.txtNoDocNomb.TabIndex = 38
+        Me.txtNoDocNomb.TabIndex = 23
         Me.txtNoDocNomb.UseSelectable = True
         Me.txtNoDocNomb.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtNoDocNomb.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -789,17 +829,19 @@ Partial Class uifEfectivo
         Me.Label20.Location = New System.Drawing.Point(490, 261)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(128, 17)
-        Me.Label20.TabIndex = 37
+        Me.Label20.TabIndex = 22
         Me.Label20.Text = "No. de documento:"
         '
         'cbTipoDocNomb
         '
+        Me.cbTipoDocNomb.Enabled = False
         Me.cbTipoDocNomb.FormattingEnabled = True
         Me.cbTipoDocNomb.ItemHeight = 24
+        Me.cbTipoDocNomb.Items.AddRange(New Object() {"DUI", "NIT"})
         Me.cbTipoDocNomb.Location = New System.Drawing.Point(255, 286)
         Me.cbTipoDocNomb.Name = "cbTipoDocNomb"
         Me.cbTipoDocNomb.Size = New System.Drawing.Size(232, 30)
-        Me.cbTipoDocNomb.TabIndex = 36
+        Me.cbTipoDocNomb.TabIndex = 21
         Me.cbTipoDocNomb.UseSelectable = True
         '
         'Label21
@@ -809,17 +851,18 @@ Partial Class uifEfectivo
         Me.Label21.Location = New System.Drawing.Point(252, 261)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(134, 17)
-        Me.Label21.TabIndex = 35
+        Me.Label21.TabIndex = 20
         Me.Label21.Text = "Tipo de documento:"
         '
         'cbEstadoCivilNomb
         '
+        Me.cbEstadoCivilNomb.Enabled = False
         Me.cbEstadoCivilNomb.FormattingEnabled = True
         Me.cbEstadoCivilNomb.ItemHeight = 24
         Me.cbEstadoCivilNomb.Location = New System.Drawing.Point(17, 286)
         Me.cbEstadoCivilNomb.Name = "cbEstadoCivilNomb"
         Me.cbEstadoCivilNomb.Size = New System.Drawing.Size(232, 30)
-        Me.cbEstadoCivilNomb.TabIndex = 34
+        Me.cbEstadoCivilNomb.TabIndex = 19
         Me.cbEstadoCivilNomb.UseSelectable = True
         '
         'Label22
@@ -829,17 +872,18 @@ Partial Class uifEfectivo
         Me.Label22.Location = New System.Drawing.Point(14, 261)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(105, 17)
-        Me.Label22.TabIndex = 33
+        Me.Label22.TabIndex = 18
         Me.Label22.Text = "Estado familiar:"
         '
         'cbNacionalidadNomb
         '
+        Me.cbNacionalidadNomb.Enabled = False
         Me.cbNacionalidadNomb.FormattingEnabled = True
         Me.cbNacionalidadNomb.ItemHeight = 24
         Me.cbNacionalidadNomb.Location = New System.Drawing.Point(255, 228)
         Me.cbNacionalidadNomb.Name = "cbNacionalidadNomb"
         Me.cbNacionalidadNomb.Size = New System.Drawing.Size(470, 30)
-        Me.cbNacionalidadNomb.TabIndex = 32
+        Me.cbNacionalidadNomb.TabIndex = 17
         Me.cbNacionalidadNomb.UseSelectable = True
         '
         'Label23
@@ -849,17 +893,18 @@ Partial Class uifEfectivo
         Me.Label23.Location = New System.Drawing.Point(252, 208)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(90, 17)
-        Me.Label23.TabIndex = 31
+        Me.Label23.TabIndex = 16
         Me.Label23.Text = "Nacionalidad"
         '
         'dtpNacimientoNomb
         '
+        Me.dtpNacimientoNomb.Enabled = False
         Me.dtpNacimientoNomb.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpNacimientoNomb.Location = New System.Drawing.Point(17, 228)
         Me.dtpNacimientoNomb.MinimumSize = New System.Drawing.Size(4, 30)
         Me.dtpNacimientoNomb.Name = "dtpNacimientoNomb"
         Me.dtpNacimientoNomb.Size = New System.Drawing.Size(232, 30)
-        Me.dtpNacimientoNomb.TabIndex = 30
+        Me.dtpNacimientoNomb.TabIndex = 15
         '
         'Label24
         '
@@ -868,17 +913,18 @@ Partial Class uifEfectivo
         Me.Label24.Location = New System.Drawing.Point(14, 208)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(143, 17)
-        Me.Label24.TabIndex = 29
+        Me.Label24.TabIndex = 14
         Me.Label24.Text = "Fecha de nacimiento:"
         '
         'cbDeptoNomb
         '
+        Me.cbDeptoNomb.Enabled = False
         Me.cbDeptoNomb.FormattingEnabled = True
         Me.cbDeptoNomb.ItemHeight = 24
         Me.cbDeptoNomb.Location = New System.Drawing.Point(17, 175)
         Me.cbDeptoNomb.Name = "cbDeptoNomb"
         Me.cbDeptoNomb.Size = New System.Drawing.Size(309, 30)
-        Me.cbDeptoNomb.TabIndex = 20
+        Me.cbDeptoNomb.TabIndex = 11
         Me.cbDeptoNomb.UseSelectable = True
         '
         'Label16
@@ -888,17 +934,18 @@ Partial Class uifEfectivo
         Me.Label16.Location = New System.Drawing.Point(14, 155)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(102, 17)
-        Me.Label16.TabIndex = 19
+        Me.Label16.TabIndex = 10
         Me.Label16.Text = "Departamento:"
         '
         'cbMunNomb
         '
+        Me.cbMunNomb.Enabled = False
         Me.cbMunNomb.FormattingEnabled = True
         Me.cbMunNomb.ItemHeight = 24
         Me.cbMunNomb.Location = New System.Drawing.Point(413, 175)
         Me.cbMunNomb.Name = "cbMunNomb"
         Me.cbMunNomb.Size = New System.Drawing.Size(309, 30)
-        Me.cbMunNomb.TabIndex = 18
+        Me.cbMunNomb.TabIndex = 13
         Me.cbMunNomb.UseSelectable = True
         '
         'Label17
@@ -908,7 +955,7 @@ Partial Class uifEfectivo
         Me.Label17.Location = New System.Drawing.Point(413, 155)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(71, 17)
-        Me.Label17.TabIndex = 17
+        Me.Label17.TabIndex = 12
         Me.Label17.Text = "Municipio:"
         '
         'MetroLabel4
@@ -919,11 +966,12 @@ Partial Class uifEfectivo
         Me.MetroLabel4.Name = "MetroLabel4"
         Me.MetroLabel4.Size = New System.Drawing.Size(145, 20)
         Me.MetroLabel4.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroLabel4.TabIndex = 16
+        Me.MetroLabel4.TabIndex = 9
         Me.MetroLabel4.Text = "Lugar de nacimiento"
         '
         'txtNombresNomb
         '
+        Me.txtNombresNomb.BackColor = System.Drawing.Color.Gainsboro
         '
         '
         '
@@ -936,6 +984,7 @@ Partial Class uifEfectivo
         Me.txtNombresNomb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtNombresNomb.CustomButton.UseSelectable = True
         Me.txtNombresNomb.CustomButton.Visible = False
+        Me.txtNombresNomb.Enabled = False
         Me.txtNombresNomb.Lines = New String(-1) {}
         Me.txtNombresNomb.Location = New System.Drawing.Point(490, 102)
         Me.txtNombresNomb.MaxLength = 32767
@@ -947,7 +996,7 @@ Partial Class uifEfectivo
         Me.txtNombresNomb.SelectionStart = 0
         Me.txtNombresNomb.ShortcutsEnabled = True
         Me.txtNombresNomb.Size = New System.Drawing.Size(232, 30)
-        Me.txtNombresNomb.TabIndex = 15
+        Me.txtNombresNomb.TabIndex = 8
         Me.txtNombresNomb.UseSelectable = True
         Me.txtNombresNomb.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtNombresNomb.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -959,11 +1008,12 @@ Partial Class uifEfectivo
         Me.Label13.Location = New System.Drawing.Point(487, 82)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(69, 17)
-        Me.Label13.TabIndex = 14
+        Me.Label13.TabIndex = 7
         Me.Label13.Text = "Nombres:"
         '
         'txtApellidoCasNom
         '
+        Me.txtApellidoCasNom.BackColor = System.Drawing.Color.Gainsboro
         '
         '
         '
@@ -976,6 +1026,7 @@ Partial Class uifEfectivo
         Me.txtApellidoCasNom.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtApellidoCasNom.CustomButton.UseSelectable = True
         Me.txtApellidoCasNom.CustomButton.Visible = False
+        Me.txtApellidoCasNom.Enabled = False
         Me.txtApellidoCasNom.Lines = New String(-1) {}
         Me.txtApellidoCasNom.Location = New System.Drawing.Point(252, 102)
         Me.txtApellidoCasNom.MaxLength = 32767
@@ -987,7 +1038,7 @@ Partial Class uifEfectivo
         Me.txtApellidoCasNom.SelectionStart = 0
         Me.txtApellidoCasNom.ShortcutsEnabled = True
         Me.txtApellidoCasNom.Size = New System.Drawing.Size(232, 30)
-        Me.txtApellidoCasNom.TabIndex = 13
+        Me.txtApellidoCasNom.TabIndex = 6
         Me.txtApellidoCasNom.UseSelectable = True
         Me.txtApellidoCasNom.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtApellidoCasNom.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -999,11 +1050,12 @@ Partial Class uifEfectivo
         Me.Label14.Location = New System.Drawing.Point(252, 82)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(141, 17)
-        Me.Label14.TabIndex = 12
+        Me.Label14.TabIndex = 5
         Me.Label14.Text = "Apellidos de Casada:"
         '
         'txtApellidosNom
         '
+        Me.txtApellidosNom.BackColor = System.Drawing.Color.Gainsboro
         '
         '
         '
@@ -1016,6 +1068,7 @@ Partial Class uifEfectivo
         Me.txtApellidosNom.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtApellidosNom.CustomButton.UseSelectable = True
         Me.txtApellidosNom.CustomButton.Visible = False
+        Me.txtApellidosNom.Enabled = False
         Me.txtApellidosNom.Lines = New String(-1) {}
         Me.txtApellidosNom.Location = New System.Drawing.Point(17, 102)
         Me.txtApellidosNom.MaxLength = 32767
@@ -1027,7 +1080,7 @@ Partial Class uifEfectivo
         Me.txtApellidosNom.SelectionStart = 0
         Me.txtApellidosNom.ShortcutsEnabled = True
         Me.txtApellidosNom.Size = New System.Drawing.Size(232, 30)
-        Me.txtApellidosNom.TabIndex = 11
+        Me.txtApellidosNom.TabIndex = 4
         Me.txtApellidosNom.UseSelectable = True
         Me.txtApellidosNom.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtApellidosNom.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1039,7 +1092,7 @@ Partial Class uifEfectivo
         Me.Label15.Location = New System.Drawing.Point(14, 82)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(69, 17)
-        Me.Label15.TabIndex = 10
+        Me.Label15.TabIndex = 3
         Me.Label15.Text = "Apellidos:"
         '
         'chkPerJur
@@ -1049,7 +1102,7 @@ Partial Class uifEfectivo
         Me.chkPerJur.Location = New System.Drawing.Point(17, 37)
         Me.chkPerJur.Name = "chkPerJur"
         Me.chkPerJur.Size = New System.Drawing.Size(119, 17)
-        Me.chkPerJur.TabIndex = 4
+        Me.chkPerJur.TabIndex = 1
         Me.chkPerJur.Text = "Persona Juridica"
         Me.chkPerJur.UseSelectable = True
         '
@@ -1062,11 +1115,12 @@ Partial Class uifEfectivo
         Me.MetroLabel3.Name = "MetroLabel3"
         Me.MetroLabel3.Size = New System.Drawing.Size(622, 25)
         Me.MetroLabel3.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroLabel3.TabIndex = 3
+        Me.MetroLabel3.TabIndex = 0
         Me.MetroLabel3.Text = "SECCIÓN B: Personas o personas a cuyo nombre se realiza la transacción"
         '
         'MetroTabPage3
         '
+        Me.MetroTabPage3.Controls.Add(Me.btnGuardarJurB)
         Me.MetroTabPage3.Controls.Add(Me.txtNRCNomb)
         Me.MetroTabPage3.Controls.Add(Me.Label29)
         Me.MetroTabPage3.Controls.Add(Me.txtNitNomb)
@@ -1091,6 +1145,19 @@ Partial Class uifEfectivo
         Me.MetroTabPage3.VerticalScrollbarBarColor = True
         Me.MetroTabPage3.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage3.VerticalScrollbarSize = 10
+        '
+        'btnGuardarJurB
+        '
+        Me.btnGuardarJurB.Location = New System.Drawing.Point(634, 279)
+        Me.btnGuardarJurB.Name = "btnGuardarJurB"
+        Me.btnGuardarJurB.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarJurB.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarJurB.TabIndex = 94
+        Me.btnGuardarJurB.Text = "Guardar"
+        Me.btnGuardarJurB.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarJurB.UseCustomBackColor = True
+        Me.btnGuardarJurB.UseSelectable = True
+        Me.btnGuardarJurB.UseStyleColors = True
         '
         'txtNRCNomb
         '
@@ -1350,6 +1417,7 @@ Partial Class uifEfectivo
         '
         'MetroTabPage4
         '
+        Me.MetroTabPage4.Controls.Add(Me.btnGuardarC)
         Me.MetroTabPage4.Controls.Add(Me.chkJurBene)
         Me.MetroTabPage4.Controls.Add(Me.MetroLabel9)
         Me.MetroTabPage4.Controls.Add(Me.txtDirBene)
@@ -1389,6 +1457,19 @@ Partial Class uifEfectivo
         Me.MetroTabPage4.VerticalScrollbarBarColor = True
         Me.MetroTabPage4.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage4.VerticalScrollbarSize = 10
+        '
+        'btnGuardarC
+        '
+        Me.btnGuardarC.Location = New System.Drawing.Point(623, 477)
+        Me.btnGuardarC.Name = "btnGuardarC"
+        Me.btnGuardarC.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarC.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarC.TabIndex = 95
+        Me.btnGuardarC.Text = "Guardar"
+        Me.btnGuardarC.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarC.UseCustomBackColor = True
+        Me.btnGuardarC.UseSelectable = True
+        Me.btnGuardarC.UseStyleColors = True
         '
         'chkJurBene
         '
@@ -1779,6 +1860,7 @@ Partial Class uifEfectivo
         '
         'MetroTabPage5
         '
+        Me.MetroTabPage5.Controls.Add(Me.btnGuardarCJur)
         Me.MetroTabPage5.Controls.Add(Me.MetroLabel12)
         Me.MetroTabPage5.Controls.Add(Me.txtNrcBene)
         Me.MetroTabPage5.Controls.Add(Me.Label42)
@@ -1803,6 +1885,19 @@ Partial Class uifEfectivo
         Me.MetroTabPage5.VerticalScrollbarBarColor = True
         Me.MetroTabPage5.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage5.VerticalScrollbarSize = 10
+        '
+        'btnGuardarCJur
+        '
+        Me.btnGuardarCJur.Location = New System.Drawing.Point(634, 277)
+        Me.btnGuardarCJur.Name = "btnGuardarCJur"
+        Me.btnGuardarCJur.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarCJur.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarCJur.TabIndex = 95
+        Me.btnGuardarCJur.Text = "Guardar"
+        Me.btnGuardarCJur.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarCJur.UseCustomBackColor = True
+        Me.btnGuardarCJur.UseSelectable = True
+        Me.btnGuardarCJur.UseStyleColors = True
         '
         'MetroLabel12
         '
@@ -2062,6 +2157,8 @@ Partial Class uifEfectivo
         '
         'MetroTabPage6
         '
+        Me.MetroTabPage6.Controls.Add(Me.btnGuardarTran)
+        Me.MetroTabPage6.Controls.Add(Me.txtTipoTran)
         Me.MetroTabPage6.Controls.Add(Me.dtpFehaEnvioReporte)
         Me.MetroTabPage6.Controls.Add(Me.Label61)
         Me.MetroTabPage6.Controls.Add(Me.txtCargoCol)
@@ -2077,7 +2174,6 @@ Partial Class uifEfectivo
         Me.MetroTabPage6.Controls.Add(Me.txtConcepto)
         Me.MetroTabPage6.Controls.Add(Me.Label55)
         Me.MetroTabPage6.Controls.Add(Me.txtClaseProducto)
-        Me.MetroTabPage6.Controls.Add(Me.ctTipoTran)
         Me.MetroTabPage6.Controls.Add(Me.Label54)
         Me.MetroTabPage6.Controls.Add(Me.Label53)
         Me.MetroTabPage6.Controls.Add(Me.txtNumProdcuto)
@@ -2104,6 +2200,50 @@ Partial Class uifEfectivo
         Me.MetroTabPage6.VerticalScrollbarBarColor = True
         Me.MetroTabPage6.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage6.VerticalScrollbarSize = 10
+        '
+        'btnGuardarTran
+        '
+        Me.btnGuardarTran.Location = New System.Drawing.Point(629, 473)
+        Me.btnGuardarTran.Name = "btnGuardarTran"
+        Me.btnGuardarTran.Size = New System.Drawing.Size(100, 32)
+        Me.btnGuardarTran.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarTran.TabIndex = 102
+        Me.btnGuardarTran.Text = "Guardar"
+        Me.btnGuardarTran.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarTran.UseCustomBackColor = True
+        Me.btnGuardarTran.UseSelectable = True
+        Me.btnGuardarTran.UseStyleColors = True
+        '
+        'txtTipoTran
+        '
+        '
+        '
+        '
+        Me.txtTipoTran.CustomButton.Image = Nothing
+        Me.txtTipoTran.CustomButton.Location = New System.Drawing.Point(204, 2)
+        Me.txtTipoTran.CustomButton.Name = ""
+        Me.txtTipoTran.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtTipoTran.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtTipoTran.CustomButton.TabIndex = 1
+        Me.txtTipoTran.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtTipoTran.CustomButton.UseSelectable = True
+        Me.txtTipoTran.CustomButton.Visible = False
+        Me.txtTipoTran.Enabled = False
+        Me.txtTipoTran.Lines = New String(-1) {}
+        Me.txtTipoTran.Location = New System.Drawing.Point(497, 212)
+        Me.txtTipoTran.MaxLength = 32767
+        Me.txtTipoTran.Name = "txtTipoTran"
+        Me.txtTipoTran.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtTipoTran.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtTipoTran.SelectedText = ""
+        Me.txtTipoTran.SelectionLength = 0
+        Me.txtTipoTran.SelectionStart = 0
+        Me.txtTipoTran.ShortcutsEnabled = True
+        Me.txtTipoTran.Size = New System.Drawing.Size(232, 30)
+        Me.txtTipoTran.TabIndex = 101
+        Me.txtTipoTran.UseSelectable = True
+        Me.txtTipoTran.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtTipoTran.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'dtpFehaEnvioReporte
         '
@@ -2139,7 +2279,6 @@ Partial Class uifEfectivo
         Me.txtCargoCol.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtCargoCol.CustomButton.UseSelectable = True
         Me.txtCargoCol.CustomButton.Visible = False
-        Me.txtCargoCol.Enabled = False
         Me.txtCargoCol.Lines = New String(-1) {}
         Me.txtCargoCol.Location = New System.Drawing.Point(240, 437)
         Me.txtCargoCol.MaxLength = 32767
@@ -2401,17 +2540,6 @@ Partial Class uifEfectivo
         Me.txtClaseProducto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtClaseProducto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'ctTipoTran
-        '
-        Me.ctTipoTran.Enabled = False
-        Me.ctTipoTran.FormattingEnabled = True
-        Me.ctTipoTran.ItemHeight = 24
-        Me.ctTipoTran.Location = New System.Drawing.Point(492, 212)
-        Me.ctTipoTran.Name = "ctTipoTran"
-        Me.ctTipoTran.Size = New System.Drawing.Size(232, 30)
-        Me.ctTipoTran.TabIndex = 85
-        Me.ctTipoTran.UseSelectable = True
-        '
         'Label54
         '
         Me.Label54.AutoSize = True
@@ -2632,16 +2760,16 @@ Partial Class uifEfectivo
         'MetroTabPage7
         '
         Me.MetroTabPage7.Controls.Add(Me.btnSaveObligado)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox44)
+        Me.MetroTabPage7.Controls.Add(Me.txtNRCSO)
         Me.MetroTabPage7.Controls.Add(Me.Label69)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox45)
+        Me.MetroTabPage7.Controls.Add(Me.txtNITSO)
         Me.MetroTabPage7.Controls.Add(Me.Label70)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox46)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox47)
+        Me.MetroTabPage7.Controls.Add(Me.txtDescripcionActEcoSO)
+        Me.MetroTabPage7.Controls.Add(Me.txtCodActEcoSO)
         Me.MetroTabPage7.Controls.Add(Me.Label74)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox42)
+        Me.MetroTabPage7.Controls.Add(Me.txtDirComSO)
         Me.MetroTabPage7.Controls.Add(Me.Label67)
-        Me.MetroTabPage7.Controls.Add(Me.MetroTextBox43)
+        Me.MetroTabPage7.Controls.Add(Me.txtRazonSO)
         Me.MetroTabPage7.Controls.Add(Me.Label68)
         Me.MetroTabPage7.Controls.Add(Me.MetroLabel15)
         Me.MetroTabPage7.Controls.Add(Me.MetroTextBox40)
@@ -2687,35 +2815,37 @@ Partial Class uifEfectivo
         Me.btnSaveObligado.UseSelectable = True
         Me.btnSaveObligado.UseStyleColors = True
         '
-        'MetroTextBox44
+        'txtNRCSO
         '
         '
         '
         '
-        Me.MetroTextBox44.CustomButton.Image = Nothing
-        Me.MetroTextBox44.CustomButton.Location = New System.Drawing.Point(204, 2)
-        Me.MetroTextBox44.CustomButton.Name = ""
-        Me.MetroTextBox44.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox44.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox44.CustomButton.TabIndex = 1
-        Me.MetroTextBox44.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox44.CustomButton.UseSelectable = True
-        Me.MetroTextBox44.CustomButton.Visible = False
-        Me.MetroTextBox44.Lines = New String(-1) {}
-        Me.MetroTextBox44.Location = New System.Drawing.Point(256, 455)
-        Me.MetroTextBox44.MaxLength = 32767
-        Me.MetroTextBox44.Name = "MetroTextBox44"
-        Me.MetroTextBox44.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox44.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox44.SelectedText = ""
-        Me.MetroTextBox44.SelectionLength = 0
-        Me.MetroTextBox44.SelectionStart = 0
-        Me.MetroTextBox44.ShortcutsEnabled = True
-        Me.MetroTextBox44.Size = New System.Drawing.Size(232, 30)
-        Me.MetroTextBox44.TabIndex = 90
-        Me.MetroTextBox44.UseSelectable = True
-        Me.MetroTextBox44.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox44.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtNRCSO.CustomButton.Image = Nothing
+        Me.txtNRCSO.CustomButton.Location = New System.Drawing.Point(204, 2)
+        Me.txtNRCSO.CustomButton.Name = ""
+        Me.txtNRCSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtNRCSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtNRCSO.CustomButton.TabIndex = 1
+        Me.txtNRCSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNRCSO.CustomButton.UseSelectable = True
+        Me.txtNRCSO.CustomButton.Visible = False
+        Me.txtNRCSO.Enabled = False
+        Me.txtNRCSO.Lines = New String(-1) {}
+        Me.txtNRCSO.Location = New System.Drawing.Point(256, 455)
+        Me.txtNRCSO.MaxLength = 32767
+        Me.txtNRCSO.Name = "txtNRCSO"
+        Me.txtNRCSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNRCSO.ReadOnly = True
+        Me.txtNRCSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNRCSO.SelectedText = ""
+        Me.txtNRCSO.SelectionLength = 0
+        Me.txtNRCSO.SelectionStart = 0
+        Me.txtNRCSO.ShortcutsEnabled = True
+        Me.txtNRCSO.Size = New System.Drawing.Size(232, 30)
+        Me.txtNRCSO.TabIndex = 90
+        Me.txtNRCSO.UseSelectable = True
+        Me.txtNRCSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNRCSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label69
         '
@@ -2727,35 +2857,37 @@ Partial Class uifEfectivo
         Me.Label69.TabIndex = 89
         Me.Label69.Text = "NRC:"
         '
-        'MetroTextBox45
+        'txtNITSO
         '
         '
         '
         '
-        Me.MetroTextBox45.CustomButton.Image = Nothing
-        Me.MetroTextBox45.CustomButton.Location = New System.Drawing.Point(204, 2)
-        Me.MetroTextBox45.CustomButton.Name = ""
-        Me.MetroTextBox45.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox45.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox45.CustomButton.TabIndex = 1
-        Me.MetroTextBox45.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox45.CustomButton.UseSelectable = True
-        Me.MetroTextBox45.CustomButton.Visible = False
-        Me.MetroTextBox45.Lines = New String(-1) {}
-        Me.MetroTextBox45.Location = New System.Drawing.Point(18, 455)
-        Me.MetroTextBox45.MaxLength = 32767
-        Me.MetroTextBox45.Name = "MetroTextBox45"
-        Me.MetroTextBox45.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox45.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox45.SelectedText = ""
-        Me.MetroTextBox45.SelectionLength = 0
-        Me.MetroTextBox45.SelectionStart = 0
-        Me.MetroTextBox45.ShortcutsEnabled = True
-        Me.MetroTextBox45.Size = New System.Drawing.Size(232, 30)
-        Me.MetroTextBox45.TabIndex = 88
-        Me.MetroTextBox45.UseSelectable = True
-        Me.MetroTextBox45.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox45.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtNITSO.CustomButton.Image = Nothing
+        Me.txtNITSO.CustomButton.Location = New System.Drawing.Point(204, 2)
+        Me.txtNITSO.CustomButton.Name = ""
+        Me.txtNITSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtNITSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtNITSO.CustomButton.TabIndex = 1
+        Me.txtNITSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNITSO.CustomButton.UseSelectable = True
+        Me.txtNITSO.CustomButton.Visible = False
+        Me.txtNITSO.Enabled = False
+        Me.txtNITSO.Lines = New String(-1) {}
+        Me.txtNITSO.Location = New System.Drawing.Point(18, 455)
+        Me.txtNITSO.MaxLength = 32767
+        Me.txtNITSO.Name = "txtNITSO"
+        Me.txtNITSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNITSO.ReadOnly = True
+        Me.txtNITSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNITSO.SelectedText = ""
+        Me.txtNITSO.SelectionLength = 0
+        Me.txtNITSO.SelectionStart = 0
+        Me.txtNITSO.ShortcutsEnabled = True
+        Me.txtNITSO.Size = New System.Drawing.Size(232, 30)
+        Me.txtNITSO.TabIndex = 88
+        Me.txtNITSO.UseSelectable = True
+        Me.txtNITSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNITSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label70
         '
@@ -2767,65 +2899,69 @@ Partial Class uifEfectivo
         Me.Label70.TabIndex = 87
         Me.Label70.Text = "NIT:"
         '
-        'MetroTextBox46
+        'txtDescripcionActEcoSO
         '
         '
         '
         '
-        Me.MetroTextBox46.CustomButton.Image = Nothing
-        Me.MetroTextBox46.CustomButton.Location = New System.Drawing.Point(579, 2)
-        Me.MetroTextBox46.CustomButton.Name = ""
-        Me.MetroTextBox46.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox46.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox46.CustomButton.TabIndex = 1
-        Me.MetroTextBox46.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox46.CustomButton.UseSelectable = True
-        Me.MetroTextBox46.CustomButton.Visible = False
-        Me.MetroTextBox46.Lines = New String(-1) {}
-        Me.MetroTextBox46.Location = New System.Drawing.Point(116, 402)
-        Me.MetroTextBox46.MaxLength = 32767
-        Me.MetroTextBox46.Name = "MetroTextBox46"
-        Me.MetroTextBox46.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox46.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox46.SelectedText = ""
-        Me.MetroTextBox46.SelectionLength = 0
-        Me.MetroTextBox46.SelectionStart = 0
-        Me.MetroTextBox46.ShortcutsEnabled = True
-        Me.MetroTextBox46.Size = New System.Drawing.Size(607, 30)
-        Me.MetroTextBox46.TabIndex = 86
-        Me.MetroTextBox46.UseSelectable = True
-        Me.MetroTextBox46.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox46.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDescripcionActEcoSO.CustomButton.Image = Nothing
+        Me.txtDescripcionActEcoSO.CustomButton.Location = New System.Drawing.Point(579, 2)
+        Me.txtDescripcionActEcoSO.CustomButton.Name = ""
+        Me.txtDescripcionActEcoSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtDescripcionActEcoSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtDescripcionActEcoSO.CustomButton.TabIndex = 1
+        Me.txtDescripcionActEcoSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtDescripcionActEcoSO.CustomButton.UseSelectable = True
+        Me.txtDescripcionActEcoSO.CustomButton.Visible = False
+        Me.txtDescripcionActEcoSO.Enabled = False
+        Me.txtDescripcionActEcoSO.Lines = New String(-1) {}
+        Me.txtDescripcionActEcoSO.Location = New System.Drawing.Point(116, 402)
+        Me.txtDescripcionActEcoSO.MaxLength = 32767
+        Me.txtDescripcionActEcoSO.Name = "txtDescripcionActEcoSO"
+        Me.txtDescripcionActEcoSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDescripcionActEcoSO.ReadOnly = True
+        Me.txtDescripcionActEcoSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtDescripcionActEcoSO.SelectedText = ""
+        Me.txtDescripcionActEcoSO.SelectionLength = 0
+        Me.txtDescripcionActEcoSO.SelectionStart = 0
+        Me.txtDescripcionActEcoSO.ShortcutsEnabled = True
+        Me.txtDescripcionActEcoSO.Size = New System.Drawing.Size(607, 30)
+        Me.txtDescripcionActEcoSO.TabIndex = 86
+        Me.txtDescripcionActEcoSO.UseSelectable = True
+        Me.txtDescripcionActEcoSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtDescripcionActEcoSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroTextBox47
+        'txtCodActEcoSO
         '
         '
         '
         '
-        Me.MetroTextBox47.CustomButton.Image = Nothing
-        Me.MetroTextBox47.CustomButton.Location = New System.Drawing.Point(64, 2)
-        Me.MetroTextBox47.CustomButton.Name = ""
-        Me.MetroTextBox47.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox47.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox47.CustomButton.TabIndex = 1
-        Me.MetroTextBox47.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox47.CustomButton.UseSelectable = True
-        Me.MetroTextBox47.CustomButton.Visible = False
-        Me.MetroTextBox47.Lines = New String(-1) {}
-        Me.MetroTextBox47.Location = New System.Drawing.Point(18, 402)
-        Me.MetroTextBox47.MaxLength = 32767
-        Me.MetroTextBox47.Name = "MetroTextBox47"
-        Me.MetroTextBox47.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox47.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox47.SelectedText = ""
-        Me.MetroTextBox47.SelectionLength = 0
-        Me.MetroTextBox47.SelectionStart = 0
-        Me.MetroTextBox47.ShortcutsEnabled = True
-        Me.MetroTextBox47.Size = New System.Drawing.Size(92, 30)
-        Me.MetroTextBox47.TabIndex = 85
-        Me.MetroTextBox47.UseSelectable = True
-        Me.MetroTextBox47.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox47.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtCodActEcoSO.CustomButton.Image = Nothing
+        Me.txtCodActEcoSO.CustomButton.Location = New System.Drawing.Point(64, 2)
+        Me.txtCodActEcoSO.CustomButton.Name = ""
+        Me.txtCodActEcoSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtCodActEcoSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtCodActEcoSO.CustomButton.TabIndex = 1
+        Me.txtCodActEcoSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtCodActEcoSO.CustomButton.UseSelectable = True
+        Me.txtCodActEcoSO.CustomButton.Visible = False
+        Me.txtCodActEcoSO.Enabled = False
+        Me.txtCodActEcoSO.Lines = New String(-1) {}
+        Me.txtCodActEcoSO.Location = New System.Drawing.Point(18, 402)
+        Me.txtCodActEcoSO.MaxLength = 32767
+        Me.txtCodActEcoSO.Name = "txtCodActEcoSO"
+        Me.txtCodActEcoSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCodActEcoSO.ReadOnly = True
+        Me.txtCodActEcoSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtCodActEcoSO.SelectedText = ""
+        Me.txtCodActEcoSO.SelectionLength = 0
+        Me.txtCodActEcoSO.SelectionStart = 0
+        Me.txtCodActEcoSO.ShortcutsEnabled = True
+        Me.txtCodActEcoSO.Size = New System.Drawing.Size(92, 30)
+        Me.txtCodActEcoSO.TabIndex = 85
+        Me.txtCodActEcoSO.UseSelectable = True
+        Me.txtCodActEcoSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtCodActEcoSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label74
         '
@@ -2837,35 +2973,37 @@ Partial Class uifEfectivo
         Me.Label74.TabIndex = 84
         Me.Label74.Text = "Actividad Económica:"
         '
-        'MetroTextBox42
+        'txtDirComSO
         '
         '
         '
         '
-        Me.MetroTextBox42.CustomButton.Image = Nothing
-        Me.MetroTextBox42.CustomButton.Location = New System.Drawing.Point(677, 2)
-        Me.MetroTextBox42.CustomButton.Name = ""
-        Me.MetroTextBox42.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox42.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox42.CustomButton.TabIndex = 1
-        Me.MetroTextBox42.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox42.CustomButton.UseSelectable = True
-        Me.MetroTextBox42.CustomButton.Visible = False
-        Me.MetroTextBox42.Lines = New String(-1) {}
-        Me.MetroTextBox42.Location = New System.Drawing.Point(18, 349)
-        Me.MetroTextBox42.MaxLength = 32767
-        Me.MetroTextBox42.Name = "MetroTextBox42"
-        Me.MetroTextBox42.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox42.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox42.SelectedText = ""
-        Me.MetroTextBox42.SelectionLength = 0
-        Me.MetroTextBox42.SelectionStart = 0
-        Me.MetroTextBox42.ShortcutsEnabled = True
-        Me.MetroTextBox42.Size = New System.Drawing.Size(705, 30)
-        Me.MetroTextBox42.TabIndex = 83
-        Me.MetroTextBox42.UseSelectable = True
-        Me.MetroTextBox42.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox42.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDirComSO.CustomButton.Image = Nothing
+        Me.txtDirComSO.CustomButton.Location = New System.Drawing.Point(677, 2)
+        Me.txtDirComSO.CustomButton.Name = ""
+        Me.txtDirComSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtDirComSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtDirComSO.CustomButton.TabIndex = 1
+        Me.txtDirComSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtDirComSO.CustomButton.UseSelectable = True
+        Me.txtDirComSO.CustomButton.Visible = False
+        Me.txtDirComSO.Enabled = False
+        Me.txtDirComSO.Lines = New String(-1) {}
+        Me.txtDirComSO.Location = New System.Drawing.Point(18, 349)
+        Me.txtDirComSO.MaxLength = 32767
+        Me.txtDirComSO.Name = "txtDirComSO"
+        Me.txtDirComSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDirComSO.ReadOnly = True
+        Me.txtDirComSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtDirComSO.SelectedText = ""
+        Me.txtDirComSO.SelectionLength = 0
+        Me.txtDirComSO.SelectionStart = 0
+        Me.txtDirComSO.ShortcutsEnabled = True
+        Me.txtDirComSO.Size = New System.Drawing.Size(705, 30)
+        Me.txtDirComSO.TabIndex = 83
+        Me.txtDirComSO.UseSelectable = True
+        Me.txtDirComSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtDirComSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label67
         '
@@ -2877,35 +3015,37 @@ Partial Class uifEfectivo
         Me.Label67.TabIndex = 82
         Me.Label67.Text = "Dirección Comercial:"
         '
-        'MetroTextBox43
+        'txtRazonSO
         '
         '
         '
         '
-        Me.MetroTextBox43.CustomButton.Image = Nothing
-        Me.MetroTextBox43.CustomButton.Location = New System.Drawing.Point(677, 2)
-        Me.MetroTextBox43.CustomButton.Name = ""
-        Me.MetroTextBox43.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox43.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroTextBox43.CustomButton.TabIndex = 1
-        Me.MetroTextBox43.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox43.CustomButton.UseSelectable = True
-        Me.MetroTextBox43.CustomButton.Visible = False
-        Me.MetroTextBox43.Lines = New String(-1) {}
-        Me.MetroTextBox43.Location = New System.Drawing.Point(18, 296)
-        Me.MetroTextBox43.MaxLength = 32767
-        Me.MetroTextBox43.Name = "MetroTextBox43"
-        Me.MetroTextBox43.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox43.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox43.SelectedText = ""
-        Me.MetroTextBox43.SelectionLength = 0
-        Me.MetroTextBox43.SelectionStart = 0
-        Me.MetroTextBox43.ShortcutsEnabled = True
-        Me.MetroTextBox43.Size = New System.Drawing.Size(705, 30)
-        Me.MetroTextBox43.TabIndex = 81
-        Me.MetroTextBox43.UseSelectable = True
-        Me.MetroTextBox43.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox43.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtRazonSO.CustomButton.Image = Nothing
+        Me.txtRazonSO.CustomButton.Location = New System.Drawing.Point(677, 2)
+        Me.txtRazonSO.CustomButton.Name = ""
+        Me.txtRazonSO.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtRazonSO.CustomButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.txtRazonSO.CustomButton.TabIndex = 1
+        Me.txtRazonSO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtRazonSO.CustomButton.UseSelectable = True
+        Me.txtRazonSO.CustomButton.Visible = False
+        Me.txtRazonSO.Enabled = False
+        Me.txtRazonSO.Lines = New String(-1) {}
+        Me.txtRazonSO.Location = New System.Drawing.Point(18, 296)
+        Me.txtRazonSO.MaxLength = 32767
+        Me.txtRazonSO.Name = "txtRazonSO"
+        Me.txtRazonSO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtRazonSO.ReadOnly = True
+        Me.txtRazonSO.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtRazonSO.SelectedText = ""
+        Me.txtRazonSO.SelectionLength = 0
+        Me.txtRazonSO.SelectionStart = 0
+        Me.txtRazonSO.ShortcutsEnabled = True
+        Me.txtRazonSO.Size = New System.Drawing.Size(705, 30)
+        Me.txtRazonSO.TabIndex = 81
+        Me.txtRazonSO.UseSelectable = True
+        Me.txtRazonSO.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtRazonSO.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label68
         '
@@ -2944,11 +3084,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox40.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox40.CustomButton.UseSelectable = True
         Me.MetroTextBox40.CustomButton.Visible = False
+        Me.MetroTextBox40.Enabled = False
         Me.MetroTextBox40.Lines = New String(-1) {}
         Me.MetroTextBox40.Location = New System.Drawing.Point(116, 164)
         Me.MetroTextBox40.MaxLength = 32767
         Me.MetroTextBox40.Name = "MetroTextBox40"
         Me.MetroTextBox40.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox40.ReadOnly = True
         Me.MetroTextBox40.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox40.SelectedText = ""
         Me.MetroTextBox40.SelectionLength = 0
@@ -2974,11 +3116,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox41.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox41.CustomButton.UseSelectable = True
         Me.MetroTextBox41.CustomButton.Visible = False
+        Me.MetroTextBox41.Enabled = False
         Me.MetroTextBox41.Lines = New String(-1) {}
         Me.MetroTextBox41.Location = New System.Drawing.Point(18, 164)
         Me.MetroTextBox41.MaxLength = 32767
         Me.MetroTextBox41.Name = "MetroTextBox41"
         Me.MetroTextBox41.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox41.ReadOnly = True
         Me.MetroTextBox41.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox41.SelectedText = ""
         Me.MetroTextBox41.SelectionLength = 0
@@ -3014,11 +3158,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox39.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox39.CustomButton.UseSelectable = True
         Me.MetroTextBox39.CustomButton.Visible = False
+        Me.MetroTextBox39.Enabled = False
         Me.MetroTextBox39.Lines = New String(-1) {}
         Me.MetroTextBox39.Location = New System.Drawing.Point(18, 111)
         Me.MetroTextBox39.MaxLength = 32767
         Me.MetroTextBox39.Name = "MetroTextBox39"
         Me.MetroTextBox39.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox39.ReadOnly = True
         Me.MetroTextBox39.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox39.SelectedText = ""
         Me.MetroTextBox39.SelectionLength = 0
@@ -3054,11 +3200,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox34.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox34.CustomButton.UseSelectable = True
         Me.MetroTextBox34.CustomButton.Visible = False
+        Me.MetroTextBox34.Enabled = False
         Me.MetroTextBox34.Lines = New String(-1) {}
         Me.MetroTextBox34.Location = New System.Drawing.Point(491, 111)
         Me.MetroTextBox34.MaxLength = 32767
         Me.MetroTextBox34.Name = "MetroTextBox34"
         Me.MetroTextBox34.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox34.ReadOnly = True
         Me.MetroTextBox34.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox34.SelectedText = ""
         Me.MetroTextBox34.SelectionLength = 0
@@ -3094,11 +3242,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox38.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox38.CustomButton.UseSelectable = True
         Me.MetroTextBox38.CustomButton.Visible = False
+        Me.MetroTextBox38.Enabled = False
         Me.MetroTextBox38.Lines = New String(-1) {}
         Me.MetroTextBox38.Location = New System.Drawing.Point(253, 111)
         Me.MetroTextBox38.MaxLength = 32767
         Me.MetroTextBox38.Name = "MetroTextBox38"
         Me.MetroTextBox38.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox38.ReadOnly = True
         Me.MetroTextBox38.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox38.SelectedText = ""
         Me.MetroTextBox38.SelectionLength = 0
@@ -3147,11 +3297,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox33.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox33.CustomButton.UseSelectable = True
         Me.MetroTextBox33.CustomButton.Visible = False
+        Me.MetroTextBox33.Enabled = False
         Me.MetroTextBox33.Lines = New String(-1) {}
         Me.MetroTextBox33.Location = New System.Drawing.Point(18, 217)
         Me.MetroTextBox33.MaxLength = 32767
         Me.MetroTextBox33.Name = "MetroTextBox33"
         Me.MetroTextBox33.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox33.ReadOnly = True
         Me.MetroTextBox33.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox33.SelectedText = ""
         Me.MetroTextBox33.SelectionLength = 0
@@ -3187,11 +3339,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox35.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox35.CustomButton.UseSelectable = True
         Me.MetroTextBox35.CustomButton.Visible = False
+        Me.MetroTextBox35.Enabled = False
         Me.MetroTextBox35.Lines = New String(-1) {}
         Me.MetroTextBox35.Location = New System.Drawing.Point(491, 58)
         Me.MetroTextBox35.MaxLength = 32767
         Me.MetroTextBox35.Name = "MetroTextBox35"
         Me.MetroTextBox35.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox35.ReadOnly = True
         Me.MetroTextBox35.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox35.SelectedText = ""
         Me.MetroTextBox35.SelectionLength = 0
@@ -3227,11 +3381,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox36.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox36.CustomButton.UseSelectable = True
         Me.MetroTextBox36.CustomButton.Visible = False
+        Me.MetroTextBox36.Enabled = False
         Me.MetroTextBox36.Lines = New String(-1) {}
         Me.MetroTextBox36.Location = New System.Drawing.Point(253, 58)
         Me.MetroTextBox36.MaxLength = 32767
         Me.MetroTextBox36.Name = "MetroTextBox36"
         Me.MetroTextBox36.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox36.ReadOnly = True
         Me.MetroTextBox36.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox36.SelectedText = ""
         Me.MetroTextBox36.SelectionLength = 0
@@ -3267,11 +3423,13 @@ Partial Class uifEfectivo
         Me.MetroTextBox37.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.MetroTextBox37.CustomButton.UseSelectable = True
         Me.MetroTextBox37.CustomButton.Visible = False
+        Me.MetroTextBox37.Enabled = False
         Me.MetroTextBox37.Lines = New String(-1) {}
         Me.MetroTextBox37.Location = New System.Drawing.Point(18, 58)
         Me.MetroTextBox37.MaxLength = 32767
         Me.MetroTextBox37.Name = "MetroTextBox37"
         Me.MetroTextBox37.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MetroTextBox37.ReadOnly = True
         Me.MetroTextBox37.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.MetroTextBox37.SelectedText = ""
         Me.MetroTextBox37.SelectionLength = 0
@@ -3300,6 +3458,7 @@ Partial Class uifEfectivo
         Me.ClientSize = New System.Drawing.Size(793, 730)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.Name = "uifEfectivo"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "uifEfectivo"
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
@@ -3427,7 +3586,6 @@ Partial Class uifEfectivo
     Friend WithEvents Label42 As Label
     Friend WithEvents txtNitBene As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label43 As Label
-    Friend WithEvents txtDescActEcoBene As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtCodActEcoBene As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label44 As Label
     Friend WithEvents txtDirComercialBene As MetroFramework.Controls.MetroTextBox
@@ -3437,7 +3595,6 @@ Partial Class uifEfectivo
     Friend WithEvents MetroLabel11 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroTabPage6 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents txtClaseProducto As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents ctTipoTran As MetroFramework.Controls.MetroComboBox
     Friend WithEvents Label54 As Label
     Friend WithEvents Label53 As Label
     Friend WithEvents txtNumProdcuto As MetroFramework.Controls.MetroTextBox
@@ -3468,16 +3625,16 @@ Partial Class uifEfectivo
     Friend WithEvents txtValor As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label57 As Label
     Friend WithEvents MetroTabPage7 As MetroFramework.Controls.MetroTabPage
-    Friend WithEvents MetroTextBox44 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtNRCSO As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label69 As Label
-    Friend WithEvents MetroTextBox45 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtNITSO As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label70 As Label
-    Friend WithEvents MetroTextBox46 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox47 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtDescripcionActEcoSO As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtCodActEcoSO As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label74 As Label
-    Friend WithEvents MetroTextBox42 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtDirComSO As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label67 As Label
-    Friend WithEvents MetroTextBox43 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtRazonSO As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label68 As Label
     Friend WithEvents MetroLabel15 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroTextBox40 As MetroFramework.Controls.MetroTextBox
@@ -3499,4 +3656,12 @@ Partial Class uifEfectivo
     Friend WithEvents MetroTextBox37 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label73 As Label
     Friend WithEvents btnSaveObligado As MetroFramework.Controls.MetroButton
+    Friend WithEvents txtDescActEcoBene As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtTipoTran As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents btnGuardarA As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarB As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarJurB As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarC As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarCJur As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarTran As MetroFramework.Controls.MetroButton
 End Class

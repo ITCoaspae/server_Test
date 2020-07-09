@@ -1,13 +1,9 @@
-'Imports AlcalaLibs
-'Imports sifLib
+
 Imports System.Net.Mail
-Imports System.Net.Mime
-'Imports SIF_ERP.resMain
-Imports System.Drawing.Bitmap
 
 Module Main
     Public sUsuario As String = "", sPassword As String = "", sRol As String, sAnnio As Integer = Now.Year, sSucursal, sPC As String
-    Public ofrmMain As New frmMAIN, vEmpresa As String
+    Public vEmpresa As String
     Public PFecha As DateTime
     Public vNocta As String
     Public vDui As String
@@ -17,10 +13,11 @@ Module Main
     Public pCodCajero As Integer
     Public pNocaja As Integer
     Public mensajeError As String = "Error. Por favor comunicarse con el administrador de sistema."
-    Sub Main()
-        Application.Run(ofrmMain)
-        sAnnio = Now.Year
-    End Sub
+    Public mensajeIngresoRegistro As String = "Registro ingresado exitosamente."
+    Public mensajeUpdateRegistro As String = "Registro actualizado exitosamente."
+    Public mensajeDeleteRegistro As String = "Registro eliminado exitosamente."
+
+
     Public Function EnviarCorreo(ByVal adjunto As Boolean, ByRef mensaje As String, ByVal from As String, _
                                     ByVal toAddress As String, ByVal subject As String, ByVal body As String, _
                                     ByVal filename As String) As Boolean
@@ -33,10 +30,7 @@ Module Main
         correo.IsBodyHtml = False
         correo.Priority = System.Net.Mail.MailPriority.Normal
         If adjunto Then 'SI LLEVA DOCUMENTO ADJUNTO
-            'Dim archivo As String
-            'Dim filename As String
-            'archivo = RTrim(LTrim(lote)) & ".pdf"
-            'filename = HttpRuntime.AppDomainAppPath & "Adjunto/" & archivo
+
             correo.Attachments.Add(New System.Net.Mail.Attachment(filename))
         End If
         Dim smtp As New System.Net.Mail.SmtpClient
@@ -59,7 +53,7 @@ Module Main
             Dim htmlBody As String = "<html><body><br><img src=""cid:Pic1""></body></html>"
             Dim avHtml As AlternateView = AlternateView.CreateAlternateViewFromString _
             (htmlBody, Nothing, System.Net.Mime.MediaTypeNames.Text.Html)
-            Dim pic1 As LinkedResource = New LinkedResource(System.IO.Directory.GetCurrentDirectory + "\ImagenesCorreo\Tarjeta_Cumpleaños.jpg", System.Net.Mime.MediaTypeNames.Image.Jpeg)
+            Dim pic1 As LinkedResource = New LinkedResource(System.IO.Directory.GetCurrentDirectory + "", System.Net.Mime.MediaTypeNames.Image.Jpeg)
             pic1.ContentId = "Pic1"
             avHtml.LinkedResources.Add(pic1)
             Dim textBody As String = "Debe utilizar un cliente de correo electrónico que soporta mensajes HTML"

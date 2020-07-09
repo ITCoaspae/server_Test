@@ -48,26 +48,26 @@ Public Class frmMsCrRangosLineaCred
         'txtCodLineaCredito
         '
         Me.txtCodLineaCredito.BackColor = System.Drawing.Color.White
-        Me.txtCodLineaCredito.Location = New System.Drawing.Point(125, 60)
+        Me.txtCodLineaCredito.Location = New System.Drawing.Point(150, 69)
         Me.txtCodLineaCredito.MaxLength = 10
         Me.txtCodLineaCredito.Name = "txtCodLineaCredito"
-        Me.txtCodLineaCredito.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodLineaCredito.Size = New System.Drawing.Size(77, 22)
         Me.txtCodLineaCredito.TabIndex = 0
         '
         'txtLineaCredito
         '
         Me.txtLineaCredito.BackColor = System.Drawing.Color.White
-        Me.txtLineaCredito.Location = New System.Drawing.Point(195, 60)
+        Me.txtLineaCredito.Location = New System.Drawing.Point(234, 69)
         Me.txtLineaCredito.MaxLength = 255
         Me.txtLineaCredito.Name = "txtLineaCredito"
-        Me.txtLineaCredito.Size = New System.Drawing.Size(347, 20)
+        Me.txtLineaCredito.Size = New System.Drawing.Size(416, 22)
         Me.txtLineaCredito.TabIndex = 1
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(23, 60)
+        Me.Label5.Location = New System.Drawing.Point(28, 69)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 16)
+        Me.Label5.Size = New System.Drawing.Size(115, 19)
         Me.Label5.TabIndex = 82
         Me.Label5.Text = "Línea de Crédito:"
         '
@@ -76,19 +76,20 @@ Public Class frmMsCrRangosLineaCred
         Me.fg.AllowEditing = False
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(26, 122)
+        Me.fg.Location = New System.Drawing.Point(31, 141)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 21
         Me.fg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fg.Size = New System.Drawing.Size(516, 240)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Size = New System.Drawing.Size(619, 277)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'btDel1
         '
-        Me.btDel1.Location = New System.Drawing.Point(107, 88)
+        Me.btDel1.Location = New System.Drawing.Point(128, 102)
         Me.btDel1.Name = "btDel1"
-        Me.btDel1.Size = New System.Drawing.Size(75, 28)
+        Me.btDel1.Size = New System.Drawing.Size(90, 32)
         Me.btDel1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDel1.TabIndex = 217
         Me.btDel1.Text = "Eliminar"
@@ -98,9 +99,9 @@ Public Class frmMsCrRangosLineaCred
         '
         'btNew1
         '
-        Me.btNew1.Location = New System.Drawing.Point(26, 88)
+        Me.btNew1.Location = New System.Drawing.Point(31, 102)
         Me.btNew1.Name = "btNew1"
-        Me.btNew1.Size = New System.Drawing.Size(75, 28)
+        Me.btNew1.Size = New System.Drawing.Size(90, 32)
         Me.btNew1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNew1.TabIndex = 216
         Me.btNew1.Text = "Nuevo"
@@ -110,9 +111,9 @@ Public Class frmMsCrRangosLineaCred
         '
         'frmMsCrRangosLineaCred
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(559, 406)
+        Me.ClientSize = New System.Drawing.Size(671, 468)
         Me.Controls.Add(Me.txtLineaCredito)
         Me.Controls.Add(Me.txtCodLineaCredito)
         Me.Controls.Add(Me.btDel1)
@@ -120,9 +121,9 @@ Public Class frmMsCrRangosLineaCred
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.fg)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(559, 406)
+        Me.MaximumSize = New System.Drawing.Size(671, 468)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(559, 406)
+        Me.MinimumSize = New System.Drawing.Size(671, 468)
         Me.Name = "frmMsCrRangosLineaCred"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -155,7 +156,7 @@ Public Class frmMsCrRangosLineaCred
                 Encabezado()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -186,7 +187,7 @@ Public Class frmMsCrRangosLineaCred
             frm.ShowDialog()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -204,7 +205,7 @@ Public Class frmMsCrRangosLineaCred
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

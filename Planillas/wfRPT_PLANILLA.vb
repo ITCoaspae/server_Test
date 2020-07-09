@@ -115,7 +115,7 @@ Public Class wfRPT_PLANILLA
             End If
             LlenarPlanilla(Me.txtCodPlanilla.Text.Trim, opcion, Me.cbAreas.SelectedValue.ToString.Trim, Me.cbDepartamento.SelectedValue.ToString.Trim)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

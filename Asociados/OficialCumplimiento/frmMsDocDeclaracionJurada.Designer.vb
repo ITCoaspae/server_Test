@@ -37,9 +37,10 @@ Partial Class frmMsDocDeclaracionJurada
         'lblTipoDocumento
         '
         Me.lblTipoDocumento.AutoSize = True
-        Me.lblTipoDocumento.Location = New System.Drawing.Point(6, 11)
+        Me.lblTipoDocumento.Location = New System.Drawing.Point(8, 14)
+        Me.lblTipoDocumento.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTipoDocumento.Name = "lblTipoDocumento"
-        Me.lblTipoDocumento.Size = New System.Drawing.Size(89, 13)
+        Me.lblTipoDocumento.Size = New System.Drawing.Size(116, 17)
         Me.lblTipoDocumento.TabIndex = 0
         Me.lblTipoDocumento.Text = "Tipo Documento:"
         '
@@ -48,17 +49,19 @@ Partial Class frmMsDocDeclaracionJurada
         Me.cbTipoDoc.BackColor = System.Drawing.Color.White
         Me.cbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipoDoc.FormattingEnabled = True
-        Me.cbTipoDoc.Location = New System.Drawing.Point(101, 8)
+        Me.cbTipoDoc.Location = New System.Drawing.Point(135, 10)
+        Me.cbTipoDoc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbTipoDoc.Name = "cbTipoDoc"
-        Me.cbTipoDoc.Size = New System.Drawing.Size(200, 21)
+        Me.cbTipoDoc.Size = New System.Drawing.Size(265, 24)
         Me.cbTipoDoc.TabIndex = 1
         '
         'lblPlazoEntrega
         '
         Me.lblPlazoEntrega.AutoSize = True
-        Me.lblPlazoEntrega.Location = New System.Drawing.Point(6, 37)
+        Me.lblPlazoEntrega.Location = New System.Drawing.Point(8, 46)
+        Me.lblPlazoEntrega.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPlazoEntrega.Name = "lblPlazoEntrega"
-        Me.lblPlazoEntrega.Size = New System.Drawing.Size(74, 26)
+        Me.lblPlazoEntrega.Size = New System.Drawing.Size(98, 34)
         Me.lblPlazoEntrega.TabIndex = 2
         Me.lblPlazoEntrega.Text = "Plazo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Entrega(días):"
         '
@@ -67,26 +70,29 @@ Partial Class frmMsDocDeclaracionJurada
         Me.cbPlazo.BackColor = System.Drawing.Color.White
         Me.cbPlazo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbPlazo.FormattingEnabled = True
-        Me.cbPlazo.Location = New System.Drawing.Point(101, 42)
+        Me.cbPlazo.Location = New System.Drawing.Point(135, 52)
+        Me.cbPlazo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbPlazo.Name = "cbPlazo"
-        Me.cbPlazo.Size = New System.Drawing.Size(114, 21)
+        Me.cbPlazo.Size = New System.Drawing.Size(151, 24)
         Me.cbPlazo.TabIndex = 3
         '
         'lblFechaEntrega
         '
         Me.lblFechaEntrega.AutoSize = True
-        Me.lblFechaEntrega.Location = New System.Drawing.Point(221, 46)
+        Me.lblFechaEntrega.Location = New System.Drawing.Point(295, 57)
+        Me.lblFechaEntrega.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFechaEntrega.Name = "lblFechaEntrega"
-        Me.lblFechaEntrega.Size = New System.Drawing.Size(80, 13)
+        Me.lblFechaEntrega.Size = New System.Drawing.Size(105, 17)
         Me.lblFechaEntrega.TabIndex = 4
         Me.lblFechaEntrega.Text = "Fecha Entrega:"
         '
         'dtpFechaEntrega
         '
         Me.dtpFechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaEntrega.Location = New System.Drawing.Point(307, 43)
+        Me.dtpFechaEntrega.Location = New System.Drawing.Point(409, 53)
+        Me.dtpFechaEntrega.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpFechaEntrega.Name = "dtpFechaEntrega"
-        Me.dtpFechaEntrega.Size = New System.Drawing.Size(106, 20)
+        Me.dtpFechaEntrega.Size = New System.Drawing.Size(140, 22)
         Me.dtpFechaEntrega.TabIndex = 5
         '
         'Panel1
@@ -99,26 +105,30 @@ Partial Class frmMsDocDeclaracionJurada
         Me.Panel1.Controls.Add(Me.lblFechaEntrega)
         Me.Panel1.Controls.Add(Me.cbTipoDoc)
         Me.Panel1.Controls.Add(Me.lblPlazoEntrega)
-        Me.Panel1.Location = New System.Drawing.Point(23, 63)
+        Me.Panel1.Location = New System.Drawing.Point(31, 78)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(417, 71)
+        Me.Panel1.Size = New System.Drawing.Size(556, 87)
         Me.Panel1.TabIndex = 6
         '
         'chkPresentoDoc
         '
         Me.chkPresentoDoc.AutoSize = True
-        Me.chkPresentoDoc.Location = New System.Drawing.Point(312, 7)
+        Me.chkPresentoDoc.Location = New System.Drawing.Point(416, 9)
+        Me.chkPresentoDoc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkPresentoDoc.Name = "chkPresentoDoc"
-        Me.chkPresentoDoc.Size = New System.Drawing.Size(101, 30)
+        Me.chkPresentoDoc.Size = New System.Drawing.Size(128, 38)
         Me.chkPresentoDoc.TabIndex = 6
         Me.chkPresentoDoc.Text = "Presento " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Documentación"
         Me.chkPresentoDoc.UseVisualStyleBackColor = True
         '
         'btnGuardarDom
         '
-        Me.btnGuardarDom.Location = New System.Drawing.Point(366, 140)
+        Me.btnGuardarDom.Location = New System.Drawing.Point(488, 172)
+        Me.btnGuardarDom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardarDom.Name = "btnGuardarDom"
-        Me.btnGuardarDom.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardarDom.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarDom.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarDom.TabIndex = 158
         Me.btnGuardarDom.Text = "Guardar"
         Me.btnGuardarDom.UseSelectable = True
@@ -126,15 +136,18 @@ Partial Class frmMsDocDeclaracionJurada
         '
         'frmMsDocDeclaracionJurada
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(464, 185)
+        Me.ClientSize = New System.Drawing.Size(619, 228)
         Me.Controls.Add(Me.btnGuardarDom)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsDocDeclaracionJurada"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Documentos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

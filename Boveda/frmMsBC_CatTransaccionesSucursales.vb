@@ -83,7 +83,7 @@
         Try
             Llenardg(Me.cbSucursales.SelectedValue, Me.cbTransacciones.SelectedValue)
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -219,8 +219,14 @@
         Try
             Llenardg(Me.cbSucursales.SelectedValue, Me.cbTransacciones.SelectedValue)
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMsBC_CatTransaccionesSucursales_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 #End Region
 

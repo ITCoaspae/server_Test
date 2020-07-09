@@ -274,7 +274,7 @@ Public Class frmRepColocacionCredito
             txtCodTipoCredito.Text = ofrm.Resultado.Trim
             txtTipoCredito.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -301,7 +301,7 @@ Public Class frmRepColocacionCredito
             Me.txtCodTipoGarantia.Text = ofrm.Resultado.Trim
             Me.txtTipoGarantia.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -322,20 +322,14 @@ Public Class frmRepColocacionCredito
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btProcesar1_Click(sender As Object, e As EventArgs) Handles btProcesar1.Click
         Try
             If NumReporte = 1 Then
-                Dim ds As New Data.DataSet
-                Dim oItem As New wrPrestamo.wsLibPrest
-                Dim pAceptada As Boolean = False
-                Dim crColCred As New crRepColocacionCredito
-                ds = oItem.ReporteColocacionCreditos(Me.dtpFechaInicio.Value.ToShortDateString, Me.dtpFechaFin.Value.ToShortDateString, Me.chkTodos.Checked, Me.txtCodTipoCredito.Text.Trim, Me.chkGarantia.Checked, Me.txtCodTipoGarantia.Text.Trim, sUsuario, sPassword, sSucursal)
-                Dim ofrm As New frmVisor(ds, 46, 0)
-                ofrm.ShowDialog()
+
             ElseIf NumReporte = 2 Then 'PRÉSTAMOS POR PLAZO
                 Dim ds As New Data.DataSet, oPrest As New wrPrestamo.wsLibPrest
                 ds = oPrest.Prestamos_Agrupados(Me.dtpFechaInicio.Value.ToShortDateString, Me.dtpFechaFin.Value.ToShortDateString, 1, Me.chkTodos.Checked, Me.txtCodTipoCredito.Text.Trim, sUsuario, sPassword, sSucursal)
@@ -348,7 +342,7 @@ Public Class frmRepColocacionCredito
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

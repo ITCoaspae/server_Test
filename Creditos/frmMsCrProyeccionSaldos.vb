@@ -495,7 +495,7 @@ Public Class frmMsCrProyeccionSaldos
                 txtCodPrestamo_LostFocus(sender, e)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -533,7 +533,7 @@ Public Class frmMsCrProyeccionSaldos
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -560,7 +560,7 @@ Public Class frmMsCrProyeccionSaldos
                 Me.txtNoSocio.Text = dr("NoSocio")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -600,7 +600,7 @@ Public Class frmMsCrProyeccionSaldos
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -637,7 +637,7 @@ Public Class frmMsCrProyeccionSaldos
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -648,7 +648,7 @@ Public Class frmMsCrProyeccionSaldos
             Dim ofrm As New frmVisor(ds, 113, 0)
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -659,7 +659,7 @@ Public Class frmMsCrProyeccionSaldos
             Limpiar()
             Me.rsVISOR.Clear()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

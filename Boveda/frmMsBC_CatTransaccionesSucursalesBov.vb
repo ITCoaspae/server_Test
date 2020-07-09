@@ -163,6 +163,12 @@
             MsgBox("Error, por favor comunicarse con el administrador del sistema." + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Módulo - Bóveda")
         End Try
     End Sub
+
+    Private Sub frmMsBC_CatTransaccionesSucursalesBov_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 #End Region
 
 

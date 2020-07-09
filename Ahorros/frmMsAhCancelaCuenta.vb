@@ -30,11 +30,6 @@ Public Class frmMsAhCancelaCuenta
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents gbCancela As System.Windows.Forms.GroupBox
     Friend WithEvents dtpFecCanc As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents txtEjecMercadeoCanc As System.Windows.Forms.TextBox
@@ -43,7 +38,6 @@ Public Class frmMsAhCancelaCuenta
     Friend WithEvents txtMotivoCancela As System.Windows.Forms.TextBox
     Friend WithEvents Label45 As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.gbCancela = New System.Windows.Forms.GroupBox()
         Me.dtpFecCanc = New System.Windows.Forms.DateTimePicker()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.txtEjecMercadeoCanc = New System.Windows.Forms.TextBox()
@@ -52,46 +46,26 @@ Public Class frmMsAhCancelaCuenta
         Me.txtMotivoCancela = New System.Windows.Forms.TextBox()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
-        Me.gbCancela.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'gbCancela
-        '
-        Me.gbCancela.BackColor = System.Drawing.Color.White
-        Me.gbCancela.Controls.Add(Me.dtpFecCanc)
-        Me.gbCancela.Controls.Add(Me.Label30)
-        Me.gbCancela.Controls.Add(Me.txtEjecMercadeoCanc)
-        Me.gbCancela.Controls.Add(Me.txtCodEjecCanc)
-        Me.gbCancela.Controls.Add(Me.Label13)
-        Me.gbCancela.Controls.Add(Me.txtMotivoCancela)
-        Me.gbCancela.Controls.Add(Me.Label45)
-        Me.gbCancela.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbCancela.ForeColor = System.Drawing.Color.Green
-        Me.gbCancela.Location = New System.Drawing.Point(23, 63)
-        Me.gbCancela.Name = "gbCancela"
-        Me.gbCancela.Size = New System.Drawing.Size(592, 136)
-        Me.gbCancela.TabIndex = 0
-        Me.gbCancela.TabStop = False
-        Me.gbCancela.Text = "Cancelación de Cuenta"
         '
         'dtpFecCanc
         '
         Me.dtpFecCanc.Enabled = False
         Me.dtpFecCanc.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecCanc.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecCanc.Location = New System.Drawing.Point(152, 24)
+        Me.dtpFecCanc.Location = New System.Drawing.Point(185, 60)
         Me.dtpFecCanc.Name = "dtpFecCanc"
-        Me.dtpFecCanc.Size = New System.Drawing.Size(84, 20)
+        Me.dtpFecCanc.Size = New System.Drawing.Size(117, 23)
         Me.dtpFecCanc.TabIndex = 0
-        Me.dtpFecCanc.Value = New Date(2004, 9, 9, 0, 0, 0, 0)
+        Me.dtpFecCanc.Value = New Date(2019, 3, 1, 0, 0, 0, 0)
         '
         'Label30
         '
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.Black
-        Me.Label30.Location = New System.Drawing.Point(16, 96)
+        Me.Label30.Location = New System.Drawing.Point(23, 133)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(96, 16)
+        Me.Label30.Size = New System.Drawing.Size(154, 25)
         Me.Label30.TabIndex = 176
         Me.Label30.Text = "Código Ejecutivo:"
         '
@@ -99,59 +73,59 @@ Public Class frmMsAhCancelaCuenta
         '
         Me.txtEjecMercadeoCanc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEjecMercadeoCanc.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEjecMercadeoCanc.Location = New System.Drawing.Point(224, 96)
+        Me.txtEjecMercadeoCanc.Location = New System.Drawing.Point(266, 132)
         Me.txtEjecMercadeoCanc.MaxLength = 100
         Me.txtEjecMercadeoCanc.Name = "txtEjecMercadeoCanc"
         Me.txtEjecMercadeoCanc.ReadOnly = True
-        Me.txtEjecMercadeoCanc.Size = New System.Drawing.Size(344, 20)
+        Me.txtEjecMercadeoCanc.Size = New System.Drawing.Size(472, 23)
         Me.txtEjecMercadeoCanc.TabIndex = 3
         '
         'txtCodEjecCanc
         '
         Me.txtCodEjecCanc.AcceptsReturn = True
         Me.txtCodEjecCanc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodEjecCanc.Location = New System.Drawing.Point(152, 96)
+        Me.txtCodEjecCanc.Location = New System.Drawing.Point(183, 132)
         Me.txtCodEjecCanc.MaxLength = 10
         Me.txtCodEjecCanc.Name = "txtCodEjecCanc"
-        Me.txtCodEjecCanc.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodEjecCanc.Size = New System.Drawing.Size(77, 22)
         Me.txtCodEjecCanc.TabIndex = 2
         '
         'Label13
         '
         Me.Label13.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(16, 24)
+        Me.Label13.Location = New System.Drawing.Point(23, 60)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(128, 16)
+        Me.Label13.Size = New System.Drawing.Size(154, 18)
         Me.Label13.TabIndex = 173
         Me.Label13.Text = "Fecha de Cancelación:"
         '
         'txtMotivoCancela
         '
         Me.txtMotivoCancela.AcceptsReturn = True
-        Me.txtMotivoCancela.Location = New System.Drawing.Point(152, 56)
+        Me.txtMotivoCancela.Location = New System.Drawing.Point(185, 89)
         Me.txtMotivoCancela.Multiline = True
         Me.txtMotivoCancela.Name = "txtMotivoCancela"
         Me.txtMotivoCancela.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtMotivoCancela.Size = New System.Drawing.Size(416, 32)
+        Me.txtMotivoCancela.Size = New System.Drawing.Size(553, 37)
         Me.txtMotivoCancela.TabIndex = 1
         '
         'Label45
         '
         Me.Label45.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.Color.Black
-        Me.Label45.Location = New System.Drawing.Point(16, 56)
+        Me.Label45.Location = New System.Drawing.Point(23, 100)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(128, 16)
+        Me.Label45.Size = New System.Drawing.Size(163, 18)
         Me.Label45.TabIndex = 172
         Me.Label45.Text = "Motivo de Cancelación:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(540, 205)
+        Me.btnGuardar1.Location = New System.Drawing.Point(648, 161)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 196
         Me.btnGuardar1.Text = "Guardar"
         Me.btnGuardar1.UseSelectable = True
@@ -159,24 +133,29 @@ Public Class frmMsAhCancelaCuenta
         '
         'frmMsAhCancelaCuenta
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(634, 262)
+        Me.ClientSize = New System.Drawing.Size(761, 302)
+        Me.Controls.Add(Me.txtEjecMercadeoCanc)
+        Me.Controls.Add(Me.Label30)
+        Me.Controls.Add(Me.txtCodEjecCanc)
+        Me.Controls.Add(Me.dtpFecCanc)
         Me.Controls.Add(Me.btnGuardar1)
-        Me.Controls.Add(Me.gbCancela)
+        Me.Controls.Add(Me.txtMotivoCancela)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label45)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(634, 262)
+        Me.MaximumSize = New System.Drawing.Size(761, 302)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(634, 262)
+        Me.MinimumSize = New System.Drawing.Size(761, 302)
         Me.Name = "frmMsAhCancelaCuenta"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Cancelación de Cuenta"
-        Me.gbCancela.ResumeLayout(False)
-        Me.gbCancela.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -256,7 +235,7 @@ Public Class frmMsAhCancelaCuenta
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -290,7 +269,7 @@ Public Class frmMsAhCancelaCuenta
             txtCodEjecCanc.Text = ofrm.Resultado.Trim
             txtEjecMercadeoCanc.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -318,7 +297,7 @@ Public Class frmMsAhCancelaCuenta
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+               MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
 

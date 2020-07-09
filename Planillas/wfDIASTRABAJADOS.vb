@@ -121,7 +121,7 @@
                 ACTUALIZAR_DG(Format(dtFECHAINICIO.Value, "SHORT DATE"), Format(dtFECHAFIN.Value, "SHORT DATE"), CODEMPLEADO, 3, 0)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -130,7 +130,7 @@
             frmMsPLDiasTrabajados.Show()
             My.Forms.frmMsPLDiasTrabajados.ACCION = 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

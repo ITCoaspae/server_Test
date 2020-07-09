@@ -1,4 +1,6 @@
-﻿Public Class frmCargaTablasAmortizacion
+﻿Imports System.Text
+
+Public Class frmCargaTablasAmortizacion
     Dim prestamo As New wrPrestamo.wsLibPrest
     Dim asociados As New wrAsociados.wsLibAsoc
     Dim CuotaSeguroDeuda As Double
@@ -34,6 +36,133 @@
     End Sub
 #Region "Importar Tabla de Amortiación"
 
+    Public Sub importarTablaPagos()
+
+        If dtsTablaAmort.Tables.Count > 0 Then
+            dtsTablaAmort.Clear()
+            dtsTablaAmort.Tables.Clear()
+        End If
+        calcularCuotaSegDeuda()
+        Dim cc As String
+        Dim cb As String
+
+        Dim dt As New DataTable("Amortiza")
+
+        Dim i As Integer = 0
+        Dim dr As DataRow
+        Dim correlativo As New DataColumn("Cuota_Num")
+        Dim fechaCuota As New DataColumn("FechaPago")
+        Dim MontoCuota As New DataColumn("Cuota_Prestamo")
+        Dim SaldoCapital As New DataColumn("Saldo")
+        Dim AbonoCapital As New DataColumn("Abono_Capital")
+        Dim CuotaInteres As New DataColumn("Cuota_Interes")
+        Dim Dias As New DataColumn("Dias_Interes")
+        Dim SeguroDeuda As New DataColumn("SeguroDeuda")
+        Dim SeguroDanios As New DataColumn("SeguroDanios")
+        Dim SeguroVida As New DataColumn("SeguroVida")
+        Dim SeguroDesempleo As New DataColumn("SeguroDesempleo")
+        Dim Aportacion As New DataColumn("Aportacion")
+        Dim Ahorro As New DataColumn("Ahorros")
+        Dim ComisionManejo As New DataColumn("ComisionManejo")
+        Dim Otros As New DataColumn("Otros")
+        Dim SeguroDeudaCuota As New DataColumn("SeguroDeuda_Cuota")
+        Dim cuotaTotal As New DataColumn("Cuota_Total")
+        Dim Interes As New DataColumn("Interes")
+        Dim SeguroVehiculo As New DataColumn("SeguroVehiculo")
+
+        correlativo.DataType = GetType(Integer)
+        fechaCuota.DataType = GetType(DateTime)
+        MontoCuota.DataType = GetType(Double)
+        SaldoCapital.DataType = GetType(Double)
+        AbonoCapital.DataType = GetType(Double)
+        Interes.DataType = GetType(Double)
+        Dias.DataType = GetType(Integer)
+        SeguroDeuda.DataType = GetType(Double)
+        SeguroDanios.DataType = GetType(Double)
+        SeguroVida.DataType = GetType(Double)
+        SeguroDesempleo.DataType = GetType(Double)
+        Aportacion.DataType = GetType(Double)
+        Ahorro.DataType = GetType(Double)
+        ComisionManejo.DataType = GetType(Double)
+        SeguroDeudaCuota.DataType = GetType(Double)
+        cuotaTotal.DataType = GetType(Double)
+        CuotaInteres.DataType = GetType(Double)
+        SeguroVehiculo.DataType = GetType(Double)
+
+        dt.Columns.Add(correlativo)
+        dt.Columns.Add(fechaCuota)
+        dt.Columns.Add(MontoCuota)
+        dt.Columns.Add(SaldoCapital)
+        dt.Columns.Add(AbonoCapital)
+        dt.Columns.Add(CuotaInteres)
+        dt.Columns.Add(Dias)
+        dt.Columns.Add(SeguroDeuda)
+        dt.Columns.Add(SeguroDanios)
+        dt.Columns.Add(SeguroVida)
+        dt.Columns.Add(SeguroDesempleo)
+        dt.Columns.Add(Aportacion)
+        dt.Columns.Add(Ahorro)
+        dt.Columns.Add(ComisionManejo)
+        dt.Columns.Add(Otros)
+        dt.Columns.Add(SeguroDeudaCuota)
+        dt.Columns.Add(cuotaTotal)
+        dt.Columns.Add(Interes)
+        dt.Columns.Add(SeguroVehiculo)
+        dtsTablaAmort.Tables.Add(dt)
+
+
+        Dim fileName As String = ""
+        Dim ruta As String
+        OpenFileDialog1.InitialDirectory = "c:\desktop"
+        OpenFileDialog1.FilterIndex = 2
+        OpenFileDialog1.RestoreDirectory = True
+        If (OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            fileName = OpenFileDialog1.FileName
+        End If
+        ruta = fileName
+        Dim textLine As String = ""
+        Dim Splitline() As String
+
+        If System.IO.File.Exists(fileName) = True Then
+            Dim objReader As New System.IO.StreamReader(ruta, Encoding.ASCII)
+            Do While objReader.Peek() <> -1
+                textLine = objReader.ReadLine
+                Splitline = Split(textLine, ";")
+                If i > 0 Then
+
+                    dr = dtsTablaAmort.Tables("Amortiza").NewRow()
+                    dr(0) = Splitline(0)
+                    dr(1) = Splitline(1)
+                    dr(2) = Splitline(3)
+                    dr(3) = Splitline(6)
+                    dr(4) = Splitline(5)
+                    dr(5) = Splitline(4)
+                    dr(6) = Splitline(2)
+                    dr(7) = Splitline(7)
+                    dr(8) = Splitline(8)
+                    dr(9) = 0
+                    dr(10) = 0
+                    dr(11) = Splitline(10)
+                    dr(12) = Splitline(11)
+                    dr(13) = 0
+                    dr(14) = 0
+                    dr(15) = CuotaSeguroDeuda
+                    dr(16) = Splitline(13)
+                    dr(17) = Splitline(14)
+                    dr(18) = Splitline(9)
+                    dtsTablaAmort.Tables("Amortiza").Rows.Add(dr)
+                End If
+
+                i += 1
+            Loop
+            DataGridView1.DataSource = dtsTablaAmort.Tables(0)
+            Me.DataGridView1.Columns(9).Visible = False
+            Me.DataGridView1.Columns(10).Visible = False
+            Me.DataGridView1.Columns(13).Visible = False
+            Me.DataGridView1.Columns(14).Visible = False
+            estidoDg()
+        End If
+    End Sub
     Public Function ImportarPartidaExcel(ByVal Ruta As String) As DataSet
         Dim ConecExcel As System.Data.OleDb.OleDbConnection
         Dim Dts As New DataSet
@@ -102,7 +231,7 @@
 
     End Sub
 
-    Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
+    Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) 
         Try
             If dtsTablaAmort.Tables.Count > 0 Then
                 dtsTablaAmort.Clear()
@@ -134,6 +263,7 @@
             Dim SeguroDeudaCuota As New DataColumn("SeguroDeuda_Cuota")
             Dim cuotaTotal As New DataColumn("Cuota_Total")
             Dim Interes As New DataColumn("Interes")
+            Dim SeguroVehiculo As New DataColumn("SeguroVehiculo")
 
             correlativo.DataType = GetType(Integer)
             fechaCuota.DataType = GetType(DateTime)
@@ -152,6 +282,7 @@
             SeguroDeudaCuota.DataType = GetType(Double)
             cuotaTotal.DataType = GetType(Double)
             CuotaInteres.DataType = GetType(Double)
+            SeguroVehiculo.DataType = GetType(Double)
 
             dt.Columns.Add(correlativo)
             dt.Columns.Add(fechaCuota)
@@ -171,6 +302,7 @@
             dt.Columns.Add(SeguroDeudaCuota)
             dt.Columns.Add(cuotaTotal)
             dt.Columns.Add(Interes)
+            dt.Columns.Add(SeguroVehiculo)
             dtsTablaAmort.Tables.Add(dt)
 
             Dim totalAbonoCapital As Double = 0
@@ -247,7 +379,7 @@
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -255,24 +387,40 @@
         Try
             If Me.dtsTablaAmort.Tables.Count > 0 Then
                 If Me.dtsTablaAmort.Tables(0).Rows.Count > 0 Then
-                    If MsgBox("¿Desea asignar una nueva tabla?", MsgBoxStyle.YesNo, "Créditos - Préstamos") = MsgBoxResult.Yes Then
+                    If MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                         If (prestamo.ReasignarTablaAmortiza(Me.codPrest.Text.Trim, dtsTablaAmort, sUsuario, sPassword, sSucursal)) <> "" Then
-                            MsgBox("Tabla asignada exitosamente.", MsgBoxStyle.Critical, "Crédito - Préstamos")
+                            MetroFramework.MetroMessageBox.Show(Me, "Tabla asignada exitosamente.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         End If
                     End If
-                Else
-                    MsgBox("No se ha importado ningun registro.", MsgBoxStyle.Critical, "Crédito - Préstamos")
+                    Else
+                        MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             Else
-                MsgBox("No se ha importado ningun registro.", MsgBoxStyle.Critical, "Crédito - Préstamos")
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
+        importarTablaPagos()
+        validarSaldoTabla()
+    End Sub
+    Protected Sub validarSaldoTabla()
+        Dim saldo As Double
+        For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
+            saldo += DataGridView1.Item("Abono_Capital", i).Value
+        Next
+        If saldo <> TxtSaldo.Text Then
+            MetroFramework.MetroMessageBox.Show(Me, "Saldo de tabla no coincide con saldo pendiente de préstamo", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            MetroButton1.Enabled = False
+        End If
+    End Sub
+
 End Class

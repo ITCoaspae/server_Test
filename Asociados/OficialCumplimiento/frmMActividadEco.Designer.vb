@@ -76,10 +76,11 @@ Partial Class frmMActividadEco
         'txtTelOficina
         '
         Me.txtTelOficina.BackColor = System.Drawing.Color.White
-        Me.txtTelOficina.Location = New System.Drawing.Point(560, 331)
+        Me.txtTelOficina.Location = New System.Drawing.Point(747, 407)
+        Me.txtTelOficina.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTelOficina.Mask = "0000-0000"
         Me.txtTelOficina.Name = "txtTelOficina"
-        Me.txtTelOficina.Size = New System.Drawing.Size(77, 20)
+        Me.txtTelOficina.Size = New System.Drawing.Size(101, 22)
         Me.txtTelOficina.TabIndex = 67
         '
         'txtDescripcionActEco
@@ -87,17 +88,19 @@ Partial Class frmMActividadEco
         Me.txtDescripcionActEco.BackColor = System.Drawing.Color.White
         Me.txtDescripcionActEco.Enabled = False
         Me.txtDescripcionActEco.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcionActEco.Location = New System.Drawing.Point(161, 63)
+        Me.txtDescripcionActEco.Location = New System.Drawing.Point(215, 78)
+        Me.txtDescripcionActEco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcionActEco.Name = "txtDescripcionActEco"
-        Me.txtDescripcionActEco.Size = New System.Drawing.Size(582, 20)
+        Me.txtDescripcionActEco.Size = New System.Drawing.Size(775, 23)
         Me.txtDescripcionActEco.TabIndex = 44
         '
         'txtCodActEconomica
         '
         Me.txtCodActEconomica.BackColor = System.Drawing.Color.White
-        Me.txtCodActEconomica.Location = New System.Drawing.Point(104, 63)
+        Me.txtCodActEconomica.Location = New System.Drawing.Point(139, 78)
+        Me.txtCodActEconomica.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCodActEconomica.Name = "txtCodActEconomica"
-        Me.txtCodActEconomica.Size = New System.Drawing.Size(51, 20)
+        Me.txtCodActEconomica.Size = New System.Drawing.Size(67, 22)
         Me.txtCodActEconomica.TabIndex = 43
         '
         'cbLugarTrabajo
@@ -106,38 +109,42 @@ Partial Class frmMActividadEco
         Me.cbLugarTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbLugarTrabajo.DropDownWidth = 639
         Me.cbLugarTrabajo.FormattingEnabled = True
-        Me.cbLugarTrabajo.Location = New System.Drawing.Point(104, 97)
+        Me.cbLugarTrabajo.Location = New System.Drawing.Point(139, 119)
+        Me.cbLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbLugarTrabajo.MaxDropDownItems = 10
         Me.cbLugarTrabajo.Name = "cbLugarTrabajo"
-        Me.cbLugarTrabajo.Size = New System.Drawing.Size(639, 21)
+        Me.cbLugarTrabajo.Size = New System.Drawing.Size(851, 24)
         Me.cbLugarTrabajo.TabIndex = 46
         '
         'txtGiroPrim
         '
         Me.txtGiroPrim.BackColor = System.Drawing.Color.White
         Me.txtGiroPrim.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGiroPrim.Location = New System.Drawing.Point(86, 210)
+        Me.txtGiroPrim.Location = New System.Drawing.Point(115, 258)
+        Me.txtGiroPrim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtGiroPrim.MaxLength = 50
         Me.txtGiroPrim.Name = "txtGiroPrim"
         Me.txtGiroPrim.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtGiroPrim.Size = New System.Drawing.Size(657, 20)
+        Me.txtGiroPrim.Size = New System.Drawing.Size(875, 23)
         Me.txtGiroPrim.TabIndex = 53
         '
         'lblLugarTrabajo
         '
         Me.lblLugarTrabajo.AutoSize = True
-        Me.lblLugarTrabajo.Location = New System.Drawing.Point(23, 92)
+        Me.lblLugarTrabajo.Location = New System.Drawing.Point(31, 113)
+        Me.lblLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLugarTrabajo.Name = "lblLugarTrabajo"
-        Me.lblLugarTrabajo.Size = New System.Drawing.Size(52, 26)
+        Me.lblLugarTrabajo.Size = New System.Drawing.Size(69, 34)
         Me.lblLugarTrabajo.TabIndex = 45
         Me.lblLugarTrabajo.Text = "Lugar de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Trabajo:"
         '
         'lblGiro
         '
         Me.lblGiro.AutoSize = True
-        Me.lblGiro.Location = New System.Drawing.Point(23, 213)
+        Me.lblGiro.Location = New System.Drawing.Point(31, 262)
+        Me.lblGiro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblGiro.Name = "lblGiro"
-        Me.lblGiro.Size = New System.Drawing.Size(29, 13)
+        Me.lblGiro.Size = New System.Drawing.Size(39, 17)
         Me.lblGiro.TabIndex = 52
         Me.lblGiro.Text = "Giro:"
         '
@@ -145,37 +152,41 @@ Partial Class frmMActividadEco
         '
         Me.txtRazonSocialPrim.BackColor = System.Drawing.Color.White
         Me.txtRazonSocialPrim.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRazonSocialPrim.Location = New System.Drawing.Point(86, 272)
+        Me.txtRazonSocialPrim.Location = New System.Drawing.Point(115, 335)
+        Me.txtRazonSocialPrim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRazonSocialPrim.MaxLength = 150
         Me.txtRazonSocialPrim.Name = "txtRazonSocialPrim"
         Me.txtRazonSocialPrim.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtRazonSocialPrim.Size = New System.Drawing.Size(657, 20)
+        Me.txtRazonSocialPrim.Size = New System.Drawing.Size(875, 23)
         Me.txtRazonSocialPrim.TabIndex = 57
         '
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(23, 270)
+        Me.Label51.Location = New System.Drawing.Point(31, 332)
+        Me.Label51.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(41, 26)
+        Me.Label51.Size = New System.Drawing.Size(53, 34)
         Me.Label51.TabIndex = 56
         Me.Label51.Text = "Razón " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Social:"
         '
         'txtDirOfi
         '
         Me.txtDirOfi.BackColor = System.Drawing.Color.White
-        Me.txtDirOfi.Location = New System.Drawing.Point(86, 414)
+        Me.txtDirOfi.Location = New System.Drawing.Point(115, 510)
+        Me.txtDirOfi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDirOfi.Multiline = True
         Me.txtDirOfi.Name = "txtDirOfi"
-        Me.txtDirOfi.Size = New System.Drawing.Size(657, 39)
+        Me.txtDirOfi.Size = New System.Drawing.Size(875, 47)
         Me.txtDirOfi.TabIndex = 83
         '
         'lblDirOfi
         '
         Me.lblDirOfi.AutoSize = True
-        Me.lblDirOfi.Location = New System.Drawing.Point(23, 417)
+        Me.lblDirOfi.Location = New System.Drawing.Point(31, 513)
+        Me.lblDirOfi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDirOfi.Name = "lblDirOfi"
-        Me.lblDirOfi.Size = New System.Drawing.Size(59, 13)
+        Me.lblDirOfi.Size = New System.Drawing.Size(76, 17)
         Me.lblDirOfi.TabIndex = 82
         Me.lblDirOfi.Text = "*Dirección:"
         '
@@ -184,17 +195,19 @@ Partial Class frmMActividadEco
         Me.cbMunOfi.BackColor = System.Drawing.Color.White
         Me.cbMunOfi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMunOfi.FormattingEnabled = True
-        Me.cbMunOfi.Location = New System.Drawing.Point(435, 387)
+        Me.cbMunOfi.Location = New System.Drawing.Point(580, 476)
+        Me.cbMunOfi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbMunOfi.Name = "cbMunOfi"
-        Me.cbMunOfi.Size = New System.Drawing.Size(308, 21)
+        Me.cbMunOfi.Size = New System.Drawing.Size(409, 24)
         Me.cbMunOfi.TabIndex = 81
         '
         'lblMunicipioOfi
         '
         Me.lblMunicipioOfi.AutoSize = True
-        Me.lblMunicipioOfi.Location = New System.Drawing.Point(371, 390)
+        Me.lblMunicipioOfi.Location = New System.Drawing.Point(495, 480)
+        Me.lblMunicipioOfi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMunicipioOfi.Name = "lblMunicipioOfi"
-        Me.lblMunicipioOfi.Size = New System.Drawing.Size(59, 13)
+        Me.lblMunicipioOfi.Size = New System.Drawing.Size(76, 17)
         Me.lblMunicipioOfi.TabIndex = 80
         Me.lblMunicipioOfi.Text = "*Municipio:"
         '
@@ -203,43 +216,48 @@ Partial Class frmMActividadEco
         Me.cbDeptoOfi.BackColor = System.Drawing.Color.White
         Me.cbDeptoOfi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbDeptoOfi.FormattingEnabled = True
-        Me.cbDeptoOfi.Location = New System.Drawing.Point(86, 387)
+        Me.cbDeptoOfi.Location = New System.Drawing.Point(115, 476)
+        Me.cbDeptoOfi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbDeptoOfi.Name = "cbDeptoOfi"
-        Me.cbDeptoOfi.Size = New System.Drawing.Size(279, 21)
+        Me.cbDeptoOfi.Size = New System.Drawing.Size(371, 24)
         Me.cbDeptoOfi.TabIndex = 79
         '
         'lblDeptoTrabajo
         '
         Me.lblDeptoTrabajo.AutoSize = True
-        Me.lblDeptoTrabajo.Location = New System.Drawing.Point(23, 390)
+        Me.lblDeptoTrabajo.Location = New System.Drawing.Point(31, 480)
+        Me.lblDeptoTrabajo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDeptoTrabajo.Name = "lblDeptoTrabajo"
-        Me.lblDeptoTrabajo.Size = New System.Drawing.Size(43, 13)
+        Me.lblDeptoTrabajo.Size = New System.Drawing.Size(55, 17)
         Me.lblDeptoTrabajo.TabIndex = 78
         Me.lblDeptoTrabajo.Text = "*Depto."
         '
         'txtExtOficinaPrim
         '
         Me.txtExtOficinaPrim.BackColor = System.Drawing.Color.White
-        Me.txtExtOficinaPrim.Location = New System.Drawing.Point(703, 328)
+        Me.txtExtOficinaPrim.Location = New System.Drawing.Point(937, 404)
+        Me.txtExtOficinaPrim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtExtOficinaPrim.Name = "txtExtOficinaPrim"
-        Me.txtExtOficinaPrim.Size = New System.Drawing.Size(40, 20)
+        Me.txtExtOficinaPrim.Size = New System.Drawing.Size(52, 22)
         Me.txtExtOficinaPrim.TabIndex = 69
         '
         'lblExtOficina
         '
         Me.lblExtOficina.AutoSize = True
-        Me.lblExtOficina.Location = New System.Drawing.Point(643, 329)
+        Me.lblExtOficina.Location = New System.Drawing.Point(857, 405)
+        Me.lblExtOficina.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblExtOficina.Name = "lblExtOficina"
-        Me.lblExtOficina.Size = New System.Drawing.Size(43, 26)
+        Me.lblExtOficina.Size = New System.Drawing.Size(56, 34)
         Me.lblExtOficina.TabIndex = 68
         Me.lblExtOficina.Text = "Ext. de" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Oficina:"
         '
         'lblTelOfic
         '
         Me.lblTelOfic.AutoSize = True
-        Me.lblTelOfic.Location = New System.Drawing.Point(511, 329)
+        Me.lblTelOfic.Location = New System.Drawing.Point(681, 405)
+        Me.lblTelOfic.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTelOfic.Name = "lblTelOfic"
-        Me.lblTelOfic.Size = New System.Drawing.Size(43, 26)
+        Me.lblTelOfic.Size = New System.Drawing.Size(56, 34)
         Me.lblTelOfic.TabIndex = 66
         Me.lblTelOfic.Text = "Tel." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Oficina:"
         '
@@ -248,7 +266,8 @@ Partial Class frmMActividadEco
         Me.txtIngresosPrim.BackColor = System.Drawing.Color.White
         Me.txtIngresosPrim.DataType = GetType(Decimal)
         Me.txtIngresosPrim.FormatType = C1.Win.C1Input.FormatTypeEnum.Currency
-        Me.txtIngresosPrim.Location = New System.Drawing.Point(86, 361)
+        Me.txtIngresosPrim.Location = New System.Drawing.Point(115, 444)
+        Me.txtIngresosPrim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIngresosPrim.Name = "txtIngresosPrim"
         Me.txtIngresosPrim.ParseInfo.NumberStyle = CType((((((C1.Win.C1Input.NumberStyleFlags.AllowLeadingWhite Or C1.Win.C1Input.NumberStyleFlags.AllowTrailingWhite) _
             Or C1.Win.C1Input.NumberStyleFlags.AllowLeadingSign) _
@@ -258,7 +277,7 @@ Partial Class frmMActividadEco
         Me.txtIngresosPrim.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.txtIngresosPrim.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.txtIngresosPrim.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.txtIngresosPrim.Size = New System.Drawing.Size(188, 18)
+        Me.txtIngresosPrim.Size = New System.Drawing.Size(251, 25)
         Me.txtIngresosPrim.TabIndex = 71
         Me.txtIngresosPrim.Tag = Nothing
         Me.txtIngresosPrim.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -266,52 +285,58 @@ Partial Class frmMActividadEco
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 361)
+        Me.Label5.Location = New System.Drawing.Point(31, 444)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 13)
+        Me.Label5.Size = New System.Drawing.Size(71, 17)
         Me.Label5.TabIndex = 70
         Me.Label5.Text = "*Ingresos:"
         '
         'txtCargo
         '
         Me.txtCargo.BackColor = System.Drawing.Color.White
-        Me.txtCargo.Location = New System.Drawing.Point(233, 335)
+        Me.txtCargo.Location = New System.Drawing.Point(311, 412)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(272, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(361, 22)
         Me.txtCargo.TabIndex = 65
         '
         'lblCargo
         '
         Me.lblCargo.AutoSize = True
-        Me.lblCargo.Location = New System.Drawing.Point(189, 338)
+        Me.lblCargo.Location = New System.Drawing.Point(252, 416)
+        Me.lblCargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCargo.Name = "lblCargo"
-        Me.lblCargo.Size = New System.Drawing.Size(38, 13)
+        Me.lblCargo.Size = New System.Drawing.Size(50, 17)
         Me.lblCargo.TabIndex = 64
         Me.lblCargo.Text = "Cargo:"
         '
         'dtpFechaIniTra
         '
         Me.dtpFechaIniTra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaIniTra.Location = New System.Drawing.Point(86, 335)
+        Me.dtpFechaIniTra.Location = New System.Drawing.Point(115, 412)
+        Me.dtpFechaIniTra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpFechaIniTra.Name = "dtpFechaIniTra"
-        Me.dtpFechaIniTra.Size = New System.Drawing.Size(97, 20)
+        Me.dtpFechaIniTra.Size = New System.Drawing.Size(128, 22)
         Me.dtpFechaIniTra.TabIndex = 63
         '
         'lblFechaInicio
         '
         Me.lblFechaInicio.AutoSize = True
-        Me.lblFechaInicio.Location = New System.Drawing.Point(23, 329)
+        Me.lblFechaInicio.Location = New System.Drawing.Point(31, 405)
+        Me.lblFechaInicio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFechaInicio.Name = "lblFechaInicio"
-        Me.lblFechaInicio.Size = New System.Drawing.Size(37, 26)
+        Me.lblFechaInicio.Size = New System.Drawing.Size(47, 34)
         Me.lblFechaInicio.TabIndex = 62
         Me.lblFechaInicio.Text = "Fecha" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Inicio:"
         '
         'lblSeccionTrabajo
         '
         Me.lblSeccionTrabajo.AutoSize = True
-        Me.lblSeccionTrabajo.Location = New System.Drawing.Point(280, 300)
+        Me.lblSeccionTrabajo.Location = New System.Drawing.Point(373, 369)
+        Me.lblSeccionTrabajo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeccionTrabajo.Name = "lblSeccionTrabajo"
-        Me.lblSeccionTrabajo.Size = New System.Drawing.Size(96, 26)
+        Me.lblSeccionTrabajo.Size = New System.Drawing.Size(127, 34)
         Me.lblSeccionTrabajo.TabIndex = 60
         Me.lblSeccionTrabajo.Text = "Area,Seccion /" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Depto. de Trabajo:"
         '
@@ -319,9 +344,10 @@ Partial Class frmMActividadEco
         '
         Me.lblEstadoLaboral.AutoSize = True
         Me.lblEstadoLaboral.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEstadoLaboral.Location = New System.Drawing.Point(23, 300)
+        Me.lblEstadoLaboral.Location = New System.Drawing.Point(31, 369)
+        Me.lblEstadoLaboral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEstadoLaboral.Name = "lblEstadoLaboral"
-        Me.lblEstadoLaboral.Size = New System.Drawing.Size(46, 28)
+        Me.lblEstadoLaboral.Size = New System.Drawing.Size(60, 32)
         Me.lblEstadoLaboral.TabIndex = 58
         Me.lblEstadoLaboral.Text = "Estado " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Laboral:"
         '
@@ -329,30 +355,33 @@ Partial Class frmMActividadEco
         '
         Me.txtDptoTrabajo.BackColor = System.Drawing.Color.White
         Me.txtDptoTrabajo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDptoTrabajo.Location = New System.Drawing.Point(386, 302)
+        Me.txtDptoTrabajo.Location = New System.Drawing.Point(515, 372)
+        Me.txtDptoTrabajo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDptoTrabajo.MaxLength = 50
         Me.txtDptoTrabajo.Name = "txtDptoTrabajo"
-        Me.txtDptoTrabajo.Size = New System.Drawing.Size(357, 20)
+        Me.txtDptoTrabajo.Size = New System.Drawing.Size(475, 23)
         Me.txtDptoTrabajo.TabIndex = 61
         '
         'txtNomComEc
         '
         Me.txtNomComEc.BackColor = System.Drawing.Color.White
         Me.txtNomComEc.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomComEc.Location = New System.Drawing.Point(86, 244)
+        Me.txtNomComEc.Location = New System.Drawing.Point(115, 300)
+        Me.txtNomComEc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNomComEc.MaxLength = 50
         Me.txtNomComEc.Name = "txtNomComEc"
         Me.txtNomComEc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtNomComEc.Size = New System.Drawing.Size(657, 20)
+        Me.txtNomComEc.Size = New System.Drawing.Size(875, 23)
         Me.txtNomComEc.TabIndex = 55
         '
         'Label28
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(23, 238)
+        Me.Label28.Location = New System.Drawing.Point(31, 293)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(57, 28)
+        Me.Label28.Size = New System.Drawing.Size(75, 32)
         Me.Label28.TabIndex = 54
         Me.Label28.Text = "Nombre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Comercial:"
         '
@@ -360,9 +389,10 @@ Partial Class frmMActividadEco
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(261, 185)
+        Me.Label17.Location = New System.Drawing.Point(348, 228)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(31, 14)
+        Me.Label17.Size = New System.Drawing.Size(41, 16)
         Me.Label17.TabIndex = 50
         Me.Label17.Text = "NRC:"
         '
@@ -370,9 +400,10 @@ Partial Class frmMActividadEco
         '
         Me.chkcontribuyente.AutoSize = True
         Me.chkcontribuyente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkcontribuyente.Location = New System.Drawing.Point(147, 184)
+        Me.chkcontribuyente.Location = New System.Drawing.Point(196, 226)
+        Me.chkcontribuyente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkcontribuyente.Name = "chkcontribuyente"
-        Me.chkcontribuyente.Size = New System.Drawing.Size(108, 18)
+        Me.chkcontribuyente.Size = New System.Drawing.Size(139, 20)
         Me.chkcontribuyente.TabIndex = 49
         Me.chkcontribuyente.Text = "Es Contribuyente"
         Me.chkcontribuyente.UseVisualStyleBackColor = True
@@ -381,19 +412,21 @@ Partial Class frmMActividadEco
         '
         Me.txtNoRegContribuyente.BackColor = System.Drawing.Color.White
         Me.txtNoRegContribuyente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoRegContribuyente.Location = New System.Drawing.Point(298, 184)
+        Me.txtNoRegContribuyente.Location = New System.Drawing.Point(397, 226)
+        Me.txtNoRegContribuyente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNoRegContribuyente.MaxLength = 50
         Me.txtNoRegContribuyente.Name = "txtNoRegContribuyente"
         Me.txtNoRegContribuyente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtNoRegContribuyente.Size = New System.Drawing.Size(157, 20)
+        Me.txtNoRegContribuyente.Size = New System.Drawing.Size(208, 23)
         Me.txtNoRegContribuyente.TabIndex = 51
         '
         'chkNegFormal
         '
         Me.chkNegFormal.AutoSize = True
-        Me.chkNegFormal.Location = New System.Drawing.Point(26, 184)
+        Me.chkNegFormal.Location = New System.Drawing.Point(35, 226)
+        Me.chkNegFormal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkNegFormal.Name = "chkNegFormal"
-        Me.chkNegFormal.Size = New System.Drawing.Size(100, 17)
+        Me.chkNegFormal.Size = New System.Drawing.Size(129, 21)
         Me.chkNegFormal.TabIndex = 48
         Me.chkNegFormal.Text = "Negocio Formal"
         Me.chkNegFormal.UseVisualStyleBackColor = True
@@ -406,9 +439,11 @@ Partial Class frmMActividadEco
         Me.gbUIF.Controls.Add(Me.lblFechaAcreditacion)
         Me.gbUIF.Controls.Add(Me.txtNoAcreUIF)
         Me.gbUIF.Controls.Add(Me.lblNoAcreditacionUIF)
-        Me.gbUIF.Location = New System.Drawing.Point(26, 124)
+        Me.gbUIF.Location = New System.Drawing.Point(35, 153)
+        Me.gbUIF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gbUIF.Name = "gbUIF"
-        Me.gbUIF.Size = New System.Drawing.Size(717, 54)
+        Me.gbUIF.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbUIF.Size = New System.Drawing.Size(956, 66)
         Me.gbUIF.TabIndex = 47
         Me.gbUIF.TabStop = False
         Me.gbUIF.Text = "APNFD"
@@ -417,17 +452,19 @@ Partial Class frmMActividadEco
         '
         Me.dtpVencimientoUIF.Enabled = False
         Me.dtpVencimientoUIF.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpVencimientoUIF.Location = New System.Drawing.Point(604, 22)
+        Me.dtpVencimientoUIF.Location = New System.Drawing.Point(805, 27)
+        Me.dtpVencimientoUIF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpVencimientoUIF.Name = "dtpVencimientoUIF"
-        Me.dtpVencimientoUIF.Size = New System.Drawing.Size(103, 20)
+        Me.dtpVencimientoUIF.Size = New System.Drawing.Size(136, 22)
         Me.dtpVencimientoUIF.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(497, 24)
+        Me.Label4.Location = New System.Drawing.Point(663, 30)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 13)
+        Me.Label4.Size = New System.Drawing.Size(132, 17)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Fecha Vencimiento:"
         '
@@ -435,17 +472,19 @@ Partial Class frmMActividadEco
         '
         Me.dtpFechAcre.Enabled = False
         Me.dtpFechAcre.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechAcre.Location = New System.Drawing.Point(388, 22)
+        Me.dtpFechAcre.Location = New System.Drawing.Point(517, 27)
+        Me.dtpFechAcre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpFechAcre.Name = "dtpFechAcre"
-        Me.dtpFechAcre.Size = New System.Drawing.Size(103, 20)
+        Me.dtpFechAcre.Size = New System.Drawing.Size(136, 22)
         Me.dtpFechAcre.TabIndex = 3
         '
         'lblFechaAcreditacion
         '
         Me.lblFechaAcreditacion.AutoSize = True
-        Me.lblFechaAcreditacion.Location = New System.Drawing.Point(280, 24)
+        Me.lblFechaAcreditacion.Location = New System.Drawing.Point(373, 30)
+        Me.lblFechaAcreditacion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFechaAcreditacion.Name = "lblFechaAcreditacion"
-        Me.lblFechaAcreditacion.Size = New System.Drawing.Size(102, 13)
+        Me.lblFechaAcreditacion.Size = New System.Drawing.Size(133, 17)
         Me.lblFechaAcreditacion.TabIndex = 2
         Me.lblFechaAcreditacion.Text = "Fecha Acreditación:"
         '
@@ -453,17 +492,19 @@ Partial Class frmMActividadEco
         '
         Me.txtNoAcreUIF.BackColor = System.Drawing.Color.White
         Me.txtNoAcreUIF.Enabled = False
-        Me.txtNoAcreUIF.Location = New System.Drawing.Point(101, 22)
+        Me.txtNoAcreUIF.Location = New System.Drawing.Point(135, 27)
+        Me.txtNoAcreUIF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNoAcreUIF.Name = "txtNoAcreUIF"
-        Me.txtNoAcreUIF.Size = New System.Drawing.Size(173, 20)
+        Me.txtNoAcreUIF.Size = New System.Drawing.Size(229, 22)
         Me.txtNoAcreUIF.TabIndex = 1
         '
         'lblNoAcreditacionUIF
         '
         Me.lblNoAcreditacionUIF.AutoSize = True
-        Me.lblNoAcreditacionUIF.Location = New System.Drawing.Point(6, 25)
+        Me.lblNoAcreditacionUIF.Location = New System.Drawing.Point(8, 31)
+        Me.lblNoAcreditacionUIF.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNoAcreditacionUIF.Name = "lblNoAcreditacionUIF"
-        Me.lblNoAcreditacionUIF.Size = New System.Drawing.Size(89, 13)
+        Me.lblNoAcreditacionUIF.Size = New System.Drawing.Size(116, 17)
         Me.lblNoAcreditacionUIF.TabIndex = 0
         Me.lblNoAcreditacionUIF.Text = "No. Acreditación:"
         '
@@ -471,9 +512,10 @@ Partial Class frmMActividadEco
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 60)
+        Me.Label3.Location = New System.Drawing.Point(31, 74)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(79, 26)
+        Me.Label3.Size = New System.Drawing.Size(102, 34)
         Me.Label3.TabIndex = 42
         Me.Label3.Text = "*Tipo Actividad" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Económica:"
         '
@@ -483,28 +525,32 @@ Partial Class frmMActividadEco
         Me.cbEstadoLaboral.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEstadoLaboral.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEstadoLaboral.Items.AddRange(New Object() {"Empleado", "Desempleado", "Jubilado", "Otro"})
-        Me.cbEstadoLaboral.Location = New System.Drawing.Point(86, 302)
+        Me.cbEstadoLaboral.Location = New System.Drawing.Point(115, 372)
+        Me.cbEstadoLaboral.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbEstadoLaboral.Name = "cbEstadoLaboral"
-        Me.cbEstadoLaboral.Size = New System.Drawing.Size(188, 22)
+        Me.cbEstadoLaboral.Size = New System.Drawing.Size(249, 24)
         Me.cbEstadoLaboral.TabIndex = 59
         '
         'btnGuardarDom
         '
-        Me.btnGuardarDom.Location = New System.Drawing.Point(670, 459)
+        Me.btnGuardarDom.ForeColor = System.Drawing.Color.Teal
+        Me.btnGuardarDom.Location = New System.Drawing.Point(893, 565)
+        Me.btnGuardarDom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardarDom.Name = "btnGuardarDom"
-        Me.btnGuardarDom.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardarDom.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarDom.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarDom.TabIndex = 84
         Me.btnGuardarDom.Text = "Guardar"
         Me.btnGuardarDom.UseSelectable = True
-        Me.btnGuardarDom.UseStyleColors = True
         '
         'chkPrincipal
         '
         Me.chkPrincipal.AutoSize = True
         Me.chkPrincipal.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkPrincipal.Location = New System.Drawing.Point(677, 184)
+        Me.chkPrincipal.Location = New System.Drawing.Point(903, 226)
+        Me.chkPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkPrincipal.Name = "chkPrincipal"
-        Me.chkPrincipal.Size = New System.Drawing.Size(66, 18)
+        Me.chkPrincipal.Size = New System.Drawing.Size(84, 20)
         Me.chkPrincipal.TabIndex = 85
         Me.chkPrincipal.Text = "Principal"
         Me.chkPrincipal.UseVisualStyleBackColor = True
@@ -515,9 +561,9 @@ Partial Class frmMActividadEco
         '
         'frmMActividadEco
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(768, 499)
+        Me.ClientSize = New System.Drawing.Size(1024, 683)
         Me.Controls.Add(Me.chkPrincipal)
         Me.Controls.Add(Me.btnGuardarDom)
         Me.Controls.Add(Me.txtTelOficina)
@@ -556,9 +602,12 @@ Partial Class frmMActividadEco
         Me.Controls.Add(Me.gbUIF)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cbEstadoLaboral)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMActividadEco"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Actividad Económica"
         CType(Me.txtIngresosPrim, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbUIF.ResumeLayout(False)

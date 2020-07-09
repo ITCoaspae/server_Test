@@ -1,10 +1,21 @@
 Public Class frmMsAhReversiones
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-
+    Dim ahorro As New wrAhorro.wsLibAhorro
     Dim pCodReversion As String, pTipoOper As String, pTipoDeposito As String, pReimpresion As Boolean
     Friend WithEvents btnReimpresion As MetroFramework.Controls.MetroButton
     Friend WithEvents btnImprimir As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel7 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNoCuenta As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents MetroLabel8 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel9 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel10 As MetroFramework.Controls.MetroLabel
     Friend WithEvents btProcesar As MetroFramework.Controls.MetroButton
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -31,41 +42,27 @@ Public Class frmMsAhReversiones
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtObs As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtNoDocumento As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents rbCargo As System.Windows.Forms.RadioButton
     Friend WithEvents rbAbono As System.Windows.Forms.RadioButton
     Friend WithEvents C1NEMonto As C1.Win.C1Input.C1NumericEdit
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtCodReversion As System.Windows.Forms.TextBox
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtAsociado As System.Windows.Forms.TextBox
     Friend WithEvents dtpDia As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtCodCuenta As System.Windows.Forms.TextBox
     Friend WithEvents txtCodTipoAhorro As System.Windows.Forms.TextBox
     Friend WithEvents rbCaja As System.Windows.Forms.RadioButton
     Friend WithEvents rbTransferencia As System.Windows.Forms.RadioButton
-    Friend WithEvents gbOrigen As System.Windows.Forms.GroupBox
     Friend WithEvents txtAnio As System.Windows.Forms.TextBox
     Friend WithEvents txtTipo As System.Windows.Forms.TextBox
     Friend WithEvents txtOrigen As System.Windows.Forms.TextBox
     Friend WithEvents rbReversion As System.Windows.Forms.RadioButton
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.gbOrigen = New System.Windows.Forms.GroupBox()
         Me.txtOrigen = New System.Windows.Forms.TextBox()
         Me.rbReversion = New System.Windows.Forms.RadioButton()
         Me.txtTipo = New System.Windows.Forms.TextBox()
@@ -74,18 +71,11 @@ Public Class frmMsAhReversiones
         Me.rbCaja = New System.Windows.Forms.RadioButton()
         Me.txtCodTipoAhorro = New System.Windows.Forms.TextBox()
         Me.dtpDia = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtAsociado = New System.Windows.Forms.TextBox()
         Me.txtObs = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtNoDocumento = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -93,103 +83,66 @@ Public Class frmMsAhReversiones
         Me.rbCargo = New System.Windows.Forms.RadioButton()
         Me.rbAbono = New System.Windows.Forms.RadioButton()
         Me.C1NEMonto = New C1.Win.C1Input.C1NumericEdit()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCodCuenta = New System.Windows.Forms.TextBox()
         Me.btnReimpresion = New MetroFramework.Controls.MetroButton()
         Me.btnImprimir = New MetroFramework.Controls.MetroButton()
         Me.btProcesar = New MetroFramework.Controls.MetroButton()
-        Me.GroupBox1.SuspendLayout()
-        Me.gbOrigen.SuspendLayout()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNoCuenta = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel8 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel9 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel10 = New MetroFramework.Controls.MetroLabel()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.C1NEMonto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.gbOrigen)
-        Me.GroupBox1.Controls.Add(Me.txtCodTipoAhorro)
-        Me.GroupBox1.Controls.Add(Me.dtpDia)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtDui)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.txtAsociado)
-        Me.GroupBox1.Controls.Add(Me.txtObs)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.txtNoDocumento)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.C1NEMonto)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtCodCuenta)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(584, 335)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        '
-        'gbOrigen
-        '
-        Me.gbOrigen.Controls.Add(Me.txtOrigen)
-        Me.gbOrigen.Controls.Add(Me.rbReversion)
-        Me.gbOrigen.Controls.Add(Me.txtTipo)
-        Me.gbOrigen.Controls.Add(Me.rbTransferencia)
-        Me.gbOrigen.Controls.Add(Me.txtAnio)
-        Me.gbOrigen.Controls.Add(Me.rbCaja)
-        Me.gbOrigen.Enabled = False
-        Me.gbOrigen.ForeColor = System.Drawing.Color.Green
-        Me.gbOrigen.Location = New System.Drawing.Point(16, 84)
-        Me.gbOrigen.Name = "gbOrigen"
-        Me.gbOrigen.Size = New System.Drawing.Size(562, 44)
-        Me.gbOrigen.TabIndex = 1
-        Me.gbOrigen.TabStop = False
-        Me.gbOrigen.Text = "Origen del documento:"
-        '
         'txtOrigen
         '
-        Me.txtOrigen.Location = New System.Drawing.Point(284, 16)
+        Me.txtOrigen.Enabled = False
+        Me.txtOrigen.Location = New System.Drawing.Point(877, 72)
         Me.txtOrigen.Name = "txtOrigen"
-        Me.txtOrigen.Size = New System.Drawing.Size(8, 20)
+        Me.txtOrigen.Size = New System.Drawing.Size(9, 22)
         Me.txtOrigen.TabIndex = 175
         Me.txtOrigen.Visible = False
         '
         'rbReversion
         '
         Me.rbReversion.ForeColor = System.Drawing.Color.Black
-        Me.rbReversion.Location = New System.Drawing.Point(88, 16)
+        Me.rbReversion.Location = New System.Drawing.Point(272, 103)
         Me.rbReversion.Name = "rbReversion"
-        Me.rbReversion.Size = New System.Drawing.Size(80, 24)
+        Me.rbReversion.Size = New System.Drawing.Size(93, 28)
         Me.rbReversion.TabIndex = 2
         Me.rbReversion.Text = "&Reversión"
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(292, 16)
+        Me.txtTipo.Enabled = False
+        Me.txtTipo.Location = New System.Drawing.Point(886, 72)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(8, 20)
+        Me.txtTipo.Size = New System.Drawing.Size(10, 22)
         Me.txtTipo.TabIndex = 174
         Me.txtTipo.Visible = False
         '
         'rbTransferencia
         '
         Me.rbTransferencia.ForeColor = System.Drawing.Color.Black
-        Me.rbTransferencia.Location = New System.Drawing.Point(184, 16)
+        Me.rbTransferencia.Location = New System.Drawing.Point(371, 103)
         Me.rbTransferencia.Name = "rbTransferencia"
-        Me.rbTransferencia.Size = New System.Drawing.Size(104, 24)
+        Me.rbTransferencia.Size = New System.Drawing.Size(125, 28)
         Me.rbTransferencia.TabIndex = 1
         Me.rbTransferencia.Text = "&Transferencia"
         '
         'txtAnio
         '
-        Me.txtAnio.Location = New System.Drawing.Point(300, 16)
+        Me.txtAnio.Enabled = False
+        Me.txtAnio.Location = New System.Drawing.Point(896, 72)
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(8, 20)
+        Me.txtAnio.Size = New System.Drawing.Size(10, 22)
         Me.txtAnio.TabIndex = 173
         Me.txtAnio.Visible = False
         '
@@ -197,187 +150,131 @@ Public Class frmMsAhReversiones
         '
         Me.rbCaja.Checked = True
         Me.rbCaja.ForeColor = System.Drawing.Color.Black
-        Me.rbCaja.Location = New System.Drawing.Point(6, 16)
+        Me.rbCaja.Location = New System.Drawing.Point(189, 103)
         Me.rbCaja.Name = "rbCaja"
-        Me.rbCaja.Size = New System.Drawing.Size(104, 24)
+        Me.rbCaja.Size = New System.Drawing.Size(68, 28)
         Me.rbCaja.TabIndex = 0
         Me.rbCaja.TabStop = True
         Me.rbCaja.Text = "Ca&ja"
         '
         'txtCodTipoAhorro
         '
-        Me.txtCodTipoAhorro.Location = New System.Drawing.Point(316, 138)
+        Me.txtCodTipoAhorro.Enabled = False
+        Me.txtCodTipoAhorro.Location = New System.Drawing.Point(1273, 36)
         Me.txtCodTipoAhorro.MaxLength = 25
         Me.txtCodTipoAhorro.Name = "txtCodTipoAhorro"
-        Me.txtCodTipoAhorro.Size = New System.Drawing.Size(8, 20)
+        Me.txtCodTipoAhorro.Size = New System.Drawing.Size(10, 22)
         Me.txtCodTipoAhorro.TabIndex = 171
         Me.txtCodTipoAhorro.Visible = False
         '
         'dtpDia
         '
-        Me.dtpDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDia.Location = New System.Drawing.Point(112, 187)
+        Me.dtpDia.Location = New System.Drawing.Point(145, 198)
         Me.dtpDia.Name = "dtpDia"
-        Me.dtpDia.Size = New System.Drawing.Size(169, 20)
+        Me.dtpDia.Size = New System.Drawing.Size(520, 22)
         Me.dtpDia.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(13, 187)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 16)
-        Me.Label1.TabIndex = 170
-        Me.Label1.Text = "Fecha Documento:"
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(112, 134)
+        Me.txtDui.Location = New System.Drawing.Point(145, 139)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(88, 20)
+        Me.txtDui.Size = New System.Drawing.Size(201, 20)
         Me.txtDui.TabIndex = 3
         Me.txtDui.Tag = Nothing
-        '
-        'Label14
-        '
-        Me.Label14.Location = New System.Drawing.Point(13, 138)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(80, 16)
-        Me.Label14.TabIndex = 169
-        Me.Label14.Text = "DUI Asociado:"
         '
         'txtNoSocio
         '
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(492, 134)
+        Me.txtNoSocio.Location = New System.Drawing.Point(452, 140)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(80, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(213, 23)
         Me.txtNoSocio.TabIndex = 168
         Me.txtNoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label7
-        '
-        Me.Label7.Location = New System.Drawing.Point(412, 138)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 16)
-        Me.Label7.TabIndex = 167
-        Me.Label7.Text = "No. Asociado:"
-        '
-        'Label8
-        '
-        Me.Label8.Location = New System.Drawing.Point(13, 163)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 18)
-        Me.Label8.TabIndex = 166
-        Me.Label8.Text = "Asociado:"
         '
         'txtAsociado
         '
         Me.txtAsociado.BackColor = System.Drawing.Color.White
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(112, 160)
+        Me.txtAsociado.ForeColor = System.Drawing.Color.Black
+        Me.txtAsociado.Location = New System.Drawing.Point(145, 167)
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(460, 21)
+        Me.txtAsociado.Size = New System.Drawing.Size(520, 25)
         Me.txtAsociado.TabIndex = 4
         '
         'txtObs
         '
-        Me.txtObs.Location = New System.Drawing.Point(112, 239)
+        Me.txtObs.Location = New System.Drawing.Point(145, 294)
         Me.txtObs.MaxLength = 255
         Me.txtObs.Multiline = True
         Me.txtObs.Name = "txtObs"
         Me.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObs.Size = New System.Drawing.Size(460, 82)
+        Me.txtObs.Size = New System.Drawing.Size(520, 135)
         Me.txtObs.TabIndex = 9
-        '
-        'Label6
-        '
-        Me.Label6.Location = New System.Drawing.Point(13, 242)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(96, 16)
-        Me.Label6.TabIndex = 86
-        Me.Label6.Text = "Observaciones:"
         '
         'txtNoDocumento
         '
         Me.txtNoDocumento.BackColor = System.Drawing.Color.White
-        Me.txtNoDocumento.Location = New System.Drawing.Point(112, 213)
+        Me.txtNoDocumento.Location = New System.Drawing.Point(145, 262)
         Me.txtNoDocumento.MaxLength = 20
         Me.txtNoDocumento.Name = "txtNoDocumento"
-        Me.txtNoDocumento.Size = New System.Drawing.Size(169, 20)
+        Me.txtNoDocumento.Size = New System.Drawing.Size(201, 22)
         Me.txtNoDocumento.TabIndex = 7
-        '
-        'Label5
-        '
-        Me.Label5.Location = New System.Drawing.Point(13, 212)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 16)
-        Me.Label5.TabIndex = 85
-        Me.Label5.Text = "No. Documento:"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.dtpFecha)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.txtCodReversion)
-        Me.GroupBox2.Controls.Add(Me.rbCargo)
-        Me.GroupBox2.Controls.Add(Me.rbAbono)
-        Me.GroupBox2.ForeColor = System.Drawing.Color.Green
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 8)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(562, 70)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Tipo de operación:"
         '
         'Label9
         '
+        Me.Label9.Enabled = False
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(6, 38)
+        Me.Label9.Location = New System.Drawing.Point(521, 40)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(120, 16)
+        Me.Label9.Size = New System.Drawing.Size(184, 18)
         Me.Label9.TabIndex = 173
         Me.Label9.Text = "Fecha de Movimiento:"
+        Me.Label9.Visible = False
         '
         'dtpFecha
         '
+        Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(132, 38)
+        Me.dtpFecha.Location = New System.Drawing.Point(394, 40)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 22)
         Me.dtpFecha.TabIndex = 2
+        Me.dtpFecha.Visible = False
         '
         'Label4
         '
+        Me.Label4.Enabled = False
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(226, 38)
+        Me.Label4.Location = New System.Drawing.Point(698, 44)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 16)
+        Me.Label4.Size = New System.Drawing.Size(173, 18)
         Me.Label4.TabIndex = 86
         Me.Label4.Text = "Código de la Transacción:"
+        Me.Label4.Visible = False
         '
         'txtCodReversion
         '
-        Me.txtCodReversion.Location = New System.Drawing.Point(376, 38)
+        Me.txtCodReversion.Enabled = False
+        Me.txtCodReversion.Location = New System.Drawing.Point(877, 44)
         Me.txtCodReversion.MaxLength = 25
         Me.txtCodReversion.Name = "txtCodReversion"
-        Me.txtCodReversion.Size = New System.Drawing.Size(180, 20)
+        Me.txtCodReversion.Size = New System.Drawing.Size(216, 22)
         Me.txtCodReversion.TabIndex = 3
+        Me.txtCodReversion.Visible = False
         '
         'rbCargo
         '
         Me.rbCargo.ForeColor = System.Drawing.Color.Black
-        Me.rbCargo.Location = New System.Drawing.Point(132, 16)
+        Me.rbCargo.Location = New System.Drawing.Point(272, 79)
         Me.rbCargo.Name = "rbCargo"
-        Me.rbCargo.Size = New System.Drawing.Size(56, 16)
+        Me.rbCargo.Size = New System.Drawing.Size(68, 19)
         Me.rbCargo.TabIndex = 1
         Me.rbCargo.Text = "&Cargo"
         '
@@ -385,9 +282,9 @@ Public Class frmMsAhReversiones
         '
         Me.rbAbono.Checked = True
         Me.rbAbono.ForeColor = System.Drawing.Color.Black
-        Me.rbAbono.Location = New System.Drawing.Point(6, 19)
+        Me.rbAbono.Location = New System.Drawing.Point(189, 79)
         Me.rbAbono.Name = "rbAbono"
-        Me.rbAbono.Size = New System.Drawing.Size(64, 16)
+        Me.rbAbono.Size = New System.Drawing.Size(77, 18)
         Me.rbAbono.TabIndex = 0
         Me.rbAbono.TabStop = True
         Me.rbAbono.Text = "&Abono"
@@ -398,49 +295,25 @@ Public Class frmMsAhReversiones
         Me.C1NEMonto.CustomFormat = "###,###,##0.00"
         Me.C1NEMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.C1NEMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.C1NEMonto.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NEMonto.Increment = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.C1NEMonto.Location = New System.Drawing.Point(403, 212)
+        Me.C1NEMonto.Location = New System.Drawing.Point(464, 262)
         Me.C1NEMonto.Name = "C1NEMonto"
         Me.C1NEMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.C1NEMonto.ShowDropDownButton = False
-        Me.C1NEMonto.ShowUpDownButtons = False
-        Me.C1NEMonto.Size = New System.Drawing.Size(169, 21)
+        Me.C1NEMonto.Size = New System.Drawing.Size(201, 23)
         Me.C1NEMonto.TabIndex = 8
         Me.C1NEMonto.Tag = Nothing
         Me.C1NEMonto.Value = New Decimal(New Integer() {0, 0, 0, 0})
-        '
-        'Label3
-        '
-        Me.Label3.Location = New System.Drawing.Point(287, 213)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
-        Me.Label3.TabIndex = 81
-        Me.Label3.Text = "Monto:"
-        '
-        'Label2
-        '
-        Me.Label2.Location = New System.Drawing.Point(287, 187)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 16)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Código de Cuenta:"
-        '
-        'txtCodCuenta
-        '
-        Me.txtCodCuenta.Location = New System.Drawing.Point(403, 187)
-        Me.txtCodCuenta.MaxLength = 25
-        Me.txtCodCuenta.Name = "txtCodCuenta"
-        Me.txtCodCuenta.Size = New System.Drawing.Size(169, 20)
-        Me.txtCodCuenta.TabIndex = 6
+        Me.C1NEMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'btnReimpresion
         '
-        Me.btnReimpresion.Location = New System.Drawing.Point(465, 404)
+        Me.btnReimpresion.Location = New System.Drawing.Point(495, 435)
         Me.btnReimpresion.Name = "btnReimpresion"
-        Me.btnReimpresion.Size = New System.Drawing.Size(142, 28)
-        Me.btnReimpresion.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnReimpresion.Size = New System.Drawing.Size(170, 32)
+        Me.btnReimpresion.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnReimpresion.TabIndex = 212
         Me.btnReimpresion.Text = "Imprimir Nuevamente"
         Me.btnReimpresion.UseSelectable = True
@@ -448,10 +321,10 @@ Public Class frmMsAhReversiones
         '
         'btnImprimir
         '
-        Me.btnImprimir.Location = New System.Drawing.Point(379, 404)
+        Me.btnImprimir.Location = New System.Drawing.Point(392, 435)
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(80, 28)
-        Me.btnImprimir.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnImprimir.Size = New System.Drawing.Size(96, 32)
+        Me.btnImprimir.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImprimir.TabIndex = 213
         Me.btnImprimir.Text = "Imprimir"
         Me.btnImprimir.UseSelectable = True
@@ -459,40 +332,166 @@ Public Class frmMsAhReversiones
         '
         'btProcesar
         '
-        Me.btProcesar.Location = New System.Drawing.Point(293, 404)
+        Me.btProcesar.Location = New System.Drawing.Point(289, 435)
         Me.btProcesar.Name = "btProcesar"
-        Me.btProcesar.Size = New System.Drawing.Size(80, 28)
-        Me.btProcesar.Style = MetroFramework.MetroColorStyle.Green
+        Me.btProcesar.Size = New System.Drawing.Size(96, 32)
+        Me.btProcesar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btProcesar.TabIndex = 214
         Me.btProcesar.Text = "Procesar"
         Me.btProcesar.UseSelectable = True
         Me.btProcesar.UseStyleColors = True
         '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(23, 76)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(108, 20)
+        Me.MetroLabel1.TabIndex = 215
+        Me.MetroLabel1.Text = "Tipo Operación:"
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(23, 103)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(151, 20)
+        Me.MetroLabel2.TabIndex = 216
+        Me.MetroLabel2.Text = "Origen de Transacción:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.Location = New System.Drawing.Point(23, 138)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(35, 20)
+        Me.MetroLabel3.TabIndex = 217
+        Me.MetroLabel3.Text = "DUI:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(352, 138)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(94, 20)
+        Me.MetroLabel4.TabIndex = 218
+        Me.MetroLabel4.Text = "No. Asociado:"
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.Location = New System.Drawing.Point(23, 164)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(68, 20)
+        Me.MetroLabel5.TabIndex = 219
+        Me.MetroLabel5.Text = "Asociado:"
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(23, 195)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(116, 20)
+        Me.MetroLabel6.TabIndex = 220
+        Me.MetroLabel6.Text = "Fecha Aplicación:"
+        '
+        'MetroLabel7
+        '
+        Me.MetroLabel7.AutoSize = True
+        Me.MetroLabel7.Location = New System.Drawing.Point(23, 226)
+        Me.MetroLabel7.Name = "MetroLabel7"
+        Me.MetroLabel7.Size = New System.Drawing.Size(82, 20)
+        Me.MetroLabel7.TabIndex = 221
+        Me.MetroLabel7.Text = "No. Cuenta:"
+        '
+        'cbNoCuenta
+        '
+        Me.cbNoCuenta.FormattingEnabled = True
+        Me.cbNoCuenta.ItemHeight = 24
+        Me.cbNoCuenta.Location = New System.Drawing.Point(145, 226)
+        Me.cbNoCuenta.Name = "cbNoCuenta"
+        Me.cbNoCuenta.Size = New System.Drawing.Size(520, 30)
+        Me.cbNoCuenta.Style = MetroFramework.MetroColorStyle.Teal
+        Me.cbNoCuenta.TabIndex = 222
+        Me.cbNoCuenta.UseSelectable = True
+        '
+        'MetroLabel8
+        '
+        Me.MetroLabel8.AutoSize = True
+        Me.MetroLabel8.Location = New System.Drawing.Point(23, 262)
+        Me.MetroLabel8.Name = "MetroLabel8"
+        Me.MetroLabel8.Size = New System.Drawing.Size(111, 20)
+        Me.MetroLabel8.TabIndex = 223
+        Me.MetroLabel8.Text = "No. Documento:"
+        '
+        'MetroLabel9
+        '
+        Me.MetroLabel9.AutoSize = True
+        Me.MetroLabel9.Location = New System.Drawing.Point(352, 264)
+        Me.MetroLabel9.Name = "MetroLabel9"
+        Me.MetroLabel9.Size = New System.Drawing.Size(89, 20)
+        Me.MetroLabel9.TabIndex = 224
+        Me.MetroLabel9.Text = "Valor Aplicar:"
+        '
+        'MetroLabel10
+        '
+        Me.MetroLabel10.AutoSize = True
+        Me.MetroLabel10.Location = New System.Drawing.Point(23, 294)
+        Me.MetroLabel10.Name = "MetroLabel10"
+        Me.MetroLabel10.Size = New System.Drawing.Size(91, 20)
+        Me.MetroLabel10.TabIndex = 225
+        Me.MetroLabel10.Text = "Observación:"
+        '
         'frmMsAhReversiones
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(630, 445)
+        Me.ClientSize = New System.Drawing.Size(691, 524)
+        Me.Controls.Add(Me.MetroLabel10)
+        Me.Controls.Add(Me.MetroLabel9)
+        Me.Controls.Add(Me.MetroLabel8)
+        Me.Controls.Add(Me.cbNoCuenta)
+        Me.Controls.Add(Me.txtObs)
+        Me.Controls.Add(Me.MetroLabel7)
+        Me.Controls.Add(Me.txtCodTipoAhorro)
+        Me.Controls.Add(Me.MetroLabel6)
+        Me.Controls.Add(Me.dtpDia)
+        Me.Controls.Add(Me.C1NEMonto)
+        Me.Controls.Add(Me.txtNoDocumento)
+        Me.Controls.Add(Me.MetroLabel5)
+        Me.Controls.Add(Me.MetroLabel4)
+        Me.Controls.Add(Me.MetroLabel3)
+        Me.Controls.Add(Me.txtOrigen)
+        Me.Controls.Add(Me.txtDui)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.txtAsociado)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.txtTipo)
+        Me.Controls.Add(Me.txtAnio)
+        Me.Controls.Add(Me.rbReversion)
+        Me.Controls.Add(Me.rbTransferencia)
+        Me.Controls.Add(Me.txtCodReversion)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.dtpFecha)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.rbCaja)
+        Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.btProcesar)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnReimpresion)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.rbCargo)
+        Me.Controls.Add(Me.rbAbono)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsAhReversiones"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Aplicaciones Valor Fecha"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.gbOrigen.ResumeLayout(False)
-        Me.gbOrigen.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.C1NEMonto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -563,33 +562,43 @@ Public Class frmMsAhReversiones
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
-
-    Private Sub txtCodCuenta_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodCuenta.DoubleClick
-        Dim frm As New frmAGenerico, Fila As DataRowCollection, sTexto As String
-
-        frm.Text = "Buscar Cuenta"
-        Dim oAh As New wrAhorro.wsLibAhorro, ds As New Data.DataSet("Ahorro"), dr As DataRow
+    Protected Sub llenarCuentas()
         Try
-            If pTipoDeposito = "0" Then 'Ahorros
-                ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and left(CodTipoAhorro,1)<>'1'", "NoCuenta", sUsuario, sPassword, sSucursal)
-            ElseIf pTipoDeposito = "1" Then 'Aportación
-                ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and left(CodTipoAhorro,1)='1'", "NoCuenta", sUsuario, sPassword, sSucursal)
-            End If
-            frm.Datos = ds
-            frm.C1fgrdResultado.Cols.Item(5).Format = "##0.00"
-            frm.ColSeleccion = 0
-            frm.RefrescarGrid()
-            frm.ShowDialog()
-            If frm.Resultado.Trim = "" Then
-            ElseIf frm.Resultado.Trim <> "" Then
-                sTexto = frm.Resultado3.Trim
-                Me.txtCodCuenta.Text = sTexto
-                Me.txtCodTipoAhorro.Text = frm.Resultado2.Trim
-            End If
+            Dim dts As New DataSet
+            dts = ahorro.ConsultarCuentaAhorro("Nocuenta", "Dui='" & Me.txtDui.Value & "' and saldo_Cuentaahorro > 0  and estado not in ('C',D) ", "NoCuenta", sUsuario, sPassword, sSucursal)
+            cbNoCuenta.DataSource = dts.Tables(0)
+            cbNoCuenta.DisplayMember = "NoCuenta"
+            cbNoCuenta.ValueMember = "NoCuenta"
         Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+    'Private Sub txtCodCuenta_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
+    'Dim frm As New frmAGenerico, Fila As DataRowCollection, sTexto As String
+
+    '    frm.Text = "Buscar Cuenta"
+    '    Dim oAh As New wrAhorro.wsLibAhorro, ds As New Data.DataSet("Ahorro"), dr As DataRow
+    '    Try
+    '        If pTipoDeposito = "0" Then 'Ahorros
+    '            ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and left(CodTipoAhorro,1)<>'1'", "NoCuenta", sUsuario, sPassword, sSucursal)
+    '        ElseIf pTipoDeposito = "1" Then 'Aportación
+    '            ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "Dui='" & Me.txtDui.Value & "' and left(CodTipoAhorro,1)='1'", "NoCuenta", sUsuario, sPassword, sSucursal)
+    '        End If
+    '        frm.Datos = ds
+    '        frm.C1fgrdResultado.Cols.Item(5).Format = "##0.00"
+    '        frm.ColSeleccion = 0
+    '        frm.RefrescarGrid()
+    '        frm.ShowDialog()
+    '        If frm.Resultado.Trim = "" Then
+    '        ElseIf frm.Resultado.Trim <> "" Then
+    '            sTexto = frm.Resultado3.Trim
+    '            Me.txtCodCuenta.Text = sTexto
+    '            Me.txtCodTipoAhorro.Text = frm.Resultado2.Trim
+    '        End If
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End Try
+    'End Sub
 
     Private Sub btProcesar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -600,19 +609,19 @@ Public Class frmMsAhReversiones
             Dim oAhorro As New wrAhorro.wsLibAhorro, ds As New DataSet
             If Me.rbAbono.Checked = True Then
                 Me.pTipoOper = "A"
-                Me.gbOrigen.Enabled = False
+                'Me.gbOrigen.Enabled = False
                 Me.txtNoDocumento.ReadOnly = False
                 Me.dtpDia.Enabled = True
                 Me.C1NEMonto.Enabled = True
             ElseIf Me.rbCargo.Checked = True Then
                 Me.pTipoOper = "C"
-                Me.gbOrigen.Enabled = True
+                ' Me.gbOrigen.Enabled = True
                 Me.txtNoDocumento.ReadOnly = True
                 Me.dtpDia.Enabled = False
                 Me.C1NEMonto.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -621,19 +630,19 @@ Public Class frmMsAhReversiones
             Dim oAhorro As New wrAhorro.wsLibAhorro, ds As New DataSet
             If Me.rbAbono.Checked = True Then
                 Me.pTipoOper = "A"
-                Me.gbOrigen.Enabled = False
+                '  Me.gbOrigen.Enabled = False
                 Me.txtNoDocumento.ReadOnly = False
                 Me.dtpDia.Enabled = True
                 Me.C1NEMonto.Enabled = True
             ElseIf Me.rbCargo.Checked = True Then
                 Me.pTipoOper = "C"
-                Me.gbOrigen.Enabled = True
+                '  Me.gbOrigen.Enabled = True
                 Me.txtNoDocumento.ReadOnly = True
                 Me.dtpDia.Enabled = False
                 Me.C1NEMonto.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -644,17 +653,16 @@ Public Class frmMsAhReversiones
         Dim frm As New frmAGenerico, oAhorro As New wrAhorro.wsLibAhorro
         Dim oCaja As New wrCaja.wsLibCaja, ds As New DataSet, dr As DataRow, pFecha As Date
 
-        If Me.txtCodCuenta.Text.Trim = "" Then Exit Sub
 
         frm.Text = "Buscar Documento"
 
         Try
             If Me.rbCaja.Checked = True Then
-                If Mid(Me.txtCodTipoAhorro.Text.Trim, 1, 1) = "1" And pTipoDeposito = "1" Then 'Aportación
-                    ds = oCaja.ConsultarEncabezadoDetalleItemFacturas("a.IdMovimiento,a.Annio,a.Tipo,a.Fec_Mov as Fecha,b.SubTotal_SIva as Total_Item,a.Vta_Total as Total_Documento,b.Descripcion,b.NoCuenta", "(c.Tipo_Item='A' and a.Dui='" & Me.txtDui.Value & "' and c.IdRubro='2' and Estado_Pr='A' and Estado_Ap<>'A') or (b.NoCuenta='" & Me.txtCodCuenta.Text.Trim & "' and a.Estado<>'A' and b.Total_Vta=0)", "cast(a.IdMovimiento as int) asc", sUsuario, sPassword, sSucursal)
-                ElseIf pTipoDeposito = "0" Then 'Ahorro
-                    ds = oCaja.ConsultarEncabezadoDetalleItemFacturas("a.IdMovimiento,a.Annio,a.Tipo,a.Fec_Mov as Fecha,b.SubTotal_SIva as Total_Item,a.Vta_Total as Total_Documento,b.Descripcion,b.NoCuenta", "(c.Tipo_Item='H' and a.Dui='" & Me.txtDui.Value & "' and c.IdRubro='2' and Estado_Pr='A' and Estado_Ap='A' and Estado_Ah<>'A') or (b.NoCuenta='" & Me.txtCodCuenta.Text.Trim & "' and a.Estado<>'A' and b.Total_Vta=0)", "cast(a.IdMovimiento as int) asc", sUsuario, sPassword, sSucursal)
-                End If
+                '  If Mid(Me.txtCodTipoAhorro.Text.Trim, 1, 1) = "1" And pTipoDeposito = "1" Then 'Aportación
+                ds = oCaja.ConsultarEncabezadoDetalleItemFacturas("a.IdMovimiento,a.Annio,a.Tipo,a.Fec_Mov as Fecha,b.SubTotal_SIva as Total_Item,a.Vta_Total as Total_Documento,b.Descripcion,b.NoCuenta", "(c.Tipo_Item='A' and a.Dui='" & Me.txtDui.Value & "' and c.IdRubro='2' and Estado_Pr='A' and Estado_Ap<>'A') or (b.NoCuenta='" & cbNoCuenta.SelectedValue & "' and a.Estado<>'A' and b.Total_Vta=0)", "cast(a.IdMovimiento as int) asc", sUsuario, sPassword, sSucursal)
+                ' ElseIf pTipoDeposito = "0" Then 'Ahorro
+                ' ds = oCaja.ConsultarEncabezadoDetalleItemFacturas("a.IdMovimiento,a.Annio,a.Tipo,a.Fec_Mov as Fecha,b.SubTotal_SIva as Total_Item,a.Vta_Total as Total_Documento,b.Descripcion,b.NoCuenta", "(c.Tipo_Item='H' and a.Dui='" & Me.txtDui.Value & "' and c.IdRubro='2' and Estado_Pr='A' and Estado_Ap='A' and Estado_Ah<>'A') or (b.NoCuenta='" & Me.txtCodCuenta.Text.Trim & "' and a.Estado<>'A' and b.Total_Vta=0)", "cast(a.IdMovimiento as int) asc", sUsuario, sPassword, sSucursal)
+                'End If
                 frm.Datos = ds
                 frm.ColSeleccion = 0
                 frm.RefrescarGrid()
@@ -665,7 +673,7 @@ Public Class frmMsAhReversiones
                     Me.txtNoDocumento.Text = frm.Resultado.Trim
                     Me.txtAnio.Text = frm.Resultado2.Trim
                     Me.txtTipo.Text = frm.Resultado3.Trim
-                    If Me.txtCodCuenta.Text.Trim.Equals(frm.Resultado8.Trim) = True Then 'Documento de esta cuenta
+                    If cbNoCuenta.SelectedValue.ToString.Equals(frm.Resultado8.Trim) = True Then 'Documento de esta cuenta
                         Me.C1NEMonto.Value = frm.Resultado6.Trim
                     Else 'Documento de préstamo
                         Me.C1NEMonto.Value = frm.Resultado5.Trim
@@ -674,7 +682,7 @@ Public Class frmMsAhReversiones
                     Me.dtpDia.Value = pFecha
                 End If
             ElseIf Me.rbTransferencia.Checked = True Then
-                ds = oAhorro.ConsultarTransferencia("a.CodTransferencia as No_Doc,a.Fecha,b.Valor as Monto,a.Observacion", "b.NoCuenta='" & Me.txtCodCuenta.Text.Trim & "' and a.Estado='N'", "a.Fecha desc", "3", sUsuario, sPassword, sSucursal)
+                ds = oAhorro.ConsultarTransferencia("a.CodTransferencia as No_Doc,a.Fecha,b.Valor as Monto,a.Observacion", "b.NoCuenta='" & cbNoCuenta.SelectedValue & "' and a.Estado='N'", "a.Fecha desc", "3", sUsuario, sPassword, sSucursal)
                 frm.Datos = ds
                 frm.ColSeleccion = 0
                 frm.RefrescarGrid()
@@ -725,6 +733,7 @@ Public Class frmMsAhReversiones
                     Me.txtDui.Value = Trim(dr("DUI"))
                     Me.txtAsociado.Text = Trim(dr("Nombres")) & ", " & dr("Apellido1") & " " & dr("Apellido2") & " " & dr("ApellidoCas")
                     Me.txtNoSocio.Text = Trim(dr("NoSocio"))
+                    llenarCuentas()
                 End If
             End If
 
@@ -741,7 +750,8 @@ Public Class frmMsAhReversiones
         Me.txtAsociado.Text = ""
         Me.txtNoSocio.Text = ""
         Me.txtCodTipoAhorro.Text = ""
-        Me.txtCodCuenta.Text = ""
+        cbNoCuenta.DataSource = Nothing
+        'Me.txtCodCuenta.Text = ""
         Me.txtNoDocumento.Text = ""
         Me.C1NEMonto.Value = 0
         Me.txtObs.Text = ""
@@ -757,7 +767,7 @@ Public Class frmMsAhReversiones
             Me.btProcesar.Enabled = False
             pReimpresion = True
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -778,7 +788,7 @@ Public Class frmMsAhReversiones
                 pReimpresion = False
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -786,38 +796,26 @@ Public Class frmMsAhReversiones
         Try
             Dim oAhorro As New wrAhorro.wsLibAhorro, ds As New DataSet
             Me.Cursor = Cursors.WaitCursor
-            If Trim(Me.txtCodCuenta.Text) = "" Or Val(Me.C1NEMonto.Value) = 0 Or Trim(Me.txtNoDocumento.Text) = "" Then Exit Sub
+            If Val(Me.C1NEMonto.Value) = 0 Or Trim(Me.txtNoDocumento.Text) = "" Then Exit Sub
             If Me.pTipoOper.Trim = "" Then Exit Sub
             pCodReversion = "RM" & Me.pTipoOper & Format(Month(dtpDia.Value.Date), "00") & Year(dtpDia.Value.Date) & oAhorro.CorrelativoAhReversion(sUsuario, sPassword, sSucursal)
             Me.txtCodReversion.Text = pCodReversion
             If Mid(Me.txtCodTipoAhorro.Text.Trim, 1, 1) = "1" And pTipoDeposito = "1" Then 'Aportación
-                oAhorro.ReversionAportaciones(pCodReversion, (Trim(Me.txtCodCuenta.Text)), Me.txtCodTipoAhorro.Text.Trim, dtpDia.Value.Date, Me.pTipoOper, Val(Me.C1NEMonto.Value), Trim(Me.txtNoDocumento.Text), IIf(Me.txtAnio.Text.Trim = "", 0, Me.txtAnio.Text.Trim), Me.txtTipo.Text.Trim, Me.txtOrigen.Text.Trim, txtObs.Text.Trim, sUsuario, sPassword, sSucursal)
+                oAhorro.ReversionAportaciones(pCodReversion, cbNoCuenta.SelectedValue, Me.txtCodTipoAhorro.Text.Trim, dtpDia.Value.Date, Me.pTipoOper, Val(Me.C1NEMonto.Value), Trim(Me.txtNoDocumento.Text), IIf(Me.txtAnio.Text.Trim = "", 0, Me.txtAnio.Text.Trim), Me.txtTipo.Text.Trim, Me.txtOrigen.Text.Trim, txtObs.Text.Trim, sUsuario, sPassword, sSucursal)
             ElseIf pTipoDeposito = "0" Then 'Ahorro
-                oAhorro.ReversionAhorros(pCodReversion, (Trim(Me.txtCodCuenta.Text)), Me.txtCodTipoAhorro.Text.Trim, dtpDia.Value.Date, Me.pTipoOper, Val(Me.C1NEMonto.Value), Trim(Me.txtNoDocumento.Text), IIf(Me.txtAnio.Text.Trim = "", 0, Me.txtAnio.Text.Trim), Me.txtTipo.Text.Trim, Me.txtOrigen.Text.Trim, txtObs.Text.Trim, sUsuario, sPassword, sSucursal)
+                oAhorro.ReversionAhorros(pCodReversion, cbNoCuenta.SelectedValue, Me.txtCodTipoAhorro.Text.Trim, dtpDia.Value.Date, Me.pTipoOper, Val(Me.C1NEMonto.Value), Trim(Me.txtNoDocumento.Text), IIf(Me.txtAnio.Text.Trim = "", 0, Me.txtAnio.Text.Trim), Me.txtTipo.Text.Trim, Me.txtOrigen.Text.Trim, txtObs.Text.Trim, sUsuario, sPassword, sSucursal)
             End If
             Me.Cursor = Cursors.Default
             MessageBox.Show("Aplicación Valor / Fecha procesada con éxito.", "Aplicaciones Valor Fecha", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.btnImprimir.Enabled = True
             Me.btProcesar.Enabled = False
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub txtCodCuenta_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodCuenta.LostFocus
+    Private Sub txtCodCuenta_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
 
-        Dim oAh As New wrAhorro.wsLibAhorro, ds As New Data.DataSet("Ahorro"), dr As DataRow
-        Try
-
-            ds = oAh.ConsultarCuentaAhorro("Dui,CodTipoAhorro,NoCuenta,FechaPrimeraCuota,Cuota,SaldoDisponible_CuentaAhorro", "NoCuenta='" & Me.txtCodCuenta.Text.Trim & "'", "NoCuenta", sUsuario, sPassword, sSucursal)
-            If ds.Tables(0).Rows.Count > 0 Then
-                dr = ds.Tables(0).Rows(0)
-                Me.txtCodTipoAhorro.Text = dr("CodTipoAhorro")
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
     End Sub
 
     Private Sub rbReversion_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbReversion.CheckedChanged
@@ -836,4 +834,24 @@ Public Class frmMsAhReversiones
 
     End Sub
 
+    Private Sub cbNoCuenta_Validated(sender As Object, e As EventArgs) Handles cbNoCuenta.Validated
+
+        Dim ds As New Data.DataSet("Ahorro"), dr As DataRow
+        Try
+            ds = ahorro.ConsultarCuentaAhorro("CodTipoAhorro", "NoCuenta='" & cbNoCuenta.SelectedValue & "'", "NoCuenta", sUsuario, sPassword, sSucursal)
+            If ds.Tables(0).Rows.Count > 0 Then
+                dr = ds.Tables(0).Rows(0)
+                Me.txtCodTipoAhorro.Text = dr("CodTipoAhorro")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error en la recuperación de datos tabla AhCuentasAhorro- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub frmMsAhReversiones_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

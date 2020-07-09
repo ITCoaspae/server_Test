@@ -29,22 +29,27 @@ Partial Class frmVisorReporte
         '
         Me.crvVisorReportes.ActiveViewIndex = -1
         Me.crvVisorReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crvVisorReportes.DisplayGroupTree = False
+        Me.crvVisorReportes.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvVisorReportes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.crvVisorReportes.Location = New System.Drawing.Point(20, 60)
+        Me.crvVisorReportes.Location = New System.Drawing.Point(27, 74)
+        Me.crvVisorReportes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.crvVisorReportes.Name = "crvVisorReportes"
         Me.crvVisorReportes.SelectionFormula = ""
-        Me.crvVisorReportes.Size = New System.Drawing.Size(401, 315)
+        Me.crvVisorReportes.Size = New System.Drawing.Size(534, 387)
         Me.crvVisorReportes.TabIndex = 0
+        Me.crvVisorReportes.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.crvVisorReportes.ToolPanelWidth = 267
         Me.crvVisorReportes.ViewTimeSelectionFormula = ""
         '
         'frmVisorReporte
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(441, 395)
+        Me.ClientSize = New System.Drawing.Size(588, 486)
         Me.Controls.Add(Me.crvVisorReportes)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmVisorReporte"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Visor Reporte"
         Me.ResumeLayout(False)

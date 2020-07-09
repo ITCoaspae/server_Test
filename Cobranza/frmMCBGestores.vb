@@ -66,10 +66,11 @@ Public Class frmMCBGestores
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 196)
+        Me.fg.Location = New System.Drawing.Point(28, 226)
         Me.fg.Name = "fg"
-        Me.fg.Size = New System.Drawing.Size(526, 203)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(626, 178)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 48
         '
         'GroupBox2
@@ -82,18 +83,18 @@ Public Class frmMCBGestores
         Me.GroupBox2.Controls.Add(Me.rbDescripcion)
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(526, 93)
+        Me.GroupBox2.Size = New System.Drawing.Size(631, 107)
         Me.GroupBox2.TabIndex = 46
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Gestores por:"
         '
         'MetroButton6
         '
-        Me.MetroButton6.Location = New System.Drawing.Point(432, 48)
+        Me.MetroButton6.Location = New System.Drawing.Point(518, 55)
         Me.MetroButton6.Name = "MetroButton6"
-        Me.MetroButton6.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton6.Size = New System.Drawing.Size(90, 33)
         Me.MetroButton6.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton6.TabIndex = 191
         Me.MetroButton6.Text = "Mostrar"
@@ -105,9 +106,9 @@ Public Class frmMCBGestores
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(332, 26)
+        Me.rbTodos.Location = New System.Drawing.Point(398, 30)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(183, 28)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -116,25 +117,25 @@ Public Class frmMCBGestores
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(174, 56)
+        Me.txtDescripcion.Location = New System.Drawing.Point(209, 65)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(152, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(182, 22)
         Me.txtDescripcion.TabIndex = 3
         '
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodigo.Location = New System.Drawing.Point(19, 65)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(183, 22)
         Me.txtCodigo.TabIndex = 1
         '
         'rbDescripcion
         '
         Me.rbDescripcion.BackColor = System.Drawing.Color.White
-        Me.rbDescripcion.Location = New System.Drawing.Point(174, 26)
+        Me.rbDescripcion.Location = New System.Drawing.Point(209, 30)
         Me.rbDescripcion.Name = "rbDescripcion"
-        Me.rbDescripcion.Size = New System.Drawing.Size(152, 24)
+        Me.rbDescripcion.Size = New System.Drawing.Size(182, 28)
         Me.rbDescripcion.TabIndex = 2
         Me.rbDescripcion.Text = "&Nombre"
         Me.rbDescripcion.UseVisualStyleBackColor = False
@@ -142,18 +143,18 @@ Public Class frmMCBGestores
         'rbCodigo
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
-        Me.rbCodigo.Location = New System.Drawing.Point(16, 24)
+        Me.rbCodigo.Location = New System.Drawing.Point(19, 28)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(183, 27)
         Me.rbCodigo.TabIndex = 0
         Me.rbCodigo.Text = "&Código"
         Me.rbCodigo.UseVisualStyleBackColor = False
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(185, 162)
+        Me.MetroButton1.Location = New System.Drawing.Point(222, 187)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 189
         Me.MetroButton1.Text = "Consultar"
@@ -163,9 +164,9 @@ Public Class frmMCBGestores
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(23, 162)
+        Me.MetroButton2.Location = New System.Drawing.Point(28, 187)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton2.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton2.TabIndex = 186
         Me.MetroButton2.Text = "Agregar"
@@ -175,9 +176,9 @@ Public Class frmMCBGestores
         '
         'MetroButton3
         '
-        Me.MetroButton3.Location = New System.Drawing.Point(104, 162)
+        Me.MetroButton3.Location = New System.Drawing.Point(125, 187)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton3.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton3.TabIndex = 187
         Me.MetroButton3.Text = "Modificar"
@@ -187,9 +188,9 @@ Public Class frmMCBGestores
         '
         'MetroButton4
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(266, 162)
+        Me.MetroButton4.Location = New System.Drawing.Point(319, 187)
         Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton4.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton4.TabIndex = 188
         Me.MetroButton4.Text = "Eliminar"
@@ -199,9 +200,9 @@ Public Class frmMCBGestores
         '
         'MetroButton5
         '
-        Me.MetroButton5.Location = New System.Drawing.Point(347, 162)
+        Me.MetroButton5.Location = New System.Drawing.Point(416, 187)
         Me.MetroButton5.Name = "MetroButton5"
-        Me.MetroButton5.Size = New System.Drawing.Size(120, 28)
+        Me.MetroButton5.Size = New System.Drawing.Size(144, 32)
         Me.MetroButton5.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton5.TabIndex = 190
         Me.MetroButton5.Text = "Cambiar Contraseña"
@@ -211,9 +212,9 @@ Public Class frmMCBGestores
         '
         'frmMCBGestores
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(572, 449)
+        Me.ClientSize = New System.Drawing.Size(681, 462)
         Me.Controls.Add(Me.MetroButton5)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.MetroButton2)
@@ -315,7 +316,7 @@ Public Class frmMCBGestores
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -333,7 +334,7 @@ Public Class frmMCBGestores
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -349,7 +350,7 @@ Public Class frmMCBGestores
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -369,7 +370,7 @@ Public Class frmMCBGestores
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -382,7 +383,7 @@ Public Class frmMCBGestores
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -402,7 +403,7 @@ Public Class frmMCBGestores
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

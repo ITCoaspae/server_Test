@@ -81,18 +81,18 @@ Public Class frmMAspCoopAsoc
         Me.GroupBox2.Controls.Add(Me.rbDui)
         Me.GroupBox2.Controls.Add(Me.rbTodos)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(764, 79)
+        Me.GroupBox2.Size = New System.Drawing.Size(852, 91)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Busqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(649, 39)
+        Me.btnMostrar1.Location = New System.Drawing.Point(736, 44)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 14
         Me.btnMostrar1.Text = "Mostrar"
@@ -102,10 +102,10 @@ Public Class frmMAspCoopAsoc
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 48)
+        Me.txtDui.Location = New System.Drawing.Point(19, 55)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(114, 20)
+        Me.txtDui.Size = New System.Drawing.Size(137, 23)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
@@ -113,18 +113,18 @@ Public Class frmMAspCoopAsoc
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(386, 47)
+        Me.txtNombres.Location = New System.Drawing.Point(463, 54)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(222, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(267, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(250, 27)
+        Me.rbNombres.Location = New System.Drawing.Point(300, 31)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(130, 18)
+        Me.rbNombres.Size = New System.Drawing.Size(156, 21)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -134,24 +134,24 @@ Public Class frmMAspCoopAsoc
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(250, 47)
+        Me.cbNombres.Location = New System.Drawing.Point(300, 54)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(130, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(156, 24)
         Me.cbNombres.TabIndex = 5
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(136, 48)
+        Me.txtNoSocio.Location = New System.Drawing.Point(163, 55)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(108, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(130, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(136, 24)
+        Me.rbNoSocio.Location = New System.Drawing.Point(163, 28)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(108, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(130, 27)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -159,9 +159,9 @@ Public Class frmMAspCoopAsoc
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(16, 24)
+        Me.rbDui.Location = New System.Drawing.Point(19, 28)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(114, 24)
+        Me.rbDui.Size = New System.Drawing.Size(137, 27)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI"
         Me.rbDui.UseVisualStyleBackColor = False
@@ -170,9 +170,9 @@ Public Class frmMAspCoopAsoc
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(386, 24)
+        Me.rbTodos.Location = New System.Drawing.Point(463, 28)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(75, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(90, 27)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -186,18 +186,19 @@ Public Class frmMAspCoopAsoc
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgAspCoop.BackColor = System.Drawing.Color.White
         Me.fgAspCoop.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{AllowEditing:False;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgAspCoop.Location = New System.Drawing.Point(23, 182)
+        Me.fgAspCoop.Location = New System.Drawing.Point(28, 210)
         Me.fgAspCoop.Name = "fgAspCoop"
         Me.fgAspCoop.Rows.Count = 2
-        Me.fgAspCoop.Size = New System.Drawing.Size(775, 235)
-        Me.fgAspCoop.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgAspCoop.Styles"))
+        Me.fgAspCoop.Rows.DefaultSize = 21
+        Me.fgAspCoop.Size = New System.Drawing.Size(852, 177)
+        Me.fgAspCoop.StyleInfo = resources.GetString("fgAspCoop.StyleInfo")
         Me.fgAspCoop.TabIndex = 19
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 148)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 171)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 23
         Me.btnConsultar1.Text = "Consultar"
@@ -206,9 +207,9 @@ Public Class frmMAspCoopAsoc
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 148)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 171)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 22
         Me.btnEliminar1.Text = "Eliminar"
@@ -217,9 +218,9 @@ Public Class frmMAspCoopAsoc
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 148)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 171)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 21
         Me.btnModificar1.Text = "Modificar"
@@ -228,9 +229,9 @@ Public Class frmMAspCoopAsoc
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 148)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 171)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 20
         Me.btnAgregar1.Text = "Agregar"
@@ -239,8 +240,8 @@ Public Class frmMAspCoopAsoc
         '
         'frmMAspCoopAsoc
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(810, 440)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(903, 480)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -248,6 +249,7 @@ Public Class frmMAspCoopAsoc
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.fgAspCoop)
         Me.Name = "frmMAspCoopAsoc"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Aspectos Cooperativos del Asociado"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -436,6 +438,12 @@ Public Class frmMAspCoopAsoc
             ActualizaGrid()
             txtDui.Enabled = False
             txtNoSocio.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMAspCoopAsoc_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

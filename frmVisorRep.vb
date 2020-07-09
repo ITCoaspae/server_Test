@@ -1,6 +1,6 @@
 Imports CrystalDecisions.CrystalReports.Engine
 Public Class frmVisorRep
-    Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
     Public rsc As System.Resources.ResourceManager
     Dim vReporte As String, vReporte2 As String, vReporte3 As String, iMes As Integer, dFechaIni As Date, dFechaFin As Date, vNumPartidaIni As String, vNumPartidaFin As String, vFechaI As String, vFechaF As String
     Dim vTodos As Boolean, vCuenta As String, vCodigoPrestamo As String, vDui As String, vNumSolicitud As String, vAnnio As Integer, vCodTransferencia As Integer
@@ -13,14 +13,10 @@ Public Class frmVisorRep
     Public Sub New()
         MyBase.New()
 
-        'El Diseñador de Windows Forms requiere esta llamada.
-        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("coaspaeLogo.ico"), System.Drawing.Icon)
-
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("coaspaeLogo.ico"), System.Drawing.Icon)
+        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm)
 
     End Sub
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing Then
             If Not (components Is Nothing) Then
@@ -30,12 +26,8 @@ Public Class frmVisorRep
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
     Friend WithEvents crViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.crViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
@@ -57,7 +49,7 @@ Public Class frmVisorRep
         '
         'frmVisorRep
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(880, 600)
         Me.Controls.Add(Me.crViewer)
@@ -75,7 +67,6 @@ Public Class frmVisorRep
         Get
             Return vReporte
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad)
         Set(ByVal Value As sifLib.Contabilidad.clsContabs.ReportesContabilidad)
             vReporte = Value
         End Set
@@ -84,7 +75,6 @@ Public Class frmVisorRep
         Get
             Return vReporte2
         End Get
-        'Set(ByVal Value As AlcalaLibs.Bancos.clsBCBanco.ReportesBancos)
         Set(ByVal Value As sifLib.Bancos.clsBCBancos.ReportesBancos)
             vReporte2 = Value
         End Set
@@ -93,7 +83,6 @@ Public Class frmVisorRep
         Get
             Return vReporte3
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.ReportesPrestamos)
             vReporte3 = Value
         End Set
@@ -170,6 +159,11 @@ Public Class frmVisorRep
             vTodos = Value
         End Set
     End Property
+
+    Private Sub frmVisorRep_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Public Property Cuenta() As String
         Get
             Return vCuenta
@@ -225,67 +219,41 @@ Public Class frmVisorRep
         Try
             If Not (vReporte Is Nothing) Then
                 Select Case Me.Reporte
-                    'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.BalanceComprobacion
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.BalanceComprobacion
                         RepBalComprob(Me.Mes)
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.CatalogoCuentas
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.CatalogoCuentas
                         RepCatalogoContab()
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.CatalogoCentroCostos
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.CatalogoCentroCostos
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.CatalogoCentroBeneficios
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.CatalogoCentroBeneficios
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.BalanceGeneral
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.BalanceGeneral
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.PartidasDiario
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.PartidasDiario
 
                         RepPartidasDiario(Me.NumPartidaIni, Me.NumPartidaFin, Me.sFechaI, Me.sFechaF)
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.AuxiliardeMayor
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.AuxiliardeMayor
                         RepAuxMayor(Me.Mes, Me.FechaIni, Me.FechaFin)
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.DiarioMayor
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.DiarioMayor
                         RepDiarioMayor(Me.Mes, Me.FechaIni, Me.FechaFin)
 
-                        'Case Is = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.PartidasDiarioAut
                     Case Is = sifLib.Contabilidad.clsContabs.ReportesContabilidad.PartidasDiarioAut
                         RepPartidasDiarioAut(Me.NumPartidaIni, Me.NumPartidaFin, Me.sFechaI, Me.sFechaF)
                 End Select
             End If
             If Not (vReporte2 Is Nothing) Then
                 Select Case Me.ReporteBancos
-                    'Case Is = AlcalaLibs.Bancos.clsBCBanco.ReportesBancos.ChequesEmitidos
                     Case Is = sifLib.Bancos.clsBCBancos.ReportesBancos.ChequesEmitidos
                         RepBcoChequesEmitidos(Me.Todos, Me.Cuenta, Me.sFechaI, Me.sFechaF)
                 End Select
             End If
             If Not (vReporte3 Is Nothing) Then
-                Select Case Me.ReportePrestamos
-                    'Case Is = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.EstadoCuenta
-                    Case Is = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.EstadoCuenta
-                        RepPREstadoCuenta(Me.CodigoPrestamo.Trim, Me.DuiAsociado.Trim, Me.FechaIni, Me.FechaFin)
 
-                        'Case Is = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.EstadoCuentaReal
-                    Case Is = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.EstadoCuentaReal
-                        RepPREstadoCuentaReal(Me.CodigoPrestamo.Trim, Me.DuiAsociado.Trim, Me.FechaIni, Me.FechaFin)
-
-                        'Case Is = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.DetallePrestamo
-                    Case Is = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.DetallePrestamo
-                        RepPRDetallePrestamo(Me.CodigoPrestamo.Trim, Me.NumSolicitud, Me.DuiAsociado.Trim, Me.Cuenta, Date.Now)
-
-                        'Case Is = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.DetalleSolicitud
-                    Case Is = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.DetalleSolicitud
-                        RepPRDetalleSolicitud(Me.CodigoPrestamo.Trim, Me.DuiAsociado.Trim, Me.Cuenta, Date.Now)
-                End Select
             End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -360,11 +328,12 @@ Public Class frmVisorRep
     End Sub
 
     Private Sub RepDiarioMayor(ByVal pMes As Integer, ByVal pFecIni As String, ByVal pFecFin As String)
-        Dim oRpt As New crDiarioMayor
+
         Dim ds As New DataSet
         Dim oRep As New wrConta.wsLibContab
         Try
             ds = oRep.RepDiarioMayor(pMes, pFecIni, pFecFin, vAnnio, sUsuario, sPassword, sSucursal)
+            Dim oRpt As New crDiarioMayor
             oRpt.SetDataSource(ds)
             crViewer.ReportSource = oRpt
             Me.Text = "Reporte - Libro Diario Mayor"
@@ -387,186 +356,12 @@ Public Class frmVisorRep
         End Try
     End Sub
 
-    Private Sub RepPREstadoCuenta(ByVal pcodPrestamo As String, ByVal pDUI As String, ByVal pFechaIni As Date, ByVal pFechaFin As Date)
-        Dim oRpt As New crPREstadoCuenta
-        Dim oPr As New wrPrestamo.wsLibPrest, ds As System.Data.DataSet
-        Try
-            oPr.Timeout = -1
-            ds = oPr.RepEstadoCuenta(pcodPrestamo, pFechaIni.ToShortDateString, pFechaFin.ToShortDateString, pDUI, sUsuario, sPassword, sSucursal)
-            If ds Is Nothing Then
-                MessageBox.Show("No hay datos disponibles para este rango de fechas.", "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-            oRpt.SetDataSource(ds)
-            crViewer.ReportSource = oRpt
-            Me.Text = "Reporte - Estado de Cuenta Préstamo"
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación del reporte. - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
-    Private Sub RepPREstadoCuentaReal(ByVal pcodPrestamo As String, ByVal pDUI As String, ByVal pFechaIni As Date, ByVal pFechaFin As Date)
-        Dim oRpt As New crPREstadoCuentaReal
-        Dim oPr As New wrPrestamo.wsLibPrest, ds As System.Data.DataSet
-        Try
-            ds = oPr.RepEstadoCuentaReal(pcodPrestamo, pFechaIni.ToShortDateString, pFechaFin.ToShortDateString, pDUI, sUsuario, sPassword, sSucursal)
-            If ds Is Nothing Then
-                MessageBox.Show("No hay datos disponibles para este rango de fechas.", "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-            oRpt.SetDataSource(ds)
-            crViewer.ReportSource = oRpt
-            Me.Text = "Reporte - Estado de Cuenta Préstamo"
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación del reporte. - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
+
+
 #Region "Funciones Modificadas 21/09/2011 Javier Martinez"
-    'Private Sub RepPRDetallePrestamo(ByVal pcodPrestamo As String, ByVal pNumSolicitud As String, ByVal pDUI As String, ByVal pTipoHonorario As String, ByVal pFecha As Date)
-    '    Dim oRpt As New crDetallePrestamo, oPrest As New wrPrestamo.wsLibPrest
-    '    Dim oPr As New wrPrestamo.wsLibPrest, ds As New System.Data.DataSet, dsCh As New System.Data.DataSet
-    '    Try
-    '        ds = oPr.RepDetallePrestamo(pcodPrestamo, pFecha, pDUI, pTipoHonorario, sUsuario, sPassword, sSucursal)
-    '        dsCh = oPrest.ConsultarPRCheques("*", "NumSolicitud='" & pNumSolicitud.Trim & "'", "", sUsuario, sPassword, sSucursal)
-    '        oRpt.SetDataSource(ds)
-    '        oRpt.OpenSubreport("crCheque").SetDataSource(dsCh)
-    '        crViewer().ReportSource = oRpt
-    '        Me.Text = "Reporte - Detalle de Préstamo"
-
-    '    Catch ex As Exception
-    '        MessageBox.Show("Error en la recuperación del reporte- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End Try
-    'End Sub
-
-    'Private Sub RepPRDetalleSolicitud(ByVal pcodPrestamo As String, ByVal pDUI As String, ByVal pTipoHonorario As String, ByVal pFecha As Date)
-    '    Dim oRpt As New crDetallePrestamo, oPrest As New wrPrestamo.wsLibPrest
-    '    Dim oPr As New wrPrestamo.wsLibPrest, ds As New System.Data.DataSet, dsCh As New System.Data.DataSet
-    '    Try
-    '        ds = oPr.RepDetalleSolicitud(pcodPrestamo, pFecha, pDUI, pTipoHonorario, sUsuario, sPassword, sSucursal)
-    '        dsCh = oPrest.ConsultarPRCheques("*", "NumSolicitud=" & pcodPrestamo & "", "", sUsuario, sPassword, sSucursal)
-    '        oRpt.SetDataSource(ds)
-    '        oRpt.OpenSubreport("crCheque").SetDataSource(dsCh)
-    '        crViewer().ReportSource = oRpt
-    '        Me.Text = "Reporte - Detalle de Solicitud"
-    '    Catch ex As Exception
-    '        MessageBox.Show("Error en la recuperación del reporte- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End Try
-    ' End Sub
-
 #End Region
-    'Funciones Corregidas 21/09/2011 Javier Martinez
     Public x As Integer
-    Private Sub RepPRDetallePrestamo(ByVal pcodPrestamo As String, ByVal pNumSolicitud As String, ByVal pDUI As String, ByVal pTipoHonorario As String, ByVal pFecha As Date)
-        '//* MODIFICADO EL 17/02/2012 
-        '//* SE AGREGP JEFE SUC. LAS CASCADAS 
-        '//* AUTOR:JAVIER MARTINEZ
-        Dim oRpt As New crDetallePrestamoTran, oPrest As New wrPrestamo.wsLibPrest
-        Dim oPr As New wrPrestamo.wsLibPrest, ds As New System.Data.DataSet, dsCh As New System.Data.DataSet
-        Dim text As TextObject
-        Dim SELECCION As Integer
-        Dim CARGO As String
-        SELECCION = x
-        'If SELECCION = 0 Then
-        '    CARGO = "JEFE OPERACIONES C.F."
-        'ElseIf SELECCION = 1 Then
-        '    CARGO = "JEFE SUC. METROCENTRO"
-        'ElseIf SELECCION = 2 Then
-        '    CARGO = "JEFE SUC. PLAZA MUNDO"
-        'ElseIf SELECCION = 3 Then
-        '    CARGO = "JEFE SUC. LAS CASCADAS"
-        'End If
-        Try
-            ds = oPr.RepDetallePrestamo(pcodPrestamo, pFecha, pDUI, pTipoHonorario, sUsuario, sPassword, sSucursal)
-            dsCh = Bancos.Consultar_BcMovCheques(1, "", "", "", Now, pNumSolicitud)
-            If dsCh.Tables(0).Rows.Count > 0 Then
-                oRpt.SetDataSource(ds)
-                oRpt.Subreports(0).SetDataSource(dsCh.Tables(0))
-                'oRpt.OpenSubreport("DetalleCheques").SetDataSource(dsCh)
-                'text = oRpt.Section4.ReportObjects("txtCARGO")
-                'text.Text = CARGO
-                crViewer().ReportSource = oRpt
-                Me.Text = "Reporte - Detalle de Préstamo"
-            Else
-                Dim rpt As New crDetallePrestamoTran
-                dsCh = Ahorros.ConsultarTransferencia(" b.NoCuenta,rtrim(c.Nombres)+' '+rtrim(c.Apellido1)+' '+rtrim(c.Apellido2)+' '+rtrim(c.ApellidoCas)[Asociado]," & _
-                                                      "case when b.IdCuenta = '21020101' then 'A la Vista' " & _
-                                                      "when b.IdCuenta ='31010101' then 'Aportaciones' end [TipoCta],b.Valor", _
-                                                      "a.numsolicitud = " & pNumSolicitud & " and b.Tipo = 'A' and left(b.IdCuenta,8) In ('21020101','31010101') /*and len(b.NoCuenta)=12*/ ", " a.codtransferencia", _
-                                                       0, sUsuario, sPassword, sSucursal)
-                rpt.SetDataSource(ds)
-                rpt.Subreports(0).SetDataSource(dsCh.Tables(0))
-                'text = rpt.Section4.ReportObjects("txtCARGO")
-                'text.Text = CARGO
-                crViewer().ReportSource = rpt
-                Me.Text = "Reporte - Detalle de Préstamo"
 
-            End If
-            ''dsCh = oPrest.ConsultarPRCheques("*", "NumSolicitud='" & pNumSolicitud.Trim & "'", "", sUsuario, sPassword, sSucursal)
-            'oRpt.SetDataSource(ds)
-            'oRpt.Subreports(0).SetDataSource(dsCh.Tables(0))
-            ''oRpt.OpenSubreport("DetalleCheques").SetDataSource(dsCh)
-            ''oRpt.OpenSubreport("crCheque").SetDataSource(dsCh)
-            'text = oRpt.Section4.ReportObjects("txtCARGO")
-            'text.Text = CARGO
-            'crViewer().ReportSource = oRpt
-            'Me.Text = "Reporte - Detalle de Préstamo"
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación del reporte- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-    Private Sub RepPRDetalleSolicitud(ByVal pcodPrestamo As String, ByVal pDUI As String, ByVal pTipoHonorario As String, ByVal pFecha As Date)
-        '//* MODIFICADO EL 17/02/2012 
-        '//* SE AGREGO JEFE SUC. LAS CASCADAS 
-        '//* AUTOR:JAVIER MARTINEZ
-        Dim oRpt As New crDetallePrestamo, oPrest As New wrPrestamo.wsLibPrest
-        Dim oPr As New wrPrestamo.wsLibPrest, ds As New System.Data.DataSet, dsCh As New System.Data.DataSet
-        Dim text As TextObject
-        Dim SELECCION As Integer
-        Dim CARGO As String
-        SELECCION = x
-        'If SELECCION = 0 Then
-        '    CARGO = "JEFE OPERACIONES C.F."
-        'ElseIf SELECCION = 1 Then
-        '    CARGO = "JEFE SUC. METROCENTRO"
-        'ElseIf SELECCION = 2 Then
-        '    CARGO = "JEFE SUC. PLAZA MUNDO"
-        'ElseIf SELECCION = 3 Then
-        '    CARGO = "JEFE SUC. LAS CASCADAS"
-        'End If
-        Try
-            ds = oPr.RepDetalleSolicitud(pcodPrestamo, pFecha, pDUI, pTipoHonorario, sUsuario, sPassword, sSucursal)
-            dsCh = Bancos.Consultar_BcMovCheques(1, "", "", "", Now, pcodPrestamo)
-            If dsCh.Tables.Count > 0 Then
-                If dsCh.Tables(0).Rows.Count > 0 Then
-                    oRpt.SetDataSource(ds)
-                    oRpt.Subreports(0).SetDataSource(dsCh.Tables(0))
-                    'oRpt.OpenSubreport("DetalleCheques").SetDataSource(dsCh)
-                    'text = oRpt.Section4.ReportObjects("txtCARGO")
-                    'text.Text = CARGO
-                    crViewer().ReportSource = oRpt
-                    Me.Text = "Reporte - Detalle de Solicitud"
-                Else
-                    Dim rpt As New crDetallePrestamoTran
-                    dsCh = Ahorros.ConsultarTransferencia(" b.NoCuenta,rtrim(c.Nombres)+' '+rtrim(c.Apellido1)+' '+rtrim(c.Apellido2)+' '+rtrim(c.ApellidoCas)[Asociado]," &
-                                                          "case when b.IdCuenta = '21020101' then 'A la Vista' " &
-                                                          "when b.IdCuenta ='31010101' then 'Aportaciones' end [TipoCta],b.Valor",
-                                                          "a.numsolicitud = " & pcodPrestamo & " and b.Tipo = 'A' and left(b.IdCuenta,8) In ('21020101','31010101') /*and len(b.NoCuenta)=12*/ ", " a.codtransferencia",
-                                                           0, sUsuario, sPassword, sSucursal)
-                    rpt.SetDataSource(ds)
-                    rpt.Subreports(0).SetDataSource(dsCh.Tables(0))
-                    'text = rpt.Section4.ReportObjects("txtCARGO")
-                    'text.Text = CARGO
-                    crViewer().ReportSource = rpt
-                    Me.Text = "Reporte - Detalle de Solicitud"
-                End If
-            Else
-                oRpt.SetDataSource(ds)
-                crViewer().ReportSource = oRpt
-                Me.Text = "Reporte - Detalle de Solicitud"
-            End If
-            
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación del reporte- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
+
 End Class

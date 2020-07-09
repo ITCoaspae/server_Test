@@ -93,9 +93,9 @@ Public Class frmMsActivaAsociado
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 162)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 187)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(506, 142)
+        Me.GroupBox2.Size = New System.Drawing.Size(607, 164)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Consejo Administración"
@@ -104,30 +104,30 @@ Public Class frmMsActivaAsociado
         '
         Me.chkActivo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkActivo.ForeColor = System.Drawing.Color.Black
-        Me.chkActivo.Location = New System.Drawing.Point(244, 17)
+        Me.chkActivo.Location = New System.Drawing.Point(293, 20)
         Me.chkActivo.Name = "chkActivo"
-        Me.chkActivo.Size = New System.Drawing.Size(141, 24)
+        Me.chkActivo.Size = New System.Drawing.Size(291, 27)
         Me.chkActivo.TabIndex = 9
         Me.chkActivo.Text = "Activar como Asociado"
         '
         'txtNoActa
         '
         Me.txtNoActa.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoActa.Location = New System.Drawing.Point(140, 45)
+        Me.txtNoActa.Location = New System.Drawing.Point(168, 52)
         Me.txtNoActa.MaxLength = 20
         Me.txtNoActa.Name = "txtNoActa"
-        Me.txtNoActa.Size = New System.Drawing.Size(94, 20)
+        Me.txtNoActa.Size = New System.Drawing.Size(113, 23)
         Me.txtNoActa.TabIndex = 2
         '
         'txtObservaciones
         '
         Me.txtObservaciones.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservaciones.Location = New System.Drawing.Point(140, 72)
+        Me.txtObservaciones.Location = New System.Drawing.Point(168, 83)
         Me.txtObservaciones.MaxLength = 255
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservaciones.Size = New System.Drawing.Size(347, 38)
+        Me.txtObservaciones.Size = New System.Drawing.Size(416, 44)
         Me.txtObservaciones.TabIndex = 6
         '
         'Label13
@@ -135,9 +135,9 @@ Public Class frmMsActivaAsociado
         Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(6, 72)
+        Me.Label13.Location = New System.Drawing.Point(7, 83)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(105, 14)
+        Me.Label13.Size = New System.Drawing.Size(126, 16)
         Me.Label13.TabIndex = 120
         Me.Label13.Text = "Observaciones:"
         '
@@ -146,9 +146,9 @@ Public Class frmMsActivaAsociado
         Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(6, 50)
+        Me.Label12.Location = New System.Drawing.Point(7, 58)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 16)
+        Me.Label12.Size = New System.Drawing.Size(106, 18)
         Me.Label12.TabIndex = 119
         Me.Label12.Text = "Número de Acta:"
         '
@@ -157,9 +157,9 @@ Public Class frmMsActivaAsociado
         Me.rbRechazado.BackColor = System.Drawing.Color.White
         Me.rbRechazado.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbRechazado.ForeColor = System.Drawing.Color.Black
-        Me.rbRechazado.Location = New System.Drawing.Point(226, 116)
+        Me.rbRechazado.Location = New System.Drawing.Point(271, 134)
         Me.rbRechazado.Name = "rbRechazado"
-        Me.rbRechazado.Size = New System.Drawing.Size(88, 16)
+        Me.rbRechazado.Size = New System.Drawing.Size(106, 18)
         Me.rbRechazado.TabIndex = 8
         Me.rbRechazado.Text = "&Rechazado"
         Me.rbRechazado.UseVisualStyleBackColor = False
@@ -169,9 +169,9 @@ Public Class frmMsActivaAsociado
         Me.rbAdmitido.BackColor = System.Drawing.Color.White
         Me.rbAdmitido.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbAdmitido.ForeColor = System.Drawing.Color.Black
-        Me.rbAdmitido.Location = New System.Drawing.Point(140, 116)
+        Me.rbAdmitido.Location = New System.Drawing.Point(168, 134)
         Me.rbAdmitido.Name = "rbAdmitido"
-        Me.rbAdmitido.Size = New System.Drawing.Size(80, 16)
+        Me.rbAdmitido.Size = New System.Drawing.Size(96, 18)
         Me.rbAdmitido.TabIndex = 7
         Me.rbAdmitido.Text = "&Admitido"
         Me.rbAdmitido.UseVisualStyleBackColor = False
@@ -181,9 +181,9 @@ Public Class frmMsActivaAsociado
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(6, 116)
+        Me.Label11.Location = New System.Drawing.Point(7, 134)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(128, 16)
+        Me.Label11.Size = New System.Drawing.Size(154, 18)
         Me.Label11.TabIndex = 116
         Me.Label11.Text = "Resolución del Consejo:"
         '
@@ -191,9 +191,9 @@ Public Class frmMsActivaAsociado
         '
         Me.dtpFecActa.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecActa.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecActa.Location = New System.Drawing.Point(327, 46)
+        Me.dtpFecActa.Location = New System.Drawing.Point(392, 53)
         Me.dtpFecActa.Name = "dtpFecActa"
-        Me.dtpFecActa.Size = New System.Drawing.Size(94, 20)
+        Me.dtpFecActa.Size = New System.Drawing.Size(113, 23)
         Me.dtpFecActa.TabIndex = 3
         Me.dtpFecActa.Value = New Date(2018, 7, 17, 0, 0, 0, 0)
         '
@@ -202,9 +202,9 @@ Public Class frmMsActivaAsociado
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(241, 50)
+        Me.Label9.Location = New System.Drawing.Point(289, 58)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 16)
+        Me.Label9.Size = New System.Drawing.Size(96, 18)
         Me.Label9.TabIndex = 109
         Me.Label9.Text = "Fecha de Acta:"
         '
@@ -212,9 +212,9 @@ Public Class frmMsActivaAsociado
         '
         Me.dtpFecResConsejo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecResConsejo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecResConsejo.Location = New System.Drawing.Point(140, 19)
+        Me.dtpFecResConsejo.Location = New System.Drawing.Point(168, 22)
         Me.dtpFecResConsejo.Name = "dtpFecResConsejo"
-        Me.dtpFecResConsejo.Size = New System.Drawing.Size(94, 20)
+        Me.dtpFecResConsejo.Size = New System.Drawing.Size(113, 23)
         Me.dtpFecResConsejo.TabIndex = 1
         Me.dtpFecResConsejo.Value = New Date(2018, 7, 17, 0, 0, 0, 0)
         '
@@ -223,17 +223,17 @@ Public Class frmMsActivaAsociado
         Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(6, 21)
+        Me.Label10.Location = New System.Drawing.Point(7, 24)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(128, 18)
+        Me.Label10.Size = New System.Drawing.Size(154, 21)
         Me.Label10.TabIndex = 108
         Me.Label10.Text = "Fecha de Resolución:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(454, 310)
+        Me.btnGuardar1.Location = New System.Drawing.Point(545, 358)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 123
         Me.btnGuardar1.Text = "Guardar"
@@ -252,9 +252,9 @@ Public Class frmMsActivaAsociado
         Me.GroupBox4.Enabled = False
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 57)
+        Me.GroupBox4.Location = New System.Drawing.Point(28, 66)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(506, 99)
+        Me.GroupBox4.Size = New System.Drawing.Size(607, 114)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos del Asociado"
@@ -263,52 +263,52 @@ Public Class frmMsActivaAsociado
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(81, 24)
+        Me.txtDui.Location = New System.Drawing.Point(97, 28)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
         Me.txtDui.ReadOnly = True
-        Me.txtDui.Size = New System.Drawing.Size(120, 18)
+        Me.txtDui.Size = New System.Drawing.Size(144, 21)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(81, 48)
+        Me.txtNombre.Location = New System.Drawing.Point(97, 55)
         Me.txtNombre.MaxLength = 20
         Me.txtNombre.Multiline = True
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(406, 43)
+        Me.txtNombre.Size = New System.Drawing.Size(487, 50)
         Me.txtNombre.TabIndex = 3
         '
         'Label31
         '
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(13, 24)
+        Me.Label31.Location = New System.Drawing.Point(16, 28)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
+        Me.Label31.Size = New System.Drawing.Size(38, 18)
         Me.Label31.TabIndex = 94
         Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
         Me.txtNoSocio.BackColor = System.Drawing.Color.White
-        Me.txtNoSocio.Location = New System.Drawing.Point(367, 21)
+        Me.txtNoSocio.Location = New System.Drawing.Point(440, 24)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(120, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(144, 23)
         Me.txtNoSocio.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(281, 24)
+        Me.Label2.Location = New System.Drawing.Point(337, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "No. Asociado:"
         '
@@ -316,25 +316,26 @@ Public Class frmMsActivaAsociado
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(13, 45)
+        Me.Label21.Location = New System.Drawing.Point(16, 52)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(62, 16)
+        Me.Label21.Size = New System.Drawing.Size(74, 18)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Asociado:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmMsActivaAsociado
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(554, 386)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(665, 445)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(554, 386)
+        Me.MaximumSize = New System.Drawing.Size(665, 445)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(554, 386)
+        Me.MinimumSize = New System.Drawing.Size(665, 445)
         Me.Name = "frmMsActivaAsociado"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Activación de Asociado"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -429,14 +430,14 @@ Public Class frmMsActivaAsociado
             pCampos = "Observaciones='" & Trim(Me.txtObservaciones.Text) &
                 "',UsuarioAutoriza='" & sUsuario &
                 "',UsuarioGerenciaAutoriza='" & sUsuario &
-                "',FecResolucionConsejo='" & Format(Me.dtpFecResConsejo.Value, "dd/MM/yyyy") &
+                "',FecResolucionConsejo='" & dtpFecResConsejo.Value.ToShortDateString &
                 "',Resolucion='" & pResolucion &
                 "',Obs='" & Trim(Me.txtObservaciones.Text) &
                 "',ActaNo='" & Trim(Me.txtNoActa.Text) &
-                "',FechaActa='" & Format(Me.dtpFecActa.Value, "dd/MM/yyyy") &
+                "',FechaActa='" & dtpFecActa.Value.ToShortDateString &
                 "',ActivarAsociado='" & System.Math.Abs(CInt(Me.chkActivo.Checked)) &
                 "',UsuarioActiva='" & sUsuario &
-                "',FechaUsuarioActiva='" & oApp.Fecha.ToShortDateString &
+                "',FechaUsuarioActiva='" & Now.ToShortDateString &
                 "',ResolucionCE='" & pResolucionCE & "'"
             If oAsoc.ModificarEstadoIngreso("Correlativo='" & pCorrelativo & "'", pCampos, sUsuario, sPassword, sSucursal) = True Then
                 If ValidaAspirante(pDui) = True Then
@@ -465,7 +466,7 @@ Public Class frmMsActivaAsociado
                 MsgBox("Asociado activo", MsgBoxStyle.Information, "Módulo Asociados")
                 Me.Dispose()
             Else
-                MsgBox("El Registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Asociados")
+                MsgBox("El Registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical)
             End If
 
         Catch ex As Exception
@@ -521,4 +522,9 @@ Public Class frmMsActivaAsociado
         End Try
     End Sub
 
+    Private Sub frmMsActivaAsociado_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

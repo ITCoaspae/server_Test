@@ -119,4 +119,9 @@
         End If
     End Sub
 
+    Private Sub frmAplicacionDivNoCobrados_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

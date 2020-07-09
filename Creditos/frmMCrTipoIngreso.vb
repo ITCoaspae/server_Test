@@ -49,18 +49,19 @@ Public Class frmMCrTipoIngreso
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgTipoIngreso.BackColor = System.Drawing.Color.White
         Me.fgTipoIngreso.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgTipoIngreso.Location = New System.Drawing.Point(23, 97)
+        Me.fgTipoIngreso.Location = New System.Drawing.Point(28, 112)
         Me.fgTipoIngreso.Name = "fgTipoIngreso"
         Me.fgTipoIngreso.Rows.Count = 2
-        Me.fgTipoIngreso.Size = New System.Drawing.Size(624, 180)
-        Me.fgTipoIngreso.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgTipoIngreso.Styles"))
+        Me.fgTipoIngreso.Rows.DefaultSize = 21
+        Me.fgTipoIngreso.Size = New System.Drawing.Size(614, 159)
+        Me.fgTipoIngreso.StyleInfo = resources.GetString("fgTipoIngreso.StyleInfo")
         Me.fgTipoIngreso.TabIndex = 30
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 63)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 73)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 219
         Me.btnConsultar1.Text = "Consultar"
@@ -70,9 +71,9 @@ Public Class frmMCrTipoIngreso
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 73)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 218
         Me.btnEliminar1.Text = "Eliminar"
@@ -82,9 +83,9 @@ Public Class frmMCrTipoIngreso
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 73)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 217
         Me.btnModificar1.Text = "Modificar"
@@ -94,9 +95,9 @@ Public Class frmMCrTipoIngreso
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 73)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 216
         Me.btnAgregar1.Text = "Agregar"
@@ -106,7 +107,7 @@ Public Class frmMCrTipoIngreso
         '
         'frmMCrTipoIngreso
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(670, 320)
         Me.Controls.Add(Me.btnConsultar1)
@@ -139,7 +140,7 @@ Public Class frmMCrTipoIngreso
             fgTipoIngreso.Cols.Item(1).Width = 77
             fgTipoIngreso.Cols.Item(2).Width = 150
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -159,7 +160,7 @@ Public Class frmMCrTipoIngreso
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -176,7 +177,7 @@ Public Class frmMCrTipoIngreso
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -190,7 +191,7 @@ Public Class frmMCrTipoIngreso
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -209,7 +210,7 @@ Public Class frmMCrTipoIngreso
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

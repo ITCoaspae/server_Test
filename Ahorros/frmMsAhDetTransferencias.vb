@@ -1,5 +1,5 @@
 Public Class frmMsAhDetTransferencias
-    Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
     Public rsc As System.Resources.ResourceManager
     Dim CCodCosto As String = ""
     Private pDui As String, pNoCuenta As String, ofrmT As frmTransferenciaManualCtaAhorros, pFecha As Date
@@ -74,11 +74,6 @@ Public Class frmMsAhDetTransferencias
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents gb As System.Windows.Forms.GroupBox
     Friend WithEvents c1txtNoCuenta As C1.Win.C1Input.C1TextBox
     Friend WithEvents lblCuenta As System.Windows.Forms.Label
     Friend WithEvents cbTipoCuenta As System.Windows.Forms.ComboBox
@@ -90,7 +85,6 @@ Public Class frmMsAhDetTransferencias
     Friend WithEvents txtCuenta As System.Windows.Forms.TextBox
     Friend WithEvents txtCodTipo As System.Windows.Forms.TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.gb = New System.Windows.Forms.GroupBox()
         Me.txtCodCosto = New System.Windows.Forms.TextBox()
         Me.txtNombCosto = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -105,114 +99,93 @@ Public Class frmMsAhDetTransferencias
         Me.cbTipoCuenta = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btNProcesar1 = New MetroFramework.Controls.MetroButton()
-        Me.gb.SuspendLayout()
         CType(Me.c1txtMonto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1txtNoCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'gb
-        '
-        Me.gb.BackColor = System.Drawing.Color.White
-        Me.gb.Controls.Add(Me.txtCodCosto)
-        Me.gb.Controls.Add(Me.txtNombCosto)
-        Me.gb.Controls.Add(Me.Label13)
-        Me.gb.Controls.Add(Me.txtCodTipo)
-        Me.gb.Controls.Add(Me.txtCuenta)
-        Me.gb.Controls.Add(Me.txtIdCuenta)
-        Me.gb.Controls.Add(Me.Label1)
-        Me.gb.Controls.Add(Me.Label4)
-        Me.gb.Controls.Add(Me.c1txtMonto)
-        Me.gb.Controls.Add(Me.c1txtNoCuenta)
-        Me.gb.Controls.Add(Me.lblCuenta)
-        Me.gb.Controls.Add(Me.cbTipoCuenta)
-        Me.gb.Controls.Add(Me.Label9)
-        Me.gb.Location = New System.Drawing.Point(28, 62)
-        Me.gb.Name = "gb"
-        Me.gb.Size = New System.Drawing.Size(624, 171)
-        Me.gb.TabIndex = 0
-        Me.gb.TabStop = False
-        '
         'txtCodCosto
         '
         Me.txtCodCosto.BackColor = System.Drawing.Color.White
-        Me.txtCodCosto.Location = New System.Drawing.Point(89, 127)
+        Me.txtCodCosto.Location = New System.Drawing.Point(112, 169)
         Me.txtCodCosto.Name = "txtCodCosto"
         Me.txtCodCosto.ReadOnly = True
-        Me.txtCodCosto.Size = New System.Drawing.Size(60, 22)
+        Me.txtCodCosto.Size = New System.Drawing.Size(72, 20)
         Me.txtCodCosto.TabIndex = 176
         '
         'txtNombCosto
         '
         Me.txtNombCosto.BackColor = System.Drawing.Color.White
-        Me.txtNombCosto.Location = New System.Drawing.Point(156, 127)
+        Me.txtNombCosto.Location = New System.Drawing.Point(189, 169)
         Me.txtNombCosto.Name = "txtNombCosto"
         Me.txtNombCosto.ReadOnly = True
-        Me.txtNombCosto.Size = New System.Drawing.Size(337, 22)
+        Me.txtNombCosto.Size = New System.Drawing.Size(408, 20)
         Me.txtNombCosto.TabIndex = 175
         '
         'Label13
         '
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(5, 125)
+        Me.Label13.Location = New System.Drawing.Point(19, 169)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 42)
+        Me.Label13.Size = New System.Drawing.Size(88, 19)
         Me.Label13.TabIndex = 174
-        Me.Label13.Text = "Centro " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Costos:"
+        Me.Label13.Text = "Centro Costos:"
         '
         'txtCodTipo
         '
-        Me.txtCodTipo.Location = New System.Drawing.Point(304, 51)
+        Me.txtCodTipo.Location = New System.Drawing.Point(287, 103)
         Me.txtCodTipo.Name = "txtCodTipo"
-        Me.txtCodTipo.Size = New System.Drawing.Size(57, 22)
+        Me.txtCodTipo.Size = New System.Drawing.Size(48, 20)
         Me.txtCodTipo.TabIndex = 113
         Me.txtCodTipo.Visible = False
         '
         'txtCuenta
         '
-        Me.txtCuenta.Location = New System.Drawing.Point(182, 87)
+        Me.txtCuenta.BackColor = System.Drawing.Color.White
+        Me.txtCuenta.Location = New System.Drawing.Point(189, 134)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.Size = New System.Drawing.Size(435, 22)
+        Me.txtCuenta.Size = New System.Drawing.Size(408, 20)
         Me.txtCuenta.TabIndex = 4
         '
         'txtIdCuenta
         '
-        Me.txtIdCuenta.Location = New System.Drawing.Point(89, 87)
+        Me.txtIdCuenta.BackColor = System.Drawing.Color.White
+        Me.txtIdCuenta.Location = New System.Drawing.Point(112, 134)
         Me.txtIdCuenta.Name = "txtIdCuenta"
         Me.txtIdCuenta.ReadOnly = True
-        Me.txtIdCuenta.Size = New System.Drawing.Size(86, 22)
+        Me.txtIdCuenta.Size = New System.Drawing.Size(72, 20)
         Me.txtIdCuenta.TabIndex = 3
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(7, 87)
+        Me.Label1.Location = New System.Drawing.Point(19, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 32)
+        Me.Label1.Size = New System.Drawing.Size(63, 28)
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "Cuenta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contable:"
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(7, 48)
+        Me.Label4.Location = New System.Drawing.Point(19, 102)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(75, 35)
+        Me.Label4.Size = New System.Drawing.Size(63, 31)
         Me.Label4.TabIndex = 111
         Me.Label4.Text = "Valor a " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "transferir:"
         '
         'c1txtMonto
         '
         Me.c1txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtMonto.CustomFormat = "###,##0.00"
+        Me.c1txtMonto.CustomFormat = "#,###,##0.00"
         Me.c1txtMonto.DataType = GetType(Double)
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1txtMonto.Location = New System.Drawing.Point(89, 50)
+        Me.c1txtMonto.Location = New System.Drawing.Point(112, 102)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
-        Me.c1txtMonto.Size = New System.Drawing.Size(204, 23)
+        Me.c1txtMonto.Size = New System.Drawing.Size(170, 17)
         Me.c1txtMonto.TabIndex = 2
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
@@ -220,47 +193,50 @@ Public Class frmMsAhDetTransferencias
         '
         'c1txtNoCuenta
         '
+        Me.c1txtNoCuenta.BackColor = System.Drawing.Color.White
         Me.c1txtNoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtNoCuenta.Location = New System.Drawing.Point(413, 18)
+        Me.c1txtNoCuenta.Location = New System.Drawing.Point(112, 78)
         Me.c1txtNoCuenta.MaxLength = 14
         Me.c1txtNoCuenta.Name = "c1txtNoCuenta"
         Me.c1txtNoCuenta.NumericInput = False
         Me.c1txtNoCuenta.ReadOnly = True
-        Me.c1txtNoCuenta.Size = New System.Drawing.Size(204, 20)
+        Me.c1txtNoCuenta.Size = New System.Drawing.Size(485, 16)
         Me.c1txtNoCuenta.TabIndex = 1
         Me.c1txtNoCuenta.Tag = Nothing
         '
         'lblCuenta
         '
-        Me.lblCuenta.Location = New System.Drawing.Point(300, 18)
+        Me.lblCuenta.Location = New System.Drawing.Point(19, 78)
         Me.lblCuenta.Name = "lblCuenta"
-        Me.lblCuenta.Size = New System.Drawing.Size(106, 25)
+        Me.lblCuenta.Size = New System.Drawing.Size(88, 22)
         Me.lblCuenta.TabIndex = 108
         Me.lblCuenta.Text = "Cuenta Auxiliar:"
         '
         'cbTipoCuenta
         '
+        Me.cbTipoCuenta.BackColor = System.Drawing.Color.WhiteSmoke
         Me.cbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbTipoCuenta.Items.AddRange(New Object() {"Prestamos", "Ahorros", "DPF", "Otros"})
-        Me.cbTipoCuenta.Location = New System.Drawing.Point(89, 18)
+        Me.cbTipoCuenta.Location = New System.Drawing.Point(112, 52)
         Me.cbTipoCuenta.Name = "cbTipoCuenta"
-        Me.cbTipoCuenta.Size = New System.Drawing.Size(204, 24)
+        Me.cbTipoCuenta.Size = New System.Drawing.Size(485, 21)
         Me.cbTipoCuenta.TabIndex = 0
         '
         'Label9
         '
-        Me.Label9.Location = New System.Drawing.Point(7, 18)
+        Me.Label9.Location = New System.Drawing.Point(19, 52)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 19)
+        Me.Label9.Size = New System.Drawing.Size(80, 16)
         Me.Label9.TabIndex = 107
         Me.Label9.Text = "Tipo Cuenta:"
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(562, 239)
+        Me.btNProcesar1.Location = New System.Drawing.Point(522, 193)
         Me.btNProcesar1.Name = "btNProcesar1"
-        Me.btNProcesar1.Size = New System.Drawing.Size(90, 32)
-        Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btNProcesar1.Size = New System.Drawing.Size(75, 28)
+        Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNProcesar1.TabIndex = 170
         Me.btNProcesar1.Text = "Guardar"
         Me.btNProcesar1.UseSelectable = True
@@ -268,24 +244,34 @@ Public Class frmMsAhDetTransferencias
         '
         'frmMsAhDetTransferencias
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(674, 277)
+        Me.ClientSize = New System.Drawing.Size(740, 292)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.txtNombCosto)
+        Me.Controls.Add(Me.txtCodCosto)
         Me.Controls.Add(Me.btNProcesar1)
-        Me.Controls.Add(Me.gb)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtCuenta)
+        Me.Controls.Add(Me.txtCodTipo)
+        Me.Controls.Add(Me.txtIdCuenta)
+        Me.Controls.Add(Me.cbTipoCuenta)
+        Me.Controls.Add(Me.lblCuenta)
+        Me.Controls.Add(Me.c1txtNoCuenta)
+        Me.Controls.Add(Me.c1txtMonto)
+        Me.Controls.Add(Me.Label4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(674, 277)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(674, 277)
+        Me.MinimumSize = New System.Drawing.Size(562, 240)
         Me.Name = "frmMsAhDetTransferencias"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Detalle de Cuenta Destino"
-        Me.gb.ResumeLayout(False)
-        Me.gb.PerformLayout()
         CType(Me.c1txtMonto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1txtNoCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -318,9 +304,7 @@ Public Class frmMsAhDetTransferencias
         End If
     End Function
 
-    Private Sub c1txtNoCuenta_TextChanged(sender As Object, e As EventArgs) Handles c1txtNoCuenta.TextChanged
 
-    End Sub
 
     Private Sub btNProcesar1_Click(sender As Object, e As EventArgs) Handles btNProcesar1.Click
         Try
@@ -353,7 +337,7 @@ Public Class frmMsAhDetTransferencias
             FrmT.dsDetalle = ds
             Me.Dispose()
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -428,11 +412,13 @@ Public Class frmMsAhDetTransferencias
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub txtIdCuenta_DoubleClick(sender As Object, e As EventArgs) Handles txtIdCuenta.DoubleClick
-
+    Private Sub frmMsAhDetTransferencias_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

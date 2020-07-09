@@ -38,25 +38,28 @@ Partial Class frmMsFamiliaresPep
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.cbParentesco)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(23, 63)
+        Me.Panel1.Location = New System.Drawing.Point(31, 78)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(415, 62)
+        Me.Panel1.Size = New System.Drawing.Size(553, 76)
         Me.Panel1.TabIndex = 158
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(97, 34)
+        Me.txtNombre.Location = New System.Drawing.Point(129, 42)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(304, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(404, 22)
         Me.txtNombre.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 34)
+        Me.Label2.Location = New System.Drawing.Point(4, 42)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 13)
+        Me.Label2.Size = New System.Drawing.Size(62, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
         '
@@ -65,25 +68,29 @@ Partial Class frmMsFamiliaresPep
         Me.cbParentesco.BackColor = System.Drawing.Color.White
         Me.cbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbParentesco.FormattingEnabled = True
-        Me.cbParentesco.Location = New System.Drawing.Point(97, 7)
+        Me.cbParentesco.Location = New System.Drawing.Point(129, 9)
+        Me.cbParentesco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbParentesco.Name = "cbParentesco"
-        Me.cbParentesco.Size = New System.Drawing.Size(304, 21)
+        Me.cbParentesco.Size = New System.Drawing.Size(404, 24)
         Me.cbParentesco.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 10)
+        Me.Label1.Location = New System.Drawing.Point(4, 12)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(116, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tipo Parentesco:"
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(363, 131)
+        Me.btnGuardar.Location = New System.Drawing.Point(484, 161)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar.TabIndex = 161
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseSelectable = True
@@ -91,18 +98,21 @@ Partial Class frmMsFamiliaresPep
         '
         'frmMsFamiliaresPep
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(462, 207)
+        Me.ClientSize = New System.Drawing.Size(616, 255)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(462, 207)
+        Me.MaximumSize = New System.Drawing.Size(616, 255)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(462, 207)
+        Me.MinimumSize = New System.Drawing.Size(616, 255)
         Me.Name = "frmMsFamiliaresPep"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.ShowIcon = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Persona Relacionada/Viculada PEP"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

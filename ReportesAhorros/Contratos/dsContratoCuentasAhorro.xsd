@@ -2,14 +2,15 @@
 <xs:schema id="dsContratoCuentasAhorro" targetNamespace="http://tempuri.org/dsContratoCuentasAhorro.xsd" xmlns:mstns="http://tempuri.org/dsContratoCuentasAhorro.xsd" xmlns="http://tempuri.org/dsContratoCuentasAhorro.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SIFConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIFConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIF_ERP.My.MySettings.GlobalReference.Default.SIFConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SIF_DUMMIESConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIF_DUMMIESConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIF_ERP.My.MySettings.GlobalReference.Default.SIF_DUMMIESConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_RPT_ContratoCuentaAhorroTableAdapter" GeneratorDataComponentClassName="SP_RPT_ContratoCuentaAhorroTableAdapter" Name="SP_RPT_ContratoCuentaAhorro" UserDataComponentName="SP_RPT_ContratoCuentaAhorroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SIFConnectionString2 (MySettings)" DbObjectName="SIF.dbo.SP_RPT_ContratoCuentaAhorro" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SIF_DUMMIESConnectionString (MySettings)" DbObjectName="SIF_DUMMIES.dbo.SP_RPT_ContratoCuentaAhorro" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SP_RPT_ContratoCuentaAhorro</CommandText>
@@ -32,12 +33,24 @@
               <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
               <Mapping SourceColumn="Presidente" DataSetColumn="Presidente" />
               <Mapping SourceColumn="TasaInteres" DataSetColumn="TasaInteres" />
+              <Mapping SourceColumn="cuota" DataSetColumn="cuota" />
+              <Mapping SourceColumn="TipoAhorro" DataSetColumn="TipoAhorro" />
+              <Mapping SourceColumn="Plazo" DataSetColumn="Plazo" />
+              <Mapping SourceColumn="cuotatext" DataSetColumn="cuotatext" />
+              <Mapping SourceColumn="montotext" DataSetColumn="montotext" />
+              <Mapping SourceColumn="tasatext" DataSetColumn="tasatext" />
+              <Mapping SourceColumn="plazotext" DataSetColumn="plazotext" />
+              <Mapping SourceColumn="edadtext" DataSetColumn="edadtext" />
+              <Mapping SourceColumn="municipio" DataSetColumn="municipio" />
+              <Mapping SourceColumn="DUItext" DataSetColumn="DUItext" />
+              <Mapping SourceColumn="Nittext" DataSetColumn="Nittext" />
+              <Mapping SourceColumn="fechaVencetext" DataSetColumn="fechaVencetext" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AH_CONSULTAR_AHBENEFICIARIOSTableAdapter" GeneratorDataComponentClassName="AH_CONSULTAR_AHBENEFICIARIOSTableAdapter" Name="AH_CONSULTAR_AHBENEFICIARIOS" UserDataComponentName="AH_CONSULTAR_AHBENEFICIARIOSTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SIFConnectionString2 (MySettings)" DbObjectName="SIF.dbo.AH_CONSULTAR_AHBENEFICIARIOS" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SIF_DUMMIESConnectionString (MySettings)" DbObjectName="SIF_DUMMIES.dbo.AH_CONSULTAR_AHBENEFICIARIOS" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.AH_CONSULTAR_AHBENEFICIARIOS</CommandText>
@@ -122,6 +135,81 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="TasaInteres" msprop:Generator_ColumnVarNameInTable="columnTasaInteres" msprop:Generator_ColumnPropNameInRow="TasaInteres" msprop:Generator_ColumnPropNameInTable="TasaInteresColumn" msprop:Generator_UserColumnName="TasaInteres" type="xs:double" minOccurs="0" />
+              <xs:element name="cuota" msprop:Generator_ColumnVarNameInTable="columncuota" msprop:Generator_ColumnPropNameInRow="cuota" msprop:Generator_ColumnPropNameInTable="cuotaColumn" msprop:Generator_UserColumnName="cuota" type="xs:double" minOccurs="0" />
+              <xs:element name="TipoAhorro" msprop:Generator_ColumnVarNameInTable="columnTipoAhorro" msprop:Generator_ColumnPropNameInRow="TipoAhorro" msprop:Generator_ColumnPropNameInTable="TipoAhorroColumn" msprop:Generator_UserColumnName="TipoAhorro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Plazo" msprop:Generator_ColumnVarNameInTable="columnPlazo" msprop:Generator_ColumnPropNameInRow="Plazo" msprop:Generator_ColumnPropNameInTable="PlazoColumn" msprop:Generator_UserColumnName="Plazo" type="xs:int" minOccurs="0" />
+              <xs:element name="cuotatext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncuotatext" msprop:Generator_ColumnPropNameInRow="cuotatext" msprop:Generator_ColumnPropNameInTable="cuotatextColumn" msprop:Generator_UserColumnName="cuotatext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="montotext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmontotext" msprop:Generator_ColumnPropNameInRow="montotext" msprop:Generator_ColumnPropNameInTable="montotextColumn" msprop:Generator_UserColumnName="montotext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tasatext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntasatext" msprop:Generator_ColumnPropNameInRow="tasatext" msprop:Generator_ColumnPropNameInTable="tasatextColumn" msprop:Generator_UserColumnName="tasatext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="plazotext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnplazotext" msprop:Generator_ColumnPropNameInRow="plazotext" msprop:Generator_ColumnPropNameInTable="plazotextColumn" msprop:Generator_UserColumnName="plazotext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="edadtext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnedadtext" msprop:Generator_ColumnPropNameInRow="edadtext" msprop:Generator_ColumnPropNameInTable="edadtextColumn" msprop:Generator_UserColumnName="edadtext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="municipio" msprop:Generator_ColumnVarNameInTable="columnmunicipio" msprop:Generator_ColumnPropNameInRow="municipio" msprop:Generator_ColumnPropNameInTable="municipioColumn" msprop:Generator_UserColumnName="municipio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DUItext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDUItext" msprop:Generator_ColumnPropNameInRow="DUItext" msprop:Generator_ColumnPropNameInTable="DUItextColumn" msprop:Generator_UserColumnName="DUItext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nittext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNittext" msprop:Generator_ColumnPropNameInRow="Nittext" msprop:Generator_ColumnPropNameInTable="NittextColumn" msprop:Generator_UserColumnName="Nittext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaVencetext" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfechaVencetext" msprop:Generator_ColumnPropNameInRow="fechaVencetext" msprop:Generator_ColumnPropNameInTable="fechaVencetextColumn" msprop:Generator_UserColumnName="fechaVencetext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2037" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Departamento" msprop:Generator_ColumnVarNameInTable="columnDepartamento" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_UserColumnName="Departamento" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaAperturatext" msprop:Generator_ColumnVarNameInTable="columnfechaAperturatext" msprop:Generator_ColumnPropNameInRow="fechaAperturatext" msprop:Generator_ColumnPropNameInTable="fechaAperturatextColumn" msprop:Generator_UserColumnName="fechaAperturatext" type="xs:string" minOccurs="0" />
+              <xs:element name="ejecutivo" msprop:Generator_ColumnVarNameInTable="columnejecutivo" msprop:Generator_ColumnPropNameInRow="ejecutivo" msprop:Generator_ColumnPropNameInTable="ejecutivoColumn" msprop:Generator_UserColumnName="ejecutivo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

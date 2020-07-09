@@ -2,7 +2,7 @@ Public Class frmMsPRDescuentos
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
 
-    'Private vTipoDeduccion As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vCodRango As String, vDescripcion As String, vPorc As String, vTipo As String
+    'Private vTipoDeduccion As Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vCodRango As String, vDescripcion As String, vPorc As String, vTipo As String
     Private vTipoDeduccion As sifLib.Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vCodRango As String, vDescripcion As String, vPorc As String, vTipo As String
     Friend WithEvents cbGastosTramitacion As System.Windows.Forms.ComboBox
     Dim Creditos As New wrCredito.wsLibCred
@@ -312,12 +312,12 @@ Public Class frmMsPRDescuentos
 #End Region
 
 #Region "Propiedades"
-    'Public Property TipoDeduccion() As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Public Property TipoDeduccion() As Prestamos.clsPrestamos.TipoDeduccion
     Public Property TipoDeduccion() As sifLib.Prestamos.clsPrestamos.TipoDeduccion
         Get
             Return vTipoDeduccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion)
+        'Set(ByVal Value As Prestamos.clsPrestamos.TipoDeduccion)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.TipoDeduccion)
             vTipoDeduccion = Value
         End Set
@@ -375,25 +375,25 @@ Public Class frmMsPRDescuentos
             Dim campos, camposvalores, valores, pDescripcion As String, vIva As Double, vTarifa As Double, vValor As Double
             Dim oCred As wrPrestamo.wsLibPrest = New wrPrestamo.wsLibPrest
 
-            'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
+            'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
             If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
                 pDescripcion = "Honorarios"
                 If Me.c1nIva.Value = 0 Then
                     MessageBox.Show("La tarifa no puede tener valor cero.", "Honorarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Exit Sub
                 End If
-                'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
+                'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
             ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
                 vTipo = ""
                 pDescripcion = Me.c1txtDescripcion.Text.Trim
             End If
-            'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
+            'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
             If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
                 pDescripcion = Me.Descripcion
             Else
                 vPorc = IIf(Me.chkAplicaPorc.Checked = True, "1", "0")
             End If
-            'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
+            'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
             If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
                 If Me.chkAplicaIva.Checked = True Then
                     vTarifa = Me.c1nIva.Value
@@ -445,7 +445,7 @@ Public Class frmMsPRDescuentos
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -463,7 +463,7 @@ Public Class frmMsPRDescuentos
             LlenarCbGastosTramitacion(1, 0, "0")
         End If
         Select Case Me.vTipoDeduccion
-            'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
+            'Case Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
             Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
                 Me.lblMontoMax.Visible = False
                 Me.c1nMontoMax.Visible = False
@@ -481,7 +481,7 @@ Public Class frmMsPRDescuentos
                 Me.lblTipo.Text = "Tipo de Documento:"
                 Me.c1nIva.Enabled = False
                 Me.chkAplicaItem.Enabled = True
-            'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario
+            'Case Prestamos.clsPrestamos.TipoDeduccion.Honorario
             Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario
                 Me.lblMontoMax.Visible = True
                 Me.c1nMontoMax.Visible = True
@@ -506,7 +506,7 @@ Public Class frmMsPRDescuentos
                 Me.chkAplicaPorc.Checked = False
                 Me.chkAplicaPorc.Visible = False
                 Me.chkAplicaItem.Enabled = False
-            'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango, AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango
+            'Case Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango, Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango
             Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango, sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango
                 Me.lblMontoMax.Visible = True
                 Me.c1nMontoMax.Visible = True
@@ -531,7 +531,7 @@ Public Class frmMsPRDescuentos
                 Me.chkAplicaPorc.Checked = False
                 Me.chkAplicaPorc.Visible = False
                 Me.chkAplicaItem.Enabled = False
-            'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion
+            'Case Prestamos.clsPrestamos.TipoDeduccion.Escrituracion
             Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion
                 Me.chkAplicaItem.Enabled = True
         End Select
@@ -541,14 +541,14 @@ Public Class frmMsPRDescuentos
         If Me.chkAplicaIva.Checked = True Then
             Dim oPerif As New wrAsociados.wsLibAsoc, ds As New DataSet, dr As DataRow
             Select Case Me.vTipoDeduccion
-                'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
+                'Case Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
                 Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion, sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion
                     ds = oPerif.ConsultarParametros("Iva", "", "Iva", sUsuario, sPassword, sSucursal)
                     If ds.Tables(0).Rows.Count > 0 Then
                         dr = ds.Tables(0).Rows(0)
                         Me.c1nIva.Value = Me.c1nValor.Value * (dr("Iva") / 100)
                     End If
-                    'Case AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario
+                    'Case Prestamos.clsPrestamos.TipoDeduccion.Honorario
                 Case sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario
             End Select
         End If
@@ -556,7 +556,7 @@ Public Class frmMsPRDescuentos
 
     Private Sub chkAplicaIva_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkAplicaIva.CheckedChanged
         Dim oPerif As New wrAsociados.wsLibAsoc, ds As New DataSet, dr As DataRow
-        'If Me.chkAplicaIva.Checked = True And (Me.vTipoDeduccion <> AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango And Me.vTipoDeduccion <> AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango And Me.vTipoDeduccion <> AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario) Then
+        'If Me.chkAplicaIva.Checked = True And (Me.vTipoDeduccion <> Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango And Me.vTipoDeduccion <> Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango And Me.vTipoDeduccion <> Prestamos.clsPrestamos.TipoDeduccion.Honorario) Then
         If Me.chkAplicaIva.Checked = True And (Me.vTipoDeduccion <> sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango And Me.vTipoDeduccion <> sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango And Me.vTipoDeduccion <> sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario) Then
             ds = oPerif.ConsultarParametros("Iva", "", "Iva", sUsuario, sPassword, sSucursal)
             If ds.Tables(0).Rows.Count > 0 Then

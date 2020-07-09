@@ -411,7 +411,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btnSigTb1.Location = New System.Drawing.Point(592, 545)
         Me.btnSigTb1.Name = "btnSigTb1"
         Me.btnSigTb1.Size = New System.Drawing.Size(90, 32)
-        Me.btnSigTb1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnSigTb1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSigTb1.TabIndex = 201
         Me.btnSigTb1.Text = "Siguiente"
         Me.btnSigTb1.UseSelectable = True
@@ -1037,7 +1037,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton2.Location = New System.Drawing.Point(406, 543)
         Me.MetroButton2.Name = "MetroButton2"
         Me.MetroButton2.Size = New System.Drawing.Size(90, 33)
-        Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton2.TabIndex = 207
         Me.MetroButton2.Text = "Atrás"
         Me.MetroButton2.UseSelectable = True
@@ -1048,7 +1048,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton4.Location = New System.Drawing.Point(503, 543)
         Me.MetroButton4.Name = "MetroButton4"
         Me.MetroButton4.Size = New System.Drawing.Size(90, 33)
-        Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton4.TabIndex = 206
         Me.MetroButton4.Text = "Siguiente"
         Me.MetroButton4.UseSelectable = True
@@ -1059,7 +1059,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btnSaveTb1.Location = New System.Drawing.Point(600, 543)
         Me.btnSaveTb1.Name = "btnSaveTb1"
         Me.btnSaveTb1.Size = New System.Drawing.Size(90, 33)
-        Me.btnSaveTb1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnSaveTb1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSaveTb1.TabIndex = 205
         Me.btnSaveTb1.Text = "Guardar"
         Me.btnSaveTb1.UseSelectable = True
@@ -1519,7 +1519,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton1.Location = New System.Drawing.Point(392, 545)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 210
         Me.MetroButton1.Text = "Atrás"
         Me.MetroButton1.UseSelectable = True
@@ -1530,7 +1530,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton3.Location = New System.Drawing.Point(490, 545)
         Me.MetroButton3.Name = "MetroButton3"
         Me.MetroButton3.Size = New System.Drawing.Size(90, 32)
-        Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton3.TabIndex = 209
         Me.MetroButton3.Text = "Siguiente"
         Me.MetroButton3.UseSelectable = True
@@ -1541,7 +1541,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btnSaveTb3.Location = New System.Drawing.Point(587, 545)
         Me.btnSaveTb3.Name = "btnSaveTb3"
         Me.btnSaveTb3.Size = New System.Drawing.Size(90, 32)
-        Me.btnSaveTb3.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnSaveTb3.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSaveTb3.TabIndex = 208
         Me.btnSaveTb3.Text = "Guardar"
         Me.btnSaveTb3.UseSelectable = True
@@ -1858,7 +1858,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton6.Location = New System.Drawing.Point(494, 543)
         Me.MetroButton6.Name = "MetroButton6"
         Me.MetroButton6.Size = New System.Drawing.Size(90, 33)
-        Me.MetroButton6.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton6.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton6.TabIndex = 209
         Me.MetroButton6.Text = "Atrás"
         Me.MetroButton6.UseSelectable = True
@@ -1869,7 +1869,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton7.Location = New System.Drawing.Point(592, 543)
         Me.MetroButton7.Name = "MetroButton7"
         Me.MetroButton7.Size = New System.Drawing.Size(90, 33)
-        Me.MetroButton7.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton7.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton7.TabIndex = 208
         Me.MetroButton7.Text = "Siguiente"
         Me.MetroButton7.UseSelectable = True
@@ -1910,7 +1910,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btDelBen.Location = New System.Drawing.Point(202, 25)
         Me.btDelBen.Name = "btDelBen"
         Me.btDelBen.Size = New System.Drawing.Size(90, 33)
-        Me.btDelBen.Style = MetroFramework.MetroColorStyle.Green
+        Me.btDelBen.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDelBen.TabIndex = 213
         Me.btDelBen.Text = "Eliminar"
         Me.btDelBen.UseSelectable = True
@@ -1921,7 +1921,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btEditBen.Location = New System.Drawing.Point(104, 25)
         Me.btEditBen.Name = "btEditBen"
         Me.btEditBen.Size = New System.Drawing.Size(90, 33)
-        Me.btEditBen.Style = MetroFramework.MetroColorStyle.Green
+        Me.btEditBen.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditBen.TabIndex = 212
         Me.btEditBen.Text = "Modificar"
         Me.btEditBen.UseSelectable = True
@@ -1932,7 +1932,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btNewBen.Location = New System.Drawing.Point(7, 25)
         Me.btNewBen.Name = "btNewBen"
         Me.btNewBen.Size = New System.Drawing.Size(90, 33)
-        Me.btNewBen.Style = MetroFramework.MetroColorStyle.Green
+        Me.btNewBen.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewBen.TabIndex = 211
         Me.btNewBen.Text = "Nuevo"
         Me.btNewBen.UseSelectable = True
@@ -1975,7 +1975,7 @@ Public Class frmMsAhCuentasAportacion
         Me.MetroButton5.Location = New System.Drawing.Point(503, 545)
         Me.MetroButton5.Name = "MetroButton5"
         Me.MetroButton5.Size = New System.Drawing.Size(90, 32)
-        Me.MetroButton5.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton5.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton5.TabIndex = 209
         Me.MetroButton5.Text = "Atrás"
         Me.MetroButton5.UseSelectable = True
@@ -1986,7 +1986,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btnSaveTb7.Location = New System.Drawing.Point(600, 543)
         Me.btnSaveTb7.Name = "btnSaveTb7"
         Me.btnSaveTb7.Size = New System.Drawing.Size(90, 33)
-        Me.btnSaveTb7.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnSaveTb7.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSaveTb7.TabIndex = 208
         Me.btnSaveTb7.Text = "Guardar"
         Me.btnSaveTb7.UseSelectable = True
@@ -2013,7 +2013,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btDelR.Location = New System.Drawing.Point(202, 22)
         Me.btDelR.Name = "btDelR"
         Me.btDelR.Size = New System.Drawing.Size(90, 32)
-        Me.btDelR.Style = MetroFramework.MetroColorStyle.Green
+        Me.btDelR.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDelR.TabIndex = 216
         Me.btDelR.Text = "Eliminar"
         Me.btDelR.UseSelectable = True
@@ -2024,7 +2024,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btEditR.Location = New System.Drawing.Point(104, 22)
         Me.btEditR.Name = "btEditR"
         Me.btEditR.Size = New System.Drawing.Size(90, 32)
-        Me.btEditR.Style = MetroFramework.MetroColorStyle.Green
+        Me.btEditR.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditR.TabIndex = 215
         Me.btEditR.Text = "Modificar"
         Me.btEditR.UseSelectable = True
@@ -2035,7 +2035,7 @@ Public Class frmMsAhCuentasAportacion
         Me.btNewR.Location = New System.Drawing.Point(7, 22)
         Me.btNewR.Name = "btNewR"
         Me.btNewR.Size = New System.Drawing.Size(90, 32)
-        Me.btNewR.Style = MetroFramework.MetroColorStyle.Green
+        Me.btNewR.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewR.TabIndex = 214
         Me.btNewR.Text = "Nuevo"
         Me.btNewR.UseSelectable = True
@@ -2260,7 +2260,7 @@ Public Class frmMsAhCuentasAportacion
         Me.Name = "frmMsAhCuentasAportacion"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Cuentas de Aportación"
         Me.tbSolic.ResumeLayout(False)
         Me.tbDatGral.ResumeLayout(False)
@@ -2318,7 +2318,7 @@ Public Class frmMsAhCuentasAportacion
 
         Try
             Dim dtsCodAport As New DataSet
-            dtsCodAport = Ahorro.ConsultarTipoAhorro("codTipoAhorro", "left(codTipoAhorro,1)= '" & libAhorro.tiposAhorro.aportaciones & "'",
+            dtsCodAport = Ahorro.ConsultarTipoAhorro("codTipoAhorro", "left(codTipoAhorro,1)= '" & sifLib.Ahorro.clsAhorros.tiposAhorro.aportaciones & "'",
                                                  "codTipoAhorro", sUsuario, sPassword, sSucursal)
             codApor = dtsCodAport.Tables(0).Rows(0).Item("codTipoAhorro").ToString
 
@@ -2437,11 +2437,11 @@ Public Class frmMsAhCuentasAportacion
                     ds = oPerif.CargarDatosPrestamosPignorados("distinct a.CodPrestamo,b.FechaOtorgamiento as Fecha_Apertura,FechaVencimiento as Fecha_Vencimiento,b.Monto, b.PlazoMeses as Plazo", "NoCuenta='" & pNoCuenta & "' and CodTipoAhorro='" & pCodTipoAhorro & "'", sUsuario, sPassword, sSucursal)
                     Me.fgPig.DataSource = ds.Tables("AhPignoraciones")
 
-                    ds = oPerif.ConsultarBeneficiarios("*", "NoCuenta=" & Trim(txtNoCuenta.Text) & " and CodTipoAhorro='" & codApor & "'", "Correlativo", sUsuario, sPassword, sSucursal)
+                    ds = oPerif.ConsultarBeneficiarios("*", "NoCuenta='" & Trim(txtNoCuenta.Text) & "' and CodTipoAhorro='" & codApor & "'", "Correlativo", sUsuario, sPassword, sSucursal)
                     Me.fgBen.DataSource = ds.Tables(0)
                     ActualizaGridBen()
 
-                    ds = oPerif.ConsultarReposicionLibreta("*", "NoCuenta=" & Trim(txtNoCuenta.Text) & " and CodTipoAhorro='" & codApor & "'", "NoSolicitud", sUsuario, sPassword, sSucursal)
+                    ds = oPerif.ConsultarReposicionLibreta("*", "NoCuenta='" & Trim(txtNoCuenta.Text) & "' and CodTipoAhorro='" & codApor & "'", "NoSolicitud", sUsuario, sPassword, sSucursal)
                     Me.fgR.DataSource = ds.Tables(0)
                     ActualizaGridR()
 
@@ -2536,7 +2536,7 @@ Public Class frmMsAhCuentasAportacion
                 'Me.txtNoCuenta.Text = oPerif.GeneraNoCuenta(codApor, sSucursal, "04", Me.dtpFechaApertura.Value.Month, Me.dtpFechaApertura.Value.Year, sUsuario, sPassword, sSucursal)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2625,7 +2625,7 @@ Public Class frmMsAhCuentasAportacion
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2713,7 +2713,7 @@ Public Class frmMsAhCuentasAportacion
                 Me.txtTitular2.Focus()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2760,7 +2760,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2808,7 +2808,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2852,7 +2852,7 @@ Public Class frmMsAhCuentasAportacion
                 Me.txtTitular2.Focus()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2865,7 +2865,7 @@ Public Class frmMsAhCuentasAportacion
             Me.txtNoCuenta.Text = oAhorro.GeneraNoCuenta(codApor, sSucursal, "04", Me.dtpFechaApertura.Value.Month, Me.dtpFechaApertura.Value.Year, sUsuario, sPassword, sSucursal)
             Me.txtDigito.Text = oAhorro.ObtieneDigitoVerificador(Me.txtNoCuenta.Text.Trim, sUsuario, sPassword, sSucursal)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2915,7 +2915,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2960,7 +2960,7 @@ Public Class frmMsAhCuentasAportacion
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3016,7 +3016,7 @@ Public Class frmMsAhCuentasAportacion
             Me.txtCodMun.Text = ""
             Me.txtMunicipio.Text = ""
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3039,7 +3039,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3058,7 +3058,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3081,7 +3081,7 @@ Public Class frmMsAhCuentasAportacion
             Me.txtCodMun.Text = ofrm.Resultado2.Trim
             Me.txtMunicipio.Text = ofrm.Resultado3.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3100,7 +3100,7 @@ Public Class frmMsAhCuentasAportacion
             txtCodCobrador.Text = ofrm.Resultado.Trim
             txtCobrador.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3170,7 +3170,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+               MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -3194,7 +3194,7 @@ Public Class frmMsAhCuentasAportacion
             txtEjecMercadeo.Text = ofrm.Resultado2.Trim
             txtCodEjecApertura.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3215,7 +3215,7 @@ Public Class frmMsAhCuentasAportacion
             txtEjecApertura.Text = ofrm.Resultado2.Trim
             Me.txtObs.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3244,7 +3244,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+               MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -3314,7 +3314,7 @@ Public Class frmMsAhCuentasAportacion
             End Select
             Dim dtsAportacion As New DataSet
             Dim codAportacion As String
-            dtsAportacion = Ahorro.ConsultarTipoAhorro("CodTipoAhorro", " Left(CodTipoAhorro,1)='" & libAhorro.tiposAhorro.aportaciones & "'", "CodTipoAhorro", sUsuario, sPassword, sSucursal)
+            dtsAportacion = Ahorro.ConsultarTipoAhorro("CodTipoAhorro", " Left(CodTipoAhorro,1)='" & sifLib.Ahorro.clsAhorros.tiposAhorro.aportaciones & "'", "CodTipoAhorro", sUsuario, sPassword, sSucursal)
             If dtsAportacion.Tables(0).Rows.Count > 0 Then
                 codAportacion = dtsAportacion.Tables(0).Rows(0).Item(0).ToString
             End If
@@ -3389,7 +3389,7 @@ Public Class frmMsAhCuentasAportacion
             frm.ShowDialog()
             ActualizaGridBen()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3410,7 +3410,7 @@ Public Class frmMsAhCuentasAportacion
                 ActualizaGridBen()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3424,7 +3424,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3433,7 +3433,7 @@ Public Class frmMsAhCuentasAportacion
             Dim frm As frmMsAhRepLibreta = New frmMsAhRepLibreta
             frm.pNoLibreta = Me.txtNoLibreta.Text
             frm.Text = "Reposición de Libreta de Aportaciones"
-            frm.gbRepLib.Text = "Solicitud de Reposición de Libreta de Aportaciones"
+
             frm.pNoCuenta = Me.pNoCuenta
             frm.pCodTipoAhorro = Me.pCodTipoAhorro
             frm.pAccion = "Guardar"
@@ -3441,7 +3441,7 @@ Public Class frmMsAhCuentasAportacion
             frm.ShowDialog()
             ActualizaGridR()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3462,7 +3462,7 @@ Public Class frmMsAhCuentasAportacion
                 ActualizaGridR()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3477,7 +3477,7 @@ Public Class frmMsAhCuentasAportacion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3511,7 +3511,7 @@ Public Class frmMsAhCuentasAportacion
                 oCred.ModificarRutasCobro(pCamposValores, pNoCuenta, sUsuario, sPassword, sSucursal)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3571,5 +3571,11 @@ Public Class frmMsAhCuentasAportacion
 
     Private Sub frmMsAhCuentasAportacion_MdiChildActivate(sender As Object, e As EventArgs) Handles Me.MdiChildActivate
 
+    End Sub
+
+    Private Sub frmMsAhCuentasAportacion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

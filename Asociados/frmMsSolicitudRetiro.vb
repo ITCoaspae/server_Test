@@ -2,7 +2,18 @@ Public Class frmMsSolicitudRetiro
     Inherits MetroFramework.Forms.MetroForm ' Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
     Dim ahorro As New wrAhorro.wsLibAhorro
+    Dim prestamos As New wrPrestamo.wsLibPrest
+    Dim creditos As New wrCredito.wsLibCred
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbTipoRetiro As ComboBox
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel7 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel8 As MetroFramework.Controls.MetroLabel
     Dim asociado As New wrAsociados.wsLibAsoc
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -29,380 +40,243 @@ Public Class frmMsSolicitudRetiro
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents txtCorreo As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtDireccion As System.Windows.Forms.TextBox
     Friend WithEvents txtMotivos As System.Windows.Forms.TextBox
     Friend WithEvents txtNoSolRetiro As System.Windows.Forms.TextBox
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtObservaciones As System.Windows.Forms.TextBox
-    Friend WithEvents txtTel As System.Windows.Forms.TextBox
-    Friend WithEvents txtCodAntiguo As System.Windows.Forms.TextBox
-    Friend WithEvents Label48 As System.Windows.Forms.Label
-    Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents gbDatos As System.Windows.Forms.GroupBox
     Friend WithEvents chkBloquear As System.Windows.Forms.CheckBox
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkBloquear = New System.Windows.Forms.CheckBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNoSolRetiro = New System.Windows.Forms.TextBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.txtMotivos = New System.Windows.Forms.TextBox()
-        Me.txtTel = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.gbDatos = New System.Windows.Forms.GroupBox()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
-        Me.txtCodAntiguo = New System.Windows.Forms.TextBox()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
-        Me.GroupBox1.SuspendLayout()
-        Me.gbDatos.SuspendLayout()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.cbTipoRetiro = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel8 = New MetroFramework.Controls.MetroLabel()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.chkBloquear)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtNoSolRetiro)
-        Me.GroupBox1.Controls.Add(Me.dtpFecha)
-        Me.GroupBox1.Controls.Add(Me.txtObservaciones)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtDireccion)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.txtCorreo)
-        Me.GroupBox1.Controls.Add(Me.txtMotivos)
-        Me.GroupBox1.Controls.Add(Me.txtTel)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.Label33)
-        Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Navy
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 146)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(568, 267)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
         '
         'chkBloquear
         '
         Me.chkBloquear.ForeColor = System.Drawing.Color.Black
-        Me.chkBloquear.Location = New System.Drawing.Point(316, 12)
+        Me.chkBloquear.Location = New System.Drawing.Point(439, 171)
         Me.chkBloquear.Name = "chkBloquear"
         Me.chkBloquear.Size = New System.Drawing.Size(128, 24)
-        Me.chkBloquear.TabIndex = 1
+        Me.chkBloquear.TabIndex = 10
         Me.chkBloquear.Text = "&Bloquear Cuentas"
-        '
-        'Label3
-        '
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(3, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 21)
-        Me.Label3.TabIndex = 99
-        Me.Label3.Text = "No. Solicitud de Retiro:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtNoSolRetiro
         '
         Me.txtNoSolRetiro.BackColor = System.Drawing.Color.White
-        Me.txtNoSolRetiro.Location = New System.Drawing.Point(94, 16)
+        Me.txtNoSolRetiro.Enabled = False
+        Me.txtNoSolRetiro.Location = New System.Drawing.Point(112, 146)
         Me.txtNoSolRetiro.MaxLength = 50
         Me.txtNoSolRetiro.Name = "txtNoSolRetiro"
         Me.txtNoSolRetiro.ReadOnly = True
-        Me.txtNoSolRetiro.Size = New System.Drawing.Size(72, 20)
-        Me.txtNoSolRetiro.TabIndex = 98
+        Me.txtNoSolRetiro.Size = New System.Drawing.Size(180, 20)
+        Me.txtNoSolRetiro.TabIndex = 7
         '
         'dtpFecha
         '
+        Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(222, 14)
+        Me.dtpFecha.Location = New System.Drawing.Point(345, 146)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
-        Me.dtpFecha.TabIndex = 0
-        Me.dtpFecha.Value = New Date(2004, 9, 9, 11, 37, 0, 0)
+        Me.dtpFecha.Size = New System.Drawing.Size(222, 20)
+        Me.dtpFecha.TabIndex = 9
+        Me.dtpFecha.Value = New Date(2020, 5, 14, 0, 0, 0, 0)
         '
         'txtObservaciones
         '
         Me.txtObservaciones.BackColor = System.Drawing.Color.White
-        Me.txtObservaciones.Location = New System.Drawing.Point(6, 215)
+        Me.txtObservaciones.Location = New System.Drawing.Point(19, 325)
         Me.txtObservaciones.MaxLength = 100
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservaciones.Size = New System.Drawing.Size(556, 42)
-        Me.txtObservaciones.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(3, 196)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 16)
-        Me.Label1.TabIndex = 85
-        Me.Label1.Text = "Observaciones:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDireccion
-        '
-        Me.txtDireccion.BackColor = System.Drawing.Color.White
-        Me.txtDireccion.Location = New System.Drawing.Point(6, 56)
-        Me.txtDireccion.MaxLength = 255
-        Me.txtDireccion.Multiline = True
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDireccion.Size = New System.Drawing.Size(556, 45)
-        Me.txtDireccion.TabIndex = 2
-        '
-        'Label9
-        '
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(172, 14)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(44, 24)
-        Me.Label9.TabIndex = 84
-        Me.Label9.Text = "Fecha Solicitud:"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(3, 37)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 16)
-        Me.Label8.TabIndex = 83
-        Me.Label8.Text = "Dirección:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtCorreo
-        '
-        Me.txtCorreo.BackColor = System.Drawing.Color.White
-        Me.txtCorreo.Location = New System.Drawing.Point(309, 107)
-        Me.txtCorreo.MaxLength = 50
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtCorreo.Size = New System.Drawing.Size(253, 20)
-        Me.txtCorreo.TabIndex = 4
+        Me.txtObservaciones.Size = New System.Drawing.Size(546, 79)
+        Me.txtObservaciones.TabIndex = 14
         '
         'txtMotivos
         '
         Me.txtMotivos.BackColor = System.Drawing.Color.White
-        Me.txtMotivos.Location = New System.Drawing.Point(6, 148)
+        Me.txtMotivos.Location = New System.Drawing.Point(19, 224)
         Me.txtMotivos.MaxLength = 255
         Me.txtMotivos.Multiline = True
         Me.txtMotivos.Name = "txtMotivos"
         Me.txtMotivos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtMotivos.Size = New System.Drawing.Size(556, 45)
-        Me.txtMotivos.TabIndex = 5
-        '
-        'txtTel
-        '
-        Me.txtTel.BackColor = System.Drawing.Color.White
-        Me.txtTel.Location = New System.Drawing.Point(73, 107)
-        Me.txtTel.MaxLength = 50
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtTel.Size = New System.Drawing.Size(120, 20)
-        Me.txtTel.TabIndex = 3
-        '
-        'Label14
-        '
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(3, 104)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(64, 16)
-        Me.Label14.TabIndex = 69
-        Me.Label14.Text = "Teléfonos:"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label13
-        '
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(3, 129)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 16)
-        Me.Label13.TabIndex = 68
-        Me.Label13.Text = "Motivos:"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label33
-        '
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.ForeColor = System.Drawing.Color.Black
-        Me.Label33.Location = New System.Drawing.Point(199, 104)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(104, 16)
-        Me.Label33.TabIndex = 78
-        Me.Label33.Text = "Correo electrónico:"
-        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'gbDatos
-        '
-        Me.gbDatos.BackColor = System.Drawing.Color.White
-        Me.gbDatos.Controls.Add(Me.txtDui)
-        Me.gbDatos.Controls.Add(Me.txtCodAntiguo)
-        Me.gbDatos.Controls.Add(Me.Label48)
-        Me.gbDatos.Controls.Add(Me.Label31)
-        Me.gbDatos.Controls.Add(Me.txtNoSocio)
-        Me.gbDatos.Controls.Add(Me.Label2)
-        Me.gbDatos.Controls.Add(Me.txtNombre)
-        Me.gbDatos.Controls.Add(Me.Label21)
-        Me.gbDatos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbDatos.ForeColor = System.Drawing.Color.Black
-        Me.gbDatos.Location = New System.Drawing.Point(23, 63)
-        Me.gbDatos.Name = "gbDatos"
-        Me.gbDatos.Size = New System.Drawing.Size(568, 77)
-        Me.gbDatos.TabIndex = 0
-        Me.gbDatos.TabStop = False
-        Me.gbDatos.Text = "Datos del Asociado"
+        Me.txtMotivos.Size = New System.Drawing.Size(546, 78)
+        Me.txtMotivos.TabIndex = 12
         '
         'txtDui
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(216, 24)
+        Me.txtDui.Location = New System.Drawing.Point(112, 75)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(120, 20)
+        Me.txtDui.Size = New System.Drawing.Size(455, 15)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
-        '
-        'txtCodAntiguo
-        '
-        Me.txtCodAntiguo.BackColor = System.Drawing.Color.White
-        Me.txtCodAntiguo.Location = New System.Drawing.Point(448, 24)
-        Me.txtCodAntiguo.MaxLength = 10
-        Me.txtCodAntiguo.Name = "txtCodAntiguo"
-        Me.txtCodAntiguo.Size = New System.Drawing.Size(104, 20)
-        Me.txtCodAntiguo.TabIndex = 2
-        '
-        'Label48
-        '
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(360, 24)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(88, 16)
-        Me.Label48.TabIndex = 114
-        Me.Label48.Text = "Código Antiguo:"
-        '
-        'Label31
-        '
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(184, 24)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
-        Me.Label31.TabIndex = 94
-        Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
         Me.txtNoSocio.BackColor = System.Drawing.Color.White
-        Me.txtNoSocio.Location = New System.Drawing.Point(88, 24)
+        Me.txtNoSocio.Enabled = False
+        Me.txtNoSocio.Location = New System.Drawing.Point(112, 97)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
-        Me.txtNoSocio.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(8, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
-        Me.Label2.TabIndex = 92
-        Me.Label2.Text = "No. Asociado:"
+        Me.txtNoSocio.Size = New System.Drawing.Size(456, 20)
+        Me.txtNoSocio.TabIndex = 3
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(88, 50)
+        Me.txtNombre.Location = New System.Drawing.Point(112, 121)
         Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(464, 20)
-        Me.txtNombre.TabIndex = 3
-        '
-        'Label21
-        '
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(8, 50)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(74, 20)
-        Me.Label21.TabIndex = 89
-        Me.Label21.Text = "Asociado:"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtNombre.Size = New System.Drawing.Size(455, 20)
+        Me.txtNombre.TabIndex = 5
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(516, 419)
+        Me.btnGuardar1.Location = New System.Drawing.Point(490, 409)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(75, 29)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnGuardar1.TabIndex = 44
+        Me.btnGuardar1.TabIndex = 15
         Me.btnGuardar1.Text = "&Guardar"
         Me.btnGuardar1.UseSelectable = True
         Me.btnGuardar1.UseStyleColors = True
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(19, 170)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(96, 19)
+        Me.MetroLabel1.TabIndex = 16
+        Me.MetroLabel1.Text = "Tipo de Retiro:"
+        '
+        'cbTipoRetiro
+        '
+        Me.cbTipoRetiro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTipoRetiro.FormattingEnabled = True
+        Me.cbTipoRetiro.Location = New System.Drawing.Point(120, 171)
+        Me.cbTipoRetiro.Name = "cbTipoRetiro"
+        Me.cbTipoRetiro.Size = New System.Drawing.Size(299, 21)
+        Me.cbTipoRetiro.TabIndex = 17
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(296, 146)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(46, 19)
+        Me.MetroLabel2.TabIndex = 18
+        Me.MetroLabel2.Text = "Fecha:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.Location = New System.Drawing.Point(19, 146)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(86, 19)
+        Me.MetroLabel3.TabIndex = 19
+        Me.MetroLabel3.Text = "No. Solicitud:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(19, 121)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(66, 19)
+        Me.MetroLabel4.TabIndex = 20
+        Me.MetroLabel4.Text = "Asociado:"
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.Location = New System.Drawing.Point(19, 99)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(91, 19)
+        Me.MetroLabel5.TabIndex = 21
+        Me.MetroLabel5.Text = "No. Asociado:"
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(19, 75)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(33, 19)
+        Me.MetroLabel6.TabIndex = 22
+        Me.MetroLabel6.Text = "DUI:"
+        '
+        'MetroLabel7
+        '
+        Me.MetroLabel7.AutoSize = True
+        Me.MetroLabel7.Location = New System.Drawing.Point(19, 204)
+        Me.MetroLabel7.Name = "MetroLabel7"
+        Me.MetroLabel7.Size = New System.Drawing.Size(92, 19)
+        Me.MetroLabel7.TabIndex = 23
+        Me.MetroLabel7.Text = "Motivo Retiro:"
+        '
+        'MetroLabel8
+        '
+        Me.MetroLabel8.AutoSize = True
+        Me.MetroLabel8.Location = New System.Drawing.Point(19, 305)
+        Me.MetroLabel8.Name = "MetroLabel8"
+        Me.MetroLabel8.Size = New System.Drawing.Size(98, 19)
+        Me.MetroLabel8.TabIndex = 24
+        Me.MetroLabel8.Text = "Observaciones:"
         '
         'frmMsSolicitudRetiro
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(609, 481)
+        Me.ClientSize = New System.Drawing.Size(592, 454)
+        Me.Controls.Add(Me.MetroLabel8)
+        Me.Controls.Add(Me.MetroLabel7)
+        Me.Controls.Add(Me.MetroLabel6)
+        Me.Controls.Add(Me.MetroLabel5)
+        Me.Controls.Add(Me.MetroLabel4)
+        Me.Controls.Add(Me.MetroLabel3)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.cbTipoRetiro)
+        Me.Controls.Add(Me.MetroLabel1)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtDui)
+        Me.Controls.Add(Me.txtObservaciones)
+        Me.Controls.Add(Me.chkBloquear)
+        Me.Controls.Add(Me.txtNoSocio)
         Me.Controls.Add(Me.btnGuardar1)
-        Me.Controls.Add(Me.gbDatos)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.txtMotivos)
+        Me.Controls.Add(Me.dtpFecha)
+        Me.Controls.Add(Me.txtNoSolRetiro)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(609, 481)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(609, 481)
         Me.Name = "frmMsSolicitudRetiro"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Solicitud de Retiro"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.gbDatos.ResumeLayout(False)
-        Me.gbDatos.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -414,10 +288,15 @@ Public Class frmMsSolicitudRetiro
 
         Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet
         Try
-            gbDatos.Focus()
-            Me.dtpFecha.Value = Date.Now
+
+            llenarTipoRetiro()
 
             If Me.btnGuardar1.Text = "&Modificar" Then
+                cbTipoRetiro.Enabled = False
+                dtpFecha.Enabled = False
+                txtNoSocio.Enabled = False
+                txtDui.Enabled = False
+                txtNombre.Enabled = False
 
                 Dim Filas As Data.DataRowCollection
 
@@ -426,10 +305,13 @@ Public Class frmMsSolicitudRetiro
                 Filas = ds.Tables(0).Rows()
                 If Filas.Count > 0 Then
                     txtMotivos.Text = CStr(Filas.Item(0)("Motivos"))
-                    txtDireccion.Text = CStr(Filas.Item(0)("Direccion"))
-                    txtTel.Text = CStr(Filas.Item(0)("Telefonos"))
-                    txtCorreo.Text = CStr(Filas.Item(0)("correo"))
                     txtObservaciones.Text = CStr(Filas.Item(0)("Observaciones"))
+                    dtpFecha.Value = Filas.Item(0)("fechaSolicitud")
+                    If Filas.Item(0)("idTipoRetiro") Is DBNull.Value = False Then
+                        cbTipoRetiro.SelectedValue = Filas.Item(0)("idTipoRetiro")
+                    End If
+
+
                     Me.chkBloquear.Checked = IIf(IIf(IsDBNull(Filas.Item(0)("CuentaBloqueada")), "0", Filas.Item(0)("CuentaBloqueada")) = "1", True, False)
                 End If
                 ds = oAsoc.ConsultarAsociado("NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre", "Dui='" & Trim(txtDui.Text) & "'", "Dui", sUsuario, sPassword, sSucursal)
@@ -437,9 +319,7 @@ Public Class frmMsSolicitudRetiro
                 If Filas.Count > 0 Then
                     txtNoSocio.Text = IIf(IsDBNull(Filas.Item(0)("NoSocio")), "", Filas.Item(0)("NoSocio"))
                     txtNombre.Text = CStr(Filas.Item(0)("Nombre"))
-                    txtCodAntiguo.Text = IIf(IsDBNull(Filas.Item(0)("CodAntiguo")), "", Filas.Item(0)("CodAntiguo"))
                     txtDui.Enabled = False
-                    txtCodAntiguo.Enabled = False
                     txtNoSocio.Enabled = False
                     txtNombre.Enabled = False
                 End If
@@ -455,6 +335,8 @@ Public Class frmMsSolicitudRetiro
 
         Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, pCampos As String, pValores As String, pBloqueada As String
         Try
+            Dim frm As New frmVisorRS
+            OpcionRS = 228
             pBloqueada = IIf(Me.chkBloquear.Checked = True, "1", "0")
             If Me.btnGuardar1.Text = "&Guardar" Then
 
@@ -468,7 +350,7 @@ Public Class frmMsSolicitudRetiro
                 dts = asociado.ConsultarSolicitudRetiro("A", "a.Dui = '" & txtDui.Text.Trim & "' and Anulado = '0' ", "NoSolicitudRetiro", sUsuario, sPassword, sSucursal)
                 If dts.Tables.Count > 0 Then
                     If dts.Tables(0).Rows.Count > 0 Then
-                        MsgBox("El asociado ya cuenta con una solicitud de retiro, por favor revisar", MsgBoxStyle.Information, "Módulo - Asociados")
+                        MsgBox("El asociado ya cuenta con una solicitud de retiro.", MsgBoxStyle.Information, "Módulo - Asociados")
                         Exit Sub
                     End If
                 End If
@@ -487,15 +369,31 @@ Public Class frmMsSolicitudRetiro
                 "','" & sUsuario &
                 "', getdate()"
 
+
                 If oAsoc.InsertarSolicitudRetiro(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
-                    Dim oAh As New wrAhorro.wsLibAhorro
-                    If Me.chkBloquear.Checked = True Then
-                        oAh.ModificarAhCuentasAhorro("Estado='B'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
-                    Else
-                        oAh.ModificarAhCuentasAhorro("Estado='A'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
+                    ' Validamos que existan prestamos activos
+                    Dim dtsPrestamos As New DataSet
+                    dtsPrestamos = creditos.ConsultarPrestamos("codPrestamo", " dui = '" & txtDui.Value & "' and saldo_Capital > 0 ", "", sUsuario, sPassword, sSucursal)
+                    If dtsPrestamos.Tables.Count > 0 Then
+                        If dtsPrestamos.Tables(0).Rows.Count > 0 Then
+                            For i As Integer = 0 To dtsPrestamos.Tables(0).Rows.Count - 1
+                                creditos.ModificarPrestamos(dtsPrestamos.Tables(0).Rows(i).Item(0), " CasoEspecial = '14' ", sUsuario, sPassword, sSucursal)
+                            Next
+                        End If
                     End If
-                    MsgBox("Solicitud de retiro ingresada exitosamente.", MsgBoxStyle.Information, "Módulo - Asociados")
-                    Me.Dispose()
+
+                    If Me.chkBloquear.Checked = True Then
+                        ahorro.ModificarAhCuentasAhorro("Estado='B'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
+                    Else
+                        ahorro.ModificarAhCuentasAhorro("Estado='A'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
+                    End If
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                    With frm
+                        .dui = txtDui.Value.ToString.Trim
+                        .idReserva = txtNoSolRetiro.Text
+                        .Show()
+                    End With
+
                 Else
                     MsgBox("El Registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Asociados")
                 End If
@@ -507,20 +405,24 @@ Public Class frmMsSolicitudRetiro
                 "', usuarioActu = '" & sUsuario &
                 "', fechaActu =  getdate() "
                 If oAsoc.ModificarSolicitudRetiro("NoSolicitudRetiro=" & Trim(txtNoSolRetiro.Text) & "", pCampos, sUsuario, sPassword, sSucursal) = True Then
-                    Dim oAh As New wrAhorro.wsLibAhorro
+
                     If Me.chkBloquear.Checked = True Then
-                        oAh.ModificarAhCuentasAhorro("Estado='B'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
+                        ahorro.ModificarAhCuentasAhorro("Estado='B'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
                     Else
-                        oAh.ModificarAhCuentasAhorro("Estado='A'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
+                        ahorro.ModificarAhCuentasAhorro("Estado='A'", "Dui='" & Me.txtDui.Text.Trim & "' and Estado<>'C' and Estado<>'D'", sUsuario, sPassword, sSucursal)
                     End If
-                    MsgBox("El Registro ha sido modificado.", MsgBoxStyle.Information)
-                    Me.Dispose()
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeUpdateRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                    With frm
+                        .dui = txtDui.Value.ToString.Trim
+                        .idReserva = txtNoSolRetiro.Text
+                        .Show()
+                    End With
                 Else
-                    MsgBox("El Registro No ha sido modificado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Asociados")
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             End If
         Catch ex As Exception
-
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -535,55 +437,8 @@ Public Class frmMsSolicitudRetiro
 
     End Sub
 
-    Private Sub txtCodAntiguo_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodAntiguo.DoubleClick
 
-        Dim ofrm As New frmAGenerico
 
-        ofrm.Text = "Buscar Asociados"
-        Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet
-        Try
-            oAsoc = New wrAsociados.wsLibAsoc
-            ds = oAsoc.ConsultarAsociado("DUI,NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre,Direccion,TelCasa,Email", "EstadoAsociado<>'2' and EstadoAsociado<>'1'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
-            ofrm.Datos = ds
-            ofrm.ColSeleccion = 0
-            ofrm.RefrescarGrid()
-            ofrm.ShowDialog()
-            txtCodAntiguo.Text = ofrm.Resultado3.Trim
-            txtNoSocio.Text = ofrm.Resultado2.Trim
-            txtDui.Value = ofrm.Resultado.Trim
-            txtNombre.Text = ofrm.Resultado4.Trim
-            txtDireccion.Text = ofrm.Resultado5.Trim
-            txtTel.Text = ofrm.Resultado6.Trim
-            txtCorreo.Text = ofrm.Resultado7.Trim
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla Asociados - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-
-    End Sub
-
-    Private Sub txtNoSocio_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNoSocio.DoubleClick
-        Dim ofrm As New frmAGenerico
-
-        ofrm.Text = "Buscar Asociados"
-        Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet
-        Try
-            oAsoc = New wrAsociados.wsLibAsoc
-            ds = oAsoc.ConsultarAsociado("DUI,NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre,Direccion,TelCasa,Email", "EstadoAsociado<>'2' and EstadoAsociado<>'1'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
-            ofrm.Datos = ds
-            ofrm.ColSeleccion = 0
-            ofrm.RefrescarGrid()
-            ofrm.ShowDialog()
-            txtNoSocio.Text = ofrm.Resultado2.Trim
-            txtDui.Value = ofrm.Resultado.Trim
-            txtNombre.Text = ofrm.Resultado4.Trim
-            txtCodAntiguo.Text = ofrm.Resultado3
-            txtDireccion.Text = ofrm.Resultado5.Trim
-            txtTel.Text = ofrm.Resultado6.Trim
-            txtCorreo.Text = ofrm.Resultado7.Trim
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla Asociados - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
 #End Region
 
@@ -602,10 +457,7 @@ Public Class frmMsSolicitudRetiro
             txtNoSocio.Text = ofrm.Resultado2.Trim
             txtDui.Value = ofrm.Resultado.Trim
             txtNombre.Text = ofrm.Resultado4.Trim
-            txtCodAntiguo.Text = ofrm.Resultado3
-            txtDireccion.Text = ofrm.Resultado5.Trim
-            txtTel.Text = ofrm.Resultado6.Trim
-            txtCorreo.Text = ofrm.Resultado7.Trim
+
         Catch ex As Exception
             MessageBox.Show("Error en la recuperación de datos tabla Asociados - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -624,69 +476,31 @@ Public Class frmMsSolicitudRetiro
         End Try
     End Sub
 
-    Private Sub txtCodAntiguo_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtCodAntiguo.Validating
-        Try
 
-            If txtCodAntiguo.Text.Trim = "" Then
-            Else
-                Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet, Filas As Data.DataRowCollection
-                ds = oAsoc.ConsultarAsociado("DUI,NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre,Direccion,TelCasa,Email", "CodAntiguo='" & txtCodAntiguo.Text.Trim & "' and EstadoAsociado<>'2' and EstadoAsociado<>'1'", "DUI,CodAntiguo", sUsuario, sPassword, sSucursal)
-                Filas = ds.Tables(0).Rows()
-                If Filas.Count > 0 Then
-                    txtNoSocio.Text = CStr(Filas.Item(0)("NoSocio"))
-                    txtCodAntiguo.Text = IIf(IsDBNull(Filas.Item(0)("CodAntiguo")), "", Filas.Item(0)("CodAntiguo"))
-                    txtDui.Value = CStr(Filas.Item(0)("DUI"))
-                    txtNombre.Text = CStr(Filas.Item(0)("Nombre"))
-                    txtDireccion.Text = IIf(IsDBNull(Filas.Item(0)("Direccion")), "", Filas.Item(0)("Direccion"))
-                    txtTel.Text = IIf(IsDBNull(Filas.Item(0)("TelCasa")), "", Filas.Item(0)("TelCasa"))
-                    txtCorreo.Text = IIf(IsDBNull(Filas.Item(0)("Email")), "", Filas.Item(0)("Email"))
-                Else
-                End If
-            End If
-        Catch ex As Exception
 
-        End Try
-    End Sub
-
-    Private Sub txtNoSocio_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtNoSocio.Validating
-        Try
-            If txtNoSocio.Text.Trim = "" Then
-            Else
-                Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet, Filas As Data.DataRowCollection
-                ds = oAsoc.ConsultarAsociado("DUI,NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre,Direccion,TelCasa,Email", "NoSocio='" & txtNoSocio.Text.Trim & "' and EstadoAsociado<>'2' and EstadoAsociado<>'1'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
-                Filas = ds.Tables(0).Rows()
-                If Filas.Count > 0 Then
-                    txtNoSocio.Text = CStr(Filas.Item(0)("NoSocio"))
-                    txtDui.Value = CStr(Filas.Item(0)("DUI"))
-                    txtNombre.Text = CStr(Filas.Item(0)("Nombre"))
-                    txtCodAntiguo.Text = IIf(IsDBNull(Filas.Item(0)("CodAntiguo")), "", Filas.Item(0)("CodAntiguo"))
-                    txtDireccion.Text = IIf(IsDBNull(Filas.Item(0)("Direccion")), "", Filas.Item(0)("Direccion"))
-                    txtTel.Text = IIf(IsDBNull(Filas.Item(0)("TelCasa")), "", Filas.Item(0)("TelCasa"))
-                    txtCorreo.Text = IIf(IsDBNull(Filas.Item(0)("Email")), "", Filas.Item(0)("Email"))
-                Else
-                End If
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub txtDui_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDui.LostFocus
         Try
             If txtDui.Text.Trim = "" Then
             Else
                 Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet, Filas As Data.DataRowCollection
-                ds = oAsoc.ConsultarAsociado("DUI,NoSocio,CodAntiguo,Nombres + ' ' + Apellido1 + ' ' + Apellido2 as Nombre,Direccion,TelCasa,Email", "Dui='" & txtDui.Text.Trim & "' and EstadoAsociado<>'2' and EstadoAsociado<>'1'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
+                ds = oAsoc.ConsultarAsociado("DUI,NoSocio, concat(RTRIM(Nombres),' ',RTRIM(Apellido1), ' ', RTRIM(Apellido2)) as Nombre", "Dui='" & txtDui.Text.Trim & "' ", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
                 Filas = ds.Tables(0).Rows()
                 If Filas.Count > 0 Then
                     txtNoSocio.Text = CStr(Filas.Item(0)("NoSocio")).Trim
                     txtDui.Value = CStr(Filas.Item(0)("DUI")).Trim
                     txtNombre.Text = CStr(Filas.Item(0)("Nombre")).Trim
-                    txtCodAntiguo.Text = IIf(IsDBNull(Filas.Item(0)("CodAntiguo")), "", Filas.Item(0)("CodAntiguo"))
-                    txtDireccion.Text = IIf(IsDBNull(Filas.Item(0)("Direccion")), "", Filas.Item(0)("Direccion"))
-                    txtTel.Text = IIf(IsDBNull(Filas.Item(0)("TelCasa")), "", Filas.Item(0)("TelCasa"))
-                    txtCorreo.Text = IIf(IsDBNull(Filas.Item(0)("Email")), "", Filas.Item(0)("Email"))
-                Else
+                    If validarSolicitud() = False Then
+                        Me.chkBloquear.Enabled = False
+                        Me.txtMotivos.Enabled = False
+                        Me.txtObservaciones.Enabled = False
+                        Me.btnGuardar1.Enabled = False
+                    Else
+                        Me.chkBloquear.Enabled = True
+                        Me.txtMotivos.Enabled = True
+                        Me.txtObservaciones.Enabled = True
+                        Me.btnGuardar1.Enabled = True
+                    End If
                 End If
             End If
         Catch ex As Exception
@@ -698,30 +512,79 @@ Public Class frmMsSolicitudRetiro
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then txtDui_LostFocus(sender, e)
     End Sub
 
-    Private Sub chkBloquear_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkBloquear.CheckedChanged
+    Protected Function llenarTipoRetiro()
+        Dim dts As New DataSet
 
-    End Sub
-
-
-    Private Sub chkBloquear_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkBloquear.Click
-        If Me.chkBloquear.Checked = True Then
-            If (ahorro.ConsultarCtasAhorroDUI("a.nocuenta", " a.dui ='" & txtDui.Text.Trim & "' and left(a.codtipoahorro,1) in ('2','5') and a.estado = 'A' ", "", sUsuario, sPassword, sSucursal)).Tables(0).Rows.Count > 0 Then
-                MsgBox("No se pueden bloquear cuentas, el asociado tiene cuentas pendientes de vencimiento.", MsgBoxStyle.Critical)
-                Me.chkBloquear.Checked = False
-                Exit Sub
-            Else
-                Me.chkBloquear.Checked = True
-                Exit Sub
+        Me.cbTipoRetiro.DisplayMember = "Descripcion"
+        Me.cbTipoRetiro.ValueMember = "idCatalogo"
+        dts = asociado.consultarDbCatalogosCatalogos(0, wrAsociados.tipoCatalogo.estadoAsociado,
+                                                      wrAsociados.tipoConsultaCatalogos.detalleCatalogo)
+        If dts.Tables.Count > 0 Then
+            If dts.Tables(0).Rows.Count > 0 Then
+                Dim dv As New DataView(dts.Tables(0))
+                dv.RowFilter = "idCatalogo <> 25 and idCatalogo <> 27 and idCatalogo <> 30"
+                Me.cbTipoRetiro.DataSource = dv
             End If
-        ElseIf chkBloquear.Checked = False Then
-            Me.chkBloquear.Checked = False
-            Exit Sub
         End If
-    End Sub
+    End Function
+    Protected Function validarSolicitud()
+        Dim valido As Boolean = True
+        'Verificamos que no tenga cuentas a plazo pendientes de cancelar
+        Dim dtsAhorro As New DataSet
+        Dim dtsValLiquidez As New DataSet
+        dtsAhorro = ahorro.ConsultarCtasAhorroDUI("a.nocuenta", " a.DUI = '" & txtDui.Value.ToString.Trim & "' and left(a.codtipoahorro,1) in ('6','5') and a.estado = 'A' and a.saldo_cuentaAhorro > 0 ", "", sUsuario, sPassword, sSucursal)
+        If dtsAhorro.Tables(0).Rows.Count > 0 Then
+            valido = False
+            MetroFramework.MetroMessageBox.Show(Me, "No se pueden ingresar solicitud de retiro, asociado tiene cuentas pendientes de vencimiento.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
+        End If
+        ' verificar si saldo de cuentas es mayor o igual al monto necesario para cancelar prestamo
+        dtsValLiquidez = asociado.validarLiquidacionCtas(txtDui.Value.ToString.Trim)
+        If dtsValLiquidez.Tables(0).Rows.Count > 0 Then
+            If dtsValLiquidez.Tables(0).Rows(0).Item("valido") = False Then
+                MetroFramework.MetroMessageBox.Show(Me, "No se pueden ingresar solicitud de retiro, el saldo de préstamos es mayor que su saldo de ahorros.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                valido = False
+            End If
+        End If
+        Return valido
+
+
+    End Function
+
+
 
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
+        Dim bloqueada As String
+        Dim frm As New frmVisorRS
+        OpcionRS = 233
+        bloqueada = IIf(Me.chkBloquear.Checked = True, "1", "0")
+        Try
+            If Me.btnGuardar1.Text = "&Guardar" Then
+                '    If asociado.guardarSolicitudRetiro(txtNoSolRetiro.Text, dtpFecha.Value.ToShortDateString, txtMotivos.Text.Trim.ToUpper, txtDui.Value, txtObservaciones.Text.Trim.ToUpper, bloqueada, sUsuario, False, 1, cbTipoRetiro.SelectedValue) > 0 Then
+                '        MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                '    End If
+                'Else
+                '    If asociado.guardarSolicitudRetiro(txtNoSolRetiro.Text, dtpFecha.Value.ToShortDateString, txtMotivos.Text.Trim.ToUpper, txtDui.Value, txtObservaciones.Text.Trim.ToUpper, bloqueada, sUsuario, False, 2, cbTipoRetiro.SelectedValue) > 0 Then
+                '        MetroFramework.MetroMessageBox.Show(Me, mensajeUpdateRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                '    End If
+            End If
+            btnGuardar1.Enabled = False
+            With frm
+                .dui = txtDui.Value.ToString.Trim
+                .idReserva = txtNoSolRetiro.Text
+                .Show()
+            End With
+            Me.Close()
+        Catch ex As Exception
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
 
-        Guardar()
 
+    End Sub
+
+    Private Sub frmMsSolicitudRetiro_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

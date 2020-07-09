@@ -53,7 +53,7 @@
     End Sub
     Private Sub txtNoCuenta_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNoCuenta.LostFocus
         Dim dts, dtsParametro As New DataSet
-        dts = ahorro.consultarDatosLibreta(txtNoCuenta.Text.Trim)
+        dts = ahorro.consultarDatosLibreta(txtNoCuenta.Text.Trim, txtDui.Text.Trim)
         Dim hoja As Integer
         Dim maxMovLibreta As Integer
         dtsParametro = asociado.ConsultarParametros("movPagLibreta", "", "movPagLibreta", sUsuario, sPassword, sSucursal)
@@ -216,6 +216,7 @@
         Try
             Dim dts As New DataSet
             dts = ahorro.InicializacionLibreta(Me.txtDui.Value, Me.txtNoCuenta.Text.Trim, sUsuario, sPassword, sSucursal)
+            'vtitular = dts.NombreAhorrante'
             vNocta = txtNoCuenta.Text.Trim
             vDui = txtDui.Value
             'If Mid(txtCodTipoAhorro.Text.Trim, 1, 1) = sifLib.Ahorro.clsAhorros.tiposAhorro.programado Then
@@ -224,11 +225,21 @@
 
             '    ofrm.Show()
             'Else
-            Dim ofrm As New frmVisor(dts, 18, 0)
+            Dim Tipoahoprog As String = Strings.Mid(Me.txtNoCuenta.Text.Trim, 8, 2)
+            If Tipoahoprog = "41" Then
+                Dim ofrm As New frmVisor(dts, 104, 0)
                 ofrm.Show()
-            'End If
+            Else
+                If Tipoahoprog = "51" Then
+                    Dim ofrm As New frmVisor(dts, 105, 0)
+                    ofrm.Show()
+                Else
+                    Dim ofrm As New frmVisor(dts, 18, 0)
+                    ofrm.Show()
+                End If
+            End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         '    Dim ds As New Data.DataSet, dsTmp As New DataSet, vResp As String, dr As DataRow, dsPosteo As New DataSet, oAsoc As New wrAsociados.wsLibAsoc, vLineaMax As Integer, pMaxPag As Integer
         '    ds = asociado.ConsultarParametros("MaxNumLibreta", "", "MaxNumLibreta", sUsuario, sPassword, sSucursal)
@@ -293,7 +304,7 @@
         '    End If
         '    Call txtNoCuenta_LostFocus(sender, e)
         'Catch ex As Exception
-        '    MsgBox(mensajeError, MsgBoxStyle.Critical)
+        '     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         'End Try
     End Sub
 
@@ -360,7 +371,7 @@
             '    MsgBox(vResp, MsgBoxStyle.Critical, "Validación del Sistema")
             'End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -376,7 +387,7 @@
                 Me.chkQuitarPosteo.Enabled = True
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -397,7 +408,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

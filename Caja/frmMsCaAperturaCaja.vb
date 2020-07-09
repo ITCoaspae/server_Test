@@ -729,7 +729,7 @@ Public Class frmMsCaAperturaCaja
                         'pValoresMov = "" & Trim(Me.txtNoCaja.Text) & ",'" & vCodCajero & "','" & Me.dtpFechaApertura.Value.ToShortDateString & "'," & Me.c1nTotal.Value & ",'A'," & Me.c1nUno.Value & "," & Me.c1nCinco.Value & "," & Me.c1nDiez.Value & "," & Me.c1nVeinte.Value & "," & Me.c1nCincuenta.Value & "," & Me.c1nCien.Value & "," & Me.c1nFraccion.Value & ""
                         'If oItem.InsertarAperturaCaja(pCampos, pValores, pCamposMov, pValoresMov, sUsuario, sPassword, sSucursal) = True Then
                         Dim Correlativo As Integer
-                        Correlativo = caja.AperturaCaja(cbCaja.SelectedValue, vCodCajero, Format(dtpFechaApertura.Value, "Short Date"),
+                        Correlativo = caja.AperturaCaja(cbCaja.SelectedValue, vCodCajero, Format(dtpFechaApertura.Value, "Short Date"), vCodSolicitud,
                                              Now.Hour.ToString.PadLeft(2, "0") + ":" + Now.Minute.ToString.PadLeft(2, "0"),
                                              Me.C1NEMontoApertura.Value, "", Me.cbTipoCaja.SelectedIndex, "", "A",
                                              Me.c1nUno.Value, Me.c1nCinco.Value, Me.c1nDiez.Value, Me.c1nVeinte.Value,
@@ -741,6 +741,12 @@ Public Class frmMsCaAperturaCaja
                             '================================================================
                             '26/09/2013
                             'mostramos reporte con detalle de solicitud de efectivo.
+                            '================================================================
+                            ' Proceso que Actuliza el Correlativo de la Solicitud a Boveda  23/06/2020  PROG01
+                            Dim resultado As Integer
+                            resultado = Bancos.ActivarSolicitudBoveda(Space(1), True, "ActivarSol", Format(Now, "short date"), Now.Hour.ToString.PadLeft(2, "0") & ":" & Now.Minute.ToString.PadLeft(2, "0"), vCodSolicitud)
+                            '================================================================
+
                             Dim frmVisorRpt As New frmVisorRS
                             OpcionRS = 38
 
@@ -751,13 +757,15 @@ Public Class frmMsCaAperturaCaja
                                 .Show()
                             End With
                             '================================================================
-                            Dim frm As New frmCAFactura
-                            frm.StartPosition = FormStartPosition.CenterScreen
-                            frm.NoCaja = cbCaja.SelectedValue
-                            frm.CodCajero = vCodCajero
-                            frm.Usuario = Me.vUsuario
-                            frm.Text = frm.Text & ", Cajero: " & Me.CodCajero & " - " & Me.Cajero
-                            frm.Show()
+                            'LA SOLICITUD SE IMPRIMIRA DESPUES DE SER APROBADA
+                            'CAMBIO APLICADO 03/06/2020 PROG01
+                            'Dim frm As New frmCAFactura
+                            'frm.StartPosition = FormStartPosition.CenterScreen
+                            'frm.NoCaja = cbCaja.SelectedValue
+                            'frm.CodCajero = vCodCajero
+                            'frm.Usuario = Me.vUsuario
+                            'frm.Text = frm.Text & ", Cajero: " & Me.CodCajero & " - " & Me.Cajero
+                            'frm.Show()
                             'Me.Hide()
                         Else
                             MessageBox.Show("Los datos no fueron ingresados, verifíque.", "Apertura de Caja", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -769,22 +777,23 @@ Public Class frmMsCaAperturaCaja
             ElseIf Origen = 2 Then
                     If c1nTotal.Value = C1NEMontoApertura.Value Then
                         Dim CorrMovCaja
-                        CorrMovCaja = caja.InsertarCaMovimientosCaja(pNocaja, pCodCajero, Format(Me.dtpFechaApertura.Value, "short date"),
+                    CorrMovCaja = caja.InsertarCaMovimientosCaja(pNocaja, pCodCajero, Format(Me.dtpFechaApertura.Value, "short date"), vCodSolicitud,
                                                                      Me.C1NEMontoApertura.Value, "C",
                                                                       Me.c1nUno.Value, Me.c1nCinco.Value, Me.c1nDiez.Value, Me.c1nVeinte.Value,
                                                                       Me.c1nCincuenta.Value, Me.c1nCien.Value, Me.c1nFraccion.Value, 0,
                                                                       0, 0, 0, 0, 0, 0, Me.cbTipoMov.SelectedValue, Me.C1nMonedaUno.Value)
-                        If CorrMovCaja <> 0 Then
+                    If CorrMovCaja <> 0 Then
                             Dim resultadoSolicitud As Integer
                             resultadoSolicitud = Bancos.InsertarBcSolicitudes_Boveda(pCodCajero, Format(Me.dtpFechaApertura.Value, "short date"),
                                                                                      Me.C1NEMontoApertura.Value, Me.cbTipoMov.SelectedText.Trim,
                                                                                      False, Now.Hour.ToString.PadLeft(2, "0") & ":" & Now.Minute.ToString.Trim.PadLeft(2, "0"),
                                                                                      sSucursal, sUsuario, sUsuario, sPassword, sSucursal, Me.cbTipoMov.SelectedValue, CorrMovCaja)
                             If resultadoSolicitud <> 0 Then
+                            'LA SOLICITUD SE IMPRIMIRA DESPUES DE SER APROBADA
+                            ' CAMBIO APLICADO 03/06/2020 PROG01
+                            ' generarReporte(CorrMovCaja)
 
-                                generarReporte(CorrMovCaja)
-
-                                Me.Dispose()
+                            Me.Dispose()
                             Else
                                 MessageBox.Show("Los datos no fueron ingresados, verifíque.", "Apertura de Caja", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
@@ -796,7 +805,7 @@ Public Class frmMsCaAperturaCaja
 
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -805,7 +814,7 @@ Public Class frmMsCaAperturaCaja
     End Sub
 #End Region
 #Region "Metodos"
-    Private Function consultarCajasxSucursal(codSucursal As String)
+    Private Sub consultarCajasxSucursal(codSucursal As String)
         Dim dts As New DataSet
         dts = caja.ConsultarCajas("noCaja", "codSucursal = '" & sSucursal & "'", "", sUsuario, sPassword, sSucursal)
         If dts.Tables(0).Rows.Count > 0 Then
@@ -813,7 +822,7 @@ Public Class frmMsCaAperturaCaja
             Me.cbCaja.DisplayMember = "noCaja"
             Me.cbCaja.ValueMember = "noCaja"
         End If
-    End Function
+    End Sub
     Public Sub llenarCbTipoMovCaja(ByVal opcion As Integer, ByVal idTipoMov As Integer, ByVal codTransaccion As Integer)
 
         dtsMovCaja = caja.consultarCaTipoMovCaja(opcion, idTipoMov, codTransaccion, sUsuario, sPassword, sSucursal)

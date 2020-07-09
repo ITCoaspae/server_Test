@@ -32,13 +32,12 @@ Partial Class frmVisorRS
         Me.rsVISOR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rsVISOR.DocumentMapWidth = 1
         Me.rsVISOR.Location = New System.Drawing.Point(0, 0)
-        Me.rsVISOR.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rsVISOR.Name = "rsVISOR"
         Me.rsVISOR.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
         Me.rsVISOR.ServerReport.BearerToken = Nothing
         Me.rsVISOR.ServerReport.ReportPath = "/RS_SIF_ERP/"
         Me.rsVISOR.ServerReport.ReportServerUrl = New System.Uri("http://jaem90/ReportServer", System.UriKind.Absolute)
-        Me.rsVISOR.Size = New System.Drawing.Size(791, 330)
+        Me.rsVISOR.Size = New System.Drawing.Size(591, 240)
         Me.rsVISOR.TabIndex = 1
         '
         'Panel2
@@ -48,22 +47,19 @@ Partial Class frmVisorRS
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.rsVISOR)
-        Me.Panel2.Location = New System.Drawing.Point(31, 78)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(23, 63)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(793, 332)
+        Me.Panel2.Size = New System.Drawing.Size(593, 242)
         Me.Panel2.TabIndex = 3
         '
         'frmVisorRS
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(855, 510)
+        Me.ClientSize = New System.Drawing.Size(639, 386)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmVisorRS"
-        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.ShowIcon = False
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Reportes"

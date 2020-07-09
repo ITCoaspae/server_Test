@@ -1669,7 +1669,7 @@ Public Class frmMsGrInscripcionGarantia
                 CARGAR_DATOSINSCRIPCIONPRESTAMOS(vNOCOMPROBANTE)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2002,7 +2002,7 @@ Public Class frmMsGrInscripcionGarantia
 
             fgInmueble.Cols.Item(0).Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2021,7 +2021,7 @@ Public Class frmMsGrInscripcionGarantia
                 fgInmueble.Cols.Item(0).Width = 0
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2037,7 +2037,7 @@ Public Class frmMsGrInscripcionGarantia
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2050,7 +2050,7 @@ Public Class frmMsGrInscripcionGarantia
             frm.ShowDialog()
             CARGAR_DATOSINSCRIPCIONPRESTAMOS(vNOCOMPROBANTE)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2069,7 +2069,7 @@ Public Class frmMsGrInscripcionGarantia
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2082,7 +2082,7 @@ Public Class frmMsGrInscripcionGarantia
             FRMHG.vNUMSOLICITUD = vNumSolicitud
             FRMHG.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2119,7 +2119,7 @@ Public Class frmMsGrInscripcionGarantia
                 MsgBox("Error al realizar la Modificación.", MsgBoxStyle.Critical, "MÓDULO - GARANTÍAS")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2129,7 +2129,7 @@ Public Class frmMsGrInscripcionGarantia
             frm.NumSolicitud = vNumSolicitud
             frm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2137,7 +2137,7 @@ Public Class frmMsGrInscripcionGarantia
         Try
             Me.tb.SelectedIndex = Me.tb.SelectedIndex() - 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2145,7 +2145,7 @@ Public Class frmMsGrInscripcionGarantia
         Try
             Me.tb.SelectedIndex = Me.tb.SelectedIndex() + 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2198,7 +2198,7 @@ Public Class frmMsGrInscripcionGarantia
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

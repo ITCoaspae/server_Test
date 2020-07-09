@@ -221,7 +221,7 @@ Public Class frmMsEjecutivos
             Me.txtCodEmpleado.Text = ofrm.Resultado2
             Me.txtDescripcion.Text = ofrm.Resultado5 & " " & ofrm.Resultado3 & " " & ofrm.Resultado4
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub txtCodEmpleado_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtCodEmpleado.Validating
@@ -284,7 +284,7 @@ Public Class frmMsEjecutivos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

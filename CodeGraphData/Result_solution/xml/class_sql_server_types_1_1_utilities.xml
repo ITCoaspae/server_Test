@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_sql_server_types_1_1_utilities" kind="class" prot="public">
+    <compoundname>SqlServerTypes::Utilities</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IntPtr</type>
+        <definition>static IntPtr SqlServerTypes.Utilities.LoadLibrary</definition>
+        <argsstring>(string libname)</argsstring>
+        <name>LoadLibrary</name>
+        <param>
+          <type>string</type>
+          <declname>libname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" line="13" column="1"/>
+        <referencedby refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" compoundref="_loader_8cs" startline="32" endline="43">SqlServerTypes.Utilities.LoadNativeAssembly</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SqlServerTypes.Utilities.LoadNativeAssemblies</definition>
+        <argsstring>(string rootApplicationPath)</argsstring>
+        <name>LoadNativeAssemblies</name>
+        <param>
+          <type>string</type>
+          <declname>rootApplicationPath</declname>
+        </param>
+        <briefdescription>
+<para>Loads the required native assemblies for the current architecture (x86 or x64) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rootApplicationPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Root path of the current application. Use Server.MapPath(&quot;.&quot;) for ASP.NET applications and AppDomain.CurrentDomain.BaseDirectory for desktop applications. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" line="22" column="1" bodyfile="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" bodystart="22" bodyend="30"/>
+        <references refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" compoundref="_loader_8cs" startline="32" endline="43">SqlServerTypes.Utilities.LoadNativeAssembly</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SqlServerTypes.Utilities.LoadNativeAssembly</definition>
+        <argsstring>(string nativeBinaryPath, string assemblyName)</argsstring>
+        <name>LoadNativeAssembly</name>
+        <param>
+          <type>string</type>
+          <declname>nativeBinaryPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>assemblyName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" line="32" column="1" bodyfile="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" bodystart="32" bodyend="43"/>
+        <references refid="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367">SqlServerTypes.Utilities.LoadLibrary</references>
+        <referencedby refid="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" compoundref="_loader_8cs" startline="22" endline="30">SqlServerTypes.Utilities.LoadNativeAssemblies</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility methods related to CLR Types for SQL Server </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" line="11" column="1" bodyfile="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs" bodystart="10" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367" prot="private" virt="non-virtual"><scope>SqlServerTypes::Utilities</scope><name>LoadLibrary</name></member>
+      <member refid="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" prot="public" virt="non-virtual"><scope>SqlServerTypes::Utilities</scope><name>LoadNativeAssemblies</name></member>
+      <member refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" prot="private" virt="non-virtual"><scope>SqlServerTypes::Utilities</scope><name>LoadNativeAssembly</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

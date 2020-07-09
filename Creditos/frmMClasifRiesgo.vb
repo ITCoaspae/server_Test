@@ -79,11 +79,12 @@ Public Class frmMClasifRiesgo
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(23, 228)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(28, 263)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(651, 169)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(776, 162)
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 6
         '
         'GroupBox2
@@ -101,18 +102,18 @@ Public Class frmMClasifRiesgo
         Me.GroupBox2.Controls.Add(Me.optMonto)
         Me.GroupBox2.Controls.Add(Me.optCodAsoc)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(647, 114)
+        Me.GroupBox2.Size = New System.Drawing.Size(776, 131)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscar Préstamo por:"
         '
         'btnBuscar1
         '
-        Me.btnBuscar1.Location = New System.Drawing.Point(490, 56)
+        Me.btnBuscar1.Location = New System.Drawing.Point(588, 65)
         Me.btnBuscar1.Name = "btnBuscar1"
-        Me.btnBuscar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnBuscar1.Size = New System.Drawing.Size(90, 32)
         Me.btnBuscar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnBuscar1.TabIndex = 196
         Me.btnBuscar1.Text = "Buscar"
@@ -123,9 +124,9 @@ Public Class frmMClasifRiesgo
         'optTodos
         '
         Me.optTodos.BackColor = System.Drawing.Color.White
-        Me.optTodos.Location = New System.Drawing.Point(490, 24)
+        Me.optTodos.Location = New System.Drawing.Point(588, 28)
         Me.optTodos.Name = "optTodos"
-        Me.optTodos.Size = New System.Drawing.Size(72, 24)
+        Me.optTodos.Size = New System.Drawing.Size(86, 27)
         Me.optTodos.TabIndex = 19
         Me.optTodos.Text = "Todos"
         Me.optTodos.UseVisualStyleBackColor = False
@@ -133,25 +134,27 @@ Public Class frmMClasifRiesgo
         'C1NENumPagos
         '
         Me.C1NENumPagos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1NENumPagos.CalculatorButtonStyle = System.Windows.Forms.FlatStyle.Flat
+        '
+        '
+        '
+        Me.C1NENumPagos.Calculator.ButtonFlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.C1NENumPagos.CustomFormat = "##0"
         Me.C1NENumPagos.DataType = GetType(Short)
         Me.C1NENumPagos.Enabled = False
         Me.C1NENumPagos.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.C1NENumPagos.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.C1NENumPagos.Increment = CType(1, Short)
-        Me.C1NENumPagos.Location = New System.Drawing.Point(332, 56)
+        Me.C1NENumPagos.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.C1NENumPagos.Location = New System.Drawing.Point(398, 65)
         Me.C1NENumPagos.MaxLength = 3
         Me.C1NENumPagos.Name = "C1NENumPagos"
         Me.C1NENumPagos.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NENumPagos.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NENumPagos.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(CType(0, Long), Nothing, True, True)})
-        Me.C1NENumPagos.ShowDropDownButton = False
-        Me.C1NENumPagos.ShowUpDownButtons = False
-        Me.C1NENumPagos.Size = New System.Drawing.Size(152, 21)
+        Me.C1NENumPagos.Size = New System.Drawing.Size(183, 26)
         Me.C1NENumPagos.TabIndex = 18
         Me.C1NENumPagos.Tag = Nothing
         Me.C1NENumPagos.Value = CType(0, Short)
+        Me.C1NENumPagos.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1NEMonto
         '
@@ -160,69 +163,69 @@ Public Class frmMClasifRiesgo
         Me.C1NEMonto.Enabled = False
         Me.C1NEMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.C1NEMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.C1NEMonto.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.C1NEMonto.Increment = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.C1NEMonto.Location = New System.Drawing.Point(174, 55)
+        Me.C1NEMonto.Location = New System.Drawing.Point(209, 63)
         Me.C1NEMonto.Name = "C1NEMonto"
         Me.C1NEMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.C1NEMonto.ShowDropDownButton = False
-        Me.C1NEMonto.ShowUpDownButtons = False
-        Me.C1NEMonto.Size = New System.Drawing.Size(152, 21)
+        Me.C1NEMonto.Size = New System.Drawing.Size(182, 27)
         Me.C1NEMonto.TabIndex = 17
         Me.C1NEMonto.Tag = Nothing
+        Me.C1NEMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtalNoAsoc
         '
         Me.txtalNoAsoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtalNoAsoc.Enabled = False
-        Me.txtalNoAsoc.Location = New System.Drawing.Point(56, 80)
+        Me.txtalNoAsoc.Location = New System.Drawing.Point(67, 92)
         Me.txtalNoAsoc.Name = "txtalNoAsoc"
-        Me.txtalNoAsoc.Size = New System.Drawing.Size(112, 20)
+        Me.txtalNoAsoc.Size = New System.Drawing.Size(135, 22)
         Me.txtalNoAsoc.TabIndex = 16
         '
         'txtdelNoAsoc
         '
         Me.txtdelNoAsoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtdelNoAsoc.Enabled = False
-        Me.txtdelNoAsoc.Location = New System.Drawing.Point(56, 56)
+        Me.txtdelNoAsoc.Location = New System.Drawing.Point(67, 65)
         Me.txtdelNoAsoc.Name = "txtdelNoAsoc"
-        Me.txtdelNoAsoc.Size = New System.Drawing.Size(112, 20)
+        Me.txtdelNoAsoc.Size = New System.Drawing.Size(135, 22)
         Me.txtdelNoAsoc.TabIndex = 15
         '
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.SystemColors.Control
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(174, 82)
+        Me.btnBuscar.Location = New System.Drawing.Point(209, 95)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(112, 24)
+        Me.btnBuscar.Size = New System.Drawing.Size(134, 27)
         Me.btnBuscar.TabIndex = 14
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(24, 88)
+        Me.Label3.Location = New System.Drawing.Point(29, 102)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(32, 16)
+        Me.Label3.Size = New System.Drawing.Size(38, 18)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Al"
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(24, 56)
+        Me.Label4.Location = New System.Drawing.Point(29, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(32, 16)
+        Me.Label4.Size = New System.Drawing.Size(38, 18)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Del"
         '
         'optPlazo
         '
         Me.optPlazo.BackColor = System.Drawing.Color.White
-        Me.optPlazo.Location = New System.Drawing.Point(332, 24)
+        Me.optPlazo.Location = New System.Drawing.Point(398, 28)
         Me.optPlazo.Name = "optPlazo"
-        Me.optPlazo.Size = New System.Drawing.Size(152, 24)
+        Me.optPlazo.Size = New System.Drawing.Size(183, 27)
         Me.optPlazo.TabIndex = 3
         Me.optPlazo.Text = "Plazo"
         Me.optPlazo.UseVisualStyleBackColor = False
@@ -230,9 +233,9 @@ Public Class frmMClasifRiesgo
         'optMonto
         '
         Me.optMonto.BackColor = System.Drawing.Color.White
-        Me.optMonto.Location = New System.Drawing.Point(174, 24)
+        Me.optMonto.Location = New System.Drawing.Point(209, 28)
         Me.optMonto.Name = "optMonto"
-        Me.optMonto.Size = New System.Drawing.Size(152, 24)
+        Me.optMonto.Size = New System.Drawing.Size(182, 27)
         Me.optMonto.TabIndex = 2
         Me.optMonto.Text = "Monto Otorgado"
         Me.optMonto.UseVisualStyleBackColor = False
@@ -240,18 +243,18 @@ Public Class frmMClasifRiesgo
         'optCodAsoc
         '
         Me.optCodAsoc.BackColor = System.Drawing.Color.White
-        Me.optCodAsoc.Location = New System.Drawing.Point(16, 24)
+        Me.optCodAsoc.Location = New System.Drawing.Point(19, 28)
         Me.optCodAsoc.Name = "optCodAsoc"
-        Me.optCodAsoc.Size = New System.Drawing.Size(152, 24)
+        Me.optCodAsoc.Size = New System.Drawing.Size(183, 27)
         Me.optCodAsoc.TabIndex = 1
         Me.optCodAsoc.Text = "DUI de Asociado"
         Me.optCodAsoc.UseVisualStyleBackColor = False
         '
         'btnPartidaReserva1
         '
-        Me.btnPartidaReserva1.Location = New System.Drawing.Point(211, 194)
+        Me.btnPartidaReserva1.Location = New System.Drawing.Point(253, 224)
         Me.btnPartidaReserva1.Name = "btnPartidaReserva1"
-        Me.btnPartidaReserva1.Size = New System.Drawing.Size(125, 28)
+        Me.btnPartidaReserva1.Size = New System.Drawing.Size(150, 32)
         Me.btnPartidaReserva1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnPartidaReserva1.TabIndex = 197
         Me.btnPartidaReserva1.Text = "Partida Reserva"
@@ -261,9 +264,9 @@ Public Class frmMClasifRiesgo
         '
         'btnCalificaRiesgo1
         '
-        Me.btnCalificaRiesgo1.Location = New System.Drawing.Point(104, 194)
+        Me.btnCalificaRiesgo1.Location = New System.Drawing.Point(125, 224)
         Me.btnCalificaRiesgo1.Name = "btnCalificaRiesgo1"
-        Me.btnCalificaRiesgo1.Size = New System.Drawing.Size(101, 28)
+        Me.btnCalificaRiesgo1.Size = New System.Drawing.Size(121, 32)
         Me.btnCalificaRiesgo1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCalificaRiesgo1.TabIndex = 196
         Me.btnCalificaRiesgo1.Text = "Calificar Riesgo"
@@ -273,9 +276,9 @@ Public Class frmMClasifRiesgo
         '
         'btnDetalles1
         '
-        Me.btnDetalles1.Location = New System.Drawing.Point(23, 194)
+        Me.btnDetalles1.Location = New System.Drawing.Point(28, 224)
         Me.btnDetalles1.Name = "btnDetalles1"
-        Me.btnDetalles1.Size = New System.Drawing.Size(75, 28)
+        Me.btnDetalles1.Size = New System.Drawing.Size(90, 32)
         Me.btnDetalles1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnDetalles1.TabIndex = 195
         Me.btnDetalles1.Text = "Detalle"
@@ -285,9 +288,9 @@ Public Class frmMClasifRiesgo
         '
         'frmMClasifRiesgo
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(697, 420)
+        Me.ClientSize = New System.Drawing.Size(831, 491)
         Me.Controls.Add(Me.btnPartidaReserva1)
         Me.Controls.Add(Me.btnCalificaRiesgo1)
         Me.Controls.Add(Me.btnDetalles1)
@@ -326,7 +329,7 @@ Public Class frmMClasifRiesgo
             C1fgrdPrestamos.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
             C1fgrdPrestamos.DataSource = dsPrest.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -359,7 +362,7 @@ Public Class frmMClasifRiesgo
             C1fgrdPrestamos.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
             C1fgrdPrestamos.DataSource = dsPrest.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -403,7 +406,7 @@ Public Class frmMClasifRiesgo
             ofrm.IdPrestamo = Me.IdPrestamo.Trim
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -420,7 +423,7 @@ Public Class frmMClasifRiesgo
                 MessageBox.Show("Proceso no se realizó con éxito", "SIF_ERP", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -432,7 +435,7 @@ Public Class frmMClasifRiesgo
         Dim pFecha As Date
         Try
 
-            'ofrm.Tipo = AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo.ReservaRiesgo
+            'ofrm.Tipo = Contabilidad.clsPartida.TipoPartidaModulo.ReservaRiesgo
             ofrm.txtConcepto.Text = "Aplicación de Política de Riesgos"
             ofrm.txtDescripcion.Text = "Aplicación de Política de Riesgos"
             dsDetP = oLib.ObtenerPartidaVacia(sUsuario, sPassword, sSucursal)
@@ -456,7 +459,7 @@ Public Class frmMClasifRiesgo
             'NoPartida = ofrm.txtNumero.Text
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

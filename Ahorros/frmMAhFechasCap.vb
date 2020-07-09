@@ -68,11 +68,12 @@ Public Class frmMAhFechasCap
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(25, 193)
+        Me.fg.Location = New System.Drawing.Point(30, 223)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(512, 166)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(624, 174)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 44
         '
         'GroupBox2
@@ -85,9 +86,9 @@ Public Class frmMAhFechasCap
         Me.GroupBox2.Controls.Add(Me.rbDescripcion)
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(514, 90)
+        Me.GroupBox2.Size = New System.Drawing.Size(616, 104)
         Me.GroupBox2.TabIndex = 42
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Fechas Capitalización por:"
@@ -96,18 +97,18 @@ Public Class frmMAhFechasCap
         '
         Me.cbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMes.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.cbMes.Location = New System.Drawing.Point(174, 55)
+        Me.cbMes.Location = New System.Drawing.Point(209, 63)
         Me.cbMes.Name = "cbMes"
-        Me.cbMes.Size = New System.Drawing.Size(137, 21)
+        Me.cbMes.Size = New System.Drawing.Size(164, 24)
         Me.cbMes.TabIndex = 136
         '
         'rbTodos
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(319, 24)
+        Me.rbTodos.Location = New System.Drawing.Point(383, 28)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(182, 27)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -116,17 +117,17 @@ Public Class frmMAhFechasCap
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodigo.Location = New System.Drawing.Point(19, 65)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(183, 22)
         Me.txtCodigo.TabIndex = 1
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(319, 48)
+        Me.btnMostrar1.Location = New System.Drawing.Point(383, 55)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 181
         Me.btnMostrar1.Text = "Mostrar"
         Me.btnMostrar1.UseSelectable = True
@@ -135,9 +136,9 @@ Public Class frmMAhFechasCap
         'rbDescripcion
         '
         Me.rbDescripcion.BackColor = System.Drawing.Color.White
-        Me.rbDescripcion.Location = New System.Drawing.Point(174, 24)
+        Me.rbDescripcion.Location = New System.Drawing.Point(209, 28)
         Me.rbDescripcion.Name = "rbDescripcion"
-        Me.rbDescripcion.Size = New System.Drawing.Size(134, 24)
+        Me.rbDescripcion.Size = New System.Drawing.Size(161, 27)
         Me.rbDescripcion.TabIndex = 2
         Me.rbDescripcion.Text = "&Fecha"
         Me.rbDescripcion.UseVisualStyleBackColor = False
@@ -145,19 +146,19 @@ Public Class frmMAhFechasCap
         'rbCodigo
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
-        Me.rbCodigo.Location = New System.Drawing.Point(16, 24)
+        Me.rbCodigo.Location = New System.Drawing.Point(19, 28)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(183, 27)
         Me.rbCodigo.TabIndex = 0
         Me.rbCodigo.Text = "&Código Tipo de Ahorro"
         Me.rbCodigo.UseVisualStyleBackColor = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 159)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 183)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 182
         Me.btnConsultar1.Text = "Consultar"
         Me.btnConsultar1.UseSelectable = True
@@ -165,10 +166,10 @@ Public Class frmMAhFechasCap
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 159)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 183)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 180
         Me.btnModificar1.Text = "Modificar"
         Me.btnModificar1.UseSelectable = True
@@ -176,10 +177,10 @@ Public Class frmMAhFechasCap
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 159)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 183)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 179
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.UseSelectable = True
@@ -187,10 +188,10 @@ Public Class frmMAhFechasCap
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 159)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 183)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 183
         Me.btnEliminar1.Text = "Eliminar"
         Me.btnEliminar1.UseSelectable = True
@@ -198,9 +199,9 @@ Public Class frmMAhFechasCap
         '
         'frmMAhFechasCap
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(564, 409)
+        Me.ClientSize = New System.Drawing.Size(687, 455)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -208,7 +209,7 @@ Public Class frmMAhFechasCap
         Me.Controls.Add(Me.fg)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "frmMAhFechasCap"
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Fechas Capitalización"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
@@ -241,7 +242,7 @@ Public Class frmMAhFechasCap
             ds = oAh.ConsultarFechasCapitalizacionTipo("a.Correlativo,a.CodTipoAhorro,b.Descripcion,a.Fecha", "", "a.CodTipoAhorro,a.Correlativo", sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
         Encabezado()
     End Sub
@@ -298,7 +299,7 @@ Public Class frmMAhFechasCap
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -310,7 +311,7 @@ Public Class frmMAhFechasCap
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -327,7 +328,7 @@ Public Class frmMAhFechasCap
                 txtCodigo.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -342,7 +343,7 @@ Public Class frmMAhFechasCap
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -361,7 +362,13 @@ Public Class frmMAhFechasCap
                 txtCodigo.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMAhFechasCap_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

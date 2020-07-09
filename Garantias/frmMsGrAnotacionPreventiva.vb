@@ -963,7 +963,6 @@ Public Class frmMsGrAnotacionPreventiva
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(811, 583)
-        Me.ControlBox = False
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.btnSig1)
         Me.Controls.Add(Me.btAtras1)
@@ -1257,13 +1256,13 @@ Public Class frmMsGrAnotacionPreventiva
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btNewInmueble1_Click(sender As Object, e As EventArgs) Handles btNewInmueble1.Click
         Dim ofrm As New fmMsGrDuenosInmueble
-        ofrm.NoDoc = Me.pNoDoc
+        ofrm.NoDoc = Me.vNOCOMPROBANTE
         ofrm.Tipo = "A"
         ofrm.Accion = "Guardar"
         ofrm.ShowDialog()
@@ -1292,7 +1291,7 @@ Public Class frmMsGrAnotacionPreventiva
             If MessageBox.Show("¿Está seguro que desea eliminar el registro?", "Bien Inmueble", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 Dim oCred As New wrCredito.wsLibCred
                 oCred.EliminarDuenosInmueble(Me.fgInmueble.Item(Me.fgInmueble.Row, "Correlativo"), sUsuario, sPassword, sSucursal)
-                Me.fgInmueble.DataSource = oCred.CONSULTARDUENOSINMUEBLE(sUsuario, sPassword, sSucursal, 1, Me.pNoDoc, 0).Tables(0)
+                Me.fgInmueble.DataSource = oCred.CONSULTARDUENOSINMUEBLE(sUsuario, sPassword, sSucursal, 1, Me.vNOCOMPROBANTE, 0).Tables(0)
                 'Me.fgInmueble.DataSource = oCred.ConsultarDuenosInmueble("Correlativo,Nombre,Porcentaje,Asociado", "NoComprobante='" & Me.pNoDoc & "'", "Correlativo", sUsuario, sPassword, sSucursal).Tables(0)
                 fgInmueble.Cols.Item(0).Width = 0
             End If
@@ -1339,7 +1338,7 @@ Public Class frmMsGrAnotacionPreventiva
 
     Private Sub MetroButton6_Click(sender As Object, e As EventArgs) Handles MetroButton6.Click
         Dim ofrm As New fmMsGrRestricciones
-        ofrm.NoDoc = Me.pNoDoc
+        ofrm.NoDoc = Me.vNOCOMPROBANTE
         ofrm.Tipo = "A"
         ofrm.Accion = "Guardar"
         ofrm.ShowDialog()
@@ -1353,7 +1352,7 @@ Public Class frmMsGrAnotacionPreventiva
             If MessageBox.Show("¿Está seguro que desea eliminar el registro?", "Restricciones", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 Dim oCred As New wrCredito.wsLibCred
                 oCred.EliminarRestricciones(Me.fgRestriccion.Item(Me.fgRestriccion.Row, "Correlativo"), sUsuario, sPassword, sSucursal)
-                Me.fgRestriccion.DataSource = oCred.CONSULTARRESTRICCIONES("Correlativo,NoComprobante,Descripcion,FechaIni,FechaFin", "NoComprobante='" & Me.pNoDoc & "'", "Correlativo", sUsuario, sPassword, sSucursal).Tables(0)
+                Me.fgRestriccion.DataSource = oCred.CONSULTARRESTRICCIONES("Correlativo,NoComprobante,Descripcion,FechaIni,FechaFin", "NoComprobante='" & Me.vNOCOMPROBANTE & "'", "Correlativo", sUsuario, sPassword, sSucursal).Tables(0)
                 Me.fgRestriccion.Cols.Item(0).Width = 0
             End If
         End If

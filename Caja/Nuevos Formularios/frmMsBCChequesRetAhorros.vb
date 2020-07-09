@@ -47,7 +47,7 @@ Public Class frmMsBCChequesRetAhorros
 
         DtsAhorros = Ahorros.ConsultarCtasAhorroDUI("distinct a.Nocuenta,a.SaldoDisponible_CuentaAhorro,b.Descripcion," &
 "a.NoLibreta,a.TasaInteres,a.Saldo_CuentaAhorro, a.codtipoahorro",
-"a.dui='" & Dui & "' and a.Estado = 'A' and left(a.codtipoahorro,1)not in('2','1','4') ",
+"a.dui='" & Dui & "' and a.Estado = 'A' and left(a.codtipoahorro,1)not in('6','1','4') ",
 "", sUsuario, sPassword, sSucursal)
         If DtsAhorros.Tables.Count > 0 Then
             If DtsAhorros.Tables(0).Rows.Count > 0 Then
@@ -355,7 +355,7 @@ RTrim(dts.Tables(0).Rows(0).Item("apellidocas"))
             End With
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -385,7 +385,7 @@ RTrim(dts.Tables(0).Rows(0).Item("apellidocas"))
             generarComprobante()
             Limpiar()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -490,7 +490,7 @@ CentroCostoSucursal)
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -546,7 +546,7 @@ TipoCuenta, MontoLetras, True, Me.txtPagueseA.Text.Trim, sUsuario, pNocaja, Sucu
             End With
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -626,5 +626,11 @@ TipoCuenta, MontoLetras, True, Me.txtPagueseA.Text.Trim, sUsuario, pNocaja, Sucu
 
         End Try
 
+    End Sub
+
+    Private Sub frmMsBCChequesRetAhorros_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

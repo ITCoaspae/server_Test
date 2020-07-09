@@ -67,9 +67,9 @@ Public Class frmMsReporteDUI
         '
         'chkDPF
         '
-        Me.chkDPF.Location = New System.Drawing.Point(432, 8)
+        Me.chkDPF.Location = New System.Drawing.Point(518, 9)
         Me.chkDPF.Name = "chkDPF"
-        Me.chkDPF.Size = New System.Drawing.Size(104, 16)
+        Me.chkDPF.Size = New System.Drawing.Size(125, 19)
         Me.chkDPF.TabIndex = 176
         Me.chkDPF.Text = "Visualizar &DPF"
         Me.chkDPF.Visible = False
@@ -77,10 +77,10 @@ Public Class frmMsReporteDUI
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 32)
+        Me.txtDui.Location = New System.Drawing.Point(19, 37)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
@@ -89,17 +89,17 @@ Public Class frmMsReporteDUI
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombre.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNombre.Location = New System.Drawing.Point(256, 32)
+        Me.txtNombre.Location = New System.Drawing.Point(307, 37)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(272, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(327, 23)
         Me.txtNombre.TabIndex = 171
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(256, 16)
+        Me.Label4.Location = New System.Drawing.Point(307, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(112, 16)
+        Me.Label4.Size = New System.Drawing.Size(135, 19)
         Me.Label4.TabIndex = 170
         Me.Label4.Text = "Nombres Asociado:"
         '
@@ -108,33 +108,33 @@ Public Class frmMsReporteDUI
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(152, 32)
+        Me.txtNoSocio.Location = New System.Drawing.Point(182, 37)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSocio.TabIndex = 169
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(152, 16)
+        Me.Label3.Location = New System.Drawing.Point(182, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 16)
+        Me.Label3.Size = New System.Drawing.Size(96, 19)
         Me.Label3.TabIndex = 168
         Me.Label3.Text = "No. Asociado:"
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(16, 16)
+        Me.Label2.Location = New System.Drawing.Point(19, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 167
         Me.Label2.Text = "DUI Asociado:"
         '
         'lblNoCuenta
         '
-        Me.lblNoCuenta.Location = New System.Drawing.Point(16, 64)
+        Me.lblNoCuenta.Location = New System.Drawing.Point(19, 74)
         Me.lblNoCuenta.Name = "lblNoCuenta"
-        Me.lblNoCuenta.Size = New System.Drawing.Size(76, 16)
+        Me.lblNoCuenta.Size = New System.Drawing.Size(91, 18)
         Me.lblNoCuenta.TabIndex = 173
         Me.lblNoCuenta.Text = "No Cuenta:"
         Me.lblNoCuenta.Visible = False
@@ -143,26 +143,26 @@ Public Class frmMsReporteDUI
         '
         Me.txtNoCuenta.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.txtNoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNoCuenta.Location = New System.Drawing.Point(96, 64)
+        Me.txtNoCuenta.Location = New System.Drawing.Point(115, 74)
         Me.txtNoCuenta.Name = "txtNoCuenta"
-        Me.txtNoCuenta.Size = New System.Drawing.Size(173, 20)
+        Me.txtNoCuenta.Size = New System.Drawing.Size(208, 22)
         Me.txtNoCuenta.TabIndex = 1
         Me.txtNoCuenta.Visible = False
         '
         'lblA
         '
-        Me.lblA.Location = New System.Drawing.Point(16, 64)
+        Me.lblA.Location = New System.Drawing.Point(19, 74)
         Me.lblA.Name = "lblA"
-        Me.lblA.Size = New System.Drawing.Size(76, 16)
+        Me.lblA.Size = New System.Drawing.Size(91, 18)
         Me.lblA.TabIndex = 174
         Me.lblA.Text = "Otros Abonos:"
         Me.lblA.Visible = False
         '
         'lblC
         '
-        Me.lblC.Location = New System.Drawing.Point(240, 64)
+        Me.lblC.Location = New System.Drawing.Point(288, 74)
         Me.lblC.Name = "lblC"
-        Me.lblC.Size = New System.Drawing.Size(76, 16)
+        Me.lblC.Size = New System.Drawing.Size(91, 18)
         Me.lblC.TabIndex = 175
         Me.lblC.Text = "Otros Cargos:"
         Me.lblC.Visible = False
@@ -183,9 +183,9 @@ Public Class frmMsReporteDUI
         Me.GroupBox1.Controls.Add(Me.txtNoSocio)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(544, 61)
+        Me.GroupBox1.Size = New System.Drawing.Size(652, 70)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -195,18 +195,17 @@ Public Class frmMsReporteDUI
         Me.c1nCargos.CustomFormat = "###,###,##0.00"
         Me.c1nCargos.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nCargos.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nCargos.Increment = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.c1nCargos.Location = New System.Drawing.Point(328, 64)
+        Me.c1nCargos.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nCargos.Location = New System.Drawing.Point(394, 74)
         Me.c1nCargos.Name = "c1nCargos"
         Me.c1nCargos.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nCargos.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nCargos.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nCargos.ShowDropDownButton = False
-        Me.c1nCargos.ShowUpDownButtons = False
-        Me.c1nCargos.Size = New System.Drawing.Size(96, 21)
+        Me.c1nCargos.Size = New System.Drawing.Size(115, 26)
         Me.c1nCargos.TabIndex = 3
         Me.c1nCargos.Tag = Nothing
         Me.c1nCargos.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nCargos.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'c1nAbonos
         '
@@ -214,24 +213,23 @@ Public Class frmMsReporteDUI
         Me.c1nAbonos.CustomFormat = "###,###,##0.00"
         Me.c1nAbonos.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nAbonos.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nAbonos.Increment = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.c1nAbonos.Location = New System.Drawing.Point(96, 64)
+        Me.c1nAbonos.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nAbonos.Location = New System.Drawing.Point(115, 74)
         Me.c1nAbonos.Name = "c1nAbonos"
         Me.c1nAbonos.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nAbonos.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nAbonos.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nAbonos.ShowDropDownButton = False
-        Me.c1nAbonos.ShowUpDownButtons = False
-        Me.c1nAbonos.Size = New System.Drawing.Size(96, 21)
+        Me.c1nAbonos.Size = New System.Drawing.Size(115, 26)
         Me.c1nAbonos.TabIndex = 2
         Me.c1nAbonos.Tag = Nothing
         Me.c1nAbonos.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nAbonos.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(492, 130)
+        Me.btnProcesar1.Location = New System.Drawing.Point(590, 150)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(90, 32)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 1022
         Me.btnProcesar1.Text = "Mostrar"
@@ -241,8 +239,8 @@ Public Class frmMsReporteDUI
         '
         'frmMsReporteDUI
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(621, 171)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(697, 245)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
@@ -428,7 +426,7 @@ Public Class frmMsReporteDUI
                     ofrm.ShowDialog()
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

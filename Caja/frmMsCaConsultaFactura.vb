@@ -13,7 +13,7 @@ Public Class frmMsCaConsultaFactura
         MyBase.New()
 
         'El Diseñador de Windows Forms requiere esta llamada.
-        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("LogoCoopasICO.ico"), System.Drawing.Icon)
+        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("logo.ico"), System.Drawing.Icon)
 
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
 
@@ -330,7 +330,7 @@ Public Class frmMsCaConsultaFactura
         Me.txtTotalFactura.CustomFormat = "#0.00"
         Me.txtTotalFactura.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalFactura.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.txtTotalFactura.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.txtTotalFactura.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.txtTotalFactura.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.txtTotalFactura.Location = New System.Drawing.Point(620, 480)
         Me.txtTotalFactura.Name = "txtTotalFactura"
@@ -360,6 +360,7 @@ Public Class frmMsCaConsultaFactura
         Me.C1fgrdDetalle.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdDetalle.BackColor = System.Drawing.Color.White
         Me.C1fgrdDetalle.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.C1fgrdDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.C1fgrdDetalle.Location = New System.Drawing.Point(28, 310)
         Me.C1fgrdDetalle.Name = "C1fgrdDetalle"
         Me.C1fgrdDetalle.Rows.Count = 3
@@ -421,7 +422,7 @@ Public Class frmMsCaConsultaFactura
     End Sub
 
 #End Region
-    'Private pIdMovimiento As String, pAnnio As Integer, pTipo As String, pNoCaja As String, pCodCajero As String, pNoCuenta As String, vTipoDoc As String, vTipo As AlcalaLibs.Caja.clsCAFactura.TipoMovimiento, pConsolidada As Boolean
+    'Private pIdMovimiento As String, pAnnio As Integer, pTipo As String, pNoCaja As String, pCodCajero As String, pNoCuenta As String, vTipoDoc As String, vTipo As Caja.clsCAFactura.TipoMovimiento, pConsolidada As Boolean
     Private pIdMovimiento As String, pAnnio As Integer, pTipo As String, pNoCaja As String, pCodCajero As String, pNoCuenta As String, vTipoDoc As String, vTipo As sifLib.Caja.clsCAFacturas.TipoMovimiento, pConsolidada As Boolean
     Private pCodSucursal As String
 #Region "Propiedades"
@@ -486,48 +487,48 @@ Public Class frmMsCaConsultaFactura
         'If ofrmAut.Autoriza = True Then
         Try
             'Comprobante de Retiro y Depósito
-            'If Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
+            'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
             If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "' ", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosAhorro("*", Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 17, 0)
                 ofrm.Show()
                 'Factura de Consumidor Final para Aportaciones
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" And pConsolidada = False Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" And pConsolidada = False Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro And vTipoDoc = "F" And pConsolidada = False Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "'", "Impreso='S' ", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosAhorro("*", Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 23, 0)
                 ofrm.Show()
-                'ElseIf (Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" And pConsolidada = False Then
+                'ElseIf (Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" And pConsolidada = False Then
             ElseIf (Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" And pConsolidada = False Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosAhorro("*", Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 23, 0)
                 ofrm.Show()
                 'Factura de Consumidor Final para Abonos a Préstamos
-                'ElseIf (Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Cobranza) And vTipoDoc = "F" Then
+                'ElseIf (Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Cobranza) And vTipoDoc = "F" Then
             ElseIf (Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Cobranza) And vTipoDoc = "F" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "' ", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosPrestamo(Me.pNoCuenta, Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 13, 0)
                 ofrm.Show()
                 'Crédito Fiscal para Abonos a Préstamos
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo And vTipoDoc = "C" Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo And vTipoDoc = "C" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo And vTipoDoc = "C" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "'", "Impreso='S' ", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosPrestamo(Me.pNoCuenta, Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 24, 0)
                 ofrm.Show()
                 'Crédito Fiscal para Aportaciones
-                'ElseIf Me.vTipo = (AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
+                'ElseIf Me.vTipo = (Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
             ElseIf Me.vTipo = (sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 ds = oItems.ConsultarDatosAhorro("*", Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, pCodSucursal)
                 Dim ofrm As New frmVisor(ds, 26, 0)
                 ofrm.Show()
                 'Dividendos
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos Then
                 Dim oAsociado As New wrAsociados.wsLibAsoc
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "' and codSucursal = '" & pCodSucursal & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
@@ -704,7 +705,7 @@ Public Class frmMsCaConsultaFactura
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -798,7 +799,7 @@ Public Class frmMsCaConsultaFactura
                 ofrmAut.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -863,28 +864,28 @@ Public Class frmMsCaConsultaFactura
             Me.txtTipoMov.Text = drI("IdRubro")
             Select Case Me.txtTipoMov.Text.Trim
                 Case "2"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo
                 Case "5"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.IngresoAsociados
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.IngresoAsociados
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados
                 Case "3"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro
                 Case "1"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion
                 Case "4"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF
                 Case "6"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos
                 Case "7"
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Cobranza
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Cobranza
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Cobranza
                 Case Else
-                    'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico
+                    'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico
                     Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico
             End Select
             ds = oCaja.ObtenerListaRubros("Descripcion", "IdRubro='" & Me.txtTipoMov.Text.Trim & "'", sUsuario, sPassword, sSucursal)
@@ -895,26 +896,29 @@ Public Class frmMsCaConsultaFactura
             Me.dtpFecha.Value = dr("Fec_Mov")
             Me.txtDui.Value = dr("Dui")
             Me.txtAsociado.Text = Trim(drA("Nombres")) & " " & drA("Apellido1") & " " & drA("Apellido2") & " " & drA("ApellidoCas")
-            Select Case Convert.ToString(dr("Tipo"))
-                Case "F" 'Factura
-                    Me.vTipoDoc = "F"
-                    Me.cbTipoDoc.SelectedIndex = 0
-                Case "C" 'Crédito Fiscal
-                    Me.cbTipoDoc.SelectedIndex = 1
-                    Me.vTipoDoc = "C"
-                Case "R" 'Comprobante Retiro
-                    Me.vTipoDoc = "R"
-                    Me.cbTipoDoc.SelectedIndex = 2
-                Case "D" 'Comprobante Depósito
-                    Me.vTipoDoc = "D"
-                    Me.cbTipoDoc.SelectedIndex = 3
-                Case "P" 'Comprobante de Pago Excedente o Recibo
-                    Me.vTipoDoc = "P"
-                    Me.cbTipoDoc.SelectedIndex = 4
-                Case "H" 'Comprobante de Cambio de Cheque
-                    Me.vTipoDoc = "H"
-                    Me.cbTipoDoc.SelectedIndex = 5
-            End Select
+            llenarTipoDocumentos()
+            cbTipoDoc.SelectedValue = dr("tipo").ToString.Trim
+            vTipoDoc = dr("tipo").ToString.Trim
+            'Select Case Convert.ToString(dr("Tipo"))
+            '    Case "F" 'Factura
+            '        Me.vTipoDoc = "F"
+            '        Me.cbTipoDoc.SelectedIndex = 0
+            '    Case "C" 'Crédito Fiscal
+            '        Me.cbTipoDoc.SelectedIndex = 1
+            '        Me.vTipoDoc = "C"
+            '    Case "R" 'Comprobante Retiro
+            '        Me.vTipoDoc = "R"
+            '        Me.cbTipoDoc.SelectedIndex = 2
+            '    Case "D" 'Comprobante Depósito
+            '        Me.vTipoDoc = "D"
+            '        Me.cbTipoDoc.SelectedIndex = 3
+            '    Case "P" 'Comprobante de Pago Excedente o Recibo
+            '        Me.vTipoDoc = "P"
+            '        Me.cbTipoDoc.SelectedIndex = 4
+            '    Case "H" 'Comprobante de Cambio de Cheque
+            '        Me.vTipoDoc = "H"
+            '        Me.cbTipoDoc.SelectedIndex = 5
+            'End Select
             Me.cbTipoTrans.SelectedIndex = dr("TipoTransaccion")
             Me.cmbFormaPago.SelectedIndex = dr("FormaPago")
             Me.txtTotalFactura.Enabled = True
@@ -925,6 +929,15 @@ Public Class frmMsCaConsultaFactura
             Me.dtpFecha.Enabled = False
         End If
 
+    End Sub
+    Protected Sub llenarTipoDocumentos()
+        Dim dts As New DataSet
+        dts = caja.consultarCaMaestrosTipoDocumentos(1, True, 0)
+        If dts.Tables.Count > 0 Then
+            cbTipoDoc.ValueMember = "Abrev"
+            cbTipoDoc.DisplayMember = "tipoDocumento"
+            cbTipoDoc.DataSource = dts.Tables(0)
+        End If
     End Sub
     Protected Function GenerarComprobanteRetiro(ByVal dsValores As DataSet,
                                                    ByVal Asociado As String,

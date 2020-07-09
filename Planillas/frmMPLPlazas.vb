@@ -25,9 +25,9 @@ Public Class frmMPLPlazas
         MyBase.New()
 
         'El Diseñador de Windows Forms requiere esta llamada.
-        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("LogoCoopasICO.ico"), System.Drawing.Icon)
+        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("logo.ico"), System.Drawing.Icon)
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("LogoCoopasICO.ico"), System.Drawing.Icon)
+        'Agregar cualquier inicialización después de la llamada a InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("logo.ico"), System.Drawing.Icon)
 
     End Sub
 
@@ -512,7 +512,7 @@ Public Class frmMPLPlazas
             End If
             ActualizaGrid(Filtro)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -524,7 +524,7 @@ Public Class frmMPLPlazas
             ofrm.ShowDialog()
             ActualizaGrid(" Pl.ESTATUS='A'")
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -581,7 +581,7 @@ Public Class frmMPLPlazas
                 ActualizaGrid(" Pl.ESTATUS='A'")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -597,14 +597,14 @@ Public Class frmMPLPlazas
             Me.btnMostrar1.Focus()
             ActualizaGrid(" Pl.ESTATUS='A'")
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnImp_Click(sender As Object, e As EventArgs) Handles btnImp.Click
         Try
             Dim ofrm As New frmMSPLPlazas
-            'Dim oPlan As wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS = New wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS
+
             Dim ds As New Data.DataSet
             Dim dr As DataRow
             Dim Estatus As Boolean
@@ -646,7 +646,7 @@ Public Class frmMPLPlazas
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

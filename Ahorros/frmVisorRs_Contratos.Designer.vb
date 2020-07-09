@@ -31,11 +31,13 @@ Partial Class frmVisorRs_Contratos
         '
         Me.rsVisor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rsVisor.Location = New System.Drawing.Point(0, 0)
+        Me.rsVisor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rsVisor.Name = "rsVisor"
         Me.rsVisor.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
+        Me.rsVisor.ServerReport.BearerToken = Nothing
         Me.rsVisor.ServerReport.ReportPath = "/RS_SIF_ERP/"
-        Me.rsVisor.ServerReport.ReportServerUrl = New System.Uri("http://Coopas3/reportserver", System.UriKind.Absolute)
-        Me.rsVisor.Size = New System.Drawing.Size(516, 240)
+        Me.rsVisor.ServerReport.ReportServerUrl = New System.Uri("http://192.168.1.3/reportserver", System.UriKind.Absolute)
+        Me.rsVisor.Size = New System.Drawing.Size(872, 543)
         Me.rsVisor.TabIndex = 4
         '
         'Panel2
@@ -44,20 +46,23 @@ Partial Class frmVisorRs_Contratos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.Controls.Add(Me.rsVisor)
-        Me.Panel2.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 33)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(516, 240)
+        Me.Panel2.Size = New System.Drawing.Size(872, 543)
         Me.Panel2.TabIndex = 5
         '
         'frmVisorRs_Contratos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(511, 262)
+        Me.ClientSize = New System.Drawing.Size(865, 570)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmVisorRs_Contratos"
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 

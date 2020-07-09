@@ -38,10 +38,10 @@ Public Class frmMsActivaAportacion
         'txtNoActa
         '
         Me.txtNoActa.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoActa.Location = New System.Drawing.Point(129, 60)
+        Me.txtNoActa.Location = New System.Drawing.Point(155, 69)
         Me.txtNoActa.MaxLength = 20
         Me.txtNoActa.Name = "txtNoActa"
-        Me.txtNoActa.Size = New System.Drawing.Size(128, 20)
+        Me.txtNoActa.Size = New System.Drawing.Size(153, 23)
         Me.txtNoActa.TabIndex = 0
         '
         'Label12
@@ -49,17 +49,17 @@ Public Class frmMsActivaAportacion
         Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(23, 60)
+        Me.Label12.Location = New System.Drawing.Point(28, 69)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(100, 16)
+        Me.Label12.Size = New System.Drawing.Size(120, 19)
         Me.Label12.TabIndex = 121
         Me.Label12.Text = "Número de Acta:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(23, 93)
+        Me.btnGuardar1.Location = New System.Drawing.Point(28, 107)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 33)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 122
         Me.btnGuardar1.Text = "Guardar"
@@ -68,8 +68,8 @@ Public Class frmMsActivaAportacion
         '
         'frmMsActivaAportacion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(391, 144)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(493, 218)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.txtNoActa)
         Me.Controls.Add(Me.Label12)
@@ -78,6 +78,7 @@ Public Class frmMsActivaAportacion
         Me.Name = "frmMsActivaAportacion"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Activación Cuenta de Aportación"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -98,5 +99,11 @@ Public Class frmMsActivaAportacion
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub frmMsActivaAportacion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

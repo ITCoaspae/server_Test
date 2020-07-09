@@ -416,7 +416,7 @@ Public Class frmRepPRDetallePrestamo
                 Me.txtAsociado.Text = Trim(dr("Nombres")) & ", " & dr("Apellido1") & " " & dr("Apellido2") & " " & dr("ApellidoCas")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -442,7 +442,7 @@ Public Class frmRepPRDetallePrestamo
                 vNumSol = IIf(IsDBNull(dr("NumSolicitud")), 0, dr("NumSolicitud"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -473,7 +473,7 @@ Public Class frmRepPRDetallePrestamo
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -512,7 +512,7 @@ Public Class frmRepPRDetallePrestamo
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -547,12 +547,12 @@ Public Class frmRepPRDetallePrestamo
                     Me.Cursor = Cursors.WaitCursor
                     Dim ofrm As New frmVisorRep
 
-                    'ofrm.ReportePrestamos = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.DetallePrestamo
+                    'ofrm.ReportePrestamos = Prestamos.clsPrestamos.ReportesPrestamos.DetallePrestamo
                     ofrm.ReportePrestamos = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.DetallePrestamo
                     ofrm.NumSolicitud = vNumSol
                     ofrm.CodigoPrestamo = Me.txtCodPrestamo.Text
                     ofrm.DuiAsociado = Me.txtDui.Text
-                    ofrm.MdiParent = ofrmMain
+                    
                     ofrm.x = Me.cbCARGO.SelectedIndex
                     ofrm.Show()
                     Me.Cursor = Cursors.Default
@@ -571,7 +571,7 @@ Public Class frmRepPRDetallePrestamo
 
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

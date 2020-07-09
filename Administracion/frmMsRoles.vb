@@ -42,12 +42,12 @@ Public Class frmMsRoles
         'txtDescripcion
         '
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescripcion.Location = New System.Drawing.Point(109, 86)
+        Me.txtDescripcion.Location = New System.Drawing.Point(131, 99)
         Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDescripcion.Size = New System.Drawing.Size(320, 40)
+        Me.txtDescripcion.Size = New System.Drawing.Size(384, 46)
         Me.txtDescripcion.TabIndex = 1
         '
         'Label5
@@ -56,34 +56,34 @@ Public Class frmMsRoles
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(23, 100)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 16)
+        Me.Label5.Size = New System.Drawing.Size(96, 19)
         Me.Label5.TabIndex = 115
         Me.Label5.Text = "Descripción:"
         '
         'txtCodRol
         '
         Me.txtCodRol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodRol.Location = New System.Drawing.Point(109, 56)
+        Me.txtCodRol.Location = New System.Drawing.Point(131, 65)
         Me.txtCodRol.MaxLength = 8
         Me.txtCodRol.Name = "txtCodRol"
-        Me.txtCodRol.Size = New System.Drawing.Size(88, 20)
+        Me.txtCodRol.Size = New System.Drawing.Size(105, 22)
         Me.txtCodRol.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(23, 60)
+        Me.Label2.Location = New System.Drawing.Point(28, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(67, 19)
         Me.Label2.TabIndex = 113
         Me.Label2.Text = "Rol:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(354, 132)
+        Me.btnGuardar1.Location = New System.Drawing.Point(425, 151)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 33)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 1009
         Me.btnGuardar1.Text = "&Guardar"
@@ -92,18 +92,18 @@ Public Class frmMsRoles
         '
         'frmMsRoles
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(454, 194)
+        Me.ClientSize = New System.Drawing.Size(545, 224)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtCodRol)
         Me.Controls.Add(Me.Label2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(454, 194)
+        Me.MaximumSize = New System.Drawing.Size(545, 224)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(454, 194)
+        Me.MinimumSize = New System.Drawing.Size(545, 224)
         Me.Name = "frmMsRoles"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
@@ -138,8 +138,14 @@ Public Class frmMsRoles
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMsRoles_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 
 #End Region

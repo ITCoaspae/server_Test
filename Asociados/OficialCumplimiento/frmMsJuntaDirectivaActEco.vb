@@ -61,4 +61,10 @@
     Private Sub btnCerrar_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
+
+    Private Sub frmMsJuntaDirectivaActEco_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

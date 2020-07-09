@@ -106,9 +106,9 @@ Public Class frmMCaTransferenciaContable
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(119, 434)
+        Me.btnEliminar1.Location = New System.Drawing.Point(99, 376)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnEliminar1.Size = New System.Drawing.Size(75, 29)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 25
         Me.btnEliminar1.Text = "Eliminar"
@@ -118,9 +118,9 @@ Public Class frmMCaTransferenciaContable
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 434)
+        Me.btnAgregar1.Location = New System.Drawing.Point(19, 376)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnAgregar1.Size = New System.Drawing.Size(75, 29)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 24
         Me.btnAgregar1.Text = "Agregar"
@@ -132,32 +132,32 @@ Public Class frmMCaTransferenciaContable
         '
         Me.txtTotal.BackColor = System.Drawing.Color.White
         Me.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTotal.Location = New System.Drawing.Point(421, 445)
+        Me.txtTotal.Location = New System.Drawing.Point(351, 386)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(221, 22)
+        Me.txtTotal.Size = New System.Drawing.Size(184, 20)
         Me.txtTotal.TabIndex = 26
         '
         'fg
         '
         Me.fg.AllowEditing = False
-        Me.fg.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "20,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fg.Location = New System.Drawing.Point(23, 479)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(19, 415)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Rows.DefaultSize = 22
-        Me.fg.Size = New System.Drawing.Size(619, 191)
+        Me.fg.Rows.DefaultSize = 19
+        Me.fg.Size = New System.Drawing.Size(516, 166)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 27
         '
         'chkMembresia
         '
-        Me.chkMembresia.Location = New System.Drawing.Point(23, 307)
+        Me.chkMembresia.Location = New System.Drawing.Point(19, 266)
         Me.chkMembresia.Name = "chkMembresia"
-        Me.chkMembresia.Size = New System.Drawing.Size(199, 25)
+        Me.chkMembresia.Size = New System.Drawing.Size(166, 22)
         Me.chkMembresia.TabIndex = 18
         Me.chkMembresia.Text = "&Membresía de Aspirantes"
         Me.chkMembresia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -166,10 +166,10 @@ Public Class frmMCaTransferenciaContable
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(140, 189)
+        Me.txtDui.Location = New System.Drawing.Point(117, 164)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(115, 20)
+        Me.txtDui.Size = New System.Drawing.Size(95, 18)
         Me.txtDui.TabIndex = 8
         Me.txtDui.Tag = Nothing
         '
@@ -179,11 +179,11 @@ Public Class frmMCaTransferenciaContable
         Me.c1txtNoDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.c1txtNoDoc.CustomFormat = "00000000000000000000"
         Me.c1txtNoDoc.DataType = GetType(Long)
-        Me.c1txtNoDoc.Location = New System.Drawing.Point(140, 160)
+        Me.c1txtNoDoc.Location = New System.Drawing.Point(117, 139)
         Me.c1txtNoDoc.MaxLength = 14
         Me.c1txtNoDoc.Name = "c1txtNoDoc"
         Me.c1txtNoDoc.NumericInput = False
-        Me.c1txtNoDoc.Size = New System.Drawing.Size(502, 20)
+        Me.c1txtNoDoc.Size = New System.Drawing.Size(418, 18)
         Me.c1txtNoDoc.TabIndex = 6
         Me.c1txtNoDoc.Tag = Nothing
         '
@@ -191,17 +191,17 @@ Public Class frmMCaTransferenciaContable
         '
         Me.c1txtMonto.BackColor = System.Drawing.Color.White
         Me.c1txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtMonto.CustomFormat = "###,##0.00"
+        Me.c1txtMonto.CustomFormat = "###,###,##0.00"
         Me.c1txtMonto.DataType = GetType(Double)
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1txtMonto.Location = New System.Drawing.Point(434, 312)
+        Me.c1txtMonto.Location = New System.Drawing.Point(362, 270)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
-        Me.c1txtMonto.Size = New System.Drawing.Size(208, 23)
+        Me.c1txtMonto.Size = New System.Drawing.Size(173, 19)
         Me.c1txtMonto.TabIndex = 20
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
@@ -209,9 +209,9 @@ Public Class frmMCaTransferenciaContable
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(363, 676)
+        Me.btNProcesar1.Location = New System.Drawing.Point(302, 586)
         Me.btNProcesar1.Name = "btNProcesar1"
-        Me.btNProcesar1.Size = New System.Drawing.Size(90, 32)
+        Me.btNProcesar1.Size = New System.Drawing.Size(75, 28)
         Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNProcesar1.TabIndex = 28
         Me.btNProcesar1.Text = "Procesar"
@@ -221,9 +221,9 @@ Public Class frmMCaTransferenciaContable
         '
         'btBorrar1
         '
-        Me.btBorrar1.Location = New System.Drawing.Point(460, 676)
+        Me.btBorrar1.Location = New System.Drawing.Point(383, 586)
         Me.btBorrar1.Name = "btBorrar1"
-        Me.btBorrar1.Size = New System.Drawing.Size(90, 32)
+        Me.btBorrar1.Size = New System.Drawing.Size(75, 28)
         Me.btBorrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btBorrar1.TabIndex = 29
         Me.btBorrar1.Text = "Borrar"
@@ -233,9 +233,9 @@ Public Class frmMCaTransferenciaContable
         '
         'btnImprimir1
         '
-        Me.btnImprimir1.Location = New System.Drawing.Point(557, 676)
+        Me.btnImprimir1.Location = New System.Drawing.Point(464, 586)
         Me.btnImprimir1.Name = "btnImprimir1"
-        Me.btnImprimir1.Size = New System.Drawing.Size(90, 32)
+        Me.btnImprimir1.Size = New System.Drawing.Size(75, 28)
         Me.btnImprimir1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImprimir1.TabIndex = 30
         Me.btnImprimir1.Text = "Imprimir"
@@ -247,215 +247,300 @@ Public Class frmMCaTransferenciaContable
         '
         Me.MetroLabel1.AutoSize = True
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 60)
+        Me.MetroLabel1.Location = New System.Drawing.Point(19, 52)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(135, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(129, 25)
         Me.MetroLabel1.TabIndex = 0
         Me.MetroLabel1.Text = "Origen Fondos:"
         '
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(23, 95)
+        Me.MetroLabel2.Location = New System.Drawing.Point(19, 82)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(49, 20)
+        Me.MetroLabel2.Size = New System.Drawing.Size(46, 19)
         Me.MetroLabel2.TabIndex = 1
         Me.MetroLabel2.Text = "Fecha:"
         '
         'dtpFecha
         '
         Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Location = New System.Drawing.Point(140, 95)
-        Me.dtpFecha.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpFecha.Location = New System.Drawing.Point(117, 82)
+        Me.dtpFecha.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(502, 30)
+        Me.dtpFecha.Size = New System.Drawing.Size(418, 29)
         Me.dtpFecha.TabIndex = 2
         '
         'MetroLabel3
         '
         Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.Location = New System.Drawing.Point(23, 128)
+        Me.MetroLabel3.Location = New System.Drawing.Point(19, 111)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(90, 20)
+        Me.MetroLabel3.Size = New System.Drawing.Size(85, 19)
         Me.MetroLabel3.TabIndex = 3
         Me.MetroLabel3.Text = "Responsable:"
         '
         'txtResponsable
         '
+        '
+        '
+        '
+        Me.txtResponsable.CustomButton.Image = Nothing
+        Me.txtResponsable.CustomButton.Location = New System.Drawing.Point(400, 1)
+        Me.txtResponsable.CustomButton.Name = ""
+        Me.txtResponsable.CustomButton.Size = New System.Drawing.Size(17, 17)
+        Me.txtResponsable.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtResponsable.CustomButton.TabIndex = 1
+        Me.txtResponsable.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtResponsable.CustomButton.UseSelectable = True
+        Me.txtResponsable.CustomButton.Visible = False
         Me.txtResponsable.Enabled = False
         Me.txtResponsable.Lines = New String() {"MetroTextBox1"}
-        Me.txtResponsable.Location = New System.Drawing.Point(140, 131)
+        Me.txtResponsable.Location = New System.Drawing.Point(117, 114)
         Me.txtResponsable.MaxLength = 32767
         Me.txtResponsable.Name = "txtResponsable"
         Me.txtResponsable.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtResponsable.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtResponsable.SelectedText = ""
-        Me.txtResponsable.Size = New System.Drawing.Size(502, 23)
+        Me.txtResponsable.SelectionLength = 0
+        Me.txtResponsable.SelectionStart = 0
+        Me.txtResponsable.ShortcutsEnabled = True
+        Me.txtResponsable.Size = New System.Drawing.Size(418, 19)
         Me.txtResponsable.TabIndex = 4
         Me.txtResponsable.Text = "MetroTextBox1"
         Me.txtResponsable.UseSelectable = True
+        Me.txtResponsable.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtResponsable.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel4
         '
         Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(23, 160)
+        Me.MetroLabel4.Location = New System.Drawing.Point(19, 139)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(111, 20)
+        Me.MetroLabel4.Size = New System.Drawing.Size(105, 19)
         Me.MetroLabel4.TabIndex = 5
         Me.MetroLabel4.Text = "No. Documento:"
         '
         'MetroLabel5
         '
         Me.MetroLabel5.AutoSize = True
-        Me.MetroLabel5.Location = New System.Drawing.Point(23, 189)
+        Me.MetroLabel5.Location = New System.Drawing.Point(19, 164)
         Me.MetroLabel5.Name = "MetroLabel5"
-        Me.MetroLabel5.Size = New System.Drawing.Size(35, 20)
+        Me.MetroLabel5.Size = New System.Drawing.Size(33, 19)
         Me.MetroLabel5.TabIndex = 7
         Me.MetroLabel5.Text = "DUI:"
         '
         'MetroLabel6
         '
         Me.MetroLabel6.AutoSize = True
-        Me.MetroLabel6.Location = New System.Drawing.Point(23, 276)
+        Me.MetroLabel6.Location = New System.Drawing.Point(19, 239)
         Me.MetroLabel6.Name = "MetroLabel6"
-        Me.MetroLabel6.Size = New System.Drawing.Size(93, 20)
+        Me.MetroLabel6.Size = New System.Drawing.Size(90, 19)
         Me.MetroLabel6.TabIndex = 16
         Me.MetroLabel6.Text = "Centro Costo:"
         '
         'cbCentroCosto
         '
         Me.cbCentroCosto.FormattingEnabled = True
-        Me.cbCentroCosto.ItemHeight = 24
-        Me.cbCentroCosto.Location = New System.Drawing.Point(140, 276)
+        Me.cbCentroCosto.ItemHeight = 23
+        Me.cbCentroCosto.Location = New System.Drawing.Point(117, 239)
         Me.cbCentroCosto.Name = "cbCentroCosto"
-        Me.cbCentroCosto.Size = New System.Drawing.Size(502, 30)
+        Me.cbCentroCosto.Size = New System.Drawing.Size(418, 29)
         Me.cbCentroCosto.TabIndex = 17
         Me.cbCentroCosto.UseSelectable = True
         '
         'txtNoSocio
         '
+        '
+        '
+        '
+        Me.txtNoSocio.CustomButton.Image = Nothing
+        Me.txtNoSocio.CustomButton.Location = New System.Drawing.Point(125, 2)
+        Me.txtNoSocio.CustomButton.Name = ""
+        Me.txtNoSocio.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.txtNoSocio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNoSocio.CustomButton.TabIndex = 1
+        Me.txtNoSocio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNoSocio.CustomButton.UseSelectable = True
+        Me.txtNoSocio.CustomButton.Visible = False
         Me.txtNoSocio.Enabled = False
         Me.txtNoSocio.Lines = New String(-1) {}
-        Me.txtNoSocio.Location = New System.Drawing.Point(470, 189)
+        Me.txtNoSocio.Location = New System.Drawing.Point(392, 164)
         Me.txtNoSocio.MaxLength = 32767
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNoSocio.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtNoSocio.SelectedText = ""
-        Me.txtNoSocio.Size = New System.Drawing.Size(172, 23)
+        Me.txtNoSocio.SelectionLength = 0
+        Me.txtNoSocio.SelectionStart = 0
+        Me.txtNoSocio.ShortcutsEnabled = True
+        Me.txtNoSocio.Size = New System.Drawing.Size(143, 20)
         Me.txtNoSocio.TabIndex = 10
         Me.txtNoSocio.UseSelectable = True
+        Me.txtNoSocio.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNoSocio.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel7
         '
         Me.MetroLabel7.AutoSize = True
-        Me.MetroLabel7.Location = New System.Drawing.Point(370, 189)
+        Me.MetroLabel7.Location = New System.Drawing.Point(308, 164)
         Me.MetroLabel7.Name = "MetroLabel7"
-        Me.MetroLabel7.Size = New System.Drawing.Size(94, 20)
+        Me.MetroLabel7.Size = New System.Drawing.Size(91, 19)
         Me.MetroLabel7.TabIndex = 9
         Me.MetroLabel7.Text = "No. Asociado:"
         '
         'c1txtNombreAsoc
         '
+        '
+        '
+        '
+        Me.c1txtNombreAsoc.CustomButton.Image = Nothing
+        Me.c1txtNombreAsoc.CustomButton.Location = New System.Drawing.Point(400, 2)
+        Me.c1txtNombreAsoc.CustomButton.Name = ""
+        Me.c1txtNombreAsoc.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.c1txtNombreAsoc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.c1txtNombreAsoc.CustomButton.TabIndex = 1
+        Me.c1txtNombreAsoc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.c1txtNombreAsoc.CustomButton.UseSelectable = True
+        Me.c1txtNombreAsoc.CustomButton.Visible = False
         Me.c1txtNombreAsoc.Enabled = False
         Me.c1txtNombreAsoc.Lines = New String(-1) {}
-        Me.c1txtNombreAsoc.Location = New System.Drawing.Point(140, 218)
+        Me.c1txtNombreAsoc.Location = New System.Drawing.Point(117, 189)
         Me.c1txtNombreAsoc.MaxLength = 32767
         Me.c1txtNombreAsoc.Name = "c1txtNombreAsoc"
         Me.c1txtNombreAsoc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.c1txtNombreAsoc.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.c1txtNombreAsoc.SelectedText = ""
-        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(502, 23)
+        Me.c1txtNombreAsoc.SelectionLength = 0
+        Me.c1txtNombreAsoc.SelectionStart = 0
+        Me.c1txtNombreAsoc.ShortcutsEnabled = True
+        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(418, 20)
         Me.c1txtNombreAsoc.TabIndex = 12
         Me.c1txtNombreAsoc.UseSelectable = True
+        Me.c1txtNombreAsoc.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.c1txtNombreAsoc.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel8
         '
         Me.MetroLabel8.AutoSize = True
-        Me.MetroLabel8.Location = New System.Drawing.Point(23, 218)
+        Me.MetroLabel8.Location = New System.Drawing.Point(19, 189)
         Me.MetroLabel8.Name = "MetroLabel8"
-        Me.MetroLabel8.Size = New System.Drawing.Size(68, 20)
+        Me.MetroLabel8.Size = New System.Drawing.Size(66, 19)
         Me.MetroLabel8.TabIndex = 11
         Me.MetroLabel8.Text = "Asociado:"
         '
         'MetroLabel9
         '
         Me.MetroLabel9.AutoSize = True
-        Me.MetroLabel9.Location = New System.Drawing.Point(23, 247)
+        Me.MetroLabel9.Location = New System.Drawing.Point(19, 214)
         Me.MetroLabel9.Name = "MetroLabel9"
-        Me.MetroLabel9.Size = New System.Drawing.Size(115, 20)
+        Me.MetroLabel9.Size = New System.Drawing.Size(110, 19)
         Me.MetroLabel9.TabIndex = 13
         Me.MetroLabel9.Text = "Cuenta Contable:"
         Me.MetroLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtCuenta
         '
+        '
+        '
+        '
+        Me.txtCuenta.CustomButton.Image = Nothing
+        Me.txtCuenta.CustomButton.Location = New System.Drawing.Point(300, 2)
+        Me.txtCuenta.CustomButton.Name = ""
+        Me.txtCuenta.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.txtCuenta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtCuenta.CustomButton.TabIndex = 1
+        Me.txtCuenta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtCuenta.CustomButton.UseSelectable = True
+        Me.txtCuenta.CustomButton.Visible = False
         Me.txtCuenta.Enabled = False
         Me.txtCuenta.Lines = New String(-1) {}
-        Me.txtCuenta.Location = New System.Drawing.Point(261, 247)
+        Me.txtCuenta.Location = New System.Drawing.Point(217, 214)
         Me.txtCuenta.MaxLength = 32767
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCuenta.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtCuenta.SelectedText = ""
-        Me.txtCuenta.Size = New System.Drawing.Size(381, 23)
+        Me.txtCuenta.SelectionLength = 0
+        Me.txtCuenta.SelectionStart = 0
+        Me.txtCuenta.ShortcutsEnabled = True
+        Me.txtCuenta.Size = New System.Drawing.Size(318, 20)
         Me.txtCuenta.TabIndex = 15
         Me.txtCuenta.UseSelectable = True
+        Me.txtCuenta.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtCuenta.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel10
         '
         Me.MetroLabel10.AutoSize = True
-        Me.MetroLabel10.Location = New System.Drawing.Point(376, 312)
+        Me.MetroLabel10.Location = New System.Drawing.Point(313, 270)
         Me.MetroLabel10.Name = "MetroLabel10"
-        Me.MetroLabel10.Size = New System.Drawing.Size(52, 20)
+        Me.MetroLabel10.Size = New System.Drawing.Size(51, 19)
         Me.MetroLabel10.TabIndex = 19
         Me.MetroLabel10.Text = "Monto:"
         '
         'MetroLabel11
         '
         Me.MetroLabel11.AutoSize = True
-        Me.MetroLabel11.Location = New System.Drawing.Point(23, 343)
+        Me.MetroLabel11.Location = New System.Drawing.Point(19, 297)
         Me.MetroLabel11.Name = "MetroLabel11"
-        Me.MetroLabel11.Size = New System.Drawing.Size(105, 20)
+        Me.MetroLabel11.Size = New System.Drawing.Size(98, 19)
         Me.MetroLabel11.TabIndex = 21
         Me.MetroLabel11.Text = "Observaciones:"
         '
         'c1txtObservaciones
         '
+        '
+        '
+        '
+        Me.c1txtObservaciones.CustomButton.Image = Nothing
+        Me.c1txtObservaciones.CustomButton.Location = New System.Drawing.Point(370, 1)
+        Me.c1txtObservaciones.CustomButton.Name = ""
+        Me.c1txtObservaciones.CustomButton.Size = New System.Drawing.Size(47, 47)
+        Me.c1txtObservaciones.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.c1txtObservaciones.CustomButton.TabIndex = 1
+        Me.c1txtObservaciones.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.c1txtObservaciones.CustomButton.UseSelectable = True
+        Me.c1txtObservaciones.CustomButton.Visible = False
         Me.c1txtObservaciones.Lines = New String(-1) {}
-        Me.c1txtObservaciones.Location = New System.Drawing.Point(140, 341)
+        Me.c1txtObservaciones.Location = New System.Drawing.Point(117, 296)
         Me.c1txtObservaciones.MaxLength = 32767
         Me.c1txtObservaciones.Multiline = True
         Me.c1txtObservaciones.Name = "c1txtObservaciones"
         Me.c1txtObservaciones.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.c1txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.c1txtObservaciones.SelectedText = ""
-        Me.c1txtObservaciones.Size = New System.Drawing.Size(502, 57)
+        Me.c1txtObservaciones.SelectionLength = 0
+        Me.c1txtObservaciones.SelectionStart = 0
+        Me.c1txtObservaciones.ShortcutsEnabled = True
+        Me.c1txtObservaciones.Size = New System.Drawing.Size(418, 49)
         Me.c1txtObservaciones.TabIndex = 22
         Me.c1txtObservaciones.UseSelectable = True
+        Me.c1txtObservaciones.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.c1txtObservaciones.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel12
         '
         Me.MetroLabel12.AutoSize = True
         Me.MetroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel12.Location = New System.Drawing.Point(23, 396)
+        Me.MetroLabel12.Location = New System.Drawing.Point(19, 343)
         Me.MetroLabel12.Name = "MetroLabel12"
-        Me.MetroLabel12.Size = New System.Drawing.Size(77, 25)
+        Me.MetroLabel12.Size = New System.Drawing.Size(73, 25)
         Me.MetroLabel12.TabIndex = 23
         Me.MetroLabel12.Text = "Destino:"
         '
         'txtIdCuenta
         '
-        Me.txtIdCuenta.Location = New System.Drawing.Point(140, 247)
+        Me.txtIdCuenta.Location = New System.Drawing.Point(117, 214)
         Me.txtIdCuenta.Name = "txtIdCuenta"
-        Me.txtIdCuenta.Size = New System.Drawing.Size(115, 22)
+        Me.txtIdCuenta.Size = New System.Drawing.Size(95, 20)
         Me.txtIdCuenta.TabIndex = 14
         '
         'frmMCaTransferenciaContable
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(670, 791)
+        Me.ClientSize = New System.Drawing.Size(558, 686)
         Me.Controls.Add(Me.txtIdCuenta)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.btnEliminar1)
@@ -488,9 +573,9 @@ Public Class frmMCaTransferenciaContable
         Me.Controls.Add(Me.btBorrar1)
         Me.Controls.Add(Me.btnImprimir1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(670, 791)
+        Me.MaximumSize = New System.Drawing.Size(558, 686)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(670, 791)
+        Me.MinimumSize = New System.Drawing.Size(558, 629)
         Me.Name = "frmMCaTransferenciaContable"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Teal
@@ -511,6 +596,7 @@ Public Class frmMCaTransferenciaContable
         Dim oAh As New wrAhorro.wsLibAhorro
         Me.txtResponsable.Text = sUsuario 'Me.Supervisor
         dsDetalle = oAh.ObtenerDetalleTransferenciaVacio
+        Me.MaximizeBox = False
         llenarCbCC()
     End Sub
 
@@ -633,7 +719,7 @@ Public Class frmMCaTransferenciaContable
                                                                            c1txtMonto.Value, c1txtObservaciones.Text.ToUpper, sUsuario, "0", "N", "M", "1", txtIdCuenta.Text, cbCentroCosto.SelectedValue)) > 0 Then
                     MsgBox("Transferencia realizada exitosamente.", MsgBoxStyle.Information)
                 Else
-                    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             Else
                 pCodTransferencia = oAhorro.ObtenerCorrelativoTransferencia("CodTransferencia", "0", "(MONTH(Fecha) = '" & Me.dtpFecha.Value.Month & "')  AND (YEAR(Fecha) = " & Me.dtpFecha.Value.Year & ")", sUsuario, sPassword, sSucursal)
@@ -657,7 +743,7 @@ Public Class frmMCaTransferenciaContable
         Try
             Limpiar()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -670,7 +756,7 @@ Public Class frmMCaTransferenciaContable
             ofrm.ShowDialog()
             Limpiar()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -687,7 +773,7 @@ Public Class frmMCaTransferenciaContable
             Encabezado()
             SumaDetalle()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -707,7 +793,7 @@ Public Class frmMCaTransferenciaContable
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub SumaDetalle()
@@ -759,7 +845,7 @@ Public Class frmMCaTransferenciaContable
                 txtTotal.Enabled = True
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

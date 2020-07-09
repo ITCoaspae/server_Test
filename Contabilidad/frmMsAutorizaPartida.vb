@@ -107,7 +107,7 @@ Public Class frmMsAutorizaPartida
             Me.Cursor = Cursors.Default
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show("No hay datos disponibles.", "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

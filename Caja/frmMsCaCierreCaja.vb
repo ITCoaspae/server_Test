@@ -1222,7 +1222,7 @@ Public Class frmMsCaCierreCaja
                 MessageBox.Show("Cierre de caja NO realizado, verifíque.", "Cierre de Caja", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

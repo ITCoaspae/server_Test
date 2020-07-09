@@ -17,6 +17,9 @@
                 Me.dgAutorizacion.DataSource = dts.Tables(0)
             End If
         End If
+        Me.dgAutorizacion.ColumnHeadersDefaultCellStyle.BackColor = Color.Teal
+        Me.dgAutorizacion.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        Me.dgAutorizacion.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke
     End Sub
 
     Private Sub frmMAhAutorizacionDPF_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -45,7 +48,7 @@
             End With
             llenarDgAutorizaciones()
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema", MsgBoxStyle.Critical)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -61,7 +64,7 @@
             End With
             llenarDgAutorizaciones()
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema", MsgBoxStyle.Critical)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -77,5 +80,11 @@
         Catch ex As Exception
             MsgBox("El registro no fue elminado. Por favor comunicarse con el administrador del sistema" + vbCrLf + ex.Message, MsgBoxStyle.Critical, "Módulo - Ahorros")
         End Try
+    End Sub
+
+    Private Sub frmMAhAutorizacionDPF_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

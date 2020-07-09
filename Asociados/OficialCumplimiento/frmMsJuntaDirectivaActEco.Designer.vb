@@ -40,17 +40,19 @@ Partial Class frmMsJuntaDirectivaActEco
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtNombreDir)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(23, 63)
+        Me.Panel1.Location = New System.Drawing.Point(31, 78)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(413, 90)
+        Me.Panel1.Size = New System.Drawing.Size(551, 111)
         Me.Panel1.TabIndex = 163
         '
         'chkActivo
         '
         Me.chkActivo.AutoSize = True
-        Me.chkActivo.Location = New System.Drawing.Point(6, 70)
+        Me.chkActivo.Location = New System.Drawing.Point(8, 86)
+        Me.chkActivo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkActivo.Name = "chkActivo"
-        Me.chkActivo.Size = New System.Drawing.Size(56, 17)
+        Me.chkActivo.Size = New System.Drawing.Size(68, 21)
         Me.chkActivo.TabIndex = 4
         Me.chkActivo.Text = "Activo"
         Me.chkActivo.UseVisualStyleBackColor = True
@@ -58,42 +60,48 @@ Partial Class frmMsJuntaDirectivaActEco
         'txtCargo
         '
         Me.txtCargo.BackColor = System.Drawing.Color.White
-        Me.txtCargo.Location = New System.Drawing.Point(61, 44)
+        Me.txtCargo.Location = New System.Drawing.Point(81, 54)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(337, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(448, 22)
         Me.txtCargo.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 47)
+        Me.Label2.Location = New System.Drawing.Point(4, 58)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Cargo:"
         '
         'txtNombreDir
         '
         Me.txtNombreDir.BackColor = System.Drawing.Color.White
-        Me.txtNombreDir.Location = New System.Drawing.Point(61, 11)
+        Me.txtNombreDir.Location = New System.Drawing.Point(81, 14)
+        Me.txtNombreDir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombreDir.Name = "txtNombreDir"
-        Me.txtNombreDir.Size = New System.Drawing.Size(337, 20)
+        Me.txtNombreDir.Size = New System.Drawing.Size(448, 22)
         Me.txtNombreDir.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 11)
+        Me.Label1.Location = New System.Drawing.Point(4, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 26)
+        Me.Label1.Size = New System.Drawing.Size(67, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Directivo:"
         '
         'btnGuardarDom
         '
-        Me.btnGuardarDom.Location = New System.Drawing.Point(361, 159)
+        Me.btnGuardarDom.Location = New System.Drawing.Point(481, 196)
+        Me.btnGuardarDom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardarDom.Name = "btnGuardarDom"
-        Me.btnGuardarDom.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardarDom.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarDom.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarDom.TabIndex = 165
         Me.btnGuardarDom.Text = "Guardar"
         Me.btnGuardarDom.UseSelectable = True
@@ -101,17 +109,20 @@ Partial Class frmMsJuntaDirectivaActEco
         '
         'frmMsJuntaDirectivaActEco
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(457, 197)
+        Me.ClientSize = New System.Drawing.Size(609, 242)
         Me.Controls.Add(Me.btnGuardarDom)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(457, 197)
+        Me.MaximumSize = New System.Drawing.Size(609, 242)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(457, 197)
+        Me.MinimumSize = New System.Drawing.Size(609, 242)
         Me.Name = "frmMsJuntaDirectivaActEco"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Junta Directiva"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

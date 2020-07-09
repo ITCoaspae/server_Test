@@ -179,17 +179,17 @@ Public Class frmRepCaja
 
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnProcesar1.Click
         Try
-            Select Case vNumReporte
-                Case 0 'REPORTE DE MOVIMIENTOS DE CAJA
-                    Dim oCaja As New wrCaja.wsLibCaja, ds As New DataSet, pCaja As String
+            ' Select Case vNumReporte
+            '  Case 0 'REPORTE DE MOVIMIENTOS DE CAJA
+            Dim oCaja As New wrCaja.wsLibCaja, ds As New DataSet, pCaja As String
                     pCaja = Me.txtNoCaja.Text.Trim
                     If pCaja = "" Then pCaja = 0
                     ds = oCaja.Movimientos_de_Caja(Format(Me.dtpFecha.Value, "short date"), Format(Me.dtpFecha2.Value, "short date"), Me.chkTodos.Checked, pCaja, sUsuario, sPassword, sSucursal)
                     Dim ofrm As New frmVisor(ds, 100, 0)
                     ofrm.ShowDialog()
-            End Select
+            'End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

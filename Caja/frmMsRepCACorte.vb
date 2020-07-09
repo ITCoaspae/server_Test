@@ -91,34 +91,34 @@ Public Class frmMsRepCACorte
         'c1nSubtotalCheque
         '
         Me.c1nSubtotalCheque.BackColor = System.Drawing.Color.White
-        Me.c1nSubtotalCheque.Increment = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.c1nSubtotalCheque.CustomFormat = "###,###,##0.00"
+        Me.c1nSubtotalCheque.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.c1nSubtotalCheque.Location = New System.Drawing.Point(141, 144)
         Me.c1nSubtotalCheque.Name = "c1nSubtotalCheque"
         Me.c1nSubtotalCheque.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nSubtotalCheque.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nSubtotalCheque.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nSubtotalCheque.ShowDropDownButton = False
-        Me.c1nSubtotalCheque.ShowUpDownButtons = False
-        Me.c1nSubtotalCheque.Size = New System.Drawing.Size(144, 20)
+        Me.c1nSubtotalCheque.Size = New System.Drawing.Size(144, 18)
         Me.c1nSubtotalCheque.TabIndex = 29
         Me.c1nSubtotalCheque.Tag = Nothing
         Me.c1nSubtotalCheque.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nSubtotalCheque.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'c1nSubtotalEfectivo
         '
         Me.c1nSubtotalEfectivo.BackColor = System.Drawing.Color.White
-        Me.c1nSubtotalEfectivo.Increment = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.c1nSubtotalEfectivo.CustomFormat = "###,###,##0.00"
+        Me.c1nSubtotalEfectivo.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.c1nSubtotalEfectivo.Location = New System.Drawing.Point(141, 118)
         Me.c1nSubtotalEfectivo.Name = "c1nSubtotalEfectivo"
         Me.c1nSubtotalEfectivo.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nSubtotalEfectivo.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nSubtotalEfectivo.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nSubtotalEfectivo.ShowDropDownButton = False
-        Me.c1nSubtotalEfectivo.ShowUpDownButtons = False
-        Me.c1nSubtotalEfectivo.Size = New System.Drawing.Size(144, 20)
+        Me.c1nSubtotalEfectivo.Size = New System.Drawing.Size(144, 18)
         Me.c1nSubtotalEfectivo.TabIndex = 28
         Me.c1nSubtotalEfectivo.Tag = Nothing
         Me.c1nSubtotalEfectivo.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nSubtotalEfectivo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label3
         '
@@ -193,7 +193,7 @@ Public Class frmMsRepCACorte
             Dim ofrm As New frmVisor(ds, 30, 0)
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

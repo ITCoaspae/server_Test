@@ -130,19 +130,19 @@ Public Class frmMsCBEmbargos
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(23, 63)
+        Me.TabControl1.Location = New System.Drawing.Point(28, 73)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(480, 523)
+        Me.TabControl1.Size = New System.Drawing.Size(576, 603)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(472, 497)
+        Me.TabPage1.Size = New System.Drawing.Size(568, 574)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Embargos"
         '
@@ -182,9 +182,9 @@ Public Class frmMsCBEmbargos
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 9)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(456, 473)
+        Me.GroupBox1.Size = New System.Drawing.Size(547, 546)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del Embargo:"
@@ -192,9 +192,9 @@ Public Class frmMsCBEmbargos
         'btnGuardar1
         '
         Me.btnGuardar1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnGuardar1.Location = New System.Drawing.Point(365, 431)
+        Me.btnGuardar1.Location = New System.Drawing.Point(438, 497)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 33)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 1016
         Me.btnGuardar1.Text = "&Guardar"
@@ -206,9 +206,9 @@ Public Class frmMsCBEmbargos
         '
         Me.Label16.BackColor = System.Drawing.Color.White
         Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(8, 120)
+        Me.Label16.Location = New System.Drawing.Point(10, 138)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(96, 16)
+        Me.Label16.Size = New System.Drawing.Size(115, 19)
         Me.Label16.TabIndex = 55
         Me.Label16.Text = "Tipo de Embargo:"
         '
@@ -217,25 +217,25 @@ Public Class frmMsCBEmbargos
         Me.cbTipoEmbargo.BackColor = System.Drawing.Color.White
         Me.cbTipoEmbargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipoEmbargo.Items.AddRange(New Object() {"0 = Por sueldo", "1 = Por Bienes"})
-        Me.cbTipoEmbargo.Location = New System.Drawing.Point(104, 120)
+        Me.cbTipoEmbargo.Location = New System.Drawing.Point(125, 138)
         Me.cbTipoEmbargo.Name = "cbTipoEmbargo"
-        Me.cbTipoEmbargo.Size = New System.Drawing.Size(336, 21)
+        Me.cbTipoEmbargo.Size = New System.Drawing.Size(403, 24)
         Me.cbTipoEmbargo.TabIndex = 3
         '
         'txtNoReferencia
         '
-        Me.txtNoReferencia.Location = New System.Drawing.Point(104, 192)
+        Me.txtNoReferencia.Location = New System.Drawing.Point(125, 222)
         Me.txtNoReferencia.MaxLength = 20
         Me.txtNoReferencia.Name = "txtNoReferencia"
-        Me.txtNoReferencia.Size = New System.Drawing.Size(336, 20)
+        Me.txtNoReferencia.Size = New System.Drawing.Size(403, 22)
         Me.txtNoReferencia.TabIndex = 6
         '
         'Label8
         '
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(8, 192)
+        Me.Label8.Location = New System.Drawing.Point(10, 222)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 16)
+        Me.Label8.Size = New System.Drawing.Size(96, 18)
         Me.Label8.TabIndex = 52
         Me.Label8.Text = "No Referencia:"
         '
@@ -243,11 +243,11 @@ Public Class frmMsCBEmbargos
         '
         Me.txtNit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNit.EditMask = "0000-000000-000-0"
-        Me.txtNit.Location = New System.Drawing.Point(104, 40)
+        Me.txtNit.Location = New System.Drawing.Point(125, 46)
         Me.txtNit.MaxLength = 20
         Me.txtNit.Name = "txtNit"
         Me.txtNit.NumericInput = False
-        Me.txtNit.Size = New System.Drawing.Size(112, 20)
+        Me.txtNit.Size = New System.Drawing.Size(134, 23)
         Me.txtNit.TabIndex = 1
         Me.txtNit.Tag = Nothing
         '
@@ -255,9 +255,9 @@ Public Class frmMsCBEmbargos
         '
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(8, 40)
+        Me.Label1.Location = New System.Drawing.Point(10, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 16)
+        Me.Label1.Size = New System.Drawing.Size(96, 19)
         Me.Label1.TabIndex = 50
         Me.Label1.Text = "NIT:"
         '
@@ -267,11 +267,11 @@ Public Class frmMsCBEmbargos
         Me.txtCel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCel.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCel.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCel.Location = New System.Drawing.Point(312, 40)
+        Me.txtCel.Location = New System.Drawing.Point(374, 46)
         Me.txtCel.Multiline = True
         Me.txtCel.Name = "txtCel"
         Me.txtCel.ReadOnly = True
-        Me.txtCel.Size = New System.Drawing.Size(128, 20)
+        Me.txtCel.Size = New System.Drawing.Size(154, 23)
         Me.txtCel.TabIndex = 49
         '
         'txtTelCasa
@@ -280,11 +280,11 @@ Public Class frmMsCBEmbargos
         Me.txtTelCasa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelCasa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtTelCasa.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtTelCasa.Location = New System.Drawing.Point(312, 16)
+        Me.txtTelCasa.Location = New System.Drawing.Point(374, 18)
         Me.txtTelCasa.Multiline = True
         Me.txtTelCasa.Name = "txtTelCasa"
         Me.txtTelCasa.ReadOnly = True
-        Me.txtTelCasa.Size = New System.Drawing.Size(128, 20)
+        Me.txtTelCasa.Size = New System.Drawing.Size(154, 24)
         Me.txtTelCasa.TabIndex = 48
         '
         'txtAsociado
@@ -293,11 +293,11 @@ Public Class frmMsCBEmbargos
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(104, 64)
+        Me.txtAsociado.Location = New System.Drawing.Point(125, 74)
         Me.txtAsociado.MaxLength = 15
         Me.txtAsociado.Multiline = True
         Me.txtAsociado.Name = "txtAsociado"
-        Me.txtAsociado.Size = New System.Drawing.Size(336, 24)
+        Me.txtAsociado.Size = New System.Drawing.Size(403, 28)
         Me.txtAsociado.TabIndex = 44
         '
         'txtCodPrestamo
@@ -305,19 +305,19 @@ Public Class frmMsCBEmbargos
         Me.txtCodPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPrestamo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodPrestamo.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(104, 96)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(125, 111)
         Me.txtCodPrestamo.MaxLength = 20
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(336, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(403, 23)
         Me.txtCodPrestamo.TabIndex = 2
         '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(224, 40)
+        Me.Label11.Location = New System.Drawing.Point(269, 46)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(64, 16)
+        Me.Label11.Size = New System.Drawing.Size(77, 19)
         Me.Label11.TabIndex = 47
         Me.Label11.Text = "Celular:"
         '
@@ -325,9 +325,9 @@ Public Class frmMsCBEmbargos
         '
         Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(224, 16)
+        Me.Label12.Location = New System.Drawing.Point(269, 18)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 16)
+        Me.Label12.Size = New System.Drawing.Size(105, 19)
         Me.Label12.TabIndex = 46
         Me.Label12.Text = "Teléfono Casa:"
         '
@@ -335,11 +335,11 @@ Public Class frmMsCBEmbargos
         '
         Me.txtDui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(104, 16)
+        Me.txtDui.Location = New System.Drawing.Point(125, 18)
         Me.txtDui.MaxLength = 20
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(134, 24)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
@@ -347,9 +347,9 @@ Public Class frmMsCBEmbargos
         '
         Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(8, 64)
+        Me.Label13.Location = New System.Drawing.Point(10, 74)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(64, 16)
+        Me.Label13.Size = New System.Drawing.Size(76, 18)
         Me.Label13.TabIndex = 45
         Me.Label13.Text = "Asociado:"
         '
@@ -357,9 +357,9 @@ Public Class frmMsCBEmbargos
         '
         Me.Label14.BackColor = System.Drawing.Color.White
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(8, 96)
+        Me.Label14.Location = New System.Drawing.Point(10, 111)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(88, 16)
+        Me.Label14.Size = New System.Drawing.Size(105, 18)
         Me.Label14.TabIndex = 43
         Me.Label14.Text = "Cod. Préstamo:"
         '
@@ -367,149 +367,149 @@ Public Class frmMsCBEmbargos
         '
         Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(8, 16)
+        Me.Label15.Location = New System.Drawing.Point(10, 18)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(80, 16)
+        Me.Label15.Size = New System.Drawing.Size(96, 19)
         Me.Label15.TabIndex = 42
         Me.Label15.Text = "DUI Asociado:"
         '
         'txtObservaciones
         '
-        Me.txtObservaciones.Location = New System.Drawing.Point(104, 385)
+        Me.txtObservaciones.Location = New System.Drawing.Point(125, 444)
         Me.txtObservaciones.MaxLength = 255
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservaciones.Size = New System.Drawing.Size(336, 40)
+        Me.txtObservaciones.Size = New System.Drawing.Size(403, 46)
         Me.txtObservaciones.TabIndex = 12
         '
         'txtComentario
         '
-        Me.txtComentario.Location = New System.Drawing.Point(104, 339)
+        Me.txtComentario.Location = New System.Drawing.Point(125, 391)
         Me.txtComentario.MaxLength = 255
         Me.txtComentario.Multiline = True
         Me.txtComentario.Name = "txtComentario"
         Me.txtComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtComentario.Size = New System.Drawing.Size(336, 40)
+        Me.txtComentario.Size = New System.Drawing.Size(403, 46)
         Me.txtComentario.TabIndex = 11
         '
         'dtpFechaEntAbogado
         '
         Me.dtpFechaEntAbogado.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaEntAbogado.Location = New System.Drawing.Point(104, 301)
+        Me.dtpFechaEntAbogado.Location = New System.Drawing.Point(125, 347)
         Me.dtpFechaEntAbogado.Name = "dtpFechaEntAbogado"
-        Me.dtpFechaEntAbogado.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaEntAbogado.Size = New System.Drawing.Size(105, 22)
         Me.dtpFechaEntAbogado.TabIndex = 10
         '
         'txtDemandadoIII
         '
-        Me.txtDemandadoIII.Location = New System.Drawing.Point(104, 264)
+        Me.txtDemandadoIII.Location = New System.Drawing.Point(125, 305)
         Me.txtDemandadoIII.MaxLength = 100
         Me.txtDemandadoIII.Name = "txtDemandadoIII"
-        Me.txtDemandadoIII.Size = New System.Drawing.Size(336, 20)
+        Me.txtDemandadoIII.Size = New System.Drawing.Size(403, 22)
         Me.txtDemandadoIII.TabIndex = 9
         '
         'txtDemandadoII
         '
-        Me.txtDemandadoII.Location = New System.Drawing.Point(104, 240)
+        Me.txtDemandadoII.Location = New System.Drawing.Point(125, 277)
         Me.txtDemandadoII.MaxLength = 100
         Me.txtDemandadoII.Name = "txtDemandadoII"
-        Me.txtDemandadoII.Size = New System.Drawing.Size(336, 20)
+        Me.txtDemandadoII.Size = New System.Drawing.Size(403, 22)
         Me.txtDemandadoII.TabIndex = 8
         '
         'txtDemandadoI
         '
-        Me.txtDemandadoI.Location = New System.Drawing.Point(104, 216)
+        Me.txtDemandadoI.Location = New System.Drawing.Point(125, 249)
         Me.txtDemandadoI.MaxLength = 100
         Me.txtDemandadoI.Name = "txtDemandadoI"
-        Me.txtDemandadoI.Size = New System.Drawing.Size(336, 20)
+        Me.txtDemandadoI.Size = New System.Drawing.Size(403, 22)
         Me.txtDemandadoI.TabIndex = 7
         '
         'txtNombreTribunal
         '
-        Me.txtNombreTribunal.Location = New System.Drawing.Point(104, 168)
+        Me.txtNombreTribunal.Location = New System.Drawing.Point(125, 194)
         Me.txtNombreTribunal.MaxLength = 100
         Me.txtNombreTribunal.Name = "txtNombreTribunal"
-        Me.txtNombreTribunal.Size = New System.Drawing.Size(336, 20)
+        Me.txtNombreTribunal.Size = New System.Drawing.Size(403, 22)
         Me.txtNombreTribunal.TabIndex = 5
         '
         'txtNombreAbogado
         '
-        Me.txtNombreAbogado.Location = New System.Drawing.Point(104, 144)
+        Me.txtNombreAbogado.Location = New System.Drawing.Point(125, 166)
         Me.txtNombreAbogado.MaxLength = 100
         Me.txtNombreAbogado.Name = "txtNombreAbogado"
-        Me.txtNombreAbogado.Size = New System.Drawing.Size(336, 20)
+        Me.txtNombreAbogado.Size = New System.Drawing.Size(403, 22)
         Me.txtNombreAbogado.TabIndex = 4
         '
         'Label10
         '
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(6, 385)
+        Me.Label10.Location = New System.Drawing.Point(7, 444)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 16)
+        Me.Label10.Size = New System.Drawing.Size(106, 19)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "Observaciones:"
         '
         'Label9
         '
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(8, 342)
+        Me.Label9.Location = New System.Drawing.Point(10, 395)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 16)
+        Me.Label9.Size = New System.Drawing.Size(96, 18)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Comentarios:"
         '
         'Label7
         '
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(8, 288)
+        Me.Label7.Location = New System.Drawing.Point(10, 332)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 42)
+        Me.Label7.Size = New System.Drawing.Size(105, 49)
         Me.Label7.TabIndex = 26
         Me.Label7.Text = "Fecha de Entrega caso al Abogado:"
         '
         'Label6
         '
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(8, 264)
+        Me.Label6.Location = New System.Drawing.Point(10, 305)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 16)
+        Me.Label6.Size = New System.Drawing.Size(134, 18)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Demandado III:"
         '
         'Label5
         '
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(8, 240)
+        Me.Label5.Location = New System.Drawing.Point(10, 277)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(112, 16)
+        Me.Label5.Size = New System.Drawing.Size(134, 18)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Demandado II:"
         '
         'Label4
         '
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(8, 216)
+        Me.Label4.Location = New System.Drawing.Point(10, 249)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(112, 16)
+        Me.Label4.Size = New System.Drawing.Size(134, 19)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Demandado I:"
         '
         'Label3
         '
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(8, 168)
+        Me.Label3.Location = New System.Drawing.Point(10, 194)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 16)
+        Me.Label3.Size = New System.Drawing.Size(134, 18)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Nombre Tribunal:"
         '
         'Label2
         '
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(8, 144)
+        Me.Label2.Location = New System.Drawing.Point(10, 166)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 16)
+        Me.Label2.Size = New System.Drawing.Size(134, 19)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Nombre Abogado:"
         '
@@ -517,9 +517,9 @@ Public Class frmMsCBEmbargos
         '
         Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.GroupBox18)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(472, 497)
+        Me.TabPage2.Size = New System.Drawing.Size(568, 574)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Detalle de Bienes Embargados"
         '
@@ -532,9 +532,9 @@ Public Class frmMsCBEmbargos
         Me.GroupBox18.Controls.Add(Me.fg)
         Me.GroupBox18.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox18.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox18.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox18.Location = New System.Drawing.Point(10, 9)
         Me.GroupBox18.Name = "GroupBox18"
-        Me.GroupBox18.Size = New System.Drawing.Size(457, 486)
+        Me.GroupBox18.Size = New System.Drawing.Size(548, 561)
         Me.GroupBox18.TabIndex = 2
         Me.GroupBox18.TabStop = False
         Me.GroupBox18.Text = "Bienes Embargados"
@@ -542,9 +542,9 @@ Public Class frmMsCBEmbargos
         'btDel1
         '
         Me.btDel1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btDel1.Location = New System.Drawing.Point(170, 22)
+        Me.btDel1.Location = New System.Drawing.Point(204, 25)
         Me.btDel1.Name = "btDel1"
-        Me.btDel1.Size = New System.Drawing.Size(75, 28)
+        Me.btDel1.Size = New System.Drawing.Size(90, 33)
         Me.btDel1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDel1.TabIndex = 1019
         Me.btDel1.Text = "Eliminar"
@@ -555,9 +555,9 @@ Public Class frmMsCBEmbargos
         'btEdit1
         '
         Me.btEdit1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btEdit1.Location = New System.Drawing.Point(89, 22)
+        Me.btEdit1.Location = New System.Drawing.Point(107, 25)
         Me.btEdit1.Name = "btEdit1"
-        Me.btEdit1.Size = New System.Drawing.Size(75, 28)
+        Me.btEdit1.Size = New System.Drawing.Size(90, 33)
         Me.btEdit1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEdit1.TabIndex = 1018
         Me.btEdit1.Text = "Modificar"
@@ -568,9 +568,9 @@ Public Class frmMsCBEmbargos
         'btNew1
         '
         Me.btNew1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btNew1.Location = New System.Drawing.Point(8, 22)
+        Me.btNew1.Location = New System.Drawing.Point(10, 25)
         Me.btNew1.Name = "btNew1"
-        Me.btNew1.Size = New System.Drawing.Size(75, 28)
+        Me.btNew1.Size = New System.Drawing.Size(90, 33)
         Me.btNew1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNew1.TabIndex = 1017
         Me.btNew1.Text = "&Guardar"
@@ -585,24 +585,26 @@ Public Class frmMsCBEmbargos
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
-        Me.fg.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(8, 56)
+        Me.fg.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(10, 65)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Size = New System.Drawing.Size(439, 414)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 22
+        Me.fg.Size = New System.Drawing.Size(526, 477)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'frmMsCBEmbargos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(526, 601)
+        Me.ClientSize = New System.Drawing.Size(631, 693)
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(526, 601)
+        Me.MaximumSize = New System.Drawing.Size(631, 693)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(526, 601)
+        Me.MinimumSize = New System.Drawing.Size(631, 693)
         Me.Name = "frmMsCBEmbargos"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -913,7 +915,7 @@ Public Class frmMsCBEmbargos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -929,7 +931,7 @@ Public Class frmMsCBEmbargos
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -946,7 +948,7 @@ Public Class frmMsCBEmbargos
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -960,7 +962,7 @@ Public Class frmMsCBEmbargos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

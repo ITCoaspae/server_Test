@@ -4,16 +4,16 @@ Imports System.Threading
 Public Class frmPartida
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form : 
     Public rsc As System.Resources.ResourceManager
-    'Private vAccion As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Private vAccion As Contabilidad.clsPartida.TipoAccionPartidas
     Private vAccion As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
-    'Private vAccionDetalle As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Private vAccionDetalle As Contabilidad.clsPartida.TipoAccionPartidas
     Private vAccionDetalle As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
     Private vdsDetalle As System.Data.DataSet, vCorrel As Integer
     Private vC As Decimal, vA As Decimal
     Private errorProvider1 As System.Windows.Forms.ErrorProvider = New System.Windows.Forms.ErrorProvider
     Private vIdModifica As String
     Private vPref As String
-    'Private vTipo As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo
+    'Private vTipo As Contabilidad.clsPartida.TipoPartidaModulo
     Private vTipo As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo
     Private pdrNueva As System.Data.DataRow
     Dim usuarios As New wrAdmin.wsLibAdmin
@@ -637,23 +637,23 @@ Public Class frmPartida
         End Set
     End Property
 
-    'Public Property Accion() As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Public Property Accion() As Contabilidad.clsPartida.TipoAccionPartidas
     Public Property Accion() As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoAccionPartidas)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas)
             vAccion = Value
         End Set
     End Property
 
-    'Public Property AccionDetalle() As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Public Property AccionDetalle() As Contabilidad.clsPartida.TipoAccionPartidas
     Public Property AccionDetalle() As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
         Get
             Return vAccionDetalle
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoAccionPartidas)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas)
             vAccionDetalle = Value
         End Set
@@ -695,12 +695,12 @@ Public Class frmPartida
         End Set
     End Property
 
-    'Public Property Tipo() As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo
+    'Public Property Tipo() As Contabilidad.clsPartida.TipoPartidaModulo
     Public Property Tipo() As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo
         Get
             Return vTipo
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoPartidaModulo)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo)
             vTipo = Value
         End Set
@@ -727,6 +727,7 @@ Public Class frmPartida
                 Next
             End If
         End If
+        Return dts
     End Function
     Protected Sub deshabilitarDetPartida(ByVal habilitar As Boolean)
         isHabilitar = habilitar
@@ -770,7 +771,7 @@ Public Class frmPartida
         Dim oPartida As New wrConta.wsLibContab
         Dim dsTipo As New DataSet, dr As DataRow, x As Integer
         deshabilitarDetPartida(False)
-        'If Me.Tipo = AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
+        'If Me.Tipo = Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
         If Me.Tipo = sifLib.Contabilidad.clsPartidas.TipoPartidaModulo.Bancos Then
             dsTipo = oPartida.ObtenerTipoPartidasBC(sAnnio, sUsuario, sPassword, sSucursal)
             For Each dr In dsTipo.Tables("Tipo_Partidas").Rows
@@ -802,7 +803,7 @@ Public Class frmPartida
             End If
         End If
         Select Case Me.Accion
-            'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
+            'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
             Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarPartida
                 Me.Detalle = oPartida.ObtenerPartidaVacia(sUsuario, sPassword, sSucursal)
                 If Not (Me.drNueva Is Nothing) Then
@@ -822,7 +823,7 @@ Public Class frmPartida
                 End If
                 C1fgrdDetalle.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
                 C1fgrdDetalle.DataSource = Me.Detalle.Tables(0)
-            'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
+            'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
             Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarPartida
                 If Me.Tipo = sifLib.Contabilidad.clsPartidas.TipoPartidaModulo.Bancos Then
                     Me.Detalle = oPartida.CargaPartidaModulo(Me.IdModifica, sUsuario, sSucursal, sPassword, Me.Tipo)
@@ -1167,7 +1168,7 @@ Public Class frmPartida
         If txtAbono.Text > 0 Or txtCargo.Text > 0 Then
             Dim dr As Data.DataRow
             Select Case Me.AccionDetalle
-                'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarLinea
+                'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.AgregarLinea
                 Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarLinea
                     dr = Me.Detalle.Tables("Det_Diario").NewRow()
                     Me.Correlativo += 1
@@ -1190,7 +1191,7 @@ Public Class frmPartida
                     C1fgrdDetalle.Cols(0).Width = 5
                     C1fgrdDetalle.Cols(1).Width = 40
                     Me.LimpiarDetalle()
-                'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarLinea
+                'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.ModificarLinea
                 Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarLinea
                     dr = Me.Detalle.Tables("Det_Diario").Rows(C1fgrdDetalle.Row - 1)
                     dr(1) = txtIdCuentaCB.Text.Trim
@@ -1214,7 +1215,7 @@ Public Class frmPartida
             End Select
             deshabilitarDetPartida(False)
             'GroupBox3.Enabled = False
-            'Me.AccionDetalle = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.Ninguna
+            'Me.AccionDetalle = Contabilidad.clsPartida.TipoAccionPartidas.Ninguna
             Me.AccionDetalle = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.Ninguna
             'Me.MetroPanel1.Enabled = True
             'Me.pnlPpal.Enabled = True
@@ -1238,7 +1239,7 @@ Public Class frmPartida
 
         deshabilitarDetPartida(True)
         Me.LimpiarDetalle()
-        'Me.AccionDetalle = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarLinea
+        'Me.AccionDetalle = Contabilidad.clsPartida.TipoAccionPartidas.AgregarLinea
         Me.AccionDetalle = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarLinea
         'Me.MetroPanel1.Enabled = False
         'Me.pnlPpal.Enabled = False
@@ -1252,7 +1253,7 @@ Public Class frmPartida
             'GroupBox3.Enabled = True
             vC = Me.txtCargo.Text
             vA = Me.txtAbono.Text
-            'Me.AccionDetalle = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarLinea
+            'Me.AccionDetalle = Contabilidad.clsPartida.TipoAccionPartidas.ModificarLinea
             Me.AccionDetalle = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarLinea
             ' Me.MetroPanel1.Enabled = False
             'Me.pnlPpal.Enabled = False
@@ -1413,9 +1414,9 @@ Public Class frmPartida
                 End If
             End If
             Select Case Me.Accion
-                'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
+                'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
                 Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarPartida
-                    'If Me.Tipo = AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
+                    'If Me.Tipo = Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
                     If Me.Tipo = sifLib.Contabilidad.clsPartidas.TipoPartidaModulo.Bancos Then
                         If Me.cmbTipoPartidas.Text.Trim = "" Then
                             MessageBox.Show("El tipo de Partida no puede quedar vacío", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
@@ -1474,9 +1475,9 @@ Public Class frmPartida
                         End If
                     End If
 
-                'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
+                'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
                 Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarPartida
-                    'If Me.Tipo = AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
+                    'If Me.Tipo = Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
                     If Me.Tipo = sifLib.Contabilidad.clsPartidas.TipoPartidaModulo.Bancos Then
                         dr = Me.Detalle.Tables("Diario").Rows(0)
                         dr("Num_Partida") = Me.txtNumero.Text
@@ -1552,7 +1553,7 @@ Public Class frmPartida
         Dim dsTipo As New DataSet, dr As DataRow ', x As Integer, 
         Dim s As Integer, g As Integer
         Me.cmbTipoPartidas.Items.Clear()
-        'If Me.Tipo = AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
+        'If Me.Tipo = Contabilidad.clsPartida.TipoPartidaModulo.Bancos Then
         If Me.Tipo = sifLib.Contabilidad.clsPartidas.TipoPartidaModulo.Bancos Then
             dsTipo = oPartida.ObtenerTipoPartidasBC(Me.dtpFecha.Value.Year, sUsuario, sPassword, sSucursal)
             For Each dr In dsTipo.Tables("Tipo_Partidas").Rows

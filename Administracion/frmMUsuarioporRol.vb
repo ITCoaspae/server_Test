@@ -70,18 +70,18 @@ Public Class frmMUsuarioporRol
         Me.GroupBox2.Controls.Add(Me.rbtRol)
         Me.GroupBox2.Controls.Add(Me.rbTodos)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(552, 87)
+        Me.GroupBox2.Size = New System.Drawing.Size(544, 100)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "&Filtrar Registros por:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(322, 49)
+        Me.MetroButton1.Location = New System.Drawing.Point(386, 57)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 191
         Me.MetroButton1.Text = "Mostrar"
@@ -90,34 +90,34 @@ Public Class frmMUsuarioporRol
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(6, 51)
+        Me.txtUsuario.Location = New System.Drawing.Point(7, 59)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(152, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(183, 22)
         Me.txtUsuario.TabIndex = 1
         '
         'rbtUsuario
         '
         Me.rbtUsuario.BackColor = System.Drawing.Color.White
-        Me.rbtUsuario.Location = New System.Drawing.Point(6, 19)
+        Me.rbtUsuario.Location = New System.Drawing.Point(7, 22)
         Me.rbtUsuario.Name = "rbtUsuario"
-        Me.rbtUsuario.Size = New System.Drawing.Size(152, 24)
+        Me.rbtUsuario.Size = New System.Drawing.Size(183, 28)
         Me.rbtUsuario.TabIndex = 0
         Me.rbtUsuario.Text = "Usuario"
         Me.rbtUsuario.UseVisualStyleBackColor = False
         '
         'txtRol
         '
-        Me.txtRol.Location = New System.Drawing.Point(164, 51)
+        Me.txtRol.Location = New System.Drawing.Point(197, 59)
         Me.txtRol.Name = "txtRol"
-        Me.txtRol.Size = New System.Drawing.Size(152, 20)
+        Me.txtRol.Size = New System.Drawing.Size(182, 22)
         Me.txtRol.TabIndex = 3
         '
         'rbtRol
         '
         Me.rbtRol.BackColor = System.Drawing.Color.White
-        Me.rbtRol.Location = New System.Drawing.Point(164, 19)
+        Me.rbtRol.Location = New System.Drawing.Point(197, 22)
         Me.rbtRol.Name = "rbtRol"
-        Me.rbtRol.Size = New System.Drawing.Size(152, 24)
+        Me.rbtRol.Size = New System.Drawing.Size(182, 28)
         Me.rbtRol.TabIndex = 2
         Me.rbtRol.Text = "Rol"
         Me.rbtRol.UseVisualStyleBackColor = False
@@ -126,9 +126,9 @@ Public Class frmMUsuarioporRol
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(322, 19)
+        Me.rbTodos.Location = New System.Drawing.Point(386, 22)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(183, 28)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "&Todos"
@@ -140,20 +140,21 @@ Public Class frmMUsuarioporRol
         Me.dg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dg.BackColor = System.Drawing.SystemColors.Window
         Me.dg.ColumnInfo = "9,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.dg.Location = New System.Drawing.Point(23, 190)
+        Me.dg.ForeColor = System.Drawing.Color.Black
+        Me.dg.Location = New System.Drawing.Point(28, 219)
         Me.dg.Name = "dg"
         Me.dg.Rows.Count = 2
-        Me.dg.Size = New System.Drawing.Size(554, 216)
-        Me.dg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("dg.Styles"))
+        Me.dg.Rows.DefaultSize = 21
+        Me.dg.Size = New System.Drawing.Size(544, 180)
+        Me.dg.StyleInfo = resources.GetString("dg.StyleInfo")
         Me.dg.TabIndex = 26
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 156)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 180)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 191
         Me.btnEliminar1.Text = "Eliminar"
@@ -162,9 +163,9 @@ Public Class frmMUsuarioporRol
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 156)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 180)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 190
         Me.btnConsultar1.Text = "Consultar"
@@ -173,9 +174,9 @@ Public Class frmMUsuarioporRol
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 156)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 180)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 189
         Me.btnModificar1.Text = "Modificar"
@@ -184,9 +185,9 @@ Public Class frmMUsuarioporRol
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 156)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 180)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 188
         Me.btnAgregar1.Text = "Agregar"
@@ -195,7 +196,7 @@ Public Class frmMUsuarioporRol
         '
         'frmMUsuarioporRol
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(600, 451)
         Me.Controls.Add(Me.btnEliminar1)
@@ -235,7 +236,7 @@ Public Class frmMUsuarioporRol
             dg.Cols.Item(4).Width = 200
             dg.Cols.Item(5).Width = 200
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -267,7 +268,7 @@ Public Class frmMUsuarioporRol
             ofrm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -287,7 +288,7 @@ Public Class frmMUsuarioporRol
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -301,7 +302,7 @@ Public Class frmMUsuarioporRol
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -323,7 +324,7 @@ Public Class frmMUsuarioporRol
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -349,7 +350,13 @@ Public Class frmMUsuarioporRol
             dg.Cols.Item(4).Width = 200
             dg.Cols.Item(5).Width = 200
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMUsuarioporRol_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

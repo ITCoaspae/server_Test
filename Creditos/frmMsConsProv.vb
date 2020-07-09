@@ -110,6 +110,7 @@ Public Class frmMsConsProv
     Friend WithEvents txtCasoEspecial As System.Windows.Forms.TextBox
     Friend WithEvents txtEstado As System.Windows.Forms.TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMsConsProv))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -220,10 +221,10 @@ Public Class frmMsConsProv
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(23, 63)
+        Me.TabControl1.Location = New System.Drawing.Point(28, 73)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(760, 641)
+        Me.TabControl1.Size = New System.Drawing.Size(912, 739)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
@@ -232,49 +233,39 @@ Public Class frmMsConsProv
         Me.TabPage1.Controls.Add(Me.Label20)
         Me.TabPage1.Controls.Add(Me.fg1)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(752, 615)
+        Me.TabPage1.Size = New System.Drawing.Size(904, 710)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Saldos - Movimientos"
         '
         'Label20
         '
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(5, 418)
+        Me.Label20.Location = New System.Drawing.Point(6, 482)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(200, 16)
+        Me.Label20.Size = New System.Drawing.Size(240, 19)
         Me.Label20.TabIndex = 7
         Me.Label20.Text = "Movimientos:"
         '
         'fg1
         '
-        Me.fg1.AllowUserResizing = C1.Win.C1FlexGrid.Classic.AllowUserResizeSettings.flexResizeColumns
-        Me.fg1.BackColor = System.Drawing.SystemColors.Window
         Me.fg1.BackColorAlternate = System.Drawing.Color.White
-        Me.fg1.BackColorBkg = System.Drawing.SystemColors.AppWorkspace
         Me.fg1.BackColorFixed = System.Drawing.Color.Teal
-        Me.fg1.BackColorSel = System.Drawing.SystemColors.Highlight
         Me.fg1.Cols = 2
         Me.fg1.ColumnInfo = "2,1,0,0,0,85,Columns:0{Width:18;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        'Me.fg1.ExplorerBar = CType(((C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.flexExSort Or C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.flexExMove) _
-        '    Or C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.4),C1.Win.C1FlexGrid.Classic.ExplorerBarSettings)
-        Me.fg1.ForeColorFixed = System.Drawing.SystemColors.ControlText
-        Me.fg1.ForeColorSel = System.Drawing.SystemColors.HighlightText
-        Me.fg1.GridColor = System.Drawing.SystemColors.Control
         Me.fg1.GridColorFixed = System.Drawing.SystemColors.ControlDark
-        Me.fg1.Location = New System.Drawing.Point(0, 437)
+        Me.fg1.Location = New System.Drawing.Point(0, 504)
         Me.fg1.Name = "fg1"
         Me.fg1.NodeClosedPicture = Nothing
         Me.fg1.NodeOpenPicture = Nothing
-        Me.fg1.OutlineBar = C1.Win.C1FlexGrid.Classic.OutlineBarSettings.flexOutlineBarSimple
         Me.fg1.OutlineCol = -1
         Me.fg1.Rows = 2
         Me.fg1.SheetBorder = System.Drawing.SystemColors.WindowText
-        Me.fg1.Size = New System.Drawing.Size(736, 175)
+        Me.fg1.Size = New System.Drawing.Size(883, 202)
+        Me.fg1.StyleInfo = resources.GetString("fg1.StyleInfo")
         Me.fg1.TabIndex = 6
         Me.fg1.TreeColor = System.Drawing.Color.DarkGray
-        Me.fg1.WallPaper = Nothing
         '
         'GroupBox1
         '
@@ -344,9 +335,9 @@ Public Class frmMsConsProv
         Me.GroupBox1.Controls.Add(Me.txtCodPrestamo)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 9)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(736, 407)
+        Me.GroupBox1.Size = New System.Drawing.Size(883, 470)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
@@ -356,9 +347,9 @@ Public Class frmMsConsProv
         Me.lblArreglo.BackColor = System.Drawing.Color.Teal
         Me.lblArreglo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblArreglo.ForeColor = System.Drawing.Color.White
-        Me.lblArreglo.Location = New System.Drawing.Point(586, 355)
+        Me.lblArreglo.Location = New System.Drawing.Point(703, 410)
         Me.lblArreglo.Name = "lblArreglo"
-        Me.lblArreglo.Size = New System.Drawing.Size(52, 13)
+        Me.lblArreglo.Size = New System.Drawing.Size(66, 17)
         Me.lblArreglo.TabIndex = 208
         Me.lblArreglo.Text = "Label34"
         '
@@ -368,11 +359,11 @@ Public Class frmMsConsProv
         Me.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEstado.ForeColor = System.Drawing.Color.White
-        Me.txtEstado.Location = New System.Drawing.Point(432, 352)
+        Me.txtEstado.Location = New System.Drawing.Point(518, 406)
         Me.txtEstado.Multiline = True
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.ReadOnly = True
-        Me.txtEstado.Size = New System.Drawing.Size(144, 16)
+        Me.txtEstado.Size = New System.Drawing.Size(173, 19)
         Me.txtEstado.TabIndex = 207
         '
         'txtCasoEspecial
@@ -381,10 +372,10 @@ Public Class frmMsConsProv
         Me.txtCasoEspecial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCasoEspecial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCasoEspecial.ForeColor = System.Drawing.Color.Red
-        Me.txtCasoEspecial.Location = New System.Drawing.Point(13, 324)
+        Me.txtCasoEspecial.Location = New System.Drawing.Point(16, 374)
         Me.txtCasoEspecial.Multiline = True
         Me.txtCasoEspecial.Name = "txtCasoEspecial"
-        Me.txtCasoEspecial.Size = New System.Drawing.Size(715, 24)
+        Me.txtCasoEspecial.Size = New System.Drawing.Size(858, 28)
         Me.txtCasoEspecial.TabIndex = 206
         Me.txtCasoEspecial.Visible = False
         '
@@ -396,24 +387,24 @@ Public Class frmMsConsProv
         Me.c1nCuota.CustomFormat = "#0.00"
         Me.c1nCuota.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nCuota.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.c1nCuota.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.c1nCuota.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.c1nCuota.Location = New System.Drawing.Point(582, 149)
+        Me.c1nCuota.Location = New System.Drawing.Point(698, 172)
         Me.c1nCuota.Name = "c1nCuota"
         Me.c1nCuota.ReadOnly = True
-        Me.c1nCuota.ShowDropDownButton = False
-        Me.c1nCuota.ShowUpDownButtons = False
-        Me.c1nCuota.Size = New System.Drawing.Size(146, 21)
+        Me.c1nCuota.Size = New System.Drawing.Size(176, 26)
         Me.c1nCuota.TabIndex = 205
         Me.c1nCuota.Tag = Nothing
         Me.c1nCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.c1nCuota.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nCuota.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label33
         '
         Me.Label33.BackColor = System.Drawing.Color.White
-        Me.Label33.Location = New System.Drawing.Point(488, 147)
+        Me.Label33.Location = New System.Drawing.Point(586, 170)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(56, 16)
+        Me.Label33.Size = New System.Drawing.Size(67, 18)
         Me.Label33.TabIndex = 204
         Me.Label33.Text = "Cuota:"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -422,19 +413,19 @@ Public Class frmMsConsProv
         '
         Me.txtFechaUltMov.BackColor = System.Drawing.Color.White
         Me.txtFechaUltMov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFechaUltMov.Location = New System.Drawing.Point(80, 175)
+        Me.txtFechaUltMov.Location = New System.Drawing.Point(96, 202)
         Me.txtFechaUltMov.MaxLength = 8
         Me.txtFechaUltMov.Name = "txtFechaUltMov"
         Me.txtFechaUltMov.ReadOnly = True
-        Me.txtFechaUltMov.Size = New System.Drawing.Size(146, 20)
+        Me.txtFechaUltMov.Size = New System.Drawing.Size(175, 22)
         Me.txtFechaUltMov.TabIndex = 203
         '
         'Label32
         '
         Me.Label32.BackColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(10, 177)
+        Me.Label32.Location = New System.Drawing.Point(12, 204)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(66, 16)
+        Me.Label32.Size = New System.Drawing.Size(79, 19)
         Me.Label32.TabIndex = 202
         Me.Label32.Text = "Úlimo Pago:"
         '
@@ -446,24 +437,24 @@ Public Class frmMsConsProv
         Me.txtMontoGarantia.CustomFormat = "#0.00"
         Me.txtMontoGarantia.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMontoGarantia.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtMontoGarantia.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtMontoGarantia.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtMontoGarantia.Location = New System.Drawing.Point(582, 122)
+        Me.txtMontoGarantia.Location = New System.Drawing.Point(698, 141)
         Me.txtMontoGarantia.Name = "txtMontoGarantia"
         Me.txtMontoGarantia.ReadOnly = True
-        Me.txtMontoGarantia.ShowDropDownButton = False
-        Me.txtMontoGarantia.ShowUpDownButtons = False
-        Me.txtMontoGarantia.Size = New System.Drawing.Size(146, 21)
+        Me.txtMontoGarantia.Size = New System.Drawing.Size(176, 26)
         Me.txtMontoGarantia.TabIndex = 201
         Me.txtMontoGarantia.Tag = Nothing
         Me.txtMontoGarantia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtMontoGarantia.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtMontoGarantia.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label31
         '
         Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.Location = New System.Drawing.Point(488, 121)
+        Me.Label31.Location = New System.Drawing.Point(586, 140)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(88, 16)
+        Me.Label31.Size = New System.Drawing.Size(105, 18)
         Me.Label31.TabIndex = 200
         Me.Label31.Text = "Monto Garantía:"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -476,26 +467,26 @@ Public Class frmMsConsProv
         Me.txtDiaPago.CustomFormat = "#,##0"
         Me.txtDiaPago.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiaPago.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtDiaPago.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtDiaPago.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtDiaPago.Location = New System.Drawing.Point(80, 121)
+        Me.txtDiaPago.Location = New System.Drawing.Point(96, 140)
         Me.txtDiaPago.Name = "txtDiaPago"
         Me.txtDiaPago.ReadOnly = True
-        Me.txtDiaPago.ShowDropDownButton = False
-        Me.txtDiaPago.ShowUpDownButtons = False
-        Me.txtDiaPago.Size = New System.Drawing.Size(146, 21)
+        Me.txtDiaPago.Size = New System.Drawing.Size(175, 26)
         Me.txtDiaPago.TabIndex = 199
         Me.txtDiaPago.Tag = Nothing
         Me.txtDiaPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtDiaPago.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtDiaPago.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label30
         '
         Me.Label30.BackColor = System.Drawing.Color.White
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.Black
-        Me.Label30.Location = New System.Drawing.Point(10, 124)
+        Me.Label30.Location = New System.Drawing.Point(12, 143)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(56, 16)
+        Me.Label30.Size = New System.Drawing.Size(67, 19)
         Me.Label30.TabIndex = 198
         Me.Label30.Text = "Día Pago:"
         '
@@ -507,24 +498,24 @@ Public Class frmMsConsProv
         Me.txtPlazo.CustomFormat = "#,##0.00"
         Me.txtPlazo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPlazo.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtPlazo.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtPlazo.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtPlazo.Location = New System.Drawing.Point(338, 94)
+        Me.txtPlazo.Location = New System.Drawing.Point(406, 108)
         Me.txtPlazo.Name = "txtPlazo"
         Me.txtPlazo.ReadOnly = True
-        Me.txtPlazo.ShowDropDownButton = False
-        Me.txtPlazo.ShowUpDownButtons = False
-        Me.txtPlazo.Size = New System.Drawing.Size(144, 21)
+        Me.txtPlazo.Size = New System.Drawing.Size(172, 27)
         Me.txtPlazo.TabIndex = 197
         Me.txtPlazo.Tag = Nothing
         Me.txtPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtPlazo.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtPlazo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label29
         '
         Me.Label29.BackColor = System.Drawing.Color.White
-        Me.Label29.Location = New System.Drawing.Point(232, 94)
+        Me.Label29.Location = New System.Drawing.Point(278, 108)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(44, 16)
+        Me.Label29.Size = New System.Drawing.Size(53, 19)
         Me.Label29.TabIndex = 196
         Me.Label29.Text = "Plazo:"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -533,11 +524,11 @@ Public Class frmMsConsProv
         '
         Me.txtFechaVencimiento.BackColor = System.Drawing.Color.White
         Me.txtFechaVencimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFechaVencimiento.Location = New System.Drawing.Point(338, 68)
+        Me.txtFechaVencimiento.Location = New System.Drawing.Point(406, 78)
         Me.txtFechaVencimiento.MaxLength = 8
         Me.txtFechaVencimiento.Name = "txtFechaVencimiento"
         Me.txtFechaVencimiento.ReadOnly = True
-        Me.txtFechaVencimiento.Size = New System.Drawing.Size(144, 20)
+        Me.txtFechaVencimiento.Size = New System.Drawing.Size(172, 22)
         Me.txtFechaVencimiento.TabIndex = 195
         '
         'Label28
@@ -545,9 +536,9 @@ Public Class frmMsConsProv
         Me.Label28.BackColor = System.Drawing.Color.White
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Black
-        Me.Label28.Location = New System.Drawing.Point(232, 68)
+        Me.Label28.Location = New System.Drawing.Point(278, 78)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(96, 16)
+        Me.Label28.Size = New System.Drawing.Size(116, 19)
         Me.Label28.TabIndex = 194
         Me.Label28.Text = "Fec. Vencimiento:"
         '
@@ -559,24 +550,24 @@ Public Class frmMsConsProv
         Me.txtTasaInt.CustomFormat = "#,##0.00"
         Me.txtTasaInt.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTasaInt.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtTasaInt.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtTasaInt.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtTasaInt.Location = New System.Drawing.Point(80, 94)
+        Me.txtTasaInt.Location = New System.Drawing.Point(96, 108)
         Me.txtTasaInt.Name = "txtTasaInt"
         Me.txtTasaInt.ReadOnly = True
-        Me.txtTasaInt.ShowDropDownButton = False
-        Me.txtTasaInt.ShowUpDownButtons = False
-        Me.txtTasaInt.Size = New System.Drawing.Size(146, 21)
+        Me.txtTasaInt.Size = New System.Drawing.Size(175, 27)
         Me.txtTasaInt.TabIndex = 193
         Me.txtTasaInt.Tag = Nothing
         Me.txtTasaInt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtTasaInt.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtTasaInt.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label27
         '
         Me.Label27.BackColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(10, 94)
+        Me.Label27.Location = New System.Drawing.Point(12, 108)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(56, 16)
+        Me.Label27.Size = New System.Drawing.Size(67, 19)
         Me.Label27.TabIndex = 192
         Me.Label27.Text = "Tasa Int.:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -585,19 +576,19 @@ Public Class frmMsConsProv
         '
         Me.txtFechaOtorgamiento.BackColor = System.Drawing.Color.White
         Me.txtFechaOtorgamiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFechaOtorgamiento.Location = New System.Drawing.Point(338, 42)
+        Me.txtFechaOtorgamiento.Location = New System.Drawing.Point(406, 48)
         Me.txtFechaOtorgamiento.MaxLength = 8
         Me.txtFechaOtorgamiento.Name = "txtFechaOtorgamiento"
         Me.txtFechaOtorgamiento.ReadOnly = True
-        Me.txtFechaOtorgamiento.Size = New System.Drawing.Size(144, 20)
+        Me.txtFechaOtorgamiento.Size = New System.Drawing.Size(172, 22)
         Me.txtFechaOtorgamiento.TabIndex = 191
         '
         'Label26
         '
         Me.Label26.BackColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(227, 46)
+        Me.Label26.Location = New System.Drawing.Point(272, 53)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(112, 16)
+        Me.Label26.Size = New System.Drawing.Size(135, 19)
         Me.Label26.TabIndex = 190
         Me.Label26.Text = "Fecha Otorgamiento:"
         '
@@ -607,18 +598,18 @@ Public Class frmMsConsProv
         Me.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCategoria.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCategoria.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCategoria.Location = New System.Drawing.Point(80, 42)
+        Me.txtCategoria.Location = New System.Drawing.Point(96, 48)
         Me.txtCategoria.Name = "txtCategoria"
         Me.txtCategoria.ReadOnly = True
-        Me.txtCategoria.Size = New System.Drawing.Size(146, 20)
+        Me.txtCategoria.Size = New System.Drawing.Size(175, 23)
         Me.txtCategoria.TabIndex = 189
         '
         'Label25
         '
         Me.Label25.BackColor = System.Drawing.Color.White
-        Me.Label25.Location = New System.Drawing.Point(10, 39)
+        Me.Label25.Location = New System.Drawing.Point(12, 45)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(64, 16)
+        Me.Label25.Size = New System.Drawing.Size(77, 18)
         Me.Label25.TabIndex = 188
         Me.Label25.Text = "Categoría:"
         '
@@ -628,21 +619,21 @@ Public Class frmMsConsProv
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMensaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMensaje.ForeColor = System.Drawing.Color.Navy
-        Me.txtMensaje.Location = New System.Drawing.Point(13, 294)
+        Me.txtMensaje.Location = New System.Drawing.Point(16, 339)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
-        Me.txtMensaje.Size = New System.Drawing.Size(715, 24)
+        Me.txtMensaje.Size = New System.Drawing.Size(858, 28)
         Me.txtMensaje.TabIndex = 187
         '
         'txtObs
         '
         Me.txtObs.BackColor = System.Drawing.Color.White
-        Me.txtObs.Location = New System.Drawing.Point(8, 374)
+        Me.txtObs.Location = New System.Drawing.Point(10, 432)
         Me.txtObs.MaxLength = 0
         Me.txtObs.Multiline = True
         Me.txtObs.Name = "txtObs"
         Me.txtObs.ReadOnly = True
-        Me.txtObs.Size = New System.Drawing.Size(720, 27)
+        Me.txtObs.Size = New System.Drawing.Size(864, 31)
         Me.txtObs.TabIndex = 186
         '
         'Label24
@@ -650,9 +641,9 @@ Public Class frmMsConsProv
         Me.Label24.BackColor = System.Drawing.Color.White
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(8, 355)
+        Me.Label24.Location = New System.Drawing.Point(10, 410)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(96, 16)
+        Me.Label24.Size = New System.Drawing.Size(115, 18)
         Me.Label24.TabIndex = 185
         Me.Label24.Text = "Observaciones:"
         '
@@ -664,24 +655,24 @@ Public Class frmMsConsProv
         Me.c1nTotal.CustomFormat = "#0.00"
         Me.c1nTotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c1nTotal.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.c1nTotal.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.c1nTotal.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.c1nTotal.Location = New System.Drawing.Point(338, 175)
+        Me.c1nTotal.Location = New System.Drawing.Point(406, 202)
         Me.c1nTotal.Name = "c1nTotal"
         Me.c1nTotal.ReadOnly = True
-        Me.c1nTotal.ShowDropDownButton = False
-        Me.c1nTotal.ShowUpDownButtons = False
-        Me.c1nTotal.Size = New System.Drawing.Size(144, 21)
+        Me.c1nTotal.Size = New System.Drawing.Size(172, 26)
         Me.c1nTotal.TabIndex = 184
         Me.c1nTotal.Tag = Nothing
         Me.c1nTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.c1nTotal.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nTotal.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label23
         '
         Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(232, 177)
+        Me.Label23.Location = New System.Drawing.Point(278, 204)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(40, 16)
+        Me.Label23.Size = New System.Drawing.Size(48, 19)
         Me.Label23.TabIndex = 183
         Me.Label23.Text = "Total:"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -692,17 +683,17 @@ Public Class frmMsConsProv
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(230, 16)
+        Me.txtNoSocio.Location = New System.Drawing.Point(276, 18)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(72, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(86, 23)
         Me.txtNoSocio.TabIndex = 182
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(144, 16)
+        Me.Label2.Location = New System.Drawing.Point(173, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 181
         Me.Label2.Text = "No. Asociado:"
         '
@@ -714,24 +705,24 @@ Public Class frmMsConsProv
         Me.txtSaldoOtros.CustomFormat = "#,##0.00"
         Me.txtSaldoOtros.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSaldoOtros.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSaldoOtros.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSaldoOtros.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSaldoOtros.Location = New System.Drawing.Point(582, 267)
+        Me.txtSaldoOtros.Location = New System.Drawing.Point(698, 308)
         Me.txtSaldoOtros.Name = "txtSaldoOtros"
         Me.txtSaldoOtros.ReadOnly = True
-        Me.txtSaldoOtros.ShowDropDownButton = False
-        Me.txtSaldoOtros.ShowUpDownButtons = False
-        Me.txtSaldoOtros.Size = New System.Drawing.Size(146, 21)
+        Me.txtSaldoOtros.Size = New System.Drawing.Size(176, 27)
         Me.txtSaldoOtros.TabIndex = 166
         Me.txtSaldoOtros.Tag = Nothing
         Me.txtSaldoOtros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSaldoOtros.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSaldoOtros.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label19
         '
         Me.Label19.BackColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(488, 267)
+        Me.Label19.Location = New System.Drawing.Point(586, 308)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(72, 16)
+        Me.Label19.Size = New System.Drawing.Size(86, 19)
         Me.Label19.TabIndex = 165
         Me.Label19.Text = "Otros:"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -739,9 +730,9 @@ Public Class frmMsConsProv
         'Label18
         '
         Me.Label18.BackColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(232, 267)
+        Me.Label18.Location = New System.Drawing.Point(278, 308)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(96, 16)
+        Me.Label18.Size = New System.Drawing.Size(116, 19)
         Me.Label18.TabIndex = 164
         Me.Label18.Text = "Comisión Manejo:"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -754,17 +745,17 @@ Public Class frmMsConsProv
         Me.txtComisionxManejo.CustomFormat = "#,##0.00"
         Me.txtComisionxManejo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtComisionxManejo.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtComisionxManejo.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtComisionxManejo.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtComisionxManejo.Location = New System.Drawing.Point(338, 267)
+        Me.txtComisionxManejo.Location = New System.Drawing.Point(406, 308)
         Me.txtComisionxManejo.Name = "txtComisionxManejo"
         Me.txtComisionxManejo.ReadOnly = True
-        Me.txtComisionxManejo.ShowDropDownButton = False
-        Me.txtComisionxManejo.ShowUpDownButtons = False
-        Me.txtComisionxManejo.Size = New System.Drawing.Size(144, 21)
+        Me.txtComisionxManejo.Size = New System.Drawing.Size(172, 27)
         Me.txtComisionxManejo.TabIndex = 163
         Me.txtComisionxManejo.Tag = Nothing
         Me.txtComisionxManejo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtComisionxManejo.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtComisionxManejo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtAhorro
         '
@@ -774,17 +765,17 @@ Public Class frmMsConsProv
         Me.txtAhorro.CustomFormat = "#,##0.00"
         Me.txtAhorro.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAhorro.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtAhorro.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtAhorro.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtAhorro.Location = New System.Drawing.Point(80, 267)
+        Me.txtAhorro.Location = New System.Drawing.Point(96, 308)
         Me.txtAhorro.Name = "txtAhorro"
         Me.txtAhorro.ReadOnly = True
-        Me.txtAhorro.ShowDropDownButton = False
-        Me.txtAhorro.ShowUpDownButtons = False
-        Me.txtAhorro.Size = New System.Drawing.Size(146, 21)
+        Me.txtAhorro.Size = New System.Drawing.Size(175, 27)
         Me.txtAhorro.TabIndex = 162
         Me.txtAhorro.Tag = Nothing
         Me.txtAhorro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtAhorro.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtAhorro.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtAportacion
         '
@@ -794,17 +785,17 @@ Public Class frmMsConsProv
         Me.txtAportacion.CustomFormat = "#,##0.00"
         Me.txtAportacion.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAportacion.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtAportacion.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtAportacion.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtAportacion.Location = New System.Drawing.Point(582, 240)
+        Me.txtAportacion.Location = New System.Drawing.Point(698, 277)
         Me.txtAportacion.Name = "txtAportacion"
         Me.txtAportacion.ReadOnly = True
-        Me.txtAportacion.ShowDropDownButton = False
-        Me.txtAportacion.ShowUpDownButtons = False
-        Me.txtAportacion.Size = New System.Drawing.Size(148, 21)
+        Me.txtAportacion.Size = New System.Drawing.Size(178, 26)
         Me.txtAportacion.TabIndex = 161
         Me.txtAportacion.Tag = Nothing
         Me.txtAportacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtAportacion.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtAportacion.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtSeguroDesempleo
         '
@@ -814,17 +805,17 @@ Public Class frmMsConsProv
         Me.txtSeguroDesempleo.CustomFormat = "#,##0.00"
         Me.txtSeguroDesempleo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSeguroDesempleo.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSeguroDesempleo.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSeguroDesempleo.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSeguroDesempleo.Location = New System.Drawing.Point(338, 240)
+        Me.txtSeguroDesempleo.Location = New System.Drawing.Point(406, 277)
         Me.txtSeguroDesempleo.Name = "txtSeguroDesempleo"
         Me.txtSeguroDesempleo.ReadOnly = True
-        Me.txtSeguroDesempleo.ShowDropDownButton = False
-        Me.txtSeguroDesempleo.ShowUpDownButtons = False
-        Me.txtSeguroDesempleo.Size = New System.Drawing.Size(144, 21)
+        Me.txtSeguroDesempleo.Size = New System.Drawing.Size(172, 26)
         Me.txtSeguroDesempleo.TabIndex = 160
         Me.txtSeguroDesempleo.Tag = Nothing
         Me.txtSeguroDesempleo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSeguroDesempleo.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSeguroDesempleo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtSeguroVida
         '
@@ -834,17 +825,17 @@ Public Class frmMsConsProv
         Me.txtSeguroVida.CustomFormat = "#,##0.00"
         Me.txtSeguroVida.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSeguroVida.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSeguroVida.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSeguroVida.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSeguroVida.Location = New System.Drawing.Point(80, 240)
+        Me.txtSeguroVida.Location = New System.Drawing.Point(96, 277)
         Me.txtSeguroVida.Name = "txtSeguroVida"
         Me.txtSeguroVida.ReadOnly = True
-        Me.txtSeguroVida.ShowDropDownButton = False
-        Me.txtSeguroVida.ShowUpDownButtons = False
-        Me.txtSeguroVida.Size = New System.Drawing.Size(146, 21)
+        Me.txtSeguroVida.Size = New System.Drawing.Size(175, 26)
         Me.txtSeguroVida.TabIndex = 159
         Me.txtSeguroVida.Tag = Nothing
         Me.txtSeguroVida.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSeguroVida.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSeguroVida.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtSeguroDanios
         '
@@ -854,17 +845,17 @@ Public Class frmMsConsProv
         Me.txtSeguroDanios.CustomFormat = "#,##0.00"
         Me.txtSeguroDanios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSeguroDanios.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSeguroDanios.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSeguroDanios.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSeguroDanios.Location = New System.Drawing.Point(582, 213)
+        Me.txtSeguroDanios.Location = New System.Drawing.Point(698, 246)
         Me.txtSeguroDanios.Name = "txtSeguroDanios"
         Me.txtSeguroDanios.ReadOnly = True
-        Me.txtSeguroDanios.ShowDropDownButton = False
-        Me.txtSeguroDanios.ShowUpDownButtons = False
-        Me.txtSeguroDanios.Size = New System.Drawing.Size(146, 21)
+        Me.txtSeguroDanios.Size = New System.Drawing.Size(176, 26)
         Me.txtSeguroDanios.TabIndex = 158
         Me.txtSeguroDanios.Tag = Nothing
         Me.txtSeguroDanios.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSeguroDanios.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSeguroDanios.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtSeguroDeuda
         '
@@ -874,17 +865,17 @@ Public Class frmMsConsProv
         Me.txtSeguroDeuda.CustomFormat = "#,##0.00"
         Me.txtSeguroDeuda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSeguroDeuda.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSeguroDeuda.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSeguroDeuda.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSeguroDeuda.Location = New System.Drawing.Point(338, 213)
+        Me.txtSeguroDeuda.Location = New System.Drawing.Point(406, 246)
         Me.txtSeguroDeuda.Name = "txtSeguroDeuda"
         Me.txtSeguroDeuda.ReadOnly = True
-        Me.txtSeguroDeuda.ShowDropDownButton = False
-        Me.txtSeguroDeuda.ShowUpDownButtons = False
-        Me.txtSeguroDeuda.Size = New System.Drawing.Size(144, 21)
+        Me.txtSeguroDeuda.Size = New System.Drawing.Size(172, 26)
         Me.txtSeguroDeuda.TabIndex = 157
         Me.txtSeguroDeuda.Tag = Nothing
         Me.txtSeguroDeuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSeguroDeuda.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSeguroDeuda.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtIntereses
         '
@@ -894,17 +885,17 @@ Public Class frmMsConsProv
         Me.txtIntereses.CustomFormat = "#,##0.00"
         Me.txtIntereses.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIntereses.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtIntereses.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtIntereses.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtIntereses.Location = New System.Drawing.Point(80, 213)
+        Me.txtIntereses.Location = New System.Drawing.Point(96, 246)
         Me.txtIntereses.Name = "txtIntereses"
         Me.txtIntereses.ReadOnly = True
-        Me.txtIntereses.ShowDropDownButton = False
-        Me.txtIntereses.ShowUpDownButtons = False
-        Me.txtIntereses.Size = New System.Drawing.Size(146, 21)
+        Me.txtIntereses.Size = New System.Drawing.Size(175, 26)
         Me.txtIntereses.TabIndex = 156
         Me.txtIntereses.Tag = Nothing
         Me.txtIntereses.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtIntereses.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtIntereses.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtIntPag
         '
@@ -914,24 +905,24 @@ Public Class frmMsConsProv
         Me.txtIntPag.CustomFormat = "#,##0.00"
         Me.txtIntPag.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIntPag.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtIntPag.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtIntPag.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtIntPag.Location = New System.Drawing.Point(582, 95)
+        Me.txtIntPag.Location = New System.Drawing.Point(698, 110)
         Me.txtIntPag.Name = "txtIntPag"
         Me.txtIntPag.ReadOnly = True
-        Me.txtIntPag.ShowDropDownButton = False
-        Me.txtIntPag.ShowUpDownButtons = False
-        Me.txtIntPag.Size = New System.Drawing.Size(146, 21)
+        Me.txtIntPag.Size = New System.Drawing.Size(176, 26)
         Me.txtIntPag.TabIndex = 155
         Me.txtIntPag.Tag = Nothing
         Me.txtIntPag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtIntPag.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtIntPag.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label17
         '
         Me.Label17.BackColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(232, 245)
+        Me.Label17.Location = New System.Drawing.Point(278, 283)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(112, 16)
+        Me.Label17.Size = New System.Drawing.Size(135, 18)
         Me.Label17.TabIndex = 154
         Me.Label17.Text = "Seguro Desempleo:"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -939,9 +930,9 @@ Public Class frmMsConsProv
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(10, 267)
+        Me.Label12.Location = New System.Drawing.Point(12, 308)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 16)
+        Me.Label12.Size = New System.Drawing.Size(77, 19)
         Me.Label12.TabIndex = 153
         Me.Label12.Text = "Ahorro:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -949,9 +940,9 @@ Public Class frmMsConsProv
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(488, 245)
+        Me.Label11.Location = New System.Drawing.Point(586, 283)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(96, 16)
+        Me.Label11.Size = New System.Drawing.Size(115, 18)
         Me.Label11.TabIndex = 152
         Me.Label11.Text = "Aportación:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -959,9 +950,9 @@ Public Class frmMsConsProv
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(10, 245)
+        Me.Label10.Location = New System.Drawing.Point(12, 283)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 16)
+        Me.Label10.Size = New System.Drawing.Size(86, 18)
         Me.Label10.TabIndex = 151
         Me.Label10.Text = "Seg. de Vida:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -969,9 +960,9 @@ Public Class frmMsConsProv
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(488, 218)
+        Me.Label9.Location = New System.Drawing.Point(586, 252)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 16)
+        Me.Label9.Size = New System.Drawing.Size(115, 18)
         Me.Label9.TabIndex = 150
         Me.Label9.Text = "Seguro de Daños:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -979,9 +970,9 @@ Public Class frmMsConsProv
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(232, 213)
+        Me.Label8.Location = New System.Drawing.Point(278, 246)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(96, 16)
+        Me.Label8.Size = New System.Drawing.Size(116, 18)
         Me.Label8.TabIndex = 149
         Me.Label8.Text = "Seguro de Deuda:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -989,9 +980,9 @@ Public Class frmMsConsProv
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(10, 213)
+        Me.Label7.Location = New System.Drawing.Point(12, 246)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 16)
+        Me.Label7.Size = New System.Drawing.Size(86, 18)
         Me.Label7.TabIndex = 148
         Me.Label7.Text = "Intereses:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -999,9 +990,9 @@ Public Class frmMsConsProv
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(488, 94)
+        Me.Label1.Location = New System.Drawing.Point(586, 108)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 16)
+        Me.Label1.Size = New System.Drawing.Size(86, 19)
         Me.Label1.TabIndex = 147
         Me.Label1.Text = "Int. Pagados:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1014,17 +1005,17 @@ Public Class frmMsConsProv
         Me.txtMonto.CustomFormat = "#0.00"
         Me.txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtMonto.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtMonto.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtMonto.Location = New System.Drawing.Point(338, 121)
+        Me.txtMonto.Location = New System.Drawing.Point(406, 140)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.ReadOnly = True
-        Me.txtMonto.ShowDropDownButton = False
-        Me.txtMonto.ShowUpDownButtons = False
-        Me.txtMonto.Size = New System.Drawing.Size(144, 21)
+        Me.txtMonto.Size = New System.Drawing.Size(172, 26)
         Me.txtMonto.TabIndex = 146
         Me.txtMonto.Tag = Nothing
         Me.txtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtMonto.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtIntMora
         '
@@ -1034,17 +1025,17 @@ Public Class frmMsConsProv
         Me.txtIntMora.CustomFormat = "#0.00"
         Me.txtIntMora.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIntMora.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtIntMora.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtIntMora.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtIntMora.Location = New System.Drawing.Point(338, 148)
+        Me.txtIntMora.Location = New System.Drawing.Point(406, 171)
         Me.txtIntMora.Name = "txtIntMora"
         Me.txtIntMora.ReadOnly = True
-        Me.txtIntMora.ShowDropDownButton = False
-        Me.txtIntMora.ShowUpDownButtons = False
-        Me.txtIntMora.Size = New System.Drawing.Size(144, 21)
+        Me.txtIntMora.Size = New System.Drawing.Size(172, 26)
         Me.txtIntMora.TabIndex = 144
         Me.txtIntMora.Tag = Nothing
         Me.txtIntMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtIntMora.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtIntMora.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtCapitalMora
         '
@@ -1054,17 +1045,17 @@ Public Class frmMsConsProv
         Me.txtCapitalMora.CustomFormat = "#,##0.00"
         Me.txtCapitalMora.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCapitalMora.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtCapitalMora.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtCapitalMora.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtCapitalMora.Location = New System.Drawing.Point(80, 148)
+        Me.txtCapitalMora.Location = New System.Drawing.Point(96, 171)
         Me.txtCapitalMora.Name = "txtCapitalMora"
         Me.txtCapitalMora.ReadOnly = True
-        Me.txtCapitalMora.ShowDropDownButton = False
-        Me.txtCapitalMora.ShowUpDownButtons = False
-        Me.txtCapitalMora.Size = New System.Drawing.Size(146, 21)
+        Me.txtCapitalMora.Size = New System.Drawing.Size(175, 26)
         Me.txtCapitalMora.TabIndex = 143
         Me.txtCapitalMora.Tag = Nothing
         Me.txtCapitalMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtCapitalMora.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtCapitalMora.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtSaldo
         '
@@ -1074,25 +1065,25 @@ Public Class frmMsConsProv
         Me.txtSaldo.CustomFormat = "#0.00"
         Me.txtSaldo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSaldo.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.txtSaldo.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.txtSaldo.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtSaldo.Location = New System.Drawing.Point(582, 68)
+        Me.txtSaldo.Location = New System.Drawing.Point(698, 78)
         Me.txtSaldo.Name = "txtSaldo"
         Me.txtSaldo.ReadOnly = True
-        Me.txtSaldo.ShowDropDownButton = False
-        Me.txtSaldo.ShowUpDownButtons = False
-        Me.txtSaldo.Size = New System.Drawing.Size(146, 21)
+        Me.txtSaldo.Size = New System.Drawing.Size(176, 27)
         Me.txtSaldo.TabIndex = 142
         Me.txtSaldo.Tag = Nothing
         Me.txtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtSaldo.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtSaldo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(42, 16)
+        Me.txtDui.Location = New System.Drawing.Point(50, 18)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(96, 20)
+        Me.txtDui.Size = New System.Drawing.Size(116, 24)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         Me.txtDui.Value = ""
@@ -1100,17 +1091,17 @@ Public Class frmMsConsProv
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Teal
-        Me.Panel3.Location = New System.Drawing.Point(13, 202)
+        Me.Panel3.Location = New System.Drawing.Point(16, 233)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(720, 8)
+        Me.Panel3.Size = New System.Drawing.Size(864, 9)
         Me.Panel3.TabIndex = 132
         '
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(232, 149)
+        Me.Label16.Location = New System.Drawing.Point(278, 172)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(56, 16)
+        Me.Label16.Size = New System.Drawing.Size(68, 18)
         Me.Label16.TabIndex = 125
         Me.Label16.Text = "Int.Mora:"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1120,9 +1111,9 @@ Public Class frmMsConsProv
         Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(10, 145)
+        Me.Label15.Location = New System.Drawing.Point(12, 167)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(72, 20)
+        Me.Label15.Size = New System.Drawing.Size(86, 23)
         Me.Label15.TabIndex = 122
         Me.Label15.Text = "Capital Mora:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1130,9 +1121,9 @@ Public Class frmMsConsProv
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(488, 68)
+        Me.Label13.Location = New System.Drawing.Point(586, 78)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(40, 16)
+        Me.Label13.Size = New System.Drawing.Size(48, 19)
         Me.Label13.TabIndex = 121
         Me.Label13.Text = "Saldo:"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1140,9 +1131,9 @@ Public Class frmMsConsProv
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(232, 122)
+        Me.Label6.Location = New System.Drawing.Point(278, 141)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 16)
+        Me.Label6.Size = New System.Drawing.Size(48, 18)
         Me.Label6.TabIndex = 119
         Me.Label6.Text = "Monto:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1151,11 +1142,11 @@ Public Class frmMsConsProv
         '
         Me.txtFecha1aCuota.BackColor = System.Drawing.Color.White
         Me.txtFecha1aCuota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFecha1aCuota.Location = New System.Drawing.Point(80, 68)
+        Me.txtFecha1aCuota.Location = New System.Drawing.Point(96, 78)
         Me.txtFecha1aCuota.MaxLength = 8
         Me.txtFecha1aCuota.Name = "txtFecha1aCuota"
         Me.txtFecha1aCuota.ReadOnly = True
-        Me.txtFecha1aCuota.Size = New System.Drawing.Size(146, 20)
+        Me.txtFecha1aCuota.Size = New System.Drawing.Size(175, 22)
         Me.txtFecha1aCuota.TabIndex = 118
         '
         'Label5
@@ -1163,18 +1154,18 @@ Public Class frmMsConsProv
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(10, 65)
+        Me.Label5.Location = New System.Drawing.Point(12, 75)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 16)
+        Me.Label5.Size = New System.Drawing.Size(77, 18)
         Me.Label5.TabIndex = 117
         Me.Label5.Text = "1a.Cuota:"
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(308, 16)
+        Me.Label3.Location = New System.Drawing.Point(370, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(76, 19)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Asociado:"
         '
@@ -1184,10 +1175,10 @@ Public Class frmMsConsProv
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(378, 15)
+        Me.txtAsociado.Location = New System.Drawing.Point(454, 17)
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(350, 21)
+        Me.txtAsociado.Size = New System.Drawing.Size(420, 25)
         Me.txtAsociado.TabIndex = 20
         '
         'txtCodPrestamo
@@ -1196,26 +1187,26 @@ Public Class frmMsConsProv
         Me.txtCodPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPrestamo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodPrestamo.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(582, 42)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(698, 48)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(146, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(176, 23)
         Me.txtCodPrestamo.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(488, 44)
+        Me.Label4.Location = New System.Drawing.Point(586, 51)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 16)
+        Me.Label4.Size = New System.Drawing.Size(96, 18)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Cod.Préstamo:"
         '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(6, 16)
+        Me.Label14.Location = New System.Drawing.Point(7, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(30, 16)
+        Me.Label14.Size = New System.Drawing.Size(36, 19)
         Me.Label14.TabIndex = 15
         Me.Label14.Text = "DUI:"
         '
@@ -1228,17 +1219,17 @@ Public Class frmMsConsProv
         Me.TabPage2.Controls.Add(Me.dtpR2)
         Me.TabPage2.Controls.Add(Me.dtpR1)
         Me.TabPage2.Controls.Add(Me.fg2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(752, 615)
+        Me.TabPage2.Size = New System.Drawing.Size(904, 710)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Provisiones"
         '
         'btnProv1
         '
-        Me.btnProv1.Location = New System.Drawing.Point(262, 14)
+        Me.btnProv1.Location = New System.Drawing.Point(314, 16)
         Me.btnProv1.Name = "btnProv1"
-        Me.btnProv1.Size = New System.Drawing.Size(75, 28)
+        Me.btnProv1.Size = New System.Drawing.Size(90, 32)
         Me.btnProv1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProv1.TabIndex = 239
         Me.btnProv1.Text = "Provisiones"
@@ -1248,68 +1239,59 @@ Public Class frmMsConsProv
         '
         'Label21
         '
-        Me.Label21.Location = New System.Drawing.Point(144, 24)
+        Me.Label21.Location = New System.Drawing.Point(173, 28)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(16, 16)
+        Me.Label21.Size = New System.Drawing.Size(19, 18)
         Me.Label21.TabIndex = 13
         Me.Label21.Text = "al"
         '
         'Label22
         '
-        Me.Label22.Location = New System.Drawing.Point(8, 24)
+        Me.Label22.Location = New System.Drawing.Point(10, 28)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(32, 16)
+        Me.Label22.Size = New System.Drawing.Size(38, 18)
         Me.Label22.TabIndex = 12
         Me.Label22.Text = "Del"
         '
         'dtpR2
         '
         Me.dtpR2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpR2.Location = New System.Drawing.Point(168, 20)
+        Me.dtpR2.Location = New System.Drawing.Point(202, 23)
         Me.dtpR2.Name = "dtpR2"
-        Me.dtpR2.Size = New System.Drawing.Size(88, 20)
+        Me.dtpR2.Size = New System.Drawing.Size(105, 22)
         Me.dtpR2.TabIndex = 11
         '
         'dtpR1
         '
         Me.dtpR1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpR1.Location = New System.Drawing.Point(40, 20)
+        Me.dtpR1.Location = New System.Drawing.Point(48, 23)
         Me.dtpR1.Name = "dtpR1"
-        Me.dtpR1.Size = New System.Drawing.Size(88, 20)
+        Me.dtpR1.Size = New System.Drawing.Size(106, 22)
         Me.dtpR1.TabIndex = 10
         '
         'fg2
         '
-        Me.fg2.AllowUserResizing = C1.Win.C1FlexGrid.Classic.AllowUserResizeSettings.flexResizeColumns
-        Me.fg2.BackColor = System.Drawing.SystemColors.Window
         Me.fg2.BackColorAlternate = System.Drawing.Color.WhiteSmoke
-        Me.fg2.BackColorBkg = System.Drawing.SystemColors.AppWorkspace
         Me.fg2.BackColorFixed = System.Drawing.Color.Teal
-        Me.fg2.BackColorSel = System.Drawing.SystemColors.Highlight
         Me.fg2.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:18;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        'Me.fg2.ExplorerBar = CType(((C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.flexExSort Or C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.flexExMove) _
-        '    Or C1.Win.C1FlexGrid.Classic.ExplorerBarSettings.4),C1.Win.C1FlexGrid.Classic.ExplorerBarSettings)
         Me.fg2.ForeColorFixed = System.Drawing.Color.White
-        Me.fg2.ForeColorSel = System.Drawing.SystemColors.HighlightText
-        Me.fg2.GridColor = System.Drawing.SystemColors.Control
         Me.fg2.GridColorFixed = System.Drawing.SystemColors.ControlDark
-        Me.fg2.Location = New System.Drawing.Point(11, 48)
+        Me.fg2.Location = New System.Drawing.Point(13, 55)
         Me.fg2.Name = "fg2"
         Me.fg2.NodeClosedPicture = Nothing
         Me.fg2.NodeOpenPicture = Nothing
-        Me.fg2.OutlineBar = C1.Win.C1FlexGrid.Classic.OutlineBarSettings.flexOutlineBarSimple
         Me.fg2.OutlineCol = -1
         Me.fg2.SheetBorder = System.Drawing.SystemColors.WindowText
-        Me.fg2.Size = New System.Drawing.Size(728, 555)
+        Me.fg2.Size = New System.Drawing.Size(874, 641)
+        Me.fg2.StyleInfo = resources.GetString("fg2.StyleInfo")
         Me.fg2.TabIndex = 5
         Me.fg2.TreeColor = System.Drawing.Color.DarkGray
-        Me.fg2.WallPaper = Nothing
         '
         'frmMsConsProv
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(812, 750)
+        Me.ClientSize = New System.Drawing.Size(961, 790)
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -1480,7 +1462,7 @@ Public Class frmMsConsProv
                     Encabezado()
                 End If
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+               MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
 
@@ -1505,7 +1487,7 @@ Public Class frmMsConsProv
                 txtCodPrestamo_LostFocus(sender, e)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1565,7 +1547,7 @@ Public Class frmMsConsProv
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1596,7 +1578,7 @@ Public Class frmMsConsProv
                 Me.txtNoSocio.Text = dr("NoSocio")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1614,7 +1596,8 @@ Public Class frmMsConsProv
             If sTexto = "" Then
 
             ElseIf sTexto <> "" Then
-                ds = oPrest.CargaDatosPrestamoxRango(sTexto, dtpR1.Value.Date, dtpR2.Value.Date, "Cancelada='S'", sUsuario, sPassword, sSucursal)
+                ds = oPrest.CargaDatosPrestamoxRango(sTexto, DateAdd(DateInterval.Day, -30, dtpR1.Value).ToShortDateString, dtpR2.Value.ToShortDateString, "Cancelada='S'", sUsuario, sPassword, sSucursal)
+
                 Me.Prestamo = ds
                 dr = ds.Tables(0).Rows(0)
                 Me.txtCodPrestamo.Text = IIf(IsDBNull(dr("CodPrestamo")), 0, dr("CodPrestamo"))
@@ -1711,7 +1694,7 @@ Public Class frmMsConsProv
             oPrest = Nothing
             oCred = Nothing
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1733,7 +1716,7 @@ Public Class frmMsConsProv
                 fg2.DataSource = ds.Tables("Provisiones")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

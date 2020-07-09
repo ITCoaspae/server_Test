@@ -5,6 +5,13 @@ Public Class frmMsCaDetTransfCtaContAux
     Friend WithEvents txtCodCosto As TextBox
     Friend WithEvents Label2 As Label
     Dim CCodCosto As String = ""
+    Private pDui As String, pNoCuenta As String, ofrmT As frmMCaTransfCtaContAux, pFecha As Date
+    Private selectedIndex As Integer
+    Dim contabilidad As New wrConta.wsLibContab
+    Dim credito As New wrCredito.wsLibCred
+    Dim pMontoTransferencia As Double
+        Public ctaconta1 As String
+    Public ccCuenta As String
 #Region " Código generado por el Diseñador de Windows Forms "
 
     Public Sub New()
@@ -29,7 +36,6 @@ Public Class frmMsCaDetTransfCtaContAux
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents gb As System.Windows.Forms.GroupBox
     Friend WithEvents txtCodTipo As System.Windows.Forms.TextBox
     Friend WithEvents txtCuenta As System.Windows.Forms.TextBox
     Friend WithEvents txtIdCuenta As System.Windows.Forms.TextBox
@@ -42,7 +48,6 @@ Public Class frmMsCaDetTransfCtaContAux
     Friend WithEvents btNProcesar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents Label9 As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.gb = New System.Windows.Forms.GroupBox()
         Me.txtNombCosto = New System.Windows.Forms.TextBox()
         Me.txtCodCosto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -57,101 +62,78 @@ Public Class frmMsCaDetTransfCtaContAux
         Me.cbTipoCuenta = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btNProcesar1 = New MetroFramework.Controls.MetroButton()
-        Me.gb.SuspendLayout()
         CType(Me.c1txtMonto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1txtNoCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'gb
-        '
-        Me.gb.BackColor = System.Drawing.Color.White
-        Me.gb.Controls.Add(Me.txtNombCosto)
-        Me.gb.Controls.Add(Me.txtCodCosto)
-        Me.gb.Controls.Add(Me.Label2)
-        Me.gb.Controls.Add(Me.txtCodTipo)
-        Me.gb.Controls.Add(Me.txtCuenta)
-        Me.gb.Controls.Add(Me.txtIdCuenta)
-        Me.gb.Controls.Add(Me.Label1)
-        Me.gb.Controls.Add(Me.Label4)
-        Me.gb.Controls.Add(Me.c1txtMonto)
-        Me.gb.Controls.Add(Me.c1txtNoCuenta)
-        Me.gb.Controls.Add(Me.lblCuenta)
-        Me.gb.Controls.Add(Me.cbTipoCuenta)
-        Me.gb.Controls.Add(Me.Label9)
-        Me.gb.Location = New System.Drawing.Point(28, 73)
-        Me.gb.Name = "gb"
-        Me.gb.Size = New System.Drawing.Size(688, 149)
-        Me.gb.TabIndex = 3
-        Me.gb.TabStop = False
-        '
         'txtNombCosto
         '
         Me.txtNombCosto.BackColor = System.Drawing.Color.White
-        Me.txtNombCosto.Location = New System.Drawing.Point(214, 112)
+        Me.txtNombCosto.Location = New System.Drawing.Point(240, 202)
         Me.txtNombCosto.Name = "txtNombCosto"
         Me.txtNombCosto.ReadOnly = True
         Me.txtNombCosto.Size = New System.Drawing.Size(453, 22)
-        Me.txtNombCosto.TabIndex = 115
+        Me.txtNombCosto.TabIndex = 12
         '
         'txtCodCosto
         '
         Me.txtCodCosto.BackColor = System.Drawing.Color.White
-        Me.txtCodCosto.Location = New System.Drawing.Point(120, 112)
+        Me.txtCodCosto.Location = New System.Drawing.Point(148, 202)
         Me.txtCodCosto.Name = "txtCodCosto"
         Me.txtCodCosto.ReadOnly = True
         Me.txtCodCosto.Size = New System.Drawing.Size(86, 22)
-        Me.txtCodCosto.TabIndex = 114
+        Me.txtCodCosto.TabIndex = 11
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(7, 115)
+        Me.Label2.Location = New System.Drawing.Point(23, 205)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(109, 19)
-        Me.Label2.TabIndex = 116
+        Me.Label2.TabIndex = 10
         Me.Label2.Text = "Centro Costo:"
         '
         'txtCodTipo
         '
         Me.txtCodTipo.BackColor = System.Drawing.Color.White
-        Me.txtCodTipo.Location = New System.Drawing.Point(452, 45)
+        Me.txtCodTipo.Location = New System.Drawing.Point(444, 41)
         Me.txtCodTipo.Name = "txtCodTipo"
         Me.txtCodTipo.Size = New System.Drawing.Size(58, 22)
-        Me.txtCodTipo.TabIndex = 113
+        Me.txtCodTipo.TabIndex = 0
         Me.txtCodTipo.Visible = False
         '
         'txtCuenta
         '
         Me.txtCuenta.BackColor = System.Drawing.Color.White
-        Me.txtCuenta.Location = New System.Drawing.Point(214, 78)
+        Me.txtCuenta.Location = New System.Drawing.Point(240, 174)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
         Me.txtCuenta.Size = New System.Drawing.Size(453, 22)
-        Me.txtCuenta.TabIndex = 4
+        Me.txtCuenta.TabIndex = 9
         '
         'txtIdCuenta
         '
         Me.txtIdCuenta.BackColor = System.Drawing.Color.White
-        Me.txtIdCuenta.Location = New System.Drawing.Point(120, 78)
+        Me.txtIdCuenta.Location = New System.Drawing.Point(148, 174)
         Me.txtIdCuenta.Name = "txtIdCuenta"
         Me.txtIdCuenta.ReadOnly = True
         Me.txtIdCuenta.Size = New System.Drawing.Size(86, 22)
-        Me.txtIdCuenta.TabIndex = 3
+        Me.txtIdCuenta.TabIndex = 8
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(7, 82)
+        Me.Label1.Location = New System.Drawing.Point(23, 177)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 18)
-        Me.Label1.TabIndex = 112
+        Me.Label1.Size = New System.Drawing.Size(120, 18)
+        Me.Label1.TabIndex = 7
         Me.Label1.Text = "Cuenta Contable:"
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(7, 53)
+        Me.Label4.Location = New System.Drawing.Point(23, 144)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(106, 19)
-        Me.Label4.TabIndex = 111
-        Me.Label4.Text = "Valor a transferir:"
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Monto:"
         '
         'c1txtMonto
         '
@@ -162,13 +144,13 @@ Public Class frmMsCaDetTransfCtaContAux
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1txtMonto.Location = New System.Drawing.Point(120, 47)
+        Me.c1txtMonto.Location = New System.Drawing.Point(148, 144)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
-        Me.c1txtMonto.Size = New System.Drawing.Size(215, 27)
-        Me.c1txtMonto.TabIndex = 2
+        Me.c1txtMonto.Size = New System.Drawing.Size(545, 24)
+        Me.c1txtMonto.TabIndex = 6
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
         Me.c1txtMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
@@ -177,48 +159,48 @@ Public Class frmMsCaDetTransfCtaContAux
         '
         Me.c1txtNoCuenta.BackColor = System.Drawing.Color.White
         Me.c1txtNoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtNoCuenta.Location = New System.Drawing.Point(452, 15)
+        Me.c1txtNoCuenta.Location = New System.Drawing.Point(148, 114)
         Me.c1txtNoCuenta.MaxLength = 14
         Me.c1txtNoCuenta.Name = "c1txtNoCuenta"
         Me.c1txtNoCuenta.NumericInput = False
         Me.c1txtNoCuenta.ReadOnly = True
-        Me.c1txtNoCuenta.Size = New System.Drawing.Size(215, 23)
-        Me.c1txtNoCuenta.TabIndex = 1
+        Me.c1txtNoCuenta.Size = New System.Drawing.Size(545, 24)
+        Me.c1txtNoCuenta.TabIndex = 4
         Me.c1txtNoCuenta.Tag = Nothing
         '
         'lblCuenta
         '
-        Me.lblCuenta.Location = New System.Drawing.Point(342, 18)
+        Me.lblCuenta.Location = New System.Drawing.Point(23, 115)
         Me.lblCuenta.Name = "lblCuenta"
-        Me.lblCuenta.Size = New System.Drawing.Size(103, 19)
-        Me.lblCuenta.TabIndex = 108
-        Me.lblCuenta.Text = "Cuenta Auxiliar:"
+        Me.lblCuenta.Size = New System.Drawing.Size(119, 19)
+        Me.lblCuenta.TabIndex = 3
+        Me.lblCuenta.Text = "Cuenta Asociado:"
         '
         'cbTipoCuenta
         '
         Me.cbTipoCuenta.BackColor = System.Drawing.Color.White
         Me.cbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTipoCuenta.Items.AddRange(New Object() {"Prestamos", "Ahorros", "DPF", "Otros"})
-        Me.cbTipoCuenta.Location = New System.Drawing.Point(120, 13)
+        Me.cbTipoCuenta.Items.AddRange(New Object() {"Prestamos", "Ahorros", "DPF", "Cuenta por cobrar"})
+        Me.cbTipoCuenta.Location = New System.Drawing.Point(148, 83)
         Me.cbTipoCuenta.Name = "cbTipoCuenta"
-        Me.cbTipoCuenta.Size = New System.Drawing.Size(215, 24)
-        Me.cbTipoCuenta.TabIndex = 0
+        Me.cbTipoCuenta.Size = New System.Drawing.Size(545, 24)
+        Me.cbTipoCuenta.TabIndex = 2
         '
         'Label9
         '
-        Me.Label9.Location = New System.Drawing.Point(5, 18)
+        Me.Label9.Location = New System.Drawing.Point(23, 83)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(96, 19)
-        Me.Label9.TabIndex = 107
+        Me.Label9.TabIndex = 1
         Me.Label9.Text = "Tipo Cuenta:"
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(626, 228)
+        Me.btNProcesar1.Location = New System.Drawing.Point(603, 230)
         Me.btNProcesar1.Name = "btNProcesar1"
         Me.btNProcesar1.Size = New System.Drawing.Size(90, 33)
         Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btNProcesar1.TabIndex = 154
+        Me.btNProcesar1.TabIndex = 13
         Me.btNProcesar1.Text = "Guardar"
         Me.btNProcesar1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btNProcesar1.UseSelectable = True
@@ -228,34 +210,49 @@ Public Class frmMsCaDetTransfCtaContAux
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(739, 277)
+        Me.ClientSize = New System.Drawing.Size(720, 289)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtCodCosto)
+        Me.Controls.Add(Me.txtNombCosto)
         Me.Controls.Add(Me.btNProcesar1)
-        Me.Controls.Add(Me.gb)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtCuenta)
+        Me.Controls.Add(Me.txtCodTipo)
+        Me.Controls.Add(Me.txtIdCuenta)
+        Me.Controls.Add(Me.cbTipoCuenta)
+        Me.Controls.Add(Me.c1txtNoCuenta)
+        Me.Controls.Add(Me.lblCuenta)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.c1txtMonto)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(739, 277)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(739, 257)
+        Me.MinimumSize = New System.Drawing.Size(720, 257)
         Me.Name = "frmMsCaDetTransfCtaContAux"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Detalle de Cuenta Destino"
-        Me.gb.ResumeLayout(False)
-        Me.gb.PerformLayout()
         CType(Me.c1txtMonto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1txtNoCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
-    Private pDui As String, pNoCuenta As String, ofrmT As frmMCaTransfCtaContAux, pFecha As Date
-    Private selectedIndex As Integer
-    Dim contabilidad As New wrConta.wsLibContab
-    Dim credito As New wrCredito.wsLibCred
+
 #Region "Propiedades"
+    Public Property montoTransferencia() As Double
+        Get
+            Return pMontoTransferencia
+        End Get
+        Set(value As Double)
+            pMontoTransferencia = value
+        End Set
+    End Property
     Public Property Fecha() As Date
         Get
             Return pFecha
@@ -294,12 +291,24 @@ Public Class frmMsCaDetTransfCtaContAux
         Me.cbTipoCuenta.SelectedIndex = 0
     End Sub
 
-    Private Sub c1txtNoCuenta_TextChanged(sender As Object, e As EventArgs) Handles c1txtNoCuenta.TextChanged
-
-    End Sub
 
     Private Sub cbTipoCuenta_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbTipoCuenta.SelectedIndexChanged
         selectedIndex = Me.cbTipoCuenta.SelectedIndex
+        If cbTipoCuenta.SelectedIndex = 3 Then
+            Label1.Visible = False
+            txtIdCuenta.Visible = False
+            txtCuenta.Visible = False
+            Label2.Visible = False
+            txtCodCosto.Visible = False
+            txtNombCosto.Visible = False
+        Else
+            Label1.Visible = True
+            txtIdCuenta.Visible = True
+            txtCuenta.Visible = True
+            Label2.Visible = True
+            txtCodCosto.Visible = True
+            txtNombCosto.Visible = True
+        End If
     End Sub
     Private Function validarMontoCancelar(codPrestamo As String) As Boolean
         Dim dts As New DataSet
@@ -321,17 +330,22 @@ Public Class frmMsCaDetTransfCtaContAux
     Private Sub btNProcesar1_Click(sender As Object, e As EventArgs) Handles btNProcesar1.Click
         Try
             If Me.c1txtNoCuenta.Text.Trim = "" Then
-                MessageBox.Show("El número de Cuenta no puede quedar vacío.", "Validación del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MetroFramework.MetroMessageBox.Show(Me, "El número de Cuenta no puede quedar vacío.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
                 Exit Sub
             End If
 
             If Me.c1txtMonto.Value = 0 Then
-                MessageBox.Show("El valor a transferir no puede ser cero.", "Validación del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MetroFramework.MetroMessageBox.Show(Me, "Monto a transferir no puede ser cero.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
                 Exit Sub
             End If
 
             If Me.txtIdCuenta.Text.Trim = "" Then
-                MessageBox.Show("La Cuenta Contable no puede quedar vacía.", "Validación del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MetroFramework.MetroMessageBox.Show(Me, "Cuenta Contable no puede quedar vacía.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+            If montoTransferencia < c1txtMonto.Value Then
+                MetroFramework.MetroMessageBox.Show(Me, "Monto no puede ser mayor, que el monto total de la transferencia", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
                 Exit Sub
             End If
             If selectedIndex = 0 Then
@@ -343,14 +357,58 @@ Public Class frmMsCaDetTransfCtaContAux
             Dim oAh As New wrAhorro.wsLibAhorro, ds As DataSet, pTipoCuenta As String
             If Me.cbTipoCuenta.SelectedIndex = 0 Then 'Préstamos
                 pTipoCuenta = "P"
+            ElseIf cbTipoCuenta.SelectedIndex = 3 Then
+                FrmT.ctaPorCobrar = True
+                pTipoCuenta = "C"
             Else 'Ahorro,Aportación, DPF
                 pTipoCuenta = "A"
             End If
+            ccCuenta = Me.txtCodCosto.Text.ToString
             ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.c1txtNoCuenta.Value, Me.c1txtMonto.Value, Me.txtCodTipo.Text.Trim, pTipoCuenta, Me.txtIdCuenta.Text.Trim, pFecha, txtCodCosto.Text)
             FrmT.dsDetalle = ds
+            FrmT.noCtaAuxiliar = c1txtNoCuenta.Value
+            '--- CAMBIO PARA LA APLICACION DE CENTRO DE COSTOS
+            '     HASTA QUE SE IMPLEMENTE EL PROCESO EN CONTABILIDAD
+            '     PROG01   ((22/05/2020))
+            'If Me.txtIdCuenta.Text.Trim = "21010101" Or Me.txtIdCuenta.Text.Trim = "21010102" Or Me.txtIdCuenta.Text.Trim = "2101030102" Then
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "C", "22010407", pFecha, CStr(txtCodCosto.Text))
+            '    FrmT.dsDetalle = ds
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "A", "22010407", pFecha, ccCuenta)
+            '    FrmT.dsDetalle = ds
+            'End If
+            'If Me.txtIdCuenta.Text.Trim = "310101" Then
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "C", "22010409", pFecha, CStr(txtCodCosto.Text))
+            '    FrmT.dsDetalle = ds
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "A", "22010409", pFecha, ccCuenta)
+            '    FrmT.dsDetalle = ds
+            'End If
+            'Dim cta2 As String = Mid(Me.txtIdCuenta.Text.Trim, 1, 6)
+            'If cta2.ToString = "210102" Then
+            '    If Me.txtIdCuenta.Text.Trim = "21010208" Then
+            '        ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "C", "22010407", pFecha, CStr(txtCodCosto.Text))
+            '        FrmT.dsDetalle = ds
+            '        ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "A", "22010407", pFecha, ccCuenta)
+            '        FrmT.dsDetalle = ds
+            '    Else
+            '        ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "C", "22010408", pFecha, CStr(txtCodCosto.Text))
+            '        FrmT.dsDetalle = ds
+            '        ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "A", "22010408", pFecha, ccCuenta)
+            '        FrmT.dsDetalle = ds
+            '    End If
+            'End If
+            'Dim cta3 As String = Mid(Me.txtIdCuenta.Text.Trim, 1, 6)
+            'If cta3.ToString = "110402" Then
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "C", "22010406", pFecha, CStr(txtCodCosto.Text))
+            '    FrmT.dsDetalle = ds
+            '    ds = oAh.AgregarDetalleTransferencia(FrmT.dsDetalle, FrmT.dsDetalle.Tables(0).Rows.Count + 1, Me.txtIdCuenta.Text, Me.c1txtMonto.Value, "", "A", "22010406", pFecha, ccCuenta)
+            '    FrmT.dsDetalle = ds
+            'End If
+            '--- FIN DE CAMBIO PARA LA APLICACION DE CENTRO DE COSTOS
+            '     HASTA QUE SE IMPLEMENTE EL PROCESO EN CONTABILIDAD
+            '     PROG01   ((22/05/2020))
             Me.Dispose()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -391,6 +449,8 @@ Public Class frmMsCaDetTransfCtaContAux
                                                     "a.FechaApertura," &
                                                     "a.IdCertificadoDPF as No_Certificado," &
                                                     "a.codSucursal, d.Cod_CCosto, d.Descripcion ", "a.DUI='" & pDui & "' AND a.NoCuenta not like '" & pNoCuenta & "' AND left(a.CodTipoAhorro,1) = '" & sifLib.Ahorro.clsAhorros.tiposAhorro.dpf & "'  AND a.Estado = 'D'", "", sUsuario, sPassword, sSucursal)
+            ElseIf selectedIndex = 3 Then
+                ds = contabilidad.consultarCuentaPorCobrar(Dui, 2, Now, Now, "", 0)
             Else
                 Exit Sub
             End If
@@ -408,6 +468,13 @@ Public Class frmMsCaDetTransfCtaContAux
                         Me.txtIdCuenta.Text = contabilidad.Recuperar_Cta_x_Centro_Costo(frm.Resultado8, frm.Resultado6.Trim) 'frm.Resultado7.Trim
                         txtCodCosto.Text = frm.Resultado9
                         txtNombCosto.Text = frm.Resultado10
+                    ElseIf selectedIndex = 3 Then
+                        Dim dtsCxC As New DataSet
+                        dtsCxC = contabilidad.consultarCuentaPorCobrar("", 6, Now, Now, "", noCta)
+                        If dtsCxC.Tables(0).Rows.Count > 0 Then
+                            txtCodCosto.Text = dtsCxC.Tables(0).Rows(0).Item("centrocosto")
+                            txtIdCuenta.Text = noCta
+                        End If
                     Else
                         Me.txtIdCuenta.Text = contabilidad.Recuperar_Cta_x_Centro_Costo(frm.Resultado9, frm.Resultado6.Trim) 'frm.Resultado7.Trim
                         txtCodCosto.Text = frm.Resultado10

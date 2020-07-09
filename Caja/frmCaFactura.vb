@@ -7,9 +7,9 @@ Public Class frmCAFactura
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
     Private errorProvider1 As New System.Windows.Forms.ErrorProvider
-    'Private vIdModifica As String, vAccion As AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas
+    'Private vIdModifica As String, vAccion As Caja.clsCAFactura.TipoAccionFacturas
     Private vIdModifica As String, vAccion As sifLib.Caja.clsCAFacturas.TipoAccionFacturas
-    'Private vdsFactura As New DataSet, vTipo As AlcalaLibs.Caja.clsCAFactura.TipoMovimiento
+    'Private vdsFactura As New DataSet, vTipo As Caja.clsCAFactura.TipoMovimiento
     Private vdsFactura As New DataSet, vTipo As sifLib.Caja.clsCAFacturas.TipoMovimiento
     Private vNumFactura As Integer, oItem As DataRow
     Private oPrestamo As DataSet
@@ -37,16 +37,11 @@ Public Class frmCAFactura
     Friend WithEvents lblNotCan As System.Windows.Forms.Label
     Friend WithEvents txtFoto As PictureBox
     Friend WithEvents pbFirma As PictureBox
-    Friend WithEvents btnProvisional As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnCancelacionPrest1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents btAbonos As MetroFramework.Controls.MetroButton
     Friend WithEvents btModificarItem As MetroFramework.Controls.MetroButton
     Friend WithEvents btnEliminaItem As MetroFramework.Controls.MetroButton
     Friend WithEvents btnImprimir1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnLimpiar1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnBloquear1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnCancelar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnLimpiarDatosCheque1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnRetCheque1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnSolicitudesBoveda As MetroFramework.Controls.MetroButton
@@ -140,23 +135,18 @@ Public Class frmCAFactura
         Me.txtCodTipoDoc = New System.Windows.Forms.TextBox()
         Me.txtCuenta = New C1.Win.C1Input.C1TextBox()
         Me.C1fgrdDetalle = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.btnCancelacionPrest1 = New MetroFramework.Controls.MetroButton()
-        Me.btnProvisional = New MetroFramework.Controls.MetroButton()
         Me.lblNotCan = New System.Windows.Forms.Label()
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.txtTotalFactura = New C1.Win.C1Input.C1NumericEdit()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnSolicitudesBoveda = New MetroFramework.Controls.MetroButton()
-        Me.btAbonos = New MetroFramework.Controls.MetroButton()
         Me.btnRetCheque1 = New MetroFramework.Controls.MetroButton()
         Me.btModificarItem = New MetroFramework.Controls.MetroButton()
         Me.btnLimpiarDatosCheque1 = New MetroFramework.Controls.MetroButton()
         Me.btnEliminaItem = New MetroFramework.Controls.MetroButton()
-        Me.btnCancelar1 = New MetroFramework.Controls.MetroButton()
         Me.btnImprimir1 = New MetroFramework.Controls.MetroButton()
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
         Me.btnLimpiar1 = New MetroFramework.Controls.MetroButton()
-        Me.btnBloquear1 = New MetroFramework.Controls.MetroButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.pbFirma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -191,27 +181,27 @@ Public Class frmCAFactura
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.txtNumero)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(34, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 63)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(939, 245)
+        Me.GroupBox1.Size = New System.Drawing.Size(783, 213)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
         'pbFirma
         '
         Me.pbFirma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbFirma.Location = New System.Drawing.Point(7, 185)
+        Me.pbFirma.Location = New System.Drawing.Point(6, 160)
         Me.pbFirma.Name = "pbFirma"
-        Me.pbFirma.Size = New System.Drawing.Size(189, 53)
+        Me.pbFirma.Size = New System.Drawing.Size(157, 46)
         Me.pbFirma.TabIndex = 191
         Me.pbFirma.TabStop = False
         '
         'txtFoto
         '
         Me.txtFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFoto.Location = New System.Drawing.Point(7, 16)
+        Me.txtFoto.Location = New System.Drawing.Point(6, 14)
         Me.txtFoto.Name = "txtFoto"
-        Me.txtFoto.Size = New System.Drawing.Size(141, 162)
+        Me.txtFoto.Size = New System.Drawing.Size(117, 140)
         Me.txtFoto.TabIndex = 190
         Me.txtFoto.TabStop = False
         '
@@ -221,11 +211,11 @@ Public Class frmCAFactura
         Me.lblListaPrestamos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblListaPrestamos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblListaPrestamos.ForeColor = System.Drawing.Color.Black
-        Me.lblListaPrestamos.Location = New System.Drawing.Point(277, 186)
+        Me.lblListaPrestamos.Location = New System.Drawing.Point(231, 161)
         Me.lblListaPrestamos.Multiline = True
         Me.lblListaPrestamos.Name = "lblListaPrestamos"
         Me.lblListaPrestamos.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.lblListaPrestamos.Size = New System.Drawing.Size(649, 37)
+        Me.lblListaPrestamos.Size = New System.Drawing.Size(541, 32)
         Me.lblListaPrestamos.TabIndex = 19
         Me.lblListaPrestamos.Visible = False
         '
@@ -234,9 +224,9 @@ Public Class frmCAFactura
         Me.cbTipoTrans.BackColor = System.Drawing.Color.White
         Me.cbTipoTrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipoTrans.Items.AddRange(New Object() {"Abono", "Cambio", "Abono - Cambio"})
-        Me.cbTipoTrans.Location = New System.Drawing.Point(676, 77)
+        Me.cbTipoTrans.Location = New System.Drawing.Point(563, 67)
         Me.cbTipoTrans.Name = "cbTipoTrans"
-        Me.cbTipoTrans.Size = New System.Drawing.Size(250, 24)
+        Me.cbTipoTrans.Size = New System.Drawing.Size(209, 21)
         Me.cbTipoTrans.TabIndex = 12
         '
         'txtMensaje
@@ -244,28 +234,28 @@ Public Class frmCAFactura
         Me.txtMensaje.BackColor = System.Drawing.Color.White
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMensaje.ForeColor = System.Drawing.Color.Black
-        Me.txtMensaje.Location = New System.Drawing.Point(277, 142)
+        Me.txtMensaje.Location = New System.Drawing.Point(231, 123)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
         Me.txtMensaje.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtMensaje.Size = New System.Drawing.Size(649, 37)
+        Me.txtMensaje.Size = New System.Drawing.Size(541, 32)
         Me.txtMensaje.TabIndex = 18
         Me.txtMensaje.Visible = False
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(572, 81)
+        Me.Label4.Location = New System.Drawing.Point(477, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 21)
+        Me.Label4.Size = New System.Drawing.Size(76, 18)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Transacción:"
         '
         'Label23
         '
         Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(572, 50)
+        Me.Label23.Location = New System.Drawing.Point(477, 43)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(96, 18)
+        Me.Label23.Size = New System.Drawing.Size(80, 16)
         Me.Label23.TabIndex = 7
         Me.Label23.Text = "Tipo de Doc.:"
         '
@@ -274,9 +264,9 @@ Public Class frmCAFactura
         Me.cbTipoDoc.BackColor = System.Drawing.Color.White
         Me.cbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipoDoc.Items.AddRange(New Object() {"Factura Consumidor Final", "Crédito Fiscal", "Comprobante Retiro de Ahorro", "Comprobante Depósito de Ahorro", "Recibo de Pago Excedente", "Cambio de Cheque"})
-        Me.cbTipoDoc.Location = New System.Drawing.Point(676, 46)
+        Me.cbTipoDoc.Location = New System.Drawing.Point(563, 40)
         Me.cbTipoDoc.Name = "cbTipoDoc"
-        Me.cbTipoDoc.Size = New System.Drawing.Size(250, 24)
+        Me.cbTipoDoc.Size = New System.Drawing.Size(209, 21)
         Me.cbTipoDoc.TabIndex = 8
         '
         'txtDescripTipoMov
@@ -285,10 +275,10 @@ Public Class frmCAFactura
         Me.txtDescripTipoMov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDescripTipoMov.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDescripTipoMov.ForeColor = System.Drawing.Color.Black
-        Me.txtDescripTipoMov.Location = New System.Drawing.Point(332, 46)
+        Me.txtDescripTipoMov.Location = New System.Drawing.Point(277, 40)
         Me.txtDescripTipoMov.Name = "txtDescripTipoMov"
         Me.txtDescripTipoMov.ReadOnly = True
-        Me.txtDescripTipoMov.Size = New System.Drawing.Size(233, 25)
+        Me.txtDescripTipoMov.Size = New System.Drawing.Size(194, 21)
         Me.txtDescripTipoMov.TabIndex = 6
         '
         'txtTipoMov
@@ -297,36 +287,36 @@ Public Class frmCAFactura
         Me.txtTipoMov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoMov.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipoMov.ForeColor = System.Drawing.Color.Black
-        Me.txtTipoMov.Location = New System.Drawing.Point(277, 46)
+        Me.txtTipoMov.Location = New System.Drawing.Point(231, 40)
         Me.txtTipoMov.Name = "txtTipoMov"
-        Me.txtTipoMov.Size = New System.Drawing.Size(48, 25)
+        Me.txtTipoMov.Size = New System.Drawing.Size(40, 21)
         Me.txtTipoMov.TabIndex = 5
         '
         'cmbFormaPago
         '
         Me.cmbFormaPago.BackColor = System.Drawing.Color.White
         Me.cmbFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbFormaPago.ItemHeight = 16
+        Me.cmbFormaPago.ItemHeight = 13
         Me.cmbFormaPago.Items.AddRange(New Object() {"Efectivo", "Cheque propio", "Cheque ajeno", "Tarjeta", "Cta.Ahorro", "Otro"})
-        Me.cmbFormaPago.Location = New System.Drawing.Point(277, 77)
+        Me.cmbFormaPago.Location = New System.Drawing.Point(231, 67)
         Me.cmbFormaPago.Name = "cmbFormaPago"
-        Me.cmbFormaPago.Size = New System.Drawing.Size(288, 24)
+        Me.cmbFormaPago.Size = New System.Drawing.Size(240, 21)
         Me.cmbFormaPago.TabIndex = 10
         '
         'Label10
         '
-        Me.Label10.Location = New System.Drawing.Point(155, 78)
+        Me.Label10.Location = New System.Drawing.Point(129, 68)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 19)
+        Me.Label10.Size = New System.Drawing.Size(88, 16)
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Forma de Pago:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label20
         '
-        Me.Label20.Location = New System.Drawing.Point(155, 50)
+        Me.Label20.Location = New System.Drawing.Point(129, 43)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(115, 18)
+        Me.Label20.Size = New System.Drawing.Size(96, 16)
         Me.Label20.TabIndex = 4
         Me.Label20.Text = "Tipo Movimiento:"
         '
@@ -336,28 +326,28 @@ Public Class frmCAFactura
         Me.txtDui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDui.EditMask = "00000000-0"
         Me.txtDui.ForeColor = System.Drawing.Color.Black
-        Me.txtDui.Location = New System.Drawing.Point(277, 17)
+        Me.txtDui.Location = New System.Drawing.Point(231, 15)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(115, 20)
+        Me.txtDui.Size = New System.Drawing.Size(96, 15)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         Me.txtDui.Value = ""
         '
         'Label19
         '
-        Me.Label19.Location = New System.Drawing.Point(155, 142)
+        Me.Label19.Location = New System.Drawing.Point(129, 123)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(75, 36)
+        Me.Label19.Size = New System.Drawing.Size(63, 31)
         Me.Label19.TabIndex = 17
         Me.Label19.Text = "Mensaje " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "para Cajas:"
         Me.Label19.Visible = False
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(400, 20)
+        Me.Label3.Location = New System.Drawing.Point(333, 17)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 18)
+        Me.Label3.Size = New System.Drawing.Size(104, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Nombre Asociado:"
         '
@@ -367,25 +357,25 @@ Public Class frmCAFactura
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAsociado.ForeColor = System.Drawing.Color.Black
-        Me.txtAsociado.Location = New System.Drawing.Point(532, 16)
+        Me.txtAsociado.Location = New System.Drawing.Point(443, 14)
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(394, 25)
+        Me.txtAsociado.Size = New System.Drawing.Size(329, 21)
         Me.txtAsociado.TabIndex = 3
         '
         'Label14
         '
-        Me.Label14.Location = New System.Drawing.Point(155, 16)
+        Me.Label14.Location = New System.Drawing.Point(129, 14)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(41, 14)
+        Me.Label14.Size = New System.Drawing.Size(34, 12)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "DUI:"
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(572, 112)
+        Me.Label2.Location = New System.Drawing.Point(477, 97)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 14)
+        Me.Label2.Size = New System.Drawing.Size(40, 12)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Fecha:"
         '
@@ -394,10 +384,10 @@ Public Class frmCAFactura
         Me.dtpFecha.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(676, 108)
+        Me.dtpFecha.Location = New System.Drawing.Point(563, 94)
         Me.dtpFecha.MinDate = New Date(1945, 1, 1, 0, 0, 0, 0)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(250, 22)
+        Me.dtpFecha.Size = New System.Drawing.Size(209, 20)
         Me.dtpFecha.TabIndex = 16
         '
         'txtNumero
@@ -406,19 +396,19 @@ Public Class frmCAFactura
         Me.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNumero.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumero.ForeColor = System.Drawing.Color.Black
-        Me.txtNumero.Location = New System.Drawing.Point(277, 108)
+        Me.txtNumero.Location = New System.Drawing.Point(231, 94)
         Me.txtNumero.Name = "txtNumero"
         Me.txtNumero.ReadOnly = True
-        Me.txtNumero.Size = New System.Drawing.Size(288, 25)
+        Me.txtNumero.Size = New System.Drawing.Size(240, 21)
         Me.txtNumero.TabIndex = 14
         Me.txtNumero.Text = "0"
         Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(155, 112)
+        Me.Label1.Location = New System.Drawing.Point(129, 97)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 17)
+        Me.Label1.Size = New System.Drawing.Size(96, 15)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "No. de Doc.:"
         '
@@ -428,9 +418,9 @@ Public Class frmCAFactura
         Me.btEditFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btEditFecha.ForeColor = System.Drawing.Color.White
         Me.btEditFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btEditFecha.Location = New System.Drawing.Point(760, 23)
+        Me.btEditFecha.Location = New System.Drawing.Point(633, 20)
         Me.btEditFecha.Name = "btEditFecha"
-        Me.btEditFecha.Size = New System.Drawing.Size(21, 32)
+        Me.btEditFecha.Size = New System.Drawing.Size(18, 28)
         Me.btEditFecha.TabIndex = 150
         Me.btEditFecha.Text = "Modificar &Fecha"
         Me.btEditFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -443,10 +433,10 @@ Public Class frmCAFactura
         Me.txtTipoDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoDoc.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipoDoc.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtTipoDoc.Location = New System.Drawing.Point(499, 43)
+        Me.txtTipoDoc.Location = New System.Drawing.Point(416, 37)
         Me.txtTipoDoc.Name = "txtTipoDoc"
         Me.txtTipoDoc.ReadOnly = True
-        Me.txtTipoDoc.Size = New System.Drawing.Size(63, 23)
+        Me.txtTipoDoc.Size = New System.Drawing.Size(52, 20)
         Me.txtTipoDoc.TabIndex = 187
         Me.txtTipoDoc.Visible = False
         '
@@ -456,18 +446,18 @@ Public Class frmCAFactura
         Me.txtCodTipoDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodTipoDoc.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodTipoDoc.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodTipoDoc.Location = New System.Drawing.Point(464, 42)
+        Me.txtCodTipoDoc.Location = New System.Drawing.Point(387, 36)
         Me.txtCodTipoDoc.Name = "txtCodTipoDoc"
-        Me.txtCodTipoDoc.Size = New System.Drawing.Size(39, 25)
+        Me.txtCodTipoDoc.Size = New System.Drawing.Size(32, 21)
         Me.txtCodTipoDoc.TabIndex = 7
         Me.txtCodTipoDoc.Visible = False
         '
         'txtCuenta
         '
-        Me.txtCuenta.Location = New System.Drawing.Point(569, 45)
+        Me.txtCuenta.Location = New System.Drawing.Point(474, 39)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.NumericInput = False
-        Me.txtCuenta.Size = New System.Drawing.Size(153, 20)
+        Me.txtCuenta.Size = New System.Drawing.Size(128, 16)
         Me.txtCuenta.TabIndex = 10
         Me.txtCuenta.Tag = Nothing
         Me.txtCuenta.Visible = False
@@ -482,46 +472,22 @@ Public Class frmCAFactura
         Me.C1fgrdDetalle.BackColor = System.Drawing.Color.White
         Me.C1fgrdDetalle.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.C1fgrdDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.C1fgrdDetalle.Location = New System.Drawing.Point(34, 325)
+        Me.C1fgrdDetalle.Location = New System.Drawing.Point(28, 282)
         Me.C1fgrdDetalle.Name = "C1fgrdDetalle"
         Me.C1fgrdDetalle.Rows.Count = 3
-        Me.C1fgrdDetalle.Rows.DefaultSize = 22
-        Me.C1fgrdDetalle.Size = New System.Drawing.Size(939, 242)
+        Me.C1fgrdDetalle.Rows.DefaultSize = 19
+        Me.C1fgrdDetalle.Size = New System.Drawing.Size(783, 209)
         Me.C1fgrdDetalle.StyleInfo = resources.GetString("C1fgrdDetalle.StyleInfo")
         Me.C1fgrdDetalle.TabIndex = 4
-        '
-        'btnCancelacionPrest1
-        '
-        Me.btnCancelacionPrest1.Location = New System.Drawing.Point(311, 662)
-        Me.btnCancelacionPrest1.Name = "btnCancelacionPrest1"
-        Me.btnCancelacionPrest1.Size = New System.Drawing.Size(176, 33)
-        Me.btnCancelacionPrest1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnCancelacionPrest1.TabIndex = 19
-        Me.btnCancelacionPrest1.Text = "Cancelar Préstamo"
-        Me.btnCancelacionPrest1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnCancelacionPrest1.UseSelectable = True
-        Me.btnCancelacionPrest1.UseStyleColors = True
-        '
-        'btnProvisional
-        '
-        Me.btnProvisional.Location = New System.Drawing.Point(28, 662)
-        Me.btnProvisional.Name = "btnProvisional"
-        Me.btnProvisional.Size = New System.Drawing.Size(90, 33)
-        Me.btnProvisional.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnProvisional.TabIndex = 17
-        Me.btnProvisional.Text = "Provisional"
-        Me.btnProvisional.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnProvisional.UseSelectable = True
-        Me.btnProvisional.UseStyleColors = True
         '
         'lblNotCan
         '
         Me.lblNotCan.AutoSize = True
         Me.lblNotCan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNotCan.ForeColor = System.Drawing.Color.Teal
-        Me.lblNotCan.Location = New System.Drawing.Point(768, 573)
+        Me.lblNotCan.Location = New System.Drawing.Point(640, 497)
         Me.lblNotCan.Name = "lblNotCan"
-        Me.lblNotCan.Size = New System.Drawing.Size(202, 18)
+        Me.lblNotCan.Size = New System.Drawing.Size(171, 15)
         Me.lblNotCan.TabIndex = 6
         Me.lblNotCan.Text = "Cancelación de Préstamo"
         Me.lblNotCan.Visible = False
@@ -530,10 +496,10 @@ Public Class frmCAFactura
         '
         Me.txtEstado.BackColor = System.Drawing.Color.White
         Me.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtEstado.Location = New System.Drawing.Point(28, 573)
+        Me.txtEstado.Location = New System.Drawing.Point(28, 497)
         Me.txtEstado.Multiline = True
         Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(703, 43)
+        Me.txtEstado.Size = New System.Drawing.Size(581, 37)
         Me.txtEstado.TabIndex = 5
         '
         'txtTotalFactura
@@ -547,13 +513,13 @@ Public Class frmCAFactura
         Me.txtTotalFactura.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.txtTotalFactura.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.txtTotalFactura.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.txtTotalFactura.Location = New System.Drawing.Point(859, 594)
+        Me.txtTotalFactura.Location = New System.Drawing.Point(716, 515)
         Me.txtTotalFactura.Name = "txtTotalFactura"
         Me.txtTotalFactura.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.txtTotalFactura.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.txtTotalFactura.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
         Me.txtTotalFactura.ReadOnly = True
-        Me.txtTotalFactura.Size = New System.Drawing.Size(114, 23)
+        Me.txtTotalFactura.Size = New System.Drawing.Size(95, 16)
         Me.txtTotalFactura.TabIndex = 8
         Me.txtTotalFactura.Tag = Nothing
         Me.txtTotalFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -564,18 +530,18 @@ Public Class frmCAFactura
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Teal
-        Me.Label7.Location = New System.Drawing.Point(738, 593)
+        Me.Label7.Location = New System.Drawing.Point(615, 514)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(108, 22)
+        Me.Label7.Size = New System.Drawing.Size(90, 19)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Total Factura:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnSolicitudesBoveda
         '
-        Me.btnSolicitudesBoveda.Location = New System.Drawing.Point(689, 662)
+        Me.btnSolicitudesBoveda.Location = New System.Drawing.Point(28, 541)
         Me.btnSolicitudesBoveda.Name = "btnSolicitudesBoveda"
-        Me.btnSolicitudesBoveda.Size = New System.Drawing.Size(187, 33)
+        Me.btnSolicitudesBoveda.Size = New System.Drawing.Size(112, 28)
         Me.btnSolicitudesBoveda.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSolicitudesBoveda.TabIndex = 21
         Me.btnSolicitudesBoveda.Text = "&Solicitudes Bóveda"
@@ -583,35 +549,23 @@ Public Class frmCAFactura
         Me.btnSolicitudesBoveda.UseSelectable = True
         Me.btnSolicitudesBoveda.UseStyleColors = True
         '
-        'btAbonos
-        '
-        Me.btAbonos.Location = New System.Drawing.Point(28, 623)
-        Me.btAbonos.Name = "btAbonos"
-        Me.btAbonos.Size = New System.Drawing.Size(90, 32)
-        Me.btAbonos.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btAbonos.TabIndex = 9
-        Me.btAbonos.Text = "Anticipo"
-        Me.btAbonos.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btAbonos.UseSelectable = True
-        Me.btAbonos.UseStyleColors = True
-        '
         'btnRetCheque1
         '
-        Me.btnRetCheque1.Location = New System.Drawing.Point(494, 662)
+        Me.btnRetCheque1.Location = New System.Drawing.Point(145, 541)
         Me.btnRetCheque1.Name = "btnRetCheque1"
-        Me.btnRetCheque1.Size = New System.Drawing.Size(188, 33)
+        Me.btnRetCheque1.Size = New System.Drawing.Size(104, 28)
         Me.btnRetCheque1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnRetCheque1.TabIndex = 20
-        Me.btnRetCheque1.Text = "Retiro de Ahorro Cheque"
+        Me.btnRetCheque1.Text = "Retiro con Cheque"
         Me.btnRetCheque1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btnRetCheque1.UseSelectable = True
         Me.btnRetCheque1.UseStyleColors = True
         '
         'btModificarItem
         '
-        Me.btModificarItem.Location = New System.Drawing.Point(125, 623)
+        Me.btModificarItem.Location = New System.Drawing.Point(373, 541)
         Me.btModificarItem.Name = "btModificarItem"
-        Me.btModificarItem.Size = New System.Drawing.Size(133, 32)
+        Me.btModificarItem.Size = New System.Drawing.Size(96, 28)
         Me.btModificarItem.Style = MetroFramework.MetroColorStyle.Teal
         Me.btModificarItem.TabIndex = 10
         Me.btModificarItem.Text = "Modificar Detalle"
@@ -621,9 +575,9 @@ Public Class frmCAFactura
         '
         'btnLimpiarDatosCheque1
         '
-        Me.btnLimpiarDatosCheque1.Location = New System.Drawing.Point(125, 662)
+        Me.btnLimpiarDatosCheque1.Location = New System.Drawing.Point(254, 541)
         Me.btnLimpiarDatosCheque1.Name = "btnLimpiarDatosCheque1"
-        Me.btnLimpiarDatosCheque1.Size = New System.Drawing.Size(179, 33)
+        Me.btnLimpiarDatosCheque1.Size = New System.Drawing.Size(114, 28)
         Me.btnLimpiarDatosCheque1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnLimpiarDatosCheque1.TabIndex = 18
         Me.btnLimpiarDatosCheque1.Text = "Limpiar Datos Cheque"
@@ -633,9 +587,9 @@ Public Class frmCAFactura
         '
         'btnEliminaItem
         '
-        Me.btnEliminaItem.Location = New System.Drawing.Point(265, 623)
+        Me.btnEliminaItem.Location = New System.Drawing.Point(474, 541)
         Me.btnEliminaItem.Name = "btnEliminaItem"
-        Me.btnEliminaItem.Size = New System.Drawing.Size(125, 32)
+        Me.btnEliminaItem.Size = New System.Drawing.Size(97, 28)
         Me.btnEliminaItem.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminaItem.TabIndex = 11
         Me.btnEliminaItem.Text = "Eliminar Detalle"
@@ -643,23 +597,11 @@ Public Class frmCAFactura
         Me.btnEliminaItem.UseSelectable = True
         Me.btnEliminaItem.UseStyleColors = True
         '
-        'btnCancelar1
-        '
-        Me.btnCancelar1.Location = New System.Drawing.Point(786, 623)
-        Me.btnCancelar1.Name = "btnCancelar1"
-        Me.btnCancelar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnCancelar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnCancelar1.TabIndex = 16
-        Me.btnCancelar1.Text = "Cancelar"
-        Me.btnCancelar1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnCancelar1.UseSelectable = True
-        Me.btnCancelar1.UseStyleColors = True
-        '
         'btnImprimir1
         '
-        Me.btnImprimir1.Location = New System.Drawing.Point(397, 623)
+        Me.btnImprimir1.Location = New System.Drawing.Point(736, 541)
         Me.btnImprimir1.Name = "btnImprimir1"
-        Me.btnImprimir1.Size = New System.Drawing.Size(90, 32)
+        Me.btnImprimir1.Size = New System.Drawing.Size(75, 28)
         Me.btnImprimir1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImprimir1.TabIndex = 12
         Me.btnImprimir1.Text = "Imprimir"
@@ -669,9 +611,9 @@ Public Class frmCAFactura
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(592, 623)
+        Me.btnGuardar1.Location = New System.Drawing.Point(656, 541)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 14
         Me.btnGuardar1.Text = "Guardar"
@@ -681,9 +623,9 @@ Public Class frmCAFactura
         '
         'btnLimpiar1
         '
-        Me.btnLimpiar1.Location = New System.Drawing.Point(494, 623)
+        Me.btnLimpiar1.Location = New System.Drawing.Point(576, 541)
         Me.btnLimpiar1.Name = "btnLimpiar1"
-        Me.btnLimpiar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnLimpiar1.Size = New System.Drawing.Size(75, 28)
         Me.btnLimpiar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnLimpiar1.TabIndex = 13
         Me.btnLimpiar1.Text = "Limpiar"
@@ -691,30 +633,15 @@ Public Class frmCAFactura
         Me.btnLimpiar1.UseSelectable = True
         Me.btnLimpiar1.UseStyleColors = True
         '
-        'btnBloquear1
-        '
-        Me.btnBloquear1.Location = New System.Drawing.Point(689, 623)
-        Me.btnBloquear1.Name = "btnBloquear1"
-        Me.btnBloquear1.Size = New System.Drawing.Size(90, 32)
-        Me.btnBloquear1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnBloquear1.TabIndex = 15
-        Me.btnBloquear1.Text = "Bloquear"
-        Me.btnBloquear1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnBloquear1.UseSelectable = True
-        Me.btnBloquear1.UseStyleColors = True
-        '
         'frmCAFactura
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(1001, 721)
-        Me.Controls.Add(Me.btnProvisional)
+        Me.ClientSize = New System.Drawing.Size(834, 625)
         Me.Controls.Add(Me.C1fgrdDetalle)
-        Me.Controls.Add(Me.btnCancelacionPrest1)
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.btnSolicitudesBoveda)
         Me.Controls.Add(Me.lblNotCan)
-        Me.Controls.Add(Me.btAbonos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnRetCheque1)
         Me.Controls.Add(Me.btEditFecha)
@@ -722,7 +649,6 @@ Public Class frmCAFactura
         Me.Controls.Add(Me.txtTotalFactura)
         Me.Controls.Add(Me.btnLimpiarDatosCheque1)
         Me.Controls.Add(Me.btnEliminaItem)
-        Me.Controls.Add(Me.btnCancelar1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnImprimir1)
         Me.Controls.Add(Me.txtTipoDoc)
@@ -730,11 +656,10 @@ Public Class frmCAFactura
         Me.Controls.Add(Me.txtCodTipoDoc)
         Me.Controls.Add(Me.btnLimpiar1)
         Me.Controls.Add(Me.txtCuenta)
-        Me.Controls.Add(Me.btnBloquear1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1001, 721)
+        Me.MaximumSize = New System.Drawing.Size(834, 625)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(1001, 721)
+        Me.MinimumSize = New System.Drawing.Size(834, 625)
         Me.Name = "frmCAFactura"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -791,23 +716,23 @@ Public Class frmCAFactura
         End Set
     End Property
 
-    'Public Property Tipo() As AlcalaLibs.Caja.clsCAFactura.TipoMovimiento
+    'Public Property Tipo() As Caja.clsCAFactura.TipoMovimiento
     Public Property Tipo() As sifLib.Caja.clsCAFacturas.TipoMovimiento
         Get
             Return vTipo
         End Get
-        'Set(ByVal Value As AlcalaLibs.Caja.clsCAFactura.TipoMovimiento)
+        'Set(ByVal Value As Caja.clsCAFactura.TipoMovimiento)
         Set(ByVal Value As sifLib.Caja.clsCAFacturas.TipoMovimiento)
             vTipo = Value
         End Set
     End Property
 
-    'Public Property Accion() As AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas
+    'Public Property Accion() As Caja.clsCAFactura.TipoAccionFacturas
     Public Property Accion() As sifLib.Caja.clsCAFacturas.TipoAccionFacturas
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas)
+        'Set(ByVal Value As Caja.clsCAFactura.TipoAccionFacturas)
         Set(ByVal Value As sifLib.Caja.clsCAFacturas.TipoAccionFacturas)
             vAccion = Value
         End Set
@@ -976,7 +901,7 @@ Public Class frmCAFactura
     Private Sub C1fgrdDetalle_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles C1fgrdDetalle.DoubleClick
         Dim ofrmDet As New frmMsDetCaFactura
         Me.IdModifica = C1fgrdDetalle.Item(C1fgrdDetalle.Row, "CodItem")
-        'ofrmDet.AccionDetalle = AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas.ModificarLinea
+        'ofrmDet.AccionDetalle = Caja.clsCAFactura.TipoAccionFacturas.ModificarLinea
         ofrmDet.AccionDetalle = sifLib.Caja.clsCAFacturas.TipoAccionFacturas.ModificarLinea
         ofrmDet.txtCodItem.Text = Me.IdModifica
         ofrmDet.txtItem.Text = C1fgrdDetalle.Item(C1fgrdDetalle.Row, "Descripcion")
@@ -985,9 +910,9 @@ Public Class frmCAFactura
 
 
 
-    Private Sub btnProvisional_Click(sender As Object, e As EventArgs) Handles btnProvisional.Click
+    Private Sub btnProvisional_Click(sender As Object, e As EventArgs)
         Try
-            'If Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
+            'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
             If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Then
 
                 Dim vNo As String
@@ -1028,11 +953,11 @@ Public Class frmCAFactura
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub btnCancelacionPrest1_Click(sender As Object, e As EventArgs) Handles btnCancelacionPrest1.Click
+    Private Sub btnCancelacionPrest1_Click(sender As Object, e As EventArgs)
         Dim frm As New frmCancelacionPrestamo
         With frm
             .noCaja = pNocaja
@@ -1043,28 +968,37 @@ Public Class frmCAFactura
         End With
     End Sub
 
-    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles btAbonos.Click
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs)
         Try
             Dim ofrm As New frmMsPLAbonos
             ofrm.CodCajero = Me.CodCajero
             ofrm.NoCaja = Me.NoCaja
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub btnBloquear1_Click(sender As Object, e As EventArgs) Handles btnBloquear1.Click
+    Private Sub btnBloquear1_Click(sender As Object, e As EventArgs)
         Try
             Dim ofrm As New frmMCaBloqueoCaja
             ofrm.txtCajero.Text = Me.vUsuario
             ofrm.frm = Me
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    Private Sub validarReporteUIFEfectivoDiario()
+        Dim dts As New DataSet
+        If cmbFormaPago.SelectedIndex = 0 Then
+            dts = Caja.consultarAplicacionFormUIF(txtDui.Value, dtpFecha.Value, 1)
 
+        End If
+
+
+
+    End Sub
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
         Dim dr As DataRow, oCaja As New wrCaja.wsLibCaja
 
@@ -1128,7 +1062,7 @@ Public Class frmCAFactura
                 dr("AbonoSeguroVehiculo") = vPagoSeguroVehiculo
                 Me.Factura.Tables("CAFacturas").Rows.Add(dr)
 
-                'Public Function GuardarFactura(ByVal pNumFactura As String, ByVal oFactura As DataSet, ByVal pTipoMov As AlcalaLibs.Caja.clsCAFactura.TipoMovimiento, ByVal pCodTransaccion As String, ByVal pConsolidado As Boolean, ByVal CodSucursal As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
+                'Public Function GuardarFactura(ByVal pNumFactura As String, ByVal oFactura As DataSet, ByVal pTipoMov As Caja.clsCAFactura.TipoMovimiento, ByVal pCodTransaccion As String, ByVal pConsolidado As Boolean, ByVal CodSucursal As String, ByVal pUsuario As String, ByVal pPassword As String, ByVal pSucursal As String) As Boolean
 
                 ' AQUI FALTA EL PARAMETRO DEL  Me.CodSucursalCajero, ANTES DEL PARAMETRO DEL USUARIO************************************ OJO
                 'If oCaja.GuardarFactura(Me.txtNumero.Text, Me.Factura, vTipo, pCodTransaccion, False, sUsuario, sPassword, sSucursal) Then
@@ -1138,7 +1072,7 @@ Public Class frmCAFactura
                         vMontoCheque = vMontoCheque - txtTotalFactura.Value
                     End If
                     MessageBox.Show("Registro No." & Me.txtNumero.Text.Trim & " Guardada con éxito.", "Registro Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                    If vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Then
+                    If vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Or vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.CuentaporCobrar Then
                         Me.btnImprimir1_Click(sender, e)
                     End If
 
@@ -1147,18 +1081,18 @@ Public Class frmCAFactura
                     Me.btnEliminaItem.Enabled = False
                     Me.btnGuardar1.Enabled = False
                     Me.btnImprimir1.Enabled = True
-                    Me.btnProvisional.Enabled = True
+                    'Me.btnProvisional.Enabled = True
                     Me.btModificarItem.Enabled = False
                     Me.vCancela = False
-                    Me.btnCancelar1.Enabled = True
+                    '    Me.btnCancelar1.Enabled = True
                     Me.btnLimpiar1.Enabled = True
                     Me.txtTipoMov.Enabled = True
                     Me.cbTipoDoc.Enabled = True
                     Me.cmbFormaPago.Enabled = True
-                    If cancelacion = True Then
-                        Me.btnCancelacionPrest1.Enabled = True
-                        Me.btnCancelacionPrest1.Visible = True
-                    End If
+                    'If cancelacion = True Then
+                    '    Me.btnCancelacionPrest1.Enabled = True
+                    '    Me.btnCancelacionPrest1.Visible = True
+                    'End If
 
                     Dim resultado As Integer
                     If vIdCorrCaja <> 0 Then
@@ -1179,11 +1113,19 @@ Public Class frmCAFactura
 
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub btnCancelar1_Click(sender As Object, e As EventArgs) Handles btnCancelar1.Click
+    Private Sub txtDui_TextChanged(sender As Object, e As EventArgs) Handles txtDui.TextChanged
+
+    End Sub
+
+    Private Sub txtNumero_TextChanged(sender As Object, e As EventArgs) Handles txtNumero.TextChanged
+
+    End Sub
+
+    Private Sub btnCancelar1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -1218,7 +1160,7 @@ Public Class frmCAFactura
             Frm.NoCaja = pNocaja
             Frm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1229,7 +1171,7 @@ Public Class frmCAFactura
                 .ShowDialog()
             End With
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1237,7 +1179,7 @@ Public Class frmCAFactura
         Dim oItems As wrCaja.wsLibCaja = New wrCaja.wsLibCaja, ds As New Data.DataSet
         Try
             'Comprobante de Retiro y Depósito
-            'If Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
+            'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
 
             If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro And vTipoDoc <> "F" Then
                 If pTipoTransaccion = "R" Then
@@ -1308,10 +1250,10 @@ Public Class frmCAFactura
                                 .ShowDialog()
                             End With
                         Else
-                            MsgBox(mensajeError, MsgBoxStyle.Critical)
+                             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                         End If
                     Else
-                        MsgBox(mensajeError, MsgBoxStyle.Critical)
+                         MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                     End If
 
 
@@ -1424,7 +1366,7 @@ Public Class frmCAFactura
                 ds = oItems.ConsultarDatosAhorro("*", Me.txtNumero.Text.Trim, Me.dtpFecha.Value.Date, vTipoDoc, sUsuario, sPassword, sSucursal, sSucursal)
                 Dim ofrm As New frmVisor(ds, 17, 0)
                 ofrm.Show()
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" Then
             ElseIf vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF And vTipoDoc = "D" Then
                 If MessageBox.Show("¿Es un depósito con libreta?", "Posteo de Libreta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     Dim frm As New frmMsCaPosteoLibretas
@@ -1527,7 +1469,7 @@ Public Class frmCAFactura
                 'Dim ofrm As New frmVisor(ds, 23, 0)
                 'ofrm.Show()
                 'Factura de Consumidor Final para Aportaciones
-                'ElseIf (Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
+                'ElseIf (Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
             ElseIf (Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 Dim Dts As New DataSet
@@ -1610,7 +1552,7 @@ Public Class frmCAFactura
                 End With
                 '====================================================================================================================================================
                 '====================================================================================================================================================
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro And vTipoDoc = "F" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro And vTipoDoc = "F" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 Dim Dts As New DataSet
@@ -1695,7 +1637,7 @@ Public Class frmCAFactura
                 'Dim ofrm As New frmVisor(ds, 23, 0)
                 'ofrm.Show()
                 'Factura de Consumidor Final para Aportaciones
-                'ElseIf (Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
+                'ElseIf (Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
             ElseIf (Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF) And vTipoDoc = "F" Then
                 oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
                 Dim Dts As New DataSet
@@ -1777,7 +1719,7 @@ Public Class frmCAFactura
                     .ShowDialog()
                 End With
                 'Factura de Consumidor Final para Abonos a Préstamos
-                'ElseIf (Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Cobranza) And vTipoDoc = "F" Then
+                'ElseIf (Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Cobranza) And vTipoDoc = "F" Then
             ElseIf (Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Cobranza) Then
                 'LUIS ALVARENGA
                 Dim Dts As New DataSet
@@ -1946,7 +1888,7 @@ Public Class frmCAFactura
                     'Dim ofrm As New frmVisor(ds, 24, 0)
                     'ofrm.Show()
                     'Crédito Fiscal para Aportaciones
-                    'ElseIf Me.vTipo = (AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
+                    'ElseIf Me.vTipo = (Caja.clsCAFactura.TipoMovimiento.PagoAportacion Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
                 ElseIf Me.vTipo = (sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF) And vTipoDoc = "C" Then
                     If MessageBox.Show("¿Es un depósito con libreta?", "Posteo de Libreta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                         Dim frm As New frmMsCaPosteoLibretas
@@ -1971,7 +1913,7 @@ Public Class frmCAFactura
                     Dim ofrm As New frmVisor(ds, 26, 0)
                     ofrm.Show()
                     'Dividendos
-                    'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos Then
+                    'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos Then
                 ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos Then
                     Dim oAsociado As New wrAsociados.wsLibAsoc
                     oItems.ModificaFactura("IdMovimiento='" & Me.txtNumero.Text.Trim & "' and Annio=" & Me.dtpFecha.Value.Date.Year & " and Tipo='" & vTipoDoc & "'", "Impreso='S'", sUsuario, sPassword, sSucursal)
@@ -2068,7 +2010,7 @@ Public Class frmCAFactura
                 'End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 #Region "FuncionComprobante "
@@ -2180,11 +2122,11 @@ Public Class frmCAFactura
             Me.txtTotalFactura.ReadOnly = True
             Me.txtTotalFactura.Enabled = False
             Me.btnImprimir1.Enabled = False
-            Me.btnProvisional.Enabled = False
+            ' Me.btnProvisional.Enabled = False
             Me.btModificarItem.Enabled = False
             Me.txtDui.Focus()
             Me.btnEliminaItem.Enabled = True
-            Me.btnCancelar1.Enabled = True
+            '  Me.btnCancelar1.Enabled = True
             Me.btnLimpiar1.Enabled = True
             Me.txtTipoMov.Enabled = True
             Me.cbTipoDoc.Enabled = True
@@ -2222,7 +2164,7 @@ Public Class frmCAFactura
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2245,7 +2187,7 @@ Public Class frmCAFactura
             ofrmDet.Rubro = Me.vRubro
             ofrmDet.TipoMov = Me.vTipoMov
             ofrmDet.TipoDoc = Me.vTipoDoc
-            'ofrmDet.AccionDetalle = AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas.ModificarLinea
+            'ofrmDet.AccionDetalle = Caja.clsCAFactura.TipoAccionFacturas.ModificarLinea
             ofrmDet.AccionDetalle = sifLib.Caja.clsCAFacturas.TipoAccionFacturas.ModificarLinea
             ofrmDet.frm = Me
 
@@ -2281,7 +2223,7 @@ Public Class frmCAFactura
                 ofrmDet.txtNoCtaBancaria.ReadOnly = True
             End If
 
-            'If Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
+            'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
             If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDPF.Visible = False
@@ -2290,7 +2232,7 @@ Public Class frmCAFactura
                 ofrmDet.gbPrestamo.Visible = True
                 ofrmDet.txtCodPrestamo.Text = C1fgrdDetalle.Item(C1fgrdDetalle.Row, "NoCuenta")
                 ofrmDet.CargaDatosPrestamo()
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Then
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2299,7 +2241,7 @@ Public Class frmCAFactura
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.txtNoCuenta.Text = C1fgrdDetalle.Item(C1fgrdDetalle.Row, "NoCuenta")
                 ofrmDet.CargaDatosAhorro()
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2308,14 +2250,14 @@ Public Class frmCAFactura
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.txtDPFNoCuenta.Text = C1fgrdDetalle.Item(C1fgrdDetalle.Row, "NoCuenta")
                 ofrmDet.CargaDatosDPF()
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.IngresoAsociados Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.IngresoAsociados Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
                 ofrmDet.gbCheque.Visible = True
                 ofrmDet.gbDPF.Visible = False
@@ -2323,14 +2265,14 @@ Public Class frmCAFactura
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.CargaBanco()
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos Then
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2391,7 +2333,7 @@ Public Class frmCAFactura
             Me.txtTotalFactura.ReadOnly = True
             Me.txtTotalFactura.Enabled = False
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2423,32 +2365,29 @@ Public Class frmCAFactura
                 'vCodItemRubro = frm.Resultado3
                 Select Case vRubro
                     Case "2"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo
                     Case "12"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.IngresoAsociados
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.IngresoAsociados
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados
                     Case "3"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro
                     Case "1"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion
                     Case "4"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF
                     Case "7"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Cobranza
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Cobranza
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Cobranza
                     Case "6"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos
-                        'Case "10"
-                        '    Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.costaCoopas
-                        'Case "11"
-                        '    Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.gestionMora
+
                     Case Else
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico
+                        'Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico
                         Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico
                 End Select
 
@@ -2545,6 +2484,7 @@ Public Class frmCAFactura
     Dim isPagoCheque As Boolean
     Dim contaTranCheques As Integer
     Dim vMontoCheque As Double
+
     Private Sub cmbFormaPago_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbFormaPago.LostFocus
         Try
             If cmbFormaPago.SelectedIndex = 2 Then
@@ -2594,7 +2534,7 @@ Public Class frmCAFactura
             ofrmDet.FormaPago = Me.cmbFormaPago.SelectedIndex
             ofrmDet.saldoGestion = saldoGestion
             'ofrmDet.codItemRubro = vCodItemRubro
-            'ofrmDet.AccionDetalle = AlcalaLibs.Caja.clsCAFactura.TipoAccionFacturas.AgregarLinea
+            'ofrmDet.AccionDetalle = Caja.clsCAFactura.TipoAccionFacturas.AgregarLinea
             ofrmDet.AccionDetalle = sifLib.Caja.clsCAFacturas.TipoAccionFacturas.AgregarLinea
             ofrmDet.frm = Me
             If Me.cmbFormaPago.SelectedIndex = 0 Then 'Efectivo
@@ -2638,28 +2578,31 @@ Public Class frmCAFactura
                 ofrmDet.txtBanco.Enabled = False
                 ofrmDet.txtNoCtaBancaria.ReadOnly = True
             End If
-            'If Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
+            'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
             If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = True
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro Or Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion Then
+                ofrmDet.gbCxC.Visible = False
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Then
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbAhorros.Visible = True
                 ofrmDet.gbPrestamo.Visible = False
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF Then
+                ofrmDet.gbCxC.Visible = False
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbDPF.Visible = True
                 ofrmDet.gbPrestamo.Visible = False
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.IngresoAsociados Then
+                ofrmDet.gbCxC.Visible = False
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.IngresoAsociados Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2667,16 +2610,18 @@ Public Class frmCAFactura
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.gbOtros.Visible = True
-                ofrmDet.gbItem.Enabled = True
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
+                ofrmDet.gbCxC.Visible = False
+                '  ofrmDet.gbItem.Enabled = True
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
                 ofrmDet.gbCheque.Visible = True
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
-                ofrmDet.gbItem.Enabled = True
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
+                ofrmDet.gbCxC.Visible = False
+                'ofrmDet.gbItem.Enabled = True
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2684,8 +2629,9 @@ Public Class frmCAFactura
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.gbOtros.Visible = True
-                ofrmDet.gbItem.Enabled = True
-                'ElseIf Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos Then
+                ofrmDet.gbCxC.Visible = False
+                ' ofrmDet.gbItem.Enabled = True
+                'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos Then
             ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos Then
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDocxCobrar.Visible = False
@@ -2693,18 +2639,26 @@ Public Class frmCAFactura
                 ofrmDet.gbCheque.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
                 ofrmDet.gbOtros.Visible = True
-                ofrmDet.gbItem.Enabled = True
+                'ofrmDet.gbItem.Enabled = True
                 ConsultaPagoDividendo()
                 ofrmDet.ValDiv = Me.pValDiv
                 ofrmDet.txtPago.Value = Me.pValDiv
                 ofrmDet.txtPago.Enabled = False
+                ofrmDet.gbCxC.Visible = False
+            ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.CuentaporCobrar Then
+                ofrmDet.gbAhorros.Visible = False
+                ofrmDet.gbDPF.Visible = False
+                ofrmDet.gbDocxCobrar.Visible = False
+                ofrmDet.gbCheque.Visible = False
+                ofrmDet.gbPrestamo.Visible = False
+                ofrmDet.gbCxC.Visible = True
             Else
                 ofrmDet.gbAhorros.Visible = False
                 ofrmDet.gbDPF.Visible = False
                 ofrmDet.gbCheque.Visible = False
-                ofrmDet.gbDocxCobrar.Visible = True
+                ofrmDet.gbDocxCobrar.Visible = False
                 ofrmDet.gbPrestamo.Visible = False
-
+                ofrmDet.gbCxC.Visible = False
             End If
             If Me.vTipoDoc = "H" Then
                 ofrmDet.gbCheque.Visible = True
@@ -2722,7 +2676,7 @@ Public Class frmCAFactura
             If vCancela = True Then
                 Me.btModificarItem.Enabled = False
                 Me.btnEliminaItem.Enabled = False
-                Me.btnCancelar1.Enabled = False
+                '  Me.btnCancelar1.Enabled = False
                 Me.btnLimpiar1.Enabled = False
                 Me.txtTipoMov.Enabled = False
                 Me.cbTipoDoc.Enabled = False
@@ -2733,6 +2687,209 @@ Public Class frmCAFactura
         End Try
 
     End Sub
+
+    'Private Sub cmbFormaPago_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbFormaPago.LostFocus
+    '    Try
+    '        If cmbFormaPago.SelectedIndex = 2 Then
+    '            Dim frmDatosCheque As New frmMsDatosCheque
+    '            If isPagoCheque = False Then
+    '                If MsgBox("¿Se realizara más de un pago con cheque?", MsgBoxStyle.YesNo, "Módulo - Caja") = MsgBoxResult.Yes Then
+    '                    With frmDatosCheque
+    '                        .ShowDialog()
+    '                    End With
+    '                    vNoReserva = frmDatosCheque.noReserva
+    '                    vNoCheque = frmDatosCheque.noCheque.ToString
+    '                    vNoCtaBancaria = frmDatosCheque.noCuenta
+    '                    vNoBanco = frmDatosCheque.idBanco
+    '                    vBanco = frmDatosCheque.banco
+    '                    vMontoCheque = frmDatosCheque.MontoPagosRealizados
+    '                    If vMontoCheque <= 0 Then
+    '                        MsgBox("Se ha superado el monto del cheque.", MsgBoxStyle.Critical, "Módulo - Caja")
+    '                        Exit Sub
+    '                    End If
+    '                    contaTranCheques = frmDatosCheque.NoPagosRealizados
+    '                    isPagoCheque = True
+    '                End If
+    '            Else
+    '                If vMontoCheque <= 0 Then
+    '                    MsgBox("Se ha superado el monto del cheque.", MsgBoxStyle.Critical, "Módulo - Caja")
+    '                    Exit Sub
+    '                End If
+
+    '            End If
+    '        End If
+
+
+
+
+
+    '        Dim ofrmDet As New frmMsDetCaFactura
+
+    '        If Me.txtDui.Text.Trim = "" Then Exit Sub
+    '        If Me.Factura.Tables("CADet_Facturas").Rows.Count > 0 Then Exit Sub
+    '        ofrmDet.Dui = Me.txtDui.Value
+    '        ofrmDet.Tipo = Me.vTipo
+    '        ofrmDet.Fecha = Me.dtpFecha.Value
+    '        ofrmDet.Rubro = Me.vRubro
+    '        ofrmDet.TipoMov = Me.vTipoMov
+    '        ofrmDet.TipoDoc = Me.vTipoDoc
+    '        ofrmDet.NombreAsociado = Me.txtAsociado.Text.Trim
+    '        ofrmDet.FormaPago = Me.cmbFormaPago.SelectedIndex
+    '        ofrmDet.saldoGestion = saldoGestion
+    '        'ofrmDet.codItemRubro = vCodItemRubro
+    '        'ofrmDet.AccionDetalle = Caja.clsCAFactura.TipoAccionFacturas.AgregarLinea
+    '        ofrmDet.AccionDetalle = sifLib.Caja.clsCAFacturas.TipoAccionFacturas.AgregarLinea
+    '        ofrmDet.frm = Me
+    '        If Me.cmbFormaPago.SelectedIndex = 0 Then 'Efectivo
+    '            ofrmDet.txtBanco.Enabled = False
+    '        ElseIf Me.cmbFormaPago.SelectedIndex = 1 Then 'Cheque Propio
+    '            ofrmDet.txtNoReserva.ReadOnly = True
+    '            ofrmDet.txtNoCheque.ReadOnly = False
+    '            ofrmDet.txtBanco.ReadOnly = False
+    '            ofrmDet.txtNoCtaBancaria.ReadOnly = False
+    '        ElseIf Me.cmbFormaPago.SelectedIndex = 2 Then 'Cheque Ajeno
+    '            ofrmDet.txtNoReserva.ReadOnly = False
+    '            ofrmDet.txtNoCheque.ReadOnly = False
+    '            ofrmDet.txtBanco.ReadOnly = False
+    '            ofrmDet.txtNoCtaBancaria.ReadOnly = False
+
+    '            If isPagoCheque = True Then
+    '                ofrmDet.txtNoReserva.Text = vNoReserva
+    '                ofrmDet.txtNoCheque.Text = vNoCheque.ToString + "_" + contaTranCheques.ToString
+    '                ofrmDet.txtBanco.Text = vNoBanco
+    '                ofrmDet.txtNoCtaBancaria.Text = vNoCtaBancaria
+    '                ofrmDet.lblBanco.Text = vBanco
+    '            End If
+
+
+    '        ElseIf Me.cmbFormaPago.SelectedIndex = 3 Then 'Tarjeta
+    '            ofrmDet.txtNoReserva.ReadOnly = True
+    '            ofrmDet.txtNoCheque.ReadOnly = True
+    '            ofrmDet.txtBanco.ReadOnly = True
+    '            ofrmDet.txtBanco.Enabled = False
+    '            ofrmDet.txtNoCtaBancaria.ReadOnly = True
+    '        ElseIf Me.cmbFormaPago.SelectedIndex = 4 Then 'Cta. Ahorro
+    '            ofrmDet.txtNoReserva.ReadOnly = True
+    '            ofrmDet.txtNoCheque.ReadOnly = True
+    '            ofrmDet.txtBanco.ReadOnly = True
+    '            ofrmDet.txtBanco.Enabled = False
+    '            ofrmDet.txtNoCtaBancaria.ReadOnly = True
+    '        ElseIf Me.cmbFormaPago.SelectedIndex = 5 Then 'Otro
+    '            ofrmDet.txtNoReserva.ReadOnly = True
+    '            ofrmDet.txtNoCheque.ReadOnly = True
+    '            ofrmDet.txtBanco.ReadOnly = True
+    '            ofrmDet.txtBanco.Enabled = False
+    '            ofrmDet.txtNoCtaBancaria.ReadOnly = True
+    '        End If
+    '        'If Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo Then
+    '        If Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = True
+    '            ofrmDet.gbCxC.Visible = False
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Ahorro Or Me.vTipo = Caja.clsCAFactura.TipoMovimiento.PagoAportacion Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro Or Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion Then
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbAhorros.Visible = True
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbCxC.Visible = False
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.AperturaDPF Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbDPF.Visible = True
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbCxC.Visible = False
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.IngresoAsociados Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbOtros.Visible = True
+    '            ofrmDet.gbCxC.Visible = False
+    '            '  ofrmDet.gbItem.Enabled = True
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc = "H" Then
+    '            ofrmDet.gbCheque.Visible = True
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbCxC.Visible = False
+    '            'ofrmDet.gbItem.Enabled = True
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico And Me.vTipoDoc <> "H" Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbOtros.Visible = True
+    '            ofrmDet.gbCxC.Visible = False
+    '            ' ofrmDet.gbItem.Enabled = True
+    '            'ElseIf Me.vTipo = Caja.clsCAFactura.TipoMovimiento.Dividendos Then
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbOtros.Visible = True
+    '            'ofrmDet.gbItem.Enabled = True
+    '            ConsultaPagoDividendo()
+    '            ofrmDet.ValDiv = Me.pValDiv
+    '            ofrmDet.txtPago.Value = Me.pValDiv
+    '            ofrmDet.txtPago.Enabled = False
+    '            ofrmDet.gbCxC.Visible = False
+    '        ElseIf Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.cuentaPorCobrar Then
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '            ofrmDet.gbCxC.Visible = True
+    '        Else
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbCheque.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = True
+    '            ofrmDet.gbPrestamo.Visible = False
+
+    '        End If
+    '        If Me.vTipoDoc = "H" Then
+    '            ofrmDet.gbCheque.Visible = True
+    '            ofrmDet.gbDPF.Visible = False
+    '            ofrmDet.gbDocxCobrar.Visible = False
+    '            ofrmDet.gbAhorros.Visible = False
+    '            ofrmDet.gbPrestamo.Visible = False
+    '        End If
+    '        ofrmDet.ShowDialog()
+    '        If Me.Factura.Tables("CADet_Facturas").Rows.Count > 0 Then
+    '            Me.btnEliminaItem.Enabled = True
+    '            Me.btModificarItem.Enabled = True
+    '            Me.txtMensaje.Text = pMensajeCajas
+    '        End If
+    '        If vCancela = True Then
+    '            Me.btModificarItem.Enabled = False
+    '            Me.btnEliminaItem.Enabled = False
+    '            '  Me.btnCancelar1.Enabled = False
+    '            Me.btnLimpiar1.Enabled = False
+    '            Me.txtTipoMov.Enabled = False
+    '            Me.cbTipoDoc.Enabled = False
+    '            Me.cmbFormaPago.Enabled = False
+    '        End If
+    '    Catch ex As Exception
+
+    '    End Try
+
+    'End Sub
 
 
     Private Sub ConsultaPagoDividendo()
@@ -2779,37 +2936,9 @@ Public Class frmCAFactura
                 dr = ds.Tables(0).Rows(0)
                 Me.txtTipoMov.Text = vRubro
                 Me.txtDescripTipoMov.Text = dr("Descripcion")
+                vTipo = vRubro
                 'vCodItemRubro = dr("codItem").ToString
-                Select Case vRubro
-                    Case "2"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AbonoPrestamo
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AbonoPrestamo
-                    Case "12"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.IngresoAsociados
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.IngresoAsociados
-                    Case "3"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Ahorro
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Ahorro
-                    Case "1"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.PagoAportacion
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.PagoAportacion
-                    Case "4"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.AperturaDPF
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.AperturaDPF
-                    Case "7"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Cobranza
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Cobranza
-                    Case "6"
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Dividendos
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Dividendos
-                        'Case "10"
-                        '    Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.costaCoopas
-                        'Case "11"
-                        '    Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.gestionMora
-                    Case Else
-                        'Me.vTipo = AlcalaLibs.Caja.clsCAFactura.TipoMovimiento.Generico
-                        Me.vTipo = sifLib.Caja.clsCAFacturas.TipoMovimiento.Generico
-                End Select
+
             End If
             dsTmp = oCaja.ObtenerItemxRubro("IdRubro='" & vRubro & "'", sUsuario, sPassword, sSucursal)
             If dsTmp.Tables(0).Rows.Count > 0 Then

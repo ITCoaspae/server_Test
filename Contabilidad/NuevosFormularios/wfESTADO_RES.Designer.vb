@@ -46,19 +46,21 @@ Partial Class wfESTADO_RES
         Me.Panel1.Controls.Add(Me.DateTimePicker2)
         Me.Panel1.Controls.Add(Me.DateTimePicker1)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(23, 63)
+        Me.Panel1.Location = New System.Drawing.Point(31, 78)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(493, 72)
+        Me.Panel1.Size = New System.Drawing.Size(657, 89)
         Me.Panel1.TabIndex = 0
         '
         'cbCC
         '
         Me.cbCC.FontSize = MetroFramework.MetroComboBoxSize.Small
         Me.cbCC.FormattingEnabled = True
-        Me.cbCC.ItemHeight = 19
-        Me.cbCC.Location = New System.Drawing.Point(77, 6)
+        Me.cbCC.ItemHeight = 21
+        Me.cbCC.Location = New System.Drawing.Point(103, 7)
+        Me.cbCC.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbCC.Name = "cbCC"
-        Me.cbCC.Size = New System.Drawing.Size(293, 25)
+        Me.cbCC.Size = New System.Drawing.Size(389, 27)
         Me.cbCC.Style = MetroFramework.MetroColorStyle.Teal
         Me.cbCC.TabIndex = 2
         Me.cbCC.Theme = MetroFramework.MetroThemeStyle.Light
@@ -67,9 +69,10 @@ Partial Class wfESTADO_RES
         '
         'btnGenerar
         '
-        Me.btnGenerar.Location = New System.Drawing.Point(408, 35)
+        Me.btnGenerar.Location = New System.Drawing.Point(544, 43)
+        Me.btnGenerar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGenerar.Size = New System.Drawing.Size(100, 28)
         Me.btnGenerar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGenerar.TabIndex = 2
         Me.btnGenerar.Text = "Generar"
@@ -80,18 +83,20 @@ Partial Class wfESTADO_RES
         'lblCentroCosto
         '
         Me.lblCentroCosto.AutoSize = True
-        Me.lblCentroCosto.Location = New System.Drawing.Point(3, 5)
+        Me.lblCentroCosto.Location = New System.Drawing.Point(4, 6)
+        Me.lblCentroCosto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCentroCosto.Name = "lblCentroCosto"
-        Me.lblCentroCosto.Size = New System.Drawing.Size(56, 26)
+        Me.lblCentroCosto.Size = New System.Drawing.Size(74, 34)
         Me.lblCentroCosto.TabIndex = 36
         Me.lblCentroCosto.Text = "Centro de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Costos:"
         '
         'chkSaldosHistoricos
         '
         Me.chkSaldosHistoricos.AutoSize = True
-        Me.chkSaldosHistoricos.Location = New System.Drawing.Point(376, 12)
+        Me.chkSaldosHistoricos.Location = New System.Drawing.Point(501, 15)
+        Me.chkSaldosHistoricos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkSaldosHistoricos.Name = "chkSaldosHistoricos"
-        Me.chkSaldosHistoricos.Size = New System.Drawing.Size(107, 17)
+        Me.chkSaldosHistoricos.Size = New System.Drawing.Size(139, 21)
         Me.chkSaldosHistoricos.TabIndex = 5
         Me.chkSaldosHistoricos.Text = "Saldos Historicos"
         Me.chkSaldosHistoricos.UseVisualStyleBackColor = True
@@ -100,9 +105,10 @@ Partial Class wfESTADO_RES
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(211, 37)
+        Me.Label2.Location = New System.Drawing.Point(281, 46)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.Size = New System.Drawing.Size(74, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Fecha Fin:"
         '
@@ -110,9 +116,10 @@ Partial Class wfESTADO_RES
         '
         Me.DateTimePicker2.CustomFormat = "MMMM/yyyy"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(274, 37)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(365, 46)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(128, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(169, 22)
         Me.DateTimePicker2.TabIndex = 3
         '
         'DateTimePicker1
@@ -120,18 +127,20 @@ Partial Class wfESTADO_RES
         Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Khaki
         Me.DateTimePicker1.CustomFormat = "MMMM/yyyy"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(77, 37)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 46)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(128, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(169, 22)
         Me.DateTimePicker1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 37)
+        Me.Label1.Location = New System.Drawing.Point(4, 46)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 13)
+        Me.Label1.Size = New System.Drawing.Size(87, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Fecha Inicio:"
         '
@@ -142,26 +151,31 @@ Partial Class wfESTADO_RES
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.DisplayGroupTree = False
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(23, 150)
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(31, 185)
+        Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.SelectionFormula = ""
         Me.CrystalReportViewer1.ShowGroupTreeButton = False
         Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.ShowZoomButton = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(493, 211)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(657, 259)
         Me.CrystalReportViewer1.TabIndex = 1
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.CrystalReportViewer1.ToolPanelWidth = 267
         Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
         'wfESTADO_RES
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(537, 384)
+        Me.ClientSize = New System.Drawing.Size(716, 473)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "wfESTADO_RES"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Estado de Resultados"
         Me.Panel1.ResumeLayout(False)

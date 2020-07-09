@@ -2,11 +2,15 @@ Public Class frmMsSucursales
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
 
-
+    Dim asociados As New wrAsociados.wsLibAsoc
     Public pCodigo As String, pAccion As String
     Friend WithEvents cbcc As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents cbDeptoSucursal As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents cbMunSucursal As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents Label49 As Label
     Dim contabilidad As New wrConta.wsLibContab
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -57,95 +61,99 @@ Public Class frmMsSucursales
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
         Me.cbcc = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.cbDeptoSucursal = New MetroFramework.Controls.MetroComboBox()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.cbMunSucursal = New MetroFramework.Controls.MetroComboBox()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtFax
         '
-        Me.txtFax.Location = New System.Drawing.Point(309, 158)
+        Me.txtFax.Location = New System.Drawing.Point(371, 257)
         Me.txtFax.MaxLength = 100
         Me.txtFax.Name = "txtFax"
-        Me.txtFax.Size = New System.Drawing.Size(144, 20)
+        Me.txtFax.Size = New System.Drawing.Size(173, 22)
         Me.txtFax.TabIndex = 4
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(271, 158)
+        Me.Label5.Location = New System.Drawing.Point(315, 260)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(32, 16)
+        Me.Label5.Size = New System.Drawing.Size(39, 19)
         Me.Label5.TabIndex = 85
         Me.Label5.Text = "Fax:"
         '
         'txtTel
         '
-        Me.txtTel.Location = New System.Drawing.Point(101, 158)
+        Me.txtTel.Location = New System.Drawing.Point(136, 257)
         Me.txtTel.MaxLength = 100
         Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(144, 20)
+        Me.txtTel.Size = New System.Drawing.Size(173, 22)
         Me.txtTel.TabIndex = 3
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(23, 158)
+        Me.Label4.Location = New System.Drawing.Point(28, 260)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 16)
+        Me.Label4.Size = New System.Drawing.Size(86, 19)
         Me.Label4.TabIndex = 83
         Me.Label4.Text = "Teléfonos:"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(101, 112)
+        Me.txtDireccion.Location = New System.Drawing.Point(136, 205)
         Me.txtDireccion.MaxLength = 255
         Me.txtDireccion.Multiline = True
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDireccion.Size = New System.Drawing.Size(352, 40)
+        Me.txtDireccion.Size = New System.Drawing.Size(408, 46)
         Me.txtDireccion.TabIndex = 2
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(23, 115)
+        Me.Label3.Location = New System.Drawing.Point(28, 216)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(86, 18)
         Me.Label3.TabIndex = 81
         Me.Label3.Text = "Dirección:"
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(101, 86)
+        Me.txtDescripcion.Location = New System.Drawing.Point(136, 99)
         Me.txtDescripcion.MaxLength = 100
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(352, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(408, 22)
         Me.txtDescripcion.TabIndex = 1
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(101, 60)
+        Me.txtCodigo.Location = New System.Drawing.Point(136, 69)
         Me.txtCodigo.MaxLength = 2
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(144, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(173, 22)
         Me.txtCodigo.TabIndex = 0
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(23, 89)
+        Me.Label2.Location = New System.Drawing.Point(28, 103)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 16)
+        Me.Label2.Size = New System.Drawing.Size(86, 18)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Nombre:"
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(23, 60)
+        Me.Label1.Location = New System.Drawing.Point(28, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 16)
+        Me.Label1.Size = New System.Drawing.Size(57, 19)
         Me.Label1.TabIndex = 78
         Me.Label1.Text = "Código:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(378, 211)
+        Me.btnGuardar1.Location = New System.Drawing.Point(454, 315)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 33)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 173
         Me.btnGuardar1.Text = "&Guardar"
@@ -157,24 +165,68 @@ Public Class frmMsSucursales
         '
         Me.cbcc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbcc.FormattingEnabled = True
-        Me.cbcc.Location = New System.Drawing.Point(101, 184)
+        Me.cbcc.Location = New System.Drawing.Point(136, 285)
         Me.cbcc.Name = "cbcc"
-        Me.cbcc.Size = New System.Drawing.Size(352, 21)
+        Me.cbcc.Size = New System.Drawing.Size(408, 24)
         Me.cbcc.TabIndex = 174
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(23, 184)
+        Me.Label6.Location = New System.Drawing.Point(28, 288)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 32)
+        Me.Label6.Size = New System.Drawing.Size(102, 37)
         Me.Label6.TabIndex = 175
         Me.Label6.Text = "Centro de Costo:"
         '
+        'cbDeptoSucursal
+        '
+        Me.cbDeptoSucursal.FormattingEnabled = True
+        Me.cbDeptoSucursal.ItemHeight = 24
+        Me.cbDeptoSucursal.Location = New System.Drawing.Point(136, 133)
+        Me.cbDeptoSucursal.Name = "cbDeptoSucursal"
+        Me.cbDeptoSucursal.Size = New System.Drawing.Size(408, 30)
+        Me.cbDeptoSucursal.TabIndex = 179
+        Me.cbDeptoSucursal.UseSelectable = True
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.White
+        Me.Label48.Location = New System.Drawing.Point(28, 133)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(102, 17)
+        Me.Label48.TabIndex = 178
+        Me.Label48.Text = "Departamento:"
+        '
+        'cbMunSucursal
+        '
+        Me.cbMunSucursal.FormattingEnabled = True
+        Me.cbMunSucursal.ItemHeight = 24
+        Me.cbMunSucursal.Location = New System.Drawing.Point(136, 169)
+        Me.cbMunSucursal.Name = "cbMunSucursal"
+        Me.cbMunSucursal.Size = New System.Drawing.Size(408, 30)
+        Me.cbMunSucursal.TabIndex = 177
+        Me.cbMunSucursal.UseSelectable = True
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(28, 169)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(71, 17)
+        Me.Label49.TabIndex = 176
+        Me.Label49.Text = "Municipio:"
+        '
         'frmMsSucursales
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(474, 282)
+        Me.ClientSize = New System.Drawing.Size(581, 416)
+        Me.Controls.Add(Me.cbDeptoSucursal)
+        Me.Controls.Add(Me.Label48)
+        Me.Controls.Add(Me.cbMunSucursal)
+        Me.Controls.Add(Me.Label49)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cbcc)
         Me.Controls.Add(Me.Label5)
@@ -201,7 +253,20 @@ Public Class frmMsSucursales
     End Sub
 
 #End Region
-
+    Private Sub llenarDepartamentoSucursal()
+        Dim dts As New DataSet
+        dts = asociados.ConsultarDepartamentos("CodDepartamento,Departamento", "", "Departamento", sUsuario, sPassword, sSucursal)
+        Me.cbDeptoSucursal.DataSource = dts.Tables(0)
+        Me.cbDeptoSucursal.DisplayMember = "Departamento"
+        Me.cbDeptoSucursal.ValueMember = "CodDepartamento"
+    End Sub
+    Private Sub llenarMunicipioSucursal(codDepartamento)
+        Dim dts As New DataSet
+        dts = asociados.ConsultarMunicipios("codMunicipio,Municipio", " codDepartamento = '" & codDepartamento & "' ", "Municipio", sUsuario, sPassword, sSucursal)
+        Me.cbMunSucursal.DataSource = dts.Tables(0)
+        Me.cbMunSucursal.DisplayMember = "Municipio"
+        Me.cbMunSucursal.ValueMember = "codMunicipio"
+    End Sub
     Public Sub llenarCbCostos()
         Dim dts As New DataSet
         dts = contabilidad.ObtenerCatCostos(wrConta.TiposCatalogo.Costos, "*", "", "Cod_CCosto", sUsuario, sPassword, sSucursal)
@@ -222,15 +287,15 @@ Public Class frmMsSucursales
             End Select
 
             If Me.btnGuardar1.Text = "&Guardar" Then
-                pCampos = "CodSucursal,Nom_Sucursal,Direccion,Telefonos,Fax,cod_ccosto"
-                pValores = "'" & Trim(txtCodigo.Text) & "','" & Trim(txtDescripcion.Text) & "','" & Me.txtDireccion.Text.Trim & "','" & Me.txtTel.Text.Trim & "','" & Me.txtFax.Text.Trim & "', '" & Me.cbcc.SelectedValue & "' "
+                pCampos = "CodSucursal,Nom_Sucursal,Direccion,Telefonos,Fax,cod_ccosto,codDepartamento,codMunicipio"
+                pValores = "'" & Trim(txtCodigo.Text) & "','" & Trim(txtDescripcion.Text) & "','" & Me.txtDireccion.Text.Trim & "','" & Me.txtTel.Text.Trim & "','" & Me.txtFax.Text.Trim & "', '" & Me.cbcc.SelectedValue & "', '" & Me.cbDeptoSucursal.SelectedValue & "', '" & Me.cbMunSucursal.SelectedValue & "' "
                 If oAsoc.InsertarSucursales(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
                     Me.Dispose()
                 Else
                     MsgBox("La Sucursal NO ha sido agregada. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Sucursales")
                 End If
             ElseIf Me.btnGuardar1.Text = "&Modificar" Then
-                pCampos = "Nom_Sucursal='" & Trim(txtDescripcion.Text) & "',Direccion='" & Me.txtDireccion.Text.Trim & "',Telefonos='" & Me.txtTel.Text.Trim & "',Fax='" & Me.txtFax.Text.Trim & "', cod_Ccosto = '" & Me.cbcc.SelectedValue & "'"
+                pCampos = "Nom_Sucursal='" & Trim(txtDescripcion.Text) & "',Direccion='" & Me.txtDireccion.Text.Trim & "',Telefonos='" & Me.txtTel.Text.Trim & "',Fax='" & Me.txtFax.Text.Trim & "', cod_Ccosto = '" & Me.cbcc.SelectedValue & "', codDepartamento = '" & Me.cbDeptoSucursal.SelectedValue & "', codMunicipio = '" & Me.cbMunSucursal.SelectedValue & "' "
                 If oAsoc.ModificarSucursales("CodSucursal='" & Trim(pCodigo) & "'", pCampos, sUsuario, sPassword, sSucursal) = True Then
                     Me.Dispose()
                 Else
@@ -238,7 +303,7 @@ Public Class frmMsSucursales
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -246,6 +311,7 @@ Public Class frmMsSucursales
         Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet
         Dim Filas As Data.DataRowCollection
         llenarCbCostos()
+        llenarDepartamentoSucursal()
 
         If Me.pAccion = "Modificar" Then
 
@@ -260,12 +326,16 @@ Public Class frmMsSucursales
                 txtTel.Text = IIf(IsDBNull(Filas.Item(0)("Telefonos")), "", Filas.Item(0)("Telefonos"))
                 txtFax.Text = IIf(IsDBNull(Filas.Item(0)("Fax")), "", Filas.Item(0)("Fax"))
                 cbcc.SelectedValue = IIf(IsDBNull(Filas.Item(0)("cod_ccosto")), "0", Filas.Item(0)("cod_Ccosto"))
+                cbDeptoSucursal.SelectedValue = IIf(IsDBNull(Filas.Item(0)("codDepartamento")), "0", Filas.Item(0)("codDepartamento"))
+                llenarMunicipioSucursal(cbDeptoSucursal.SelectedValue)
+                cbMunSucursal.SelectedValue = IIf(IsDBNull(Filas.Item(0)("codMunicipio")), "0", Filas.Item(0)("codMunicipio"))
             End If
 
         End If
         txtCodigo.Focus()
     End Sub
 
-
-
+    Private Sub cbDeptoSucursal_Validated(sender As Object, e As EventArgs) Handles cbDeptoSucursal.Validated
+        llenarMunicipioSucursal(cbDeptoSucursal.SelectedValue)
+    End Sub
 End Class

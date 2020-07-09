@@ -41,18 +41,18 @@ Public Class frmProcTrasDiarioBco
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Location = New System.Drawing.Point(23, 60)
+        Me.Label1.Location = New System.Drawing.Point(28, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(333, 80)
+        Me.Label1.Size = New System.Drawing.Size(399, 93)
         Me.Label1.TabIndex = 27
         Me.Label1.Text = resources.GetString("Label1.Text")
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(281, 153)
+        Me.btnGuardar1.Location = New System.Drawing.Point(337, 177)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 52
         Me.btnGuardar1.Text = "Trasladar"
@@ -62,15 +62,15 @@ Public Class frmProcTrasDiarioBco
         '
         'frmProcTrasDiarioBco
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(379, 192)
+        Me.ClientSize = New System.Drawing.Size(455, 222)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(379, 192)
+        Me.MaximumSize = New System.Drawing.Size(455, 222)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(379, 192)
+        Me.MinimumSize = New System.Drawing.Size(455, 222)
         Me.Name = "frmProcTrasDiarioBco"
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Teal
@@ -98,7 +98,13 @@ Public Class frmProcTrasDiarioBco
             Me.Cursor = Cursors.Default
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmProcTrasDiarioBco_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

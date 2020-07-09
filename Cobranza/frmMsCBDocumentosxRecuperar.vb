@@ -1512,7 +1512,7 @@ Public Class frmMsCBDocumentosxRecuperar
             fg.Cols.Item("CodPrestamo").Width = 0
             fg.Cols.Item("Dui").Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1598,7 +1598,7 @@ Public Class frmMsCBDocumentosxRecuperar
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

@@ -829,7 +829,7 @@ Public Class frmIngresoAsoc2
                 Dim correlativo As String
                 correlativo = cliente.ObtenerCorrelativoAsociado("NoSocio", sUsuario, sPassword, sSucursal)
                 If correlativo = "0" Then
-                    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                     Exit Sub
                 End If
 
@@ -877,6 +877,8 @@ Public Class frmIngresoAsoc2
                 Else
                     MsgBox("Registro no fue actualizado, Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
                 End If
+
+
             End If
         End If
     End Sub
@@ -1337,7 +1339,7 @@ Public Class frmIngresoAsoc2
 
                 If idJuntaDir > 0 Then
                     If cliente.eliminarAsocPersonaJuridicaDirectivos(idJuntaDir) > 0 Then
-                        MsgBox("Registro inactivo", MsgBoxStyle.Information)
+                        MsgBox(mensajeDeleteRegistro, MsgBoxStyle.Information)
                     End If
                     Dim idPerJur As Integer
                     idPerJur = cliente.recuperarIdPersonaJuridica((txtNoSocio.Text.Trim))
@@ -1345,7 +1347,7 @@ Public Class frmIngresoAsoc2
                 End If
             End If
         Catch ex As Exception
-
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1360,13 +1362,21 @@ Public Class frmIngresoAsoc2
                                   MsgBoxStyle.YesNo + MsgBoxStyle.Information) = MsgBoxResult.Yes Then
                             txtDui.Enabled = False
                             llenarDatos(txtDui.Text)
+                            Dim correlativo As String
+                            correlativo = cliente.ObtenerCorrelativoAsociado("NoSocio", sUsuario, sPassword, sSucursal)
+                            If correlativo = "0" Then
+                                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                                Exit Sub
+                            End If
+                            cbEstadoIngreso.SelectedValue = "1"
+                            txtNoSocio.Text = correlativo
                             accion = 2
                         End If
                     End If
                 End If
             End If
         Catch ex As Exception
-
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1383,6 +1393,14 @@ Public Class frmIngresoAsoc2
                                 txtDui.Enabled = False
 
                                 llenarDatos(txtDui.Text)
+                                Dim correlativo As String
+                                correlativo = cliente.ObtenerCorrelativoAsociado("NoSocio", sUsuario, sPassword, sSucursal)
+                                If correlativo = "0" Then
+                                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                                    Exit Sub
+                                End If
+                                cbEstadoIngreso.SelectedValue = "1"
+                                txtNoSocio.Text = correlativo
                                 accion = 2
                             End If
                         End If
@@ -1391,7 +1409,7 @@ Public Class frmIngresoAsoc2
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2093,6 +2111,13 @@ Public Class frmIngresoAsoc2
         Catch ex As Exception
 
         End Try
+    End Sub
+
+
+    Private Sub frmIngresoAsoc2_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 
 #End Region

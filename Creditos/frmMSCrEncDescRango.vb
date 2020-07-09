@@ -2,7 +2,7 @@ Public Class frmMSCrEncDescRango
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
 
-    'Private vTipoDeduccion As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
+    'Private vTipoDeduccion As Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
     Private vTipoDeduccion As sifLib.Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
     Friend WithEvents btEdit1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btNew1 As MetroFramework.Controls.MetroButton
@@ -31,11 +31,6 @@ Public Class frmMSCrEncDescRango
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents fgDeducciones As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -51,7 +46,6 @@ Public Class frmMSCrEncDescRango
     Friend WithEvents Label2 As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMSCrEncDescRango))
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btEdit1 = New MetroFramework.Controls.MetroButton()
         Me.btNew1 = New MetroFramework.Controls.MetroButton()
         Me.fgDeducciones = New C1.Win.C1FlexGrid.C1FlexGrid()
@@ -67,28 +61,15 @@ Public Class frmMSCrEncDescRango
         Me.txtTipoCredito = New System.Windows.Forms.TextBox()
         Me.txtCodTipoCredito = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.fgDeducciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.btEdit1)
-        Me.GroupBox2.Controls.Add(Me.btNew1)
-        Me.GroupBox2.Controls.Add(Me.fgDeducciones)
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 157)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(640, 248)
-        Me.GroupBox2.TabIndex = 5
-        Me.GroupBox2.TabStop = False
-        '
         'btEdit1
         '
-        Me.btEdit1.Location = New System.Drawing.Point(89, 14)
+        Me.btEdit1.Location = New System.Drawing.Point(124, 180)
         Me.btEdit1.Name = "btEdit1"
-        Me.btEdit1.Size = New System.Drawing.Size(75, 28)
+        Me.btEdit1.Size = New System.Drawing.Size(90, 32)
         Me.btEdit1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEdit1.TabIndex = 215
         Me.btEdit1.Text = "Modificar"
@@ -98,9 +79,9 @@ Public Class frmMSCrEncDescRango
         '
         'btNew1
         '
-        Me.btNew1.Location = New System.Drawing.Point(8, 14)
+        Me.btNew1.Location = New System.Drawing.Point(28, 180)
         Me.btNew1.Name = "btNew1"
-        Me.btNew1.Size = New System.Drawing.Size(75, 28)
+        Me.btNew1.Size = New System.Drawing.Size(90, 32)
         Me.btNew1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNew1.TabIndex = 214
         Me.btNew1.Text = "Nuevo"
@@ -111,14 +92,19 @@ Public Class frmMSCrEncDescRango
         'fgDeducciones
         '
         Me.fgDeducciones.AllowEditing = False
+        Me.fgDeducciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgDeducciones.BackColor = System.Drawing.Color.White
-        Me.fgDeducciones.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgDeducciones.Location = New System.Drawing.Point(8, 48)
+        Me.fgDeducciones.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{AllowDragging:False;AllowResizing:False;Allo" &
+    "wEditing:False;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgDeducciones.Location = New System.Drawing.Point(28, 218)
         Me.fgDeducciones.Name = "fgDeducciones"
         Me.fgDeducciones.Rows.Count = 1
+        Me.fgDeducciones.Rows.DefaultSize = 21
         Me.fgDeducciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgDeducciones.Size = New System.Drawing.Size(624, 192)
-        Me.fgDeducciones.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgDeducciones.Styles"))
+        Me.fgDeducciones.Size = New System.Drawing.Size(796, 190)
+        Me.fgDeducciones.StyleInfo = resources.GetString("fgDeducciones.StyleInfo")
         Me.fgDeducciones.TabIndex = 3
         '
         'GroupBox1
@@ -135,9 +121,9 @@ Public Class frmMSCrEncDescRango
         Me.GroupBox1.Controls.Add(Me.txtTipoCredito)
         Me.GroupBox1.Controls.Add(Me.txtCodTipoCredito)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(640, 88)
+        Me.GroupBox1.Size = New System.Drawing.Size(768, 101)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         '
@@ -145,9 +131,9 @@ Public Class frmMSCrEncDescRango
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(536, 40)
+        Me.Label4.Location = New System.Drawing.Point(643, 46)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 16)
+        Me.Label4.Size = New System.Drawing.Size(55, 19)
         Me.Label4.TabIndex = 145
         Me.Label4.Text = "Hasta:"
         '
@@ -155,9 +141,9 @@ Public Class frmMSCrEncDescRango
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(432, 40)
+        Me.Label3.Location = New System.Drawing.Point(518, 46)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 16)
+        Me.Label3.Size = New System.Drawing.Size(56, 19)
         Me.Label3.TabIndex = 144
         Me.Label3.Text = "Desde:"
         '
@@ -165,9 +151,9 @@ Public Class frmMSCrEncDescRango
         '
         Me.Label22.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(432, 16)
+        Me.Label22.Location = New System.Drawing.Point(518, 18)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(128, 16)
+        Me.Label22.Size = New System.Drawing.Size(154, 19)
         Me.Label22.TabIndex = 143
         Me.Label22.Text = "Período de Promoción:"
         '
@@ -175,27 +161,27 @@ Public Class frmMSCrEncDescRango
         '
         Me.dtpFin.Enabled = False
         Me.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFin.Location = New System.Drawing.Point(536, 56)
+        Me.dtpFin.Location = New System.Drawing.Point(643, 65)
         Me.dtpFin.Name = "dtpFin"
-        Me.dtpFin.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFin.Size = New System.Drawing.Size(106, 22)
         Me.dtpFin.TabIndex = 142
         '
         'dtpInicio
         '
         Me.dtpInicio.Enabled = False
         Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpInicio.Location = New System.Drawing.Point(432, 56)
+        Me.dtpInicio.Location = New System.Drawing.Point(518, 65)
         Me.dtpInicio.Name = "dtpInicio"
-        Me.dtpInicio.Size = New System.Drawing.Size(88, 20)
+        Me.dtpInicio.Size = New System.Drawing.Size(106, 22)
         Me.dtpInicio.TabIndex = 141
         '
         'chkNormal
         '
         Me.chkNormal.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkNormal.Enabled = False
-        Me.chkNormal.Location = New System.Drawing.Point(136, 16)
+        Me.chkNormal.Location = New System.Drawing.Point(163, 18)
         Me.chkNormal.Name = "chkNormal"
-        Me.chkNormal.Size = New System.Drawing.Size(96, 16)
+        Me.chkNormal.Size = New System.Drawing.Size(115, 19)
         Me.chkNormal.TabIndex = 0
         Me.chkNormal.Text = "&Normal"
         '
@@ -203,9 +189,9 @@ Public Class frmMSCrEncDescRango
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(16, 16)
+        Me.Label1.Location = New System.Drawing.Point(19, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 16)
+        Me.Label1.Size = New System.Drawing.Size(111, 19)
         Me.Label1.TabIndex = 136
         Me.Label1.Text = "Tipo de Tabla:"
         '
@@ -213,9 +199,9 @@ Public Class frmMSCrEncDescRango
         '
         Me.chkPromocion.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkPromocion.Enabled = False
-        Me.chkPromocion.Location = New System.Drawing.Point(272, 16)
+        Me.chkPromocion.Location = New System.Drawing.Point(326, 18)
         Me.chkPromocion.Name = "chkPromocion"
-        Me.chkPromocion.Size = New System.Drawing.Size(96, 16)
+        Me.chkPromocion.Size = New System.Drawing.Size(116, 19)
         Me.chkPromocion.TabIndex = 1
         Me.chkPromocion.Text = "&Promocional"
         '
@@ -225,39 +211,41 @@ Public Class frmMSCrEncDescRango
         Me.txtTipoCredito.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoCredito.Enabled = False
         Me.txtTipoCredito.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoCredito.Location = New System.Drawing.Point(88, 56)
+        Me.txtTipoCredito.Location = New System.Drawing.Point(106, 65)
         Me.txtTipoCredito.MaxLength = 100
         Me.txtTipoCredito.Name = "txtTipoCredito"
         Me.txtTipoCredito.ReadOnly = True
-        Me.txtTipoCredito.Size = New System.Drawing.Size(320, 20)
+        Me.txtTipoCredito.Size = New System.Drawing.Size(384, 23)
         Me.txtTipoCredito.TabIndex = 1
         '
         'txtCodTipoCredito
         '
         Me.txtCodTipoCredito.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodTipoCredito.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodTipoCredito.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodTipoCredito.Location = New System.Drawing.Point(19, 65)
         Me.txtCodTipoCredito.MaxLength = 10
         Me.txtCodTipoCredito.Name = "txtCodTipoCredito"
-        Me.txtCodTipoCredito.Size = New System.Drawing.Size(56, 20)
+        Me.txtCodTipoCredito.Size = New System.Drawing.Size(67, 23)
         Me.txtCodTipoCredito.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(16, 40)
+        Me.Label2.Location = New System.Drawing.Point(19, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 16)
+        Me.Label2.Size = New System.Drawing.Size(111, 19)
         Me.Label2.TabIndex = 134
         Me.Label2.Text = "Tipo de Crédito:"
         '
         'frmMSCrEncDescRango
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(682, 444)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(847, 495)
+        Me.Controls.Add(Me.fgDeducciones)
+        Me.Controls.Add(Me.btEdit1)
+        Me.Controls.Add(Me.btNew1)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -265,7 +253,6 @@ Public Class frmMSCrEncDescRango
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Deducciones"
-        Me.GroupBox2.ResumeLayout(False)
         CType(Me.fgDeducciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -276,12 +263,12 @@ Public Class frmMSCrEncDescRango
 #End Region
 
 #Region "Propiedades"
-    'Public Property TipoDeduccion() As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Public Property TipoDeduccion() As Prestamos.clsPrestamos.TipoDeduccion
     Public Property TipoDeduccion() As sifLib.Prestamos.clsPrestamos.TipoDeduccion
         Get
             Return vTipoDeduccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion)
+        'Set(ByVal Value As Prestamos.clsPrestamos.TipoDeduccion)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.TipoDeduccion)
             vTipoDeduccion = Value
         End Set
@@ -331,7 +318,7 @@ Public Class frmMSCrEncDescRango
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -373,7 +360,7 @@ Public Class frmMSCrEncDescRango
             frm.ShowDialog()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -396,7 +383,7 @@ Public Class frmMSCrEncDescRango
                 Encabezado()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -421,7 +408,7 @@ Public Class frmMSCrEncDescRango
                 Me.btNew1.Enabled = True
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

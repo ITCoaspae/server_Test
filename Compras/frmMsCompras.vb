@@ -287,7 +287,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub txtGraLocales_TextChanged(sender As Object, e As EventArgs) Handles txtGraLocales.TextChanged
@@ -315,7 +315,7 @@
     Private Sub btnCheques_Click(sender As Object, e As EventArgs) Handles btnCheques.Click
         Try
             Dim ofrm As New frmMsBCCheque, oLibBco As New wrBancos.wsLibBancos, ds As DataSet
-            'ofrm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar
+            'ofrm.Accion = Seguridad.clsUsuario.TipoAccion.Insertar
             ofrm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar
             'ofrm.C1NEMonto.ReadOnly = False
             ofrm.C1NEMonto.Value = txtTotal.Value
@@ -323,7 +323,7 @@
             ds = oLibBco.ObtenerCheque("b.*", "", "IdMovimiento", sUsuario, sPassword, sSucursal)
             ' btnMostrar1_Click(sender, e)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

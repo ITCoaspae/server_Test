@@ -145,7 +145,7 @@ Public Class frmMsCaDetTransfAuxCtaCont
         '
         Me.c1txtMonto.BackColor = System.Drawing.Color.White
         Me.c1txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtMonto.CustomFormat = "###,##0.00"
+        Me.c1txtMonto.CustomFormat = "###,###,##0.00"
         Me.c1txtMonto.DataType = GetType(Double)
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
@@ -245,7 +245,7 @@ Public Class frmMsCaDetTransfAuxCtaCont
             FrmT.dsDetalle = ds
             Me.Dispose()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

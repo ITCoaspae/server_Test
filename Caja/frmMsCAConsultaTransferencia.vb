@@ -115,14 +115,16 @@ Public Class frmMsCAConsultaTransferencia
         'fg
         '
         Me.fg.AllowEditing = False
-        Me.fg.AutoResize = False
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "20,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fg.ForeColor = System.Drawing.Color.Black
         Me.fg.Location = New System.Drawing.Point(9, 19)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 18
         Me.fg.Size = New System.Drawing.Size(618, 166)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'GroupBox1
@@ -223,7 +225,7 @@ Public Class frmMsCAConsultaTransferencia
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
         Me.txtDui.ReadOnly = True
-        Me.txtDui.Size = New System.Drawing.Size(168, 20)
+        Me.txtDui.Size = New System.Drawing.Size(168, 16)
         Me.txtDui.TabIndex = 3
         Me.txtDui.Tag = Nothing
         '
@@ -299,7 +301,7 @@ Public Class frmMsCAConsultaTransferencia
         Me.c1txtNoDoc.Name = "c1txtNoDoc"
         Me.c1txtNoDoc.NumericInput = False
         Me.c1txtNoDoc.ReadOnly = True
-        Me.c1txtNoDoc.Size = New System.Drawing.Size(168, 20)
+        Me.c1txtNoDoc.Size = New System.Drawing.Size(168, 16)
         Me.c1txtNoDoc.TabIndex = 2
         Me.c1txtNoDoc.Tag = Nothing
         '
@@ -330,7 +332,7 @@ Public Class frmMsCAConsultaTransferencia
         Me.c1txtCuenta.Name = "c1txtCuenta"
         Me.c1txtCuenta.NumericInput = False
         Me.c1txtCuenta.ReadOnly = True
-        Me.c1txtCuenta.Size = New System.Drawing.Size(168, 20)
+        Me.c1txtCuenta.Size = New System.Drawing.Size(168, 16)
         Me.c1txtCuenta.TabIndex = 4
         Me.c1txtCuenta.Tag = Nothing
         '
@@ -352,7 +354,7 @@ Public Class frmMsCAConsultaTransferencia
         Me.c1txtNombreAsoc.Name = "c1txtNombreAsoc"
         Me.c1txtNombreAsoc.NumericInput = False
         Me.c1txtNombreAsoc.ReadOnly = True
-        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(515, 20)
+        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(515, 16)
         Me.c1txtNombreAsoc.TabIndex = 94
         Me.c1txtNombreAsoc.Tag = Nothing
         '
@@ -360,23 +362,22 @@ Public Class frmMsCAConsultaTransferencia
         '
         Me.c1txtMonto.BackColor = System.Drawing.Color.White
         Me.c1txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtMonto.CustomFormat = "###,##0.00"
+        Me.c1txtMonto.CustomFormat = "###,###,##0.00"
         Me.c1txtMonto.DataType = GetType(Double)
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1txtMonto.Increment = 1.0R
+        Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1txtMonto.Location = New System.Drawing.Point(459, 123)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
         Me.c1txtMonto.ReadOnly = True
-        Me.c1txtMonto.ShowDropDownButton = False
-        Me.c1txtMonto.ShowUpDownButtons = False
-        Me.c1txtMonto.Size = New System.Drawing.Size(168, 21)
+        Me.c1txtMonto.Size = New System.Drawing.Size(168, 17)
         Me.c1txtMonto.TabIndex = 5
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
+        Me.c1txtMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label2
         '
@@ -584,7 +585,7 @@ Public Class frmMsCAConsultaTransferencia
                 MessageBox.Show("Para ser anulada la transferencia debe tener fecha de hoy.", "Validación del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -630,7 +631,7 @@ Public Class frmMsCAConsultaTransferencia
                 ofrmAut.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

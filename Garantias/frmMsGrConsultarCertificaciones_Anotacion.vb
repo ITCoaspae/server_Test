@@ -97,7 +97,7 @@
                 Me.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnCONSULTAR1_Click(sender As Object, e As EventArgs) Handles btnCONSULTAR1.Click
@@ -114,7 +114,7 @@
             FRMA.vACCION = 1
             FRMA.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnMODIFICAR1_Click(sender As Object, e As EventArgs) Handles btnMODIFICAR1.Click
@@ -133,7 +133,7 @@
                 FRMA.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnELIMINAR1_Click(sender As Object, e As EventArgs) Handles btnELIMINAR1.Click
@@ -150,7 +150,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

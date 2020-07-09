@@ -245,7 +245,7 @@ Public Class frmRepPartidas
             Me.Cursor = Cursors.WaitCursor
 
             Dim ofrm As New frmVisorRep
-            'ofrm.Reporte = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.PartidasDiario
+
             ofrm.Reporte = sifLib.Contabilidad.clsContabs.ReportesContabilidad.PartidasDiario
             ofrm.FechaIni = dtpFecIni.Value
             ofrm.sFechaI = dtpFecIni.Value.ToString
@@ -253,14 +253,14 @@ Public Class frmRepPartidas
             ofrm.sFechaF = dtpFecFin.Value.ToString
             ofrm.NumPartidaIni = Me.txtNumPartidaIni.Text.Trim
             ofrm.NumPartidaFin = Me.txtNumPartidaFin.Text.Trim
-            ofrm.MdiParent = ofrmMain
+
             ofrm.Show()
             Me.Cursor = Cursors.Default
             Me.Close()
 
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show("No hay datos disponibles.", "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

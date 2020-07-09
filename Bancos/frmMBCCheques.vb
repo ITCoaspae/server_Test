@@ -79,10 +79,12 @@ Public Class frmMBCCheques
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.C1fgrdCheques.BackColor = System.Drawing.Color.White
         Me.C1fgrdCheques.ColumnInfo = "9,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.C1fgrdCheques.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.C1fgrdCheques.ForeColor = System.Drawing.Color.Black
         Me.C1fgrdCheques.Location = New System.Drawing.Point(28, 247)
         Me.C1fgrdCheques.Name = "C1fgrdCheques"
         Me.C1fgrdCheques.Rows.DefaultSize = 21
-        Me.C1fgrdCheques.Size = New System.Drawing.Size(613, 143)
+        Me.C1fgrdCheques.Size = New System.Drawing.Size(751, 139)
         Me.C1fgrdCheques.StyleInfo = resources.GetString("C1fgrdCheques.StyleInfo")
         Me.C1fgrdCheques.TabIndex = 10
         '
@@ -294,7 +296,7 @@ Public Class frmMBCCheques
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(665, 465)
+        Me.ClientSize = New System.Drawing.Size(803, 461)
         Me.Controls.Add(Me.btnAnular1)
         Me.Controls.Add(Me.btnImp)
         Me.Controls.Add(Me.btnDel)
@@ -326,7 +328,7 @@ Public Class frmMBCCheques
             C1fgrdCheques.DataSource = ds.Tables(0).DefaultView
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -413,40 +415,40 @@ Public Class frmMBCCheques
                 Encabezado()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
             Dim ofrm As New frmMsBCCheque, oLibBco As New wrBancos.wsLibBancos, ds As DataSet
-            'ofrm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar
+            'ofrm.Accion = Seguridad.clsUsuario.TipoAccion.Insertar
             ofrm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar
             ofrm.ShowDialog()
             ds = oLibBco.ObtenerCheque("b.*", "", "IdMovimiento", sUsuario, sPassword, sSucursal)
             btnMostrar1_Click(sender, e)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
         Try
             Dim ofrm As New frmMsBCCheque, oLibBco As New wrBancos.wsLibBancos ' ds As DataSet
-            'ofrm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar
+            'ofrm.Accion = Seguridad.clsUsuario.TipoAccion.Modificar
             ofrm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar
             If C1fgrdCheques.Row <> -1 Then
                 If CStr(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdEstado")).Trim = "I" Then
-                    'ofrm.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Impreso
+                    'ofrm.Estado = Bancos.clsBCBanco.EstadoCheques.Impreso
                     ofrm.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Impreso
                     ofrm.btnGuardar1.Enabled = False
                     'ofrm.btnCerrar.Enabled = False
                 ElseIf CStr(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdEstado")).Trim = "A" Then
-                    'ofrm.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Anulado
+                    'ofrm.Estado = Bancos.clsBCBanco.EstadoCheques.Anulado
                     ofrm.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Anulado
                     Exit Sub
                 ElseIf CStr(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdEstado")).Trim = "D" Then
-                    'ofrm.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Digitado
+                    'ofrm.Estado = Bancos.clsBCBanco.EstadoCheques.Digitado
                     ofrm.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Digitado
                 End If
                 ofrm.NoPartida = C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida")
@@ -462,7 +464,7 @@ Public Class frmMBCCheques
             End If
             frmMBCCheques_Load(sender, e)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -486,7 +488,7 @@ Public Class frmMBCCheques
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -494,7 +496,7 @@ Public Class frmMBCCheques
         Try
             If C1fgrdCheques.Row <> -1 Then
                 Dim frm As frmMsBCCheque = New frmMsBCCheque
-                'frm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Consultar
+                'frm.Accion = Seguridad.clsUsuario.TipoAccion.Consultar
                 frm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Consultar
                 frm.NoPartida = C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida")
                 frm.txtNumPartida.Text = C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida")
@@ -509,13 +511,13 @@ Public Class frmMBCCheques
                 frm.btnImprimir1.Enabled = True
                 'frm.btnCerrar.Enabled = False
                 If CStr(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdEstado")).Trim = "A" Then
-                    'frm.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Anulado
+                    'frm.Estado = Bancos.clsBCBanco.EstadoCheques.Anulado
                     frm.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Anulado
                 End If
                 frm.ShowDialog()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -527,52 +529,33 @@ Public Class frmMBCCheques
                     Dim oLibBco As wrBancos.wsLibBancos = New wrBancos.wsLibBancos, ds As DataSet
                     dsDat = oLibBco.ObtenerPartida(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdMovimiento"), sUsuario, sPassword, sSucursal)
                     Filas = dsDat.Tables(1).Rows()
-                    'If Filas.Count > 0 Then
-                    '    pTrasladado = IIf(IsDBNull(Filas.Item(0)("Trasladado")), "", Filas.Item(0)("Trasladado"))
-                    '    pAnulado = IIf(IsDBNull(Filas.Item(0)("IdEstado")), "", Filas.Item(0)("IdEstado"))
-                    'End If
+
                     If C1fgrdCheques.Item(C1fgrdCheques.Row, "idEstado") = "A" Then
                         MessageBox.Show("El cheque ya se encuentra anulado.", "Captura de Error", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
                         Exit Sub
                     End If
                     If pTrasladado = "1" Then
-                        'If MsgBox("Se generará contrapartida automática con Fecha " & C1fgrdCheques.Item(C1fgrdCheques.Row, "Fecha_Mov") & ", desea continuar?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Generación contrapartida automática") = MsgBoxResult.Yes Then
+
                         oLibBco.AnulaCheque(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdMovimiento"),
                                             True, sUsuario, sPassword, sSucursal, C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida"))
-                        'Else
-                        'oLibBco.AnulaCheque(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdMovimiento"), False, sUsuario, sPassword,sSucursal)
-                        'End If
+
                     Else
                         oLibBco.AnulaCheque(C1fgrdCheques.Item(C1fgrdCheques.Row, "IdMovimiento"),
                                             False, sUsuario, sPassword, sSucursal, C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida"))
                     End If
-                    'Insertar movimiento en bcdet_SaldosBancos
-                    'Dim Resultado As Integer
-                    'Dim DtsSaldos As DataSet
-                    'Dim Id_SaldosBancos As Integer
-                    'Dim IdBanco As Integer
-                    'Dim IdCtaBanco As String
-                    'Dim Saldo As Double
-                    'DtsSaldos = Bancos.ConsultarBCSaldos_Bancos(0, C1fgrdCheques.Item(C1fgrdCheques.Row, "IdCtaBanco"), 3, "")
-                    'Id_SaldosBancos = IIf(DtsSaldos.Tables(0).Rows(0).Item("Id_SaldosBancos") Is DBNull.Value, 0, DtsSaldos.Tables(0).Rows(0).Item("Id_SaldosBancos"))
-                    'IdBanco = IIf(DtsSaldos.Tables(0).Rows(0).Item("IdBanco") Is DBNull.Value, 0, DtsSaldos.Tables(0).Rows(0).Item("IdBanco"))
-                    'IdCtaBanco = IIf(DtsSaldos.Tables(0).Rows(0).Item("IdCtaBanco") Is DBNull.Value, "", DtsSaldos.Tables(0).Rows(0).Item("IdCtaBanco"))
-                    'Saldo = IIf(DtsSaldos.Tables(0).Rows(0).Item("Saldo") Is DBNull.Value, "", DtsSaldos.Tables(0).Rows(0).Item("Saldo"))
 
-                    'Resultado = Bancos.InsertarBCDet_SaldosBancos(Id_SaldosBancos, IdCtaBanco, "A", C1fgrdCheques.Item(C1fgrdCheques.Row, "Cantidad"),
-                    '                                              Format(Now, "SHORT DATE"), Saldo, Saldo + C1fgrdCheques.Item(C1fgrdCheques.Row, "Cantidad"),
-                    '                                              CStr(Now.Hour) + ":" + CStr(Now.Minute), sUsuario, sSucursal,
-                    '                                              C1fgrdCheques.Item(C1fgrdCheques.Row, "Num_Partida"),
-                    '                                              "C", "Anulación de cheque # " & C1fgrdCheques.Item(C1fgrdCheques.Row, "IdMovimiento").ToString)
-                    'If Resultado <> 0 Then
-                    '    Bancos.ActualizarBCSaldos_Bancos(IdBanco, IdCtaBanco, Saldo + C1fgrdCheques.Item(C1fgrdCheques.Row, "Cantidad"), Format(Now, "short date"))
-                    'End If
                     ds = oLibBco.ObtenerCheque("b.*", "", "IdMovimiento", sUsuario, sPassword, sSucursal)
                     btnMostrar1_Click(sender, e)
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMBCCheques_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

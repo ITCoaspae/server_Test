@@ -6,6 +6,7 @@ Public Class frmMsBCCheque
     Dim Bancos As New wrBancos.wsLibBancos
     Public FormOrigen As Integer 'Evalua el formulario que genera la llamada , 1 = Modulo Creditos, 0 = Bancos.
     Dim Creditos As New wrCredito.wsLibCred
+    Dim Asociados As New wrAsociados.wsLibAsoc
     Public Monto_Desembolso As Double
     Public CodTipoCredito As String
     Friend WithEvents chkPrincipal As System.Windows.Forms.CheckBox
@@ -14,6 +15,7 @@ Public Class frmMsBCCheque
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnPartida1 As MetroFramework.Controls.MetroButton
     Public NumSolicitud As Integer
+
 #Region " Código generado por el Diseñador de Windows Forms "
 
     Public Sub New()
@@ -369,16 +371,32 @@ Public Class frmMsBCCheque
 
 #End Region
 #Region "Declaraciones"
-    'Private vAccion As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+
     Private vAccion As sifLib.Seguridad.clsUsuario.TipoAccion
-    'Private vEstado As AlcalaLibs.Bancos.clsBCBanco.EstadoCheques
+    Private pMontoLiquidar As Double
+    Private pNoSolicitudRetiro As Integer
     Private vEstado As sifLib.Bancos.clsBCBancos.EstadoCheques
     Private vNoPartida As String
     Private vCtaContableBco As String
     Private vChequeGuardado As Boolean
 #End Region
 #Region "Propiedades"
-
+    Public Property montoLiquidar() As Double
+        Get
+            Return pMontoLiquidar
+        End Get
+        Set(value As Double)
+            pMontoLiquidar = value
+        End Set
+    End Property
+    Public Property noSolicitudRetiro() As Integer
+        Get
+            Return pNoSolicitudRetiro
+        End Get
+        Set(value As Integer)
+            pNoSolicitudRetiro = noSolicitudRetiro
+        End Set
+    End Property
     Public Property ChequeGuardado() As Boolean
         Get
             Return vChequeGuardado
@@ -388,23 +406,23 @@ Public Class frmMsBCCheque
         End Set
     End Property
 
-    'Public Property Accion() As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+    'Public Property Accion() As Seguridad.clsUsuario.TipoAccion
     Public Property Accion() As sifLib.Seguridad.clsUsuario.TipoAccion
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Seguridad.clsUsuario.TipoAccion)
+        'Set(ByVal Value As Seguridad.clsUsuario.TipoAccion)
         Set(ByVal Value As sifLib.Seguridad.clsUsuario.TipoAccion)
             vAccion = Value
         End Set
     End Property
 
-    'Public Property Estado() As AlcalaLibs.Bancos.clsBCBanco.EstadoCheques
+    'Public Property Estado() As Bancos.clsBCBanco.EstadoCheques
     Public Property Estado() As sifLib.Bancos.clsBCBancos.EstadoCheques
         Get
             Return vEstado
         End Get
-        'Set(ByVal Value As AlcalaLibs.Bancos.clsBCBanco.EstadoCheques)
+        'Set(ByVal Value As Bancos.clsBCBanco.EstadoCheques)
         Set(ByVal Value As sifLib.Bancos.clsBCBancos.EstadoCheques)
             vEstado = Value
         End Set
@@ -439,15 +457,18 @@ Public Class frmMsBCCheque
         If FormOrigen = 1 Then
             Me.btnPartida1.Visible = False
             Me.btnImprimir1.Visible = False
+        ElseIf FormOrigen = 2 Then
+            Me.btnPartida1.Visible = False
+            Me.btnImprimir1.Visible = False
         Else
             Me.chkPrincipal.Visible = False
-            'If Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar Then
+            'If Me.Accion = Seguridad.clsUsuario.TipoAccion.Insertar Then
             If Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar Then
                 Me.ChequeGuardado = False
                 Me.dtpFec.Value = Date.Today
-                'Me.vEstado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Digitado
+                'Me.vEstado = Bancos.clsBCBanco.EstadoCheques.Digitado
                 Me.vEstado = sifLib.Bancos.clsBCBancos.EstadoCheques.Digitado
-                'ElseIf Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar Then
+                'ElseIf Me.Accion = Seguridad.clsUsuario.TipoAccion.Modificar Then
             ElseIf Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar Then
                 Me.ChequeGuardado = True
                 Me.btnImprimir1.Enabled = True
@@ -470,7 +491,7 @@ Public Class frmMsBCCheque
             Me.CtaContableBco = ofrm.Resultado2.Trim
             Me.txtNoCheque.Text = Val(ofrm.C1fgrdResultado.Item(ofrm.C1fgrdResultado.RowSel, 6)) + 1
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -519,7 +540,7 @@ Public Class frmMsBCCheque
                 Me.txtNumPartida.Text = NoPartida
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -528,7 +549,7 @@ Public Class frmMsBCCheque
             Dim oRep As wrBancos.wsLibBancos = New wrBancos.wsLibBancos ', pFecha As Date
             Dim ds As New Data.DataSet, pAnulado As Boolean
             'pFecha = Date.Today
-            'If Me.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Anulado Then
+            'If Me.Estado = Bancos.clsBCBanco.EstadoCheques.Anulado Then
             If Me.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Anulado Then
                 pAnulado = True
             Else
@@ -538,20 +559,22 @@ Public Class frmMsBCCheque
             Me.Cursor = Cursors.WaitCursor
             ds = oRep.ImprimeCheque(Trim(Me.txtNoCheque.Text), Trim(NoPartida), dtpFec.Value.ToShortDateString, pAnulado, sUsuario, sPassword, sSucursal)
             Dim ofrm As New frmVisor(ds, 7, 0)
-            ofrm.MdiParent = ofrmMain
+
             ofrm.Show()
             Me.Cursor = Cursors.Default
-            Me.Close()
+            ' Me.Close()
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
         Try
+            Dim Resultado As Integer
+            Dim numPartida As String
             If Me.FormOrigen = 1 Then 'Desembolso de Creditos
-                Dim Resultado As Integer
+
                 If Me.chkPrincipal.Checked = True Then
                     Resultado = Creditos.Partida_Desembolso_Prestamo(Me.txtNoCheque.Text.Trim, Me.txtCtaBanco.Text.Trim, "EG", Format(Me.dtpFec.Value, "Short Date"),
                                                      Me.txtConcepto.Text.Trim, Me.C1NEMonto.Value, Me.txtCiudad.Text.Trim, Me.txtPagueseA.Text.Trim,
@@ -566,6 +589,24 @@ Public Class frmMsBCCheque
                     MsgBox("Cheque Ingresado Exitosamente", MsgBoxStyle.Information, "Modúlo - Créditos")
                     Me.Dispose()
                 End If
+            ElseIf FormOrigen = 2 Then 'CHEQUE RENUNCIA ASOCIADO
+                numPartida = Asociados.chequeRetiroAsociado(pNoSolicitudRetiro, txtNoCheque.Text.Trim, dtpFec.Value.ToShortDateString, txtCtaBanco.Text.Trim, txtConcepto.Text.Trim.ToUpper, C1NEMonto.Value, txtCiudad.Text.ToUpper, txtPagueseA.Text.Trim.ToUpper, sUsuario)
+                If numPartida.Length > 0 Then
+                    txtNumPartida.Text = numPartida
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim dtsCheques As New DataSet
+                    dtsCheques = Bancos.ObtenerCheque("num_Partida ", "  idmovimiento = '" & txtNoCheque.Text.Trim & "' and fecha_mov  ='" & dtpFec.Value.ToShortDateString & "' and cantidad = '" & C1NEMonto.Value & "' ", "num_Partida ", sUsuario, sPassword, sSucursal)
+                    If dtsCheques.Tables.Count > 0 Then
+                        If dtsCheques.Tables(0).Rows.Count > 0 Then
+                            txtNumPartida.Text = dtsCheques.Tables(0).Rows(0).Item(0)
+                            NoPartida = txtNumPartida.Text
+                        End If
+
+                    End If
+                    btnImprimir1_Click(sender, e)
+
+                End If
+
             Else
                 Dim oLibBco As New wrBancos.wsLibBancos
                 If Me.txtNumPartida.Text.Trim.Length = 0 Then
@@ -584,9 +625,9 @@ Public Class frmMsBCCheque
                             MessageBox.Show("Cheque NO Agregado al Sistema", "Ingreso de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
                             Me.ChequeGuardado = False
                         End If
-                        'ElseIf Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar Then
+                        'ElseIf Me.Accion = Seguridad.clsUsuario.TipoAccion.Modificar Then
                     ElseIf Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar Then
-                        'If Me.Estado = AlcalaLibs.Bancos.clsBCBanco.EstadoCheques.Digitado Then
+                        'If Me.Estado = Bancos.clsBCBanco.EstadoCheques.Digitado Then
                         If Me.Estado = sifLib.Bancos.clsBCBancos.EstadoCheques.Digitado Then
                             If oLibBco.ModificaCheque(Me.txtNoCheque.Text.Trim, "IdCtaBanco='" & Me.txtCtaBanco.Text & "',Fecha_Mov='" & Me.dtpFec.Value.Date & "',Concepto='" & Me.txtConcepto.Text & "',Cantidad='" & Me.C1NEMonto.Value & "',Ciudad='" & Me.txtCiudad.Text & "',Paguese='" & Me.txtPagueseA.Text & "',Usu_Mov=' '", sUsuario, sPassword, sSucursal) Then
                                 oLibBco.ModificaCuentaBanco(Trim(Me.txtCtaBanco.Text), "Corr_Cheque='" & Trim(Me.txtNoCheque.Text) & "'", sUsuario, sPassword, sSucursal)
@@ -604,7 +645,7 @@ Public Class frmMsBCCheque
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -617,6 +658,12 @@ Public Class frmMsBCCheque
             End If
         Else
             Me.Dispose()
+        End If
+    End Sub
+
+    Private Sub frmMsBCCheque_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

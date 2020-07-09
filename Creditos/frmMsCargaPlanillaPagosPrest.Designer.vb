@@ -22,7 +22,8 @@ Partial Class frmMsCargaPlanillaPagosPrest
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCargar1 = New MetroFramework.Controls.MetroButton()
+        Me.btnProcesar1 = New MetroFramework.Controls.MetroButton()
         Me.cbPagaduria = New System.Windows.Forms.ComboBox()
         Me.cbCtaOrigen = New System.Windows.Forms.ComboBox()
         Me.lblCtaOrigen = New System.Windows.Forms.Label()
@@ -30,58 +31,75 @@ Partial Class frmMsCargaPlanillaPagosPrest
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.btnProcesar1 = New MetroFramework.Controls.MetroButton()
-        Me.btnCargar1 = New MetroFramework.Controls.MetroButton()
-        Me.Panel1.SuspendLayout()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'btnCargar1
         '
-        Me.Panel1.Controls.Add(Me.btnCargar1)
-        Me.Panel1.Controls.Add(Me.btnProcesar1)
-        Me.Panel1.Controls.Add(Me.cbPagaduria)
-        Me.Panel1.Controls.Add(Me.cbCtaOrigen)
-        Me.Panel1.Controls.Add(Me.lblCtaOrigen)
-        Me.Panel1.Controls.Add(Me.lblDescripcion)
-        Me.Panel1.Controls.Add(Me.dtpFecha)
-        Me.Panel1.Location = New System.Drawing.Point(23, 63)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(716, 67)
-        Me.Panel1.TabIndex = 11
+        Me.btnCargar1.Location = New System.Drawing.Point(396, 138)
+        Me.btnCargar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCargar1.Name = "btnCargar1"
+        Me.btnCargar1.Size = New System.Drawing.Size(100, 34)
+        Me.btnCargar1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnCargar1.TabIndex = 238
+        Me.btnCargar1.Text = "Cargar"
+        Me.btnCargar1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnCargar1.UseSelectable = True
+        Me.btnCargar1.UseStyleColors = True
+        '
+        'btnProcesar1
+        '
+        Me.btnProcesar1.Location = New System.Drawing.Point(504, 138)
+        Me.btnProcesar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnProcesar1.Name = "btnProcesar1"
+        Me.btnProcesar1.Size = New System.Drawing.Size(100, 34)
+        Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnProcesar1.TabIndex = 239
+        Me.btnProcesar1.Text = "Procesar"
+        Me.btnProcesar1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnProcesar1.UseSelectable = True
+        Me.btnProcesar1.UseStyleColors = True
         '
         'cbPagaduria
         '
         Me.cbPagaduria.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cbPagaduria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbPagaduria.FormattingEnabled = True
-        Me.cbPagaduria.Location = New System.Drawing.Point(72, 5)
+        Me.cbPagaduria.Location = New System.Drawing.Point(147, 74)
+        Me.cbPagaduria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbPagaduria.Name = "cbPagaduria"
-        Me.cbPagaduria.Size = New System.Drawing.Size(425, 21)
+        Me.cbPagaduria.Size = New System.Drawing.Size(565, 24)
         Me.cbPagaduria.TabIndex = 9
         '
         'cbCtaOrigen
         '
+        Me.cbCtaOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCtaOrigen.FormattingEnabled = True
-        Me.cbCtaOrigen.Location = New System.Drawing.Point(72, 32)
+        Me.cbCtaOrigen.Location = New System.Drawing.Point(147, 106)
+        Me.cbCtaOrigen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbCtaOrigen.Name = "cbCtaOrigen"
-        Me.cbCtaOrigen.Size = New System.Drawing.Size(425, 21)
+        Me.cbCtaOrigen.Size = New System.Drawing.Size(565, 24)
         Me.cbCtaOrigen.TabIndex = 8
         '
         'lblCtaOrigen
         '
         Me.lblCtaOrigen.AutoSize = True
-        Me.lblCtaOrigen.Location = New System.Drawing.Point(3, 35)
+        Me.lblCtaOrigen.Location = New System.Drawing.Point(31, 102)
+        Me.lblCtaOrigen.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCtaOrigen.Name = "lblCtaOrigen"
-        Me.lblCtaOrigen.Size = New System.Drawing.Size(63, 13)
+        Me.lblCtaOrigen.Size = New System.Drawing.Size(108, 34)
         Me.lblCtaOrigen.TabIndex = 7
-        Me.lblCtaOrigen.Text = "Cta. Origen:"
+        Me.lblCtaOrigen.Text = "Remesa " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveniente de:"
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Location = New System.Drawing.Point(3, 9)
+        Me.lblDescripcion.Location = New System.Drawing.Point(31, 74)
+        Me.lblDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(58, 13)
+        Me.lblDescripcion.Size = New System.Drawing.Size(77, 17)
         Me.lblDescripcion.TabIndex = 4
         Me.lblDescripcion.Text = "Pagaduria:"
         '
@@ -89,9 +107,10 @@ Partial Class frmMsCargaPlanillaPagosPrest
         '
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(503, 6)
+        Me.dtpFecha.Location = New System.Drawing.Point(147, 143)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(100, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(132, 22)
         Me.dtpFecha.TabIndex = 6
         '
         'DataGridView1
@@ -102,58 +121,66 @@ Partial Class frmMsCargaPlanillaPagosPrest
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(23, 136)
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 180)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(717, 206)
+        Me.DataGridView1.Size = New System.Drawing.Size(678, 115)
         Me.DataGridView1.TabIndex = 12
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'btnProcesar1
+        'MetroButton1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(584, 32)
-        Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnProcesar1.TabIndex = 239
-        Me.btnProcesar1.Text = "Procesar"
-        Me.btnProcesar1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnProcesar1.UseSelectable = True
-        Me.btnProcesar1.UseStyleColors = True
+        Me.MetroButton1.Location = New System.Drawing.Point(612, 138)
+        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(4)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(100, 34)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton1.TabIndex = 240
+        Me.MetroButton1.Text = "Plantilla"
+        Me.MetroButton1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroButton1.UseSelectable = True
+        Me.MetroButton1.UseStyleColors = True
         '
-        'btnCargar1
+        'Label1
         '
-        Me.btnCargar1.Location = New System.Drawing.Point(503, 32)
-        Me.btnCargar1.Name = "btnCargar1"
-        Me.btnCargar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnCargar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnCargar1.TabIndex = 238
-        Me.btnCargar1.Text = "Cargar"
-        Me.btnCargar1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnCargar1.UseSelectable = True
-        Me.btnCargar1.UseStyleColors = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(31, 143)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 17)
+        Me.Label1.TabIndex = 241
+        Me.Label1.Text = "Fecha Carga:"
         '
         'frmMsCargaPlanillaPagosPrest
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(763, 397)
+        Me.ClientSize = New System.Drawing.Size(739, 379)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnProcesar1)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.btnCargar1)
+        Me.Controls.Add(Me.lblDescripcion)
+        Me.Controls.Add(Me.dtpFecha)
+        Me.Controls.Add(Me.lblCtaOrigen)
+        Me.Controls.Add(Me.cbCtaOrigen)
+        Me.Controls.Add(Me.cbPagaduria)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmMsCargaPlanillaPagosPrest"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Carga de planillas de pagos Préstamos"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents cbPagaduria As System.Windows.Forms.ComboBox
     Friend WithEvents cbCtaOrigen As System.Windows.Forms.ComboBox
     Friend WithEvents lblCtaOrigen As System.Windows.Forms.Label
@@ -163,4 +190,6 @@ Partial Class frmMsCargaPlanillaPagosPrest
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents btnProcesar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnCargar1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents Label1 As Label
 End Class

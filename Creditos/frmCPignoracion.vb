@@ -62,13 +62,14 @@ Public Class frmCPignoracion
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgEstadoIngreso.BackColor = System.Drawing.Color.White
-        Me.fgEstadoIngreso.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:97;TextAlign:RightCenter;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:150" &
-    ";}" & Global.Microsoft.VisualBasic.ChrW(9) & "3{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "4{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "5{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgEstadoIngreso.Location = New System.Drawing.Point(23, 191)
+        Me.fgEstadoIngreso.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:97;Style:""TextAlign:RightCenter;"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{" &
+    "Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "3{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "4{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "5{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgEstadoIngreso.Location = New System.Drawing.Point(28, 220)
         Me.fgEstadoIngreso.Name = "fgEstadoIngreso"
         Me.fgEstadoIngreso.Rows.Count = 2
-        Me.fgEstadoIngreso.Size = New System.Drawing.Size(589, 184)
-        Me.fgEstadoIngreso.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgEstadoIngreso.Styles"))
+        Me.fgEstadoIngreso.Rows.DefaultSize = 21
+        Me.fgEstadoIngreso.Size = New System.Drawing.Size(579, 147)
+        Me.fgEstadoIngreso.StyleInfo = resources.GetString("fgEstadoIngreso.StyleInfo")
         Me.fgEstadoIngreso.TabIndex = 27
         '
         'GroupBox2
@@ -83,18 +84,18 @@ Public Class frmCPignoracion
         Me.GroupBox2.Controls.Add(Me.rbtCodPrestamo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(474, 122)
+        Me.GroupBox2.Size = New System.Drawing.Size(568, 140)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Seleccione el filtro:"
         '
         'btnGenerar1
         '
-        Me.btnGenerar1.Location = New System.Drawing.Point(318, 80)
+        Me.btnGenerar1.Location = New System.Drawing.Point(382, 92)
         Me.btnGenerar1.Name = "btnGenerar1"
-        Me.btnGenerar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGenerar1.Size = New System.Drawing.Size(90, 33)
         Me.btnGenerar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGenerar1.TabIndex = 167
         Me.btnGenerar1.Text = "Mostrar"
@@ -104,36 +105,36 @@ Public Class frmCPignoracion
         '
         'txtCodPrestamo
         '
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(134, 72)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(161, 83)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(182, 22)
         Me.txtCodPrestamo.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(134, 56)
+        Me.Label2.Location = New System.Drawing.Point(161, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 23)
+        Me.Label2.Size = New System.Drawing.Size(153, 26)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Código de Préstamo:"
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 72)
+        Me.txtDui.Location = New System.Drawing.Point(19, 83)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 8
         Me.txtDui.Tag = Nothing
         '
         'Label1
         '
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(16, 56)
+        Me.Label1.Location = New System.Drawing.Point(19, 65)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 16)
+        Me.Label1.Size = New System.Drawing.Size(120, 18)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Dui de Asociado:"
         '
@@ -141,9 +142,9 @@ Public Class frmCPignoracion
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.ForeColor = System.Drawing.Color.Black
-        Me.rbTodos.Location = New System.Drawing.Point(292, 50)
+        Me.rbTodos.Location = New System.Drawing.Point(350, 58)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(183, 27)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.Text = "Mostrar &todos"
         Me.rbTodos.UseVisualStyleBackColor = False
@@ -153,9 +154,9 @@ Public Class frmCPignoracion
         Me.rbtCodPrestamo.BackColor = System.Drawing.Color.White
         Me.rbtCodPrestamo.Checked = True
         Me.rbtCodPrestamo.ForeColor = System.Drawing.Color.Black
-        Me.rbtCodPrestamo.Location = New System.Drawing.Point(16, 24)
+        Me.rbtCodPrestamo.Location = New System.Drawing.Point(19, 28)
         Me.rbtCodPrestamo.Name = "rbtCodPrestamo"
-        Me.rbtCodPrestamo.Size = New System.Drawing.Size(152, 24)
+        Me.rbtCodPrestamo.Size = New System.Drawing.Size(183, 27)
         Me.rbtCodPrestamo.TabIndex = 0
         Me.rbtCodPrestamo.TabStop = True
         Me.rbtCodPrestamo.Text = "Préstamo:"
@@ -163,7 +164,7 @@ Public Class frmCPignoracion
         '
         'frmCPignoracion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(635, 427)
         Me.Controls.Add(Me.GroupBox2)
@@ -193,7 +194,7 @@ Public Class frmCPignoracion
             ds = oAsoc.ConsultarPignoracion(codPrestamo, sUsuario, sPassword, sSucursal)
             fgEstadoIngreso.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -222,7 +223,7 @@ Public Class frmCPignoracion
                 Me.txtCodPrestamo.Text = IIf(IsDBNull(dr("CodPrestamo")), 0, dr("CodPrestamo"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -247,7 +248,7 @@ Public Class frmCPignoracion
                 Me.txtDui.Value = Trim(dr("DUI"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -268,7 +269,7 @@ Public Class frmCPignoracion
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -301,7 +302,7 @@ Public Class frmCPignoracion
                 consultarPignoracion(txtCodPrestamo.Text.ToString)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

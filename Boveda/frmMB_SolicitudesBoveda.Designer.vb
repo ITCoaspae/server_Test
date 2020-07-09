@@ -39,11 +39,12 @@ Partial Class frmMB_SolicitudesBoveda
         Me.dgBoveda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgBoveda.BackgroundColor = System.Drawing.Color.White
         Me.dgBoveda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBoveda.Location = New System.Drawing.Point(23, 97)
         Me.dgBoveda.Name = "dgBoveda"
         Me.dgBoveda.ReadOnly = True
-        Me.dgBoveda.Size = New System.Drawing.Size(537, 141)
+        Me.dgBoveda.Size = New System.Drawing.Size(537, 146)
         Me.dgBoveda.TabIndex = 0
         '
         'btnImp
@@ -60,6 +61,7 @@ Partial Class frmMB_SolicitudesBoveda
         '
         'btnDel
         '
+        Me.btnDel.Enabled = False
         Me.btnDel.Location = New System.Drawing.Point(347, 63)
         Me.btnDel.Name = "btnDel"
         Me.btnDel.Size = New System.Drawing.Size(75, 28)
@@ -123,7 +125,7 @@ Partial Class frmMB_SolicitudesBoveda
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(583, 290)
+        Me.ClientSize = New System.Drawing.Size(583, 295)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnImp)

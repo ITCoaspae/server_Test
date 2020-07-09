@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_sql_server_types_1_1_utilities" kind="class"><name>SqlServerTypes::Utilities</name>
+    <member refid="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367" kind="function"><name>LoadLibrary</name></member>
+    <member refid="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" kind="function"><name>LoadNativeAssemblies</name></member>
+    <member refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" kind="function"><name>LoadNativeAssembly</name></member>
+  </compound>
+  <compound refid="namespace_sql_server_types" kind="namespace"><name>SqlServerTypes</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="_loader_8cs" kind="file"><name>Loader.cs</name>
+  </compound>
+  <compound refid="dir_99783f366630363cf985b65806dd1b25" kind="dir"><name>C:/Users/JAEM/Documents/COASPAE</name>
+  </compound>
+  <compound refid="dir_88010504c9c8a4e2bb8516b0cddc4191" kind="dir"><name>C:/Users/JAEM/Documents</name>
+  </compound>
+  <compound refid="dir_c3ea2380f8525c896267bfb709b9af6a" kind="dir"><name>C:/Users/JAEM</name>
+  </compound>
+  <compound refid="dir_a68c128ae7f0d6bc6e206503e305daff" kind="dir"><name>C:/Users/JAEM/Documents/COASPAE/Proyecto</name>
+  </compound>
+  <compound refid="dir_9b5f865e3eb956cabdd1e91097fe3bea" kind="dir"><name>C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP</name>
+  </compound>
+  <compound refid="dir_a4f83c29df1401465f4beede9eaace05" kind="dir"><name>C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

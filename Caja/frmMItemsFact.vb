@@ -78,18 +78,18 @@ Public Class frmMItemsFact
         Me.GroupBox2.Controls.Add(Me.rbTodos)
         Me.GroupBox2.Controls.Add(Me.rbtCodItem)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(574, 151)
+        Me.GroupBox2.Size = New System.Drawing.Size(688, 174)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "&Filtrar Items por:"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(409, 95)
+        Me.btnMostrar1.Location = New System.Drawing.Point(491, 110)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 58
         Me.btnMostrar1.Text = "Mostrar"
@@ -101,17 +101,17 @@ Public Class frmMItemsFact
         '
         Me.txtRubro.BackColor = System.Drawing.Color.White
         Me.txtRubro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtRubro.Location = New System.Drawing.Point(16, 112)
+        Me.txtRubro.Location = New System.Drawing.Point(19, 129)
         Me.txtRubro.Name = "txtRubro"
-        Me.txtRubro.Size = New System.Drawing.Size(152, 20)
+        Me.txtRubro.Size = New System.Drawing.Size(183, 22)
         Me.txtRubro.TabIndex = 7
         '
         'rbRubro
         '
         Me.rbRubro.BackColor = System.Drawing.Color.White
-        Me.rbRubro.Location = New System.Drawing.Point(16, 82)
+        Me.rbRubro.Location = New System.Drawing.Point(19, 95)
         Me.rbRubro.Name = "rbRubro"
-        Me.rbRubro.Size = New System.Drawing.Size(132, 24)
+        Me.rbRubro.Size = New System.Drawing.Size(159, 27)
         Me.rbRubro.TabIndex = 6
         Me.rbRubro.Text = "Tipo de &Rubro:"
         Me.rbRubro.UseVisualStyleBackColor = False
@@ -120,37 +120,37 @@ Public Class frmMItemsFact
         '
         Me.txtTipoItem.BackColor = System.Drawing.Color.White
         Me.txtTipoItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTipoItem.Location = New System.Drawing.Point(332, 54)
+        Me.txtTipoItem.Location = New System.Drawing.Point(398, 62)
         Me.txtTipoItem.Name = "txtTipoItem"
-        Me.txtTipoItem.Size = New System.Drawing.Size(152, 20)
+        Me.txtTipoItem.Size = New System.Drawing.Size(183, 22)
         Me.txtTipoItem.TabIndex = 5
         '
         'txtCodItem
         '
         Me.txtCodItem.BackColor = System.Drawing.Color.White
         Me.txtCodItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodItem.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodItem.Location = New System.Drawing.Point(19, 65)
         Me.txtCodItem.MaxLength = 10
         Me.txtCodItem.Name = "txtCodItem"
-        Me.txtCodItem.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodItem.Size = New System.Drawing.Size(183, 22)
         Me.txtCodItem.TabIndex = 1
         '
         'txtDesc
         '
         Me.txtDesc.BackColor = System.Drawing.Color.White
         Me.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDesc.Location = New System.Drawing.Point(174, 54)
+        Me.txtDesc.Location = New System.Drawing.Point(209, 62)
         Me.txtDesc.MaxLength = 15
         Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(152, 20)
+        Me.txtDesc.Size = New System.Drawing.Size(182, 22)
         Me.txtDesc.TabIndex = 3
         '
         'rbtTipoItem
         '
         Me.rbtTipoItem.BackColor = System.Drawing.Color.White
-        Me.rbtTipoItem.Location = New System.Drawing.Point(332, 24)
+        Me.rbtTipoItem.Location = New System.Drawing.Point(398, 28)
         Me.rbtTipoItem.Name = "rbtTipoItem"
-        Me.rbtTipoItem.Size = New System.Drawing.Size(152, 24)
+        Me.rbtTipoItem.Size = New System.Drawing.Size(183, 27)
         Me.rbtTipoItem.TabIndex = 4
         Me.rbtTipoItem.Text = "Tipo de Item:"
         Me.rbtTipoItem.UseVisualStyleBackColor = False
@@ -158,9 +158,9 @@ Public Class frmMItemsFact
         'rbtDescripción
         '
         Me.rbtDescripción.BackColor = System.Drawing.Color.White
-        Me.rbtDescripción.Location = New System.Drawing.Point(174, 24)
+        Me.rbtDescripción.Location = New System.Drawing.Point(209, 28)
         Me.rbtDescripción.Name = "rbtDescripción"
-        Me.rbtDescripción.Size = New System.Drawing.Size(152, 24)
+        Me.rbtDescripción.Size = New System.Drawing.Size(182, 27)
         Me.rbtDescripción.TabIndex = 2
         Me.rbtDescripción.Text = "Descripción:"
         Me.rbtDescripción.UseVisualStyleBackColor = False
@@ -169,9 +169,9 @@ Public Class frmMItemsFact
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(174, 82)
+        Me.rbTodos.Location = New System.Drawing.Point(209, 95)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(182, 27)
         Me.rbTodos.TabIndex = 8
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "&Todos"
@@ -180,32 +180,35 @@ Public Class frmMItemsFact
         'rbtCodItem
         '
         Me.rbtCodItem.BackColor = System.Drawing.Color.White
-        Me.rbtCodItem.Location = New System.Drawing.Point(16, 24)
+        Me.rbtCodItem.Location = New System.Drawing.Point(19, 28)
         Me.rbtCodItem.Name = "rbtCodItem"
-        Me.rbtCodItem.Size = New System.Drawing.Size(152, 24)
+        Me.rbtCodItem.Size = New System.Drawing.Size(183, 27)
         Me.rbtCodItem.TabIndex = 0
         Me.rbtCodItem.Text = "Código de Item:"
         Me.rbtCodItem.UseVisualStyleBackColor = False
         '
         'fg
         '
+        Me.fg.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None
+        Me.fg.AllowEditing = False
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 254)
+        Me.fg.Location = New System.Drawing.Point(28, 293)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(669, 197)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(659, 150)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 14
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 220)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 254)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 64
         Me.btnAgregar1.Text = "Agregar"
@@ -215,9 +218,9 @@ Public Class frmMItemsFact
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 220)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 254)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 63
         Me.btnModificar1.Text = "Modificar"
@@ -227,9 +230,9 @@ Public Class frmMItemsFact
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 220)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 254)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 62
         Me.btnEliminar1.Text = "Eliminar"
@@ -239,9 +242,9 @@ Public Class frmMItemsFact
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 220)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 254)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 65
         Me.btnConsultar1.Text = "Consultar"
@@ -251,7 +254,7 @@ Public Class frmMItemsFact
         '
         'frmMItemsFact
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(715, 501)
         Me.Controls.Add(Me.btnConsultar1)
@@ -423,7 +426,7 @@ Public Class frmMItemsFact
             frm.ShowDialog()
             btnMostrar_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -528,7 +531,7 @@ Public Class frmMItemsFact
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -543,7 +546,7 @@ Public Class frmMItemsFact
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -645,7 +648,7 @@ Public Class frmMItemsFact
                 btnMostrar_Click(sender, e)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

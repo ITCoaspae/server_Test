@@ -77,11 +77,12 @@ Public Class frmMCBBitacoraGestores
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 251)
+        Me.fg.Location = New System.Drawing.Point(28, 290)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(656, 157)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(1140, 198)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 52
         '
         'GroupBox2
@@ -104,18 +105,18 @@ Public Class frmMCBBitacoraGestores
         Me.GroupBox2.Controls.Add(Me.rbCodigoPrestamo)
         Me.GroupBox2.Controls.Add(Me.rbDUI)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(656, 148)
+        Me.GroupBox2.Size = New System.Drawing.Size(1140, 170)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar registros por:"
         '
         'btnMostrar
         '
-        Me.btnMostrar.Location = New System.Drawing.Point(450, 108)
+        Me.btnMostrar.Location = New System.Drawing.Point(540, 125)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(90, 28)
+        Me.btnMostrar.Size = New System.Drawing.Size(108, 32)
         Me.btnMostrar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar.TabIndex = 184
         Me.btnMostrar.Text = "Mostrar"
@@ -127,18 +128,18 @@ Public Class frmMCBBitacoraGestores
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(174, 112)
+        Me.txtNombres.Location = New System.Drawing.Point(209, 129)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(270, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(324, 22)
         Me.txtNombres.TabIndex = 15
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(16, 82)
+        Me.rbNombres.Location = New System.Drawing.Point(19, 95)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(152, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(183, 27)
         Me.rbNombres.TabIndex = 13
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -148,60 +149,60 @@ Public Class frmMCBBitacoraGestores
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(16, 112)
+        Me.cbNombres.Location = New System.Drawing.Point(19, 129)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(152, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(183, 24)
         Me.cbNombres.TabIndex = 14
         '
         'txtDUI
         '
         Me.txtDUI.EditMask = "00000000-0"
-        Me.txtDUI.Location = New System.Drawing.Point(16, 56)
+        Me.txtDUI.Location = New System.Drawing.Point(19, 65)
         Me.txtDUI.Name = "txtDUI"
-        Me.txtDUI.Size = New System.Drawing.Size(152, 20)
+        Me.txtDUI.Size = New System.Drawing.Size(183, 23)
         Me.txtDUI.TabIndex = 12
         Me.txtDUI.Tag = Nothing
         '
         'dtpFin
         '
         Me.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFin.Location = New System.Drawing.Point(332, 56)
+        Me.dtpFin.Location = New System.Drawing.Point(398, 65)
         Me.dtpFin.Name = "dtpFin"
-        Me.dtpFin.Size = New System.Drawing.Size(152, 20)
+        Me.dtpFin.Size = New System.Drawing.Size(183, 22)
         Me.dtpFin.TabIndex = 11
         '
         'dtpInicio
         '
         Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpInicio.Location = New System.Drawing.Point(174, 56)
+        Me.dtpInicio.Location = New System.Drawing.Point(209, 65)
         Me.dtpInicio.Name = "dtpInicio"
-        Me.dtpInicio.Size = New System.Drawing.Size(152, 20)
+        Me.dtpInicio.Size = New System.Drawing.Size(182, 22)
         Me.dtpInicio.TabIndex = 10
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(332, 28)
+        Me.Label2.Location = New System.Drawing.Point(398, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Fin:"
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(246, 28)
+        Me.Label1.Location = New System.Drawing.Point(295, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 16)
+        Me.Label1.Size = New System.Drawing.Size(96, 19)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Inicio:"
         '
         'rbFechas
         '
         Me.rbFechas.BackColor = System.Drawing.Color.White
-        Me.rbFechas.Location = New System.Drawing.Point(174, 24)
+        Me.rbFechas.Location = New System.Drawing.Point(209, 28)
         Me.rbFechas.Name = "rbFechas"
-        Me.rbFechas.Size = New System.Drawing.Size(152, 24)
+        Me.rbFechas.Size = New System.Drawing.Size(182, 27)
         Me.rbFechas.TabIndex = 2
         Me.rbFechas.Text = "&Fechas:"
         Me.rbFechas.UseVisualStyleBackColor = False
@@ -210,9 +211,9 @@ Public Class frmMCBBitacoraGestores
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(332, 82)
+        Me.rbTodos.Location = New System.Drawing.Point(398, 95)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(183, 27)
         Me.rbTodos.TabIndex = 6
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -220,17 +221,17 @@ Public Class frmMCBBitacoraGestores
         '
         'txtCodigoPrestamo
         '
-        Me.txtCodigoPrestamo.Location = New System.Drawing.Point(490, 56)
+        Me.txtCodigoPrestamo.Location = New System.Drawing.Point(588, 65)
         Me.txtCodigoPrestamo.Name = "txtCodigoPrestamo"
-        Me.txtCodigoPrestamo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigoPrestamo.Size = New System.Drawing.Size(182, 22)
         Me.txtCodigoPrestamo.TabIndex = 5
         '
         'rbCodigoPrestamo
         '
         Me.rbCodigoPrestamo.BackColor = System.Drawing.Color.White
-        Me.rbCodigoPrestamo.Location = New System.Drawing.Point(483, 26)
+        Me.rbCodigoPrestamo.Location = New System.Drawing.Point(580, 30)
         Me.rbCodigoPrestamo.Name = "rbCodigoPrestamo"
-        Me.rbCodigoPrestamo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodigoPrestamo.Size = New System.Drawing.Size(182, 28)
         Me.rbCodigoPrestamo.TabIndex = 4
         Me.rbCodigoPrestamo.Text = "Código del &Préstamo"
         Me.rbCodigoPrestamo.UseVisualStyleBackColor = False
@@ -238,18 +239,18 @@ Public Class frmMCBBitacoraGestores
         'rbDUI
         '
         Me.rbDUI.BackColor = System.Drawing.Color.White
-        Me.rbDUI.Location = New System.Drawing.Point(16, 24)
+        Me.rbDUI.Location = New System.Drawing.Point(19, 28)
         Me.rbDUI.Name = "rbDUI"
-        Me.rbDUI.Size = New System.Drawing.Size(152, 24)
+        Me.rbDUI.Size = New System.Drawing.Size(183, 27)
         Me.rbDUI.TabIndex = 0
         Me.rbDUI.Text = "&DUI:"
         Me.rbDUI.UseVisualStyleBackColor = False
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 217)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 250)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(113, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(135, 33)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 182
         Me.btnAgregar1.Text = "Agregar Gestión"
@@ -259,9 +260,9 @@ Public Class frmMCBBitacoraGestores
         '
         'btnCargar1
         '
-        Me.btnCargar1.Location = New System.Drawing.Point(142, 217)
+        Me.btnCargar1.Location = New System.Drawing.Point(170, 250)
         Me.btnCargar1.Name = "btnCargar1"
-        Me.btnCargar1.Size = New System.Drawing.Size(113, 28)
+        Me.btnCargar1.Size = New System.Drawing.Size(136, 33)
         Me.btnCargar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCargar1.TabIndex = 183
         Me.btnCargar1.Text = "Cargar Datos"
@@ -271,9 +272,9 @@ Public Class frmMCBBitacoraGestores
         '
         'frmMCBBitacoraGestores
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(702, 451)
+        Me.ClientSize = New System.Drawing.Size(1195, 556)
         Me.Controls.Add(Me.btnAgregar1)
         Me.Controls.Add(Me.btnCargar1)
         Me.Controls.Add(Me.fg)
@@ -409,7 +410,7 @@ Public Class frmMCBBitacoraGestores
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -425,7 +426,7 @@ Public Class frmMCBBitacoraGestores
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -483,7 +484,7 @@ Public Class frmMCBBitacoraGestores
             End If
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

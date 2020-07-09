@@ -565,7 +565,7 @@ Public Class frmMsPRReversion
                 Me.C1NEMonto.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -587,7 +587,7 @@ Public Class frmMsPRReversion
     '            Me.C1NEMonto.Enabled = False
     '        End If
     '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '       MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
     '    End Try
     'End Sub
 
@@ -623,7 +623,7 @@ Public Class frmMsPRReversion
             '    Me.C1NEMonto.Enabled = False
             'End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -645,7 +645,7 @@ Public Class frmMsPRReversion
     '            Me.C1NEMonto.Enabled = False
     '        End If
     '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '       MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
     '    End Try
     'End Sub
 
@@ -821,7 +821,7 @@ Public Class frmMsPRReversion
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -843,7 +843,7 @@ Public Class frmMsPRReversion
                     .Show()
                 End With
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
@@ -906,7 +906,7 @@ Public Class frmMsPRReversion
             Me.btnImprimir1.Enabled = True
             Me.btProcesar1.Enabled = False
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -938,7 +938,7 @@ Public Class frmMsPRReversion
                 Call btnImprimir1_Click(sender, e)
                 Me.Close()
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
 
@@ -997,13 +997,13 @@ Public Class frmMsPRReversion
                         fechaOtorgamiento = frm.Resultado3
                     End If
                 Else
-                    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             Else
                 MsgBox("Error en la recuperación de información, por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

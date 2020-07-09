@@ -2,7 +2,7 @@ Public Class frmMsCrEncDescuentos
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
 
-    'Private vTipoDeduccion As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
+    'Private vTipoDeduccion As Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
     Private vTipoDeduccion As sifLib.Prestamos.clsPrestamos.TipoDeduccion, vAccion As String
     Friend WithEvents dgDeducciones As System.Windows.Forms.DataGridView
     Dim Credito As New wrCredito.wsLibCred
@@ -279,12 +279,12 @@ Public Class frmMsCrEncDescuentos
 
 #End Region
 #Region "Propiedades"
-    'Public Property TipoDeduccion() As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Public Property TipoDeduccion() As Prestamos.clsPrestamos.TipoDeduccion
     Public Property TipoDeduccion() As sifLib.Prestamos.clsPrestamos.TipoDeduccion
         Get
             Return vTipoDeduccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion)
+        'Set(ByVal Value As Prestamos.clsPrestamos.TipoDeduccion)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.TipoDeduccion)
             vTipoDeduccion = Value
         End Set
@@ -303,15 +303,15 @@ Public Class frmMsCrEncDescuentos
             Me.txtCodTipoCredito.Enabled = False
             CargaDatosTipoCredito()
         End If
-        'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
+        'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
         If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
             Me.Text = "Gastos de Escrituración"
             CodTipoDeduccion = 0
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
+            'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
         ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
             Me.Text = "Honorarios"
             CodTipoDeduccion = 1
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
+            'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
         ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
             Me.Text = "Gastos de Tramitación"
             CodTipoDeduccion = 2
@@ -345,7 +345,7 @@ Public Class frmMsCrEncDescuentos
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -393,7 +393,7 @@ Public Class frmMsCrEncDescuentos
             frm.ShowDialog()
             LlenarDgDeducciones(2, Me.txtCodTipoCredito.Text, 0, CodTipoDeduccion)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -442,7 +442,7 @@ Public Class frmMsCrEncDescuentos
                 LlenarDgDeducciones(2, Me.txtCodTipoCredito.Text, 0, CodTipoDeduccion)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -460,7 +460,7 @@ Public Class frmMsCrEncDescuentos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'Private Sub Encabezado()
@@ -476,7 +476,7 @@ Public Class frmMsCrEncDescuentos
     '    ds = oCredito.ConsultarPRDeducciones("CodDeduccion,Descripcion,Monto,MontoMax,Iva,Tarifa", "CodTipoCredito='" & Me.txtCodTipoCredito.Text.Trim & "' and Tipo='" & vTipoDeduccion & "'", "CodDeduccion", vTipoDeduccion, sUsuario, sPassword, sSucursal)
     '    Me.fgDeducciones.DataSource = ds.Tables(0)
     '    If Me.vAccion = "Guardar" And ds.Tables(0).Rows.Count > 0 Then Me.txtCodTipoCredito.Enabled = False
-    '    'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
+    '    'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
     '    If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
     '        fgDeducciones.Cols.Item(1).Caption = "Código"
     '        fgDeducciones.Cols.Item(2).Caption = "Descripción"
@@ -524,7 +524,7 @@ Public Class frmMsCrEncDescuentos
                 Me.btNew1.Enabled = True
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

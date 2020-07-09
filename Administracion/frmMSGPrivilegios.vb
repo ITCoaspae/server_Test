@@ -6,9 +6,10 @@ Public Class frmMSGPrivilegios
 
     Private iRow As Integer, idNo As String, vDescripcion As String, ds As New DataSet
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
-
+    Dim administracion As New wrAdmin.wsLibAdmin
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents picFolder As PictureBox
+    Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
     Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
 
     Public Property No() As String
@@ -62,25 +63,20 @@ Public Class frmMSGPrivilegios
     Friend WithEvents picSubNodo As System.Windows.Forms.PictureBox
     Friend WithEvents picRaiz As System.Windows.Forms.PictureBox
     Friend WithEvents picNodo As System.Windows.Forms.PictureBox
-    Friend WithEvents txtRole As System.Windows.Forms.TextBox
-    Friend WithEvents txtCodRole As System.Windows.Forms.TextBox
     Friend WithEvents picDeshabilita As System.Windows.Forms.PictureBox
-    Friend WithEvents txtTip As System.Windows.Forms.TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMSGPrivilegios))
         Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtRole = New System.Windows.Forms.TextBox()
-        Me.txtCodRole = New System.Windows.Forms.TextBox()
         Me.picRaiz = New System.Windows.Forms.PictureBox()
         Me.picNodo = New System.Windows.Forms.PictureBox()
         Me.picSubNodo = New System.Windows.Forms.PictureBox()
-        Me.txtTip = New System.Windows.Forms.TextBox()
         Me.picDeshabilita = New System.Windows.Forms.PictureBox()
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.picFolder = New System.Windows.Forms.PictureBox()
+        Me.MetroComboBox1 = New MetroFramework.Controls.MetroComboBox()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picRaiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picNodo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,51 +87,32 @@ Public Class frmMSGPrivilegios
         '
         'fg
         '
+        Me.fg.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None
         Me.fg.AllowEditing = False
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "3,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:100;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fg.Location = New System.Drawing.Point(31, 168)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
         Me.fg.Rows.DefaultSize = 21
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.RowRange
-        Me.fg.Size = New System.Drawing.Size(459, 319)
+        Me.fg.Size = New System.Drawing.Size(607, 285)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 40
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Location = New System.Drawing.Point(28, 73)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(23, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 14)
         Me.Label1.TabIndex = 186
         Me.Label1.Text = "Rol:"
-        '
-        'txtRole
-        '
-        Me.txtRole.BackColor = System.Drawing.Color.White
-        Me.txtRole.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRole.Location = New System.Drawing.Point(186, 73)
-        Me.txtRole.Multiline = True
-        Me.txtRole.Name = "txtRole"
-        Me.txtRole.ReadOnly = True
-        Me.txtRole.Size = New System.Drawing.Size(403, 19)
-        Me.txtRole.TabIndex = 185
-        '
-        'txtCodRole
-        '
-        Me.txtCodRole.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodRole.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodRole.Location = New System.Drawing.Point(73, 73)
-        Me.txtCodRole.Multiline = True
-        Me.txtCodRole.Name = "txtCodRole"
-        Me.txtCodRole.Size = New System.Drawing.Size(106, 19)
-        Me.txtCodRole.TabIndex = 183
         '
         'picRaiz
         '
@@ -166,19 +143,6 @@ Public Class frmMSGPrivilegios
         Me.picSubNodo.TabIndex = 49
         Me.picSubNodo.TabStop = False
         Me.picSubNodo.Visible = False
-        '
-        'txtTip
-        '
-        Me.txtTip.BackColor = System.Drawing.Color.White
-        Me.txtTip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTip.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTip.ForeColor = System.Drawing.Color.Teal
-        Me.txtTip.Location = New System.Drawing.Point(31, 99)
-        Me.txtTip.Name = "txtTip"
-        Me.txtTip.Size = New System.Drawing.Size(558, 23)
-        Me.txtTip.TabIndex = 50
-        Me.txtTip.Text = "Para habilitar/deshabilitar presione barra espaciadora o los respectivos botones." &
-    ""
         '
         'picDeshabilita
         '
@@ -233,19 +197,28 @@ Public Class frmMSGPrivilegios
         Me.picFolder.TabStop = False
         Me.picFolder.Visible = False
         '
+        'MetroComboBox1
+        '
+        Me.MetroComboBox1.FormattingEnabled = True
+        Me.MetroComboBox1.ItemHeight = 24
+        Me.MetroComboBox1.Location = New System.Drawing.Point(72, 63)
+        Me.MetroComboBox1.Name = "MetroComboBox1"
+        Me.MetroComboBox1.Size = New System.Drawing.Size(566, 30)
+        Me.MetroComboBox1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroComboBox1.TabIndex = 1012
+        Me.MetroComboBox1.UseSelectable = True
+        '
         'frmMSGPrivilegios
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(517, 535)
+        Me.ClientSize = New System.Drawing.Size(665, 540)
+        Me.Controls.Add(Me.MetroComboBox1)
         Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btnGuardar1)
-        Me.Controls.Add(Me.txtRole)
-        Me.Controls.Add(Me.txtCodRole)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.picDeshabilita)
-        Me.Controls.Add(Me.txtTip)
         Me.Controls.Add(Me.picSubNodo)
         Me.Controls.Add(Me.picFolder)
         Me.Controls.Add(Me.picNodo)
@@ -265,13 +238,19 @@ Public Class frmMSGPrivilegios
         CType(Me.picDeshabilita, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picFolder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
+    Private Sub llenarRoles()
+        MetroComboBox1.DisplayMember = "Descripcion"
+        MetroComboBox1.ValueMember = "codRol"
+        Dim dts As New DataSet
+        dts = administracion.ConsultarRol("*", "", "CodRol", sUsuario, sPassword, sSucursal)
+        Me.MetroComboBox1.DataSource = dts.Tables(0)
 
+    End Sub
 
     Public Sub cargarGrid(ByVal pds As System.Data.DataSet)
 
@@ -343,8 +322,9 @@ Public Class frmMSGPrivilegios
             Dim oApp As New wrAdmin.wsLibAdmin
             ds = oApp.CargaMenuPrivilegios("Num_Programa,Descripcion,Nivel", "", "Num_Programa", sUsuario, sPassword, sSucursal)
             cargarGrid(ds)
+            llenarRoles()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -353,56 +333,45 @@ Public Class frmMSGPrivilegios
         idNo = ds.Tables(0).Rows(iRow - 1).Item(0)
     End Sub
 
-    Private Sub txtCodRole_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCodRole.KeyPress
-        Try
-            Dim oPerif As wrAdmin.wsLibAdmin = New wrAdmin.wsLibAdmin, ds As New Data.DataSet, Filas As Data.DataRowCollection
-            If e.KeyChar = Convert.ToChar(Keys.Enter) Then
-                ds = oPerif.ConsultarRol("*", "CodRol='" & Trim(Me.txtCodRole.Text) & "'", "CodRol", sUsuario, sPassword, sSucursal)
-                Filas = ds.Tables(0).Rows()
-                If Filas.Count > 0 Then
-                    If Not (Filas.Item(0)("Descripcion") Is DBNull.Value) Then
-                        Me.txtRole.Text = CStr(Filas.Item(0)("Descripcion"))
-                    End If
-                Else
-                    txtCodRole_DoubleClick(sender, e)
-                End If
-            End If
+    'Private Sub txtCodRole_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+    '    Try
+    '        Dim oPerif As wrAdmin.wsLibAdmin = New wrAdmin.wsLibAdmin, ds As New Data.DataSet, Filas As Data.DataRowCollection
+    '        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+    '            ds = oPerif.ConsultarRol("*", "CodRol='" & Trim(Me.txtCodRole.Text) & "'", "CodRol", sUsuario, sPassword, sSucursal)
+    '            Filas = ds.Tables(0).Rows()
+    '            If Filas.Count > 0 Then
+    '                If Not (Filas.Item(0)("Descripcion") Is DBNull.Value) Then
+    '                    Me.txtRole.Text = CStr(Filas.Item(0)("Descripcion"))
+    '                End If
+    '            Else
+    '                txtCodRole_DoubleClick(sender, e)
+    '            End If
+    '        End If
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
+    '    Catch ex As Exception
+    '        MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+    '    End Try
+    'End Sub
 
-    Private Sub txtCodRole_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodRole.DoubleClick
-        Dim ofrm As New frmAGenerico
-        ofrm.Text = "Buscar Roles"
-        Try
-            Dim oPerif As wrAdmin.wsLibAdmin = New wrAdmin.wsLibAdmin, ds As New Data.DataSet
-            ds = oPerif.ConsultarRol("*", "", "CodRol", sUsuario, sPassword, sSucursal)
-            ofrm.Datos = ds
-            ofrm.ColSeleccion = 0
-            ofrm.RefrescarGrid()
-            ofrm.ShowDialog()
-            Me.txtCodRole.Text = ofrm.Resultado.Trim
-            Me.txtRole.Text = ofrm.Resultado2.Trim
-            CargarRoles(Me.txtCodRole.Text.Trim)
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub btHabilitar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub btGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    'Private Sub txtCodRole_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
+    '    Dim ofrm As New frmAGenerico
+    '    ofrm.Text = "Buscar Roles"
+    '    Try
+    '        Dim oPerif As wrAdmin.wsLibAdmin = New wrAdmin.wsLibAdmin, ds As New Data.DataSet
+    '        ds = oPerif.ConsultarRol("*", "", "CodRol", sUsuario, sPassword, sSucursal)
+    '        ofrm.Datos = ds
+    '        ofrm.ColSeleccion = 0
+    '        ofrm.RefrescarGrid()
+    '        ofrm.ShowDialog()
+    '        Me.txtCodRole.Text = ofrm.Resultado.Trim
+    '        Me.txtRole.Text = ofrm.Resultado2.Trim
+    '        CargarRoles(Me.txtCodRole.Text.Trim)
+    '    Catch ex As Exception
+    '       MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+    '    End Try
+    'End Sub
 
 
-    End Sub
-
-    Private Sub btDeshabilitar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
 
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
         Dim range As CellRange, x As Integer, dr As DataRow, range2 As CellRange
@@ -416,7 +385,7 @@ Public Class frmMSGPrivilegios
                 End If
             Next
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -432,7 +401,7 @@ Public Class frmMSGPrivilegios
                 End If
             Next
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -442,17 +411,13 @@ Public Class frmMSGPrivilegios
             Dim dr As DataRow, range As CellRange, x As Integer, vresp As String
             Dim oAdm As New wrAdmin.wsLibAdmin
 
-            If Me.txtCodRole.Text.Trim = "" Then
-                MessageBox.Show("El Role no puede quedar vacío, selecciónelo.", "Asignación Derechos Roles", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
-            End If
 
-            If oAdm.EliminarAcceso("CodRol='" & Me.txtCodRole.Text.Trim & "'", sUsuario, sPassword, sSucursal) = True Then
+            If oAdm.EliminarAcceso("CodRol='" & MetroComboBox1.SelectedValue.ToString.Trim & "'", sUsuario, sPassword, sSucursal) = True Then
                 For Each dr In ds.Tables(0).Rows
                     x += 1
                     range = fg.GetCellRange(x, 1)
                     If range.Image Is picFolder.Image Then
-                        vresp = oAdm.InsertarAcceso(txtCodRole.Text.Trim, ds.Tables(0).Rows(x - 1).Item(0), Now.ToShortDateString, sUsuario, sUsuario, sPassword, sSucursal)
+                        vresp = oAdm.InsertarAcceso(MetroComboBox1.SelectedValue.ToString.Trim, ds.Tables(0).Rows(x - 1).Item(0), Now.ToShortDateString, sUsuario, sUsuario, sPassword, sSucursal)
                     End If
                 Next
             End If
@@ -465,7 +430,7 @@ Public Class frmMSGPrivilegios
             MessageBox.Show("Derechos para este rol asignados con éxito. Debe iniciar sesión para visualizar los cambios.", "Asignación Derechos Roles", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -493,7 +458,7 @@ Public Class frmMSGPrivilegios
                 End If
             Next
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -516,8 +481,17 @@ Public Class frmMSGPrivilegios
                 Next
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
+    Private Sub frmMSGPrivilegios_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub MetroComboBox1_Validated(sender As Object, e As EventArgs) Handles MetroComboBox1.Validated
+        CargarRoles(MetroComboBox1.SelectedValue)
+    End Sub
 End Class

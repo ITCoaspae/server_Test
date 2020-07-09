@@ -99,17 +99,17 @@ Public Class frmSolicitudRenunciaAsociado
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(520, 432)
+        Me.GroupBox1.Size = New System.Drawing.Size(624, 498)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'chkDenegada
         '
-        Me.chkDenegada.Location = New System.Drawing.Point(416, 40)
+        Me.chkDenegada.Location = New System.Drawing.Point(499, 46)
         Me.chkDenegada.Name = "chkDenegada"
-        Me.chkDenegada.Size = New System.Drawing.Size(88, 16)
+        Me.chkDenegada.Size = New System.Drawing.Size(106, 19)
         Me.chkDenegada.TabIndex = 5
         Me.chkDenegada.Text = "Denegada"
         '
@@ -117,26 +117,26 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.dtpFechaProy.CausesValidation = False
         Me.dtpFechaProy.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaProy.Location = New System.Drawing.Point(408, 16)
+        Me.dtpFechaProy.Location = New System.Drawing.Point(490, 18)
         Me.dtpFechaProy.Name = "dtpFechaProy"
-        Me.dtpFechaProy.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaProy.Size = New System.Drawing.Size(105, 22)
         Me.dtpFechaProy.TabIndex = 1
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(272, 16)
+        Me.Label8.Location = New System.Drawing.Point(326, 18)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(136, 16)
+        Me.Label8.Size = New System.Drawing.Size(164, 19)
         Me.Label8.TabIndex = 41
         Me.Label8.Text = "Fecha Proyección saldos:"
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(72, 64)
+        Me.txtDui.Location = New System.Drawing.Point(86, 74)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(120, 20)
+        Me.txtDui.Size = New System.Drawing.Size(144, 23)
         Me.txtDui.TabIndex = 6
         Me.txtDui.Tag = Nothing
         '
@@ -144,19 +144,19 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.txtObsConsejo.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.txtObsConsejo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtObsConsejo.Location = New System.Drawing.Point(8, 328)
+        Me.txtObsConsejo.Location = New System.Drawing.Point(10, 378)
         Me.txtObsConsejo.MaxLength = 255
         Me.txtObsConsejo.Multiline = True
         Me.txtObsConsejo.Name = "txtObsConsejo"
         Me.txtObsConsejo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObsConsejo.Size = New System.Drawing.Size(504, 96)
+        Me.txtObsConsejo.Size = New System.Drawing.Size(604, 111)
         Me.txtObsConsejo.TabIndex = 9
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(8, 312)
+        Me.Label7.Location = New System.Drawing.Point(10, 360)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(144, 23)
+        Me.Label7.Size = New System.Drawing.Size(172, 27)
         Me.Label7.TabIndex = 40
         Me.Label7.Text = "Observaciones Consejo:"
         '
@@ -164,19 +164,19 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.txtObsGerente.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.txtObsGerente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtObsGerente.Location = New System.Drawing.Point(8, 216)
+        Me.txtObsGerente.Location = New System.Drawing.Point(10, 249)
         Me.txtObsGerente.MaxLength = 255
         Me.txtObsGerente.Multiline = True
         Me.txtObsGerente.Name = "txtObsGerente"
         Me.txtObsGerente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObsGerente.Size = New System.Drawing.Size(504, 96)
+        Me.txtObsGerente.Size = New System.Drawing.Size(604, 111)
         Me.txtObsGerente.TabIndex = 8
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(8, 200)
+        Me.Label6.Location = New System.Drawing.Point(10, 231)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(144, 23)
+        Me.Label6.Size = New System.Drawing.Size(172, 26)
         Me.Label6.TabIndex = 38
         Me.Label6.Text = "Observaciones Gerente:"
         '
@@ -184,27 +184,27 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.txtObsAsociado.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.txtObsAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtObsAsociado.Location = New System.Drawing.Point(8, 104)
+        Me.txtObsAsociado.Location = New System.Drawing.Point(10, 120)
         Me.txtObsAsociado.MaxLength = 255
         Me.txtObsAsociado.Multiline = True
         Me.txtObsAsociado.Name = "txtObsAsociado"
         Me.txtObsAsociado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObsAsociado.Size = New System.Drawing.Size(504, 96)
+        Me.txtObsAsociado.Size = New System.Drawing.Size(604, 111)
         Me.txtObsAsociado.TabIndex = 7
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(8, 88)
+        Me.Label1.Location = New System.Drawing.Point(10, 102)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 23)
+        Me.Label1.Size = New System.Drawing.Size(172, 26)
         Me.Label1.TabIndex = 36
         Me.Label1.Text = "Observaciones Asociado:"
         '
         'chkAceptada
         '
-        Me.chkAceptada.Location = New System.Drawing.Point(328, 40)
+        Me.chkAceptada.Location = New System.Drawing.Point(394, 46)
         Me.chkAceptada.Name = "chkAceptada"
-        Me.chkAceptada.Size = New System.Drawing.Size(72, 16)
+        Me.chkAceptada.Size = New System.Drawing.Size(86, 19)
         Me.chkAceptada.TabIndex = 4
         Me.chkAceptada.Text = "Aceptada"
         '
@@ -212,26 +212,26 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.txtNoActa.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.txtNoActa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNoActa.Location = New System.Drawing.Point(248, 40)
+        Me.txtNoActa.Location = New System.Drawing.Point(298, 46)
         Me.txtNoActa.MaxLength = 20
         Me.txtNoActa.Name = "txtNoActa"
-        Me.txtNoActa.Size = New System.Drawing.Size(48, 20)
+        Me.txtNoActa.Size = New System.Drawing.Size(57, 22)
         Me.txtNoActa.TabIndex = 3
         '
         'dtpFechaSesion
         '
         Me.dtpFechaSesion.CausesValidation = False
         Me.dtpFechaSesion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaSesion.Location = New System.Drawing.Point(96, 40)
+        Me.dtpFechaSesion.Location = New System.Drawing.Point(115, 46)
         Me.dtpFechaSesion.Name = "dtpFechaSesion"
-        Me.dtpFechaSesion.Size = New System.Drawing.Size(96, 20)
+        Me.dtpFechaSesion.Size = New System.Drawing.Size(115, 22)
         Me.dtpFechaSesion.TabIndex = 2
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(8, 40)
+        Me.Label4.Location = New System.Drawing.Point(10, 46)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 23)
+        Me.Label4.Size = New System.Drawing.Size(105, 27)
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "Fecha Sesión:"
         '
@@ -239,49 +239,49 @@ Public Class frmSolicitudRenunciaAsociado
         '
         Me.dtpFechaEmision.CausesValidation = False
         Me.dtpFechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaEmision.Location = New System.Drawing.Point(96, 16)
+        Me.dtpFechaEmision.Location = New System.Drawing.Point(115, 18)
         Me.dtpFechaEmision.Name = "dtpFechaEmision"
-        Me.dtpFechaEmision.Size = New System.Drawing.Size(96, 20)
+        Me.dtpFechaEmision.Size = New System.Drawing.Size(115, 22)
         Me.dtpFechaEmision.TabIndex = 0
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(8, 16)
+        Me.Label3.Location = New System.Drawing.Point(10, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 23)
+        Me.Label3.Size = New System.Drawing.Size(105, 27)
         Me.Label3.TabIndex = 29
         Me.Label3.Text = "Fecha Emisión:"
         '
         'txtNombre
         '
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombre.Location = New System.Drawing.Point(200, 64)
+        Me.txtNombre.Location = New System.Drawing.Point(240, 74)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(304, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(365, 22)
         Me.txtNombre.TabIndex = 28
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(8, 64)
+        Me.Label2.Location = New System.Drawing.Point(10, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 23)
+        Me.Label2.Size = New System.Drawing.Size(134, 26)
         Me.Label2.TabIndex = 26
         Me.Label2.Text = "DUI:"
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(200, 40)
+        Me.Label5.Location = New System.Drawing.Point(240, 46)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 16)
+        Me.Label5.Size = New System.Drawing.Size(67, 19)
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "No Acta:"
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(449, 501)
+        Me.btnProcesar1.Location = New System.Drawing.Point(539, 578)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(94, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(113, 32)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 70
         Me.btnProcesar1.Text = "Imprimir"
@@ -290,8 +290,8 @@ Public Class frmSolicitudRenunciaAsociado
         '
         'frmSolicitudRenunciaAsociado
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(563, 547)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(673, 668)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
@@ -299,6 +299,7 @@ Public Class frmSolicitudRenunciaAsociado
         Me.Name = "frmSolicitudRenunciaAsociado"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Solicitud Renuncia Asociado"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -403,5 +404,11 @@ Public Class frmSolicitudRenunciaAsociado
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub frmSolicitudRenunciaAsociado_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

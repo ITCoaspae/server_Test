@@ -63,66 +63,66 @@ Public Class frmMsPartidasIntegracion
         'txtCodigo
         '
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigo.Location = New System.Drawing.Point(137, 12)
+        Me.txtCodigo.Location = New System.Drawing.Point(164, 14)
         Me.txtCodigo.MaxLength = 6
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(88, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(106, 22)
         Me.txtCodigo.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(3, 12)
+        Me.Label1.Location = New System.Drawing.Point(4, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 16)
+        Me.Label1.Size = New System.Drawing.Size(153, 18)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "No. Partida Integración:"
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(3, 53)
+        Me.Label4.Location = New System.Drawing.Point(4, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(112, 16)
+        Me.Label4.Size = New System.Drawing.Size(134, 19)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Descripción Partida:"
         '
         'txtDescripcion
         '
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescripcion.Location = New System.Drawing.Point(137, 53)
+        Me.txtDescripcion.Location = New System.Drawing.Point(164, 61)
         Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDescripcion.Size = New System.Drawing.Size(398, 28)
+        Me.txtDescripcion.Size = New System.Drawing.Size(478, 32)
         Me.txtDescripcion.TabIndex = 2
         '
         'cmbTipoPartidas
         '
         Me.cmbTipoPartidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbTipoPartidas.Location = New System.Drawing.Point(325, 11)
+        Me.cmbTipoPartidas.Location = New System.Drawing.Point(390, 13)
         Me.cmbTipoPartidas.Name = "cmbTipoPartidas"
-        Me.cmbTipoPartidas.Size = New System.Drawing.Size(210, 21)
+        Me.cmbTipoPartidas.Size = New System.Drawing.Size(252, 24)
         Me.cmbTipoPartidas.TabIndex = 1
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(231, 12)
+        Me.Label3.Location = New System.Drawing.Point(277, 14)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 16)
+        Me.Label3.Size = New System.Drawing.Size(106, 18)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Tipo de Partida:"
         '
         'fg
         '
         Me.fg.AllowEditing = False
-        Me.fg.BackColor = System.Drawing.SystemColors.Window
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 196)
+        Me.fg.Location = New System.Drawing.Point(28, 226)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 21
         Me.fg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fg.Size = New System.Drawing.Size(550, 192)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Size = New System.Drawing.Size(660, 222)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
         'MetroPanel1
@@ -135,20 +135,20 @@ Public Class frmMsPartidasIntegracion
         Me.MetroPanel1.Controls.Add(Me.Label3)
         Me.MetroPanel1.HorizontalScrollbarBarColor = True
         Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroPanel1.HorizontalScrollbarSize = 10
-        Me.MetroPanel1.Location = New System.Drawing.Point(23, 63)
+        Me.MetroPanel1.HorizontalScrollbarSize = 12
+        Me.MetroPanel1.Location = New System.Drawing.Point(28, 73)
         Me.MetroPanel1.Name = "MetroPanel1"
-        Me.MetroPanel1.Size = New System.Drawing.Size(550, 93)
+        Me.MetroPanel1.Size = New System.Drawing.Size(660, 107)
         Me.MetroPanel1.TabIndex = 4
         Me.MetroPanel1.VerticalScrollbarBarColor = True
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroPanel1.VerticalScrollbarSize = 10
+        Me.MetroPanel1.VerticalScrollbarSize = 12
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(23, 162)
+        Me.btnNuevo.Location = New System.Drawing.Point(28, 187)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(75, 28)
+        Me.btnNuevo.Size = New System.Drawing.Size(90, 32)
         Me.btnNuevo.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnNuevo.TabIndex = 5
         Me.btnNuevo.Text = "Nuevo"
@@ -158,9 +158,9 @@ Public Class frmMsPartidasIntegracion
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(104, 162)
+        Me.btnModificar.Location = New System.Drawing.Point(125, 187)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar.TabIndex = 6
         Me.btnModificar.Text = "Modificar"
@@ -170,9 +170,9 @@ Public Class frmMsPartidasIntegracion
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(185, 162)
+        Me.btnEliminar.Location = New System.Drawing.Point(222, 187)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 7
         Me.btnEliminar.Text = "Eliminar"
@@ -182,9 +182,9 @@ Public Class frmMsPartidasIntegracion
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(417, 394)
+        Me.btnGuardar1.Location = New System.Drawing.Point(500, 455)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 8
         Me.btnGuardar1.Text = "Guardar"
@@ -194,9 +194,9 @@ Public Class frmMsPartidasIntegracion
         '
         'btnCerrar1
         '
-        Me.btnCerrar1.Location = New System.Drawing.Point(498, 394)
+        Me.btnCerrar1.Location = New System.Drawing.Point(598, 455)
         Me.btnCerrar1.Name = "btnCerrar1"
-        Me.btnCerrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnCerrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnCerrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCerrar1.TabIndex = 9
         Me.btnCerrar1.Text = "Cerrar"
@@ -206,9 +206,9 @@ Public Class frmMsPartidasIntegracion
         '
         'frmMsPartidasIntegracion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(601, 436)
+        Me.ClientSize = New System.Drawing.Size(721, 503)
         Me.Controls.Add(Me.btnCerrar1)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.btnEliminar)
@@ -218,7 +218,7 @@ Public Class frmMsPartidasIntegracion
         Me.Controls.Add(Me.MetroPanel1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(601, 436)
+        Me.MinimumSize = New System.Drawing.Size(721, 503)
         Me.Name = "frmMsPartidasIntegracion"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual

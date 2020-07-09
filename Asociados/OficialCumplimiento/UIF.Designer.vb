@@ -22,19 +22,19 @@ Partial Class UIF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
-        Me.cbTipoTransaccion = New MetroFramework.Controls.MetroComboBox()
-        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
+        Me.btnBuscar = New MetroFramework.Controls.MetroButton()
+        Me.cbSucursal = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
         Me.MetroDateTime2 = New MetroFramework.Controls.MetroDateTime()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
-        Me.cbSucursal = New MetroFramework.Controls.MetroComboBox()
-        Me.btnBuscar = New MetroFramework.Controls.MetroButton()
+        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.cbTipoTransaccion = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroGrid1 = New MetroFramework.Controls.MetroGrid()
         Me.MetroPanel1.SuspendLayout()
         CType(Me.MetroGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,44 +63,37 @@ Partial Class UIF
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroPanel1.VerticalScrollbarSize = 10
         '
-        'MetroLabel1
+        'btnBuscar
         '
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(3, 10)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(115, 20)
-        Me.MetroLabel1.TabIndex = 2
-        Me.MetroLabel1.Text = "Tipo Transacción:"
+        Me.btnBuscar.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnBuscar.FontWeight = MetroFramework.MetroButtonWeight.Light
+        Me.btnBuscar.Location = New System.Drawing.Point(532, 118)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(101, 38)
+        Me.btnBuscar.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnBuscar.TabIndex = 10
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseSelectable = True
         '
-        'cbTipoTransaccion
+        'cbSucursal
         '
-        Me.cbTipoTransaccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbTipoTransaccion.FormattingEnabled = True
-        Me.cbTipoTransaccion.ItemHeight = 24
-        Me.cbTipoTransaccion.Items.AddRange(New Object() {"Operaciones en efectivo diario-UIF F1-01 por  $10,000.00", "Operaciones en Efectivo Mensual-UIF1-02 por $10,000.00", "Operaciones en otro medio  diario-UIF F2-02 por $25,000.00", "Operaciones en otro medio electrónico diario- UIF F2-01E por $25,000.00"})
-        Me.cbTipoTransaccion.Location = New System.Drawing.Point(124, 10)
-        Me.cbTipoTransaccion.Name = "cbTipoTransaccion"
-        Me.cbTipoTransaccion.Size = New System.Drawing.Size(509, 30)
-        Me.cbTipoTransaccion.TabIndex = 3
-        Me.cbTipoTransaccion.UseSelectable = True
+        Me.cbSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSucursal.FormattingEnabled = True
+        Me.cbSucursal.ItemHeight = 24
+        Me.cbSucursal.Location = New System.Drawing.Point(124, 82)
+        Me.cbSucursal.Name = "cbSucursal"
+        Me.cbSucursal.Size = New System.Drawing.Size(509, 30)
+        Me.cbSucursal.TabIndex = 9
+        Me.cbSucursal.UseSelectable = True
         '
-        'MetroLabel2
+        'MetroLabel4
         '
-        Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(3, 46)
-        Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(85, 20)
-        Me.MetroLabel2.TabIndex = 4
-        Me.MetroLabel2.Text = "Fecha Inicio:"
-        '
-        'MetroDateTime1
-        '
-        Me.MetroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.MetroDateTime1.Location = New System.Drawing.Point(124, 46)
-        Me.MetroDateTime1.MinimumSize = New System.Drawing.Size(0, 30)
-        Me.MetroDateTime1.Name = "MetroDateTime1"
-        Me.MetroDateTime1.Size = New System.Drawing.Size(200, 30)
-        Me.MetroDateTime1.TabIndex = 5
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(3, 82)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(63, 20)
+        Me.MetroLabel4.TabIndex = 8
+        Me.MetroLabel4.Text = "Sucursal:"
         '
         'MetroDateTime2
         '
@@ -120,37 +113,44 @@ Partial Class UIF
         Me.MetroLabel3.TabIndex = 6
         Me.MetroLabel3.Text = "Fecha Fin:"
         '
-        'MetroLabel4
+        'MetroDateTime1
         '
-        Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(3, 82)
-        Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(63, 20)
-        Me.MetroLabel4.TabIndex = 8
-        Me.MetroLabel4.Text = "Sucursal:"
+        Me.MetroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.MetroDateTime1.Location = New System.Drawing.Point(124, 46)
+        Me.MetroDateTime1.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.MetroDateTime1.Name = "MetroDateTime1"
+        Me.MetroDateTime1.Size = New System.Drawing.Size(200, 30)
+        Me.MetroDateTime1.TabIndex = 5
         '
-        'cbSucursal
+        'MetroLabel2
         '
-        Me.cbSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSucursal.FormattingEnabled = True
-        Me.cbSucursal.ItemHeight = 24
-        Me.cbSucursal.Location = New System.Drawing.Point(124, 82)
-        Me.cbSucursal.Name = "cbSucursal"
-        Me.cbSucursal.Size = New System.Drawing.Size(509, 30)
-        Me.cbSucursal.TabIndex = 9
-        Me.cbSucursal.UseSelectable = True
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(3, 46)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(85, 20)
+        Me.MetroLabel2.TabIndex = 4
+        Me.MetroLabel2.Text = "Fecha Inicio:"
         '
-        'btnBuscar
+        'cbTipoTransaccion
         '
-        Me.btnBuscar.FontSize = MetroFramework.MetroButtonSize.Medium
-        Me.btnBuscar.FontWeight = MetroFramework.MetroButtonWeight.Light
-        Me.btnBuscar.Location = New System.Drawing.Point(532, 118)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(101, 38)
-        Me.btnBuscar.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnBuscar.TabIndex = 10
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseSelectable = True
+        Me.cbTipoTransaccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbTipoTransaccion.FormattingEnabled = True
+        Me.cbTipoTransaccion.ItemHeight = 24
+        Me.cbTipoTransaccion.Items.AddRange(New Object() {"Operaciones en efectivo diario-UIF F1-01 por  $10,000.00", "Operaciones en Efectivo Mensual-UIF1-02 por $10,000.00", "Operaciones en otro medio  diario-UIF F2-02 por $25,000.00", "Operaciones en otro medio electrónico diario- UIF F2-01E por $25,000.00"})
+        Me.cbTipoTransaccion.Location = New System.Drawing.Point(124, 10)
+        Me.cbTipoTransaccion.Name = "cbTipoTransaccion"
+        Me.cbTipoTransaccion.Size = New System.Drawing.Size(509, 30)
+        Me.cbTipoTransaccion.TabIndex = 3
+        Me.cbTipoTransaccion.UseSelectable = True
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(3, 10)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(115, 20)
+        Me.MetroLabel1.TabIndex = 2
+        Me.MetroLabel1.Text = "Tipo Transacción:"
         '
         'MetroGrid1
         '
@@ -161,25 +161,26 @@ Partial Class UIF
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroGrid1.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.MetroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MetroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.MetroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.MetroGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MetroGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.MetroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.MetroGrid1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.MetroGrid1.DefaultCellStyle = DataGridViewCellStyle2
         Me.MetroGrid1.EnableHeadersVisualStyles = False
         Me.MetroGrid1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.MetroGrid1.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -187,14 +188,14 @@ Partial Class UIF
         Me.MetroGrid1.Name = "MetroGrid1"
         Me.MetroGrid1.ReadOnly = True
         Me.MetroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.MetroGrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MetroGrid1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.MetroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.MetroGrid1.RowTemplate.Height = 24
         Me.MetroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

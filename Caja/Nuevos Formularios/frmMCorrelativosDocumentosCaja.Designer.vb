@@ -51,18 +51,19 @@ Partial Class frmMCorrelativosDocumentosCaja
         Me.dgCorrCaja.Margin = New System.Windows.Forms.Padding(4)
         Me.dgCorrCaja.Name = "dgCorrCaja"
         Me.dgCorrCaja.ReadOnly = True
-        Me.dgCorrCaja.Size = New System.Drawing.Size(696, 118)
+        Me.dgCorrCaja.Size = New System.Drawing.Size(501, 118)
         Me.dgCorrCaja.TabIndex = 161
         '
         'btnBuscar
         '
-        Me.btnBuscar.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnBuscar.BackColor = System.Drawing.Color.White
         Me.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnBuscar.Location = New System.Drawing.Point(358, 82)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(128, 34)
-        Me.btnBuscar.Style = MetroFramework.MetroColorStyle.White
+        Me.btnBuscar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnBuscar.TabIndex = 168
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.Theme = MetroFramework.MetroThemeStyle.Light
@@ -105,12 +106,13 @@ Partial Class frmMCorrelativosDocumentosCaja
         '
         'btnAgregar
         '
-        Me.btnAgregar.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnAgregar.BackColor = System.Drawing.Color.White
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnAgregar.Location = New System.Drawing.Point(30, 207)
         Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(100, 34)
-        Me.btnAgregar.Style = MetroFramework.MetroColorStyle.White
+        Me.btnAgregar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar.TabIndex = 170
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.Theme = MetroFramework.MetroThemeStyle.Light
@@ -120,12 +122,13 @@ Partial Class frmMCorrelativosDocumentosCaja
         '
         'btnModificar
         '
-        Me.btnModificar.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnModificar.Location = New System.Drawing.Point(138, 207)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(100, 34)
-        Me.btnModificar.Style = MetroFramework.MetroColorStyle.White
+        Me.btnModificar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar.TabIndex = 171
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.Theme = MetroFramework.MetroThemeStyle.Light
@@ -135,12 +138,13 @@ Partial Class frmMCorrelativosDocumentosCaja
         '
         'btnEliminar
         '
-        Me.btnEliminar.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnEliminar.BackColor = System.Drawing.Color.White
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnEliminar.Location = New System.Drawing.Point(354, 207)
         Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(100, 34)
-        Me.btnEliminar.Style = MetroFramework.MetroColorStyle.White
+        Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 172
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.Theme = MetroFramework.MetroThemeStyle.Light
@@ -150,12 +154,13 @@ Partial Class frmMCorrelativosDocumentosCaja
         '
         'btnConsultar
         '
-        Me.btnConsultar.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnConsultar.BackColor = System.Drawing.Color.White
+        Me.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnConsultar.Location = New System.Drawing.Point(246, 207)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(100, 34)
-        Me.btnConsultar.Style = MetroFramework.MetroColorStyle.White
+        Me.btnConsultar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar.TabIndex = 173
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.Theme = MetroFramework.MetroThemeStyle.Light
@@ -178,7 +183,7 @@ Partial Class frmMCorrelativosDocumentosCaja
         '
         Me.MetroPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroPanel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MetroPanel1.BackColor = System.Drawing.Color.White
         Me.MetroPanel1.Controls.Add(Me.chkMostrarTodos)
         Me.MetroPanel1.Controls.Add(Me.btnBuscar)
         Me.MetroPanel1.Controls.Add(Me.MetroLabel1)
@@ -189,7 +194,7 @@ Partial Class frmMCorrelativosDocumentosCaja
         Me.MetroPanel1.HorizontalScrollbarSize = 10
         Me.MetroPanel1.Location = New System.Drawing.Point(30, 77)
         Me.MetroPanel1.Name = "MetroPanel1"
-        Me.MetroPanel1.Size = New System.Drawing.Size(697, 123)
+        Me.MetroPanel1.Size = New System.Drawing.Size(502, 123)
         Me.MetroPanel1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroPanel1.TabIndex = 175
         Me.MetroPanel1.UseCustomBackColor = True
@@ -202,7 +207,7 @@ Partial Class frmMCorrelativosDocumentosCaja
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(757, 466)
+        Me.ClientSize = New System.Drawing.Size(562, 466)
         Me.Controls.Add(Me.MetroPanel1)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.btnAgregar)

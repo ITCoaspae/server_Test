@@ -77,18 +77,18 @@ Public Class frmMsReferencia
         Me.GroupBox1.Controls.Add(Me.fgDetRef)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 157)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 181)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(608, 240)
+        Me.GroupBox1.Size = New System.Drawing.Size(729, 277)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalle de Referencias"
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(168, 24)
+        Me.btnEliminar.Location = New System.Drawing.Point(202, 28)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 45
         Me.btnEliminar.Text = "Eliminar"
@@ -97,9 +97,9 @@ Public Class frmMsReferencia
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(87, 24)
+        Me.btnModificar.Location = New System.Drawing.Point(104, 28)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar.TabIndex = 44
         Me.btnModificar.Text = "Modificar"
@@ -108,9 +108,9 @@ Public Class frmMsReferencia
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(6, 24)
+        Me.btnNuevo.Location = New System.Drawing.Point(7, 28)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(75, 28)
+        Me.btnNuevo.Size = New System.Drawing.Size(90, 32)
         Me.btnNuevo.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnNuevo.TabIndex = 43
         Me.btnNuevo.Text = "Nuevo"
@@ -122,12 +122,13 @@ Public Class frmMsReferencia
         Me.fgDetRef.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fgDetRef.BackColor = System.Drawing.SystemColors.Window
-        Me.fgDetRef.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgDetRef.Location = New System.Drawing.Point(6, 58)
+        Me.fgDetRef.ColumnInfo = "10,1,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgDetRef.ForeColor = System.Drawing.Color.Black
+        Me.fgDetRef.Location = New System.Drawing.Point(7, 67)
         Me.fgDetRef.Name = "fgDetRef"
-        Me.fgDetRef.Size = New System.Drawing.Size(576, 152)
-        Me.fgDetRef.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgDetRef.Styles"))
+        Me.fgDetRef.Rows.DefaultSize = 22
+        Me.fgDetRef.Size = New System.Drawing.Size(691, 175)
+        Me.fgDetRef.StyleInfo = resources.GetString("fgDetRef.StyleInfo")
         Me.fgDetRef.TabIndex = 5
         '
         'GroupBox4
@@ -143,9 +144,9 @@ Public Class frmMsReferencia
         Me.GroupBox4.Controls.Add(Me.Label21)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox4.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(608, 88)
+        Me.GroupBox4.Size = New System.Drawing.Size(729, 101)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos del Asociado"
@@ -153,28 +154,28 @@ Public Class frmMsReferencia
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(56, 24)
+        Me.txtDui.Location = New System.Drawing.Point(67, 28)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(120, 20)
+        Me.txtDui.Size = New System.Drawing.Size(144, 24)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
         'txtCodAntiguo
         '
-        Me.txtCodAntiguo.Location = New System.Drawing.Point(464, 24)
+        Me.txtCodAntiguo.Location = New System.Drawing.Point(557, 28)
         Me.txtCodAntiguo.MaxLength = 10
         Me.txtCodAntiguo.Name = "txtCodAntiguo"
-        Me.txtCodAntiguo.Size = New System.Drawing.Size(104, 20)
+        Me.txtCodAntiguo.Size = New System.Drawing.Size(125, 23)
         Me.txtCodAntiguo.TabIndex = 2
         '
         'Label48
         '
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(376, 24)
+        Me.Label48.Location = New System.Drawing.Point(451, 28)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(88, 16)
+        Me.Label48.Size = New System.Drawing.Size(106, 18)
         Me.Label48.TabIndex = 114
         Me.Label48.Text = "Código Antiguo:"
         '
@@ -182,61 +183,62 @@ Public Class frmMsReferencia
         '
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(24, 24)
+        Me.Label31.Location = New System.Drawing.Point(29, 28)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
+        Me.Label31.Size = New System.Drawing.Size(38, 18)
         Me.Label31.TabIndex = 94
         Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(280, 24)
+        Me.txtNoSocio.Location = New System.Drawing.Point(336, 28)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSocio.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(200, 24)
+        Me.Label2.Location = New System.Drawing.Point(240, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "No. Asociado:"
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(104, 56)
+        Me.txtNombre.Location = New System.Drawing.Point(125, 65)
         Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(464, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(557, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(24, 56)
+        Me.Label21.Location = New System.Drawing.Point(29, 65)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(80, 16)
+        Me.Label21.Size = New System.Drawing.Size(96, 18)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Asociado:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmMsReferencia
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(645, 416)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(786, 511)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsReferencia"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Agregar Referencia de Asociado"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.fgDetRef, System.ComponentModel.ISupportInitialize).EndInit()
@@ -563,5 +565,10 @@ Public Class frmMsReferencia
         End If
     End Sub
 
+    Private Sub frmMsReferencia_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class
 

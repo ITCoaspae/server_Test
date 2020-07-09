@@ -31,7 +31,7 @@
                                                               sUsuario, sPassword, sSucursal)) > 0 Then
                 MsgBox("Registro ingrsado exitosamente", MsgBoxStyle.Information)
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         ElseIf accion = 2 Then
             If (ahorros.modificarAsocTransferenciasAutomaticas(cbOrigen.SelectedValue, cbDestino.SelectedValue,
@@ -41,7 +41,7 @@
                                                                sUsuario, sPassword, sSucursal)) Then
                 MsgBox("Registro ingrsado exitosamente", MsgBoxStyle.Information)
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
 
@@ -58,7 +58,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -117,8 +117,14 @@
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+
+    Private Sub frmDetAsocTransferenciasAutomaticas_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

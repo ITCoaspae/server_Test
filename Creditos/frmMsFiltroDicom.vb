@@ -77,26 +77,26 @@ Public Class frmMsFiltroDicom
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(379, 58)
+        Me.txtNoSocio.Location = New System.Drawing.Point(455, 67)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(136, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(163, 23)
         Me.txtNoSocio.TabIndex = 1
         '
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(293, 60)
+        Me.Label13.Location = New System.Drawing.Point(352, 69)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(80, 16)
+        Me.Label13.Size = New System.Drawing.Size(96, 19)
         Me.Label13.TabIndex = 75
         Me.Label13.Text = "No. Asociado:"
         '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(25, 85)
+        Me.Label11.Location = New System.Drawing.Point(30, 98)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(104, 16)
+        Me.Label11.Size = New System.Drawing.Size(125, 19)
         Me.Label11.TabIndex = 74
         Me.Label11.Text = "Asociado:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -107,28 +107,28 @@ Public Class frmMsFiltroDicom
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(135, 84)
+        Me.txtAsociado.Location = New System.Drawing.Point(162, 97)
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(380, 21)
+        Me.txtAsociado.Size = New System.Drawing.Size(456, 25)
         Me.txtAsociado.TabIndex = 73
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(135, 58)
+        Me.txtDui.Location = New System.Drawing.Point(162, 67)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(136, 20)
+        Me.txtDui.Size = New System.Drawing.Size(163, 23)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(25, 60)
+        Me.Label14.Location = New System.Drawing.Point(30, 69)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(80, 16)
+        Me.Label14.Size = New System.Drawing.Size(96, 19)
         Me.Label14.TabIndex = 72
         Me.Label14.Text = "DUI:"
         '
@@ -140,11 +140,13 @@ Public Class frmMsFiltroDicom
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(28, 202)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(34, 233)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(604, 221)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(724, 255)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 81
         '
         'txtCodPrestamo
@@ -152,17 +154,17 @@ Public Class frmMsFiltroDicom
         Me.txtCodPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPrestamo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodPrestamo.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(135, 111)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(162, 128)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(136, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(163, 23)
         Me.txtCodPrestamo.TabIndex = 2
         '
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(25, 115)
+        Me.Label12.Location = New System.Drawing.Point(30, 133)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(80, 16)
+        Me.Label12.Size = New System.Drawing.Size(96, 18)
         Me.Label12.TabIndex = 85
         Me.Label12.Text = "Préstamo:"
         '
@@ -174,22 +176,21 @@ Public Class frmMsFiltroDicom
         Me.txtNoSolicitud.DataType = GetType(Integer)
         Me.txtNoSolicitud.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.txtNoSolicitud.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.txtNoSolicitud.Increment = 1
-        Me.txtNoSolicitud.Location = New System.Drawing.Point(379, 111)
+        Me.txtNoSolicitud.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.txtNoSolicitud.Location = New System.Drawing.Point(455, 128)
         Me.txtNoSolicitud.Name = "txtNoSolicitud"
         Me.txtNoSolicitud.ReadOnly = True
-        Me.txtNoSolicitud.ShowDropDownButton = False
-        Me.txtNoSolicitud.ShowUpDownButtons = False
-        Me.txtNoSolicitud.Size = New System.Drawing.Size(136, 21)
+        Me.txtNoSolicitud.Size = New System.Drawing.Size(163, 27)
         Me.txtNoSolicitud.TabIndex = 83
         Me.txtNoSolicitud.Tag = Nothing
         Me.txtNoSolicitud.Value = 0
+        Me.txtNoSolicitud.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(298, 113)
+        Me.Label1.Location = New System.Drawing.Point(358, 130)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 16)
+        Me.Label1.Size = New System.Drawing.Size(90, 19)
         Me.Label1.TabIndex = 84
         Me.Label1.Text = "No. Solicitud:"
         '
@@ -197,19 +198,19 @@ Public Class frmMsFiltroDicom
         '
         Me.txtNIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNIT.EditMask = "0000-000000-000-0"
-        Me.txtNIT.Location = New System.Drawing.Point(135, 137)
+        Me.txtNIT.Location = New System.Drawing.Point(162, 158)
         Me.txtNIT.Name = "txtNIT"
         Me.txtNIT.NumericInput = False
-        Me.txtNIT.Size = New System.Drawing.Size(136, 20)
+        Me.txtNIT.Size = New System.Drawing.Size(163, 23)
         Me.txtNIT.TabIndex = 86
         Me.txtNIT.Tag = Nothing
         Me.txtNIT.Visible = False
         '
         'btNuevo1
         '
-        Me.btNuevo1.Location = New System.Drawing.Point(28, 168)
+        Me.btNuevo1.Location = New System.Drawing.Point(34, 194)
         Me.btNuevo1.Name = "btNuevo1"
-        Me.btNuevo1.Size = New System.Drawing.Size(75, 28)
+        Me.btNuevo1.Size = New System.Drawing.Size(90, 32)
         Me.btNuevo1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNuevo1.TabIndex = 87
         Me.btNuevo1.Text = "Agregar"
@@ -219,9 +220,9 @@ Public Class frmMsFiltroDicom
         '
         'btModificar1
         '
-        Me.btModificar1.Location = New System.Drawing.Point(109, 168)
+        Me.btModificar1.Location = New System.Drawing.Point(131, 194)
         Me.btModificar1.Name = "btModificar1"
-        Me.btModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btModificar1.TabIndex = 88
         Me.btModificar1.Text = "Modificar"
@@ -231,9 +232,9 @@ Public Class frmMsFiltroDicom
         '
         'btEliminar1
         '
-        Me.btEliminar1.Location = New System.Drawing.Point(194, 168)
+        Me.btEliminar1.Location = New System.Drawing.Point(233, 194)
         Me.btEliminar1.Name = "btEliminar1"
-        Me.btEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEliminar1.TabIndex = 89
         Me.btEliminar1.Text = "Eliminar"
@@ -244,17 +245,17 @@ Public Class frmMsFiltroDicom
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(25, 137)
+        Me.Label2.Location = New System.Drawing.Point(30, 158)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 90
         Me.Label2.Text = "NIT:"
         '
         'frmMsFiltroDicom
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(655, 472)
+        Me.ClientSize = New System.Drawing.Size(786, 545)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btEliminar1)
         Me.Controls.Add(Me.btModificar1)
@@ -272,9 +273,9 @@ Public Class frmMsFiltroDicom
         Me.Controls.Add(Me.txtDui)
         Me.Controls.Add(Me.Label14)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(655, 472)
+        Me.MaximumSize = New System.Drawing.Size(786, 545)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(655, 472)
+        Me.MinimumSize = New System.Drawing.Size(786, 545)
         Me.Name = "frmMsFiltroDicom"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -314,7 +315,7 @@ Public Class frmMsFiltroDicom
                 txtNoSolicitud.Value = frm.Resultado3.Trim
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -342,7 +343,7 @@ Public Class frmMsFiltroDicom
                 Me.txtNIT.Value = dr("NIT")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -370,7 +371,7 @@ Public Class frmMsFiltroDicom
                 Me.txtNIT.Value = dr("NIT")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -396,7 +397,7 @@ Public Class frmMsFiltroDicom
             End If
             ActualizaGrid()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -422,7 +423,7 @@ Public Class frmMsFiltroDicom
             ds = oCred.ConsultarDICOM("*", "NumSolicitud=" & Me.txtNoSolicitud.Text.Trim & "", "CorrelativoDicom", sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -448,7 +449,7 @@ Public Class frmMsFiltroDicom
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -464,7 +465,7 @@ Public Class frmMsFiltroDicom
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -580,7 +581,7 @@ Public Class frmMsFiltroDicom
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -594,7 +595,7 @@ Public Class frmMsFiltroDicom
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

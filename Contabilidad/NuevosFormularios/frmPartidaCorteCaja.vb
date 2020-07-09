@@ -12,9 +12,8 @@
     Protected Function Recuperar_CentroCostos(ByVal CodSucursal As String) As String
         Dim DtsCentroCosto As DataSet
         DtsCentroCosto = Asociados.ConsultarSucursales("Cod_CCosto", " CodSucursal = '" & CodSucursal & "'", "", sUsuario, sPassword, sSucursal)
-        If DtsCentroCosto.Tables(0).Rows.Count > 0 Then
-            Return DtsCentroCosto.Tables(0).Rows(0).Item("Cod_CCosto").ToString.Trim
-        End If
+        Return DtsCentroCosto.Tables(0).Rows(0).Item("Cod_CCosto").ToString.Trim
+
     End Function
 #End Region
 #Region "Metodos"
@@ -36,10 +35,15 @@
         'End If
     End Sub
     Protected Sub llenarCajeros(ByVal CodSucursal As String)
-        Dim Dts As New DataSet
-        Dts = caja.ConsultarCajeros(" CodCajero,Nombre", "FechaFinalizacion >='" & Format(Me.dtpFecha.Value, "Short Date") & "' and CodSucursal = '" & CodSucursal & "'", _
-                                     "Nombre", sUsuario, sPassword, sSucursal)
-        Me.cbCajeros.DataSource = Dts.Tables(0)
+        Try
+            Dim Dts As New DataSet
+            Dts = caja.ConsultarCajeros(" CodCajero,Nombre", "FechaFinalizacion >='" & Format(Me.dtpFecha.Value, "Short Date") & "' and CodSucursal = '" & CodSucursal & "'",
+                                         "Nombre", sUsuario, sPassword, sSucursal)
+            Me.cbCajeros.DataSource = Dts.Tables(0)
+        Catch ex As Exception
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
+
     End Sub
     Protected Sub Redondear(ByVal opcion As Integer)
         If opcion = 1 Then
@@ -134,7 +138,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -163,7 +167,7 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

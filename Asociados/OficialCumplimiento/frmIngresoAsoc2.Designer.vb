@@ -310,7 +310,7 @@ Partial Class frmIngresoAsoc2
         Me.tcGeneral.Margin = New System.Windows.Forms.Padding(4)
         Me.tcGeneral.Multiline = True
         Me.tcGeneral.Name = "tcGeneral"
-        Me.tcGeneral.SelectedIndex = 9
+        Me.tcGeneral.SelectedIndex = 0
         Me.tcGeneral.Size = New System.Drawing.Size(856, 612)
         Me.tcGeneral.Style = MetroFramework.MetroColorStyle.Teal
         Me.tcGeneral.TabIndex = 0
@@ -408,7 +408,7 @@ Partial Class frmIngresoAsoc2
         '
         Me.chkEsEmpleado.AutoSize = True
         Me.chkEsEmpleado.BackColor = System.Drawing.Color.White
-        Me.chkEsEmpleado.Location = New System.Drawing.Point(21, 106)
+        Me.chkEsEmpleado.Location = New System.Drawing.Point(21, 103)
         Me.chkEsEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.chkEsEmpleado.Name = "chkEsEmpleado"
         Me.chkEsEmpleado.Size = New System.Drawing.Size(193, 21)
@@ -478,10 +478,11 @@ Partial Class frmIngresoAsoc2
         '
         'MetroButton3
         '
-        Me.MetroButton3.Location = New System.Drawing.Point(541, 473)
+        Me.MetroButton3.Location = New System.Drawing.Point(410, 463)
         Me.MetroButton3.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(171, 34)
+        Me.MetroButton3.Size = New System.Drawing.Size(186, 34)
+        Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton3.TabIndex = 57
         Me.MetroButton3.Text = "Busca en Lista Negra"
         Me.MetroButton3.UseSelectable = True
@@ -489,10 +490,11 @@ Partial Class frmIngresoAsoc2
         '
         'btnGuardarNat
         '
-        Me.btnGuardarNat.Location = New System.Drawing.Point(720, 473)
+        Me.btnGuardarNat.Location = New System.Drawing.Point(651, 463)
         Me.btnGuardarNat.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarNat.Name = "btnGuardarNat"
-        Me.btnGuardarNat.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarNat.Size = New System.Drawing.Size(167, 34)
+        Me.btnGuardarNat.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarNat.TabIndex = 0
         Me.btnGuardarNat.Text = "Guardar"
         Me.btnGuardarNat.UseSelectable = True
@@ -974,7 +976,7 @@ Partial Class frmIngresoAsoc2
         '
         'txtDui
         '
-        Me.txtDui.Location = New System.Drawing.Point(65, 22)
+        Me.txtDui.Location = New System.Drawing.Point(62, 21)
         Me.txtDui.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDui.Mask = "00000000-0"
         Me.txtDui.Name = "txtDui"
@@ -985,7 +987,7 @@ Partial Class frmIngresoAsoc2
         '
         Me.lblDui.AutoSize = True
         Me.lblDui.BackColor = System.Drawing.Color.White
-        Me.lblDui.Location = New System.Drawing.Point(17, 26)
+        Me.lblDui.Location = New System.Drawing.Point(16, 26)
         Me.lblDui.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDui.Name = "lblDui"
         Me.lblDui.Size = New System.Drawing.Size(38, 17)
@@ -1027,6 +1029,7 @@ Partial Class frmIngresoAsoc2
         Me.btnNuevoDomicilio.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevoDomicilio.Name = "btnNuevoDomicilio"
         Me.btnNuevoDomicilio.Size = New System.Drawing.Size(163, 34)
+        Me.btnNuevoDomicilio.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnNuevoDomicilio.TabIndex = 93
         Me.btnNuevoDomicilio.Text = "Nuevo Domicilio"
         Me.btnNuevoDomicilio.UseSelectable = True
@@ -1047,6 +1050,7 @@ Partial Class frmIngresoAsoc2
         Me.btnEliminarDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminarDireccion.Name = "btnEliminarDireccion"
         Me.btnEliminarDireccion.Size = New System.Drawing.Size(164, 34)
+        Me.btnEliminarDireccion.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminarDireccion.TabIndex = 91
         Me.btnEliminarDireccion.Text = "Eliminar Domicilio"
         Me.btnEliminarDireccion.UseSelectable = True
@@ -1058,6 +1062,7 @@ Partial Class frmIngresoAsoc2
         Me.BtnModificarDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnModificarDireccion.Name = "BtnModificarDireccion"
         Me.BtnModificarDireccion.Size = New System.Drawing.Size(155, 34)
+        Me.BtnModificarDireccion.Style = MetroFramework.MetroColorStyle.Teal
         Me.BtnModificarDireccion.TabIndex = 90
         Me.BtnModificarDireccion.Text = "Modificar Domicilio"
         Me.BtnModificarDireccion.UseSelectable = True
@@ -1127,6 +1132,7 @@ Partial Class frmIngresoAsoc2
         Me.btnGuardarDom.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarDom.Name = "btnGuardarDom"
         Me.btnGuardarDom.Size = New System.Drawing.Size(163, 34)
+        Me.btnGuardarDom.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarDom.TabIndex = 50
         Me.btnGuardarDom.Text = "Guardar Domicilio"
         Me.btnGuardarDom.UseSelectable = True
@@ -1260,10 +1266,11 @@ Partial Class frmIngresoAsoc2
         '
         'btnGuardarJur
         '
-        Me.btnGuardarJur.Location = New System.Drawing.Point(731, 441)
+        Me.btnGuardarJur.Location = New System.Drawing.Point(731, 472)
         Me.btnGuardarJur.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarJur.Name = "btnGuardarJur"
         Me.btnGuardarJur.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarJur.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarJur.TabIndex = 57
         Me.btnGuardarJur.Text = "Guardar"
         Me.btnGuardarJur.UseSelectable = True
@@ -1279,10 +1286,10 @@ Partial Class frmIngresoAsoc2
         Me.dgJuntaDir.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgJuntaDir.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgJuntaDir.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
@@ -1291,7 +1298,7 @@ Partial Class frmIngresoAsoc2
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgJuntaDir.DefaultCellStyle = DataGridViewCellStyle5
@@ -1304,10 +1311,10 @@ Partial Class frmIngresoAsoc2
         Me.dgJuntaDir.ReadOnly = True
         Me.dgJuntaDir.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgJuntaDir.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
@@ -1674,10 +1681,11 @@ Partial Class frmIngresoAsoc2
         '
         'MetroButton4
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(545, 441)
+        Me.MetroButton4.Location = New System.Drawing.Point(545, 486)
         Me.MetroButton4.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton4.Name = "MetroButton4"
         Me.MetroButton4.Size = New System.Drawing.Size(171, 34)
+        Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton4.TabIndex = 62
         Me.MetroButton4.Text = "Declaración Jurada"
         Me.MetroButton4.UseSelectable = True
@@ -1709,10 +1717,11 @@ Partial Class frmIngresoAsoc2
         '
         'btnGuardarDecJur
         '
-        Me.btnGuardarDecJur.Location = New System.Drawing.Point(724, 441)
+        Me.btnGuardarDecJur.Location = New System.Drawing.Point(724, 486)
         Me.btnGuardarDecJur.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarDecJur.Name = "btnGuardarDecJur"
         Me.btnGuardarDecJur.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarDecJur.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarDecJur.TabIndex = 59
         Me.btnGuardarDecJur.Text = "Guardar"
         Me.btnGuardarDecJur.UseSelectable = True
@@ -1765,7 +1774,7 @@ Partial Class frmIngresoAsoc2
         Me.dgDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgDocumentos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgDocumentos.Size = New System.Drawing.Size(800, 242)
+        Me.dgDocumentos.Size = New System.Drawing.Size(800, 204)
         Me.dgDocumentos.TabIndex = 58
         '
         'btnAddDoc
@@ -1957,6 +1966,7 @@ Partial Class frmIngresoAsoc2
         Me.MetroButton5.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton5.Name = "MetroButton5"
         Me.MetroButton5.Size = New System.Drawing.Size(205, 34)
+        Me.MetroButton5.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton5.TabIndex = 67
         Me.MetroButton5.Text = "Declaración Jurada PEP"
         Me.MetroButton5.UseSelectable = True
@@ -2016,6 +2026,7 @@ Partial Class frmIngresoAsoc2
         Me.btnGuardarPep.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarPep.Name = "btnGuardarPep"
         Me.btnGuardarPep.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarPep.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarPep.TabIndex = 62
         Me.btnGuardarPep.Text = "Guardar"
         Me.btnGuardarPep.UseSelectable = True
@@ -2300,10 +2311,12 @@ Partial Class frmIngresoAsoc2
         Me.MetroButton6.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton6.Name = "MetroButton6"
         Me.MetroButton6.Size = New System.Drawing.Size(307, 34)
+        Me.MetroButton6.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton6.TabIndex = 68
         Me.MetroButton6.Text = "Declaración Jurada Grado Academico"
         Me.MetroButton6.UseSelectable = True
         Me.MetroButton6.UseStyleColors = True
+        Me.MetroButton6.Visible = False
         '
         'btnGuardarComp
         '
@@ -2311,6 +2324,7 @@ Partial Class frmIngresoAsoc2
         Me.btnGuardarComp.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarComp.Name = "btnGuardarComp"
         Me.btnGuardarComp.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarComp.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarComp.TabIndex = 50
         Me.btnGuardarComp.Text = "Guardar"
         Me.btnGuardarComp.UseSelectable = True
@@ -2534,12 +2548,17 @@ Partial Class frmIngresoAsoc2
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.ForeColor = System.Drawing.Color.Teal
         Me.MetroLabel2.Location = New System.Drawing.Point(8, 60)
         Me.MetroLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(175, 20)
+        Me.MetroLabel2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroLabel2.TabIndex = 7
         Me.MetroLabel2.Text = "Información Grupo Familiar"
+        Me.MetroLabel2.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroLabel2.UseCustomBackColor = True
+        Me.MetroLabel2.UseCustomForeColor = True
         Me.MetroLabel2.UseStyleColors = True
         '
         'txtTituloObtenido
@@ -2583,12 +2602,17 @@ Partial Class frmIngresoAsoc2
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.ForeColor = System.Drawing.Color.Teal
         Me.MetroLabel1.Location = New System.Drawing.Point(8, 11)
         Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(67, 20)
+        Me.MetroLabel1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroLabel1.TabIndex = 2
         Me.MetroLabel1.Text = "Profesión"
+        Me.MetroLabel1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroLabel1.UseCustomBackColor = True
+        Me.MetroLabel1.UseCustomForeColor = True
         Me.MetroLabel1.UseStyleColors = True
         '
         'tpRefBen
@@ -2669,12 +2693,16 @@ Partial Class frmIngresoAsoc2
         'lblBeneficiarios
         '
         Me.lblBeneficiarios.AutoSize = True
+        Me.lblBeneficiarios.ForeColor = System.Drawing.Color.Teal
         Me.lblBeneficiarios.Location = New System.Drawing.Point(19, 196)
         Me.lblBeneficiarios.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBeneficiarios.Name = "lblBeneficiarios"
         Me.lblBeneficiarios.Size = New System.Drawing.Size(87, 20)
+        Me.lblBeneficiarios.Style = MetroFramework.MetroColorStyle.Teal
         Me.lblBeneficiarios.TabIndex = 60
         Me.lblBeneficiarios.Text = "Beneficiarios"
+        Me.lblBeneficiarios.UseCustomBackColor = True
+        Me.lblBeneficiarios.UseCustomForeColor = True
         Me.lblBeneficiarios.UseStyleColors = True
         '
         'dgBeneficiarios
@@ -2796,12 +2824,16 @@ Partial Class frmIngresoAsoc2
         'lblReferenciasPersonales
         '
         Me.lblReferenciasPersonales.AutoSize = True
+        Me.lblReferenciasPersonales.ForeColor = System.Drawing.Color.Teal
         Me.lblReferenciasPersonales.Location = New System.Drawing.Point(19, 20)
         Me.lblReferenciasPersonales.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReferenciasPersonales.Name = "lblReferenciasPersonales"
         Me.lblReferenciasPersonales.Size = New System.Drawing.Size(151, 20)
+        Me.lblReferenciasPersonales.Style = MetroFramework.MetroColorStyle.Teal
         Me.lblReferenciasPersonales.TabIndex = 2
         Me.lblReferenciasPersonales.Text = "Referencias Personales"
+        Me.lblReferenciasPersonales.UseCustomBackColor = True
+        Me.lblReferenciasPersonales.UseCustomForeColor = True
         Me.lblReferenciasPersonales.UseStyleColors = True
         '
         'tpRelaciones
@@ -2945,6 +2977,7 @@ Partial Class frmIngresoAsoc2
         Me.MetroButton8.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton8.Name = "MetroButton8"
         Me.MetroButton8.Size = New System.Drawing.Size(147, 34)
+        Me.MetroButton8.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton8.TabIndex = 72
         Me.MetroButton8.Text = "Solicitud de ingreso"
         Me.MetroButton8.UseSelectable = True
@@ -2956,6 +2989,7 @@ Partial Class frmIngresoAsoc2
         Me.MetroButton7.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton7.Name = "MetroButton7"
         Me.MetroButton7.Size = New System.Drawing.Size(147, 34)
+        Me.MetroButton7.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton7.TabIndex = 71
         Me.MetroButton7.Text = "Ficha Integral"
         Me.MetroButton7.UseSelectable = True
@@ -2989,6 +3023,7 @@ Partial Class frmIngresoAsoc2
         Me.btnGuardarOtros.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarOtros.Name = "btnGuardarOtros"
         Me.btnGuardarOtros.Size = New System.Drawing.Size(100, 34)
+        Me.btnGuardarOtros.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardarOtros.TabIndex = 68
         Me.btnGuardarOtros.Text = "Guardar"
         Me.btnGuardarOtros.UseSelectable = True
@@ -3113,7 +3148,7 @@ Partial Class frmIngresoAsoc2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(906, 730)
+        Me.ClientSize = New System.Drawing.Size(912, 754)
         Me.Controls.Add(Me.tcGeneral)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
@@ -3121,6 +3156,7 @@ Partial Class frmIngresoAsoc2
         Me.Name = "frmIngresoAsoc2"
         Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.ShowIcon = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "     "
         Me.tcGeneral.ResumeLayout(False)
         Me.tpPersonaNatural.ResumeLayout(False)

@@ -26,7 +26,6 @@ Public Class frmMProcesoRetiro
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
     Friend WithEvents txtNombres As System.Windows.Forms.TextBox
     Friend WithEvents rbNombres As System.Windows.Forms.RadioButton
@@ -44,7 +43,6 @@ Public Class frmMProcesoRetiro
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMProcesoRetiro))
         Me.fgRetiro = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnMostrar1 = New MetroFramework.Controls.MetroButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
@@ -59,7 +57,6 @@ Public Class frmMProcesoRetiro
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
         CType(Me.fgRetiro, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,37 +68,18 @@ Public Class frmMProcesoRetiro
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgRetiro.BackColor = System.Drawing.Color.White
         Me.fgRetiro.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgRetiro.Location = New System.Drawing.Point(23, 184)
+        Me.fgRetiro.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fgRetiro.Location = New System.Drawing.Point(19, 166)
         Me.fgRetiro.Name = "fgRetiro"
         Me.fgRetiro.Rows.Count = 2
-        Me.fgRetiro.Size = New System.Drawing.Size(664, 204)
-        Me.fgRetiro.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgRetiro.Styles"))
+        Me.fgRetiro.Rows.DefaultSize = 18
+        Me.fgRetiro.Size = New System.Drawing.Size(603, 354)
+        Me.fgRetiro.StyleInfo = resources.GetString("fgRetiro.StyleInfo")
         Me.fgRetiro.TabIndex = 29
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.btnMostrar1)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbTodos)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(664, 81)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Búsqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(563, 40)
+        Me.btnMostrar1.Location = New System.Drawing.Point(437, 107)
         Me.btnMostrar1.Name = "btnMostrar1"
         Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
@@ -114,35 +92,35 @@ Public Class frmMProcesoRetiro
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 48)
+        Me.txtDui.Location = New System.Drawing.Point(103, 56)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(106, 20)
+        Me.txtDui.Size = New System.Drawing.Size(153, 16)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
         '
         Me.txtNoSocio.BackColor = System.Drawing.Color.White
-        Me.txtNoSocio.Location = New System.Drawing.Point(128, 48)
+        Me.txtNoSocio.Location = New System.Drawing.Point(360, 56)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(113, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(152, 20)
         Me.txtNoSocio.TabIndex = 3
         '
         'txtNombres
         '
         Me.txtNombres.BackColor = System.Drawing.Color.White
-        Me.txtNombres.Location = New System.Drawing.Point(405, 48)
+        Me.txtNombres.Location = New System.Drawing.Point(261, 83)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(152, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(251, 20)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
-        Me.rbNombres.Location = New System.Drawing.Point(247, 28)
+        Me.rbNombres.Location = New System.Drawing.Point(19, 83)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(152, 17)
+        Me.rbNombres.Size = New System.Drawing.Size(79, 18)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "Nombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -151,7 +129,7 @@ Public Class frmMProcesoRetiro
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(405, 27)
+        Me.rbTodos.Location = New System.Drawing.Point(19, 109)
         Me.rbTodos.Name = "rbTodos"
         Me.rbTodos.Size = New System.Drawing.Size(152, 18)
         Me.rbTodos.TabIndex = 7
@@ -164,36 +142,36 @@ Public Class frmMProcesoRetiro
         Me.cbNombres.BackColor = System.Drawing.Color.White
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(247, 47)
+        Me.cbNombres.Location = New System.Drawing.Point(103, 83)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(152, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(153, 21)
         Me.cbNombres.TabIndex = 5
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(128, 24)
+        Me.rbNoSocio.Location = New System.Drawing.Point(261, 53)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(113, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(94, 23)
         Me.rbNoSocio.TabIndex = 2
-        Me.rbNoSocio.Text = "No. de Asociado"
+        Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
         '
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(16, 24)
+        Me.rbDui.Location = New System.Drawing.Point(19, 55)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(106, 24)
+        Me.rbDui.Size = New System.Drawing.Size(49, 23)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI"
         Me.rbDui.UseVisualStyleBackColor = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 150)
+        Me.btnConsultar1.Location = New System.Drawing.Point(262, 133)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(75, 27)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 80
         Me.btnConsultar1.Text = "Consultar"
@@ -202,9 +180,9 @@ Public Class frmMProcesoRetiro
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 150)
+        Me.btnEliminar1.Location = New System.Drawing.Point(181, 133)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(75, 27)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 79
         Me.btnEliminar1.Text = "Anular"
@@ -213,9 +191,9 @@ Public Class frmMProcesoRetiro
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 150)
+        Me.btnModificar1.Location = New System.Drawing.Point(100, 133)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(75, 27)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 78
         Me.btnModificar1.Text = "Modificar"
@@ -224,9 +202,9 @@ Public Class frmMProcesoRetiro
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 150)
+        Me.btnAgregar1.Location = New System.Drawing.Point(19, 133)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(75, 27)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 77
         Me.btnAgregar1.Text = "Agregar"
@@ -236,20 +214,28 @@ Public Class frmMProcesoRetiro
         'frmMProcesoRetiro
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(710, 411)
+        Me.ClientSize = New System.Drawing.Size(641, 599)
+        Me.Controls.Add(Me.btnMostrar1)
         Me.Controls.Add(Me.btnConsultar1)
+        Me.Controls.Add(Me.rbTodos)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.txtDui)
         Me.Controls.Add(Me.btnEliminar1)
+        Me.Controls.Add(Me.rbNombres)
+        Me.Controls.Add(Me.rbNoSocio)
+        Me.Controls.Add(Me.cbNombres)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.fgRetiro)
+        Me.Controls.Add(Me.rbDui)
         Me.Name = "frmMProcesoRetiro"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Proceso de Retiro Voluntario"
         CType(Me.fgRetiro, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -265,6 +251,8 @@ Public Class frmMProcesoRetiro
         txtNoSocio.Enabled = False
         cbNombres.SelectedIndex = 0
         cbNombres.Enabled = False
+
+
     End Sub
 
 
@@ -444,12 +432,16 @@ Public Class frmMProcesoRetiro
 
     Private Sub btnModificar1_Click(sender As Object, e As EventArgs) Handles btnModificar1.Click
         If fgRetiro.Row <> -1 Then
-            If fgRetiro.Item(Me.fgRetiro.Row, "Anulado") = False Then
-                Dim frm As frmMsProcesoRetiro = New frmMsProcesoRetiro
+            If fgRetiro.Item(Me.fgRetiro.Row, "Anulado") = False And IsDBNull(fgRetiro.Item(fgRetiro.Row, "RetiroEfectuado")) = True Then
+
+                Dim frm As New frmMsProcesoRetiro
                 frm.pCont = False
                 frm.btnGuardar1.Text = "&Modificar"
                 frm.pCorr = fgRetiro.Item(Me.fgRetiro.Row, "Correlativo")
                 frm.txtDui.Value = fgRetiro.Item(Me.fgRetiro.Row, "DUI")
+                frm.txtMonto.Text = fgRetiro.Item(Me.fgRetiro.Row, "montoLiquidar")
+                frm.btnGuardar1.Enabled = False
+
                 frm.StartPosition = FormStartPosition.CenterScreen
                 frm.ShowDialog()
                 ActualizaGrid()
@@ -502,6 +494,12 @@ Public Class frmMProcesoRetiro
             txtNombres.Enabled = False
             txtNoSocio.Enabled = False
             cbNombres.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMProcesoRetiro_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

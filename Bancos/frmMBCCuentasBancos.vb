@@ -47,19 +47,20 @@ Public Class frmMBCCuentasBancos
         Me.C1fgrdCuentasBancos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.C1fgrdCuentasBancos.BackColor = System.Drawing.SystemColors.Window
         Me.C1fgrdCuentasBancos.ColumnInfo = "9,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdCuentasBancos.Location = New System.Drawing.Point(23, 97)
+        Me.C1fgrdCuentasBancos.ForeColor = System.Drawing.Color.Black
+        Me.C1fgrdCuentasBancos.Location = New System.Drawing.Point(28, 112)
         Me.C1fgrdCuentasBancos.Name = "C1fgrdCuentasBancos"
-        Me.C1fgrdCuentasBancos.Size = New System.Drawing.Size(634, 238)
-        Me.C1fgrdCuentasBancos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdCuentasBancos.Styles"))
+        Me.C1fgrdCuentasBancos.Rows.DefaultSize = 21
+        Me.C1fgrdCuentasBancos.Size = New System.Drawing.Size(553, 198)
+        Me.C1fgrdCuentasBancos.StyleInfo = resources.GetString("C1fgrdCuentasBancos.StyleInfo")
         Me.C1fgrdCuentasBancos.TabIndex = 10
         '
         'btnImp
         '
-        Me.btnImp.Location = New System.Drawing.Point(266, 63)
+        Me.btnImp.Location = New System.Drawing.Point(319, 73)
         Me.btnImp.Name = "btnImp"
-        Me.btnImp.Size = New System.Drawing.Size(75, 28)
+        Me.btnImp.Size = New System.Drawing.Size(90, 32)
         Me.btnImp.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImp.TabIndex = 27
         Me.btnImp.Text = "Consultar"
@@ -69,9 +70,9 @@ Public Class frmMBCCuentasBancos
         '
         'btnDel
         '
-        Me.btnDel.Location = New System.Drawing.Point(185, 63)
+        Me.btnDel.Location = New System.Drawing.Point(222, 73)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(75, 28)
+        Me.btnDel.Size = New System.Drawing.Size(90, 32)
         Me.btnDel.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnDel.TabIndex = 26
         Me.btnDel.Text = "Eliminar"
@@ -81,9 +82,9 @@ Public Class frmMBCCuentasBancos
         '
         'btnMod
         '
-        Me.btnMod.Location = New System.Drawing.Point(104, 63)
+        Me.btnMod.Location = New System.Drawing.Point(125, 73)
         Me.btnMod.Name = "btnMod"
-        Me.btnMod.Size = New System.Drawing.Size(75, 28)
+        Me.btnMod.Size = New System.Drawing.Size(90, 32)
         Me.btnMod.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMod.TabIndex = 25
         Me.btnMod.Text = "Modificar"
@@ -93,9 +94,9 @@ Public Class frmMBCCuentasBancos
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(23, 63)
+        Me.btnAdd.Location = New System.Drawing.Point(28, 73)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 28)
+        Me.btnAdd.Size = New System.Drawing.Size(90, 32)
         Me.btnAdd.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAdd.TabIndex = 24
         Me.btnAdd.Text = "Agregar"
@@ -105,9 +106,9 @@ Public Class frmMBCCuentasBancos
         '
         'frmMBCCuentasBancos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(680, 358)
+        Me.ClientSize = New System.Drawing.Size(609, 366)
         Me.Controls.Add(Me.btnImp)
         Me.Controls.Add(Me.btnDel)
         Me.Controls.Add(Me.btnMod)
@@ -131,7 +132,7 @@ Public Class frmMBCCuentasBancos
             ds = oLibBco.ObtenerCuentaBanco("*", "", "IdCtaBanco asc", sUsuario, sPassword, sSucursal)
             C1fgrdCuentasBancos.DataSource = ds.Tables(0).DefaultView
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -143,20 +144,20 @@ Public Class frmMBCCuentasBancos
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
             Dim ofrm As New frmMsBCCuentaBanco, oLibBco As New wrBancos.wsLibBancos, ds As DataSet
-            'ofrm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar
+            'ofrm.Accion = Seguridad.clsUsuario.TipoAccion.Insertar
             ofrm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar
             ofrm.ShowDialog()
             ds = oLibBco.ObtenerCuentaBanco("*", "", "IdCtaBanco", sUsuario, sPassword, sSucursal)
             Me.C1fgrdCuentasBancos.DataSource = ds.Tables(0).DefaultView
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
         Try
             Dim ofrm As New frmMsBCCuentaBanco, oLibBco As New wrBancos.wsLibBancos, ds As DataSet
-            'ofrm.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar
+            'ofrm.Accion = Seguridad.clsUsuario.TipoAccion.Modificar
             ofrm.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar
             If C1fgrdCuentasBancos.Row <> -1 Then
                 ofrm.txtCodBanco.Text = C1fgrdCuentasBancos.Item(C1fgrdCuentasBancos.Row, "IdBanco")
@@ -171,7 +172,7 @@ Public Class frmMBCCuentasBancos
             ds = oLibBco.ObtenerCuentaBanco("*", "", "IdCtaBanco", sUsuario, sPassword, sSucursal)
             Me.C1fgrdCuentasBancos.DataSource = ds.Tables(0).DefaultView
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -186,7 +187,7 @@ Public Class frmMBCCuentasBancos
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -203,7 +204,13 @@ Public Class frmMBCCuentasBancos
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMBCCuentasBancos_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

@@ -2,7 +2,7 @@ Public Class frmMsDetDescRango
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
 
-    'Private vTipoDeduccion As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vAccion As String, vCodRango As String
+    'Private vTipoDeduccion As Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vAccion As String, vCodRango As String
     Private vTipoDeduccion As sifLib.Prestamos.clsPrestamos.TipoDeduccion, vTipoCredito As String, vAccion As String, vCodRango As String
     Friend WithEvents btNew1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btEdit1 As MetroFramework.Controls.MetroButton
@@ -55,9 +55,9 @@ Public Class frmMsDetDescRango
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(240, 83)
+        Me.Label1.Location = New System.Drawing.Point(288, 96)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 16)
+        Me.Label1.Size = New System.Drawing.Size(96, 18)
         Me.Label1.TabIndex = 84
         Me.Label1.Text = "Porcentaje de:"
         '
@@ -66,58 +66,62 @@ Public Class frmMsDetDescRango
         Me.cbAplica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbAplica.Enabled = False
         Me.cbAplica.Items.AddRange(New Object() {"Monto del Crédito", "Aportaciones (Saldo Aportación p/ cálculo deducción)", "Aportaciones (Monto del Crédito p/ cálculo deducción)"})
-        Me.cbAplica.Location = New System.Drawing.Point(316, 82)
+        Me.cbAplica.Location = New System.Drawing.Point(379, 95)
         Me.cbAplica.Name = "cbAplica"
-        Me.cbAplica.Size = New System.Drawing.Size(266, 21)
+        Me.cbAplica.Size = New System.Drawing.Size(319, 24)
         Me.cbAplica.TabIndex = 83
         '
         'chkAplicaPorc
         '
         Me.chkAplicaPorc.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkAplicaPorc.Location = New System.Drawing.Point(26, 83)
+        Me.chkAplicaPorc.Location = New System.Drawing.Point(31, 96)
         Me.chkAplicaPorc.Name = "chkAplicaPorc"
-        Me.chkAplicaPorc.Size = New System.Drawing.Size(208, 16)
+        Me.chkAplicaPorc.Size = New System.Drawing.Size(250, 18)
         Me.chkAplicaPorc.TabIndex = 82
         Me.chkAplicaPorc.Text = "Tarifa se manejará como porcentaje"
         '
         'lblTipo
         '
-        Me.lblTipo.Location = New System.Drawing.Point(23, 60)
+        Me.lblTipo.Location = New System.Drawing.Point(28, 69)
         Me.lblTipo.Name = "lblTipo"
-        Me.lblTipo.Size = New System.Drawing.Size(72, 16)
+        Me.lblTipo.Size = New System.Drawing.Size(86, 19)
         Me.lblTipo.TabIndex = 72
         Me.lblTipo.Text = "Descripción:"
         '
         'c1txtDescripcion
         '
         Me.c1txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtDescripcion.Location = New System.Drawing.Point(101, 56)
+        Me.c1txtDescripcion.Location = New System.Drawing.Point(121, 65)
         Me.c1txtDescripcion.MaxLength = 255
         Me.c1txtDescripcion.Name = "c1txtDescripcion"
         Me.c1txtDescripcion.NumericInput = False
         Me.c1txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.c1txtDescripcion.Size = New System.Drawing.Size(481, 20)
+        Me.c1txtDescripcion.Size = New System.Drawing.Size(577, 23)
         Me.c1txtDescripcion.TabIndex = 0
         Me.c1txtDescripcion.Tag = Nothing
         '
         'fgDeducciones
         '
         Me.fgDeducciones.AllowEditing = False
+        Me.fgDeducciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgDeducciones.BackColor = System.Drawing.Color.White
         Me.fgDeducciones.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:15;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgDeducciones.Location = New System.Drawing.Point(23, 139)
+        Me.fgDeducciones.Location = New System.Drawing.Point(28, 160)
         Me.fgDeducciones.Name = "fgDeducciones"
         Me.fgDeducciones.Rows.Count = 1
+        Me.fgDeducciones.Rows.DefaultSize = 21
         Me.fgDeducciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgDeducciones.Size = New System.Drawing.Size(559, 288)
-        Me.fgDeducciones.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgDeducciones.Styles"))
+        Me.fgDeducciones.Size = New System.Drawing.Size(670, 333)
+        Me.fgDeducciones.StyleInfo = resources.GetString("fgDeducciones.StyleInfo")
         Me.fgDeducciones.TabIndex = 3
         '
         'btNew1
         '
-        Me.btNew1.Location = New System.Drawing.Point(23, 105)
+        Me.btNew1.Location = New System.Drawing.Point(28, 121)
         Me.btNew1.Name = "btNew1"
-        Me.btNew1.Size = New System.Drawing.Size(75, 28)
+        Me.btNew1.Size = New System.Drawing.Size(90, 32)
         Me.btNew1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNew1.TabIndex = 85
         Me.btNew1.Text = "Nuevo"
@@ -127,9 +131,9 @@ Public Class frmMsDetDescRango
         '
         'btEdit1
         '
-        Me.btEdit1.Location = New System.Drawing.Point(104, 105)
+        Me.btEdit1.Location = New System.Drawing.Point(125, 121)
         Me.btEdit1.Name = "btEdit1"
-        Me.btEdit1.Size = New System.Drawing.Size(75, 28)
+        Me.btEdit1.Size = New System.Drawing.Size(90, 32)
         Me.btEdit1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEdit1.TabIndex = 86
         Me.btEdit1.Text = "Modificar"
@@ -139,9 +143,9 @@ Public Class frmMsDetDescRango
         '
         'btDel1
         '
-        Me.btDel1.Location = New System.Drawing.Point(185, 105)
+        Me.btDel1.Location = New System.Drawing.Point(222, 121)
         Me.btDel1.Name = "btDel1"
-        Me.btDel1.Size = New System.Drawing.Size(75, 28)
+        Me.btDel1.Size = New System.Drawing.Size(90, 32)
         Me.btDel1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDel1.TabIndex = 87
         Me.btDel1.Text = "Eliminar"
@@ -151,9 +155,9 @@ Public Class frmMsDetDescRango
         '
         'frmMsDetDescRango
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(605, 469)
+        Me.ClientSize = New System.Drawing.Size(725, 583)
         Me.Controls.Add(Me.fgDeducciones)
         Me.Controls.Add(Me.btDel1)
         Me.Controls.Add(Me.btEdit1)
@@ -172,19 +176,18 @@ Public Class frmMsDetDescRango
         CType(Me.c1txtDescripcion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fgDeducciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
 #Region "Propiedades"
-    'Public Property TipoDeduccion() As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Public Property TipoDeduccion() As Prestamos.clsPrestamos.TipoDeduccion
     Public Property TipoDeduccion() As sifLib.Prestamos.clsPrestamos.TipoDeduccion
         Get
             Return vTipoDeduccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion)
+        'Set(ByVal Value As Prestamos.clsPrestamos.TipoDeduccion)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.TipoDeduccion)
             vTipoDeduccion = Value
         End Set
@@ -272,7 +275,7 @@ Public Class frmMsDetDescRango
             frm.ShowDialog()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -286,7 +289,7 @@ Public Class frmMsDetDescRango
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -325,7 +328,7 @@ Public Class frmMsDetDescRango
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub chkAplicaPorc_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkAplicaPorc.CheckedChanged

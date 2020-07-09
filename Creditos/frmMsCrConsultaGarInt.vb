@@ -68,9 +68,9 @@ Public Class frmMsCrConsultaGarInt
         Me.GroupBox1.Controls.Add(Me.txtNoSocio)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(408, 94)
+        Me.GroupBox1.Size = New System.Drawing.Size(489, 108)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
@@ -79,10 +79,10 @@ Public Class frmMsCrConsultaGarInt
         Me.txtNoSolicitud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSolicitud.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSolicitud.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSolicitud.Location = New System.Drawing.Point(92, 64)
+        Me.txtNoSolicitud.Location = New System.Drawing.Point(110, 74)
         Me.txtNoSolicitud.Name = "txtNoSolicitud"
         Me.txtNoSolicitud.ReadOnly = True
-        Me.txtNoSolicitud.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSolicitud.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSolicitud.TabIndex = 176
         '
         'Label1
@@ -90,20 +90,20 @@ Public Class frmMsCrConsultaGarInt
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(4, 66)
+        Me.Label1.Location = New System.Drawing.Point(5, 76)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 16)
+        Me.Label1.Size = New System.Drawing.Size(105, 19)
         Me.Label1.TabIndex = 175
         Me.Label1.Text = "Nº de Solicitud:"
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(92, 12)
+        Me.txtDui.Location = New System.Drawing.Point(110, 14)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
         Me.txtDui.ReadOnly = True
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
@@ -112,17 +112,17 @@ Public Class frmMsCrConsultaGarInt
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombre.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNombre.Location = New System.Drawing.Point(92, 38)
+        Me.txtNombre.Location = New System.Drawing.Point(110, 44)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(292, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(351, 23)
         Me.txtNombre.TabIndex = 171
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(6, 42)
+        Me.Label4.Location = New System.Drawing.Point(7, 48)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 16)
+        Me.Label4.Size = New System.Drawing.Size(85, 19)
         Me.Label4.TabIndex = 170
         Me.Label4.Text = "Asociado:"
         '
@@ -131,25 +131,25 @@ Public Class frmMsCrConsultaGarInt
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(296, 12)
+        Me.txtNoSocio.Location = New System.Drawing.Point(355, 14)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSocio.TabIndex = 169
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(210, 16)
+        Me.Label3.Location = New System.Drawing.Point(252, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 16)
+        Me.Label3.Size = New System.Drawing.Size(96, 19)
         Me.Label3.TabIndex = 168
         Me.Label3.Text = "No. Asociado:"
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(6, 16)
+        Me.Label2.Location = New System.Drawing.Point(7, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 167
         Me.Label2.Text = "DUI:"
         '
@@ -163,19 +163,21 @@ Public Class frmMsCrConsultaGarInt
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None
         Me.fg.ColumnInfo = "3,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 163)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 188)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
+        Me.fg.Rows.DefaultSize = 21
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
-        Me.fg.Size = New System.Drawing.Size(425, 141)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Size = New System.Drawing.Size(498, 186)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 4
         '
         'frmMsCrConsultaGarInt
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(471, 341)
+        Me.ClientSize = New System.Drawing.Size(553, 416)
         Me.Controls.Add(Me.fg)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False

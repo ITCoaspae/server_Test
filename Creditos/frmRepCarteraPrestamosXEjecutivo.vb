@@ -111,7 +111,7 @@ Public Class frmRepCarteraPrestamosXEjecutivo
             Dim ofrm As New frmVisor(ds, 41, 0)
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

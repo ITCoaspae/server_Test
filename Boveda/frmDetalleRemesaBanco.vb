@@ -9,7 +9,7 @@
             If banco.insertarDetalleRemesaBanco(correlativo, txtFolio.Text.Trim, txtNoComprobante.Text.Trim, txtNombreCta.Text.Trim.ToUpper, TextBox1.Text.Trim.ToUpper, sUsuario, dtpFecMovRemesar.Value) > 0 Then
                 MsgBox("Información ingresada exitosamente", MsgBoxStyle.Information)
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
         Me.Close()
@@ -36,4 +36,10 @@
         End If
         Return valido
     End Function
+
+    Private Sub frmDetalleRemesaBanco_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

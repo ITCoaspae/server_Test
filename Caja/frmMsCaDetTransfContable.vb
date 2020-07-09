@@ -49,17 +49,17 @@ Public Class frmMsCaDetTransfContable
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(23, 107)
+        Me.Label2.Location = New System.Drawing.Point(19, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 19)
+        Me.Label2.Size = New System.Drawing.Size(96, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Centro Costos:"
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(400, 184)
+        Me.btNProcesar1.Location = New System.Drawing.Point(333, 159)
         Me.btNProcesar1.Name = "btNProcesar1"
-        Me.btNProcesar1.Size = New System.Drawing.Size(90, 33)
+        Me.btNProcesar1.Size = New System.Drawing.Size(75, 29)
         Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNProcesar1.TabIndex = 7
         Me.btNProcesar1.Text = "Guardar"
@@ -71,51 +71,51 @@ Public Class frmMsCaDetTransfContable
         '
         Me.txtCuenta.BackColor = System.Drawing.Color.White
         Me.txtCuenta.Enabled = False
-        Me.txtCuenta.Location = New System.Drawing.Point(154, 82)
+        Me.txtCuenta.Location = New System.Drawing.Point(128, 71)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.Size = New System.Drawing.Size(336, 22)
+        Me.txtCuenta.Size = New System.Drawing.Size(280, 20)
         Me.txtCuenta.TabIndex = 2
         '
         'txtIdCuenta
         '
         Me.txtIdCuenta.BackColor = System.Drawing.Color.White
-        Me.txtIdCuenta.Location = New System.Drawing.Point(23, 82)
+        Me.txtIdCuenta.Location = New System.Drawing.Point(19, 71)
         Me.txtIdCuenta.Name = "txtIdCuenta"
         Me.txtIdCuenta.ReadOnly = True
-        Me.txtIdCuenta.Size = New System.Drawing.Size(125, 22)
+        Me.txtIdCuenta.Size = New System.Drawing.Size(104, 20)
         Me.txtIdCuenta.TabIndex = 1
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(23, 60)
+        Me.Label1.Location = New System.Drawing.Point(19, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(205, 19)
+        Me.Label1.Size = New System.Drawing.Size(171, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cuenta Contable:"
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(23, 162)
+        Me.Label4.Location = New System.Drawing.Point(19, 140)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(332, 19)
+        Me.Label4.Size = New System.Drawing.Size(277, 17)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Valor a transferir:"
         '
         'c1txtMonto
         '
         Me.c1txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtMonto.CustomFormat = "###,##0.00"
+        Me.c1txtMonto.CustomFormat = "###,###,##0.00"
         Me.c1txtMonto.DataType = GetType(Double)
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1txtMonto.Location = New System.Drawing.Point(23, 184)
+        Me.c1txtMonto.Location = New System.Drawing.Point(19, 159)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
-        Me.c1txtMonto.Size = New System.Drawing.Size(125, 23)
+        Me.c1txtMonto.Size = New System.Drawing.Size(104, 17)
         Me.c1txtMonto.TabIndex = 6
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
@@ -124,18 +124,18 @@ Public Class frmMsCaDetTransfContable
         'cbCentroCosto
         '
         Me.cbCentroCosto.FormattingEnabled = True
-        Me.cbCentroCosto.ItemHeight = 24
-        Me.cbCentroCosto.Location = New System.Drawing.Point(23, 129)
+        Me.cbCentroCosto.ItemHeight = 23
+        Me.cbCentroCosto.Location = New System.Drawing.Point(19, 112)
         Me.cbCentroCosto.Name = "cbCentroCosto"
-        Me.cbCentroCosto.Size = New System.Drawing.Size(467, 30)
+        Me.cbCentroCosto.Size = New System.Drawing.Size(389, 29)
         Me.cbCentroCosto.TabIndex = 4
         Me.cbCentroCosto.UseSelectable = True
         '
         'frmMsCaDetTransfContable
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(521, 324)
+        Me.ClientSize = New System.Drawing.Size(434, 281)
         Me.Controls.Add(Me.cbCentroCosto)
         Me.Controls.Add(Me.btNProcesar1)
         Me.Controls.Add(Me.Label2)
@@ -145,9 +145,9 @@ Public Class frmMsCaDetTransfContable
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtCuenta)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(521, 324)
+        Me.MaximumSize = New System.Drawing.Size(434, 281)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(521, 324)
+        Me.MinimumSize = New System.Drawing.Size(434, 281)
         Me.Name = "frmMsCaDetTransfContable"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Teal
@@ -220,7 +220,7 @@ Public Class frmMsCaDetTransfContable
             FrmT.dsDetalle = ds
             Me.Dispose()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

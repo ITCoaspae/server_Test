@@ -86,14 +86,17 @@
    
     Protected Function obtenerCategoria(ByVal porcentaje As Double) As String
         Dim dts As New DataSet
+        Dim categoria As String = ""
         dts = creditos.consultarPrCatClasificacionPagadurias(2, porcentaje, cbTipoEvaluacion.SelectedValue)
         If dts.Tables.Count > 0 Then
             If dts.Tables(0).Rows.Count > 0 Then
-                Return dts.Tables(0).Rows(0).Item("categoria").ToString.Trim
+                categoria = dts.Tables(0).Rows(0).Item("categoria").ToString.Trim
             Else
                 MsgBox("Error, por favor comunicarse con el administrador del sistema.", MsgBoxStyle.Critical, "Módulo - Créditos")
+
             End If
         End If
+        Return categoria
     End Function
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -348,7 +351,7 @@
                 MsgBox("Accion cancelada por el Usuario '" & sUsuario & "'", MsgBoxStyle.Information, "Módulo - Créditos")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

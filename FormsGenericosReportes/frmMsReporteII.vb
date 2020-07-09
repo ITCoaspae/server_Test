@@ -252,23 +252,23 @@ Public Class frmMsReporteII
                     If Me.chkTodos.Checked = True Then
                         ds = oAhorro.Provisiones_Ahorros(Me.dtpFecha.Value, Now, 0, True, False, Me.txtCodTipoAhorro.Text.Trim, sUsuario, sPassword, sSucursal)
                     Else
-                        'Dim vTipo As AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos
+                        'Dim vTipo As Ahorros.clsAhorro.TiposAhorroReporteMovimientos
                         Dim vTipo As sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos
                         Select Case Mid(Me.txtCodTipoAhorro.Text.Trim, 1, 1)
                             Case "1"
-                                'vTipo = AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Aportacion
+                                'vTipo = Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Aportacion
                                 vTipo = sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos.Aportacion
                             Case "2"
-                                'vTipo = AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos.DPF
+                                'vTipo = Ahorros.clsAhorro.TiposAhorroReporteMovimientos.DPF
                                 vTipo = sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos.DPF
                             Case "3"
-                                'vTipo = AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Vista
+                                'vTipo = Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Vista
                                 vTipo = sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos.Vista
                             Case "4"
-                                'vTipo = AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Restringido
+                                'vTipo = Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Restringido
                                 vTipo = sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos.Restringido
                             Case "5"
-                                'vTipo = AlcalaLibs.Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Programado
+                                'vTipo = Ahorros.clsAhorro.TiposAhorroReporteMovimientos.Programado
                                 vTipo = sifLib.Ahorro.clsAhorros.TiposAhorroReporteMovimientos.Programado
                         End Select
                         ds = oAhorro.Provisiones_Ahorros(Me.dtpFecha.Value, Now, vTipo, False, False, Me.txtCodTipoAhorro.Text.Trim, sUsuario, sPassword, sSucursal)
@@ -277,7 +277,7 @@ Public Class frmMsReporteII
                     ofrm.ShowDialog()
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

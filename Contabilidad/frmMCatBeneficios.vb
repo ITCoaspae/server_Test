@@ -1,7 +1,5 @@
-Imports LibSynFinCoop.Contabilidad
-
 Public Class frmMCatBeneficios
-    Inherits frmCat 'SIF_ERP.frmCat
+    Inherits frmCat
     Private ds As Data.DataSet = New Data.DataSet, iRow As Integer
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -51,7 +49,7 @@ Public Class frmMCatBeneficios
         Me.Text = "Mantenimiento Cuentas Contables"
         Try
             oCat = New wrConta.wsLibContab
-            ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword,sSucursal)
+            ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword, sSucursal)
             C1fgrdCat.DataSource = ds.Tables(0)
         Catch ex As Exception
             MessageBox.Show("Error en la recuperación de datos tabla Cat_CBeneficios" & "System Error: " & ex.Message.ToString(), "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -104,7 +102,7 @@ Public Class frmMCatBeneficios
         Dim oCat As wrConta.wsLibContab, ds As New Data.DataSet, ds2 As New Data.DataSet
         Try
             oCat = New wrConta.wsLibContab
-            ds = oCat.ObtenerCatBeneficio("Cod_CBeneficio,Descripcion", "", "Cod_CBeneficio", sUsuario, sPassword,sSucursal)
+            ds = oCat.ObtenerCatBeneficio("Cod_CBeneficio,Descripcion", "", "Cod_CBeneficio", sUsuario, sPassword, sSucursal)
             frm.Datos = ds
             frm.ColSeleccion = 0
             frm.RefrescarGrid()
@@ -112,12 +110,12 @@ Public Class frmMCatBeneficios
             If frm.Resultado.Trim = "" Then   'Filtrar Registros
 
                 C1fgrdCat.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
-                ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword,sSucursal)
+                ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword, sSucursal)
                 C1fgrdCat.DataSource = ds.Tables(0)
             ElseIf frm.Resultado.Trim <> "" Then
                 sTexto = frm.Resultado.Trim
                 C1fgrdCat.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
-                ds = oCat.ObtenerCatBeneficio("*", "Cod_CBeneficio='" & sTexto & "'", "Cod_CBeneficio", sUsuario, sPassword,sSucursal)
+                ds = oCat.ObtenerCatBeneficio("*", "Cod_CBeneficio='" & sTexto & "'", "Cod_CBeneficio", sUsuario, sPassword, sSucursal)
                 C1fgrdCat.DataSource = ds.Tables(0)
             End If
         Catch ex As Exception
@@ -134,7 +132,7 @@ Public Class frmMCatBeneficios
         Dim oCat As wrConta.wsLibContab
         Try
             oCat = New wrConta.wsLibContab
-            ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword,sSucursal)
+            ds = oCat.ObtenerCatBeneficio("*", "", "Cod_CBeneficio", sUsuario, sPassword, sSucursal)
             C1fgrdCat.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
             C1fgrdCat.DataSource = ds.Tables(0)
         Catch ex As Exception

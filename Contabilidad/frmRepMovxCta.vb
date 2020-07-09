@@ -60,9 +60,9 @@ Public Class frmRepMovxCta
         '
         'btnCerrar1
         '
-        Me.btnCerrar1.Location = New System.Drawing.Point(371, 360)
+        Me.btnCerrar1.Location = New System.Drawing.Point(309, 312)
         Me.btnCerrar1.Name = "btnCerrar1"
-        Me.btnCerrar1.Size = New System.Drawing.Size(88, 32)
+        Me.btnCerrar1.Size = New System.Drawing.Size(73, 28)
         Me.btnCerrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCerrar1.TabIndex = 13
         Me.btnCerrar1.Text = "Cerrar"
@@ -72,9 +72,9 @@ Public Class frmRepMovxCta
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(277, 360)
+        Me.btnMostrar1.Location = New System.Drawing.Point(231, 312)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(88, 32)
+        Me.btnMostrar1.Size = New System.Drawing.Size(73, 28)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 12
         Me.btnMostrar1.Text = "Mostrar"
@@ -85,37 +85,37 @@ Public Class frmRepMovxCta
         'MetroComboBox1
         '
         Me.MetroComboBox1.FormattingEnabled = True
-        Me.MetroComboBox1.ItemHeight = 24
-        Me.MetroComboBox1.Location = New System.Drawing.Point(23, 228)
+        Me.MetroComboBox1.ItemHeight = 23
+        Me.MetroComboBox1.Location = New System.Drawing.Point(19, 198)
         Me.MetroComboBox1.Name = "MetroComboBox1"
-        Me.MetroComboBox1.Size = New System.Drawing.Size(436, 30)
+        Me.MetroComboBox1.Size = New System.Drawing.Size(363, 29)
         Me.MetroComboBox1.TabIndex = 7
         Me.MetroComboBox1.UseSelectable = True
         '
         'dtpFechaIni
         '
         Me.dtpFechaIni.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaIni.Location = New System.Drawing.Point(23, 116)
-        Me.dtpFechaIni.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpFechaIni.Location = New System.Drawing.Point(19, 101)
+        Me.dtpFechaIni.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtpFechaIni.Name = "dtpFechaIni"
-        Me.dtpFechaIni.Size = New System.Drawing.Size(436, 30)
+        Me.dtpFechaIni.Size = New System.Drawing.Size(363, 29)
         Me.dtpFechaIni.TabIndex = 3
         '
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 205)
+        Me.MetroLabel1.Location = New System.Drawing.Point(19, 178)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(113, 20)
+        Me.MetroLabel1.Size = New System.Drawing.Size(109, 19)
         Me.MetroLabel1.TabIndex = 6
         Me.MetroLabel1.Text = "Centro de Costo:"
         '
         'MetroRadioButton1
         '
         Me.MetroRadioButton1.AutoSize = True
-        Me.MetroRadioButton1.Location = New System.Drawing.Point(23, 73)
+        Me.MetroRadioButton1.Location = New System.Drawing.Point(19, 63)
         Me.MetroRadioButton1.Name = "MetroRadioButton1"
-        Me.MetroRadioButton1.Size = New System.Drawing.Size(127, 17)
+        Me.MetroRadioButton1.Size = New System.Drawing.Size(115, 15)
         Me.MetroRadioButton1.TabIndex = 0
         Me.MetroRadioButton1.Text = "Todas las cuentas"
         Me.MetroRadioButton1.UseSelectable = True
@@ -123,75 +123,75 @@ Public Class frmRepMovxCta
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(23, 93)
+        Me.MetroLabel2.Location = New System.Drawing.Point(19, 81)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(85, 20)
+        Me.MetroLabel2.Size = New System.Drawing.Size(80, 19)
         Me.MetroLabel2.TabIndex = 2
         Me.MetroLabel2.Text = "Fecha Inicio:"
         '
         'MetroLabel3
         '
         Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.Location = New System.Drawing.Point(23, 149)
+        Me.MetroLabel3.Location = New System.Drawing.Point(19, 129)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(71, 20)
+        Me.MetroLabel3.Size = New System.Drawing.Size(67, 19)
         Me.MetroLabel3.TabIndex = 4
         Me.MetroLabel3.Text = "Fecha Fin:"
         '
         'dtpFechaFin
         '
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(23, 172)
-        Me.dtpFechaFin.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(19, 149)
+        Me.dtpFechaFin.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(436, 30)
+        Me.dtpFechaFin.Size = New System.Drawing.Size(363, 29)
         Me.dtpFechaFin.TabIndex = 5
         '
         'MetroLabel4
         '
         Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(23, 261)
+        Me.MetroLabel4.Location = New System.Drawing.Point(19, 226)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(33, 20)
+        Me.MetroLabel4.Size = New System.Drawing.Size(31, 19)
         Me.MetroLabel4.TabIndex = 8
         Me.MetroLabel4.Text = "Del:"
         '
         'MetroLabel5
         '
         Me.MetroLabel5.AutoSize = True
-        Me.MetroLabel5.Location = New System.Drawing.Point(23, 309)
+        Me.MetroLabel5.Location = New System.Drawing.Point(19, 268)
         Me.MetroLabel5.Name = "MetroLabel5"
-        Me.MetroLabel5.Size = New System.Drawing.Size(24, 20)
+        Me.MetroLabel5.Size = New System.Drawing.Size(24, 19)
         Me.MetroLabel5.TabIndex = 10
         Me.MetroLabel5.Text = "Al:"
         '
         'MetroRadioButton2
         '
         Me.MetroRadioButton2.AutoSize = True
-        Me.MetroRadioButton2.Location = New System.Drawing.Point(156, 73)
+        Me.MetroRadioButton2.Location = New System.Drawing.Point(142, 63)
         Me.MetroRadioButton2.Name = "MetroRadioButton2"
-        Me.MetroRadioButton2.Size = New System.Drawing.Size(204, 17)
+        Me.MetroRadioButton2.Size = New System.Drawing.Size(185, 15)
         Me.MetroRadioButton2.TabIndex = 1
         Me.MetroRadioButton2.Text = "Filtrar por cuenta en especifico"
         Me.MetroRadioButton2.UseSelectable = True
         '
         'txtCtaFin
         '
-        Me.txtCtaFin.Location = New System.Drawing.Point(23, 332)
+        Me.txtCtaFin.Location = New System.Drawing.Point(19, 288)
         Me.txtCtaFin.Name = "txtCtaFin"
-        Me.txtCtaFin.Size = New System.Drawing.Size(436, 22)
+        Me.txtCtaFin.Size = New System.Drawing.Size(363, 20)
         Me.txtCtaFin.TabIndex = 11
         '
         'txtCtaIni
         '
-        Me.txtCtaIni.Location = New System.Drawing.Point(23, 284)
+        Me.txtCtaIni.Location = New System.Drawing.Point(19, 246)
         Me.txtCtaIni.Name = "txtCtaIni"
-        Me.txtCtaIni.Size = New System.Drawing.Size(436, 22)
+        Me.txtCtaIni.Size = New System.Drawing.Size(363, 20)
         Me.txtCtaIni.TabIndex = 9
         '
         'frmRepMovxCta
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(504, 469)
         Me.Controls.Add(Me.btnCerrar1)
@@ -255,14 +255,14 @@ Public Class frmRepMovxCta
             Dim ofrm As frmVisor
             Dim oPr As New wrConta.wsLibContab, ds As New System.Data.DataSet
 
-            ds = oPr.RepMovxCta(dtpFechaIni.Value.ToShortDateString, dtpFechaFin.Value.ToShortDateString, txtCtaIni.Text.Trim, txtCtaFin.Text.Trim, sUsuario, sPassword, sSucursal)
+            ds = oPr.RepMovxCta(dtpFechaIni.Value.ToShortDateString, dtpFechaFin.Value.ToShortDateString, MetroComboBox1.SelectedValue, txtCtaIni.Text.Trim, txtCtaFin.Text.Trim, sUsuario, sPassword, sSucursal)
             ofrm = New frmVisor(ds, 4, 0)
             ofrm.Text = "Reporte - Movimiento por Cuenta"
             ofrm.TopMost = True
             ofrm.ShowDialog()
             Me.Close()
         Catch ex As Exception
-            MessageBox.Show("No hay datos disponibles.", "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

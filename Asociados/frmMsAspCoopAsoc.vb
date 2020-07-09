@@ -103,9 +103,9 @@ Public Class frmMsAspCoopAsoc
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Maroon
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 157)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 181)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(580, 253)
+        Me.GroupBox1.Size = New System.Drawing.Size(696, 292)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
@@ -115,36 +115,35 @@ Public Class frmMsAspCoopAsoc
         Me.c1nMonto.CustomFormat = "###,###,##0.00"
         Me.c1nMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nMonto.Increment = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.c1nMonto.Location = New System.Drawing.Point(180, 177)
+        Me.c1nMonto.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.c1nMonto.Location = New System.Drawing.Point(216, 204)
         Me.c1nMonto.Name = "c1nMonto"
         Me.c1nMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nMonto.ShowDropDownButton = False
-        Me.c1nMonto.ShowUpDownButtons = False
-        Me.c1nMonto.Size = New System.Drawing.Size(104, 21)
+        Me.c1nMonto.Size = New System.Drawing.Size(125, 27)
         Me.c1nMonto.TabIndex = 5
         Me.c1nMonto.Tag = Nothing
         Me.c1nMonto.Value = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.c1nMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'cbFormaPago
         '
         Me.cbFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFormaPago.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFormaPago.Items.AddRange(New Object() {""})
-        Me.cbFormaPago.Location = New System.Drawing.Point(180, 213)
+        Me.cbFormaPago.Location = New System.Drawing.Point(216, 246)
         Me.cbFormaPago.Name = "cbFormaPago"
-        Me.cbFormaPago.Size = New System.Drawing.Size(168, 22)
+        Me.cbFormaPago.Size = New System.Drawing.Size(202, 24)
         Me.cbFormaPago.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(6, 216)
+        Me.Label7.Location = New System.Drawing.Point(7, 249)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(141, 34)
+        Me.Label7.Size = New System.Drawing.Size(169, 39)
         Me.Label7.TabIndex = 101
         Me.Label7.Text = "Forma de Pago " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "para las aportaciones:"
         '
@@ -152,28 +151,28 @@ Public Class frmMsAspCoopAsoc
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(6, 177)
+        Me.Label6.Location = New System.Drawing.Point(7, 204)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(168, 29)
+        Me.Label6.Size = New System.Drawing.Size(202, 34)
         Me.Label6.TabIndex = 99
         Me.Label6.Text = "Monto de ahorro mensual " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que tiene planeado efectuar:"
         '
         'txtProposito
         '
-        Me.txtProposito.Location = New System.Drawing.Point(180, 122)
+        Me.txtProposito.Location = New System.Drawing.Point(216, 141)
         Me.txtProposito.MaxLength = 100
         Me.txtProposito.Multiline = True
         Me.txtProposito.Name = "txtProposito"
-        Me.txtProposito.Size = New System.Drawing.Size(388, 40)
+        Me.txtProposito.Size = New System.Drawing.Size(466, 46)
         Me.txtProposito.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(6, 125)
+        Me.Label1.Location = New System.Drawing.Point(7, 144)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 33)
+        Me.Label1.Size = New System.Drawing.Size(154, 38)
         Me.Label1.TabIndex = 97
         Me.Label1.Text = "Propósito para " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "afiliarse a la Cooperativa:"
         '
@@ -181,9 +180,9 @@ Public Class frmMsAspCoopAsoc
         '
         Me.rbNO.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbNO.ForeColor = System.Drawing.Color.Black
-        Me.rbNO.Location = New System.Drawing.Point(250, 16)
+        Me.rbNO.Location = New System.Drawing.Point(300, 18)
         Me.rbNO.Name = "rbNO"
-        Me.rbNO.Size = New System.Drawing.Size(72, 16)
+        Me.rbNO.Size = New System.Drawing.Size(86, 19)
         Me.rbNO.TabIndex = 1
         Me.rbNO.Text = "&No"
         '
@@ -192,56 +191,56 @@ Public Class frmMsAspCoopAsoc
         Me.rbSI.Checked = True
         Me.rbSI.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbSI.ForeColor = System.Drawing.Color.Black
-        Me.rbSI.Location = New System.Drawing.Point(180, 16)
+        Me.rbSI.Location = New System.Drawing.Point(216, 18)
         Me.rbSI.Name = "rbSI"
-        Me.rbSI.Size = New System.Drawing.Size(64, 16)
+        Me.rbSI.Size = New System.Drawing.Size(77, 19)
         Me.rbSI.TabIndex = 0
         Me.rbSI.TabStop = True
         Me.rbSI.Text = "&Si"
         '
         'txtCooperativa
         '
-        Me.txtCooperativa.Location = New System.Drawing.Point(250, 45)
+        Me.txtCooperativa.Location = New System.Drawing.Point(300, 52)
         Me.txtCooperativa.MaxLength = 100
         Me.txtCooperativa.Name = "txtCooperativa"
         Me.txtCooperativa.ReadOnly = True
-        Me.txtCooperativa.Size = New System.Drawing.Size(318, 20)
+        Me.txtCooperativa.Size = New System.Drawing.Size(382, 23)
         Me.txtCooperativa.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(6, 45)
+        Me.Label3.Location = New System.Drawing.Point(7, 52)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 16)
+        Me.Label3.Size = New System.Drawing.Size(202, 18)
         Me.Label3.TabIndex = 92
         Me.Label3.Text = "Cooperativa a la que pertenece:"
         '
         'txtCodCooperativa
         '
         Me.txtCodCooperativa.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodCooperativa.Location = New System.Drawing.Point(180, 45)
+        Me.txtCodCooperativa.Location = New System.Drawing.Point(216, 52)
         Me.txtCodCooperativa.MaxLength = 5
         Me.txtCodCooperativa.Name = "txtCodCooperativa"
-        Me.txtCodCooperativa.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodCooperativa.Size = New System.Drawing.Size(77, 23)
         Me.txtCodCooperativa.TabIndex = 2
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(180, 88)
+        Me.txtCargo.Location = New System.Drawing.Point(216, 102)
         Me.txtCargo.MaxLength = 50
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(388, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(466, 23)
         Me.txtCargo.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(6, 16)
+        Me.Label4.Location = New System.Drawing.Point(7, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(168, 16)
+        Me.Label4.Size = New System.Drawing.Size(202, 19)
         Me.Label4.TabIndex = 89
         Me.Label4.Text = "Pertenece a otra Cooperativa:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -250,9 +249,9 @@ Public Class frmMsAspCoopAsoc
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(6, 77)
+        Me.Label5.Location = New System.Drawing.Point(7, 89)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 48)
+        Me.Label5.Size = New System.Drawing.Size(126, 55)
         Me.Label5.TabIndex = 94
         Me.Label5.Text = "Cargo directivo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que desempeña " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "o ha desempeñado:"
         '
@@ -269,9 +268,9 @@ Public Class frmMsAspCoopAsoc
         Me.gbDatos.Controls.Add(Me.Label21)
         Me.gbDatos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbDatos.ForeColor = System.Drawing.Color.Black
-        Me.gbDatos.Location = New System.Drawing.Point(23, 63)
+        Me.gbDatos.Location = New System.Drawing.Point(28, 73)
         Me.gbDatos.Name = "gbDatos"
-        Me.gbDatos.Size = New System.Drawing.Size(580, 88)
+        Me.gbDatos.Size = New System.Drawing.Size(696, 101)
         Me.gbDatos.TabIndex = 0
         Me.gbDatos.TabStop = False
         Me.gbDatos.Text = "Datos del Asociado"
@@ -279,28 +278,28 @@ Public Class frmMsAspCoopAsoc
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(44, 24)
+        Me.txtDui.Location = New System.Drawing.Point(53, 28)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(136, 20)
+        Me.txtDui.Size = New System.Drawing.Size(163, 24)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
         'txtCodAntiguo
         '
-        Me.txtCodAntiguo.Location = New System.Drawing.Point(464, 24)
+        Me.txtCodAntiguo.Location = New System.Drawing.Point(557, 28)
         Me.txtCodAntiguo.MaxLength = 10
         Me.txtCodAntiguo.Name = "txtCodAntiguo"
-        Me.txtCodAntiguo.Size = New System.Drawing.Size(104, 20)
+        Me.txtCodAntiguo.Size = New System.Drawing.Size(125, 23)
         Me.txtCodAntiguo.TabIndex = 2
         '
         'Label48
         '
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(376, 24)
+        Me.Label48.Location = New System.Drawing.Point(451, 28)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(88, 16)
+        Me.Label48.Size = New System.Drawing.Size(106, 18)
         Me.Label48.TabIndex = 114
         Me.Label48.Text = "Código Antiguo:"
         '
@@ -308,56 +307,56 @@ Public Class frmMsAspCoopAsoc
         '
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(6, 24)
+        Me.Label31.Location = New System.Drawing.Point(7, 28)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
+        Me.Label31.Size = New System.Drawing.Size(39, 18)
         Me.Label31.TabIndex = 94
         Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(288, 24)
+        Me.txtNoSocio.Location = New System.Drawing.Point(346, 28)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(72, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(86, 23)
         Me.txtNoSocio.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(208, 24)
+        Me.Label2.Location = New System.Drawing.Point(250, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "No. Asociado:"
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(92, 56)
+        Me.txtNombre.Location = New System.Drawing.Point(110, 65)
         Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(476, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(572, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(6, 56)
+        Me.Label21.Location = New System.Drawing.Point(7, 65)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(80, 16)
+        Me.Label21.Size = New System.Drawing.Size(96, 18)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Asociado:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(528, 416)
+        Me.btnGuardar1.Location = New System.Drawing.Point(634, 480)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 125
         Me.btnGuardar1.Text = "Guardar"
@@ -366,8 +365,8 @@ Public Class frmMsAspCoopAsoc
         '
         'frmMsAspCoopAsoc
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(621, 465)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(755, 615)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.gbDatos)
         Me.Controls.Add(Me.GroupBox1)
@@ -375,6 +374,7 @@ Public Class frmMsAspCoopAsoc
         Me.MinimizeBox = False
         Me.Name = "frmMsAspCoopAsoc"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Aspectos Cooperativos del Asociado"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -677,5 +677,11 @@ Public Class frmMsAspCoopAsoc
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub frmMsAspCoopAsoc_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

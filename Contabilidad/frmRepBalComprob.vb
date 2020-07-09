@@ -141,13 +141,13 @@ Public Class frmRepBalComprob
 
     Private Sub btnProcesar1_Click(sender As Object, e As EventArgs) Handles btnProcesar1.Click
         Dim ofrm As New frmVisorRep
-        'ofrm.Reporte = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.BalanceComprobacion
+        'ofrm.Reporte = Contabilidad.clsContab.ReportesContabilidad.BalanceComprobacion
         ofrm.Reporte = sifLib.Contabilidad.clsContabs.ReportesContabilidad.BalanceComprobacion
         ofrm.Mes = Me.dtpFecha.Value.Month()
         ofrm.centroCosto = Me.cbCC.SelectedValue
         ofrm.FechaIni = Me.dtpFecha.Value
-        ofrm.MdiParent = ofrmMain
+        ' 
         ofrm.Show()
-        Me.Close()
+
     End Sub
 End Class

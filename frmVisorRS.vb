@@ -7,6 +7,7 @@ Public Class frmVisorRS
     Dim Bancos As New wrBancos.wsLibBancos
     Dim administracion As New wrAdmin.wsLibAdmin
     Private pDui As String
+    Dim vOpcion As Boolean
     Dim vFecha As DateTime
     Dim vNoCaja As Integer
     Dim vCorrelativoMovCaja As Integer
@@ -48,6 +49,14 @@ Public Class frmVisorRS
         End Get
         Set(ByVal value As String)
             vCodReversion = value
+        End Set
+    End Property
+    Public Property Opcion As Boolean
+        Get
+            Return vOpcion
+        End Get
+        Set(ByVal value As Boolean)
+            vOpcion = value
         End Set
     End Property
     Public Property idReserva() As Integer
@@ -260,17 +269,32 @@ Public Class frmVisorRS
             Dim duip As ReportParameter = New ReportParameter
             duip.Name = "DUI"
             duip.Values.Add(dui)
-
-
-
-            Dim arrayParametros(5) As ReportParameter
+            Dim opcion As ReportParameter = New ReportParameter
+            opcion.Name = "opcion"
+            opcion.Values.Add(vOpcion)
+            Dim fecHist As ReportParameter = New ReportParameter
+            fecHist.Name = "fecHist"
+            fecHist.Values.Add(fecha)
+            Dim arrayParametros(7) As ReportParameter
             arrayParametros(0) = parametro
             arrayParametros(1) = sucursal
             arrayParametros(2) = prestamo
             arrayParametros(3) = fechaIni
             arrayParametros(4) = fechaFin
             arrayParametros(5) = duip
+            arrayParametros(6) = opcion
+            arrayParametros(7) = fecHist
+            parametro.Visible = False
+            sucursal.Visible = False
+            prestamo.Visible = False
+            opcion.Visible = False
+            fechaIni.Visible = False
+            fechaFin.Visible = False
+            fecHist.Visible = False
+            duip.Visible = False
+
             Me.rsVISOR.ServerReport.SetParameters(arrayParametros)
+
             Me.rsVISOR.RefreshReport()
         End If
 
@@ -476,7 +500,7 @@ Public Class frmVisorRS
                                     idBovedaParametro.Values.Add(idBoveda)
                                     idBovedaParametro.Visible = False
                                     Dim usuarioPa As ReportParameter = New ReportParameter
-                                    usuarioPa.Name = "usuario"
+                                    usuarioPa.Name = "usuarioCrea"
                                     usuarioPa.Values.Add(sUsuario.ToUpper)
                                     Dim arrayParametros(1) As ReportParameter
                                     arrayParametros(0) = idBovedaParametro
@@ -491,7 +515,8 @@ Public Class frmVisorRS
                     Next
 
                     Dim usuarioP As ReportParameter = New ReportParameter
-                    usuarioP.Name = "usuario"
+                    usuarioP.Name = "usuarioCrea"
+                    usuarioP.Visible = False
                     usuarioP.Values.Add(sUsuario.ToUpper)
                     Dim arrayParametro(0) As ReportParameter
                     arrayParametro(0) = usuarioP
@@ -566,23 +591,23 @@ Public Class frmVisorRS
             '    Me.rsVISOR.ServerReport.Refresh()
 
         ElseIf OpcionRS = 65 Then
-                Dim parametro As ReportParameter = New ReportParameter
-                parametro.Name = "DUI"
-                parametro.Values.Add(pDui)
-                parametro.Visible = False
-                Dim arrayParametros(0) As ReportParameter
-                arrayParametros(0) = parametro
-                Me.rsVISOR.ServerReport.SetParameters(arrayParametros)
-                Me.rsVISOR.RefreshReport()
-            ElseIf OpcionRS = 66 Then
-                Dim parametro As ReportParameter = New ReportParameter
-                parametro.Name = "DUI"
-                parametro.Values.Add(pDui)
-                parametro.Visible = False
-                Dim arrayParametros(0) As ReportParameter
-                arrayParametros(0) = parametro
-                Me.rsVISOR.ServerReport.SetParameters(arrayParametros)
-                Me.rsVISOR.RefreshReport()
+            Dim parametro As ReportParameter = New ReportParameter
+            parametro.Name = "DUI"
+            parametro.Values.Add(pDui)
+            parametro.Visible = False
+            Dim arrayParametros(0) As ReportParameter
+            arrayParametros(0) = parametro
+            Me.rsVISOR.ServerReport.SetParameters(arrayParametros)
+            Me.rsVISOR.RefreshReport()
+        ElseIf OpcionRS = 66 Then
+            Dim parametro As ReportParameter = New ReportParameter
+            parametro.Name = "DUI"
+            parametro.Values.Add(pDui)
+            parametro.Visible = False
+            Dim arrayParametros(0) As ReportParameter
+            arrayParametros(0) = parametro
+            Me.rsVISOR.ServerReport.SetParameters(arrayParametros)
+            Me.rsVISOR.RefreshReport()
             'ElseIf OpcionRS = 69 Then
 
             'Else
@@ -620,7 +645,7 @@ Public Class frmVisorRS
             Case 6 'Detalle de envio de Correos a Asoc. Cumpleañeros.
                 Ruta = "/" & carpetaRs & "/rsDetEnvioCorreos"
             Case 7 'Reporte de transacciones en aportaciones
-                Ruta = "/" & carpetaRs & "/Asociados/rsTransaccionesAportaciones"
+                Ruta = "/" & carpetaRs & "/rsTransaccionesAportaciones"
             '=============================================================
             '=============================================================
             'Repores Financieros
@@ -717,7 +742,7 @@ Public Class frmVisorRS
             Case 50
                 Ruta = "/" & carpetaRs & "/rsControlCreditosDPFSolidario"
             Case 51
-                Ruta = "/" & carpetaRs & "/Impuesto/rsConstanciaICL"
+                Ruta = "/" & carpetaRs & "/rsConstanciaICL"
             Case 52
                 Ruta = "/" & carpetaRs & "/rsContaImpuestoDesembolso"
             Case 53
@@ -752,7 +777,7 @@ Public Class frmVisorRS
             Case 67
                 Ruta = "/" & carpetaRs & "/rsPrestHipoAseguradora"
             Case 68
-                Ruta = "/" & carpetaRs & "/Oficial Cumplimiento/rsTransaccionesAsoc"
+                Ruta = "/" & carpetaRs & "/rsTransaccionesAsoc"
             Case 69
                 Ruta = "/" & carpetaRs & "/rsComisionesJefaturas"
             Case 70
@@ -762,13 +787,12 @@ Public Class frmVisorRS
             Case 72
                 Ruta = "/" & carpetaRs & "/rsSaldosPrestamosAseguradora"
             Case 73
-                Ruta = "/" & carpetaRs & "/Asociados/rsRenunciaAsociados"
-            Case 74
-                Ruta = "/" & carpetaRs & "/rsSolicitudReservaCostaCoopas"
+                Ruta = "/" & carpetaRs & "/rsRenunciadeAsociados"
+
             Case 75
-                Ruta = "/" & carpetaRs & "/Oficial Cumplimiento/rsComprobanteBusquedaLN"
+                Ruta = "/" & carpetaRs & "/rsComprobanteBusquedaLN"
             Case 76
-                Ruta = "/" & carpetaRs & "/Oficial Cumplimiento/rsDeclaracionJuradaGA"
+                Ruta = "/" & carpetaRs & "/rsDeclaracionJuradaGA"
             Case 77
                 Ruta = "/" & carpetaRs & "/rsRptConozcaSuClientePJ"
             Case 78
@@ -806,7 +830,7 @@ Public Class frmVisorRS
             Case 94
                 Ruta = "/" & carpetaRs & "/rsTasaPasivaTipoAhorro"
             Case 95
-                Ruta = "/" & carpetaRs & "/rsTasaPasivaTipoAhorro"
+                Ruta = "/" & carpetaRs & "/rsTasaPasivaSucursal"
             Case 96
                 Ruta = "/" & carpetaRs & "/rsSolicitudCreditoGerencial"
             Case 97     ' Certificado DPF
@@ -843,6 +867,69 @@ Public Class frmVisorRS
                 Ruta = "/" & carpetaRs & "/rsVehiculos"
             Case 113
                 Ruta = "/" & carpetaRs & "/rsDetTransaccionesCajaOC"
+            Case 114
+                Ruta = "/" & carpetaRs & "/rsCatalogoContable"
+            Case 115
+                Ruta = "/" & carpetaRs & "/rsBalanceGeneral"
+            Case 116
+                Ruta = "/" & carpetaRs & "/rsEstadoResultado"
+            Case 117
+                Ruta = "/" & carpetaRs & "/rsAsociadosInhabilitados"
+
+            Case 118
+                Ruta = "/" & carpetaRs & "/rsMatrizExcedentes"
+            Case 119
+                Ruta = "/" & carpetaRs & "/rsDistribucionExcedentesAhorro"
+            Case 120
+                Ruta = "/" & carpetaRs & "/rsDistribucionExcentesPrestamo"
+            Case 121
+                Ruta = "/" & carpetaRs & "/rsDistribucionExcedentesEfectivo"
+            Case 122
+                Ruta = "/" & carpetaRs & "/rsDistribucionExcedentesExAsociados"
+            Case 123
+                Ruta = "/" & carpetaRs & "/rsDistribucionExcedentesPendientesCobro"
+            Case 124
+                Ruta = "/" & carpetaRs & "/rsCargosAbonosAhorros"
+            Case 125
+                Ruta = "/" & carpetaRs & "/rsCuentasPignoradas"
+            Case 126
+                Ruta = "/" & carpetaRs & "/rsCancelacionesTipoAhorro"
+            Case 222
+                Ruta = "/" & carpetaRs & "/rsCobrosAbonosxGestor"
+            Case 223
+                Ruta = "/" & carpetaRs & "/COBROS_ConsultaCartera"
+            Case 224
+                Ruta = "/" & carpetaRs & "/COBROS_RPTRutaCobro"
+            Case 225
+                Ruta = "/" & carpetaRs & "/rsBalanceGeneralCC"
+            Case 226
+                Ruta = "/" & carpetaRs & "/rsEstadoResultadosPorCostos"
+            Case 227
+                Ruta = "/" & carpetaRs & "/rsBalanzaPorCostos"
+            Case 128
+                Ruta = "/" & carpetaRs & "/rsAportaCuotasPend"
+            Case 228
+                Ruta = "/" & carpetaRs & "/rsCargos_prestamo_conta"
+            Case 229
+                Ruta = "/" & carpetaRs & "/rsAbono_Prestaomo_Conta"
+            Case 230
+                Ruta = "/" & carpetaRs & "/rsDetTransaccionesCajaOC"
+            Case 231
+                Ruta = "/" & carpetaRs & "/rsCosultaCxCPrestamos"
+            Case 232
+                Ruta = "/" & carpetaRs & "/rsEstadoCta_CtaPorCobrar"
+            Case 233
+                Ruta = "/" & carpetaRs & "/rsSolicitudRetiro"
+            Case 234
+                Ruta = "/" & carpetaRs & "/BusinessIntelligence/Autoevaluacion_Con_fiador"
+            Case 235
+                Ruta = "/" & carpetaRs & "/BusinessIntelligence/Autoevaluacion_Sin_Fiador"
+            Case 236
+                Ruta = "/" & carpetaRs & "/rsDetalleRenunciaFalleciiento"
+            Case 237
+                Ruta = "/" & carpetaRs & "/rsMov_cajasSucursal"
+            Case 238
+                Ruta = "/" & carpetaRs & "/rsMov_cajaPuntoXpress"
         End Select
         Return Ruta
     End Function

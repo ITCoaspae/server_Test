@@ -78,11 +78,12 @@ Public Class frmMAhCuentasAportacion
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "36,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fg.Location = New System.Drawing.Point(28, 284)
+        Me.fg.ForeColor = System.Drawing.Color.Navy
+        Me.fg.Location = New System.Drawing.Point(23, 246)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Rows.DefaultSize = 22
-        Me.fg.Size = New System.Drawing.Size(824, 248)
+        Me.fg.Rows.DefaultSize = 19
+        Me.fg.Size = New System.Drawing.Size(795, 215)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 14
         '
@@ -101,19 +102,19 @@ Public Class frmMAhCuentasAportacion
         Me.GroupBox2.Controls.Add(Me.rbNoCuenta)
         Me.GroupBox2.Controls.Add(Me.rbDui)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
+        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(783, 165)
+        Me.GroupBox2.Size = New System.Drawing.Size(653, 143)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "&Filtrar Aportaciones por:"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(398, 117)
+        Me.btnMostrar1.Location = New System.Drawing.Point(332, 101)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 177
         Me.btnMostrar1.Text = "Mostrar"
         Me.btnMostrar1.UseSelectable = True
@@ -123,18 +124,18 @@ Public Class frmMAhCuentasAportacion
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(398, 63)
+        Me.txtNombres.Location = New System.Drawing.Point(332, 55)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(183, 22)
+        Me.txtNombres.Size = New System.Drawing.Size(152, 20)
         Me.txtNombres.TabIndex = 4
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(209, 28)
+        Me.rbNombres.Location = New System.Drawing.Point(174, 24)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(182, 27)
+        Me.rbNombres.Size = New System.Drawing.Size(152, 24)
         Me.rbNombres.TabIndex = 2
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -144,24 +145,24 @@ Public Class frmMAhCuentasAportacion
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(209, 63)
+        Me.cbNombres.Location = New System.Drawing.Point(174, 55)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(182, 24)
+        Me.cbNombres.Size = New System.Drawing.Size(152, 21)
         Me.cbNombres.TabIndex = 3
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(588, 65)
+        Me.txtNoSocio.Location = New System.Drawing.Point(490, 56)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(182, 22)
+        Me.txtNoSocio.Size = New System.Drawing.Size(152, 20)
         Me.txtNoSocio.TabIndex = 6
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(588, 37)
+        Me.rbNoSocio.Location = New System.Drawing.Point(490, 32)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(182, 28)
+        Me.rbNoSocio.Size = New System.Drawing.Size(152, 24)
         Me.rbNoSocio.TabIndex = 5
         Me.rbNoSocio.Text = "&No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -169,43 +170,43 @@ Public Class frmMAhCuentasAportacion
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(19, 65)
+        Me.txtDui.Location = New System.Drawing.Point(16, 56)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(183, 20)
+        Me.txtDui.Size = New System.Drawing.Size(152, 16)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoLibreta
         '
-        Me.txtNoLibreta.Location = New System.Drawing.Point(209, 126)
+        Me.txtNoLibreta.Location = New System.Drawing.Point(174, 109)
         Me.txtNoLibreta.Name = "txtNoLibreta"
-        Me.txtNoLibreta.Size = New System.Drawing.Size(182, 22)
+        Me.txtNoLibreta.Size = New System.Drawing.Size(152, 20)
         Me.txtNoLibreta.TabIndex = 10
         '
         'rbNoLibreta
         '
         Me.rbNoLibreta.BackColor = System.Drawing.Color.White
-        Me.rbNoLibreta.Location = New System.Drawing.Point(209, 98)
+        Me.rbNoLibreta.Location = New System.Drawing.Point(174, 85)
         Me.rbNoLibreta.Name = "rbNoLibreta"
-        Me.rbNoLibreta.Size = New System.Drawing.Size(182, 28)
+        Me.rbNoLibreta.Size = New System.Drawing.Size(152, 24)
         Me.rbNoLibreta.TabIndex = 9
         Me.rbNoLibreta.Text = "No. &Libreta"
         Me.rbNoLibreta.UseVisualStyleBackColor = False
         '
         'txtNoCuenta
         '
-        Me.txtNoCuenta.Location = New System.Drawing.Point(19, 126)
+        Me.txtNoCuenta.Location = New System.Drawing.Point(16, 109)
         Me.txtNoCuenta.Name = "txtNoCuenta"
-        Me.txtNoCuenta.Size = New System.Drawing.Size(183, 22)
+        Me.txtNoCuenta.Size = New System.Drawing.Size(152, 20)
         Me.txtNoCuenta.TabIndex = 8
         '
         'rbNoCuenta
         '
         Me.rbNoCuenta.BackColor = System.Drawing.Color.White
-        Me.rbNoCuenta.Location = New System.Drawing.Point(19, 98)
+        Me.rbNoCuenta.Location = New System.Drawing.Point(16, 85)
         Me.rbNoCuenta.Name = "rbNoCuenta"
-        Me.rbNoCuenta.Size = New System.Drawing.Size(183, 28)
+        Me.rbNoCuenta.Size = New System.Drawing.Size(152, 24)
         Me.rbNoCuenta.TabIndex = 7
         Me.rbNoCuenta.Text = "No. &Cuenta"
         Me.rbNoCuenta.UseVisualStyleBackColor = False
@@ -214,9 +215,9 @@ Public Class frmMAhCuentasAportacion
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
         Me.rbDui.Checked = True
-        Me.rbDui.Location = New System.Drawing.Point(19, 28)
+        Me.rbDui.Location = New System.Drawing.Point(16, 24)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(183, 27)
+        Me.rbDui.Size = New System.Drawing.Size(152, 24)
         Me.rbDui.TabIndex = 0
         Me.rbDui.TabStop = True
         Me.rbDui.Text = "&DUI de Asociado"
@@ -228,18 +229,18 @@ Public Class frmMAhCuentasAportacion
         Me.lblEstado.BackColor = System.Drawing.Color.White
         Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEstado.ForeColor = System.Drawing.Color.Red
-        Me.lblEstado.Location = New System.Drawing.Point(326, 245)
+        Me.lblEstado.Location = New System.Drawing.Point(380, 212)
         Me.lblEstado.Name = "lblEstado"
-        Me.lblEstado.Size = New System.Drawing.Size(192, 18)
+        Me.lblEstado.Size = New System.Drawing.Size(160, 16)
         Me.lblEstado.TabIndex = 16
         Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(222, 245)
+        Me.btnConsultar1.Location = New System.Drawing.Point(185, 212)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 178
         Me.btnConsultar1.Text = "Consultar"
         Me.btnConsultar1.UseSelectable = True
@@ -247,10 +248,10 @@ Public Class frmMAhCuentasAportacion
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(125, 245)
+        Me.btnModificar1.Location = New System.Drawing.Point(104, 212)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 177
         Me.btnModificar1.Text = "Modificar"
         Me.btnModificar1.UseSelectable = True
@@ -258,10 +259,10 @@ Public Class frmMAhCuentasAportacion
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(28, 245)
+        Me.btnAgregar1.Location = New System.Drawing.Point(23, 212)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 176
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.UseSelectable = True
@@ -269,9 +270,9 @@ Public Class frmMAhCuentasAportacion
         '
         'frmMAhCuentasAportacion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(880, 600)
+        Me.ClientSize = New System.Drawing.Size(842, 520)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
@@ -281,7 +282,7 @@ Public Class frmMAhCuentasAportacion
         Me.Name = "frmMAhCuentasAportacion"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Aportaciones"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
@@ -477,7 +478,7 @@ Public Class frmMAhCuentasAportacion
             frm.ShowDialog()
             btnMostrar1_Click(sender, e)
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -502,7 +503,7 @@ Public Class frmMAhCuentasAportacion
 
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -529,7 +530,7 @@ Public Class frmMAhCuentasAportacion
 
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -575,7 +576,13 @@ Public Class frmMAhCuentasAportacion
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMAhCuentasAportacion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

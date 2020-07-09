@@ -26,11 +26,6 @@ Public Class frmMLibroAsociados
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
     Friend WithEvents rbTodos As System.Windows.Forms.RadioButton
     Friend WithEvents rbNoSocio As System.Windows.Forms.RadioButton
@@ -48,7 +43,6 @@ Public Class frmMLibroAsociados
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMLibroAsociados))
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnMostrar1 = New MetroFramework.Controls.MetroButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNombres = New System.Windows.Forms.TextBox()
@@ -64,36 +58,13 @@ Public Class frmMLibroAsociados
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fgLibro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.btnMostrar1)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbTodos)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(851, 97)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Búsqueda"
-        '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(697, 46)
+        Me.btnMostrar1.Location = New System.Drawing.Point(519, 128)
         Me.btnMostrar1.Name = "btnMostrar1"
         Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
@@ -105,10 +76,10 @@ Public Class frmMLibroAsociados
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(19, 55)
+        Me.txtDui.Location = New System.Drawing.Point(88, 65)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(139, 20)
+        Me.txtDui.Size = New System.Drawing.Size(194, 20)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
@@ -116,18 +87,18 @@ Public Class frmMLibroAsociados
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(488, 57)
+        Me.txtNombres.Location = New System.Drawing.Point(324, 100)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(183, 22)
+        Me.txtNombres.Size = New System.Drawing.Size(285, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(320, 28)
+        Me.rbNombres.Location = New System.Drawing.Point(23, 96)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(130, 27)
+        Me.rbNombres.Size = New System.Drawing.Size(95, 27)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -137,23 +108,23 @@ Public Class frmMLibroAsociados
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(320, 55)
+        Me.cbNombres.Location = New System.Drawing.Point(124, 98)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(161, 24)
+        Me.cbNombres.Size = New System.Drawing.Size(194, 24)
         Me.cbNombres.TabIndex = 5
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(166, 55)
+        Me.txtNoSocio.Location = New System.Drawing.Point(415, 63)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(147, 22)
+        Me.txtNoSocio.Size = New System.Drawing.Size(194, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'rbTodos
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(488, 22)
+        Me.rbTodos.Location = New System.Drawing.Point(23, 128)
         Me.rbTodos.Name = "rbTodos"
         Me.rbTodos.Size = New System.Drawing.Size(183, 28)
         Me.rbTodos.TabIndex = 7
@@ -164,9 +135,9 @@ Public Class frmMLibroAsociados
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(166, 28)
+        Me.rbNoSocio.Location = New System.Drawing.Point(288, 63)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(147, 27)
+        Me.rbNoSocio.Size = New System.Drawing.Size(121, 27)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -174,11 +145,11 @@ Public Class frmMLibroAsociados
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(19, 28)
+        Me.rbDui.Location = New System.Drawing.Point(23, 63)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(139, 27)
+        Me.rbDui.Size = New System.Drawing.Size(59, 27)
         Me.rbDui.TabIndex = 0
-        Me.rbDui.Text = "DUI de Asociado"
+        Me.rbDui.Text = "DUI"
         Me.rbDui.UseVisualStyleBackColor = False
         '
         'fgLibro
@@ -195,7 +166,7 @@ Public Class frmMLibroAsociados
         Me.fgLibro.Location = New System.Drawing.Point(28, 216)
         Me.fgLibro.Name = "fgLibro"
         Me.fgLibro.Rows.DefaultSize = 21
-        Me.fgLibro.Size = New System.Drawing.Size(851, 334)
+        Me.fgLibro.Size = New System.Drawing.Size(580, 409)
         Me.fgLibro.StyleInfo = resources.GetString("fgLibro.StyleInfo")
         Me.fgLibro.TabIndex = 23
         '
@@ -257,21 +228,29 @@ Public Class frmMLibroAsociados
         'frmMLibroAsociados
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
-        Me.ClientSize = New System.Drawing.Size(903, 618)
+        Me.ClientSize = New System.Drawing.Size(632, 727)
+        Me.Controls.Add(Me.btnMostrar1)
         Me.Controls.Add(Me.MetroButton1)
+        Me.Controls.Add(Me.rbTodos)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.txtDui)
+        Me.Controls.Add(Me.cbNombres)
+        Me.Controls.Add(Me.rbNombres)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.rbNoSocio)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.fgLibro)
+        Me.Controls.Add(Me.rbDui)
         Me.Name = "frmMLibroAsociados"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Libro de Asociados"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fgLibro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -446,9 +425,13 @@ Public Class frmMLibroAsociados
     Private Sub btnEliminar1_Click(sender As Object, e As EventArgs) Handles btnEliminar1.Click
         Try
             If fgLibro.Row <> -1 Then
-                If MsgBox("¿Desea eliminar los Aspectos Cooperativos relacionados con el Asociado Dui No. " & fgLibro.Item(fgLibro.Row, "DUI") & "?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Eliminar Libro de Asociados") = MsgBoxResult.Yes Then
+                If MsgBox("¿Desea eliminar el registro seleccionado?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.Yes Then
                     Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc
-                    oAsoc.EliminarLibroRegistro("Correlativo='" & fgLibro.Item(fgLibro.Row, "No") & "'", sUsuario, sPassword, sSucursal)
+                    If (oAsoc.EliminarLibroRegistro("Correlativo='" & fgLibro.Item(fgLibro.Row, "No") & "'", sUsuario, sPassword, sSucursal)) = True Then
+                        MsgBox(mensajeDeleteRegistro, MsgBoxStyle.Information, Me.Text)
+                    Else
+                        MsgBox(mensajeError, MsgBoxStyle.Critical, Me.Text)
+                    End If
                     ActualizaGrid()
                     txtDui.Enabled = False
                     txtNoSocio.Enabled = False
@@ -490,5 +473,11 @@ Public Class frmMLibroAsociados
 
         End Try
 
+    End Sub
+
+    Private Sub frmMLibroAsociados_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

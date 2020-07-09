@@ -1051,7 +1051,7 @@ Partial Public Class DTS_PLANILLA
         
         Private columnVACACIONES As Global.System.Data.DataColumn
         
-        Private columnPrestamoCOOPAS As Global.System.Data.DataColumn
+        Private columnPrestamoInterno As Global.System.Data.DataColumn
         
         Private columnPrest_OtrasIns As Global.System.Data.DataColumn
         
@@ -1210,9 +1210,9 @@ Partial Public Class DTS_PLANILLA
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property PrestamoCOOPASColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PrestamoInternoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnPrestamoCOOPAS
+                Return Me.columnPrestamoInterno
             End Get
         End Property
         
@@ -1362,7 +1362,7 @@ Partial Public Class DTS_PLANILLA
                     ByVal ANTICIPOSALARIO As Double,  _
                     ByVal TOTALDESCUENTOS As Double,  _
                     ByVal VACACIONES As Double,  _
-                    ByVal PrestamoCOOPAS As Double,  _
+                    ByVal PrestamoInterno As Double,  _
                     ByVal Prest_OtrasIns As Double,  _
                     ByVal ComiteFestejos As Double,  _
                     ByVal Omnisport As Double,  _
@@ -1376,7 +1376,7 @@ Partial Public Class DTS_PLANILLA
                     ByVal OTROS As Double,  _
                     ByVal PERIODO As String) As RPT_DETALLEDESCUENTOS_PLANILLARow
             Dim rowRPT_DETALLEDESCUENTOS_PLANILLARow As RPT_DETALLEDESCUENTOS_PLANILLARow = CType(Me.NewRow,RPT_DETALLEDESCUENTOS_PLANILLARow)
-            Dim columnValuesArray() As Object = New Object() {CODEMPLEADO, EMPLEADO, DEPTO, CODDEPARTAMENTO, BONIFICACION, COMISIONES, OTROSINGRESOS, VIATICOS, TOTALINGRESOS, ANTICIPOSALARIO, TOTALDESCUENTOS, VACACIONES, PrestamoCOOPAS, Prest_OtrasIns, ComiteFestejos, Omnisport, CELULAR, OtrosDesc, _AnticipoSalario, LLEGADASTARDE, _COMITEFESTEJOS, _OMNISPORT, _PrestamoCoopas, OTROS, PERIODO}
+            Dim columnValuesArray() As Object = New Object() {CODEMPLEADO, EMPLEADO, DEPTO, CODDEPARTAMENTO, BONIFICACION, COMISIONES, OTROSINGRESOS, VIATICOS, TOTALINGRESOS, ANTICIPOSALARIO, TOTALDESCUENTOS, VACACIONES, PrestamoInterno, Prest_OtrasIns, ComiteFestejos, Omnisport, CELULAR, OtrosDesc, _AnticipoSalario, LLEGADASTARDE, _COMITEFESTEJOS, _OMNISPORT, _PrestamoCoopas, OTROS, PERIODO}
             rowRPT_DETALLEDESCUENTOS_PLANILLARow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRPT_DETALLEDESCUENTOS_PLANILLARow)
             Return rowRPT_DETALLEDESCUENTOS_PLANILLARow
@@ -1411,7 +1411,7 @@ Partial Public Class DTS_PLANILLA
             Me.columnANTICIPOSALARIO = MyBase.Columns("ANTICIPOSALARIO")
             Me.columnTOTALDESCUENTOS = MyBase.Columns("TOTALDESCUENTOS")
             Me.columnVACACIONES = MyBase.Columns("VACACIONES")
-            Me.columnPrestamoCOOPAS = MyBase.Columns("PrestamoCOOPAS")
+            Me.columnPrestamoInterno = MyBase.Columns("PrestamoInterno")
             Me.columnPrest_OtrasIns = MyBase.Columns("Prest_OtrasIns")
             Me.columnComiteFestejos = MyBase.Columns("ComiteFestejos")
             Me.columnOmnisport = MyBase.Columns("Omnisport")
@@ -1453,8 +1453,8 @@ Partial Public Class DTS_PLANILLA
             MyBase.Columns.Add(Me.columnTOTALDESCUENTOS)
             Me.columnVACACIONES = New Global.System.Data.DataColumn("VACACIONES", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVACACIONES)
-            Me.columnPrestamoCOOPAS = New Global.System.Data.DataColumn("PrestamoCOOPAS", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPrestamoCOOPAS)
+            Me.columnPrestamoInterno = New Global.System.Data.DataColumn("PrestamoInterno", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPrestamoInterno)
             Me.columnPrest_OtrasIns = New Global.System.Data.DataColumn("Prest_OtrasIns", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPrest_OtrasIns)
             Me.columnComiteFestejos = New Global.System.Data.DataColumn("ComiteFestejos", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
@@ -4374,17 +4374,17 @@ Partial Public Class DTS_PLANILLA
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PrestamoCOOPAS() As Double
+        Public Property PrestamoInterno() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoCOOPASColumn),Double)
+                    Return CType(Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoInternoColumn),Double)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PrestamoCOOPAS' in table 'RPT_DETALLEDESCUENTOS_PLANILLA' i"& _ 
-                            "s DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PrestamoInterno' in table 'RPT_DETALLEDESCUENTOS_PLANILLA' "& _ 
+                            "is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoCOOPASColumn) = value
+                Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoInternoColumn) = value
             End Set
         End Property
         
@@ -4714,14 +4714,14 @@ Partial Public Class DTS_PLANILLA
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsPrestamoCOOPASNull() As Boolean
-            Return Me.IsNull(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoCOOPASColumn)
+        Public Function IsPrestamoInternoNull() As Boolean
+            Return Me.IsNull(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoInternoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetPrestamoCOOPASNull()
-            Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoCOOPASColumn) = Global.System.Convert.DBNull
+        Public Sub SetPrestamoInternoNull()
+            Me(Me.tableRPT_DETALLEDESCUENTOS_PLANILLA.PrestamoInternoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7367,7 +7367,7 @@ Namespace DTS_PLANILLATableAdapters
             tableMapping.ColumnMappings.Add("ANTICIPOSALARIO", "ANTICIPOSALARIO")
             tableMapping.ColumnMappings.Add("TOTALDESCUENTOS", "TOTALDESCUENTOS")
             tableMapping.ColumnMappings.Add("VACACIONES", "VACACIONES")
-            tableMapping.ColumnMappings.Add("PrestamoCOOPAS", "PrestamoCOOPAS")
+            tableMapping.ColumnMappings.Add("PrestamoCOOPAS", "PrestamoInterno")
             tableMapping.ColumnMappings.Add("Prest_OtrasIns", "Prest_OtrasIns")
             tableMapping.ColumnMappings.Add("ComiteFestejos", "ComiteFestejos")
             tableMapping.ColumnMappings.Add("Omnisport", "Omnisport")

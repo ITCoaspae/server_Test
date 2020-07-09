@@ -59,7 +59,7 @@ Public Class frmMsProgressBar
                         Ruta = Directorio + "\" + CodEmpleado + ".doc"
                         rpt.ExportToDisk(ExportFormatType.WordForWindows, Ruta)
                         Try
-                            If EnviarCorreo(True, "", "recursoshumanos@coopas.com.sv", Correo, "Boleta de Pagos " & Empleado.Trim, "Boleta de Pagos Correspondiente al " & _
+                            If EnviarCorreo(True, "", "", Correo, "Boleta de Pagos " & Empleado.Trim, "Boleta de Pagos Correspondiente al " &
                                                          Format(FechaInicio, "SHORT DATE") & " - " & Format(FechaFin, "SHORT DATE"), Ruta) = False Then
                                 Me.lbNoEnviados.Items.Add(Empleado.Trim)
                             Else
@@ -88,7 +88,7 @@ Public Class frmMsProgressBar
                 envioBoleta()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

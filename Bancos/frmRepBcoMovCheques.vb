@@ -213,7 +213,7 @@ Public Class frmRepBcoMovCheques
             ofrm.ShowDialog()
             Me.txtCuenta.Value = ofrm.Resultado.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -222,7 +222,7 @@ Public Class frmRepBcoMovCheques
         Try
             Me.Cursor = Cursors.WaitCursor
             Dim ofrm As New frmVisorRep
-            'ofrm.ReporteBancos = AlcalaLibs.Bancos.clsBCBanco.ReportesBancos.ChequesEmitidos
+
             ofrm.ReporteBancos = sifLib.Bancos.clsBCBancos.ReportesBancos.ChequesEmitidos
             ofrm.FechaIni = dtpFecha1.Value
             ofrm.sFechaI = dtpFecha1.Value.ToString
@@ -236,14 +236,20 @@ Public Class frmRepBcoMovCheques
             Else
                 ofrm.Cuenta = " "
             End If
-            ofrm.MdiParent = ofrmMain
+            
             ofrm.Show()
             Me.Cursor = Cursors.Default
-            Me.Close()
+
 
         Catch ex As Exception
             Me.Cursor = Cursors.Default
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmRepBcoMovCheques_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

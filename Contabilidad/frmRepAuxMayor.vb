@@ -112,15 +112,15 @@ Public Class frmRepAuxMayor
 
     Private Sub btnProcesar1_Click(sender As Object, e As EventArgs) Handles btnProcesar1.Click
         Dim ofrm As New frmVisorRep, iDias As Integer
-        'ofrm.Reporte = AlcalaLibs.Contabilidad.clsContab.ReportesContabilidad.AuxiliardeMayor
+
         ofrm.Reporte = sifLib.Contabilidad.clsContabs.ReportesContabilidad.AuxiliardeMayor
         ofrm.Mes = Me.dtpFecha.Value.Month()
         ofrm.Annio = Me.dtpFecha.Value.Year
         ofrm.FechaIni = CDate("01/" & Me.dtpFecha.Value.Month.ToString & "/" & Me.dtpFecha.Value.Year.ToString)
         iDias = Date.DaysInMonth(Me.dtpFecha.Value.Year, Me.dtpFecha.Value.Month)
         ofrm.FechaFin = CDate(iDias.ToString & "/" & Me.dtpFecha.Value.Month.ToString & "/" & Me.dtpFecha.Value.Year.ToString) '.AddDays(1)
-        ofrm.MdiParent = ofrmMain
+
         ofrm.Show()
-        Me.Close()
+
     End Sub
 End Class

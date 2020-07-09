@@ -68,11 +68,12 @@ Public Class frmMSucursales
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 188)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.fg.Location = New System.Drawing.Point(28, 217)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Rows.DefaultSize = 19
-        Me.fg.Size = New System.Drawing.Size(474, 117)
+        Me.fg.Rows.DefaultSize = 22
+        Me.fg.Size = New System.Drawing.Size(909, 243)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 55
         '
@@ -87,18 +88,18 @@ Public Class frmMSucursales
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(471, 85)
+        Me.GroupBox2.Size = New System.Drawing.Size(565, 98)
         Me.GroupBox2.TabIndex = 53
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Sucursales por:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(390, 45)
+        Me.MetroButton1.Location = New System.Drawing.Point(468, 52)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 77
         Me.MetroButton1.Text = "Buscar"
@@ -110,9 +111,9 @@ Public Class frmMSucursales
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(252, 15)
+        Me.rbTodos.Location = New System.Drawing.Point(302, 17)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(183, 28)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -121,25 +122,25 @@ Public Class frmMSucursales
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(94, 45)
+        Me.txtDescripcion.Location = New System.Drawing.Point(113, 52)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(290, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(348, 22)
         Me.txtDescripcion.TabIndex = 3
         '
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(94, 19)
+        Me.txtCodigo.Location = New System.Drawing.Point(113, 22)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(182, 22)
         Me.txtCodigo.TabIndex = 1
         '
         'rbDescripcion
         '
         Me.rbDescripcion.BackColor = System.Drawing.Color.White
-        Me.rbDescripcion.Location = New System.Drawing.Point(16, 45)
+        Me.rbDescripcion.Location = New System.Drawing.Point(19, 52)
         Me.rbDescripcion.Name = "rbDescripcion"
-        Me.rbDescripcion.Size = New System.Drawing.Size(72, 24)
+        Me.rbDescripcion.Size = New System.Drawing.Size(87, 28)
         Me.rbDescripcion.TabIndex = 2
         Me.rbDescripcion.Text = "Nombre:"
         Me.rbDescripcion.UseVisualStyleBackColor = False
@@ -147,18 +148,18 @@ Public Class frmMSucursales
         'rbCodigo
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
-        Me.rbCodigo.Location = New System.Drawing.Point(16, 15)
+        Me.rbCodigo.Location = New System.Drawing.Point(19, 17)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(72, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(87, 28)
         Me.rbCodigo.TabIndex = 0
         Me.rbCodigo.Text = "&Código"
         Me.rbCodigo.UseVisualStyleBackColor = False
         '
         'btnImp
         '
-        Me.btnImp.Location = New System.Drawing.Point(266, 154)
+        Me.btnImp.Location = New System.Drawing.Point(319, 178)
         Me.btnImp.Name = "btnImp"
-        Me.btnImp.Size = New System.Drawing.Size(75, 28)
+        Me.btnImp.Size = New System.Drawing.Size(90, 32)
         Me.btnImp.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImp.TabIndex = 85
         Me.btnImp.Text = "Consultar"
@@ -168,9 +169,9 @@ Public Class frmMSucursales
         '
         'btnDel
         '
-        Me.btnDel.Location = New System.Drawing.Point(185, 154)
+        Me.btnDel.Location = New System.Drawing.Point(222, 178)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(75, 28)
+        Me.btnDel.Size = New System.Drawing.Size(90, 32)
         Me.btnDel.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnDel.TabIndex = 84
         Me.btnDel.Text = "Eliminar"
@@ -180,9 +181,9 @@ Public Class frmMSucursales
         '
         'btnMod
         '
-        Me.btnMod.Location = New System.Drawing.Point(104, 154)
+        Me.btnMod.Location = New System.Drawing.Point(125, 178)
         Me.btnMod.Name = "btnMod"
-        Me.btnMod.Size = New System.Drawing.Size(75, 28)
+        Me.btnMod.Size = New System.Drawing.Size(90, 32)
         Me.btnMod.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMod.TabIndex = 83
         Me.btnMod.Text = "Modificar"
@@ -192,9 +193,9 @@ Public Class frmMSucursales
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(23, 154)
+        Me.btnAdd.Location = New System.Drawing.Point(28, 178)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 28)
+        Me.btnAdd.Size = New System.Drawing.Size(90, 32)
         Me.btnAdd.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAdd.TabIndex = 82
         Me.btnAdd.Text = "Agregar"
@@ -204,9 +205,9 @@ Public Class frmMSucursales
         '
         'frmMSucursales
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(520, 354)
+        Me.ClientSize = New System.Drawing.Size(965, 543)
         Me.Controls.Add(Me.btnImp)
         Me.Controls.Add(Me.fg)
         Me.Controls.Add(Me.btnDel)
@@ -335,7 +336,7 @@ Public Class frmMSucursales
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -347,7 +348,7 @@ Public Class frmMSucursales
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -365,7 +366,7 @@ Public Class frmMSucursales
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -381,7 +382,7 @@ Public Class frmMSucursales
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -401,7 +402,7 @@ Public Class frmMSucursales
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

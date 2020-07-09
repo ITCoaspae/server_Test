@@ -25,7 +25,7 @@
             fgR.Cols.Item("Correlativo").Visible = False
             fgR.Cols.Item("IdBanco").Visible = False
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Dim mensaje As String
@@ -92,20 +92,7 @@
                         End If
 
 
-                        'If dta.Tables(0).Rows(i).Item("Seleccionar") = True Then
-                        '    Correlativo = dta.Tables(0).Rows(i).Item("Correlativo")
-                        '    IdBoveda = dta.Tables(0).Rows(i).Item("IdBoveda")
-                        '    IdBanco = dta.Tables(0).Rows(i).Item("IdBanco")
-                        '    caja.ActualizarChequesRemesar(Correlativo, 1, 0, dtpFecMovRemesar.Value.ToShortDateString,
-                        '                                  IdBoveda, sUsuario, dtpFecMovRemesar.Value.ToShortTimeString,
-                        '                                  NumPartida, codTransaccion, IdBanco,
-                        '                                  0, 0, txtFolio.Text.Trim, txtNoComprobante.Text,
-                        '                                  txtNombreCta.Text, TextBox1.Text.ToUpper)
 
-                        '    TotalCheques = TotalCheques + dta.Tables(0).Rows(i).Item("MontoCheque")
-                        '    CantidadCheques = CantidadCheques + 1
-
-                        'End If
                     Next i
 
                     '----------------------------------------------------------------------------------------------
@@ -128,7 +115,7 @@
 
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -156,7 +143,7 @@
                 Exit Sub
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub llenarCbTransacciones(ByVal opcion As Integer, ByVal codTransaccion As Integer)
@@ -193,7 +180,7 @@
             fgR.Cols.Item("Correlativo").Visible = False
             fgR.Cols.Item("IdBanco").Visible = False
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

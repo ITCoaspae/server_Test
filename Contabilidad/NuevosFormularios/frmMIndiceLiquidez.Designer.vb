@@ -85,7 +85,7 @@ Partial Class frmMIndiceLiquidez
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = My.Resources.resMain._001_382
+        'Me.Button1.Image = My.Resources.resMain._001_382
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(222, 8)
         Me.Button1.Name = "Button1"
@@ -154,7 +154,7 @@ Partial Class frmMIndiceLiquidez
         Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Image = My.Resources.resMain.add
+        'Me.btnAgregar.Image = My.Resources.resMain.add
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAgregar.Location = New System.Drawing.Point(6, 3)
         Me.btnAgregar.Name = "btnAgregar"
@@ -169,7 +169,7 @@ Partial Class frmMIndiceLiquidez
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Image = My.Resources.resMain._001_45
+        'Me.btnModificar.Image = My.Resources.resMain._001_45
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(87, 3)
         Me.btnModificar.Name = "btnModificar"
@@ -185,7 +185,7 @@ Partial Class frmMIndiceLiquidez
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Image = My.Resources.resMain.delete1
+        'Me.btnEliminar.Image = My.Resources.resMain.delete1
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.Location = New System.Drawing.Point(179, 3)
         Me.btnEliminar.Name = "btnEliminar"

@@ -263,17 +263,17 @@ Public Class frmMsBCCuentaBanco
 #End Region
 
 #Region "Declaraciones"
-    'Private vAccion As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+    'Private vAccion As Seguridad.clsUsuario.TipoAccion
     Private vAccion As sifLib.Seguridad.clsUsuario.TipoAccion
 #End Region
 
 #Region "Propiedades"
-    'Public Property Accion() As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+    'Public Property Accion() As Seguridad.clsUsuario.TipoAccion
     Public Property Accion() As sifLib.Seguridad.clsUsuario.TipoAccion
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Seguridad.clsUsuario.TipoAccion)
+        'Set(ByVal Value As Seguridad.clsUsuario.TipoAccion)
         Set(ByVal Value As sifLib.Seguridad.clsUsuario.TipoAccion)
             vAccion = Value
         End Set
@@ -304,7 +304,7 @@ Public Class frmMsBCCuentaBanco
             Me.txtCodBanco.Text = ofrm.Resultado.Trim
             Me.txtNombreBanco.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -321,7 +321,7 @@ Public Class frmMsBCCuentaBanco
             ofrm.ShowDialog()
             Me.txtCuentaContable.Text = ofrm.Resultado.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -332,14 +332,14 @@ Public Class frmMsBCCuentaBanco
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
         Try
             Dim oLibBco As New wrBancos.wsLibBancos
-            'If Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar Then
+            'If Me.Accion = Seguridad.clsUsuario.TipoAccion.Insertar Then
             If Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar Then
                 If oLibBco.InsertaCuentaBanco("IdCtaBanco,IdCuenta,IdBanco,Nom_Cuenta,Fec_Apertura,corr_cheque", "'" & Me.txtCodCuenta.Text & "','" & Me.txtCuentaContable.Text & "','" & Me.txtCodBanco.Text & "','" & Me.txtNombreCuenta.Text & "','" & Me.dtpFecApertura.Value.ToShortDateString & "', '" & txtCorrCheque.Text & "'", sUsuario, sPassword, sSucursal) Then
                     MessageBox.Show("Cuenta Bancaria Agregada al Sistema", "Ingreso de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
                 Else
                     MessageBox.Show("Cuenta Bancaria NO Agregada al Sistema", "Ingreso de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
                 End If
-                'ElseIf Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar Then
+                'ElseIf Me.Accion = Seguridad.clsUsuario.TipoAccion.Modificar Then
             ElseIf Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar Then
                 If oLibBco.ModificaCuentaBanco(Me.txtCodCuenta.Text.Trim, "IdCuenta='" & Me.txtCuentaContable.Text & "',IdBanco='" & Me.txtCodBanco.Text & "',Nom_Cuenta='" & Me.txtNombreCuenta.Text & "',Fec_Apertura='" & Me.dtpFecApertura.Value.ToShortDateString & "', corr_cheque='" & txtCorrCheque.Text & "' ", sUsuario, sPassword, sSucursal) Then
                     MessageBox.Show("Cuenta Bancaria Modificada en Sistema", "Modificación de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
@@ -348,7 +348,13 @@ Public Class frmMsBCCuentaBanco
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMsBCCuentaBanco_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

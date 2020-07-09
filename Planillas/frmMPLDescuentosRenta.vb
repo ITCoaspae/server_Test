@@ -13,9 +13,9 @@ Public Class frmMPLDescuentosRenta
         MyBase.New()
 
         'El Diseñador de Windows Forms requiere esta llamada.
-        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("LogoCoopasICO.ico"), System.Drawing.Icon)
+        InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("logo.ico"), System.Drawing.Icon)
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("LogoCoopasICO.ico"), System.Drawing.Icon)
+        'Agregar cualquier inicialización después de la llamada a InitializeComponent() : Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly : rsc = New System.Resources.ResourceManager("SIF_ERP.resMain", asm) ' ' : Me.Icon = CType(rsc.GetObject("logo.ico"), System.Drawing.Icon)
 
     End Sub
 
@@ -174,14 +174,14 @@ Public Class frmMPLDescuentosRenta
             ActualizarGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
         Try
             Dim ofrm As New frmMSPLDescuentosRenta
-            'Dim oPlan As wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS = New wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS
+
             Dim ds As New Data.DataSet
             Dim dr As DataRow
             If fg.Row <> -1 Then
@@ -215,7 +215,7 @@ Public Class frmMPLDescuentosRenta
                 Encabezado()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -227,14 +227,14 @@ Public Class frmMPLDescuentosRenta
             ActualizarGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnImp_Click(sender As Object, e As EventArgs) Handles btnImp.Click
         Try
             Dim ofrm As New frmMSPLDescuentosRenta
-            'Dim oPlan As wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS = New wsSysPlanCOOPAS.LibPlanillaCOOPAS.wsLibPlanillaCOOPAS
+
             Dim ds As New Data.DataSet
             Dim dr As DataRow
 
@@ -269,7 +269,7 @@ Public Class frmMPLDescuentosRenta
                 Encabezado()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

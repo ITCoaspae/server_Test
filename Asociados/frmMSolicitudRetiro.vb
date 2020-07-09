@@ -6,6 +6,7 @@ Public Class frmMSolicitudRetiro
     Friend WithEvents btnEliminar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnModificar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnAgregar1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Dim asociado As New wrAsociados.wsLibAsoc
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -58,6 +59,7 @@ Public Class frmMSolicitudRetiro
         Me.btnEliminar1 = New MetroFramework.Controls.MetroButton()
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         CType(Me.fgSolicitud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,11 +73,13 @@ Public Class frmMSolicitudRetiro
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgSolicitud.BackColor = System.Drawing.Color.White
         Me.fgSolicitud.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgSolicitud.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fgSolicitud.Location = New System.Drawing.Point(23, 214)
         Me.fgSolicitud.Name = "fgSolicitud"
         Me.fgSolicitud.Rows.Count = 2
-        Me.fgSolicitud.Size = New System.Drawing.Size(655, 220)
-        Me.fgSolicitud.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgSolicitud.Styles"))
+        Me.fgSolicitud.Rows.DefaultSize = 18
+        Me.fgSolicitud.Size = New System.Drawing.Size(828, 249)
+        Me.fgSolicitud.StyleInfo = resources.GetString("fgSolicitud.StyleInfo")
         Me.fgSolicitud.TabIndex = 28
         '
         'GroupBox2
@@ -94,7 +98,7 @@ Public Class frmMSolicitudRetiro
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(655, 111)
+        Me.GroupBox2.Size = New System.Drawing.Size(828, 111)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar por:"
@@ -117,7 +121,7 @@ Public Class frmMSolicitudRetiro
         Me.txtDui.Location = New System.Drawing.Point(16, 48)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(152, 20)
+        Me.txtDui.Size = New System.Drawing.Size(152, 15)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
@@ -237,10 +241,22 @@ Public Class frmMSolicitudRetiro
         Me.btnAgregar1.UseSelectable = True
         Me.btnAgregar1.UseStyleColors = True
         '
+        'MetroButton1
+        '
+        Me.MetroButton1.Location = New System.Drawing.Point(346, 181)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(142, 28)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton1.TabIndex = 33
+        Me.MetroButton1.Text = "Imprimir Solicitud Retiro"
+        Me.MetroButton1.UseSelectable = True
+        Me.MetroButton1.UseStyleColors = True
+        '
         'frmMSolicitudRetiro
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(701, 457)
+        Me.ClientSize = New System.Drawing.Size(873, 515)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -250,6 +266,7 @@ Public Class frmMSolicitudRetiro
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMSolicitudRetiro"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Solicitud de Retiro Voluntario"
         CType(Me.fgSolicitud, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
@@ -422,7 +439,7 @@ Public Class frmMSolicitudRetiro
     Private Sub btnModificar1_Click(sender As Object, e As EventArgs) Handles btnModificar1.Click
         If fgSolicitud.Row <> -1 Then
             If fgSolicitud.Item(fgSolicitud.Row, "Anulado") = False Then
-                Dim frm As frmMsSolicitudRetiro = New frmMsSolicitudRetiro
+                Dim frm As New frmMsSolicitudRetiro
                 frm.btnGuardar1.Text = "&Modificar"
                 frm.txtNoSolRetiro.Text = fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud")
                 frm.txtDui.Value = fgSolicitud.Item(fgSolicitud.Row, "DUI")
@@ -442,14 +459,17 @@ Public Class frmMSolicitudRetiro
         Try
             If fgSolicitud.Row <> -1 Then
                 If fgSolicitud.Item(fgSolicitud.Row, "anulado") = False Then
-                    If MsgBox("¿Desea anular la Solicitud de Retiro No. " & fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud") & "?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Eliminar Solicitud de Retiro Voluntario") = MsgBoxResult.Yes Then
-                        Dim pCampos As String
-                        pCampos = "Anulado = '1',UsuarioActu = '" & sUsuario & "', fechaActu = Getdate(),usuarioAnula = '" & sUsuario & "' "
-                        If asociado.ModificarSolicitudRetiro("NoSolicitudRetiro=" & fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud") & "", pCampos, sUsuario, sPassword, sSucursal) = True Then
-                            MsgBox("Solicitud anulada exitosamente.", MsgBoxStyle.Information, "Retiro de asociados")
-                        Else
-                            MsgBox("La solicitud no pudo ser anulada, por favor comunicarse con el departamento de informatica", MsgBoxStyle.Critical, "Retiro de asociados")
-                        End If
+                    If MsgBox("¿Desea anular la Solicitud de Retiro No. " & fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud") & "?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Anular Solicitud de Retiro Voluntario") = MsgBoxResult.Yes Then
+
+                        asociado.guardarSolicitudRetiro(fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud"), Now, "", fgSolicitud.Item(fgSolicitud.Row, "DUI").ToString.Trim, "", "", sUsuario, True, 2, 0)
+                        MetroFramework.MetroMessageBox.Show(Me, "Solicitud anulada exitosamente.", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                        'Dim pCampos As String
+                        'pCampos = "Anulado = '1',UsuarioActu = '" & sUsuario & "', fechaActu = Getdate(),usuarioAnula = '" & sUsuario & "' "
+                        'If asociado.ModificarSolicitudRetiro("NoSolicitudRetiro=" & fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud") & "", pCampos, sUsuario, sPassword, sSucursal) = True Then
+                        '    MsgBox("Solicitud anulada exitosamente.", MsgBoxStyle.Information, "Retiro de asociados")
+                        'Else
+                        '    MsgBox("La solicitud no pudo ser anulada, por favor comunicarse con el departamento de informatica", MsgBoxStyle.Critical, "Retiro de asociados")
+                        'End If
                         'Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc
                         'oAsoc.EliminarSolicitudRetiro("NoSolicitudRetiro='" & fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud") & "'", sUsuario, sPassword, sSucursal)
                         ActualizaGrid()
@@ -476,5 +496,23 @@ Public Class frmMSolicitudRetiro
             txtDui.Enabled = False
             txtNoSocio.Enabled = False
         End If
+    End Sub
+
+    Private Sub frmMSolicitudRetiro_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        OpcionRS = 233
+        Dim frm As New frmVisorRS
+        With frm
+            .dui = fgSolicitud.Item(fgSolicitud.Row, "DUI")
+            .idReserva = fgSolicitud.Item(fgSolicitud.Row, "No_Solicitud")
+            .Show()
+        End With
+
+
     End Sub
 End Class

@@ -1,7 +1,21 @@
 Public Class frmMsUsuarios
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-
+    Dim administracion As New wrAdmin.wsLibAdmin
+    Friend WithEvents txtUsuario As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtClave As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtConfirmarClave As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents dtpFecDesde As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents dtpFecHasta As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtNombre As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MetroLabel7 As MetroFramework.Controls.MetroLabel
+    Dim asociados As New wrAsociados.wsLibAsoc
 #Region " Código generado por el Diseñador de Windows Forms "
 
     Public Sub New()
@@ -26,219 +40,279 @@ Public Class frmMsUsuarios
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtClave As System.Windows.Forms.TextBox
-    Friend WithEvents dtpFecDesde As System.Windows.Forms.DateTimePicker
-    Friend WithEvents dtpFecHasta As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtConfirmarClave As System.Windows.Forms.TextBox
-    Friend WithEvents txtCodSuc As System.Windows.Forms.TextBox
     Friend WithEvents btnGuardar1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents cbSucursal As MetroFramework.Controls.MetroComboBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtClave = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.dtpFecDesde = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFecHasta = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtConfirmarClave = New System.Windows.Forms.TextBox()
-        Me.txtCodSuc = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnGuardar1 = New MetroFramework.Controls.MetroButton()
+        Me.cbSucursal = New MetroFramework.Controls.MetroComboBox()
+        Me.txtUsuario = New MetroFramework.Controls.MetroTextBox()
+        Me.txtClave = New MetroFramework.Controls.MetroTextBox()
+        Me.txtConfirmarClave = New MetroFramework.Controls.MetroTextBox()
+        Me.dtpFecDesde = New MetroFramework.Controls.MetroDateTime()
+        Me.dtpFecHasta = New MetroFramework.Controls.MetroDateTime()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.txtNombre = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
         Me.SuspendLayout()
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtUsuario.Location = New System.Drawing.Point(112, 58)
-        Me.txtUsuario.MaxLength = 20
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(152, 20)
-        Me.txtUsuario.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(23, 60)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 16)
-        Me.Label2.TabIndex = 94
-        Me.Label2.Text = "Usuario:"
-        '
-        'txtClave
-        '
-        Me.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtClave.Location = New System.Drawing.Point(112, 84)
-        Me.txtClave.MaxLength = 20
-        Me.txtClave.Name = "txtClave"
-        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtClave.Size = New System.Drawing.Size(152, 20)
-        Me.txtClave.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(23, 84)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 16)
-        Me.Label1.TabIndex = 96
-        Me.Label1.Text = "Clave:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(23, 142)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 26)
-        Me.Label3.TabIndex = 98
-        Me.Label3.Text = "Fecha Válido " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "desde:"
-        '
-        'dtpFecDesde
-        '
-        Me.dtpFecDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecDesde.Location = New System.Drawing.Point(112, 136)
-        Me.dtpFecDesde.Name = "dtpFecDesde"
-        Me.dtpFecDesde.Size = New System.Drawing.Size(152, 20)
-        Me.dtpFecDesde.TabIndex = 5
-        '
-        'dtpFecHasta
-        '
-        Me.dtpFecHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecHasta.Location = New System.Drawing.Point(368, 136)
-        Me.dtpFecHasta.Name = "dtpFecHasta"
-        Me.dtpFecHasta.Size = New System.Drawing.Size(152, 20)
-        Me.dtpFecHasta.TabIndex = 6
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(270, 136)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 26)
-        Me.Label4.TabIndex = 100
-        Me.Label4.Text = "Fecha Válido " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "hasta:"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombre.Location = New System.Drawing.Point(112, 110)
-        Me.txtNombre.MaxLength = 100
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(408, 20)
-        Me.txtNombre.TabIndex = 4
-        '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(23, 112)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 16)
-        Me.Label5.TabIndex = 103
-        Me.Label5.Text = "Nombre:"
-        '
-        'Label6
-        '
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(270, 84)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(92, 16)
-        Me.Label6.TabIndex = 107
-        Me.Label6.Text = "Confirmar Clave:"
-        '
-        'txtConfirmarClave
-        '
-        Me.txtConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtConfirmarClave.Location = New System.Drawing.Point(368, 82)
-        Me.txtConfirmarClave.MaxLength = 20
-        Me.txtConfirmarClave.Name = "txtConfirmarClave"
-        Me.txtConfirmarClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfirmarClave.Size = New System.Drawing.Size(152, 20)
-        Me.txtConfirmarClave.TabIndex = 3
-        '
-        'txtCodSuc
-        '
-        Me.txtCodSuc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodSuc.Location = New System.Drawing.Point(368, 56)
-        Me.txtCodSuc.MaxLength = 10
-        Me.txtCodSuc.Name = "txtCodSuc"
-        Me.txtCodSuc.Size = New System.Drawing.Size(152, 20)
-        Me.txtCodSuc.TabIndex = 1
-        '
-        'Label7
-        '
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(270, 60)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(92, 16)
-        Me.Label7.TabIndex = 139
-        Me.Label7.Text = "Cód. Agencia:"
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(445, 174)
+        Me.btnGuardar1.Location = New System.Drawing.Point(551, 266)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnGuardar1.TabIndex = 1011
+        Me.btnGuardar1.TabIndex = 14
         Me.btnGuardar1.Text = "&Guardar"
         Me.btnGuardar1.UseSelectable = True
         Me.btnGuardar1.UseStyleColors = True
         '
+        'cbSucursal
+        '
+        Me.cbSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSucursal.FormattingEnabled = True
+        Me.cbSucursal.ItemHeight = 24
+        Me.cbSucursal.Location = New System.Drawing.Point(128, 230)
+        Me.cbSucursal.Name = "cbSucursal"
+        Me.cbSucursal.Size = New System.Drawing.Size(513, 30)
+        Me.cbSucursal.TabIndex = 3
+        Me.cbSucursal.UseSelectable = True
+        '
+        'txtUsuario
+        '
+        '
+        '
+        '
+        Me.txtUsuario.CustomButton.Image = Nothing
+        Me.txtUsuario.CustomButton.Location = New System.Drawing.Point(491, 1)
+        Me.txtUsuario.CustomButton.Name = ""
+        Me.txtUsuario.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtUsuario.CustomButton.TabIndex = 1
+        Me.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtUsuario.CustomButton.UseSelectable = True
+        Me.txtUsuario.CustomButton.Visible = False
+        Me.txtUsuario.Lines = New String(-1) {}
+        Me.txtUsuario.Location = New System.Drawing.Point(128, 71)
+        Me.txtUsuario.MaxLength = 32767
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtUsuario.SelectedText = ""
+        Me.txtUsuario.SelectionLength = 0
+        Me.txtUsuario.SelectionStart = 0
+        Me.txtUsuario.ShortcutsEnabled = True
+        Me.txtUsuario.Size = New System.Drawing.Size(513, 23)
+        Me.txtUsuario.TabIndex = 15
+        Me.txtUsuario.UseSelectable = True
+        Me.txtUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtUsuario.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtClave
+        '
+        '
+        '
+        '
+        Me.txtClave.CustomButton.Image = Nothing
+        Me.txtClave.CustomButton.Location = New System.Drawing.Point(155, 1)
+        Me.txtClave.CustomButton.Name = ""
+        Me.txtClave.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtClave.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtClave.CustomButton.TabIndex = 1
+        Me.txtClave.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtClave.CustomButton.UseSelectable = True
+        Me.txtClave.CustomButton.Visible = False
+        Me.txtClave.Lines = New String(-1) {}
+        Me.txtClave.Location = New System.Drawing.Point(128, 100)
+        Me.txtClave.MaxLength = 32767
+        Me.txtClave.Name = "txtClave"
+        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtClave.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtClave.SelectedText = ""
+        Me.txtClave.SelectionLength = 0
+        Me.txtClave.SelectionStart = 0
+        Me.txtClave.ShortcutsEnabled = True
+        Me.txtClave.Size = New System.Drawing.Size(177, 23)
+        Me.txtClave.TabIndex = 16
+        Me.txtClave.UseSelectable = True
+        Me.txtClave.UseSystemPasswordChar = True
+        Me.txtClave.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtClave.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtConfirmarClave
+        '
+        '
+        '
+        '
+        Me.txtConfirmarClave.CustomButton.Image = Nothing
+        Me.txtConfirmarClave.CustomButton.Location = New System.Drawing.Point(155, 1)
+        Me.txtConfirmarClave.CustomButton.Name = ""
+        Me.txtConfirmarClave.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtConfirmarClave.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtConfirmarClave.CustomButton.TabIndex = 1
+        Me.txtConfirmarClave.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtConfirmarClave.CustomButton.UseSelectable = True
+        Me.txtConfirmarClave.CustomButton.Visible = False
+        Me.txtConfirmarClave.Lines = New String(-1) {}
+        Me.txtConfirmarClave.Location = New System.Drawing.Point(464, 100)
+        Me.txtConfirmarClave.MaxLength = 32767
+        Me.txtConfirmarClave.Name = "txtConfirmarClave"
+        Me.txtConfirmarClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtConfirmarClave.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtConfirmarClave.SelectedText = ""
+        Me.txtConfirmarClave.SelectionLength = 0
+        Me.txtConfirmarClave.SelectionStart = 0
+        Me.txtConfirmarClave.ShortcutsEnabled = True
+        Me.txtConfirmarClave.Size = New System.Drawing.Size(177, 23)
+        Me.txtConfirmarClave.TabIndex = 17
+        Me.txtConfirmarClave.UseSelectable = True
+        Me.txtConfirmarClave.UseSystemPasswordChar = True
+        Me.txtConfirmarClave.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtConfirmarClave.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'dtpFecDesde
+        '
+        Me.dtpFecDesde.Location = New System.Drawing.Point(128, 158)
+        Me.dtpFecDesde.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpFecDesde.Name = "dtpFecDesde"
+        Me.dtpFecDesde.Size = New System.Drawing.Size(513, 30)
+        Me.dtpFecDesde.TabIndex = 18
+        '
+        'dtpFecHasta
+        '
+        Me.dtpFecHasta.Location = New System.Drawing.Point(128, 194)
+        Me.dtpFecHasta.MinimumSize = New System.Drawing.Size(0, 30)
+        Me.dtpFecHasta.Name = "dtpFecHasta"
+        Me.dtpFecHasta.Size = New System.Drawing.Size(513, 30)
+        Me.dtpFecHasta.TabIndex = 19
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(24, 71)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(59, 20)
+        Me.MetroLabel1.TabIndex = 20
+        Me.MetroLabel1.Text = "Usuario:"
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(24, 100)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(82, 20)
+        Me.MetroLabel2.TabIndex = 21
+        Me.MetroLabel2.Text = "Contraseña:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.Location = New System.Drawing.Point(311, 100)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(147, 20)
+        Me.MetroLabel3.TabIndex = 22
+        Me.MetroLabel3.Text = "Confirmar Contraseña:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(24, 158)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(94, 20)
+        Me.MetroLabel4.TabIndex = 23
+        Me.MetroLabel4.Text = "Activo Desde:"
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.Location = New System.Drawing.Point(24, 194)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(88, 20)
+        Me.MetroLabel5.TabIndex = 24
+        Me.MetroLabel5.Text = "Activo Hasta:"
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(24, 230)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(63, 20)
+        Me.MetroLabel6.TabIndex = 25
+        Me.MetroLabel6.Text = "Sucursal:"
+        '
+        'txtNombre
+        '
+        '
+        '
+        '
+        Me.txtNombre.CustomButton.Image = Nothing
+        Me.txtNombre.CustomButton.Location = New System.Drawing.Point(491, 1)
+        Me.txtNombre.CustomButton.Name = ""
+        Me.txtNombre.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNombre.CustomButton.TabIndex = 1
+        Me.txtNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNombre.CustomButton.UseSelectable = True
+        Me.txtNombre.CustomButton.Visible = False
+        Me.txtNombre.Lines = New String(-1) {}
+        Me.txtNombre.Location = New System.Drawing.Point(128, 129)
+        Me.txtNombre.MaxLength = 32767
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNombre.SelectedText = ""
+        Me.txtNombre.SelectionLength = 0
+        Me.txtNombre.SelectionStart = 0
+        Me.txtNombre.ShortcutsEnabled = True
+        Me.txtNombre.Size = New System.Drawing.Size(513, 23)
+        Me.txtNombre.TabIndex = 26
+        Me.txtNombre.UseSelectable = True
+        Me.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNombre.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'MetroLabel7
+        '
+        Me.MetroLabel7.AutoSize = True
+        Me.MetroLabel7.Location = New System.Drawing.Point(24, 129)
+        Me.MetroLabel7.Name = "MetroLabel7"
+        Me.MetroLabel7.Size = New System.Drawing.Size(61, 20)
+        Me.MetroLabel7.TabIndex = 27
+        Me.MetroLabel7.Text = "Nombre"
+        '
         'frmMsUsuarios
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(545, 239)
-        Me.Controls.Add(Me.btnGuardar1)
-        Me.Controls.Add(Me.txtCodSuc)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtConfirmarClave)
-        Me.Controls.Add(Me.Label6)
+        Me.ClientSize = New System.Drawing.Size(686, 376)
+        Me.Controls.Add(Me.MetroLabel7)
         Me.Controls.Add(Me.txtNombre)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.MetroLabel6)
+        Me.Controls.Add(Me.MetroLabel5)
+        Me.Controls.Add(Me.MetroLabel4)
+        Me.Controls.Add(Me.MetroLabel3)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.dtpFecHasta)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dtpFecDesde)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtConfirmarClave)
         Me.Controls.Add(Me.txtClave)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtUsuario)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.cbSucursal)
+        Me.Controls.Add(Me.btnGuardar1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(545, 239)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(545, 239)
+        Me.MinimumSize = New System.Drawing.Size(654, 276)
         Me.Name = "frmMsUsuarios"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Teal
-        Me.Text = "Mantenimiento de Usuarios"
+        Me.Text = "Usuarios"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -246,8 +320,15 @@ Public Class frmMsUsuarios
 
 #End Region
 
+    Public Sub llenarSucursal()
+        Dim dts As New DataSet
+        dts = asociados.ConsultarSucursales("codSucursal,nom_sucursal", "", "nom_sucursal", sUsuario, sPassword, sSucursal)
+        Me.cbSucursal.DisplayMember = "nom_sucursal"
+        Me.cbSucursal.ValueMember = "codSucursal"
+        Me.cbSucursal.DataSource = dts.Tables(0)
 
-    Private Sub txtCodSuc_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodSuc.DoubleClick
+    End Sub
+    Private Sub txtCodSuc_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim ofrm As New frmAGenerico
 
         ofrm.Text = "Buscar Sucursales"
@@ -258,9 +339,9 @@ Public Class frmMsUsuarios
             ofrm.ColSeleccion = 0
             ofrm.RefrescarGrid()
             ofrm.ShowDialog()
-            Me.txtCodSuc.Text = ofrm.Resultado.Trim
+            '  Me.txtCodSuc.Text = ofrm.Resultado.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -276,7 +357,7 @@ Public Class frmMsUsuarios
                     Exit Sub
                 End If
 
-                If oAdm.InsertarUsuario(Me.txtUsuario.Text.Trim, txtClave.Text.Trim, txtNombre.Text, dtpFecDesde.Value.ToShortDateString, dtpFecHasta.Value.ToShortDateString, Me.txtCodSuc.Text.Trim, sUsuario, sPassword, sSucursal) = True Then
+                If oAdm.InsertarUsuario(Me.txtUsuario.Text.Trim, txtClave.Text.Trim, txtNombre.Text, dtpFecDesde.Value.ToShortDateString, dtpFecHasta.Value.ToShortDateString, Me.cbSucursal.SelectedValue, sUsuario, sPassword, sSucursal) = True Then
                     Me.Close()
                 Else
                     MessageBox.Show("El usuario no ha sido agregado, verifíque.", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -285,7 +366,7 @@ Public Class frmMsUsuarios
             Else
 
                 pFiltro = "Usuario='" & txtUsuario.Text.Trim & "'"
-                If oAdm.ModificarUsarios(pFiltro, txtNombre.Text.Trim, dtpFecDesde.Value.ToShortDateString, dtpFecHasta.Value.ToShortDateString, Me.txtCodSuc.Text.Trim, sUsuario, sPassword, sSucursal) Then
+                If oAdm.ModificarUsarios(pFiltro, txtNombre.Text.Trim, dtpFecDesde.Value.ToShortDateString, dtpFecHasta.Value.ToShortDateString, Me.cbSucursal.SelectedValue, sUsuario, sPassword, sSucursal) Then
                     Me.Close()
                 Else
                     MessageBox.Show("El Usuario no ha sido actualizado, verifíque.", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -293,9 +374,20 @@ Public Class frmMsUsuarios
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
+    Private Sub frmMsUsuarios_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If btnGuardar1.Text.Equals("&Guardar") Then
+            llenarSucursal()
+        End If
 
+    End Sub
+
+    Private Sub frmMsUsuarios_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

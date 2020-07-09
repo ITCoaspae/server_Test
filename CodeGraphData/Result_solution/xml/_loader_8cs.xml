@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_loader_8cs" kind="file">
+    <compoundname>Loader.cs</compoundname>
+    <innerclass refid="class_sql_server_types_1_1_utilities" prot="public">SqlServerTypes::Utilities</innerclass>
+    <innernamespace refid="namespace_sql_server_types">SqlServerTypes</innernamespace>
+    <innernamespace refid="namespace_system">System</innernamespace>
+    <innernamespace refid="namespace_system_1_1_i_o">System::IO</innernamespace>
+    <innernamespace refid="namespace_system_1_1_runtime_1_1_interop_services">System::Runtime::InteropServices</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.IO;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Runtime.InteropServices;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespace_sql_server_types" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SqlServerTypes</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="class_sql_server_types_1_1_utilities" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sql_server_types_1_1_utilities" kindref="compound">Utilities</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[DllImport(</highlight><highlight class="stringliteral">&quot;kernel32.dll&quot;</highlight><highlight class="normal">,<sp/>CharSet<sp/>=<sp/>CharSet.Auto,<sp/>SetLastError<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>IntPtr<sp/><ref refid="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367" kindref="member">LoadLibrary</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>libname);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sql_server_types_1_1_utilities_1ae14317d7185c1c803477f94f3457654e" kindref="member">LoadNativeAssemblies</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>rootApplicationPath)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>nativeBinaryPath<sp/>=<sp/>IntPtr.Size<sp/>&gt;<sp/>4</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>Path.Combine(rootApplicationPath,<sp/></highlight><highlight class="stringliteral">@&quot;SqlServerTypes\x64\&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Path.Combine(rootApplicationPath,<sp/></highlight><highlight class="stringliteral">@&quot;SqlServerTypes\x86\&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" kindref="member">LoadNativeAssembly</ref>(nativeBinaryPath,<sp/></highlight><highlight class="stringliteral">&quot;msvcr120.dll&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" kindref="member">LoadNativeAssembly</ref>(nativeBinaryPath,<sp/></highlight><highlight class="stringliteral">&quot;SqlServerSpatial140.dll&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sql_server_types_1_1_utilities_1a99a67ff33d05fa39d92674a2308fe868" kindref="member">LoadNativeAssembly</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>nativeBinaryPath,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assemblyName)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>path<sp/>=<sp/>Path.Combine(nativeBinaryPath,<sp/>assemblyName);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>ptr<sp/>=<sp/><ref refid="class_sql_server_types_1_1_utilities_1a1f05c8eb6287cd38aa60121c73e72367" kindref="member">LoadLibrary</ref>(path);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>==<sp/>IntPtr.Zero)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>loading<sp/>{0}<sp/>(ErrorCode:<sp/>{1})&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assemblyName,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Marshal.GetLastWin32Error()));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JAEM/Documents/COASPAE/Proyecto/SIF_ERP/SqlServerTypes/Loader.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibAdmin" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibAdmin" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibAdmin" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibAdmin" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibAdmin">
       <s:element name="VerificarCambioContraseña">
@@ -374,6 +374,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="Eliminar_ADMDet_EnvioMensajesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="llenarMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="llenarMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="llenarMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1336,6 +1357,12 @@
   <wsdl:message name="Eliminar_ADMDet_EnvioMensajesSoapOut">
     <wsdl:part name="parameters" element="tns:Eliminar_ADMDet_EnvioMensajesResponse" />
   </wsdl:message>
+  <wsdl:message name="llenarMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:llenarMenu" />
+  </wsdl:message>
+  <wsdl:message name="llenarMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:llenarMenuResponse" />
+  </wsdl:message>
   <wsdl:message name="CaptacionDPF_AcumuladoSoapIn">
     <wsdl:part name="parameters" element="tns:CaptacionDPF_Acumulado" />
   </wsdl:message>
@@ -1660,6 +1687,10 @@
     <wsdl:operation name="Eliminar_ADMDet_EnvioMensajes">
       <wsdl:input message="tns:Eliminar_ADMDet_EnvioMensajesSoapIn" />
       <wsdl:output message="tns:Eliminar_ADMDet_EnvioMensajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="llenarMenu">
+      <wsdl:input message="tns:llenarMenuSoapIn" />
+      <wsdl:output message="tns:llenarMenuSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="CaptacionDPF_Acumulado">
       <wsdl:input message="tns:CaptacionDPF_AcumuladoSoapIn" />
@@ -2006,6 +2037,15 @@
     </wsdl:operation>
     <wsdl:operation name="Eliminar_ADMDet_EnvioMensajes">
       <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/Eliminar_ADMDet_EnvioMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="llenarMenu">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/llenarMenu" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2565,6 +2605,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="llenarMenu">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/llenarMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="CaptacionDPF_Acumulado">
       <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibAdmin/CaptacionDPF_Acumulado" style="document" />
       <wsdl:input>
@@ -2928,10 +2977,10 @@
   </wsdl:binding>
   <wsdl:service name="wsLibAdmin">
     <wsdl:port name="wsLibAdminSoap" binding="tns:wsLibAdminSoap">
-      <soap:address location="http://localhost:57126/wsLibAdmin.asmx" />
+      <soap:address location="http://192.168.1.115:9100/wsLibAdmin.asmx" />
     </wsdl:port>
     <wsdl:port name="wsLibAdminSoap12" binding="tns:wsLibAdminSoap12">
-      <soap12:address location="http://localhost:57126/wsLibAdmin.asmx" />
+      <soap12:address location="http://192.168.1.115:9100/wsLibAdmin.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

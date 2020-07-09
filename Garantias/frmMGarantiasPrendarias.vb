@@ -301,7 +301,7 @@ Public Class frmMGarantiasPrendarias
             ds = oItem.ConsultarGarantiasPrNombre("c.Nombres + ' ' + c.Apellido1 + ' ' + c.Apellido2 as Nombres,a.CodPrestamo,b.FechaOtorgamiento,b.FechaVencimiento,a.NoEscritura,a.OrdenLibro,a.Notario,a.Fecha", "a.Fecha='" & Now.ToShortDateString & "'", "a.CodPrestamo", sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -441,7 +441,7 @@ Public Class frmMGarantiasPrendarias
             End If
             fg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -455,7 +455,7 @@ Public Class frmMGarantiasPrendarias
             frm.cbEstatusST.SelectedIndex = 0
             frm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -589,7 +589,7 @@ Public Class frmMGarantiasPrendarias
                 ActualizarGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -607,7 +607,7 @@ Public Class frmMGarantiasPrendarias
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -741,7 +741,7 @@ Public Class frmMGarantiasPrendarias
                 ActualizarGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

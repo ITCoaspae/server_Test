@@ -111,7 +111,7 @@ Public Class frmCBConsultaTablaAmortiza
             Dim ofrm As New frmVisor(dsR, 34, 0)
             ofrm.Show()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

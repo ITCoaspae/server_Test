@@ -47,25 +47,25 @@ Public Class frmMsReporteDicom
         '
         'txtCodFuente
         '
-        Me.txtCodFuente.Location = New System.Drawing.Point(125, 86)
+        Me.txtCodFuente.Location = New System.Drawing.Point(150, 99)
         Me.txtCodFuente.MaxLength = 25
         Me.txtCodFuente.Name = "txtCodFuente"
-        Me.txtCodFuente.Size = New System.Drawing.Size(144, 20)
+        Me.txtCodFuente.Size = New System.Drawing.Size(173, 22)
         Me.txtCodFuente.TabIndex = 1
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(23, 89)
+        Me.Label1.Location = New System.Drawing.Point(28, 103)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 16)
+        Me.Label1.Size = New System.Drawing.Size(115, 18)
         Me.Label1.TabIndex = 39
         Me.Label1.Text = "Código de fuente:"
         '
         'lblFecha
         '
-        Me.lblFecha.Location = New System.Drawing.Point(23, 60)
+        Me.lblFecha.Location = New System.Drawing.Point(28, 69)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(96, 16)
+        Me.lblFecha.Size = New System.Drawing.Size(115, 19)
         Me.lblFecha.TabIndex = 38
         Me.lblFecha.Text = "Saldos al día:"
         '
@@ -74,9 +74,9 @@ Public Class frmMsReporteDicom
         Me.dtpFecha.CustomFormat = ""
         Me.dtpFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(125, 60)
+        Me.dtpFecha.Location = New System.Drawing.Point(150, 69)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 23)
         Me.dtpFecha.TabIndex = 0
         '
         'C1fgrdPrestamos
@@ -88,19 +88,20 @@ Public Class frmMsReporteDicom
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "30,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Caption:""CodPrestamo"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Caption:""Dui"";}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(234, 60)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(281, 69)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
         Me.C1fgrdPrestamos.Size = New System.Drawing.Size(0, 0)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 8
         Me.C1fgrdPrestamos.Visible = False
         '
         'btProcesar1
         '
-        Me.btProcesar1.Location = New System.Drawing.Point(194, 112)
+        Me.btProcesar1.Location = New System.Drawing.Point(233, 129)
         Me.btProcesar1.Name = "btProcesar1"
-        Me.btProcesar1.Size = New System.Drawing.Size(75, 28)
+        Me.btProcesar1.Size = New System.Drawing.Size(90, 33)
         Me.btProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btProcesar1.TabIndex = 166
         Me.btProcesar1.Text = "Procesar"
@@ -110,9 +111,9 @@ Public Class frmMsReporteDicom
         '
         'frmMsReporteDicom
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(293, 163)
+        Me.ClientSize = New System.Drawing.Size(352, 188)
         Me.Controls.Add(Me.txtCodFuente)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btProcesar1)
@@ -120,9 +121,9 @@ Public Class frmMsReporteDicom
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.lblFecha)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(293, 163)
+        Me.MaximumSize = New System.Drawing.Size(352, 188)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(293, 163)
+        Me.MinimumSize = New System.Drawing.Size(352, 188)
         Me.Name = "frmMsReporteDicom"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -183,7 +184,7 @@ Public Class frmMsReporteDicom
                     End Try
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

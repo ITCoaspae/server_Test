@@ -72,18 +72,18 @@ Public Class frmMCBBienesEMbargados
         Me.GroupBox2.Controls.Add(Me.rbCodPrestamo)
         Me.GroupBox2.Controls.Add(Me.rbCodBienEmbargado)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(427, 94)
+        Me.GroupBox2.Size = New System.Drawing.Size(417, 108)
         Me.GroupBox2.TabIndex = 32
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Ingresos por:"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(332, 48)
+        Me.btnMostrar1.Location = New System.Drawing.Point(398, 55)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 33)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 181
         Me.btnMostrar1.Text = "Mostrar"
@@ -93,25 +93,25 @@ Public Class frmMCBBienesEMbargados
         '
         'txtCodPrestamo
         '
-        Me.txtCodPrestamo.Location = New System.Drawing.Point(174, 54)
+        Me.txtCodPrestamo.Location = New System.Drawing.Point(209, 62)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
-        Me.txtCodPrestamo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodPrestamo.Size = New System.Drawing.Size(182, 22)
         Me.txtCodPrestamo.TabIndex = 7
         '
         'txtCodBienEmbargado
         '
-        Me.txtCodBienEmbargado.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodBienEmbargado.Location = New System.Drawing.Point(19, 65)
         Me.txtCodBienEmbargado.Name = "txtCodBienEmbargado"
-        Me.txtCodBienEmbargado.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodBienEmbargado.Size = New System.Drawing.Size(183, 22)
         Me.txtCodBienEmbargado.TabIndex = 6
         '
         'rbTodos
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(332, 24)
+        Me.rbTodos.Location = New System.Drawing.Point(398, 28)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(75, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(90, 27)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "&Todos"
@@ -120,9 +120,9 @@ Public Class frmMCBBienesEMbargados
         'rbCodPrestamo
         '
         Me.rbCodPrestamo.BackColor = System.Drawing.Color.White
-        Me.rbCodPrestamo.Location = New System.Drawing.Point(174, 24)
+        Me.rbCodPrestamo.Location = New System.Drawing.Point(209, 28)
         Me.rbCodPrestamo.Name = "rbCodPrestamo"
-        Me.rbCodPrestamo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodPrestamo.Size = New System.Drawing.Size(182, 27)
         Me.rbCodPrestamo.TabIndex = 2
         Me.rbCodPrestamo.Text = "&Código de Préstamo"
         Me.rbCodPrestamo.UseVisualStyleBackColor = False
@@ -130,9 +130,9 @@ Public Class frmMCBBienesEMbargados
         'rbCodBienEmbargado
         '
         Me.rbCodBienEmbargado.BackColor = System.Drawing.Color.White
-        Me.rbCodBienEmbargado.Location = New System.Drawing.Point(16, 24)
+        Me.rbCodBienEmbargado.Location = New System.Drawing.Point(19, 28)
         Me.rbCodBienEmbargado.Name = "rbCodBienEmbargado"
-        Me.rbCodBienEmbargado.Size = New System.Drawing.Size(168, 24)
+        Me.rbCodBienEmbargado.Size = New System.Drawing.Size(202, 27)
         Me.rbCodBienEmbargado.TabIndex = 0
         Me.rbCodBienEmbargado.Text = "&Código Artículo Embargado"
         Me.rbCodBienEmbargado.UseVisualStyleBackColor = False
@@ -145,17 +145,18 @@ Public Class frmMCBBienesEMbargados
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "30,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 206)
+        Me.fg.Location = New System.Drawing.Point(28, 238)
         Me.fg.Name = "fg"
-        Me.fg.Size = New System.Drawing.Size(427, 238)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(417, 199)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 34
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(185, 163)
+        Me.MetroButton1.Location = New System.Drawing.Point(222, 188)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 181
         Me.MetroButton1.Text = "Consultar"
@@ -165,9 +166,9 @@ Public Class frmMCBBienesEMbargados
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(23, 163)
+        Me.MetroButton2.Location = New System.Drawing.Point(28, 188)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton2.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton2.TabIndex = 178
         Me.MetroButton2.Text = "Agregar"
@@ -177,9 +178,9 @@ Public Class frmMCBBienesEMbargados
         '
         'MetroButton3
         '
-        Me.MetroButton3.Location = New System.Drawing.Point(104, 163)
+        Me.MetroButton3.Location = New System.Drawing.Point(125, 188)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton3.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton3.TabIndex = 179
         Me.MetroButton3.Text = "Modificar"
@@ -189,9 +190,9 @@ Public Class frmMCBBienesEMbargados
         '
         'MetroButton4
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(266, 163)
+        Me.MetroButton4.Location = New System.Drawing.Point(319, 188)
         Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton4.Size = New System.Drawing.Size(90, 32)
         Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton4.TabIndex = 180
         Me.MetroButton4.Text = "Eliminar"
@@ -201,7 +202,7 @@ Public Class frmMCBBienesEMbargados
         '
         'frmMCBBienesEMbargados
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(473, 485)
         Me.Controls.Add(Me.MetroButton1)
@@ -308,7 +309,7 @@ Public Class frmMCBBienesEMbargados
             ActualizaGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -364,7 +365,7 @@ Public Class frmMCBBienesEMbargados
             ActualizaGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -421,7 +422,7 @@ Public Class frmMCBBienesEMbargados
             ActualizaGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -435,7 +436,7 @@ Public Class frmMCBBienesEMbargados
             ActualizaGrid()
             Encabezado()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

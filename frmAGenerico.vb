@@ -61,7 +61,8 @@ Public Class frmAGenerico
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.C1fgrdResultado.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdResultado.BackColor = System.Drawing.Color.White
-        Me.C1fgrdResultado.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Style:"""";StyleFixed:"""";}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.C1fgrdResultado.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.C1fgrdResultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.C1fgrdResultado.ForeColor = System.Drawing.Color.Black
         Me.C1fgrdResultado.Location = New System.Drawing.Point(28, 121)
         Me.C1fgrdResultado.Name = "C1fgrdResultado"

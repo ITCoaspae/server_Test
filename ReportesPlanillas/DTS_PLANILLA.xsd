@@ -76,7 +76,7 @@
               <Mapping SourceColumn="ANTICIPOSALARIO" DataSetColumn="ANTICIPOSALARIO" />
               <Mapping SourceColumn="TOTALDESCUENTOS" DataSetColumn="TOTALDESCUENTOS" />
               <Mapping SourceColumn="VACACIONES" DataSetColumn="VACACIONES" />
-              <Mapping SourceColumn="PrestamoCOOPAS" DataSetColumn="PrestamoCOOPAS" />
+              <Mapping SourceColumn="PrestamoCOOPAS" DataSetColumn="PrestamoInterno" />
               <Mapping SourceColumn="Prest_OtrasIns" DataSetColumn="Prest_OtrasIns" />
               <Mapping SourceColumn="ComiteFestejos" DataSetColumn="ComiteFestejos" />
               <Mapping SourceColumn="Omnisport" DataSetColumn="Omnisport" />
@@ -361,7 +361,7 @@
               <xs:element name="ANTICIPOSALARIO" msprop:Generator_ColumnVarNameInTable="columnANTICIPOSALARIO" msprop:Generator_ColumnPropNameInRow="ANTICIPOSALARIO" msprop:Generator_ColumnPropNameInTable="ANTICIPOSALARIOColumn" msprop:Generator_UserColumnName="ANTICIPOSALARIO" type="xs:double" minOccurs="0" />
               <xs:element name="TOTALDESCUENTOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTALDESCUENTOS" msprop:Generator_ColumnPropNameInRow="TOTALDESCUENTOS" msprop:Generator_ColumnPropNameInTable="TOTALDESCUENTOSColumn" msprop:Generator_UserColumnName="TOTALDESCUENTOS" type="xs:double" minOccurs="0" />
               <xs:element name="VACACIONES" msprop:Generator_ColumnVarNameInTable="columnVACACIONES" msprop:Generator_ColumnPropNameInRow="VACACIONES" msprop:Generator_ColumnPropNameInTable="VACACIONESColumn" msprop:Generator_UserColumnName="VACACIONES" type="xs:double" minOccurs="0" />
-              <xs:element name="PrestamoCOOPAS" msprop:Generator_ColumnVarNameInTable="columnPrestamoCOOPAS" msprop:Generator_ColumnPropNameInRow="PrestamoCOOPAS" msprop:Generator_ColumnPropNameInTable="PrestamoCOOPASColumn" msprop:Generator_UserColumnName="PrestamoCOOPAS" type="xs:double" minOccurs="0" />
+              <xs:element name="PrestamoInterno" msprop:Generator_ColumnVarNameInTable="columnPrestamoInterno" msprop:Generator_ColumnPropNameInRow="PrestamoInterno" msprop:Generator_ColumnPropNameInTable="PrestamoInternoColumn" msprop:Generator_UserColumnName="PrestamoInterno" type="xs:double" minOccurs="0" />
               <xs:element name="Prest_OtrasIns" msprop:Generator_ColumnVarNameInTable="columnPrest_OtrasIns" msprop:Generator_ColumnPropNameInRow="Prest_OtrasIns" msprop:Generator_ColumnPropNameInTable="Prest_OtrasInsColumn" msprop:Generator_UserColumnName="Prest_OtrasIns" type="xs:double" minOccurs="0" />
               <xs:element name="ComiteFestejos" msprop:Generator_ColumnVarNameInTable="columnComiteFestejos" msprop:Generator_ColumnPropNameInRow="ComiteFestejos" msprop:Generator_ColumnPropNameInTable="ComiteFestejosColumn" msprop:Generator_UserColumnName="ComiteFestejos" type="xs:double" minOccurs="0" />
               <xs:element name="Omnisport" msprop:Generator_ColumnVarNameInTable="columnOmnisport" msprop:Generator_ColumnPropNameInRow="Omnisport" msprop:Generator_ColumnPropNameInTable="OmnisportColumn" msprop:Generator_UserColumnName="Omnisport" type="xs:double" minOccurs="0" />

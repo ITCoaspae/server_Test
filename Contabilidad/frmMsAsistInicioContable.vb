@@ -1,6 +1,7 @@
 Public Class frmMsAsistInicioContable
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
+    Dim contabilidad As New wrConta.wsLibContab
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -334,31 +335,31 @@ Public Class frmMsAsistInicioContable
 
     Private Sub btnRegsHist_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegsHist.Click
         Dim oContab As New wrConta.wsLibContab, vResultado As String
-        Me.Cursor = Cursors.WaitCursor
-        vResultado = oContab.CreacionSaldosHistoricos(Me.dtpYear.Value.Year, sUsuario, sPassword,sSucursal)
+        'Me.Cursor = Cursors.WaitCursor
+        vResultado = contabilidad.CreacionSaldosHistoricos(Me.dtpYear.Value.Year, sUsuario, sPassword, sSucursal)
         If vResultado.Trim <> "" Then
             Me.Cursor = Cursors.Default
             MsgBox(vResultado, MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Validación del Sistema")
         Else
             MsgBox("Proceso realizado con éxito!", MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Validación del Sistema")
         End If
-        Me.Cursor = Cursors.Default
+        'Me.Cursor = Cursors.Default
     End Sub
 
     Private Sub btnPartidaA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPartidaA.Click
         Dim oContab As New wrConta.wsLibContab, vResultado As String
         If MsgBox("¿Está seguro que desea generar la Partida de Apertura?", MsgBoxStyle.YesNo, "Generación Partida de Apertura") = MsgBoxResult.Yes Then
-            Me.Cursor = Cursors.WaitCursor
+            'Me.Cursor = Cursors.WaitCursor
             Dim pFecha As String
             pFecha = "01/01/" & Me.dtAnioIni.Value.Year
-            vResultado = oContab.PartidaApertura(pFecha, sUsuario, sPassword,sSucursal)
+            vResultado = contabilidad.PartidaApertura(pFecha, sUsuario, sPassword, sSucursal)
             If vResultado.Trim <> "" Then
                 Me.Cursor = Cursors.Default
                 MsgBox(vResultado, MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Validación del Sistema")
             Else
                 MsgBox("Proceso realizado con éxito!", MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Partida de Apertura")
             End If
-            Me.Cursor = Cursors.Default
+            'Me.Cursor = Cursors.Default
         End If
     End Sub
 
@@ -371,15 +372,15 @@ Public Class frmMsAsistInicioContable
     Private Sub btnBDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBDA.Click
         Dim oContab As New wrConta.wsLibContab, vResultado As String
         If MsgBox("¿Está seguro que desea eliminar los registros?", MsgBoxStyle.YesNo, "Preparar Base de Datos para la Apertura") = MsgBoxResult.Yes Then
-            Me.Cursor = Cursors.WaitCursor
-            vResultado = oContab.ProcesoInicioEjercicio(Me.dtpAnioHist.Value.Year, sUsuario, sPassword, sSucursal)
+            'Me.Cursor = Cursors.WaitCursor
+            vResultado = contabilidad.ProcesoInicioEjercicio(Me.dtpAnioHist.Value.Year, sUsuario, sPassword, sSucursal)
             If vResultado.Trim <> "" Then
                 Me.Cursor = Cursors.Default
                 MsgBox(vResultado, MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Validación del Sistema")
             Else
                 MsgBox("Proceso realizado con éxito!", MsgBoxStyle.Critical And MsgBoxStyle.OKOnly, "Preparar Base de Datos para la Apertura")
             End If
-            Me.Cursor = Cursors.Default
+            'Me.Cursor = Cursors.Default
         End If
     End Sub
 

@@ -923,7 +923,7 @@ Public Class frmCrTablaAmortEjec
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+               MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
@@ -943,7 +943,7 @@ Public Class frmCrTablaAmortEjec
             Me.txtCodLineaCredito.Text = ofrm.Resultado.Trim
             Me.txtLineaCredito.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1084,7 +1084,7 @@ Public Class frmCrTablaAmortEjec
                 MsgBox("El número de Cuotas con aplicación de sólo interés no puede ser igual o mayor al número de pagos del Préstamo.", MsgBoxStyle.Critical, "Validación del Sistema")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1093,7 +1093,7 @@ Public Class frmCrTablaAmortEjec
             C1fgrdDetalle.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
             C1fgrdDetalle.DataSource = Nothing
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1103,7 +1103,7 @@ Public Class frmCrTablaAmortEjec
             Exportar(Me.TAmortiza)
             MessageBox.Show("Archivo generdo con éxito.", "Exportación Tabla de Cuotas", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'LUIS ALVARENGA

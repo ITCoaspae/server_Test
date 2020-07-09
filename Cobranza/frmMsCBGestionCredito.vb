@@ -2,38 +2,25 @@ Public Class frmMsCBGestionCredito
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
     Dim DatosFiador As DataSet
-
+    Dim credito As New wrCredito.wsLibCred
 
 #Region "Variables privadas del formulario"
     Private vCodGestor, vCodPrestamo, Tipo As String, vCodEnlace As String, vCodEnlaceFiador As String, vCodEnlaceCodeudor As String
     Private NumSolicitud As Integer, vCodTablaAmortiza As String
     Friend WithEvents tb6 As System.Windows.Forms.TabPage
     Friend WithEvents tb1 As System.Windows.Forms.TabPage
-    Friend WithEvents gbDatDoc As System.Windows.Forms.GroupBox
     Friend WithEvents txtFormaPago As System.Windows.Forms.TextBox
-    Friend WithEvents Label116 As System.Windows.Forms.Label
-    Friend WithEvents Label115 As System.Windows.Forms.Label
     Friend WithEvents txtGarantia As System.Windows.Forms.TextBox
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
-    Friend WithEvents Label87 As System.Windows.Forms.Label
     Friend WithEvents txtCapitalMora As System.Windows.Forms.TextBox
-    Friend WithEvents Label58 As System.Windows.Forms.Label
     Friend WithEvents lblCodPrestamo As System.Windows.Forms.Label
-    Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents txtNIT As C1.Win.C1Input.C1TextBox
-    Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
     Friend WithEvents txtNoAsoc As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents txtAditivosCobrar As System.Windows.Forms.TextBox
     Friend WithEvents txtCuota As System.Windows.Forms.TextBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents txtDiasEnMora As System.Windows.Forms.TextBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents txtNoCuotasMora As System.Windows.Forms.TextBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents txtSaldoDiaAportacion As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents txtSaldoDiaComision As System.Windows.Forms.TextBox
@@ -49,54 +36,21 @@ Public Class frmMsCBGestionCredito
     Friend WithEvents txtSaldoDiaInteres As System.Windows.Forms.TextBox
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents txtSaldoCapital As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtFechaVencimiento As System.Windows.Forms.TextBox
     Friend WithEvents txtCategoria As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents txtFechaOtorgamiento As System.Windows.Forms.TextBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents txtFechaPrimeraCuota As System.Windows.Forms.TextBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents txtTasaInteresMora As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents txtMontoGarantia As System.Windows.Forms.TextBox
     Friend WithEvents txtTasaInteres As System.Windows.Forms.TextBox
-    Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents txtCuotaTotal As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtPlazo As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents txtMonto As System.Windows.Forms.TextBox
-    Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents gbGestion As System.Windows.Forms.GroupBox
-    Friend WithEvents dtpFechaPactada As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtGestor As System.Windows.Forms.TextBox
-    Friend WithEvents txtCodDespacho As System.Windows.Forms.TextBox
-    Friend WithEvents lblTipoDocumento As System.Windows.Forms.Label
     Friend WithEvents txtNoCuotas As System.Windows.Forms.TextBox
-    Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents lblCompromiso As System.Windows.Forms.Label
-    Friend WithEvents lblRango As System.Windows.Forms.Label
     Friend WithEvents txtObservaciones As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents dtHora As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents dtFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtAcuerdo As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txtTipoCobranza As System.Windows.Forms.TextBox
-    Friend WithEvents txtCodTipoCobranza As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtDespacho As System.Windows.Forms.TextBox
-    Friend WithEvents lblDespacho As System.Windows.Forms.Label
     Friend WithEvents fg As C1.Win.C1FlexGrid.C1FlexGrid
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents fgGestiones As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents Label120 As System.Windows.Forms.Label
     Friend WithEvents txtOtros As System.Windows.Forms.TextBox
@@ -109,11 +63,40 @@ Public Class frmMsCBGestionCredito
     Friend WithEvents btnTablaSimulada1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnConsultarTbAmortiza1 As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroButton7 As MetroFramework.Controls.MetroButton
-    Friend WithEvents Label121 As Label
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents txtDUICliente As C1.Win.C1Input.C1TextBox
     Friend WithEvents txtNITCliente As C1.Win.C1Input.C1TextBox
     Friend WithEvents btnEstadoCta As MetroFramework.Controls.MetroButton
+    Friend WithEvents dtpFechaPactada As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dtFecha As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbCobranza As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel7 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel19 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel15 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel14 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel13 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel12 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel11 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel10 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel9 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel18 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel17 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel16 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel27 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel26 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel25 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel22 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel24 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel23 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel21 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel20 As MetroFramework.Controls.MetroLabel
     Friend WithEvents fgCodeudor As C1.Win.C1FlexGrid.C1FlexGrid
 #End Region
 
@@ -172,53 +155,44 @@ Public Class frmMsCBGestionCredito
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents fgFiador As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents tb5 As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMsCBGestionCredito))
         Me.tbGestionCredito = New System.Windows.Forms.TabControl()
         Me.tb1 = New System.Windows.Forms.TabPage()
-        Me.gbDatDoc = New System.Windows.Forms.GroupBox()
-        Me.lblTipoDocumento = New System.Windows.Forms.Label()
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
-        Me.Label35 = New System.Windows.Forms.Label()
+        Me.MetroLabel15 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel14 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel13 = New MetroFramework.Controls.MetroLabel()
         Me.txtFormaPago = New System.Windows.Forms.TextBox()
+        Me.MetroLabel12 = New MetroFramework.Controls.MetroLabel()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label116 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.MetroLabel11 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel10 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel9 = New MetroFramework.Controls.MetroLabel()
         Me.txtGarantia = New System.Windows.Forms.TextBox()
-        Me.Label115 = New System.Windows.Forms.Label()
         Me.txtNoAsoc = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNIT = New C1.Win.C1Input.C1TextBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.lblCodPrestamo = New System.Windows.Forms.Label()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel27 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
         Me.txtMonto = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.MetroLabel25 = New MetroFramework.Controls.MetroLabel()
         Me.txtFechaOtorgamiento = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtFechaPrimeraCuota = New System.Windows.Forms.TextBox()
+        Me.MetroLabel22 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel24 = New MetroFramework.Controls.MetroLabel()
         Me.txtFechaVencimiento = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtDiasEnMora = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.MetroLabel23 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel21 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel20 = New MetroFramework.Controls.MetroLabel()
         Me.txtTasaInteres = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtNoCuotasMora = New System.Windows.Forms.TextBox()
         Me.txtPlazo = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
         Me.txtCategoria = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtMontoGarantia = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTasaInteresMora = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.txtCuotaTotal = New System.Windows.Forms.TextBox()
         Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
         Me.txtOtros = New System.Windows.Forms.TextBox()
@@ -239,42 +213,33 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaSegDanios = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.txtCapitalMora = New System.Windows.Forms.TextBox()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.txtAditivosCobrar = New System.Windows.Forms.TextBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtSaldoCapital = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.MetroLabel19 = New MetroFramework.Controls.MetroLabel()
         Me.gbGestion = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
+        Me.dtpFechaPactada = New MetroFramework.Controls.MetroDateTime()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.dtFecha = New MetroFramework.Controls.MetroDateTime()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.cbCobranza = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.btnEstadoCta = New MetroFramework.Controls.MetroButton()
-        Me.Label121 = New System.Windows.Forms.Label()
         Me.MetroButton7 = New MetroFramework.Controls.MetroButton()
-        Me.dtpFechaPactada = New System.Windows.Forms.DateTimePicker()
         Me.txtGestor = New System.Windows.Forms.TextBox()
         Me.btnAdd1 = New MetroFramework.Controls.MetroButton()
-        Me.txtCodDespacho = New System.Windows.Forms.TextBox()
         Me.txtNoCuotas = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.lblCompromiso = New System.Windows.Forms.Label()
-        Me.lblRango = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dtHora = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.dtFecha = New System.Windows.Forms.DateTimePicker()
         Me.txtAcuerdo = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtTipoCobranza = New System.Windows.Forms.TextBox()
-        Me.txtCodTipoCobranza = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDespacho = New System.Windows.Forms.TextBox()
-        Me.lblDespacho = New System.Windows.Forms.Label()
+        Me.MetroLabel17 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel18 = New MetroFramework.Controls.MetroLabel()
+        Me.txtAditivosCobrar = New System.Windows.Forms.TextBox()
+        Me.txtCapitalMora = New System.Windows.Forms.TextBox()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.txtSaldoCapital = New System.Windows.Forms.TextBox()
+        Me.MetroLabel16 = New MetroFramework.Controls.MetroLabel()
         Me.tb6 = New System.Windows.Forms.TabPage()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.fgGestiones = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.tb3 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -282,7 +247,6 @@ Public Class frmMsCBGestionCredito
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.fgFiador = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.tb5 = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.btnTablaSimulada1 = New MetroFramework.Controls.MetroButton()
         Me.btnConsultarTbAmortiza1 = New MetroFramework.Controls.MetroButton()
@@ -291,7 +255,6 @@ Public Class frmMsCBGestionCredito
         Me.txtNITCliente = New C1.Win.C1Input.C1TextBox()
         Me.tbGestionCredito.SuspendLayout()
         Me.tb1.SuspendLayout()
-        Me.gbDatDoc.SuspendLayout()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -300,7 +263,6 @@ Public Class frmMsCBGestionCredito
         Me.MetroTabPage3.SuspendLayout()
         Me.gbGestion.SuspendLayout()
         Me.tb6.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         CType(Me.fgGestiones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tb3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -308,7 +270,6 @@ Public Class frmMsCBGestionCredito
         Me.GroupBox4.SuspendLayout()
         CType(Me.fgFiador, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tb5.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDUICliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNITCliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -320,64 +281,40 @@ Public Class frmMsCBGestionCredito
         Me.tbGestionCredito.Controls.Add(Me.tb6)
         Me.tbGestionCredito.Controls.Add(Me.tb3)
         Me.tbGestionCredito.Controls.Add(Me.tb5)
-        Me.tbGestionCredito.Location = New System.Drawing.Point(28, 73)
+        Me.tbGestionCredito.Location = New System.Drawing.Point(23, 63)
         Me.tbGestionCredito.Name = "tbGestionCredito"
         Me.tbGestionCredito.SelectedIndex = 0
-        Me.tbGestionCredito.Size = New System.Drawing.Size(931, 723)
+        Me.tbGestionCredito.Size = New System.Drawing.Size(655, 627)
         Me.tbGestionCredito.TabIndex = 0
         '
         'tb1
         '
         Me.tb1.BackColor = System.Drawing.Color.White
-        Me.tb1.Controls.Add(Me.gbDatDoc)
+        Me.tb1.Controls.Add(Me.MetroTabControl1)
+        Me.tb1.Controls.Add(Me.MetroLabel19)
         Me.tb1.Controls.Add(Me.gbGestion)
-        Me.tb1.Location = New System.Drawing.Point(4, 25)
+        Me.tb1.Controls.Add(Me.MetroLabel17)
+        Me.tb1.Controls.Add(Me.MetroLabel18)
+        Me.tb1.Controls.Add(Me.txtAditivosCobrar)
+        Me.tb1.Controls.Add(Me.txtCapitalMora)
+        Me.tb1.Controls.Add(Me.txtTotal)
+        Me.tb1.Controls.Add(Me.txtSaldoCapital)
+        Me.tb1.Controls.Add(Me.MetroLabel16)
+        Me.tb1.Location = New System.Drawing.Point(4, 22)
         Me.tb1.Name = "tb1"
-        Me.tb1.Size = New System.Drawing.Size(923, 694)
+        Me.tb1.Size = New System.Drawing.Size(647, 601)
         Me.tb1.TabIndex = 0
         Me.tb1.Text = "Gestión de Crédito"
-        '
-        'gbDatDoc
-        '
-        Me.gbDatDoc.BackColor = System.Drawing.Color.White
-        Me.gbDatDoc.Controls.Add(Me.lblTipoDocumento)
-        Me.gbDatDoc.Controls.Add(Me.MetroTabControl1)
-        Me.gbDatDoc.Controls.Add(Me.txtTotal)
-        Me.gbDatDoc.Controls.Add(Me.Label87)
-        Me.gbDatDoc.Controls.Add(Me.txtCapitalMora)
-        Me.gbDatDoc.Controls.Add(Me.Label58)
-        Me.gbDatDoc.Controls.Add(Me.txtAditivosCobrar)
-        Me.gbDatDoc.Controls.Add(Me.Label27)
-        Me.gbDatDoc.Controls.Add(Me.txtSaldoCapital)
-        Me.gbDatDoc.Controls.Add(Me.Label18)
-        Me.gbDatDoc.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbDatDoc.ForeColor = System.Drawing.Color.Teal
-        Me.gbDatDoc.Location = New System.Drawing.Point(4, 329)
-        Me.gbDatDoc.Name = "gbDatDoc"
-        Me.gbDatDoc.Size = New System.Drawing.Size(907, 338)
-        Me.gbDatDoc.TabIndex = 1
-        Me.gbDatDoc.TabStop = False
-        Me.gbDatDoc.Text = "Datos Generales del Préstamo"
-        '
-        'lblTipoDocumento
-        '
-        Me.lblTipoDocumento.BackColor = System.Drawing.Color.White
-        Me.lblTipoDocumento.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTipoDocumento.ForeColor = System.Drawing.Color.Black
-        Me.lblTipoDocumento.Location = New System.Drawing.Point(601, 18)
-        Me.lblTipoDocumento.Name = "lblTipoDocumento"
-        Me.lblTipoDocumento.Size = New System.Drawing.Size(221, 19)
-        Me.lblTipoDocumento.TabIndex = 1
         '
         'MetroTabControl1
         '
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(10, 22)
+        Me.MetroTabControl1.Location = New System.Drawing.Point(8, 284)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 2
-        Me.MetroTabControl1.Size = New System.Drawing.Size(902, 235)
+        Me.MetroTabControl1.SelectedIndex = 0
+        Me.MetroTabControl1.Size = New System.Drawing.Size(629, 204)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroTabControl1.TabIndex = 0
         Me.MetroTabControl1.Theme = MetroFramework.MetroThemeStyle.Light
@@ -386,138 +323,148 @@ Public Class frmMsCBGestionCredito
         'MetroTabPage1
         '
         Me.MetroTabPage1.BackColor = System.Drawing.Color.White
-        Me.MetroTabPage1.Controls.Add(Me.Label35)
+        Me.MetroTabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel15)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel14)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel13)
         Me.MetroTabPage1.Controls.Add(Me.txtFormaPago)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel12)
         Me.MetroTabPage1.Controls.Add(Me.txtNombre)
-        Me.MetroTabPage1.Controls.Add(Me.Label116)
-        Me.MetroTabPage1.Controls.Add(Me.Label16)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel11)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel10)
+        Me.MetroTabPage1.Controls.Add(Me.MetroLabel9)
         Me.MetroTabPage1.Controls.Add(Me.txtGarantia)
-        Me.MetroTabPage1.Controls.Add(Me.Label115)
         Me.MetroTabPage1.Controls.Add(Me.txtNoAsoc)
-        Me.MetroTabPage1.Controls.Add(Me.Label14)
         Me.MetroTabPage1.Controls.Add(Me.txtDui)
         Me.MetroTabPage1.Controls.Add(Me.txtNIT)
-        Me.MetroTabPage1.Controls.Add(Me.Label29)
-        Me.MetroTabPage1.Controls.Add(Me.Label31)
         Me.MetroTabPage1.Controls.Add(Me.lblCodPrestamo)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
         Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.HorizontalScrollbarSize = 12
+        Me.MetroTabPage1.HorizontalScrollbarSize = 10
         Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(894, 193)
+        Me.MetroTabPage1.Size = New System.Drawing.Size(621, 162)
         Me.MetroTabPage1.TabIndex = 0
         Me.MetroTabPage1.Text = "Información General"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.VerticalScrollbarSize = 12
+        Me.MetroTabPage1.VerticalScrollbarSize = 10
         '
-        'Label35
+        'MetroLabel15
         '
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.Black
-        Me.Label35.Location = New System.Drawing.Point(4, 12)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(118, 21)
-        Me.Label35.TabIndex = 0
-        Me.Label35.Text = "Nombre Asociado:"
-        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel15.AutoSize = True
+        Me.MetroLabel15.Location = New System.Drawing.Point(0, 118)
+        Me.MetroLabel15.Name = "MetroLabel15"
+        Me.MetroLabel15.Size = New System.Drawing.Size(89, 19)
+        Me.MetroLabel15.TabIndex = 35
+        Me.MetroLabel15.Text = "Forma  Pago:"
+        '
+        'MetroLabel14
+        '
+        Me.MetroLabel14.AutoSize = True
+        Me.MetroLabel14.Location = New System.Drawing.Point(0, 85)
+        Me.MetroLabel14.Name = "MetroLabel14"
+        Me.MetroLabel14.Size = New System.Drawing.Size(61, 19)
+        Me.MetroLabel14.TabIndex = 34
+        Me.MetroLabel14.Text = "Garantía:"
+        '
+        'MetroLabel13
+        '
+        Me.MetroLabel13.AutoSize = True
+        Me.MetroLabel13.Location = New System.Drawing.Point(312, 62)
+        Me.MetroLabel13.Name = "MetroLabel13"
+        Me.MetroLabel13.Size = New System.Drawing.Size(100, 19)
+        Me.MetroLabel13.TabIndex = 33
+        Me.MetroLabel13.Text = "Cod. Prestamo:"
         '
         'txtFormaPago
         '
         Me.txtFormaPago.BackColor = System.Drawing.Color.White
-        Me.txtFormaPago.Location = New System.Drawing.Point(126, 143)
+        Me.txtFormaPago.Location = New System.Drawing.Point(100, 118)
         Me.txtFormaPago.Multiline = True
         Me.txtFormaPago.Name = "txtFormaPago"
         Me.txtFormaPago.ReadOnly = True
-        Me.txtFormaPago.Size = New System.Drawing.Size(758, 32)
+        Me.txtFormaPago.Size = New System.Drawing.Size(507, 28)
         Me.txtFormaPago.TabIndex = 13
+        '
+        'MetroLabel12
+        '
+        Me.MetroLabel12.AutoSize = True
+        Me.MetroLabel12.Location = New System.Drawing.Point(2, 62)
+        Me.MetroLabel12.Name = "MetroLabel12"
+        Me.MetroLabel12.Size = New System.Drawing.Size(32, 19)
+        Me.MetroLabel12.TabIndex = 32
+        Me.MetroLabel12.Text = "NIT:"
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.White
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombre.Location = New System.Drawing.Point(126, 13)
+        Me.txtNombre.Location = New System.Drawing.Point(100, 9)
         Me.txtNombre.MaxLength = 50
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(758, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(507, 20)
         Me.txtNombre.TabIndex = 1
         '
-        'Label116
+        'MetroLabel11
         '
-        Me.Label116.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label116.ForeColor = System.Drawing.Color.Black
-        Me.Label116.Location = New System.Drawing.Point(4, 147)
-        Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(96, 47)
-        Me.Label116.TabIndex = 12
-        Me.Label116.Text = "Forma de pago:"
+        Me.MetroLabel11.AutoSize = True
+        Me.MetroLabel11.Location = New System.Drawing.Point(312, 34)
+        Me.MetroLabel11.Name = "MetroLabel11"
+        Me.MetroLabel11.Size = New System.Drawing.Size(33, 19)
+        Me.MetroLabel11.TabIndex = 31
+        Me.MetroLabel11.Text = "DUI:"
         '
-        'Label16
+        'MetroLabel10
         '
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(4, 42)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(96, 23)
-        Me.Label16.TabIndex = 2
-        Me.Label16.Text = "No. Asociado:"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel10.AutoSize = True
+        Me.MetroLabel10.Location = New System.Drawing.Point(2, 36)
+        Me.MetroLabel10.Name = "MetroLabel10"
+        Me.MetroLabel10.Size = New System.Drawing.Size(91, 19)
+        Me.MetroLabel10.TabIndex = 30
+        Me.MetroLabel10.Text = "No. Asociado:"
+        '
+        'MetroLabel9
+        '
+        Me.MetroLabel9.AutoSize = True
+        Me.MetroLabel9.Location = New System.Drawing.Point(2, 11)
+        Me.MetroLabel9.Name = "MetroLabel9"
+        Me.MetroLabel9.Size = New System.Drawing.Size(62, 19)
+        Me.MetroLabel9.TabIndex = 29
+        Me.MetroLabel9.Text = "Nombre:"
         '
         'txtGarantia
         '
         Me.txtGarantia.BackColor = System.Drawing.Color.White
-        Me.txtGarantia.Location = New System.Drawing.Point(126, 104)
+        Me.txtGarantia.Location = New System.Drawing.Point(100, 85)
         Me.txtGarantia.Multiline = True
         Me.txtGarantia.Name = "txtGarantia"
         Me.txtGarantia.ReadOnly = True
-        Me.txtGarantia.Size = New System.Drawing.Size(758, 32)
+        Me.txtGarantia.Size = New System.Drawing.Size(507, 28)
         Me.txtGarantia.TabIndex = 11
-        '
-        'Label115
-        '
-        Me.Label115.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label115.ForeColor = System.Drawing.Color.Black
-        Me.Label115.Location = New System.Drawing.Point(4, 113)
-        Me.Label115.Name = "Label115"
-        Me.Label115.Size = New System.Drawing.Size(76, 17)
-        Me.Label115.TabIndex = 10
-        Me.Label115.Text = "Garantía:"
         '
         'txtNoAsoc
         '
         Me.txtNoAsoc.BackColor = System.Drawing.Color.White
         Me.txtNoAsoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNoAsoc.Location = New System.Drawing.Point(126, 44)
+        Me.txtNoAsoc.Location = New System.Drawing.Point(100, 34)
         Me.txtNoAsoc.MaxLength = 8
         Me.txtNoAsoc.Name = "txtNoAsoc"
         Me.txtNoAsoc.ReadOnly = True
-        Me.txtNoAsoc.Size = New System.Drawing.Size(187, 23)
+        Me.txtNoAsoc.Size = New System.Drawing.Size(207, 20)
         Me.txtNoAsoc.TabIndex = 3
-        '
-        'Label14
-        '
-        Me.Label14.BackColor = System.Drawing.Color.White
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(320, 48)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(110, 19)
-        Me.Label14.TabIndex = 4
-        Me.Label14.Text = "DUI:"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtDui
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(437, 44)
+        Me.txtDui.Location = New System.Drawing.Point(400, 36)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
         Me.txtDui.ReadOnly = True
-        Me.txtDui.Size = New System.Drawing.Size(187, 21)
+        Me.txtDui.Size = New System.Drawing.Size(207, 18)
         Me.txtDui.TabIndex = 5
         Me.txtDui.Tag = Nothing
         '
@@ -526,36 +473,14 @@ Public Class frmMsCBGestionCredito
         Me.txtNIT.BackColor = System.Drawing.Color.White
         Me.txtNIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNIT.EditMask = "0000-000000-000-0"
-        Me.txtNIT.Location = New System.Drawing.Point(126, 74)
+        Me.txtNIT.Location = New System.Drawing.Point(100, 62)
         Me.txtNIT.Name = "txtNIT"
         Me.txtNIT.NumericInput = False
         Me.txtNIT.ReadOnly = True
-        Me.txtNIT.Size = New System.Drawing.Size(187, 21)
+        Me.txtNIT.Size = New System.Drawing.Size(207, 18)
         Me.txtNIT.TabIndex = 7
         Me.txtNIT.Tag = Nothing
         Me.txtNIT.Value = ""
-        '
-        'Label29
-        '
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.Black
-        Me.Label29.Location = New System.Drawing.Point(4, 77)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(38, 19)
-        Me.Label29.TabIndex = 6
-        Me.Label29.Text = "NIT:"
-        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label31
-        '
-        Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(320, 77)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(110, 21)
-        Me.Label31.TabIndex = 8
-        Me.Label31.Text = "Préstamo:"
         '
         'lblCodPrestamo
         '
@@ -563,347 +488,239 @@ Public Class frmMsCBGestionCredito
         Me.lblCodPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCodPrestamo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCodPrestamo.ForeColor = System.Drawing.Color.Black
-        Me.lblCodPrestamo.Location = New System.Drawing.Point(437, 77)
+        Me.lblCodPrestamo.Location = New System.Drawing.Point(400, 62)
         Me.lblCodPrestamo.Name = "lblCodPrestamo"
-        Me.lblCodPrestamo.Size = New System.Drawing.Size(187, 22)
+        Me.lblCodPrestamo.Size = New System.Drawing.Size(207, 19)
         Me.lblCodPrestamo.TabIndex = 9
         Me.lblCodPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'MetroTabPage2
         '
-        Me.MetroTabPage2.Controls.Add(Me.Label30)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel28)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel27)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel26)
         Me.MetroTabPage2.Controls.Add(Me.txtMonto)
-        Me.MetroTabPage2.Controls.Add(Me.Label12)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel25)
         Me.MetroTabPage2.Controls.Add(Me.txtFechaOtorgamiento)
-        Me.MetroTabPage2.Controls.Add(Me.Label11)
-        Me.MetroTabPage2.Controls.Add(Me.txtFechaPrimeraCuota)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel22)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel24)
         Me.MetroTabPage2.Controls.Add(Me.txtFechaVencimiento)
-        Me.MetroTabPage2.Controls.Add(Me.Label5)
-        Me.MetroTabPage2.Controls.Add(Me.txtDiasEnMora)
-        Me.MetroTabPage2.Controls.Add(Me.Label20)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel23)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel21)
+        Me.MetroTabPage2.Controls.Add(Me.MetroLabel20)
         Me.MetroTabPage2.Controls.Add(Me.txtTasaInteres)
-        Me.MetroTabPage2.Controls.Add(Me.Label13)
         Me.MetroTabPage2.Controls.Add(Me.txtNoCuotasMora)
         Me.MetroTabPage2.Controls.Add(Me.txtPlazo)
-        Me.MetroTabPage2.Controls.Add(Me.Label19)
-        Me.MetroTabPage2.Controls.Add(Me.Label48)
         Me.MetroTabPage2.Controls.Add(Me.txtCategoria)
-        Me.MetroTabPage2.Controls.Add(Me.Label6)
-        Me.MetroTabPage2.Controls.Add(Me.txtMontoGarantia)
-        Me.MetroTabPage2.Controls.Add(Me.Label8)
-        Me.MetroTabPage2.Controls.Add(Me.Label7)
         Me.MetroTabPage2.Controls.Add(Me.txtTasaInteresMora)
-        Me.MetroTabPage2.Controls.Add(Me.Label10)
         Me.MetroTabPage2.Controls.Add(Me.txtCuotaTotal)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
         Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.HorizontalScrollbarSize = 12
-        Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
+        Me.MetroTabPage2.HorizontalScrollbarSize = 10
+        Me.MetroTabPage2.Location = New System.Drawing.Point(4, 35)
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(894, 193)
+        Me.MetroTabPage2.Size = New System.Drawing.Size(621, 165)
         Me.MetroTabPage2.TabIndex = 1
         Me.MetroTabPage2.Text = "Datos Préstamo"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.VerticalScrollbarSize = 12
+        Me.MetroTabPage2.VerticalScrollbarSize = 10
         '
-        'Label30
+        'MetroLabel28
         '
-        Me.Label30.BackColor = System.Drawing.Color.White
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.Black
-        Me.Label30.Location = New System.Drawing.Point(4, 14)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(126, 21)
-        Me.Label30.TabIndex = 0
-        Me.Label30.Text = "Monto:"
-        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel28.AutoSize = True
+        Me.MetroLabel28.Location = New System.Drawing.Point(4, 104)
+        Me.MetroLabel28.Name = "MetroLabel28"
+        Me.MetroLabel28.Size = New System.Drawing.Size(78, 19)
+        Me.MetroLabel28.TabIndex = 44
+        Me.MetroLabel28.Text = "Cuota Total:"
+        '
+        'MetroLabel27
+        '
+        Me.MetroLabel27.AutoSize = True
+        Me.MetroLabel27.Location = New System.Drawing.Point(312, 62)
+        Me.MetroLabel27.Name = "MetroLabel27"
+        Me.MetroLabel27.Size = New System.Drawing.Size(114, 19)
+        Me.MetroLabel27.TabIndex = 43
+        Me.MetroLabel27.Text = "Tasa Interes Mora:"
+        '
+        'MetroLabel26
+        '
+        Me.MetroLabel26.AutoSize = True
+        Me.MetroLabel26.Location = New System.Drawing.Point(312, 87)
+        Me.MetroLabel26.Name = "MetroLabel26"
+        Me.MetroLabel26.Size = New System.Drawing.Size(88, 19)
+        Me.MetroLabel26.TabIndex = 42
+        Me.MetroLabel26.Text = "Cuotas Mora:"
         '
         'txtMonto
         '
         Me.txtMonto.BackColor = System.Drawing.Color.White
         Me.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMonto.Location = New System.Drawing.Point(137, 15)
+        Me.txtMonto.Location = New System.Drawing.Point(117, 11)
         Me.txtMonto.MaxLength = 20
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.ReadOnly = True
-        Me.txtMonto.Size = New System.Drawing.Size(125, 23)
+        Me.txtMonto.Size = New System.Drawing.Size(175, 20)
         Me.txtMonto.TabIndex = 1
         Me.txtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label12
+        'MetroLabel25
         '
-        Me.Label12.BackColor = System.Drawing.Color.White
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(269, 12)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(133, 26)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Fecha Otorgamiento:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel25.AutoSize = True
+        Me.MetroLabel25.Location = New System.Drawing.Point(4, 87)
+        Me.MetroLabel25.Name = "MetroLabel25"
+        Me.MetroLabel25.Size = New System.Drawing.Size(67, 19)
+        Me.MetroLabel25.TabIndex = 41
+        Me.MetroLabel25.Text = "Categoria"
         '
         'txtFechaOtorgamiento
         '
         Me.txtFechaOtorgamiento.BackColor = System.Drawing.Color.White
         Me.txtFechaOtorgamiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFechaOtorgamiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFechaOtorgamiento.Location = New System.Drawing.Point(403, 15)
+        Me.txtFechaOtorgamiento.Location = New System.Drawing.Point(432, 11)
         Me.txtFechaOtorgamiento.MaxLength = 25
         Me.txtFechaOtorgamiento.Name = "txtFechaOtorgamiento"
         Me.txtFechaOtorgamiento.ReadOnly = True
-        Me.txtFechaOtorgamiento.Size = New System.Drawing.Size(125, 23)
+        Me.txtFechaOtorgamiento.Size = New System.Drawing.Size(175, 20)
         Me.txtFechaOtorgamiento.TabIndex = 9
-        Me.txtFechaOtorgamiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtFechaOtorgamiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label11
+        'MetroLabel22
         '
-        Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(535, 13)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(147, 24)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Fecha Primera Cuota:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel22.AutoSize = True
+        Me.MetroLabel22.Location = New System.Drawing.Point(4, 63)
+        Me.MetroLabel22.Name = "MetroLabel22"
+        Me.MetroLabel22.Size = New System.Drawing.Size(92, 19)
+        Me.MetroLabel22.TabIndex = 38
+        Me.MetroLabel22.Text = "Plazo (meses);"
         '
-        'txtFechaPrimeraCuota
+        'MetroLabel24
         '
-        Me.txtFechaPrimeraCuota.BackColor = System.Drawing.Color.White
-        Me.txtFechaPrimeraCuota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFechaPrimeraCuota.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFechaPrimeraCuota.Location = New System.Drawing.Point(689, 14)
-        Me.txtFechaPrimeraCuota.MaxLength = 25
-        Me.txtFechaPrimeraCuota.Name = "txtFechaPrimeraCuota"
-        Me.txtFechaPrimeraCuota.ReadOnly = True
-        Me.txtFechaPrimeraCuota.Size = New System.Drawing.Size(125, 23)
-        Me.txtFechaPrimeraCuota.TabIndex = 17
-        Me.txtFechaPrimeraCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MetroLabel24.AutoSize = True
+        Me.MetroLabel24.Location = New System.Drawing.Point(312, 36)
+        Me.MetroLabel24.Name = "MetroLabel24"
+        Me.MetroLabel24.Size = New System.Drawing.Size(78, 19)
+        Me.MetroLabel24.TabIndex = 40
+        Me.MetroLabel24.Text = "Tasa Interes:"
         '
         'txtFechaVencimiento
         '
         Me.txtFechaVencimiento.BackColor = System.Drawing.Color.White
         Me.txtFechaVencimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFechaVencimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFechaVencimiento.Location = New System.Drawing.Point(137, 45)
+        Me.txtFechaVencimiento.Location = New System.Drawing.Point(117, 36)
         Me.txtFechaVencimiento.MaxLength = 25
         Me.txtFechaVencimiento.Name = "txtFechaVencimiento"
         Me.txtFechaVencimiento.ReadOnly = True
-        Me.txtFechaVencimiento.Size = New System.Drawing.Size(125, 23)
+        Me.txtFechaVencimiento.Size = New System.Drawing.Size(175, 20)
         Me.txtFechaVencimiento.TabIndex = 3
-        Me.txtFechaVencimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtFechaVencimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label5
+        'MetroLabel23
         '
-        Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(4, 46)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(124, 19)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Fecha Vencimiento:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel23.AutoSize = True
+        Me.MetroLabel23.Location = New System.Drawing.Point(4, 39)
+        Me.MetroLabel23.Name = "MetroLabel23"
+        Me.MetroLabel23.Size = New System.Drawing.Size(121, 19)
+        Me.MetroLabel23.TabIndex = 39
+        Me.MetroLabel23.Text = "Fecha Vencimiento:"
         '
-        'txtDiasEnMora
+        'MetroLabel21
         '
-        Me.txtDiasEnMora.BackColor = System.Drawing.Color.White
-        Me.txtDiasEnMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDiasEnMora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiasEnMora.Location = New System.Drawing.Point(403, 105)
-        Me.txtDiasEnMora.MaxLength = 25
-        Me.txtDiasEnMora.Name = "txtDiasEnMora"
-        Me.txtDiasEnMora.ReadOnly = True
-        Me.txtDiasEnMora.Size = New System.Drawing.Size(125, 23)
-        Me.txtDiasEnMora.TabIndex = 15
-        Me.txtDiasEnMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MetroLabel21.AutoSize = True
+        Me.MetroLabel21.Location = New System.Drawing.Point(312, 9)
+        Me.MetroLabel21.Name = "MetroLabel21"
+        Me.MetroLabel21.Size = New System.Drawing.Size(134, 19)
+        Me.MetroLabel21.TabIndex = 37
+        Me.MetroLabel21.Text = "Fecha Otorgamiento:"
         '
-        'Label20
+        'MetroLabel20
         '
-        Me.Label20.BackColor = System.Drawing.Color.White
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(269, 106)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(103, 22)
-        Me.Label20.TabIndex = 14
-        Me.Label20.Text = "Días en Mora:"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel20.AutoSize = True
+        Me.MetroLabel20.Location = New System.Drawing.Point(4, 11)
+        Me.MetroLabel20.Name = "MetroLabel20"
+        Me.MetroLabel20.Size = New System.Drawing.Size(51, 19)
+        Me.MetroLabel20.TabIndex = 36
+        Me.MetroLabel20.Text = "Monto:"
         '
         'txtTasaInteres
         '
         Me.txtTasaInteres.BackColor = System.Drawing.Color.White
         Me.txtTasaInteres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTasaInteres.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTasaInteres.Location = New System.Drawing.Point(403, 45)
+        Me.txtTasaInteres.Location = New System.Drawing.Point(432, 36)
         Me.txtTasaInteres.MaxLength = 10
         Me.txtTasaInteres.Name = "txtTasaInteres"
         Me.txtTasaInteres.ReadOnly = True
-        Me.txtTasaInteres.Size = New System.Drawing.Size(125, 23)
+        Me.txtTasaInteres.Size = New System.Drawing.Size(175, 20)
         Me.txtTasaInteres.TabIndex = 11
-        Me.txtTasaInteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label13
-        '
-        Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(535, 46)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(106, 20)
-        Me.Label13.TabIndex = 18
-        Me.Label13.Text = "Plazo en Meses:"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtTasaInteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtNoCuotasMora
         '
         Me.txtNoCuotasMora.BackColor = System.Drawing.Color.White
         Me.txtNoCuotasMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoCuotasMora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoCuotasMora.Location = New System.Drawing.Point(403, 75)
+        Me.txtNoCuotasMora.Location = New System.Drawing.Point(432, 87)
         Me.txtNoCuotasMora.MaxLength = 25
         Me.txtNoCuotasMora.Name = "txtNoCuotasMora"
         Me.txtNoCuotasMora.ReadOnly = True
-        Me.txtNoCuotasMora.Size = New System.Drawing.Size(125, 23)
+        Me.txtNoCuotasMora.Size = New System.Drawing.Size(175, 20)
         Me.txtNoCuotasMora.TabIndex = 13
-        Me.txtNoCuotasMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtNoCuotasMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtPlazo
         '
         Me.txtPlazo.BackColor = System.Drawing.Color.White
         Me.txtPlazo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPlazo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPlazo.Location = New System.Drawing.Point(689, 44)
+        Me.txtPlazo.Location = New System.Drawing.Point(117, 62)
         Me.txtPlazo.MaxLength = 25
         Me.txtPlazo.Name = "txtPlazo"
         Me.txtPlazo.ReadOnly = True
-        Me.txtPlazo.Size = New System.Drawing.Size(125, 23)
+        Me.txtPlazo.Size = New System.Drawing.Size(175, 20)
         Me.txtPlazo.TabIndex = 19
-        Me.txtPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label19
-        '
-        Me.Label19.BackColor = System.Drawing.Color.White
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(269, 76)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(121, 22)
-        Me.Label19.TabIndex = 12
-        Me.Label19.Text = "Cuotas Mora:"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label48
-        '
-        Me.Label48.BackColor = System.Drawing.Color.White
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(269, 45)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(105, 18)
-        Me.Label48.TabIndex = 10
-        Me.Label48.Text = "Tasa de Interés:"
-        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCategoria
         '
         Me.txtCategoria.BackColor = System.Drawing.Color.White
         Me.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCategoria.Location = New System.Drawing.Point(137, 75)
+        Me.txtCategoria.Location = New System.Drawing.Point(117, 87)
         Me.txtCategoria.MaxLength = 25
         Me.txtCategoria.Name = "txtCategoria"
         Me.txtCategoria.ReadOnly = True
-        Me.txtCategoria.Size = New System.Drawing.Size(125, 23)
+        Me.txtCategoria.Size = New System.Drawing.Size(175, 20)
         Me.txtCategoria.TabIndex = 5
-        Me.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(4, 76)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(102, 22)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Categoría:"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtMontoGarantia
-        '
-        Me.txtMontoGarantia.BackColor = System.Drawing.Color.White
-        Me.txtMontoGarantia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtMontoGarantia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMontoGarantia.Location = New System.Drawing.Point(137, 105)
-        Me.txtMontoGarantia.MaxLength = 20
-        Me.txtMontoGarantia.Name = "txtMontoGarantia"
-        Me.txtMontoGarantia.ReadOnly = True
-        Me.txtMontoGarantia.Size = New System.Drawing.Size(125, 23)
-        Me.txtMontoGarantia.TabIndex = 7
-        Me.txtMontoGarantia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(4, 113)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(103, 19)
-        Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Monto Garantía:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(535, 77)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(123, 19)
-        Me.Label7.TabIndex = 20
-        Me.Label7.Text = "Tasa Interés Mora:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtTasaInteresMora
         '
         Me.txtTasaInteresMora.BackColor = System.Drawing.Color.White
         Me.txtTasaInteresMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTasaInteresMora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTasaInteresMora.Location = New System.Drawing.Point(689, 74)
+        Me.txtTasaInteresMora.Location = New System.Drawing.Point(432, 62)
         Me.txtTasaInteresMora.MaxLength = 10
         Me.txtTasaInteresMora.Name = "txtTasaInteresMora"
         Me.txtTasaInteresMora.ReadOnly = True
-        Me.txtTasaInteresMora.Size = New System.Drawing.Size(125, 23)
+        Me.txtTasaInteresMora.Size = New System.Drawing.Size(175, 20)
         Me.txtTasaInteresMora.TabIndex = 21
-        Me.txtTasaInteresMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Teal
-        Me.Label10.Location = New System.Drawing.Point(535, 104)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(108, 21)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "Cuota Total:"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtTasaInteresMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtCuotaTotal
         '
         Me.txtCuotaTotal.BackColor = System.Drawing.Color.White
         Me.txtCuotaTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCuotaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCuotaTotal.Location = New System.Drawing.Point(689, 104)
+        Me.txtCuotaTotal.Location = New System.Drawing.Point(117, 112)
         Me.txtCuotaTotal.MaxLength = 50
         Me.txtCuotaTotal.Name = "txtCuotaTotal"
         Me.txtCuotaTotal.ReadOnly = True
-        Me.txtCuotaTotal.Size = New System.Drawing.Size(125, 23)
+        Me.txtCuotaTotal.Size = New System.Drawing.Size(175, 20)
         Me.txtCuotaTotal.TabIndex = 23
         Me.txtCuotaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -930,26 +747,26 @@ Public Class frmMsCBGestionCredito
         Me.MetroTabPage3.Controls.Add(Me.Label17)
         Me.MetroTabPage3.HorizontalScrollbarBarColor = True
         Me.MetroTabPage3.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage3.HorizontalScrollbarSize = 12
-        Me.MetroTabPage3.Location = New System.Drawing.Point(4, 38)
+        Me.MetroTabPage3.HorizontalScrollbarSize = 10
+        Me.MetroTabPage3.Location = New System.Drawing.Point(4, 35)
         Me.MetroTabPage3.Name = "MetroTabPage3"
-        Me.MetroTabPage3.Size = New System.Drawing.Size(894, 193)
+        Me.MetroTabPage3.Size = New System.Drawing.Size(621, 165)
         Me.MetroTabPage3.TabIndex = 2
         Me.MetroTabPage3.Text = "Pendiente de pagar"
         Me.MetroTabPage3.VerticalScrollbarBarColor = True
         Me.MetroTabPage3.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage3.VerticalScrollbarSize = 12
+        Me.MetroTabPage3.VerticalScrollbarSize = 10
         '
         'txtOtros
         '
         Me.txtOtros.BackColor = System.Drawing.Color.White
         Me.txtOtros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtOtros.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOtros.Location = New System.Drawing.Point(649, 78)
+        Me.txtOtros.Location = New System.Drawing.Point(541, 68)
         Me.txtOtros.MaxLength = 8
         Me.txtOtros.Name = "txtOtros"
         Me.txtOtros.ReadOnly = True
-        Me.txtOtros.Size = New System.Drawing.Size(96, 23)
+        Me.txtOtros.Size = New System.Drawing.Size(80, 20)
         Me.txtOtros.TabIndex = 17
         Me.txtOtros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -959,9 +776,9 @@ Public Class frmMsCBGestionCredito
         Me.Label120.BackColor = System.Drawing.Color.White
         Me.Label120.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label120.ForeColor = System.Drawing.Color.Black
-        Me.Label120.Location = New System.Drawing.Point(510, 83)
+        Me.Label120.Location = New System.Drawing.Point(425, 72)
         Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(47, 16)
+        Me.Label120.Size = New System.Drawing.Size(37, 14)
         Me.Label120.TabIndex = 16
         Me.Label120.Text = "Otros:"
         Me.Label120.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -971,11 +788,11 @@ Public Class frmMsCBGestionCredito
         Me.txtCuota.BackColor = System.Drawing.Color.White
         Me.txtCuota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCuota.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCuota.Location = New System.Drawing.Point(149, 18)
+        Me.txtCuota.Location = New System.Drawing.Point(124, 16)
         Me.txtCuota.MaxLength = 8
         Me.txtCuota.Name = "txtCuota"
         Me.txtCuota.ReadOnly = True
-        Me.txtCuota.Size = New System.Drawing.Size(96, 23)
+        Me.txtCuota.Size = New System.Drawing.Size(80, 20)
         Me.txtCuota.TabIndex = 1
         Me.txtCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -984,9 +801,9 @@ Public Class frmMsCBGestionCredito
         Me.Label28.BackColor = System.Drawing.Color.White
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Black
-        Me.Label28.Location = New System.Drawing.Point(10, 16)
+        Me.Label28.Location = New System.Drawing.Point(8, 14)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(132, 23)
+        Me.Label28.Size = New System.Drawing.Size(110, 20)
         Me.Label28.TabIndex = 0
         Me.Label28.Text = "Cuota Normal:"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -996,11 +813,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaAhorro.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaAhorro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaAhorro.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaAhorro.Location = New System.Drawing.Point(391, 18)
+        Me.txtSaldoDiaAhorro.Location = New System.Drawing.Point(326, 16)
         Me.txtSaldoDiaAhorro.MaxLength = 8
         Me.txtSaldoDiaAhorro.Name = "txtSaldoDiaAhorro"
         Me.txtSaldoDiaAhorro.ReadOnly = True
-        Me.txtSaldoDiaAhorro.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaAhorro.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaAhorro.TabIndex = 7
         Me.txtSaldoDiaAhorro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1009,9 +826,9 @@ Public Class frmMsCBGestionCredito
         Me.Label26.BackColor = System.Drawing.Color.White
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(252, 17)
+        Me.Label26.Location = New System.Drawing.Point(210, 15)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(132, 21)
+        Me.Label26.Size = New System.Drawing.Size(110, 18)
         Me.Label26.TabIndex = 6
         Me.Label26.Text = "Ahorro:"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1021,11 +838,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaAportacion.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaAportacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaAportacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaAportacion.Location = New System.Drawing.Point(649, 18)
+        Me.txtSaldoDiaAportacion.Location = New System.Drawing.Point(541, 16)
         Me.txtSaldoDiaAportacion.MaxLength = 8
         Me.txtSaldoDiaAportacion.Name = "txtSaldoDiaAportacion"
         Me.txtSaldoDiaAportacion.ReadOnly = True
-        Me.txtSaldoDiaAportacion.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaAportacion.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaAportacion.TabIndex = 13
         Me.txtSaldoDiaAportacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1034,9 +851,9 @@ Public Class frmMsCBGestionCredito
         Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(510, 18)
+        Me.Label15.Location = New System.Drawing.Point(425, 16)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(132, 19)
+        Me.Label15.Size = New System.Drawing.Size(110, 16)
         Me.Label15.TabIndex = 12
         Me.Label15.Text = "Aportación:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1046,11 +863,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaInteres.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaInteres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaInteres.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaInteres.Location = New System.Drawing.Point(149, 48)
+        Me.txtSaldoDiaInteres.Location = New System.Drawing.Point(124, 42)
         Me.txtSaldoDiaInteres.MaxLength = 8
         Me.txtSaldoDiaInteres.Name = "txtSaldoDiaInteres"
         Me.txtSaldoDiaInteres.ReadOnly = True
-        Me.txtSaldoDiaInteres.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaInteres.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaInteres.TabIndex = 3
         Me.txtSaldoDiaInteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1059,11 +876,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaInteresMora.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaInteresMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaInteresMora.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaInteresMora.Location = New System.Drawing.Point(391, 48)
+        Me.txtSaldoDiaInteresMora.Location = New System.Drawing.Point(326, 42)
         Me.txtSaldoDiaInteresMora.MaxLength = 8
         Me.txtSaldoDiaInteresMora.Name = "txtSaldoDiaInteresMora"
         Me.txtSaldoDiaInteresMora.ReadOnly = True
-        Me.txtSaldoDiaInteresMora.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaInteresMora.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaInteresMora.TabIndex = 9
         Me.txtSaldoDiaInteresMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1072,9 +889,9 @@ Public Class frmMsCBGestionCredito
         Me.Label21.BackColor = System.Drawing.Color.White
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(252, 48)
+        Me.Label21.Location = New System.Drawing.Point(210, 42)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(115, 19)
+        Me.Label21.Size = New System.Drawing.Size(96, 16)
         Me.Label21.TabIndex = 8
         Me.Label21.Text = "Interés Moratorio:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1084,11 +901,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaComision.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaComision.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaComision.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaComision.Location = New System.Drawing.Point(391, 78)
+        Me.txtSaldoDiaComision.Location = New System.Drawing.Point(326, 68)
         Me.txtSaldoDiaComision.MaxLength = 8
         Me.txtSaldoDiaComision.Name = "txtSaldoDiaComision"
         Me.txtSaldoDiaComision.ReadOnly = True
-        Me.txtSaldoDiaComision.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaComision.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaComision.TabIndex = 11
         Me.txtSaldoDiaComision.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1097,9 +914,9 @@ Public Class frmMsCBGestionCredito
         Me.Label22.BackColor = System.Drawing.Color.White
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(252, 77)
+        Me.Label22.Location = New System.Drawing.Point(210, 67)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(132, 22)
+        Me.Label22.Size = New System.Drawing.Size(110, 19)
         Me.Label22.TabIndex = 10
         Me.Label22.Text = "Seg. Vehiculo;"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1109,9 +926,9 @@ Public Class frmMsCBGestionCredito
         Me.Label25.BackColor = System.Drawing.Color.White
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(10, 47)
+        Me.Label25.Location = New System.Drawing.Point(8, 41)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(105, 22)
+        Me.Label25.Size = New System.Drawing.Size(88, 19)
         Me.Label25.TabIndex = 2
         Me.Label25.Text = "Interés Normal:"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1121,11 +938,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaSegDeuda.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaSegDeuda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaSegDeuda.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaSegDeuda.Location = New System.Drawing.Point(149, 78)
+        Me.txtSaldoDiaSegDeuda.Location = New System.Drawing.Point(124, 68)
         Me.txtSaldoDiaSegDeuda.MaxLength = 8
         Me.txtSaldoDiaSegDeuda.Name = "txtSaldoDiaSegDeuda"
         Me.txtSaldoDiaSegDeuda.ReadOnly = True
-        Me.txtSaldoDiaSegDeuda.Size = New System.Drawing.Size(96, 23)
+        Me.txtSaldoDiaSegDeuda.Size = New System.Drawing.Size(80, 20)
         Me.txtSaldoDiaSegDeuda.TabIndex = 5
         Me.txtSaldoDiaSegDeuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1134,11 +951,11 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaSegDanios.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaSegDanios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSaldoDiaSegDanios.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaSegDanios.Location = New System.Drawing.Point(649, 48)
+        Me.txtSaldoDiaSegDanios.Location = New System.Drawing.Point(541, 42)
         Me.txtSaldoDiaSegDanios.MaxLength = 8
         Me.txtSaldoDiaSegDanios.Name = "txtSaldoDiaSegDanios"
         Me.txtSaldoDiaSegDanios.ReadOnly = True
-        Me.txtSaldoDiaSegDanios.Size = New System.Drawing.Size(95, 23)
+        Me.txtSaldoDiaSegDanios.Size = New System.Drawing.Size(79, 20)
         Me.txtSaldoDiaSegDanios.TabIndex = 15
         Me.txtSaldoDiaSegDanios.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1147,9 +964,9 @@ Public Class frmMsCBGestionCredito
         Me.Label24.BackColor = System.Drawing.Color.White
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(510, 48)
+        Me.Label24.Location = New System.Drawing.Point(425, 42)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(77, 19)
+        Me.Label24.Size = New System.Drawing.Size(64, 16)
         Me.Label24.TabIndex = 14
         Me.Label24.Text = "Seg.Daños:"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1159,149 +976,146 @@ Public Class frmMsCBGestionCredito
         Me.Label17.BackColor = System.Drawing.Color.White
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(11, 77)
+        Me.Label17.Location = New System.Drawing.Point(9, 67)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(87, 21)
+        Me.Label17.Size = New System.Drawing.Size(73, 18)
         Me.Label17.TabIndex = 4
         Me.Label17.Text = "Seg. Deuda:"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtTotal
+        'MetroLabel19
         '
-        Me.txtTotal.BackColor = System.Drawing.Color.White
-        Me.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTotal.Location = New System.Drawing.Point(803, 264)
-        Me.txtTotal.MaxLength = 8
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(96, 23)
-        Me.txtTotal.TabIndex = 9
-        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label87
-        '
-        Me.Label87.BackColor = System.Drawing.Color.White
-        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.ForeColor = System.Drawing.Color.Teal
-        Me.Label87.Location = New System.Drawing.Point(670, 262)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(134, 23)
-        Me.Label87.TabIndex = 8
-        Me.Label87.Text = "Total a Cancelar:"
-        Me.Label87.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtCapitalMora
-        '
-        Me.txtCapitalMora.BackColor = System.Drawing.Color.White
-        Me.txtCapitalMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCapitalMora.Location = New System.Drawing.Point(116, 264)
-        Me.txtCapitalMora.MaxLength = 20
-        Me.txtCapitalMora.Name = "txtCapitalMora"
-        Me.txtCapitalMora.ReadOnly = True
-        Me.txtCapitalMora.Size = New System.Drawing.Size(96, 23)
-        Me.txtCapitalMora.TabIndex = 3
-        Me.txtCapitalMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label58
-        '
-        Me.Label58.BackColor = System.Drawing.Color.White
-        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.ForeColor = System.Drawing.Color.Teal
-        Me.Label58.Location = New System.Drawing.Point(10, 265)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(104, 22)
-        Me.Label58.TabIndex = 2
-        Me.Label58.Text = "Capital Mora:"
-        Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtAditivosCobrar
-        '
-        Me.txtAditivosCobrar.BackColor = System.Drawing.Color.White
-        Me.txtAditivosCobrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtAditivosCobrar.Location = New System.Drawing.Point(570, 264)
-        Me.txtAditivosCobrar.MaxLength = 8
-        Me.txtAditivosCobrar.Name = "txtAditivosCobrar"
-        Me.txtAditivosCobrar.ReadOnly = True
-        Me.txtAditivosCobrar.Size = New System.Drawing.Size(96, 23)
-        Me.txtAditivosCobrar.TabIndex = 7
-        Me.txtAditivosCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label27
-        '
-        Me.Label27.BackColor = System.Drawing.Color.White
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.Teal
-        Me.Label27.Location = New System.Drawing.Point(430, 265)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(135, 38)
-        Me.Label27.TabIndex = 6
-        Me.Label27.Text = "Aditivos a Cobrar:"
-        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtSaldoCapital
-        '
-        Me.txtSaldoCapital.BackColor = System.Drawing.Color.White
-        Me.txtSaldoCapital.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSaldoCapital.Location = New System.Drawing.Point(330, 267)
-        Me.txtSaldoCapital.MaxLength = 20
-        Me.txtSaldoCapital.Name = "txtSaldoCapital"
-        Me.txtSaldoCapital.ReadOnly = True
-        Me.txtSaldoCapital.Size = New System.Drawing.Size(95, 23)
-        Me.txtSaldoCapital.TabIndex = 5
-        Me.txtSaldoCapital.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label18
-        '
-        Me.Label18.BackColor = System.Drawing.Color.White
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Teal
-        Me.Label18.Location = New System.Drawing.Point(218, 266)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(105, 20)
-        Me.Label18.TabIndex = 4
-        Me.Label18.Text = "Saldo Capital:"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MetroLabel19.AutoSize = True
+        Me.MetroLabel19.Location = New System.Drawing.Point(322, 551)
+        Me.MetroLabel19.Name = "MetroLabel19"
+        Me.MetroLabel19.Size = New System.Drawing.Size(102, 19)
+        Me.MetroLabel19.TabIndex = 39
+        Me.MetroLabel19.Text = "Total a Cancelar"
         '
         'gbGestion
         '
         Me.gbGestion.BackColor = System.Drawing.Color.White
-        Me.gbGestion.Controls.Add(Me.btnEstadoCta)
-        Me.gbGestion.Controls.Add(Me.Label121)
-        Me.gbGestion.Controls.Add(Me.MetroButton7)
+        Me.gbGestion.Controls.Add(Me.MetroLabel7)
         Me.gbGestion.Controls.Add(Me.dtpFechaPactada)
+        Me.gbGestion.Controls.Add(Me.MetroLabel6)
+        Me.gbGestion.Controls.Add(Me.dtFecha)
+        Me.gbGestion.Controls.Add(Me.MetroLabel5)
+        Me.gbGestion.Controls.Add(Me.MetroLabel4)
+        Me.gbGestion.Controls.Add(Me.MetroLabel3)
+        Me.gbGestion.Controls.Add(Me.cbCobranza)
+        Me.gbGestion.Controls.Add(Me.MetroLabel2)
+        Me.gbGestion.Controls.Add(Me.MetroLabel1)
+        Me.gbGestion.Controls.Add(Me.btnEstadoCta)
+        Me.gbGestion.Controls.Add(Me.MetroButton7)
         Me.gbGestion.Controls.Add(Me.txtGestor)
         Me.gbGestion.Controls.Add(Me.btnAdd1)
-        Me.gbGestion.Controls.Add(Me.txtCodDespacho)
         Me.gbGestion.Controls.Add(Me.txtNoCuotas)
-        Me.gbGestion.Controls.Add(Me.Label32)
-        Me.gbGestion.Controls.Add(Me.Label23)
-        Me.gbGestion.Controls.Add(Me.lblCompromiso)
-        Me.gbGestion.Controls.Add(Me.lblRango)
         Me.gbGestion.Controls.Add(Me.txtObservaciones)
-        Me.gbGestion.Controls.Add(Me.Label4)
-        Me.gbGestion.Controls.Add(Me.dtHora)
-        Me.gbGestion.Controls.Add(Me.Label3)
-        Me.gbGestion.Controls.Add(Me.dtFecha)
         Me.gbGestion.Controls.Add(Me.txtAcuerdo)
-        Me.gbGestion.Controls.Add(Me.Label9)
-        Me.gbGestion.Controls.Add(Me.txtTipoCobranza)
-        Me.gbGestion.Controls.Add(Me.txtCodTipoCobranza)
-        Me.gbGestion.Controls.Add(Me.Label2)
-        Me.gbGestion.Controls.Add(Me.Label1)
-        Me.gbGestion.Controls.Add(Me.txtDespacho)
-        Me.gbGestion.Controls.Add(Me.lblDespacho)
-        Me.gbGestion.Location = New System.Drawing.Point(4, 3)
+        Me.gbGestion.Location = New System.Drawing.Point(3, 3)
         Me.gbGestion.Name = "gbGestion"
-        Me.gbGestion.Size = New System.Drawing.Size(914, 319)
+        Me.gbGestion.Size = New System.Drawing.Size(634, 276)
         Me.gbGestion.TabIndex = 0
         Me.gbGestion.TabStop = False
+        '
+        'MetroLabel7
+        '
+        Me.MetroLabel7.AutoSize = True
+        Me.MetroLabel7.Location = New System.Drawing.Point(5, 182)
+        Me.MetroLabel7.Name = "MetroLabel7"
+        Me.MetroLabel7.Size = New System.Drawing.Size(114, 19)
+        Me.MetroLabel7.TabIndex = 27
+        Me.MetroLabel7.Text = "Monto Acordado:"
+        '
+        'dtpFechaPactada
+        '
+        Me.dtpFechaPactada.Location = New System.Drawing.Point(412, 148)
+        Me.dtpFechaPactada.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.dtpFechaPactada.Name = "dtpFechaPactada"
+        Me.dtpFechaPactada.Size = New System.Drawing.Size(206, 29)
+        Me.dtpFechaPactada.Style = MetroFramework.MetroColorStyle.Teal
+        Me.dtpFechaPactada.TabIndex = 5
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(323, 148)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(96, 19)
+        Me.MetroLabel6.TabIndex = 7
+        Me.MetroLabel6.Text = "Fecha Pactada:"
+        '
+        'dtFecha
+        '
+        Me.dtFecha.Enabled = False
+        Me.dtFecha.Location = New System.Drawing.Point(112, 148)
+        Me.dtFecha.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.dtFecha.Name = "dtFecha"
+        Me.dtFecha.Size = New System.Drawing.Size(206, 29)
+        Me.dtFecha.Style = MetroFramework.MetroColorStyle.Teal
+        Me.dtFecha.TabIndex = 4
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.Location = New System.Drawing.Point(5, 148)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(46, 19)
+        Me.MetroLabel5.TabIndex = 6
+        Me.MetroLabel5.Text = "Fecha:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(5, 111)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(86, 19)
+        Me.MetroLabel4.TabIndex = 26
+        Me.MetroLabel4.Text = "Observación:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.Location = New System.Drawing.Point(5, 74)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(62, 19)
+        Me.MetroLabel3.TabIndex = 25
+        Me.MetroLabel3.Text = "Acuerdo:"
+        '
+        'cbCobranza
+        '
+        Me.cbCobranza.FormattingEnabled = True
+        Me.cbCobranza.ItemHeight = 23
+        Me.cbCobranza.Location = New System.Drawing.Point(112, 42)
+        Me.cbCobranza.Name = "cbCobranza"
+        Me.cbCobranza.Size = New System.Drawing.Size(506, 29)
+        Me.cbCobranza.TabIndex = 4
+        Me.cbCobranza.UseSelectable = True
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(5, 42)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(118, 19)
+        Me.MetroLabel2.TabIndex = 6
+        Me.MetroLabel2.Text = "Tipo de Cobranza:"
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(5, 16)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(109, 19)
+        Me.MetroLabel1.TabIndex = 5
+        Me.MetroLabel1.Text = "Gestor Asignado:"
         '
         'btnEstadoCta
         '
         Me.btnEstadoCta.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnEstadoCta.Location = New System.Drawing.Point(499, 273)
+        Me.btnEstadoCta.Location = New System.Drawing.Point(279, 205)
         Me.btnEstadoCta.Name = "btnEstadoCta"
-        Me.btnEstadoCta.Size = New System.Drawing.Size(114, 33)
+        Me.btnEstadoCta.Size = New System.Drawing.Size(95, 28)
         Me.btnEstadoCta.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEstadoCta.TabIndex = 22
         Me.btnEstadoCta.Text = "&Estado de Cuenta"
@@ -1309,21 +1123,12 @@ Public Class frmMsCBGestionCredito
         Me.btnEstadoCta.UseSelectable = True
         Me.btnEstadoCta.UseStyleColors = True
         '
-        'Label121
-        '
-        Me.Label121.AutoSize = True
-        Me.Label121.Location = New System.Drawing.Point(8, 18)
-        Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(55, 17)
-        Me.Label121.TabIndex = 0
-        Me.Label121.Text = "Gestor:"
-        '
         'MetroButton7
         '
         Me.MetroButton7.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.MetroButton7.Location = New System.Drawing.Point(622, 273)
+        Me.MetroButton7.Location = New System.Drawing.Point(382, 205)
         Me.MetroButton7.Name = "MetroButton7"
-        Me.MetroButton7.Size = New System.Drawing.Size(114, 33)
+        Me.MetroButton7.Size = New System.Drawing.Size(95, 28)
         Me.MetroButton7.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton7.TabIndex = 23
         Me.MetroButton7.Text = "&Datos Asociado"
@@ -1331,30 +1136,21 @@ Public Class frmMsCBGestionCredito
         Me.MetroButton7.UseSelectable = True
         Me.MetroButton7.UseStyleColors = True
         '
-        'dtpFechaPactada
-        '
-        Me.dtpFechaPactada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaPactada.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaPactada.Location = New System.Drawing.Point(503, 210)
-        Me.dtpFechaPactada.Name = "dtpFechaPactada"
-        Me.dtpFechaPactada.Size = New System.Drawing.Size(110, 23)
-        Me.dtpFechaPactada.TabIndex = 16
-        '
         'txtGestor
         '
         Me.txtGestor.BackColor = System.Drawing.Color.White
         Me.txtGestor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtGestor.Location = New System.Drawing.Point(140, 18)
+        Me.txtGestor.Location = New System.Drawing.Point(112, 18)
         Me.txtGestor.Name = "txtGestor"
-        Me.txtGestor.Size = New System.Drawing.Size(766, 22)
+        Me.txtGestor.Size = New System.Drawing.Size(506, 20)
         Me.txtGestor.TabIndex = 1
         '
         'btnAdd1
         '
         Me.btnAdd1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnAdd1.Location = New System.Drawing.Point(742, 273)
+        Me.btnAdd1.Location = New System.Drawing.Point(482, 205)
         Me.btnAdd1.Name = "btnAdd1"
-        Me.btnAdd1.Size = New System.Drawing.Size(164, 33)
+        Me.btnAdd1.Size = New System.Drawing.Size(136, 28)
         Me.btnAdd1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAdd1.TabIndex = 24
         Me.btnAdd1.Text = "&Guardar Gestión"
@@ -1362,227 +1158,135 @@ Public Class frmMsCBGestionCredito
         Me.btnAdd1.UseSelectable = True
         Me.btnAdd1.UseStyleColors = True
         '
-        'txtCodDespacho
-        '
-        Me.txtCodDespacho.BackColor = System.Drawing.Color.White
-        Me.txtCodDespacho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodDespacho.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodDespacho.Location = New System.Drawing.Point(110, 241)
-        Me.txtCodDespacho.Name = "txtCodDespacho"
-        Me.txtCodDespacho.Size = New System.Drawing.Size(98, 23)
-        Me.txtCodDespacho.TabIndex = 20
-        Me.txtCodDespacho.Visible = False
-        '
         'txtNoCuotas
         '
         Me.txtNoCuotas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNoCuotas.Location = New System.Drawing.Point(689, 210)
+        Me.txtNoCuotas.Location = New System.Drawing.Point(112, 179)
         Me.txtNoCuotas.MaxLength = 20
         Me.txtNoCuotas.Name = "txtNoCuotas"
-        Me.txtNoCuotas.Size = New System.Drawing.Size(217, 22)
+        Me.txtNoCuotas.Size = New System.Drawing.Size(206, 20)
         Me.txtNoCuotas.TabIndex = 18
-        '
-        'Label32
-        '
-        Me.Label32.BackColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(619, 215)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(64, 19)
-        Me.Label32.TabIndex = 17
-        Me.Label32.Text = "Monto:"
-        '
-        'Label23
-        '
-        Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(381, 213)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(116, 19)
-        Me.Label23.TabIndex = 15
-        Me.Label23.Text = "Fecha Pactada:"
-        '
-        'lblCompromiso
-        '
-        Me.lblCompromiso.BackColor = System.Drawing.Color.White
-        Me.lblCompromiso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCompromiso.ForeColor = System.Drawing.Color.Teal
-        Me.lblCompromiso.Location = New System.Drawing.Point(11, 93)
-        Me.lblCompromiso.Name = "lblCompromiso"
-        Me.lblCompromiso.Size = New System.Drawing.Size(895, 19)
-        Me.lblCompromiso.TabIndex = 5
-        Me.lblCompromiso.Text = "Compromiso de pago no debe exceder de "
-        '
-        'lblRango
-        '
-        Me.lblRango.BackColor = System.Drawing.Color.White
-        Me.lblRango.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRango.ForeColor = System.Drawing.Color.Teal
-        Me.lblRango.Location = New System.Drawing.Point(12, 75)
-        Me.lblRango.Name = "lblRango"
-        Me.lblRango.Size = New System.Drawing.Size(894, 18)
-        Me.lblRango.TabIndex = 6
-        Me.lblRango.Text = "Rango de morosidad:"
         '
         'txtObservaciones
         '
         Me.txtObservaciones.BackColor = System.Drawing.Color.White
         Me.txtObservaciones.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtObservaciones.Location = New System.Drawing.Point(110, 167)
+        Me.txtObservaciones.Location = New System.Drawing.Point(112, 111)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservaciones.Size = New System.Drawing.Size(796, 37)
+        Me.txtObservaciones.Size = New System.Drawing.Size(506, 32)
         Me.txtObservaciones.TabIndex = 10
-        '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(8, 167)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 19)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Observaciones:"
-        '
-        'dtHora
-        '
-        Me.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtHora.Location = New System.Drawing.Point(301, 210)
-        Me.dtHora.Name = "dtHora"
-        Me.dtHora.Size = New System.Drawing.Size(74, 22)
-        Me.dtHora.TabIndex = 14
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(256, 213)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 19)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Hora:"
-        '
-        'dtFecha
-        '
-        Me.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtFecha.Location = New System.Drawing.Point(131, 210)
-        Me.dtFecha.Name = "dtFecha"
-        Me.dtFecha.Size = New System.Drawing.Size(119, 22)
-        Me.dtFecha.TabIndex = 12
         '
         'txtAcuerdo
         '
         Me.txtAcuerdo.BackColor = System.Drawing.Color.White
-        Me.txtAcuerdo.Location = New System.Drawing.Point(110, 123)
+        Me.txtAcuerdo.Location = New System.Drawing.Point(112, 74)
         Me.txtAcuerdo.Multiline = True
         Me.txtAcuerdo.Name = "txtAcuerdo"
         Me.txtAcuerdo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtAcuerdo.Size = New System.Drawing.Size(796, 37)
+        Me.txtAcuerdo.Size = New System.Drawing.Size(506, 32)
         Me.txtAcuerdo.TabIndex = 8
         '
-        'Label9
+        'MetroLabel17
         '
-        Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(8, 213)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(117, 19)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Fecha Gestión:"
+        Me.MetroLabel17.AutoSize = True
+        Me.MetroLabel17.Location = New System.Drawing.Point(8, 526)
+        Me.MetroLabel17.Name = "MetroLabel17"
+        Me.MetroLabel17.Size = New System.Drawing.Size(105, 19)
+        Me.MetroLabel17.TabIndex = 37
+        Me.MetroLabel17.Text = "Saldo Préstamo:"
         '
-        'txtTipoCobranza
+        'MetroLabel18
         '
-        Me.txtTipoCobranza.BackColor = System.Drawing.Color.White
-        Me.txtTipoCobranza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTipoCobranza.Location = New System.Drawing.Point(215, 48)
-        Me.txtTipoCobranza.MaxLength = 100
-        Me.txtTipoCobranza.Name = "txtTipoCobranza"
-        Me.txtTipoCobranza.ReadOnly = True
-        Me.txtTipoCobranza.Size = New System.Drawing.Size(691, 22)
-        Me.txtTipoCobranza.TabIndex = 4
+        Me.MetroLabel18.AutoSize = True
+        Me.MetroLabel18.Location = New System.Drawing.Point(8, 547)
+        Me.MetroLabel18.Name = "MetroLabel18"
+        Me.MetroLabel18.Size = New System.Drawing.Size(58, 19)
+        Me.MetroLabel18.TabIndex = 38
+        Me.MetroLabel18.Text = "Aditivos:"
         '
-        'txtCodTipoCobranza
+        'txtAditivosCobrar
         '
-        Me.txtCodTipoCobranza.BackColor = System.Drawing.Color.White
-        Me.txtCodTipoCobranza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodTipoCobranza.Location = New System.Drawing.Point(140, 48)
-        Me.txtCodTipoCobranza.MaxLength = 20
-        Me.txtCodTipoCobranza.Name = "txtCodTipoCobranza"
-        Me.txtCodTipoCobranza.Size = New System.Drawing.Size(68, 22)
-        Me.txtCodTipoCobranza.TabIndex = 3
+        Me.txtAditivosCobrar.BackColor = System.Drawing.Color.White
+        Me.txtAditivosCobrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAditivosCobrar.Location = New System.Drawing.Point(115, 547)
+        Me.txtAditivosCobrar.MaxLength = 8
+        Me.txtAditivosCobrar.Name = "txtAditivosCobrar"
+        Me.txtAditivosCobrar.ReadOnly = True
+        Me.txtAditivosCobrar.Size = New System.Drawing.Size(207, 20)
+        Me.txtAditivosCobrar.TabIndex = 7
+        Me.txtAditivosCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label2
+        'txtCapitalMora
         '
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(8, 127)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 37)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Acuerdo o Comentario:"
+        Me.txtCapitalMora.BackColor = System.Drawing.Color.White
+        Me.txtCapitalMora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCapitalMora.Location = New System.Drawing.Point(415, 523)
+        Me.txtCapitalMora.MaxLength = 20
+        Me.txtCapitalMora.Name = "txtCapitalMora"
+        Me.txtCapitalMora.ReadOnly = True
+        Me.txtCapitalMora.Size = New System.Drawing.Size(207, 20)
+        Me.txtCapitalMora.TabIndex = 3
+        Me.txtCapitalMora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label1
+        'txtTotal
         '
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(8, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 19)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Tipo de Cobranza:"
+        Me.txtTotal.BackColor = System.Drawing.Color.White
+        Me.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTotal.Location = New System.Drawing.Point(415, 549)
+        Me.txtTotal.MaxLength = 8
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(207, 20)
+        Me.txtTotal.TabIndex = 9
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'txtDespacho
+        'txtSaldoCapital
         '
-        Me.txtDespacho.BackColor = System.Drawing.Color.White
-        Me.txtDespacho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDespacho.Location = New System.Drawing.Point(215, 243)
-        Me.txtDespacho.MaxLength = 100
-        Me.txtDespacho.Name = "txtDespacho"
-        Me.txtDespacho.Size = New System.Drawing.Size(691, 22)
-        Me.txtDespacho.TabIndex = 21
-        Me.txtDespacho.Visible = False
+        Me.txtSaldoCapital.BackColor = System.Drawing.Color.White
+        Me.txtSaldoCapital.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSaldoCapital.Location = New System.Drawing.Point(115, 522)
+        Me.txtSaldoCapital.MaxLength = 20
+        Me.txtSaldoCapital.Name = "txtSaldoCapital"
+        Me.txtSaldoCapital.ReadOnly = True
+        Me.txtSaldoCapital.Size = New System.Drawing.Size(207, 20)
+        Me.txtSaldoCapital.TabIndex = 5
+        Me.txtSaldoCapital.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'lblDespacho
+        'MetroLabel16
         '
-        Me.lblDespacho.BackColor = System.Drawing.Color.White
-        Me.lblDespacho.Location = New System.Drawing.Point(11, 246)
-        Me.lblDespacho.Name = "lblDespacho"
-        Me.lblDespacho.Size = New System.Drawing.Size(77, 18)
-        Me.lblDespacho.TabIndex = 19
-        Me.lblDespacho.Text = "Despacho:"
-        Me.lblDespacho.Visible = False
+        Me.MetroLabel16.AutoSize = True
+        Me.MetroLabel16.Location = New System.Drawing.Point(327, 522)
+        Me.MetroLabel16.Name = "MetroLabel16"
+        Me.MetroLabel16.Size = New System.Drawing.Size(86, 19)
+        Me.MetroLabel16.TabIndex = 36
+        Me.MetroLabel16.Text = "Capital Mora"
         '
         'tb6
         '
         Me.tb6.BackColor = System.Drawing.Color.White
-        Me.tb6.Controls.Add(Me.GroupBox3)
-        Me.tb6.Location = New System.Drawing.Point(4, 25)
+        Me.tb6.Controls.Add(Me.fgGestiones)
+        Me.tb6.Location = New System.Drawing.Point(4, 22)
         Me.tb6.Name = "tb6"
-        Me.tb6.Size = New System.Drawing.Size(923, 694)
+        Me.tb6.Size = New System.Drawing.Size(647, 601)
         Me.tb6.TabIndex = 5
         Me.tb6.Tag = ""
         Me.tb6.Text = "Gestiones"
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.fgGestiones)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox3.Location = New System.Drawing.Point(11, 15)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(899, 613)
-        Me.GroupBox3.TabIndex = 117
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Gestiones Realizadas"
-        '
         'fgGestiones
         '
         Me.fgGestiones.AllowEditing = False
-        Me.fgGestiones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgGestiones.BackColor = System.Drawing.Color.White
         Me.fgGestiones.ColumnInfo = resources.GetString("fgGestiones.ColumnInfo")
+        Me.fgGestiones.Dock = System.Windows.Forms.DockStyle.Fill
         Me.fgGestiones.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fgGestiones.Location = New System.Drawing.Point(7, 20)
+        Me.fgGestiones.ForeColor = System.Drawing.Color.Black
+        Me.fgGestiones.Location = New System.Drawing.Point(0, 0)
         Me.fgGestiones.Name = "fgGestiones"
         Me.fgGestiones.Rows.Count = 2
-        Me.fgGestiones.Rows.DefaultSize = 22
-        Me.fgGestiones.Size = New System.Drawing.Size(885, 583)
+        Me.fgGestiones.Rows.DefaultSize = 19
+        Me.fgGestiones.Size = New System.Drawing.Size(647, 601)
         Me.fgGestiones.StyleInfo = resources.GetString("fgGestiones.StyleInfo")
         Me.fgGestiones.TabIndex = 60
         '
@@ -1591,9 +1295,9 @@ Public Class frmMsCBGestionCredito
         Me.tb3.BackColor = System.Drawing.Color.White
         Me.tb3.Controls.Add(Me.GroupBox5)
         Me.tb3.Controls.Add(Me.GroupBox4)
-        Me.tb3.Location = New System.Drawing.Point(4, 25)
+        Me.tb3.Location = New System.Drawing.Point(4, 22)
         Me.tb3.Name = "tb3"
-        Me.tb3.Size = New System.Drawing.Size(923, 694)
+        Me.tb3.Size = New System.Drawing.Size(647, 601)
         Me.tb3.TabIndex = 2
         Me.tb3.Text = "Datos Fiadores / Codeudores"
         '
@@ -1602,9 +1306,9 @@ Public Class frmMsCBGestionCredito
         Me.GroupBox5.Controls.Add(Me.fgCodeudor)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox5.Location = New System.Drawing.Point(7, 328)
+        Me.GroupBox5.Location = New System.Drawing.Point(21, 303)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(907, 317)
+        Me.GroupBox5.Size = New System.Drawing.Size(610, 275)
         Me.GroupBox5.TabIndex = 65
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Codeudores"
@@ -1618,13 +1322,13 @@ Public Class frmMsCBGestionCredito
         Me.fgCodeudor.ColumnInfo = "10,1,0,0,0,95,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;AllowDragging:False;AllowEditing:F" &
     "alse;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fgCodeudor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.fgCodeudor.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.fgCodeudor.ForeColor = System.Drawing.Color.Teal
-        Me.fgCodeudor.Location = New System.Drawing.Point(3, 19)
+        Me.fgCodeudor.Font = New System.Drawing.Font("Arial", 8.25!)
+        Me.fgCodeudor.ForeColor = System.Drawing.Color.Black
+        Me.fgCodeudor.Location = New System.Drawing.Point(3, 16)
         Me.fgCodeudor.Name = "fgCodeudor"
         Me.fgCodeudor.Rows.Count = 2
-        Me.fgCodeudor.Rows.DefaultSize = 22
-        Me.fgCodeudor.Size = New System.Drawing.Size(901, 295)
+        Me.fgCodeudor.Rows.DefaultSize = 19
+        Me.fgCodeudor.Size = New System.Drawing.Size(604, 256)
         Me.fgCodeudor.StyleInfo = resources.GetString("fgCodeudor.StyleInfo")
         Me.fgCodeudor.TabIndex = 59
         '
@@ -1634,12 +1338,12 @@ Public Class frmMsCBGestionCredito
         Me.GroupBox4.Controls.Add(Me.fgFiador)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox4.Location = New System.Drawing.Point(4, 3)
+        Me.GroupBox4.Location = New System.Drawing.Point(21, 10)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(914, 318)
+        Me.GroupBox4.Size = New System.Drawing.Size(610, 276)
         Me.GroupBox4.TabIndex = 64
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Fiador Solidario"
+        Me.GroupBox4.Text = "Fiadores:"
         '
         'fgFiador
         '
@@ -1649,39 +1353,26 @@ Public Class frmMsCBGestionCredito
         Me.fgFiador.BackColor = System.Drawing.Color.White
         Me.fgFiador.ColumnInfo = "10,1,0,0,0,95,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fgFiador.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.fgFiador.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.fgFiador.ForeColor = System.Drawing.Color.Teal
-        Me.fgFiador.Location = New System.Drawing.Point(3, 19)
+        Me.fgFiador.Font = New System.Drawing.Font("Arial", 8.25!)
+        Me.fgFiador.ForeColor = System.Drawing.Color.Black
+        Me.fgFiador.Location = New System.Drawing.Point(3, 16)
         Me.fgFiador.Name = "fgFiador"
         Me.fgFiador.Rows.Count = 2
-        Me.fgFiador.Rows.DefaultSize = 22
-        Me.fgFiador.Size = New System.Drawing.Size(908, 296)
+        Me.fgFiador.Rows.DefaultSize = 19
+        Me.fgFiador.Size = New System.Drawing.Size(604, 257)
         Me.fgFiador.StyleInfo = resources.GetString("fgFiador.StyleInfo")
         Me.fgFiador.TabIndex = 58
         '
         'tb5
         '
         Me.tb5.BackColor = System.Drawing.Color.Teal
-        Me.tb5.Controls.Add(Me.GroupBox1)
-        Me.tb5.Location = New System.Drawing.Point(4, 25)
+        Me.tb5.Controls.Add(Me.fg)
+        Me.tb5.Location = New System.Drawing.Point(4, 22)
         Me.tb5.Name = "tb5"
-        Me.tb5.Size = New System.Drawing.Size(923, 694)
+        Me.tb5.Size = New System.Drawing.Size(647, 601)
         Me.tb5.TabIndex = 4
         Me.tb5.Text = "Detalle Pagos"
         Me.tb5.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.fg)
-        Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(922, 683)
-        Me.GroupBox1.TabIndex = 62
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalle Movimientos"
         '
         'fg
         '
@@ -1690,21 +1381,23 @@ Public Class frmMsCBGestionCredito
         Me.fg.AllowFiltering = True
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = resources.GetString("fg.ColumnInfo")
+        Me.fg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fg.Location = New System.Drawing.Point(5, 20)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(0, 0)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Rows.DefaultSize = 22
-        Me.fg.Size = New System.Drawing.Size(912, 595)
+        Me.fg.Rows.DefaultSize = 19
+        Me.fg.Size = New System.Drawing.Size(647, 601)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 58
         '
         'btnTablaSimulada1
         '
         Me.btnTablaSimulada1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnTablaSimulada1.Location = New System.Drawing.Point(752, 802)
+        Me.btnTablaSimulada1.Location = New System.Drawing.Point(506, 696)
         Me.btnTablaSimulada1.Name = "btnTablaSimulada1"
-        Me.btnTablaSimulada1.Size = New System.Drawing.Size(203, 33)
+        Me.btnTablaSimulada1.Size = New System.Drawing.Size(169, 29)
         Me.btnTablaSimulada1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnTablaSimulada1.TabIndex = 3
         Me.btnTablaSimulada1.Text = "Consulta Tabla de &Simulación"
@@ -1715,9 +1408,9 @@ Public Class frmMsCBGestionCredito
         'btnConsultarTbAmortiza1
         '
         Me.btnConsultarTbAmortiza1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnConsultarTbAmortiza1.Location = New System.Drawing.Point(520, 802)
+        Me.btnConsultarTbAmortiza1.Location = New System.Drawing.Point(312, 696)
         Me.btnConsultarTbAmortiza1.Name = "btnConsultarTbAmortiza1"
-        Me.btnConsultarTbAmortiza1.Size = New System.Drawing.Size(226, 33)
+        Me.btnConsultarTbAmortiza1.Size = New System.Drawing.Size(189, 29)
         Me.btnConsultarTbAmortiza1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultarTbAmortiza1.TabIndex = 2
         Me.btnConsultarTbAmortiza1.Text = "Consulta &Tabla de Amortización"
@@ -1728,9 +1421,9 @@ Public Class frmMsCBGestionCredito
         'btnCobrosGestion1
         '
         Me.btnCobrosGestion1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnCobrosGestion1.Location = New System.Drawing.Point(384, 803)
+        Me.btnCobrosGestion1.Location = New System.Drawing.Point(199, 696)
         Me.btnCobrosGestion1.Name = "btnCobrosGestion1"
-        Me.btnCobrosGestion1.Size = New System.Drawing.Size(130, 32)
+        Me.btnCobrosGestion1.Size = New System.Drawing.Size(108, 28)
         Me.btnCobrosGestion1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCobrosGestion1.TabIndex = 1
         Me.btnCobrosGestion1.Text = "&Cobro por Gestión"
@@ -1748,7 +1441,7 @@ Public Class frmMsCBGestionCredito
         Me.txtDUICliente.Name = "txtDUICliente"
         Me.txtDUICliente.NumericInput = False
         Me.txtDUICliente.ReadOnly = True
-        Me.txtDUICliente.Size = New System.Drawing.Size(120, 20)
+        Me.txtDUICliente.Size = New System.Drawing.Size(120, 18)
         Me.txtDUICliente.TabIndex = 194
         Me.txtDUICliente.Tag = Nothing
         '
@@ -1762,15 +1455,15 @@ Public Class frmMsCBGestionCredito
         Me.txtNITCliente.Name = "txtNITCliente"
         Me.txtNITCliente.NumericInput = False
         Me.txtNITCliente.ReadOnly = True
-        Me.txtNITCliente.Size = New System.Drawing.Size(152, 21)
+        Me.txtNITCliente.Size = New System.Drawing.Size(152, 18)
         Me.txtNITCliente.TabIndex = 196
         Me.txtNITCliente.Tag = Nothing
         '
         'frmMsCBGestionCredito
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(983, 873)
+        Me.ClientSize = New System.Drawing.Size(693, 788)
         Me.Controls.Add(Me.tbGestionCredito)
         Me.Controls.Add(Me.btnCobrosGestion1)
         Me.Controls.Add(Me.btnConsultarTbAmortiza1)
@@ -1784,8 +1477,7 @@ Public Class frmMsCBGestionCredito
         Me.Text = "Gestión de Crédito"
         Me.tbGestionCredito.ResumeLayout(False)
         Me.tb1.ResumeLayout(False)
-        Me.gbDatDoc.ResumeLayout(False)
-        Me.gbDatDoc.PerformLayout()
+        Me.tb1.PerformLayout()
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
         Me.MetroTabPage1.PerformLayout()
@@ -1798,7 +1490,6 @@ Public Class frmMsCBGestionCredito
         Me.gbGestion.ResumeLayout(False)
         Me.gbGestion.PerformLayout()
         Me.tb6.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
         CType(Me.fgGestiones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tb3.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
@@ -1806,7 +1497,6 @@ Public Class frmMsCBGestionCredito
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.fgFiador, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tb5.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDUICliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNITCliente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1829,69 +1519,6 @@ Public Class frmMsCBGestionCredito
 
     End Sub
 
-    Private Sub EncabezadoPRPagos()
-
-        'fg.Cols.Item(1).Caption = "Número"
-        ''fg.Cols.Item(2).Caption = "Código de Préstamo"
-        'fg.Cols.Item(3).Caption = "Número Factura"
-        'fg.Cols.Item(4).Caption = "Fecha Movimiento"
-        'fg.Cols.Item(5).Caption = "Cód. Transacción"
-        'fg.Cols.Item(6).Caption = "Monto Pagado"
-        'fg.Cols.Item(7).Caption = "Abono Capital"
-        'fg.Cols.Item(8).Caption = "Abono Interés"
-        'fg.Cols.Item(9).Caption = "Abono Capital Mora"
-        'fg.Cols.Item(10).Caption = "Abono Interés Mora"
-        'fg.Cols.Item(11).Caption = "Abono Seguro de Deuda"
-        'fg.Cols.Item(12).Caption = "Abono Seguro de Daños"
-        'fg.Cols.Item(13).Caption = "Abono Seguro de Vida"
-        'fg.Cols.Item(14).Caption = "Abono Seguro de Desempleo"
-        'fg.Cols.Item(15).Caption = "Abono Aportación"
-        'fg.Cols.Item(16).Caption = "Abono Ahorro"
-        'fg.Cols.Item(17).Caption = "Abono Comisión de Manejo"
-        'fg.Cols.Item(18).Caption = "Abono Otros"
-        'fg.Cols.Item(19).Caption = "Cancelada"
-        'fg.Cols.Item(20).Caption = "Tipo"
-
-        'fg.Cols.Item(0).Width = 20
-        'fg.Cols.Item(1).Width = 100
-        ''fg.Cols.Item(2).Width = 75
-        'fg.Cols.Item(2).Visible = False
-        'fg.Cols.Item(3).Width = 100
-        'fg.Cols.Item(4).Width = 75
-        'fg.Cols.Item(5).Width = 150
-        'fg.Cols.Item(6).Width = 250
-        'fg.Cols.Item(7).Width = 250
-        'fg.Cols.Item(8).Width = 250
-        'fg.Cols.Item(9).Width = 250
-        'fg.Cols.Item(10).Width = 250
-        'fg.Cols.Item(11).Width = 250
-        'fg.Cols.Item(12).Width = 250
-        'fg.Cols.Item(13).Width = 250
-        'fg.Cols.Item(14).Width = 250
-        'fg.Cols.Item(15).Width = 250
-        'fg.Cols.Item(16).Width = 250
-        'fg.Cols.Item(17).Width = 250
-        'fg.Cols.Item(18).Width = 250
-        'fg.Cols.Item(19).Width = 100
-        'fg.Cols.Item(20).Width = 100
-
-        'Me.fg.Cols.Item(6).Format = "##0.00"
-        'Me.fg.Cols.Item(7).Format = "##0.00"
-        'Me.fg.Cols.Item(8).Format = "##0.00"
-        'Me.fg.Cols.Item(9).Format = "##0.00"
-        'Me.fg.Cols.Item(10).Format = "##0.00"
-        'Me.fg.Cols.Item(11).Format = "##0.00"
-        'Me.fg.Cols.Item(12).Format = "##0.00"
-        'Me.fg.Cols.Item(13).Format = "##0.00"
-        'Me.fg.Cols.Item(14).Format = "##0.00"
-        'Me.fg.Cols.Item(15).Format = "##0.00"
-        'Me.fg.Cols.Item(16).Format = "##0.00"
-        'Me.fg.Cols.Item(17).Format = "##0.00"
-        'Me.fg.Cols.Item(18).Format = "##0.00"
-        'Me.fg.Cols.Item(24).Format = "##0.00"
-        'Me.fg.Cols.Item(25).Format = "##0.00"
-
-    End Sub
 
     Private Sub frmCBMsGestionCredito_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim oCred As wrCredito.wsLibCred = New wrCredito.wsLibCred, dsTmp As New DataSet, drTmp As DataRow
@@ -1901,27 +1528,22 @@ Public Class frmMsCBGestionCredito
         Dim dr As DataRow
         Dim tipoDoc As String
 
+        llenarTipoCobranza()
         ds = oCred.ConsultarPrestamos("*", "CodPrestamo = '" & Me.CodPrestamo.Trim & "'", "", sUsuario, sPassword, sSucursal)
         dr = ds.Tables("PRPrestamos").Rows(0)
         NumSolicitud = CInt(dr("NumSolicitud"))
         vCodTablaAmortiza = IIf(IsDBNull(dr("CodTablaAmortiza")), " ", dr("CodTablaAmortiza"))
         Me.lblCodPrestamo.Text = Me.CodPrestamo.Trim
-        ' Me.lblCodPrestamotb2.Text = Me.CodPrestamo.Trim
-        'Me.lblCodPrestamotb3.Text = Me.CodPrestamo.Trim
-        'Me.lblCodPrestamotb4.Text = Me.CodPrestamo.Trim
+
         Me.txtMonto.Text = Format(IIf(IsDBNull(dr("Monto")), 0, dr("Monto")), "###,##0.00")
-        Me.txtMontoGarantia.Text = Format(IIf(IsDBNull(dr("Monto_Garantia")), 0, dr("Monto_Garantia")), "###,##0.00")
+
         Me.txtTasaInteres.Text = IIf(IsDBNull(dr("Tasa_Interes")), 0, dr("Tasa_Interes"))
         Me.txtTasaInteresMora.Text = Format(IIf(IsDBNull(dr("Tasa_Interes_Mora")), 0, dr("Tasa_Interes_Mora")), "###,##0.00")
 
-        '***************SE MODIFICA EL TEXTBOX DEL NoACTA POR LA CUOTA TOTAL
-        'Me.txtNoActa.Text = IIf(IsDBNull(dr("NoActa")), " ", dr("NoActa"))
         Me.txtCuotaTotal.Text = Format(IIf(IsDBNull(dr("CuotaTotal")), 0, dr("CuotaTotal")), "###,##0.00")
 
         Me.txtPlazo.Text = IIf(IsDBNull(dr("PlazoMeses")), 0, dr("PlazoMeses"))
-        If Not IsDBNull(dr("FechaPrimeraCuota")) Then
-            Me.txtFechaPrimeraCuota.Text = dr("FechaPrimeraCuota")
-        End If
+
         If Not IsDBNull(dr("FechaOtorgamiento")) Then
             Me.txtFechaOtorgamiento.Text = dr("FechaOtorgamiento")
         End If
@@ -1930,9 +1552,7 @@ Public Class frmMsCBGestionCredito
             Me.txtFechaVencimiento.Text = dr("FechaVencimiento")
         End If
 
-        'INFO
-        '*************** ACA SE MUESTRA LOS ADITIVOS A COBRAR ANTES TOTAL A COBRAR
-        'Me.txtTotCobrarr.Text = Format(IIf(IsDBNull(dr("CuotaTotal")), 0, dr("CuotaTotal")) + IIf(IsDBNull(dr("SaldoDia_CapitalMora")), 0, dr("SaldoDia_CapitalMora")), "###,##0.00")
+
         Me.txtAditivosCobrar.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_Interes")), 0, dr("SaldoDia_Interes")), 2) +
                                            Math.Round(IIf(IsDBNull(dr("SaldoDia_InteresMora")), 0, dr("SaldoDia_InteresMora")), 2) +
                                            Math.Round(IIf(IsDBNull(dr("SaldoDia_SeguroDeuda")), 0, dr("SaldoDia_SeguroDeuda")), 2) +
@@ -1950,11 +1570,7 @@ Public Class frmMsCBGestionCredito
         'Modificacion Javier Martinez 29/08/2012
         'Se modifican el campo int.Mora para que muestre el valor sin importar si se encuentra en sus dias gracias
         Me.txtSaldoDiaInteresMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_InteresMora")), 0, dr("SaldoDia_InteresMora")), "###,##0.00")
-        'If dr("DiaGracia").ToString.Trim = "S" Then
-        '    Me.txtSaldoDiaInteresMora.Text = Format(Math.Round(IIf(IsDBNull(dr("Saldo_IntMoraGracia")), 0, dr("Saldo_IntMoraGracia")), 2), "###,##0.00")
-        'Else
-        '    Me.txtSaldoDiaInteresMora.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_InteresMora")), 0, dr("SaldoDia_InteresMora")), 2), "###,##0.00")
-        'End If
+
         '===================================================================================================================================
         Me.txtSaldoDiaSegDeuda.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_SeguroDeuda")), 0, dr("SaldoDia_SeguroDeuda")), 2), "###,##0.00")
         Me.txtSaldoDiaAhorro.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_Ahorro")), 0, dr("SaldoDia_Ahorro")), 2), "###,##0.00")
@@ -1962,7 +1578,7 @@ Public Class frmMsCBGestionCredito
         Me.txtSaldoDiaComision.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_ComisionManejo")), 0, dr("SaldoDia_ComisionManejo")), 2), "###,##0.00")
         Me.txtSaldoDiaAportacion.Text = Format(Math.Round(IIf(IsDBNull(dr("SaldoDia_Aportacion")), 0, dr("SaldoDia_Aportacion")), 2), "###,##0.00")
         Me.txtSaldoCapital.Text = Format(Math.Round(IIf(IsDBNull(dr("Saldo_Capital")), 0, dr("Saldo_Capital")), 2), "###,##0.00")
-        Me.txtDiasEnMora.Text = IIf(IsDBNull(dr("DiasMora")), 0, dr("DiasMora"))
+        ' Me.txtDiasEnMora.Text = IIf(IsDBNull(dr("DiasMora")), 0, dr("DiasMora"))
         Me.txtNoCuotasMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_CapitalMora")), 0, dr("SaldoDia_CapitalMora")) / IIf(IsDBNull(dr("Cuota")), 0, dr("Cuota")), "###,##0.00")
 
         Me.txtCapitalMora.Text = Math.Round(IIf(IsDBNull(dr("SaldoDia_CapitalMora")), 0, dr("SaldoDia_CapitalMora")), 2)
@@ -1978,23 +1594,10 @@ Public Class frmMsCBGestionCredito
                                   Math.Round(IIf(IsDBNull(dr("SaldoDia_Otros")), 0, dr("SaldoDia_Otros")), 2) _
                                   , "###,##0.00")
 
-        dsTmp = oCred.ConsultarGestoresxCredito("*", "CodPrestamo='" & Me.CodPrestamo.Trim & "' and Estado='A'", "*", sUsuario, sPassword, sSucursal)
+        dsTmp = oCred.ConsultarGestoresxCredito("*", "pr.CodPrestamo='" & Me.CodPrestamo.Trim & "' and pr.Estado='A'", "*", sUsuario, sPassword, sSucursal)
         If dsTmp.Tables(0).Rows.Count > 0 Then
             drTmp = dsTmp.Tables(0).Rows(0)
             Me.txtGestor.Text = "Despacho / Colector asignado:" & vbCrLf & IIf(IsDBNull(drTmp("Nombre")), 0, drTmp("Nombre"))
-        End If
-
-        tipoDoc = IIf(IsDBNull(dr("Tipo")), "", dr("Tipo"))
-        If tipoDoc = "S" Then
-            lblTipoDocumento.Text = "Documento Saneado"
-        ElseIf tipoDoc = "P" Then
-            lblTipoDocumento.Text = "Documento en Protesto"
-        ElseIf tipoDoc = "N" Then
-            lblTipoDocumento.Text = "Cartera Normal"
-        ElseIf tipoDoc = "C" Then
-            lblTipoDocumento.Text = "Documento x Cobrar"
-        Else
-            lblTipoDocumento.Text = ""
         End If
 
         ds = oAso.ConsultarAsociado("Nombres,Apellido1,Apellido2,ApellidoCas,NoSocio,DUI,NIT,StatusEmpleado", "DUI='" & Trim(dr("DUI")) & "'", "", sUsuario, sPassword, sSucursal)
@@ -2011,17 +1614,6 @@ Public Class frmMsCBGestionCredito
             Else
                 StatusEmpleado = dr("StatusEmpleado")
             End If
-
-            'Select Case StatusEmpleado ' dr("StatusEmpleado")
-            '    Case "0" 'Estado Laboral Actual es Empleado
-            '        Me.txtStatusEmpleadoCliente.Text = "Empleado"
-            '    Case "1" 'Estado Laboral Actual es Desempleado
-            '        Me.txtStatusEmpleadoCliente.Text = "Desempleado"
-            '    Case "2" 'Estado Laboral Actual es Pensionado
-            '        Me.txtStatusEmpleadoCliente.Text = "Pensionado"
-            '    Case Else 'Estado Laboral Actual Desconocido
-            '        Me.txtStatusEmpleadoCliente.Text = "Otro"
-            'End Select
         End If
         '*****************************************************************
 
@@ -2047,7 +1639,7 @@ Public Class frmMsCBGestionCredito
 
         ds = oPres.CargaDatosPrestamoxRango(Me.CodPrestamo.Trim, Date.Now.ToShortDateString, Date.Now.ToShortDateString, "Cancelada<>'N'", sUsuario, sPassword, sSucursal)
         fg.DataSource = ds.Tables("Pagos")
-        EncabezadoPRPagos()
+
 
         'INFO:
         'SE AGREGA CODIGO PARA MOSTRAR lAS GESTIONES EN GRID DE DATOS
@@ -2062,151 +1654,24 @@ Public Class frmMsCBGestionCredito
             Me.txtGarantia.Text = Me.txtGarantia.Text & dr("Tipo") & " - " & dr("Descripcion")
         Next
 
-        ds = oCred.ConsultarDatGral("*", "NumSolicitud = " & NumSolicitud & " AND Fiador='0'", "NoSocio", sUsuario, sPassword, sSucursal)
-        If ds.Tables(0).Rows.Count >= 1 Then
-            dr = ds.Tables(0).Rows(0)
-            'Me.txtCliente.Text = IIf(IsDBNull(dr("Nombres")), "", Trim(dr("Nombres"))) & " " & IIf(IsDBNull(dr("Apellido1")), "", Trim(dr("Apellido1"))) & " " & IIf(IsDBNull(dr("Apellido2")), "", Trim(dr("Apellido2"))) & " " & IIf(IsDBNull(dr("Apellido3")), "", Trim(dr("Apellido3")))
-            ' Me.txtNoCliente.Text = IIf(IsDBNull(dr("NoSocio")), "", dr("NoSocio"))
-            vCodEnlace = dr("CodEnlace")
-            Me.txtDUICliente.Value = IIf(IsDBNull(dr("DUI")), "", Trim(dr("DUI")))
-            Me.txtNITCliente.Value = IIf(IsDBNull(dr("NIT")), "", Trim(dr("NIT")))
-            'Me.txtDireccionCliente.Text = IIf(IsDBNull(dr("Direccion")), "", Trim(dr("Direccion")))
-            '  Me.txtTelCasaCliente.Text = IIf(IsDBNull(dr("TelCasa")), "", Trim(dr("TelCasa")))
 
-            'INFO5:
-            'SE AGREGA CODIGO PARA MOSTRAR EN TEXTBOX EL ESTATUS DE LA VIVIENDA
-            '********************************************************************
-            'If ds.Tables("CRSolDatosGeneral").Rows.Count > 0 Then
-            '    dr = ds.Tables("CRSolDatosGeneral").Rows(0)
-            '    Select Case Convert.ToString(dr("CasaPropia"))
-            '        Case "0" 'Estado de Vivienda es propia
-            '            Me.txtCasaPropCliente.Text = "Propia"
-            '        Case "1" 'Estado de Vivienda es Financiada
-            '            Me.txtCasaPropCliente.Text = "Financiada"
-            '        Case "2" 'Estado de Vivienda es Financiada o Pagandola
-            '            Me.txtCasaPropCliente.Text = "Financiada o Pagandola"
-            '        Case "3" 'Estado de Vivienda es Familiar
-            '            Me.txtCasaPropCliente.Text = "Familiar"
-            '        Case "4" 'Estado de Vivienda es Alquilada
-            '            Me.txtCasaPropCliente.Text = "Alquilada"
-            '    End Select
-            'End If
-
-            'Me.txtCasaPropCliente.Text = IIf(IsDBNull(dr("CasaPropia")), "", Trim(dr("CasaPropia")))
-
-            'Me.txtCelularCliente.Text = IIf(IsDBNull(dr("Celular")), "", Trim(dr("Celular")))
-            'Me.txtPropCasaCliente.Text = IIf(IsDBNull(dr("PropietarioCasa")), "", Trim(dr("PropietarioCasa")))
-            'Me.txtLugarTrbCliente.Text = IIf(IsDBNull(dr("LugarTrabajo")), "", Trim(dr("LugarTrabajo")))
-            'If Not IsDBNull(dr("FechaInicioTrabajo")) Then
-            '    Me.txtFechIniTrabCliente.Text = dr("FechaInicioTrabajo")
-            'End If
-            'Me.txtDirTrbCliente.Text = IIf(IsDBNull(dr("DireccionTrabajo")), "", Trim(dr("DireccionTrabajo")))
-
-            'INFO:
-            'SE AGREGA CODIGO PARA MOSTRAR CAMPO ISSS
-            '****************************************************************************
-            ''Me.txtISSSCliente.Text = IIf(IsDBNull(dr("ISSS")), "", Trim(dr("ISSS")))
-            '''****************************************************************************
-
-            ''Me.txtTelOficCliente.Text = IIf(IsDBNull(dr("TelOficina")), "", Trim(dr("TelOficina")))
-            ''Me.txtSueldoCliente.Text = Format(IIf(IsDBNull(dr("Sueldo")), "", dr("Sueldo")), "###,##0.00")
-            ''Me.txtFormPagoCliente.Text = IIf(IsDBNull(dr("FormaPago")), "", Trim(dr("FormaPago")))
-            ''Me.txtExtOficinaCliente.Text = IIf(IsDBNull(dr("ExtensionOfic")), "", Trim(dr("ExtensionOfic")))
-            ''If Not IsDBNull(dr("FechaPagoSueldo")) Then
-            ''    Me.txtFechPagoCliente.Text = dr("FechaPagoSueldo")
-            ''End If
-            ''Me.txtCargoCliente.Text = IIf(IsDBNull(dr("Cargo")), "", Trim(dr("Cargo")))
-            ''Me.txtNomConyugeCliente.Text = IIf(IsDBNull(dr("NombreConyugue")), "", Trim(dr("NombreConyugue"))) & " " & IIf(IsDBNull(dr("Apellido1Conyugue")), "", Trim(dr("Apellido1Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido2Conyugue")), "", Trim(dr("Apellido2Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido3Conyugue")), "", Trim(dr("Apellido3Conyugue")))
-            ''Me.txtSuelConyugeCliente.Text = Format(IIf(IsDBNull(dr("SueldoConyugue")), "", dr("SueldoConyugue")), "###,##0.00")
-            ''Me.txtLugarTrabConyCliente.Text = IIf(IsDBNull(dr("LugarTrabConyugue")), "", Trim(dr("LugarTrabConyugue")))
-            ''Me.txtTelTrbConyugeCliente.Text = IIf(IsDBNull(dr("TelTrabajoConyugue")), "", Trim(dr("TelTrabajoConyugue")))
-            ''Me.txtDirecFamiliarConyugeCliente.Text = IIf(IsDBNull(dr("DirecciondeFamiliar")), "", Trim(dr("DirecciondeFamiliar")))
-            ''Me.txtDeptoTrabajo.Text = IIf(IsDBNull(dr("DepartamentoTrabajo")), "", dr("DepartamentoTrabajo"))
-            '''INFO:
-            '''SE AGREGA CODIGO PARA MOSTRAR CAMPO ISSS
-            ''Me.txtEmail.Text = IIf(IsDBNull(dr("email")), "", dr("email"))
-            '****************************************************************
-        End If
-
-        'INFO
-        '******************************************************
-        'Aca se carga la informacion de los fiadores en el grid
-        DatosFiador = oCred.ConsultarDatGral("*", "NumSolicitud = " & NumSolicitud & " AND Fiador='1' AND FiadorDescartado = '0'", "NumSolicitud", sUsuario, sPassword, sSucursal)
+        DatosFiador = oCred.ConsultarDatGral("codEnlace,CONCAT(rtrim(Nombres),' ',rtrim(Apellido1),' ',rtrim(Apellido2),' ',rtrim(Apellido3)) [Fiador]", "NumSolicitud = " & NumSolicitud & " AND Fiador='1' AND FiadorDescartado = '0'", "codEnlace", sUsuario, sPassword, sSucursal)
         fgFiador.DataSource = DatosFiador.Tables(0)
-        'Dim P As Integer = fgFiador.RowSel
-        'If DatosFiador.Tables(0).Rows.Count >= 1 Then
-        '    dr = DatosFiador.Tables(0).Rows(P - 1)
-        '    vCodEnlaceFiador = dr("CodEnlace")
-        'Me.CargarFiador(dr)
-        'End If
 
 
-        ds = oCred.ConsultarDatGral("*", "NumSolicitud = " & NumSolicitud & " AND Fiador='2'", "NumSolicitud", sUsuario, sPassword, sSucursal)
+
+        ds = oCred.ConsultarDatGral("codEnlace,CONCAT(rtrim(Nombres),' ',rtrim(Apellido1),' ',rtrim(Apellido2),' ',rtrim(Apellido3)) [Fiador] ", "NumSolicitud = " & NumSolicitud & " AND Fiador='2'", "codEnlace", sUsuario, sPassword, sSucursal)
         fgCodeudor.DataSource = ds.Tables(0)
-        'If ds.Tables(0).Rows.Count >= 1 Then
-        '    dr = ds.Tables(0).Rows(0)
-        '    Me.txtCodeudor.Text = IIf(IsDBNull(dr("Nombres")), "", Trim(dr("Nombres"))) & " " & IIf(IsDBNull(dr("Apellido1")), "", Trim(dr("Apellido1"))) & " " & IIf(IsDBNull(dr("Apellido2")), "", Trim(dr("Apellido2"))) & " " & IIf(IsDBNull(dr("Apellido3")), "", Trim(dr("Apellido3")))
-        '    Me.txtNoCodeudor.Text = IIf(IsDBNull(dr("NoSocio")), "", Trim(dr("NoSocio")))
-        '    vCodEnlaceCodeudor = dr("CodEnlace")
-        '    Me.txtDUICodeudor.Value = IIf(IsDBNull(dr("DUI")), "", Trim(dr("DUI")))
-        '    Me.txtNITCodeudor.Value = IIf(IsDBNull(dr("NIT")), "", Trim(dr("NIT")))
-        '    Me.txtDireccionCodeudor.Text = IIf(IsDBNull(dr("Direccion")), "", Trim(dr("Direccion")))
-        '    Me.txtTelCasaCodeudor.Text = IIf(IsDBNull(dr("TelCasa")), "", Trim(dr("TelCasa")))
-        '    Me.txtCasaPropiaCodeudor.Text = IIf(IsDBNull(dr("CasaPropia")), "", Trim(dr("CasaPropia")))
-        '    Me.txtCelularCodeudor.Text = IIf(IsDBNull(dr("Celular")), "", Trim(dr("Celular")))
-        '    Me.txtPropietarioCasaCodeudor.Text = IIf(IsDBNull(dr("PropietarioCasa")), "", Trim(dr("PropietarioCasa")))
-        '    Me.txtLugTrbCodeudor.Text = IIf(IsDBNull(dr("LugarTrabajo")), "", Trim(dr("LugarTrabajo")))
-        '    If Not IsDBNull(dr("FechaInicioTrabajo")) Then
-        '        Me.txtFchIniTrabCodeudor.Text = dr("FechaInicioTrabajo")
-        '    End If
-        '    Me.txtDirecTrbCodeudor.Text = IIf(IsDBNull(dr("DireccionTrabajo")), "", Trim(dr("DireccionTrabajo")))
-        '    Me.txtTelOficCodeudor.Text = IIf(IsDBNull(dr("TelOficina")), "", Trim(dr("TelOficina")))
-        '    Me.txtSueldoCodeudor.Text = Format(IIf(IsDBNull(dr("Sueldo")), "", dr("Sueldo")), "###,##0.00")
-        '    Me.txtFormaPagoCodeudor.Text = IIf(IsDBNull(dr("FormaPago")), "", Trim(dr("FormaPago")))
-        '    Me.txtExtOficCodeudor.Text = IIf(IsDBNull(dr("ExtensionOfic")), "", Trim(dr("ExtensionOfic")))
-        '    If Not IsDBNull(dr("FechaPagoSueldo")) Then
-        '        Me.txtFechaPagoCodeudor.Text = dr("FechaPagoSueldo")
-        '    End If
-        '    Me.txtCargoCodeudor.Text = IIf(IsDBNull(dr("Cargo")), "", Trim(dr("Cargo")))
-        '    Me.txtNombConyugeCodeudor.Text = IIf(IsDBNull(dr("NombreConyugue")), "", Trim(dr("NombreConyugue"))) & " " & IIf(IsDBNull(dr("Apellido1Conyugue")), "", Trim(dr("Apellido1Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido2Conyugue")), "", Trim(dr("Apellido2Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido3Conyugue")), "", Trim(dr("Apellido3Conyugue")))
-        '    Me.txtSueldoConyugeCodeudor.Text = Format(IIf(IsDBNull(dr("SueldoConyugue")), "", dr("SueldoConyugue")), "###,##0.00")
-        '    Me.txtLugTrbConyugeCodeudor.Text = IIf(IsDBNull(dr("LugarTrabConyugue")), "", Trim(dr("LugarTrabConyugue")))
-        '    Me.txtTelTrbConyugeCodeudor.Text = IIf(IsDBNull(dr("TelTrabajoConyugue")), "", Trim(dr("TelTrabajoConyugue")))
-        '    Me.txtDirecFamConyugeCodeudor.Text = IIf(IsDBNull(dr("DirecciondeFamiliar")), "", Trim(dr("DirecciondeFamiliar")))
-        '    Me.txtDeptoTrabajoC.Text = IIf(IsDBNull(dr("DepartamentoTrabajo")), "", dr("DepartamentoTrabajo"))
-        'End If
+
+    End Sub
+    Protected Sub llenarTipoCobranza()
+        Dim dts As New DataSet
+        dts = credito.ConsultarTipoCobranza("CodTipoCobranza,Descripcion", "", "Descripcion", sUsuario, sPassword, sSucursal)
+        cbCobranza.DataSource = dts.Tables(0)
+        cbCobranza.DisplayMember = "Descripcion"
+        cbCobranza.ValueMember = "CodTipoCobranza"
     End Sub
 
-    Private Sub txtCodTipoCobranza_DoubleClick1(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodTipoCobranza.DoubleClick
-        Dim ofrm As New frmAGenerico
-        ofrm.Text = "Buscar Tipo de Cobranza"
-        Dim oPerif As wrCredito.wsLibCred, ds As New Data.DataSet
-
-        Try
-            oPerif = New wrCredito.wsLibCred
-            ds = oPerif.ConsultarTipoCobranza("CodTipoCobranza,DiaInicio,DiaFin,Descripcion,Tipo", "", "CodTipoCobranza", sUsuario, sPassword, sSucursal)
-            ofrm.Datos = ds
-            ofrm.ColSeleccion = 0
-            ofrm.RefrescarGrid()
-            ofrm.ShowDialog()
-            Tipo = CStr(ofrm.Resultado5.Trim)
-            If Tipo = "J" Then
-                Me.txtCodDespacho.Visible = True
-                Me.txtDespacho.Visible = True
-                Me.lblDespacho.Visible = True
-            Else
-                Me.txtCodDespacho.Visible = False
-                Me.txtDespacho.Visible = False
-                Me.lblDespacho.Visible = False
-            End If
-            txtCodTipoCobranza.Text = ofrm.Resultado.Trim
-            txtTipoCobranza.Text = ofrm.Resultado4.Trim
-            lblRango.Text = "Rango de morosidad: De " & ofrm.Resultado2.Trim & " a " & ofrm.Resultado3.Trim & " días."
-            lblCompromiso.Text = "Compromiso de pago no debe exceder de " & ofrm.Resultado5.Trim & " día(s)."
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla Tipo Cobranza - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
     Private Sub fgFiador_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles fgFiador.DoubleClick
         Dim ds As New Data.DataSet
@@ -2219,38 +1684,6 @@ Public Class frmMsCBGestionCredito
                 .pCodEnlace = Me.fgCodeudor.Item(Me.fgCodeudor.Row, "codEnlace")
                 .ShowDialog()
             End With
-
-            'Dim p As Integer = fgFiador.RowSel
-            'ds = oCred.ConsultarDatGral("*", "NumSolicitud = " & CInt(fgFiador.Item(fgFiador.Row, "NumSolicitud")) & " AND Fiador='1' AND FiadorDescartado = '0'", "", sUsuario, sPassword, sSucursal)
-            'dr = ds.Tables(0).Rows(p - 1)
-            'Me.txtFiador.Text = IIf(IsDBNull(dr("Nombres")), "", Trim(dr("Nombres"))) & " " & IIf(IsDBNull(dr("Apellido1")), "", Trim(dr("Apellido1"))) & " " & IIf(IsDBNull(dr("Apellido2")), "", Trim(dr("Apellido2"))) & " " & IIf(IsDBNull(dr("Apellido3")), "", Trim(dr("Apellido3")))
-            'Me.txtNoFiador.Text = IIf(IsDBNull(dr("NoSocio")), "", Trim(dr("NoSocio")))
-            'vCodEnlaceFiador = dr("CodEnlace")
-            'Me.txtDUIFiador.Value = IIf(IsDBNull(dr("DUI")), "", Trim(dr("DUI")))
-            'Me.txtNITFiador.Value = IIf(IsDBNull(dr("NIT")), "", Trim(dr("NIT")))
-            'Me.txtDireccionFiador.Text = IIf(IsDBNull(dr("Direccion")), "", Trim(dr("Direccion")))
-            'Me.txtTelCasaFiador.Text = IIf(IsDBNull(dr("TelCasa")), "", Trim(dr("TelCasa")))
-            'Me.txtCasaPropiaFiador.Text = IIf(IsDBNull(dr("CasaPropia")), "", Trim(dr("CasaPropia")))
-            'Me.txtCelularFiador.Text = IIf(IsDBNull(dr("Celular")), "", Trim(dr("Celular")))
-            'Me.txtPropietarioCasaFiador.Text = IIf(IsDBNull(dr("PropietarioCasa")), "", Trim(dr("PropietarioCasa")))
-            'Me.txtLugarTrbFiador.Text = IIf(IsDBNull(dr("LugarTrabajo")), "", Trim(dr("LugarTrabajo")))
-            'If Not IsDBNull(dr("FechaInicioTrabajo")) Then
-            '    Me.txtFchIniTrbFiador.Text = dr("FechaInicioTrabajo")
-            'End If
-            'Me.txtDirecTrabFiador.Text = IIf(IsDBNull(dr("DireccionTrabajo")), "", Trim(dr("DireccionTrabajo")))
-            'Me.txtTelOficFiador.Text = IIf(IsDBNull(dr("TelOficina")), "", Trim(dr("TelOficina")))
-            'Me.txtSueldoFiador.Text = Format(IIf(IsDBNull(dr("Sueldo")), "", dr("Sueldo")), "###,##0.00")
-            'Me.txtFormaPagoFiador.Text = IIf(IsDBNull(dr("FormaPago")), "", Trim(dr("FormaPago")))
-            'Me.txtExtOficFiador.Text = IIf(IsDBNull(dr("ExtensionOfic")), "", Trim(dr("ExtensionOfic")))
-            'If Not IsDBNull(dr("FechaPagoSueldo")) Then
-            '    Me.txtFechaPagoFiador.Text = dr("FechaPagoSueldo")
-            'End If
-            'Me.txtCargoFiador.Text = IIf(IsDBNull(dr("Cargo")), "", Trim(dr("Cargo")))
-            'Me.txtNombConyugeFiador.Text = IIf(IsDBNull(dr("NombreConyugue")), "", Trim(dr("NombreConyugue"))) & " " & IIf(IsDBNull(dr("Apellido1Conyugue")), "", Trim(dr("Apellido1Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido2Conyugue")), "", Trim(dr("Apellido2Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido3Conyugue")), "", Trim(dr("Apellido3Conyugue")))
-            'Me.txtSuelConyugeFiador.Text = Format(IIf(IsDBNull(dr("SueldoConyugue")), "", dr("SueldoConyugue")), "###,##0.00")
-            'Me.txtLugarTrbConyugeFiador.Text = IIf(IsDBNull(dr("LugarTrabConyugue")), "", Trim(dr("LugarTrabConyugue")))
-            'Me.txtTelTrabConyugeFiador.Text = IIf(IsDBNull(dr("TelTrabajoConyugue")), "", Trim(dr("TelTrabajoConyugue")))
-            'Me.txtDirecFamiliarConyugeFiador.Text = IIf(IsDBNull(dr("DirecciondeFamiliar")), "", Trim(dr("DirecciondeFamiliar")))
         End If
     End Sub
 
@@ -2264,44 +1697,9 @@ Public Class frmMsCBGestionCredito
             With frm
                 .Text = "Codeudores"
                 .pAccion = "Modificar"
-
                 .pCodEnlace = Me.fgCodeudor.Item(Me.fgCodeudor.Row, "codEnlace")
                 .ShowDialog()
             End With
-
-
-
-
-            'ds = oCred.ConsultarDatGral("*", "NumSolicitud = " & CInt(fgCodeudor.Item(fgCodeudor.Row, "NumSolicitud")) & " AND Fiador='2'", "", sUsuario, sPassword, sSucursal)
-            'dr = ds.Tables(0).Rows(p - 1)
-            'Me.txtCodeudor.Text = IIf(IsDBNull(dr("Nombres")), "", Trim(dr("Nombres"))) & " " & IIf(IsDBNull(dr("Apellido1")), "", Trim(dr("Apellido1"))) & " " & IIf(IsDBNull(dr("Apellido2")), "", Trim(dr("Apellido2"))) & " " & IIf(IsDBNull(dr("Apellido3")), "", Trim(dr("Apellido3")))
-            'Me.txtNoCodeudor.Text = IIf(IsDBNull(dr("NoSocio")), "", Trim(dr("NoSocio")))
-            'vCodEnlaceCodeudor = dr("CodEnlace")
-            'Me.txtDUICodeudor.Value = IIf(IsDBNull(dr("DUI")), "", Trim(dr("DUI")))
-            'Me.txtNITCodeudor.Value = IIf(IsDBNull(dr("NIT")), "", Trim(dr("NIT")))
-            'Me.txtDireccionCodeudor.Text = IIf(IsDBNull(dr("Direccion")), "", Trim(dr("Direccion")))
-            'Me.txtTelCasaCodeudor.Text = IIf(IsDBNull(dr("TelCasa")), "", Trim(dr("TelCasa")))
-            'Me.txtCasaPropiaCodeudor.Text = IIf(IsDBNull(dr("CasaPropia")), "", Trim(dr("CasaPropia")))
-            'Me.txtCelularCodeudor.Text = IIf(IsDBNull(dr("Celular")), "", Trim(dr("Celular")))
-            'Me.txtPropietarioCasaCodeudor.Text = IIf(IsDBNull(dr("PropietarioCasa")), "", Trim(dr("PropietarioCasa")))
-            'Me.txtLugTrbCodeudor.Text = IIf(IsDBNull(dr("LugarTrabajo")), "", Trim(dr("LugarTrabajo")))
-            'If Not IsDBNull(dr("FechaInicioTrabajo")) Then
-            '    Me.txtFchIniTrabCodeudor.Text = dr("FechaInicioTrabajo")
-            'End If
-            'Me.txtDirecTrbCodeudor.Text = IIf(IsDBNull(dr("DireccionTrabajo")), "", Trim(dr("DireccionTrabajo")))
-            'Me.txtTelOficCodeudor.Text = IIf(IsDBNull(dr("TelOficina")), "", Trim(dr("TelOficina")))
-            'Me.txtSueldoCodeudor.Text = Format(IIf(IsDBNull(dr("Sueldo")), "", dr("Sueldo")), "###,##0.00")
-            'Me.txtFormaPagoCodeudor.Text = IIf(IsDBNull(dr("FormaPago")), "", Trim(dr("FormaPago")))
-            'Me.txtExtOficCodeudor.Text = IIf(IsDBNull(dr("ExtensionOfic")), "", Trim(dr("ExtensionOfic")))
-            'If Not IsDBNull(dr("FechaPagoSueldo")) Then
-            '    Me.txtFechaPagoCodeudor.Text = dr("FechaPagoSueldo")
-            'End If
-            'Me.txtCargoCodeudor.Text = IIf(IsDBNull(dr("Cargo")), "", Trim(dr("Cargo")))
-            'Me.txtNombConyugeCodeudor.Text = IIf(IsDBNull(dr("NombreConyugue")), "", Trim(dr("NombreConyugue"))) & " " & IIf(IsDBNull(dr("Apellido1Conyugue")), "", Trim(dr("Apellido1Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido2Conyugue")), "", Trim(dr("Apellido2Conyugue"))) & " " & IIf(IsDBNull(dr("Apellido3Conyugue")), "", Trim(dr("Apellido3Conyugue")))
-            'Me.txtSueldoConyugeCodeudor.Text = Format(IIf(IsDBNull(dr("SueldoConyugue")), "", dr("SueldoConyugue")), "###,##0.00")
-            'Me.txtLugTrbConyugeCodeudor.Text = IIf(IsDBNull(dr("LugarTrabConyugue")), "", Trim(dr("LugarTrabConyugue")))
-            'Me.txtTelTrbConyugeCodeudor.Text = IIf(IsDBNull(dr("TelTrabajoConyugue")), "", Trim(dr("TelTrabajoConyugue")))
-            'Me.txtDirecFamConyugeCodeudor.Text = IIf(IsDBNull(dr("DirecciondeFamiliar")), "", Trim(dr("DirecciondeFamiliar")))
         End If
     End Sub
 
@@ -2311,35 +1709,6 @@ Public Class frmMsCBGestionCredito
             e.Handled = True
         End If
     End Sub
-
-
-
-    Private Sub txtCodDespacho_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodDespacho.DoubleClick
-        Dim ofrm As New frmAGenerico
-
-        ofrm.Text = "Buscar Despachos"
-        Dim oCred As New wrCredito.wsLibCred, ds As New Data.DataSet
-        Try
-            ds = oCred.ConsultarDespacho("*", "", "CodDespacho", sUsuario, sPassword, sSucursal)
-            ofrm.Datos = ds
-            ofrm.ColSeleccion = 0
-            ofrm.RefrescarGrid()
-            ofrm.ShowDialog()
-            txtCodDespacho.Text = ofrm.Resultado.Trim
-            txtDespacho.Text = ofrm.Resultado2.Trim
-        Catch ex As Exception
-            MessageBox.Show("Error en la recuperación de datos tabla Despachos - " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub fgFiador_SelChange(ByVal sender As Object, ByVal e As System.EventArgs) Handles fgFiador.SelChange
-        'Dim Tabla As C1.Win.C1FlexGrid.C1FlexGrid = DirectCast(sender, C1.Win.C1FlexGrid.C1FlexGrid)
-        'Tabla.Row()
-    End Sub
-
-
-
-
 #End Region
 
 #Region "Navegacion"
@@ -2359,7 +1728,7 @@ Public Class frmMsCBGestionCredito
                 MsgBox("No existen Situaciones de gestión para este crédito.", MsgBoxStyle.OkOnly, "Cobros x Gestión")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2369,10 +1738,10 @@ Public Class frmMsCBGestionCredito
             ofrm.CodTablaAmortiza = vCodTablaAmortiza
             ofrm.vCodPrestamo = CodPrestamo
             ofrm.StartPosition = FormStartPosition.CenterScreen
-            'ofrm.MdiParent = ofrmMain
+            '
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2388,7 +1757,7 @@ Public Class frmMsCBGestionCredito
 
             Dim ofrm As New frmCRTablaAmortSim
             ofrm.StartPosition = FormStartPosition.CenterScreen
-            'ofrm.MdiParent = ofrmMain
+            '
             ofrm.pSaldo = dr("Saldo_Capital")
             ofrm.pSaldoDiaInteres = dr("SaldoDia_Interes")
             ofrm.pSaldoSeguroDeuda = dr("SaldoDia_SeguroDeuda")
@@ -2401,49 +1770,33 @@ Public Class frmMsCBGestionCredito
             ofrm.ShowDialog()
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-
+    Protected Function recuperarGestor(usuario As String) As String
+        Dim dts As New DataSet
+        dts = credito.ConsultarGestores("codGestor", " usuario = '" & usuario & "'", "", sUsuario, sPassword, sSucursal)
+        Return dts.Tables(0).Rows(0).Item(0).ToString.Trim
+    End Function
     Private Sub btnAdd1_Click(sender As Object, e As EventArgs) Handles btnAdd1.Click
         Try
             Dim oCred As wrCredito.wsLibCred = New wrCredito.wsLibCred, pCampos As String, pValores As String, pTipo As String
             Dim oPrest As wrPrestamo.wsLibPrest = New wrPrestamo.wsLibPrest
             Dim Filas As Data.DataRowCollection, ds As New DataSet
-
+            Dim codGestor As String
+            codGestor = recuperarGestor(sUsuario)
             If Me.btnAdd1.Text = "&Guardar Gestión" Then
-
-                If Me.txtCodTipoCobranza.Text.Trim = "" Then
-                    MsgBox("El Tipo de Cobranza no puede quedar vacío. Verifique e intente de nuevo.", MsgBoxStyle.Critical, "Módulo Cobranzas")
-                    Exit Sub
+                pCampos = "CodGestor,CodPrestamo,CodTipoCobranza,Fecha,Hora,Comentario,Observaciones,FechaPactada,PagoEfectuado"
+                pValores = "'" & codGestor & "','" & Me.vCodPrestamo.Trim & "','" & cbCobranza.SelectedValue & "','" & Format(Me.dtFecha.Value, "dd/MM/yyyy") & "','" & Now.ToShortTimeString & "','" & Me.txtAcuerdo.Text.Trim & "','" & Me.txtObservaciones.Text.Trim & "','" & Format(Me.dtpFechaPactada.Value, "dd/MM/yyyy") & "','0'"
+                If oCred.InsertarBitacoraGestores(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Me.Dispose()
+                Else
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-                If Tipo = "J" Then
-                    pCampos = "CodGestor,CodPrestamo,CodTipoCobranza,Fecha,Hora,Comentario,CodDespacho,Observaciones,FechaPactada,PagoEfectuado"
-                    pValores = "'" & Me.vCodGestor.Trim & "','" & Me.vCodPrestamo.Trim & "','" & Me.txtCodTipoCobranza.Text.Trim & "','" & Format(Me.dtFecha.Value, "dd/MM/yyyy") & "','" & Format(Me.dtHora.Value, "HH:mm") & "','" & Me.txtAcuerdo.Text.Trim & "','" & Me.txtCodDespacho.Text.Trim & "','" & Me.txtObservaciones.Text.Trim & "','" & Format(Me.dtpFechaPactada.Value, "dd/MM/yyyy") & "','0'"
-                    If oCred.InsertarBitacoraGestores(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
-                        MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Módulo - Créditos")
-                        Me.Dispose()
-                        'If oCred.ModificarPrestamos(NumSolicitud, "Estado='C'", sUsuario, sPassword, sSucursal) = True Then
-                        '    MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Módulo - Créditos")
-                        '    Me.Dispose()
-                        'End If
-                    Else
-                        MsgBox("El registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Cobranzas")
-                    End If
-                ElseIf Tipo = "N" Then
-                    pCampos = "CodGestor,CodPrestamo,CodTipoCobranza,Fecha,Hora,Comentario,Observaciones,FechaPactada,PagoEfectuado"
-                    pValores = "'" & Me.vCodGestor.Trim & "','" & Me.vCodPrestamo.Trim & "','" & Me.txtCodTipoCobranza.Text.Trim & "','" & Format(Me.dtFecha.Value, "dd/MM/yyyy") & "','" & Format(Me.dtHora.Value, "HH:mm") & "','" & Me.txtAcuerdo.Text.Trim & "','" & Me.txtObservaciones.Text.Trim & "','" & Format(Me.dtpFechaPactada.Value, "dd/MM/yyyy") & "','0'"
-                    If oCred.InsertarBitacoraGestores(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
-                        MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Módulo - Créditos")
-                        Me.Dispose()
-                    Else
-                        MsgBox("El registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Cobranzas")
-                    End If
-                End If
-
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2461,14 +1814,30 @@ Public Class frmMsCBGestionCredito
         Me.tbGestionCredito.SelectedIndex = Me.tbGestionCredito.SelectedIndex() + 1
     End Sub
 
+    Private Sub gbGestion_Enter(sender As Object, e As EventArgs) Handles gbGestion.Enter
 
+    End Sub
 
+    Private Sub MetroTabPage1_Click(sender As Object, e As EventArgs) Handles MetroTabPage1.Click
 
+    End Sub
+
+    Private Sub btnEstadoCta_Click(sender As Object, e As EventArgs) Handles btnEstadoCta.Click
+        Dim frm As New frmRepPREstadoCuenta
+        With frm
+            .txtDui.Value = txtDui.Value
+            .txtAsociado.Text = txtNoAsoc.Text
+            .llenarPrestamos()
+            .cbPrestamo.SelectedValue = lblCodPrestamo.Text
+            .cbPrestamo.Enabled = False
+            .ShowDialog()
+        End With
+    End Sub
 
     Private Sub MetroButton7_Click(sender As Object, e As EventArgs) Handles MetroButton7.Click
         Dim frm As New frmIngresoAsoc2
         With frm
-            .txtDui.Text = Me.txtDUICliente.Value
+            .txtDui.Text = txtDui.Value
             .accion = 2
             .Show()
         End With

@@ -89,7 +89,7 @@
                 LLENAR_CERTIFICACIONES(vNUMSOLICITUD)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -110,7 +110,7 @@
                 MsgBox("Por favor seleccione la garantia a consultar", MsgBoxStyle.Information, "MÓDULO - GARANTÍAS")
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -135,7 +135,7 @@
             End If
             LLENAR_GARANTIAS(vNUMSOLICITUD)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -154,7 +154,7 @@
                     MsgBox("Error al eliminar garantía, por favor comuniquese con el administrador del sistema.", MsgBoxStyle.Information, "MÓDULO - GARANTÍAS")
                 End If
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If

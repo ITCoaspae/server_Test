@@ -63,7 +63,7 @@
             If (contabilidad.guardarPartidaValorFecha(DateTimePicker1.Value.ToShortDateString, "", sUsuario)) > 0 Then
                 MsgBox("Registro ingresado exitosamente.", MsgBoxStyle.Information)
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
     End Sub

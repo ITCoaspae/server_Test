@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibContab" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibContab" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibContab" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibContab" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibContab">
-      <s:element name="InsertaPartida">
+      <s:element name="distribucionCxC">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+            <s:element minOccurs="0" maxOccurs="1" name="idCtaPorCobrar" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="distribucionCxCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="distribucionCxCResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -19,20 +25,62 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertaPartidaResponse">
+      <s:element name="anularCuentaPorCobrar">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idCtaPorCobrar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioMod" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertaPartidaAut">
+      <s:element name="anularCuentaPorCobrarResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+            <s:element minOccurs="1" maxOccurs="1" name="anularCuentaPorCobrarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresarAbonoCuentaPorCobrarTransferencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noSocio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoTrans" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noCuenta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAuxiliar" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ctaRetiro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ctaPorCobrar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccOrigen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresarAbonoCuentaPorCobrarTransferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ingresarAbonoCuentaPorCobrarTransferenciaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarCuentaPorCobrar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaIni" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaFin" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocuentaO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCtaPorCobrar" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarCuentaPorCobrarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarCuentaPorCobrarResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -43,825 +91,26 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertaPartidaAutResponse">
+      <s:element name="ingresarCuentaPorCobrar">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaAutResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="origen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldo" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="ctaOrigen" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="activo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDocOrigen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertaPartidaModulo">
+      <s:element name="ingresarCuentaPorCobrarResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="InsertaPartidaModuloResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaModuloResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaCuentaBeneficio">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaCuentaBeneficioResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaBeneficioResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaCuentaContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaCuentaContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaContabResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaCuentaCostos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pTipoCatalogo" type="tns:TipoCatalogo" />
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:simpleType name="TipoCatalogo">
-        <s:restriction base="s:string">
-          <s:enumeration value="Beneficios" />
-          <s:enumeration value="Contable" />
-          <s:enumeration value="Costos" />
-        </s:restriction>
-      </s:simpleType>
-      <s:element name="ModificaCuentaCostosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaCostosResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaDetParametroPartidaIntegracion">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pCorrelativo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaDetParametroPartidaIntegracionResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaDetParametroPartidaIntegracionResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaNivelBeneficios">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TipoNivel" />
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:simpleType name="TipoNivel">
-        <s:restriction base="s:string">
-          <s:enumeration value="Beneficios" />
-          <s:enumeration value="Contable" />
-          <s:enumeration value="Costos" />
-        </s:restriction>
-      </s:simpleType>
-      <s:element name="ModificaNivelBeneficiosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelBeneficiosResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaNivelContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNivel" />
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:simpleType name="TiposNivel">
-        <s:restriction base="s:string">
-          <s:enumeration value="Beneficios" />
-          <s:enumeration value="Contable" />
-          <s:enumeration value="Costos" />
-        </s:restriction>
-      </s:simpleType>
-      <s:element name="ModificaNivelContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelContabResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaNivelCostos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNiveles" />
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:simpleType name="TiposNiveles">
-        <s:restriction base="s:string">
-          <s:enumeration value="Beneficios" />
-          <s:enumeration value="Contable" />
-          <s:enumeration value="Costos" />
-        </s:restriction>
-      </s:simpleType>
-      <s:element name="ModificaNivelCostosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelCostosResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaParametroPartidaIntegracion">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pCorrelativo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaParametroPartidaIntegracionResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaParametroPartidaIntegracionResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartida">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartidaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartidaAut">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartidaAutResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaAutResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartidaModulo">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ModificaPartidaModuloResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaModuloResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatBeneficio">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatBeneficioResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatBeneficioResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatContabResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatCostos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pTipoCatalogo" type="tns:TipoCatalogo" />
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerCatCostosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatCostosResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerEstadoPartidas">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerEstadoPartidasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerEstadoPartidasResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesBeneficios">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TipoNivel" />
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesBeneficiosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesBeneficiosResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNivel" />
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesContabResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesCostos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNiveles" />
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNivelesCostosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesCostosResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerPartidaVacia">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerPartidaVaciaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPartidaVaciaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidas">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidasAut">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidasAutResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasAutResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidasBC">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerTipoPartidasBCResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasBCResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PartidaApertura">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PartidaAperturaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="PartidaAperturaResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ProcesarSaldos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="iMes" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="iAnnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ProcesarSaldosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ProcesarSaldosResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ProcesoInicioEjercicio">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pAnnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ProcesoInicioEjercicioResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ProcesoInicioEjercicioResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepAuxMayor">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepAuxMayorResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepAuxMayorResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepBalComprob">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="centroCosto" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepBalComprobResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepBalComprobResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepDiarioMayor">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepDiarioMayorResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepDiarioMayorResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepMovxCta">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pDel" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pAl" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepMovxCtaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepMovxCtaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepObtenerCatContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepObtenerCatContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepObtenerCatContabResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepPartidasDiario">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepPartidasDiarioResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepPartidasDiarioResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepPartidasDiarioAut">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepPartidasDiarioAutResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepPartidasDiarioAutResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCuentaContab">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCuentaContabResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="VerificaCuentaContabResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="ingresarCuentaPorCobrarResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -993,6 +242,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="RecuperarCodCostoXsucursalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarCodCostoXcuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NoCuenta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarCodCostoXcuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarCodCostoXcuentaResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -1415,6 +685,31 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="CrearPartidasCorteDiarioCajaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPdaCorteDiarioCaja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCajero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPdaCorteDiarioCajaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearPdaCorteDiarioCajaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -2192,6 +1487,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:simpleType name="TipoNivel">
+        <s:restriction base="s:string">
+          <s:enumeration value="Beneficios" />
+          <s:enumeration value="Contable" />
+          <s:enumeration value="Costos" />
+        </s:restriction>
+      </s:simpleType>
       <s:element name="EliminaNivelBeneficiosResponse">
         <s:complexType>
           <s:sequence>
@@ -2210,6 +1512,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:simpleType name="TiposNivel">
+        <s:restriction base="s:string">
+          <s:enumeration value="Beneficios" />
+          <s:enumeration value="Contable" />
+          <s:enumeration value="Costos" />
+        </s:restriction>
+      </s:simpleType>
       <s:element name="EliminaNivelContabResponse">
         <s:complexType>
           <s:sequence>
@@ -2228,6 +1537,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:simpleType name="TiposNiveles">
+        <s:restriction base="s:string">
+          <s:enumeration value="Beneficios" />
+          <s:enumeration value="Contable" />
+          <s:enumeration value="Costos" />
+        </s:restriction>
+      </s:simpleType>
       <s:element name="EliminaNivelCostosResponse">
         <s:complexType>
           <s:sequence>
@@ -2525,6 +1841,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:simpleType name="TipoCatalogo">
+        <s:restriction base="s:string">
+          <s:enumeration value="Beneficios" />
+          <s:enumeration value="Contable" />
+          <s:enumeration value="Costos" />
+        </s:restriction>
+      </s:simpleType>
       <s:element name="InsertaCuentaCostosResponse">
         <s:complexType>
           <s:sequence>
@@ -2625,223 +1948,873 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="InsertaPartida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaPartidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaPartidaAut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaPartidaAutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaAutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaPartidaModulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaPartidaModuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertaPartidaModuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaBeneficio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaBeneficioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaBeneficioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaContabResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaCostos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTipoCatalogo" type="tns:TipoCatalogo" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaCuentaCostosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaCuentaCostosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaDetParametroPartidaIntegracion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCorrelativo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaDetParametroPartidaIntegracionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaDetParametroPartidaIntegracionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelBeneficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TipoNivel" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelBeneficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelBeneficiosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNivel" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelContabResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelCostos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNiveles" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaNivelCostosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaNivelCostosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaParametroPartidaIntegracion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCorrelativo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCamposyValores" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaParametroPartidaIntegracionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaParametroPartidaIntegracionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartidaAut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartidaAutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaAutResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartidaModulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="poPartida">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="pModulo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificaPartidaModuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificaPartidaModuloResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatBeneficio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatBeneficioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatBeneficioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatContabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatCostos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTipoCatalogo" type="tns:TipoCatalogo" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatCostosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatCostosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoPartidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoPartidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerEstadoPartidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesBeneficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TipoNivel" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesBeneficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesBeneficiosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNivel" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesContabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesCostos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ptipoNivel" type="tns:TiposNiveles" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelesCostosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNivelesCostosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPartidaVacia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPartidaVaciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPartidaVaciaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidasAut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidasAutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasAutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidasBC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoPartidasBCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoPartidasBCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PartidaApertura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PartidaAperturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartidaAperturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarSaldos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iMes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAnnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarSaldosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcesarSaldosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesoInicioEjercicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pAnnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesoInicioEjercicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcesoInicioEjercicioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepAuxMayor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepAuxMayorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepAuxMayorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepBalComprob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="centroCosto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepBalComprobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepBalComprobResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepDiarioMayor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pMes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepDiarioMayorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepDiarioMayorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepMovxCta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFecIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFecFin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="centrocost" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepMovxCtaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepMovxCtaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepObtenerCatContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pListaCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepObtenerCatContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepObtenerCatContabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepPartidasDiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepPartidasDiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepPartidasDiarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepPartidasDiarioAut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumPartidaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepPartidasDiarioAutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepPartidasDiarioAutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCuentaContab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pIdCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCuentaContabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaCuentaContabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="InsertaPartidaSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertaPartida" />
+  <wsdl:message name="distribucionCxCSoapIn">
+    <wsdl:part name="parameters" element="tns:distribucionCxC" />
   </wsdl:message>
-  <wsdl:message name="InsertaPartidaSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertaPartidaResponse" />
+  <wsdl:message name="distribucionCxCSoapOut">
+    <wsdl:part name="parameters" element="tns:distribucionCxCResponse" />
   </wsdl:message>
-  <wsdl:message name="InsertaPartidaAutSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertaPartidaAut" />
+  <wsdl:message name="anularCuentaPorCobrarSoapIn">
+    <wsdl:part name="parameters" element="tns:anularCuentaPorCobrar" />
   </wsdl:message>
-  <wsdl:message name="InsertaPartidaAutSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertaPartidaAutResponse" />
+  <wsdl:message name="anularCuentaPorCobrarSoapOut">
+    <wsdl:part name="parameters" element="tns:anularCuentaPorCobrarResponse" />
   </wsdl:message>
-  <wsdl:message name="InsertaPartidaModuloSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertaPartidaModulo" />
+  <wsdl:message name="ingresarAbonoCuentaPorCobrarTransferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresarAbonoCuentaPorCobrarTransferencia" />
   </wsdl:message>
-  <wsdl:message name="InsertaPartidaModuloSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertaPartidaModuloResponse" />
+  <wsdl:message name="ingresarAbonoCuentaPorCobrarTransferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresarAbonoCuentaPorCobrarTransferenciaResponse" />
   </wsdl:message>
-  <wsdl:message name="ModificaCuentaBeneficioSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaBeneficio" />
+  <wsdl:message name="consultarCuentaPorCobrarSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarCuentaPorCobrar" />
   </wsdl:message>
-  <wsdl:message name="ModificaCuentaBeneficioSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaBeneficioResponse" />
+  <wsdl:message name="consultarCuentaPorCobrarSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarCuentaPorCobrarResponse" />
   </wsdl:message>
-  <wsdl:message name="ModificaCuentaContabSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaContab" />
+  <wsdl:message name="ingresarCuentaPorCobrarSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresarCuentaPorCobrar" />
   </wsdl:message>
-  <wsdl:message name="ModificaCuentaContabSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaContabResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaCuentaCostosSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaCostos" />
-  </wsdl:message>
-  <wsdl:message name="ModificaCuentaCostosSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaCuentaCostosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaDetParametroPartidaIntegracionSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaDetParametroPartidaIntegracion" />
-  </wsdl:message>
-  <wsdl:message name="ModificaDetParametroPartidaIntegracionSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaDetParametroPartidaIntegracionResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelBeneficiosSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaNivelBeneficios" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelBeneficiosSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaNivelBeneficiosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelContabSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaNivelContab" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelContabSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaNivelContabResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelCostosSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaNivelCostos" />
-  </wsdl:message>
-  <wsdl:message name="ModificaNivelCostosSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaNivelCostosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaParametroPartidaIntegracionSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaParametroPartidaIntegracion" />
-  </wsdl:message>
-  <wsdl:message name="ModificaParametroPartidaIntegracionSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaParametroPartidaIntegracionResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaPartida" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaPartidaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaAutSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaPartidaAut" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaAutSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaPartidaAutResponse" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaModuloSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificaPartidaModulo" />
-  </wsdl:message>
-  <wsdl:message name="ModificaPartidaModuloSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificaPartidaModuloResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatBeneficioSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerCatBeneficio" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatBeneficioSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerCatBeneficioResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatContabSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerCatContab" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatContabSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerCatContabResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatCostosSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerCatCostos" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerCatCostosSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerCatCostosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerEstadoPartidasSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerEstadoPartidas" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerEstadoPartidasSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerEstadoPartidasResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesBeneficiosSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesBeneficios" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesBeneficiosSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesBeneficiosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesContabSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesContab" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesContabSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesContabResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesCostosSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesCostos" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNivelesCostosSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerNivelesCostosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerPartidaVaciaSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerPartidaVacia" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerPartidaVaciaSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerPartidaVaciaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidas" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasAutSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasAut" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasAutSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasAutResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasBCSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasBC" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerTipoPartidasBCSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasBCResponse" />
-  </wsdl:message>
-  <wsdl:message name="PartidaAperturaSoapIn">
-    <wsdl:part name="parameters" element="tns:PartidaApertura" />
-  </wsdl:message>
-  <wsdl:message name="PartidaAperturaSoapOut">
-    <wsdl:part name="parameters" element="tns:PartidaAperturaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ProcesarSaldosSoapIn">
-    <wsdl:part name="parameters" element="tns:ProcesarSaldos" />
-  </wsdl:message>
-  <wsdl:message name="ProcesarSaldosSoapOut">
-    <wsdl:part name="parameters" element="tns:ProcesarSaldosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ProcesoInicioEjercicioSoapIn">
-    <wsdl:part name="parameters" element="tns:ProcesoInicioEjercicio" />
-  </wsdl:message>
-  <wsdl:message name="ProcesoInicioEjercicioSoapOut">
-    <wsdl:part name="parameters" element="tns:ProcesoInicioEjercicioResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepAuxMayorSoapIn">
-    <wsdl:part name="parameters" element="tns:RepAuxMayor" />
-  </wsdl:message>
-  <wsdl:message name="RepAuxMayorSoapOut">
-    <wsdl:part name="parameters" element="tns:RepAuxMayorResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepBalComprobSoapIn">
-    <wsdl:part name="parameters" element="tns:RepBalComprob" />
-  </wsdl:message>
-  <wsdl:message name="RepBalComprobSoapOut">
-    <wsdl:part name="parameters" element="tns:RepBalComprobResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepDiarioMayorSoapIn">
-    <wsdl:part name="parameters" element="tns:RepDiarioMayor" />
-  </wsdl:message>
-  <wsdl:message name="RepDiarioMayorSoapOut">
-    <wsdl:part name="parameters" element="tns:RepDiarioMayorResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepMovxCtaSoapIn">
-    <wsdl:part name="parameters" element="tns:RepMovxCta" />
-  </wsdl:message>
-  <wsdl:message name="RepMovxCtaSoapOut">
-    <wsdl:part name="parameters" element="tns:RepMovxCtaResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepObtenerCatContabSoapIn">
-    <wsdl:part name="parameters" element="tns:RepObtenerCatContab" />
-  </wsdl:message>
-  <wsdl:message name="RepObtenerCatContabSoapOut">
-    <wsdl:part name="parameters" element="tns:RepObtenerCatContabResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepPartidasDiarioSoapIn">
-    <wsdl:part name="parameters" element="tns:RepPartidasDiario" />
-  </wsdl:message>
-  <wsdl:message name="RepPartidasDiarioSoapOut">
-    <wsdl:part name="parameters" element="tns:RepPartidasDiarioResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepPartidasDiarioAutSoapIn">
-    <wsdl:part name="parameters" element="tns:RepPartidasDiarioAut" />
-  </wsdl:message>
-  <wsdl:message name="RepPartidasDiarioAutSoapOut">
-    <wsdl:part name="parameters" element="tns:RepPartidasDiarioAutResponse" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCuentaContabSoapIn">
-    <wsdl:part name="parameters" element="tns:VerificaCuentaContab" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCuentaContabSoapOut">
-    <wsdl:part name="parameters" element="tns:VerificaCuentaContabResponse" />
+  <wsdl:message name="ingresarCuentaPorCobrarSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresarCuentaPorCobrarResponse" />
   </wsdl:message>
   <wsdl:message name="consultarCaDiarioSoapIn">
     <wsdl:part name="parameters" element="tns:consultarCaDiario" />
@@ -2884,6 +2857,12 @@
   </wsdl:message>
   <wsdl:message name="RecuperarCodCostoXsucursalSoapOut">
     <wsdl:part name="parameters" element="tns:RecuperarCodCostoXsucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarCodCostoXcuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarCodCostoXcuenta" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarCodCostoXcuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarCodCostoXcuentaResponse" />
   </wsdl:message>
   <wsdl:message name="Recuperar_Cta_x_Centro_CostoSoapIn">
     <wsdl:part name="parameters" element="tns:Recuperar_Cta_x_Centro_Costo" />
@@ -3004,6 +2983,12 @@
   </wsdl:message>
   <wsdl:message name="CrearPartidasCorteDiarioCajaSoapOut">
     <wsdl:part name="parameters" element="tns:CrearPartidasCorteDiarioCajaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearPdaCorteDiarioCajaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearPdaCorteDiarioCaja" />
+  </wsdl:message>
+  <wsdl:message name="CrearPdaCorteDiarioCajaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearPdaCorteDiarioCajaResponse" />
   </wsdl:message>
   <wsdl:message name="ConsultarIngresosCajaSoapIn">
     <wsdl:part name="parameters" element="tns:ConsultarIngresosCaja" />
@@ -3341,150 +3326,242 @@
   <wsdl:message name="InsertaParametroPartidaIntegracionSoapOut">
     <wsdl:part name="parameters" element="tns:InsertaParametroPartidaIntegracionResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertaPartidaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaPartida" />
+  </wsdl:message>
+  <wsdl:message name="InsertaPartidaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaPartidaAutSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaPartidaAut" />
+  </wsdl:message>
+  <wsdl:message name="InsertaPartidaAutSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaPartidaAutResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaPartidaModuloSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaPartidaModulo" />
+  </wsdl:message>
+  <wsdl:message name="InsertaPartidaModuloSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaPartidaModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaBeneficioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaBeneficio" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaBeneficioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaBeneficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaContabSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaContab" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaContabSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaContabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaCostosSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaCostos" />
+  </wsdl:message>
+  <wsdl:message name="ModificaCuentaCostosSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaCuentaCostosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaDetParametroPartidaIntegracionSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaDetParametroPartidaIntegracion" />
+  </wsdl:message>
+  <wsdl:message name="ModificaDetParametroPartidaIntegracionSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaDetParametroPartidaIntegracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelBeneficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaNivelBeneficios" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelBeneficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaNivelBeneficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelContabSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaNivelContab" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelContabSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaNivelContabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelCostosSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaNivelCostos" />
+  </wsdl:message>
+  <wsdl:message name="ModificaNivelCostosSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaNivelCostosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaParametroPartidaIntegracionSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaParametroPartidaIntegracion" />
+  </wsdl:message>
+  <wsdl:message name="ModificaParametroPartidaIntegracionSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaParametroPartidaIntegracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaPartida" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaAutSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaPartidaAut" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaAutSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaPartidaAutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaModuloSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificaPartidaModulo" />
+  </wsdl:message>
+  <wsdl:message name="ModificaPartidaModuloSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificaPartidaModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatBeneficioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatBeneficio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatBeneficioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatBeneficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatContabSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatContab" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatContabSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatContabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatCostosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatCostos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatCostosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatCostosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoPartidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoPartidas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoPartidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoPartidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesBeneficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesBeneficios" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesBeneficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesBeneficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesContabSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesContab" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesContabSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesContabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesCostosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesCostos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelesCostosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelesCostosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPartidaVaciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidaVacia" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPartidaVaciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidaVaciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasAutSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasAut" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasAutSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasAutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasBCSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasBC" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoPartidasBCSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoPartidasBCResponse" />
+  </wsdl:message>
+  <wsdl:message name="PartidaAperturaSoapIn">
+    <wsdl:part name="parameters" element="tns:PartidaApertura" />
+  </wsdl:message>
+  <wsdl:message name="PartidaAperturaSoapOut">
+    <wsdl:part name="parameters" element="tns:PartidaAperturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarSaldosSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesarSaldos" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarSaldosSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesarSaldosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesoInicioEjercicioSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesoInicioEjercicio" />
+  </wsdl:message>
+  <wsdl:message name="ProcesoInicioEjercicioSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesoInicioEjercicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepAuxMayorSoapIn">
+    <wsdl:part name="parameters" element="tns:RepAuxMayor" />
+  </wsdl:message>
+  <wsdl:message name="RepAuxMayorSoapOut">
+    <wsdl:part name="parameters" element="tns:RepAuxMayorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepBalComprobSoapIn">
+    <wsdl:part name="parameters" element="tns:RepBalComprob" />
+  </wsdl:message>
+  <wsdl:message name="RepBalComprobSoapOut">
+    <wsdl:part name="parameters" element="tns:RepBalComprobResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepDiarioMayorSoapIn">
+    <wsdl:part name="parameters" element="tns:RepDiarioMayor" />
+  </wsdl:message>
+  <wsdl:message name="RepDiarioMayorSoapOut">
+    <wsdl:part name="parameters" element="tns:RepDiarioMayorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepMovxCtaSoapIn">
+    <wsdl:part name="parameters" element="tns:RepMovxCta" />
+  </wsdl:message>
+  <wsdl:message name="RepMovxCtaSoapOut">
+    <wsdl:part name="parameters" element="tns:RepMovxCtaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepObtenerCatContabSoapIn">
+    <wsdl:part name="parameters" element="tns:RepObtenerCatContab" />
+  </wsdl:message>
+  <wsdl:message name="RepObtenerCatContabSoapOut">
+    <wsdl:part name="parameters" element="tns:RepObtenerCatContabResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepPartidasDiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RepPartidasDiario" />
+  </wsdl:message>
+  <wsdl:message name="RepPartidasDiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RepPartidasDiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepPartidasDiarioAutSoapIn">
+    <wsdl:part name="parameters" element="tns:RepPartidasDiarioAut" />
+  </wsdl:message>
+  <wsdl:message name="RepPartidasDiarioAutSoapOut">
+    <wsdl:part name="parameters" element="tns:RepPartidasDiarioAutResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCuentaContabSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCuentaContab" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCuentaContabSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCuentaContabResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsLibContabSoap">
-    <wsdl:operation name="InsertaPartida">
-      <wsdl:input message="tns:InsertaPartidaSoapIn" />
-      <wsdl:output message="tns:InsertaPartidaSoapOut" />
+    <wsdl:operation name="distribucionCxC">
+      <wsdl:input message="tns:distribucionCxCSoapIn" />
+      <wsdl:output message="tns:distribucionCxCSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertaPartidaAut">
-      <wsdl:input message="tns:InsertaPartidaAutSoapIn" />
-      <wsdl:output message="tns:InsertaPartidaAutSoapOut" />
+    <wsdl:operation name="anularCuentaPorCobrar">
+      <wsdl:input message="tns:anularCuentaPorCobrarSoapIn" />
+      <wsdl:output message="tns:anularCuentaPorCobrarSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertaPartidaModulo">
-      <wsdl:input message="tns:InsertaPartidaModuloSoapIn" />
-      <wsdl:output message="tns:InsertaPartidaModuloSoapOut" />
+    <wsdl:operation name="ingresarAbonoCuentaPorCobrarTransferencia">
+      <wsdl:input message="tns:ingresarAbonoCuentaPorCobrarTransferenciaSoapIn" />
+      <wsdl:output message="tns:ingresarAbonoCuentaPorCobrarTransferenciaSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaBeneficio">
-      <wsdl:input message="tns:ModificaCuentaBeneficioSoapIn" />
-      <wsdl:output message="tns:ModificaCuentaBeneficioSoapOut" />
+    <wsdl:operation name="consultarCuentaPorCobrar">
+      <wsdl:input message="tns:consultarCuentaPorCobrarSoapIn" />
+      <wsdl:output message="tns:consultarCuentaPorCobrarSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaContab">
-      <wsdl:input message="tns:ModificaCuentaContabSoapIn" />
-      <wsdl:output message="tns:ModificaCuentaContabSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaCostos">
-      <wsdl:input message="tns:ModificaCuentaCostosSoapIn" />
-      <wsdl:output message="tns:ModificaCuentaCostosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaDetParametroPartidaIntegracion">
-      <wsdl:input message="tns:ModificaDetParametroPartidaIntegracionSoapIn" />
-      <wsdl:output message="tns:ModificaDetParametroPartidaIntegracionSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelBeneficios">
-      <wsdl:input message="tns:ModificaNivelBeneficiosSoapIn" />
-      <wsdl:output message="tns:ModificaNivelBeneficiosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelContab">
-      <wsdl:input message="tns:ModificaNivelContabSoapIn" />
-      <wsdl:output message="tns:ModificaNivelContabSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelCostos">
-      <wsdl:input message="tns:ModificaNivelCostosSoapIn" />
-      <wsdl:output message="tns:ModificaNivelCostosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaParametroPartidaIntegracion">
-      <wsdl:input message="tns:ModificaParametroPartidaIntegracionSoapIn" />
-      <wsdl:output message="tns:ModificaParametroPartidaIntegracionSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartida">
-      <wsdl:input message="tns:ModificaPartidaSoapIn" />
-      <wsdl:output message="tns:ModificaPartidaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartidaAut">
-      <wsdl:input message="tns:ModificaPartidaAutSoapIn" />
-      <wsdl:output message="tns:ModificaPartidaAutSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartidaModulo">
-      <wsdl:input message="tns:ModificaPartidaModuloSoapIn" />
-      <wsdl:output message="tns:ModificaPartidaModuloSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatBeneficio">
-      <wsdl:input message="tns:ObtenerCatBeneficioSoapIn" />
-      <wsdl:output message="tns:ObtenerCatBeneficioSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatContab">
-      <wsdl:input message="tns:ObtenerCatContabSoapIn" />
-      <wsdl:output message="tns:ObtenerCatContabSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatCostos">
-      <wsdl:input message="tns:ObtenerCatCostosSoapIn" />
-      <wsdl:output message="tns:ObtenerCatCostosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerEstadoPartidas">
-      <wsdl:input message="tns:ObtenerEstadoPartidasSoapIn" />
-      <wsdl:output message="tns:ObtenerEstadoPartidasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesBeneficios">
-      <wsdl:input message="tns:ObtenerNivelesBeneficiosSoapIn" />
-      <wsdl:output message="tns:ObtenerNivelesBeneficiosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesContab">
-      <wsdl:input message="tns:ObtenerNivelesContabSoapIn" />
-      <wsdl:output message="tns:ObtenerNivelesContabSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesCostos">
-      <wsdl:input message="tns:ObtenerNivelesCostosSoapIn" />
-      <wsdl:output message="tns:ObtenerNivelesCostosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerPartidaVacia">
-      <wsdl:input message="tns:ObtenerPartidaVaciaSoapIn" />
-      <wsdl:output message="tns:ObtenerPartidaVaciaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidas">
-      <wsdl:input message="tns:ObtenerTipoPartidasSoapIn" />
-      <wsdl:output message="tns:ObtenerTipoPartidasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidasAut">
-      <wsdl:input message="tns:ObtenerTipoPartidasAutSoapIn" />
-      <wsdl:output message="tns:ObtenerTipoPartidasAutSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidasBC">
-      <wsdl:input message="tns:ObtenerTipoPartidasBCSoapIn" />
-      <wsdl:output message="tns:ObtenerTipoPartidasBCSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="PartidaApertura">
-      <wsdl:input message="tns:PartidaAperturaSoapIn" />
-      <wsdl:output message="tns:PartidaAperturaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ProcesarSaldos">
-      <wsdl:input message="tns:ProcesarSaldosSoapIn" />
-      <wsdl:output message="tns:ProcesarSaldosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ProcesoInicioEjercicio">
-      <wsdl:input message="tns:ProcesoInicioEjercicioSoapIn" />
-      <wsdl:output message="tns:ProcesoInicioEjercicioSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepAuxMayor">
-      <wsdl:input message="tns:RepAuxMayorSoapIn" />
-      <wsdl:output message="tns:RepAuxMayorSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepBalComprob">
-      <wsdl:input message="tns:RepBalComprobSoapIn" />
-      <wsdl:output message="tns:RepBalComprobSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepDiarioMayor">
-      <wsdl:input message="tns:RepDiarioMayorSoapIn" />
-      <wsdl:output message="tns:RepDiarioMayorSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepMovxCta">
-      <wsdl:input message="tns:RepMovxCtaSoapIn" />
-      <wsdl:output message="tns:RepMovxCtaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepObtenerCatContab">
-      <wsdl:input message="tns:RepObtenerCatContabSoapIn" />
-      <wsdl:output message="tns:RepObtenerCatContabSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepPartidasDiario">
-      <wsdl:input message="tns:RepPartidasDiarioSoapIn" />
-      <wsdl:output message="tns:RepPartidasDiarioSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepPartidasDiarioAut">
-      <wsdl:input message="tns:RepPartidasDiarioAutSoapIn" />
-      <wsdl:output message="tns:RepPartidasDiarioAutSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCuentaContab">
-      <wsdl:input message="tns:VerificaCuentaContabSoapIn" />
-      <wsdl:output message="tns:VerificaCuentaContabSoapOut" />
+    <wsdl:operation name="ingresarCuentaPorCobrar">
+      <wsdl:input message="tns:ingresarCuentaPorCobrarSoapIn" />
+      <wsdl:output message="tns:ingresarCuentaPorCobrarSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="consultarCaDiario">
       <wsdl:input message="tns:consultarCaDiarioSoapIn" />
@@ -3513,6 +3590,10 @@
     <wsdl:operation name="RecuperarCodCostoXsucursal">
       <wsdl:input message="tns:RecuperarCodCostoXsucursalSoapIn" />
       <wsdl:output message="tns:RecuperarCodCostoXsucursalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCodCostoXcuenta">
+      <wsdl:input message="tns:RecuperarCodCostoXcuentaSoapIn" />
+      <wsdl:output message="tns:RecuperarCodCostoXcuentaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Recuperar_Cta_x_Centro_Costo">
       <wsdl:input message="tns:Recuperar_Cta_x_Centro_CostoSoapIn" />
@@ -3593,6 +3674,10 @@
     <wsdl:operation name="CrearPartidasCorteDiarioCaja">
       <wsdl:input message="tns:CrearPartidasCorteDiarioCajaSoapIn" />
       <wsdl:output message="tns:CrearPartidasCorteDiarioCajaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPdaCorteDiarioCaja">
+      <wsdl:input message="tns:CrearPdaCorteDiarioCajaSoapIn" />
+      <wsdl:output message="tns:CrearPdaCorteDiarioCajaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ConsultarIngresosCaja">
       <wsdl:input message="tns:ConsultarIngresosCajaSoapIn" />
@@ -3818,11 +3903,155 @@
       <wsdl:input message="tns:InsertaParametroPartidaIntegracionSoapIn" />
       <wsdl:output message="tns:InsertaParametroPartidaIntegracionSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="InsertaPartida">
+      <wsdl:input message="tns:InsertaPartidaSoapIn" />
+      <wsdl:output message="tns:InsertaPartidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPartidaAut">
+      <wsdl:input message="tns:InsertaPartidaAutSoapIn" />
+      <wsdl:output message="tns:InsertaPartidaAutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPartidaModulo">
+      <wsdl:input message="tns:InsertaPartidaModuloSoapIn" />
+      <wsdl:output message="tns:InsertaPartidaModuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaBeneficio">
+      <wsdl:input message="tns:ModificaCuentaBeneficioSoapIn" />
+      <wsdl:output message="tns:ModificaCuentaBeneficioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaContab">
+      <wsdl:input message="tns:ModificaCuentaContabSoapIn" />
+      <wsdl:output message="tns:ModificaCuentaContabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaCostos">
+      <wsdl:input message="tns:ModificaCuentaCostosSoapIn" />
+      <wsdl:output message="tns:ModificaCuentaCostosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaDetParametroPartidaIntegracion">
+      <wsdl:input message="tns:ModificaDetParametroPartidaIntegracionSoapIn" />
+      <wsdl:output message="tns:ModificaDetParametroPartidaIntegracionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelBeneficios">
+      <wsdl:input message="tns:ModificaNivelBeneficiosSoapIn" />
+      <wsdl:output message="tns:ModificaNivelBeneficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelContab">
+      <wsdl:input message="tns:ModificaNivelContabSoapIn" />
+      <wsdl:output message="tns:ModificaNivelContabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelCostos">
+      <wsdl:input message="tns:ModificaNivelCostosSoapIn" />
+      <wsdl:output message="tns:ModificaNivelCostosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaParametroPartidaIntegracion">
+      <wsdl:input message="tns:ModificaParametroPartidaIntegracionSoapIn" />
+      <wsdl:output message="tns:ModificaParametroPartidaIntegracionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartida">
+      <wsdl:input message="tns:ModificaPartidaSoapIn" />
+      <wsdl:output message="tns:ModificaPartidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartidaAut">
+      <wsdl:input message="tns:ModificaPartidaAutSoapIn" />
+      <wsdl:output message="tns:ModificaPartidaAutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartidaModulo">
+      <wsdl:input message="tns:ModificaPartidaModuloSoapIn" />
+      <wsdl:output message="tns:ModificaPartidaModuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatBeneficio">
+      <wsdl:input message="tns:ObtenerCatBeneficioSoapIn" />
+      <wsdl:output message="tns:ObtenerCatBeneficioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatContab">
+      <wsdl:input message="tns:ObtenerCatContabSoapIn" />
+      <wsdl:output message="tns:ObtenerCatContabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatCostos">
+      <wsdl:input message="tns:ObtenerCatCostosSoapIn" />
+      <wsdl:output message="tns:ObtenerCatCostosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoPartidas">
+      <wsdl:input message="tns:ObtenerEstadoPartidasSoapIn" />
+      <wsdl:output message="tns:ObtenerEstadoPartidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesBeneficios">
+      <wsdl:input message="tns:ObtenerNivelesBeneficiosSoapIn" />
+      <wsdl:output message="tns:ObtenerNivelesBeneficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesContab">
+      <wsdl:input message="tns:ObtenerNivelesContabSoapIn" />
+      <wsdl:output message="tns:ObtenerNivelesContabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesCostos">
+      <wsdl:input message="tns:ObtenerNivelesCostosSoapIn" />
+      <wsdl:output message="tns:ObtenerNivelesCostosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartidaVacia">
+      <wsdl:input message="tns:ObtenerPartidaVaciaSoapIn" />
+      <wsdl:output message="tns:ObtenerPartidaVaciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidas">
+      <wsdl:input message="tns:ObtenerTipoPartidasSoapIn" />
+      <wsdl:output message="tns:ObtenerTipoPartidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidasAut">
+      <wsdl:input message="tns:ObtenerTipoPartidasAutSoapIn" />
+      <wsdl:output message="tns:ObtenerTipoPartidasAutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidasBC">
+      <wsdl:input message="tns:ObtenerTipoPartidasBCSoapIn" />
+      <wsdl:output message="tns:ObtenerTipoPartidasBCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PartidaApertura">
+      <wsdl:input message="tns:PartidaAperturaSoapIn" />
+      <wsdl:output message="tns:PartidaAperturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarSaldos">
+      <wsdl:input message="tns:ProcesarSaldosSoapIn" />
+      <wsdl:output message="tns:ProcesarSaldosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoInicioEjercicio">
+      <wsdl:input message="tns:ProcesoInicioEjercicioSoapIn" />
+      <wsdl:output message="tns:ProcesoInicioEjercicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepAuxMayor">
+      <wsdl:input message="tns:RepAuxMayorSoapIn" />
+      <wsdl:output message="tns:RepAuxMayorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepBalComprob">
+      <wsdl:input message="tns:RepBalComprobSoapIn" />
+      <wsdl:output message="tns:RepBalComprobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepDiarioMayor">
+      <wsdl:input message="tns:RepDiarioMayorSoapIn" />
+      <wsdl:output message="tns:RepDiarioMayorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepMovxCta">
+      <wsdl:input message="tns:RepMovxCtaSoapIn" />
+      <wsdl:output message="tns:RepMovxCtaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepObtenerCatContab">
+      <wsdl:input message="tns:RepObtenerCatContabSoapIn" />
+      <wsdl:output message="tns:RepObtenerCatContabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepPartidasDiario">
+      <wsdl:input message="tns:RepPartidasDiarioSoapIn" />
+      <wsdl:output message="tns:RepPartidasDiarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepPartidasDiarioAut">
+      <wsdl:input message="tns:RepPartidasDiarioAutSoapIn" />
+      <wsdl:output message="tns:RepPartidasDiarioAutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCuentaContab">
+      <wsdl:input message="tns:VerificaCuentaContabSoapIn" />
+      <wsdl:output message="tns:VerificaCuentaContabSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsLibContabSoap" type="tns:wsLibContabSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="InsertaPartida">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartida" style="document" />
+    <wsdl:operation name="distribucionCxC">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/distribucionCxC" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3830,8 +4059,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertaPartidaAut">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaAut" style="document" />
+    <wsdl:operation name="anularCuentaPorCobrar">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/anularCuentaPorCobrar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3839,8 +4068,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertaPartidaModulo">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaModulo" style="document" />
+    <wsdl:operation name="ingresarAbonoCuentaPorCobrarTransferencia">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ingresarAbonoCuentaPorCobrarTransferencia" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3848,8 +4077,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaBeneficio">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaBeneficio" style="document" />
+    <wsdl:operation name="consultarCuentaPorCobrar">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/consultarCuentaPorCobrar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3857,287 +4086,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaContab" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaCuentaCostos">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaCostos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaDetParametroPartidaIntegracion">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaDetParametroPartidaIntegracion" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelBeneficios">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelBeneficios" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelContab" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaNivelCostos">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelCostos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaParametroPartidaIntegracion">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaParametroPartidaIntegracion" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartida">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartida" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartidaAut">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaAut" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ModificaPartidaModulo">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaModulo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatBeneficio">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatBeneficio" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatContab" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerCatCostos">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatCostos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerEstadoPartidas">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerEstadoPartidas" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesBeneficios">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesBeneficios" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesContab" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNivelesCostos">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesCostos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerPartidaVacia">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerPartidaVacia" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidas">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidas" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidasAut">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasAut" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerTipoPartidasBC">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasBC" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PartidaApertura">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/PartidaApertura" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ProcesarSaldos">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesarSaldos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ProcesoInicioEjercicio">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesoInicioEjercicio" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepAuxMayor">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepAuxMayor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepBalComprob">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepBalComprob" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepDiarioMayor">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepDiarioMayor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepMovxCta">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepMovxCta" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepObtenerCatContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepObtenerCatContab" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepPartidasDiario">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiario" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepPartidasDiarioAut">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiarioAut" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCuentaContab">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/VerificaCuentaContab" style="document" />
+    <wsdl:operation name="ingresarCuentaPorCobrar">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ingresarCuentaPorCobrar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4201,6 +4151,15 @@
     </wsdl:operation>
     <wsdl:operation name="RecuperarCodCostoXsucursal">
       <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RecuperarCodCostoXsucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCodCostoXcuenta">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RecuperarCodCostoXcuenta" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4381,6 +4340,15 @@
     </wsdl:operation>
     <wsdl:operation name="CrearPartidasCorteDiarioCaja">
       <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/CrearPartidasCorteDiarioCaja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPdaCorteDiarioCaja">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/CrearPdaCorteDiarioCaja" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4892,317 +4860,335 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="wsLibContabSoap12" type="tns:wsLibContabSoap">
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="InsertaPartida">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartida" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartida" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="InsertaPartidaAut">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaAut" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaAut" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="InsertaPartidaModulo">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaModulo" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaModulo" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaCuentaBeneficio">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaBeneficio" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaBeneficio" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaCuentaContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaContab" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaContab" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaCuentaCostos">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaCostos" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaCostos" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaDetParametroPartidaIntegracion">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaDetParametroPartidaIntegracion" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaDetParametroPartidaIntegracion" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaNivelBeneficios">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelBeneficios" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelBeneficios" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaNivelContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelContab" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelContab" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaNivelCostos">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelCostos" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelCostos" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaParametroPartidaIntegracion">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaParametroPartidaIntegracion" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaParametroPartidaIntegracion" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaPartida">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartida" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartida" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaPartidaAut">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaAut" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaAut" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModificaPartidaModulo">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaModulo" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaModulo" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerCatBeneficio">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatBeneficio" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatBeneficio" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerCatContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatContab" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatContab" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerCatCostos">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatCostos" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatCostos" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerEstadoPartidas">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerEstadoPartidas" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerEstadoPartidas" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerNivelesBeneficios">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesBeneficios" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesBeneficios" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerNivelesContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesContab" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesContab" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerNivelesCostos">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesCostos" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesCostos" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerPartidaVacia">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerPartidaVacia" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerPartidaVacia" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerTipoPartidas">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidas" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidas" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerTipoPartidasAut">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasAut" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasAut" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerTipoPartidasBC">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasBC" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasBC" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PartidaApertura">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/PartidaApertura" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/PartidaApertura" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ProcesarSaldos">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesarSaldos" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesarSaldos" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ProcesoInicioEjercicio">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesoInicioEjercicio" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesoInicioEjercicio" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepAuxMayor">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepAuxMayor" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepAuxMayor" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepBalComprob">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepBalComprob" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepBalComprob" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepDiarioMayor">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepDiarioMayor" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepDiarioMayor" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepMovxCta">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepMovxCta" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepMovxCta" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepObtenerCatContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepObtenerCatContab" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepObtenerCatContab" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepPartidasDiario">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiario" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiario" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepPartidasDiarioAut">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiarioAut" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiarioAut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCuentaContab">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibContab/VerificaCuentaContab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLibContabSoap12" type="tns:wsLibContabSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="distribucionCxC">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/distribucionCxC" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5210,8 +5196,35 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="VerificaCuentaContab">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/VerificaCuentaContab" style="document" />
+    <wsdl:operation name="anularCuentaPorCobrar">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/anularCuentaPorCobrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresarAbonoCuentaPorCobrarTransferencia">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ingresarAbonoCuentaPorCobrarTransferencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCuentaPorCobrar">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/consultarCuentaPorCobrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresarCuentaPorCobrar">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ingresarCuentaPorCobrar" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5275,6 +5288,15 @@
     </wsdl:operation>
     <wsdl:operation name="RecuperarCodCostoXsucursal">
       <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RecuperarCodCostoXsucursal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCodCostoXcuenta">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RecuperarCodCostoXcuenta" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5455,6 +5477,15 @@
     </wsdl:operation>
     <wsdl:operation name="CrearPartidasCorteDiarioCaja">
       <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/CrearPartidasCorteDiarioCaja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPdaCorteDiarioCaja">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/CrearPdaCorteDiarioCaja" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5966,13 +5997,337 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertaPartida">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPartidaAut">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaAut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPartidaModulo">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/InsertaPartidaModulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaBeneficio">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaBeneficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaCuentaCostos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaCuentaCostos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaDetParametroPartidaIntegracion">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaDetParametroPartidaIntegracion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelBeneficios">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelBeneficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaNivelCostos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaNivelCostos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaParametroPartidaIntegracion">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaParametroPartidaIntegracion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartida">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartidaAut">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaAut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaPartidaModulo">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ModificaPartidaModulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatBeneficio">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatBeneficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatCostos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerCatCostos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoPartidas">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerEstadoPartidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesBeneficios">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesBeneficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelesCostos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerNivelesCostos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartidaVacia">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerPartidaVacia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidas">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidasAut">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasAut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoPartidasBC">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ObtenerTipoPartidasBC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PartidaApertura">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/PartidaApertura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarSaldos">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesarSaldos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoInicioEjercicio">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/ProcesoInicioEjercicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepAuxMayor">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepAuxMayor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepBalComprob">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepBalComprob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepDiarioMayor">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepDiarioMayor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepMovxCta">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepMovxCta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepObtenerCatContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepObtenerCatContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepPartidasDiario">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepPartidasDiarioAut">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/RepPartidasDiarioAut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCuentaContab">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibContab/VerificaCuentaContab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="wsLibContab">
     <wsdl:port name="wsLibContabSoap" binding="tns:wsLibContabSoap">
-      <soap:address location="http://localhost:57126/wsLibContab.asmx" />
+      <soap:address location="http://192.168.1.115:9100/wsLibContab.asmx" />
     </wsdl:port>
     <wsdl:port name="wsLibContabSoap12" binding="tns:wsLibContabSoap12">
-      <soap12:address location="http://localhost:57126/wsLibContab.asmx" />
+      <soap12:address location="http://192.168.1.115:9100/wsLibContab.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

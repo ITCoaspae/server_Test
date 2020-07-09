@@ -49,17 +49,17 @@ Public Class frmReportePagoInteresDiarioDPF
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(96, 16)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(115, 18)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(96, 20)
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(115, 22)
         Me.dtpFechaInicio.TabIndex = 18
         Me.dtpFechaInicio.Value = New Date(2006, 12, 19, 16, 42, 14, 734)
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(8, 16)
+        Me.Label1.Location = New System.Drawing.Point(10, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 23)
+        Me.Label1.Size = New System.Drawing.Size(96, 27)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Fecha Inicio:"
         '
@@ -70,35 +70,35 @@ Public Class frmReportePagoInteresDiarioDPF
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dtpFechaInicio)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(408, 48)
+        Me.GroupBox1.Size = New System.Drawing.Size(489, 55)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
         '
         'dtpFechaFin
         '
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(296, 16)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(355, 18)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(96, 20)
+        Me.dtpFechaFin.Size = New System.Drawing.Size(115, 22)
         Me.dtpFechaFin.TabIndex = 20
         Me.dtpFechaFin.Value = New Date(2006, 12, 19, 16, 42, 14, 734)
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(232, 16)
+        Me.Label2.Location = New System.Drawing.Point(278, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 23)
+        Me.Label2.Size = New System.Drawing.Size(77, 27)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Fecha Fin:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(348, 117)
+        Me.MetroButton1.Location = New System.Drawing.Point(418, 135)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(83, 28)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton1.Size = New System.Drawing.Size(99, 32)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 226
         Me.MetroButton1.Text = "Reporte"
         Me.MetroButton1.UseSelectable = True
@@ -106,19 +106,19 @@ Public Class frmReportePagoInteresDiarioDPF
         '
         'frmReportePagoInteresDiarioDPF
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(448, 158)
+        Me.ClientSize = New System.Drawing.Size(538, 182)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(448, 158)
+        Me.MaximumSize = New System.Drawing.Size(538, 182)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(448, 158)
+        Me.MinimumSize = New System.Drawing.Size(538, 182)
         Me.Name = "frmReportePagoInteresDiarioDPF"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Reporte pago de intereses de DPF"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -144,7 +144,13 @@ Public Class frmReportePagoInteresDiarioDPF
             Dim ofrm As New frmVisor(ds, 36, 0)
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmReportePagoInteresDiarioDPF_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

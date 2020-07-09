@@ -338,6 +338,36 @@ Partial Public Class dsContratoCuentasAhorro
         
         Private columnTasaInteres As Global.System.Data.DataColumn
         
+        Private columncuota As Global.System.Data.DataColumn
+        
+        Private columnTipoAhorro As Global.System.Data.DataColumn
+        
+        Private columnPlazo As Global.System.Data.DataColumn
+        
+        Private columncuotatext As Global.System.Data.DataColumn
+        
+        Private columnmontotext As Global.System.Data.DataColumn
+        
+        Private columntasatext As Global.System.Data.DataColumn
+        
+        Private columnplazotext As Global.System.Data.DataColumn
+        
+        Private columnedadtext As Global.System.Data.DataColumn
+        
+        Private columnmunicipio As Global.System.Data.DataColumn
+        
+        Private columnDUItext As Global.System.Data.DataColumn
+        
+        Private columnNittext As Global.System.Data.DataColumn
+        
+        Private columnfechaVencetext As Global.System.Data.DataColumn
+        
+        Private columnDepartamento As Global.System.Data.DataColumn
+        
+        Private columnfechaAperturatext As Global.System.Data.DataColumn
+        
+        Private columnejecutivo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -454,6 +484,126 @@ Partial Public Class dsContratoCuentasAhorro
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cuotaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncuota
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TipoAhorroColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTipoAhorro
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PlazoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPlazo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cuotatextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncuotatext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property montotextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmontotext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tasatextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntasatext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property plazotextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnplazotext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property edadtextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnedadtext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property municipioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmunicipio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DUItextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDUItext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NittextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNittext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property fechaVencetextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfechaVencetext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DepartamentoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDepartamento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property fechaAperturatextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfechaAperturatext
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ejecutivoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnejecutivo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -490,9 +640,34 @@ Partial Public Class dsContratoCuentasAhorro
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddSP_RPT_ContratoCuentaAhorroRow(ByVal Nombre As String, ByVal NoCuenta As String, ByVal MontoApertura As Double, ByVal DUI As String, ByVal Edad As Integer, ByVal Profesion As String, ByVal EstadoCivil As String, ByVal Direccion As String, ByVal Presidente As String, ByVal TasaInteres As Double) As SP_RPT_ContratoCuentaAhorroRow
+        Public Overloads Function AddSP_RPT_ContratoCuentaAhorroRow( _
+                    ByVal Nombre As String,  _
+                    ByVal NoCuenta As String,  _
+                    ByVal MontoApertura As Double,  _
+                    ByVal DUI As String,  _
+                    ByVal Edad As Integer,  _
+                    ByVal Profesion As String,  _
+                    ByVal EstadoCivil As String,  _
+                    ByVal Direccion As String,  _
+                    ByVal Presidente As String,  _
+                    ByVal TasaInteres As Double,  _
+                    ByVal cuota As Double,  _
+                    ByVal TipoAhorro As String,  _
+                    ByVal Plazo As Integer,  _
+                    ByVal cuotatext As String,  _
+                    ByVal montotext As String,  _
+                    ByVal tasatext As String,  _
+                    ByVal plazotext As String,  _
+                    ByVal edadtext As String,  _
+                    ByVal municipio As String,  _
+                    ByVal DUItext As String,  _
+                    ByVal Nittext As String,  _
+                    ByVal fechaVencetext As String,  _
+                    ByVal Departamento As String,  _
+                    ByVal fechaAperturatext As String,  _
+                    ByVal ejecutivo As String) As SP_RPT_ContratoCuentaAhorroRow
             Dim rowSP_RPT_ContratoCuentaAhorroRow As SP_RPT_ContratoCuentaAhorroRow = CType(Me.NewRow,SP_RPT_ContratoCuentaAhorroRow)
-            Dim columnValuesArray() As Object = New Object() {Nombre, NoCuenta, MontoApertura, DUI, Edad, Profesion, EstadoCivil, Direccion, Presidente, TasaInteres}
+            Dim columnValuesArray() As Object = New Object() {Nombre, NoCuenta, MontoApertura, DUI, Edad, Profesion, EstadoCivil, Direccion, Presidente, TasaInteres, cuota, TipoAhorro, Plazo, cuotatext, montotext, tasatext, plazotext, edadtext, municipio, DUItext, Nittext, fechaVencetext, Departamento, fechaAperturatext, ejecutivo}
             rowSP_RPT_ContratoCuentaAhorroRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSP_RPT_ContratoCuentaAhorroRow)
             Return rowSP_RPT_ContratoCuentaAhorroRow
@@ -525,6 +700,21 @@ Partial Public Class dsContratoCuentasAhorro
             Me.columnDireccion = MyBase.Columns("Direccion")
             Me.columnPresidente = MyBase.Columns("Presidente")
             Me.columnTasaInteres = MyBase.Columns("TasaInteres")
+            Me.columncuota = MyBase.Columns("cuota")
+            Me.columnTipoAhorro = MyBase.Columns("TipoAhorro")
+            Me.columnPlazo = MyBase.Columns("Plazo")
+            Me.columncuotatext = MyBase.Columns("cuotatext")
+            Me.columnmontotext = MyBase.Columns("montotext")
+            Me.columntasatext = MyBase.Columns("tasatext")
+            Me.columnplazotext = MyBase.Columns("plazotext")
+            Me.columnedadtext = MyBase.Columns("edadtext")
+            Me.columnmunicipio = MyBase.Columns("municipio")
+            Me.columnDUItext = MyBase.Columns("DUItext")
+            Me.columnNittext = MyBase.Columns("Nittext")
+            Me.columnfechaVencetext = MyBase.Columns("fechaVencetext")
+            Me.columnDepartamento = MyBase.Columns("Departamento")
+            Me.columnfechaAperturatext = MyBase.Columns("fechaAperturatext")
+            Me.columnejecutivo = MyBase.Columns("ejecutivo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -550,6 +740,36 @@ Partial Public Class dsContratoCuentasAhorro
             MyBase.Columns.Add(Me.columnPresidente)
             Me.columnTasaInteres = New Global.System.Data.DataColumn("TasaInteres", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTasaInteres)
+            Me.columncuota = New Global.System.Data.DataColumn("cuota", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncuota)
+            Me.columnTipoAhorro = New Global.System.Data.DataColumn("TipoAhorro", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTipoAhorro)
+            Me.columnPlazo = New Global.System.Data.DataColumn("Plazo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPlazo)
+            Me.columncuotatext = New Global.System.Data.DataColumn("cuotatext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncuotatext)
+            Me.columnmontotext = New Global.System.Data.DataColumn("montotext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmontotext)
+            Me.columntasatext = New Global.System.Data.DataColumn("tasatext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntasatext)
+            Me.columnplazotext = New Global.System.Data.DataColumn("plazotext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnplazotext)
+            Me.columnedadtext = New Global.System.Data.DataColumn("edadtext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnedadtext)
+            Me.columnmunicipio = New Global.System.Data.DataColumn("municipio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmunicipio)
+            Me.columnDUItext = New Global.System.Data.DataColumn("DUItext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDUItext)
+            Me.columnNittext = New Global.System.Data.DataColumn("Nittext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNittext)
+            Me.columnfechaVencetext = New Global.System.Data.DataColumn("fechaVencetext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfechaVencetext)
+            Me.columnDepartamento = New Global.System.Data.DataColumn("Departamento", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDepartamento)
+            Me.columnfechaAperturatext = New Global.System.Data.DataColumn("fechaAperturatext", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfechaAperturatext)
+            Me.columnejecutivo = New Global.System.Data.DataColumn("ejecutivo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnejecutivo)
             Me.columnNombre.ReadOnly = true
             Me.columnNombre.MaxLength = 102
             Me.columnNoCuenta.AllowDBNull = false
@@ -562,6 +782,25 @@ Partial Public Class dsContratoCuentasAhorro
             Me.columnDireccion.MaxLength = 500
             Me.columnPresidente.ReadOnly = true
             Me.columnPresidente.MaxLength = 100
+            Me.columnTipoAhorro.AllowDBNull = false
+            Me.columnTipoAhorro.MaxLength = 100
+            Me.columncuotatext.ReadOnly = true
+            Me.columncuotatext.MaxLength = 1000
+            Me.columnmontotext.ReadOnly = true
+            Me.columnmontotext.MaxLength = 1000
+            Me.columntasatext.ReadOnly = true
+            Me.columntasatext.MaxLength = 1000
+            Me.columnplazotext.ReadOnly = true
+            Me.columnplazotext.MaxLength = 1000
+            Me.columnedadtext.ReadOnly = true
+            Me.columnedadtext.MaxLength = 1000
+            Me.columnmunicipio.MaxLength = 100
+            Me.columnDUItext.ReadOnly = true
+            Me.columnDUItext.MaxLength = 8000
+            Me.columnNittext.ReadOnly = true
+            Me.columnNittext.MaxLength = 8000
+            Me.columnfechaVencetext.ReadOnly = true
+            Me.columnfechaVencetext.MaxLength = 2037
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1182,6 +1421,237 @@ Partial Public Class dsContratoCuentasAhorro
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cuota() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotaColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cuota' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TipoAhorro() As String
+            Get
+                Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.TipoAhorroColumn),String)
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.TipoAhorroColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Plazo() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.PlazoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Plazo' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.PlazoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cuotatext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotatextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cuotatext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotatextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property montotext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.montotextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'montotext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.montotextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tasatext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.tasatextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'tasatext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.tasatextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property plazotext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.plazotextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'plazotext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.plazotextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property edadtext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.edadtextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'edadtext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.edadtextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property municipio() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.municipioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'municipio' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.municipioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DUItext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.DUItextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DUItext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.DUItextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Nittext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.NittextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nittext' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.NittextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fechaVencetext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaVencetextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'fechaVencetext' in table 'SP_RPT_ContratoCuentaAhorro' is D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaVencetextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Departamento() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.DepartamentoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Departamento' in table 'SP_RPT_ContratoCuentaAhorro' is DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.DepartamentoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fechaAperturatext() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaAperturatextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'fechaAperturatext' in table 'SP_RPT_ContratoCuentaAhorro' i"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaAperturatextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ejecutivo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoCuentaAhorro.ejecutivoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ejecutivo' in table 'SP_RPT_ContratoCuentaAhorro' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoCuentaAhorro.ejecutivoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNombreNull() As Boolean
             Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.NombreColumn)
         End Function
@@ -1274,6 +1744,174 @@ Partial Public Class dsContratoCuentasAhorro
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetTasaInteresNull()
             Me(Me.tableSP_RPT_ContratoCuentaAhorro.TasaInteresColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscuotaNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.cuotaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcuotaNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPlazoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.PlazoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPlazoNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.PlazoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscuotatextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.cuotatextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcuotatextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.cuotatextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmontotextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.montotextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmontotextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.montotextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstasatextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.tasatextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettasatextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.tasatextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsplazotextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.plazotextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetplazotextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.plazotextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsedadtextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.edadtextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetedadtextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.edadtextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmunicipioNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.municipioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmunicipioNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.municipioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDUItextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.DUItextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDUItextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.DUItextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNittextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.NittextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNittextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.NittextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsfechaVencetextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.fechaVencetextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetfechaVencetextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaVencetextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDepartamentoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.DepartamentoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDepartamentoNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.DepartamentoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsfechaAperturatextNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.fechaAperturatextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetfechaAperturatextNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.fechaAperturatextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsejecutivoNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoCuentaAhorro.ejecutivoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetejecutivoNull()
+            Me(Me.tableSP_RPT_ContratoCuentaAhorro.ejecutivoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1639,6 +2277,18 @@ Namespace dsContratoCuentasAhorroTableAdapters
             tableMapping.ColumnMappings.Add("Direccion", "Direccion")
             tableMapping.ColumnMappings.Add("Presidente", "Presidente")
             tableMapping.ColumnMappings.Add("TasaInteres", "TasaInteres")
+            tableMapping.ColumnMappings.Add("cuota", "cuota")
+            tableMapping.ColumnMappings.Add("TipoAhorro", "TipoAhorro")
+            tableMapping.ColumnMappings.Add("Plazo", "Plazo")
+            tableMapping.ColumnMappings.Add("cuotatext", "cuotatext")
+            tableMapping.ColumnMappings.Add("montotext", "montotext")
+            tableMapping.ColumnMappings.Add("tasatext", "tasatext")
+            tableMapping.ColumnMappings.Add("plazotext", "plazotext")
+            tableMapping.ColumnMappings.Add("edadtext", "edadtext")
+            tableMapping.ColumnMappings.Add("municipio", "municipio")
+            tableMapping.ColumnMappings.Add("DUItext", "DUItext")
+            tableMapping.ColumnMappings.Add("Nittext", "Nittext")
+            tableMapping.ColumnMappings.Add("fechaVencetext", "fechaVencetext")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1646,7 +2296,7 @@ Namespace dsContratoCuentasAhorroTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.SIF_ERP.My.MySettings.Default.SIFConnectionString2
+            Me._connection.ConnectionString = Global.SIF_ERP.My.MySettings.Default.SIFConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1836,7 +2486,7 @@ Namespace dsContratoCuentasAhorroTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.SIF_ERP.My.MySettings.Default.SIFConnectionString2
+            Me._connection.ConnectionString = Global.SIF_ERP.My.MySettings.Default.SIFConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

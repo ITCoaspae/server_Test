@@ -64,7 +64,7 @@ Partial Class frmMTipoCtasContables
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Image = My.Resources.resMain.delete1
+        'Me.btnEliminar.Image = My.Resources.resMain.delete1
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.Location = New System.Drawing.Point(274, 12)
         Me.btnEliminar.Name = "btnEliminar"
@@ -79,7 +79,7 @@ Partial Class frmMTipoCtasContables
         Me.btnConsultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConsultar.ForeColor = System.Drawing.Color.White
-        Me.btnConsultar.Image = My.Resources.resMain._001_37
+        'Me.btnConsultar.Image = My.Resources.resMain._001_37
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(179, 12)
         Me.btnConsultar.Name = "btnConsultar"
@@ -94,7 +94,7 @@ Partial Class frmMTipoCtasContables
         Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Image = My.Resources.resMain.add
+        'Me.btnAgregar.Image = My.Resources.resMain.add
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAgregar.Location = New System.Drawing.Point(6, 12)
         Me.btnAgregar.Name = "btnAgregar"
@@ -109,7 +109,7 @@ Partial Class frmMTipoCtasContables
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Image = My.Resources.resMain._001_45
+        'Me.btnModificar.Image = My.Resources.resMain._001_45
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(87, 12)
         Me.btnModificar.Name = "btnModificar"

@@ -63,67 +63,69 @@ Public Class frmMsDirectivos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 165)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 190)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Rows.DefaultSize = 19
-        Me.fg.Size = New System.Drawing.Size(628, 220)
+        Me.fg.Rows.DefaultSize = 22
+        Me.fg.Size = New System.Drawing.Size(704, 196)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 7
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(77, 57)
+        Me.txtCodigo.Location = New System.Drawing.Point(92, 66)
         Me.txtCodigo.MaxLength = 10
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(77, 22)
         Me.txtCodigo.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(23, 60)
+        Me.Label1.Location = New System.Drawing.Point(28, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 16)
+        Me.Label1.Size = New System.Drawing.Size(57, 19)
         Me.Label1.TabIndex = 87
         Me.Label1.Text = "Código:"
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(225, 56)
+        Me.txtDescripcion.Location = New System.Drawing.Point(270, 65)
         Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(384, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(461, 22)
         Me.txtDescripcion.TabIndex = 1
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(147, 60)
+        Me.Label2.Location = New System.Drawing.Point(176, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 16)
+        Me.Label2.Size = New System.Drawing.Size(87, 19)
         Me.Label2.TabIndex = 90
         Me.Label2.Text = "Descripción:"
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(23, 90)
+        Me.Label3.Location = New System.Drawing.Point(28, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 20)
+        Me.Label3.Size = New System.Drawing.Size(57, 23)
         Me.Label3.TabIndex = 91
         Me.Label3.Text = "Fecha:"
         '
         'dtpFecha
         '
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(77, 84)
+        Me.dtpFecha.Location = New System.Drawing.Point(92, 97)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 22)
         Me.dtpFecha.TabIndex = 2
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(212, 131)
+        Me.btnEliminar.Location = New System.Drawing.Point(254, 151)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(87, 28)
+        Me.btnEliminar.Size = New System.Drawing.Size(105, 32)
         Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 136
         Me.btnEliminar.Text = "&Eliminar"
@@ -132,9 +134,9 @@ Public Class frmMsDirectivos
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(119, 131)
+        Me.btnModificar1.Location = New System.Drawing.Point(143, 151)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(87, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(104, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 135
         Me.btnModificar1.Text = "&Modificar"
@@ -143,9 +145,9 @@ Public Class frmMsDirectivos
         '
         'btnNuevo1
         '
-        Me.btnNuevo1.Location = New System.Drawing.Point(26, 131)
+        Me.btnNuevo1.Location = New System.Drawing.Point(31, 151)
         Me.btnNuevo1.Name = "btnNuevo1"
-        Me.btnNuevo1.Size = New System.Drawing.Size(87, 28)
+        Me.btnNuevo1.Size = New System.Drawing.Size(105, 32)
         Me.btnNuevo1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnNuevo1.TabIndex = 134
         Me.btnNuevo1.Text = "&Nuevo"
@@ -154,9 +156,9 @@ Public Class frmMsDirectivos
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(225, 82)
+        Me.btnGuardar1.Location = New System.Drawing.Point(627, 104)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(87, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(104, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 137
         Me.btnGuardar1.Text = "&Guardar"
@@ -165,8 +167,8 @@ Public Class frmMsDirectivos
         '
         'frmMsDirectivos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(674, 408)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(760, 413)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar1)
@@ -182,6 +184,7 @@ Public Class frmMsDirectivos
         Me.MinimizeBox = False
         Me.Name = "frmMsDirectivos"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento Directivos"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -215,6 +218,10 @@ Public Class frmMsDirectivos
             oAsoc = New wrAsociados.wsLibAsoc
             ds = oAsoc.ConsultarDetDirectivos("*", "Codigo='" & pCodigo & "'", "Codigo,Correlativo", sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
+            fg.Cols.Item(1).Visible = False
+            fg.Cols.Item(2).Visible = False
+            fg.Cols.Item(3).Visible = False
+
         Catch ex As Exception
             MessageBox.Show("Error en la recuperación de datos tabla Directivos." & "System Error: " & ex.Message.ToString(), "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -265,25 +272,28 @@ Public Class frmMsDirectivos
             pCampos = "Codigo,Descripcion,Fecha"
             pValores = "" & Me.txtCodigo.Text.Trim & ",'" & Trim(txtDescripcion.Text) & "','" & Format(Me.dtpFecha.Value, "dd/MM/yyyy") & "'"
             If oAsoc.InsertarDirectivos(pCampos, pValores, sUsuario, sPassword, sSucursal) = True Then
+                MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
                 Me.btnGuardar1.Text = "&Modificar"
                 Me.pCodigo = Me.txtCodigo.Text.Trim
                 Me.pAccion = "Modificar"
                 Me.btnNuevo1.Enabled = True
             Else
-                MsgBox("El registro NO ha sido agregado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Asociados")
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+
             End If
         ElseIf Me.btnGuardar1.Text = "&Modificar" Then
             pCampos = "Descripcion='" & Trim(txtDescripcion.Text) & "',Fecha='" & Format(Me.dtpFecha.Value, "dd/MM/yyyy") & "'"
             If oAsoc.ModificarDirectivos("Codigo='" & Trim(pCodigo) & "'", pCampos, sUsuario, sPassword, sSucursal) = True Then
+                MetroFramework.MetroMessageBox.Show(Me, mensajeUpdateRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
                 Me.Dispose()
             Else
-                MsgBox("El registro no ha sido modificado. Verifíque e intente de nuevo.", MsgBoxStyle.Critical, "Error de Validación/Derechos en Módulo Asociados")
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
             End If
         End If
     End Sub
 
     Private Sub btnNuevo1_Click(sender As Object, e As EventArgs) Handles btnNuevo1.Click
-        Dim frm As frmMsAsocDirectivos = New frmMsAsocDirectivos
+        Dim frm As New frmMsAsocDirectivos
         frm.pAccion = "Guardar"
         frm.pCodigo = Me.pCodigo
         frm.pCorrelativo = ""
@@ -294,7 +304,7 @@ Public Class frmMsDirectivos
 
     Private Sub btnModificar1_Click(sender As Object, e As EventArgs) Handles btnModificar1.Click
         If fg.Row <> -1 Then
-            Dim frm As frmMsAsocDirectivos = New frmMsAsocDirectivos
+            Dim frm As New frmMsAsocDirectivos
             frm.pAccion = "Modificar"
             frm.pCodigo = Me.pCodigo
             frm.btnGuardar1.Text = "&Modificar"
@@ -306,17 +316,21 @@ Public Class frmMsDirectivos
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-
-    End Sub
-
-    Private Sub btEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If fg.Row <> -1 Then
             If MsgBox("¿Desea eliminar el registro?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Eliminar registro") = MsgBoxResult.Yes Then
                 Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc
-                oAsoc.EliminarDetDirectivos("Correlativo='" & fg.Item(fg.Row, "Correlativo") & "'", sUsuario, sPassword, sSucursal)
+                If (oAsoc.EliminarDetDirectivos("Correlativo='" & fg.Item(fg.Row, "Correlativo") & "'", sUsuario, sPassword, sSucursal)) = True Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeDeleteRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                End If
                 ActualizaGrid()
             End If
         End If
     End Sub
 
+
+    Private Sub frmMsDirectivos_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

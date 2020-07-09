@@ -55,59 +55,59 @@ Public Class frmMsUsuarioporRol
         'txtObservaciones
         '
         Me.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtObservaciones.Location = New System.Drawing.Point(111, 124)
+        Me.txtObservaciones.Location = New System.Drawing.Point(133, 142)
         Me.txtObservaciones.MaxLength = 255
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservaciones.Size = New System.Drawing.Size(320, 56)
+        Me.txtObservaciones.Size = New System.Drawing.Size(384, 46)
         Me.txtObservaciones.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(23, 124)
+        Me.Label5.Location = New System.Drawing.Point(28, 143)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 16)
+        Me.Label5.Size = New System.Drawing.Size(105, 19)
         Me.Label5.TabIndex = 109
         Me.Label5.Text = "Observaciones:"
         '
         'txtCodUsuario
         '
         Me.txtCodUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodUsuario.Location = New System.Drawing.Point(111, 92)
+        Me.txtCodUsuario.Location = New System.Drawing.Point(133, 106)
         Me.txtCodUsuario.MaxLength = 8
         Me.txtCodUsuario.Name = "txtCodUsuario"
-        Me.txtCodUsuario.Size = New System.Drawing.Size(88, 20)
+        Me.txtCodUsuario.Size = New System.Drawing.Size(384, 22)
         Me.txtCodUsuario.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(23, 92)
+        Me.Label1.Location = New System.Drawing.Point(28, 106)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 16)
+        Me.Label1.Size = New System.Drawing.Size(67, 19)
         Me.Label1.TabIndex = 107
         Me.Label1.Text = "Usuario:"
         '
         'txtRol
         '
         Me.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtRol.Location = New System.Drawing.Point(111, 60)
+        Me.txtRol.Location = New System.Drawing.Point(133, 69)
         Me.txtRol.MaxLength = 8
         Me.txtRol.Name = "txtRol"
-        Me.txtRol.Size = New System.Drawing.Size(88, 20)
+        Me.txtRol.Size = New System.Drawing.Size(106, 22)
         Me.txtRol.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(23, 60)
+        Me.Label2.Location = New System.Drawing.Point(28, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(67, 19)
         Me.Label2.TabIndex = 105
         Me.Label2.Text = "Rol:"
         '
@@ -115,29 +115,30 @@ Public Class frmMsUsuarioporRol
         '
         Me.txtDescRol.BackColor = System.Drawing.Color.White
         Me.txtDescRol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescRol.Location = New System.Drawing.Point(207, 60)
+        Me.txtDescRol.Location = New System.Drawing.Point(248, 69)
         Me.txtDescRol.MaxLength = 8
         Me.txtDescRol.Name = "txtDescRol"
         Me.txtDescRol.ReadOnly = True
-        Me.txtDescRol.Size = New System.Drawing.Size(224, 20)
+        Me.txtDescRol.Size = New System.Drawing.Size(269, 22)
         Me.txtDescRol.TabIndex = 112
         '
         'txtDescUsuario
         '
         Me.txtDescUsuario.BackColor = System.Drawing.Color.White
         Me.txtDescUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescUsuario.Location = New System.Drawing.Point(207, 92)
+        Me.txtDescUsuario.Location = New System.Drawing.Point(219, 16)
         Me.txtDescUsuario.MaxLength = 8
         Me.txtDescUsuario.Name = "txtDescUsuario"
         Me.txtDescUsuario.ReadOnly = True
-        Me.txtDescUsuario.Size = New System.Drawing.Size(224, 20)
+        Me.txtDescUsuario.Size = New System.Drawing.Size(269, 22)
         Me.txtDescUsuario.TabIndex = 113
+        Me.txtDescUsuario.Visible = False
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(356, 186)
+        Me.btnGuardar1.Location = New System.Drawing.Point(427, 194)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 1010
         Me.btnGuardar1.Text = "&Guardar"
@@ -146,9 +147,9 @@ Public Class frmMsUsuarioporRol
         '
         'frmMsUsuarioporRol
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(457, 243)
+        Me.ClientSize = New System.Drawing.Size(548, 280)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.txtDescUsuario)
         Me.Controls.Add(Me.txtDescRol)
@@ -159,9 +160,9 @@ Public Class frmMsUsuarioporRol
         Me.Controls.Add(Me.txtRol)
         Me.Controls.Add(Me.Label2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(457, 243)
+        Me.MaximumSize = New System.Drawing.Size(548, 280)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(457, 243)
+        Me.MinimumSize = New System.Drawing.Size(548, 280)
         Me.Name = "frmMsUsuarioporRol"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
@@ -201,7 +202,7 @@ Public Class frmMsUsuarioporRol
             Me.txtCodUsuario.Text = ofrm.Resultado
             Me.txtDescUsuario.Text = ofrm.Resultado2
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -220,7 +221,7 @@ Public Class frmMsUsuarioporRol
             Me.txtRol.Text = ofrm.Resultado
             Me.txtDescRol.Text = ofrm.Resultado2
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -249,7 +250,13 @@ Public Class frmMsUsuarioporRol
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMsUsuarioporRol_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

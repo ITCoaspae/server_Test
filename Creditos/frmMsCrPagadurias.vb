@@ -419,7 +419,7 @@ Public Class frmMsCrPagadurias
                 llenarGiroEmpresa()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -438,7 +438,7 @@ Public Class frmMsCrPagadurias
         Me.cbTipoEmpresa.SelectedIndex = 0
         Me.cbGiro.SelectedIndex = 0
     End Sub
-    Protected Function validaciones()
+    Protected Function validaciones() As Boolean
 
         If Me.txtNombre.Text.Trim.Equals("") Then
             MsgBox("El campo Nombre no puede quedar vacio", MsgBoxStyle.Information, "Módulo - Créditos")
@@ -455,6 +455,7 @@ Public Class frmMsCrPagadurias
             MsgBox("El campo Giro y Tipo de Empresa no puede quedar vacio", MsgBoxStyle.Information, "Módulo - Créditos")
             Return False
         End If
+        Return False
     End Function
 
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
@@ -473,7 +474,7 @@ Public Class frmMsCrPagadurias
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

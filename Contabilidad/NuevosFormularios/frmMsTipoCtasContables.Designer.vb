@@ -85,7 +85,7 @@ Partial Class frmMsTipoCtasContables
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Image = My.Resources.resMain.save2
+        'Me.btnGuardar.Image = My.Resources.resMain.save2
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.Location = New System.Drawing.Point(235, 116)
         Me.btnGuardar.Name = "btnGuardar"
@@ -122,7 +122,7 @@ Partial Class frmMsTipoCtasContables
         Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Image = My.Resources.resMain.delete1
+        'Me.btnCerrar.Image = My.Resources.resMain.delete1
         Me.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCerrar.Location = New System.Drawing.Point(320, 116)
         Me.btnCerrar.Name = "btnCerrar"

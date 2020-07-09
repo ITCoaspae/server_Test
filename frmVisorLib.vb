@@ -56,7 +56,7 @@ Public Class frmVisorLib
         '
         'frmVisorLib
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(880, 600)
         Me.Controls.Add(Me.crView)
@@ -108,54 +108,22 @@ Public Class frmVisorLib
 
     Private Sub PoblarReporte(ByVal ds As DataSet)
         Select Case nReport
-            Case 0, 1
-                Dim crTemp As New crCartaAsociado
-                Me.Cursor = Cursors.WaitCursor()
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-                If nReport = 0 Then
-                    Me.Text = "Carta de Retirados"
-                Else
-                    Me.Text = "Carta de Asociados"
-                End If
-            Case 2
-                Dim crTemp As New crBalGral
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-                Me.Text = "Reporte - Balance General"
-            Case 3
-                Dim crTemp As New crEstRes
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
+
             Case 4
                 Dim crTemp As New crMovxCuenta
                 Me.Cursor = Cursors.WaitCursor
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crTemp
                 Me.Cursor = Cursors.Default
-            Case 5
-                Dim crTemp As New crIngresoAsoc
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 7
                 Dim crTemp As New crCheque
                 Me.Cursor = Cursors.WaitCursor
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crTemp
                 Me.Cursor = Cursors.Default
-            Case 8 'ORDEN DE DESCUENTO - PRÉSTAMOS
-                Dim crTemp As New crPrOrden_Descuento
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 9 'REPORTE DE PRÉSTAMOS POR INTERÉS
                 Dim crTemp As New crPrestamosxInteres
                 Me.Cursor = Cursors.WaitCursor
@@ -187,24 +155,8 @@ Public Class frmVisorLib
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 14
-                Dim crTemp As New rpCBCorbosxGestiones
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 15
-                Dim crTemp As New crAhAperturaCtas
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 16
-                Dim crTemp As New crAhAperturaCtasDPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
+
             Case 17
                 Dim crTemp As New crComprobanteAhorro 'crAhFactura
                 Me.Cursor = Cursors.WaitCursor
@@ -278,12 +230,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 25
-                Dim crTemp As New crRetiroAsoc
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 26
                 Dim crTemp As New crCACreditoFiscalAp
                 Me.Cursor = Cursors.WaitCursor
@@ -314,18 +261,7 @@ Public Class frmVisorLib
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crTemp
                 Me.Cursor = Cursors.Default
-            Case 31 'Nuevos Asociados
-                Dim crTemp As New crNuevosAsociados
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 32 'Cobros por Inactividad
-                Dim crTemp As New crCobroInactividad
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 33 'Listado Carter de Préstamos
                 Dim crTemp As New crListadoCarteraPrestamo
                 Me.Cursor = Cursors.WaitCursor
@@ -344,12 +280,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 36 'Intereses Diarios
-                Dim crTemp As New crPagoInteresDiarioDepPlazo
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 37 'Concentración por Gestor
                 Dim crTemp As New crCBConcentracionGestion
                 Me.Cursor = Cursors.WaitCursor
@@ -404,48 +335,14 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 46 'Colocación de Préstamos
-                Dim crTemp As New crRepColocacionCredito
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 47 'Colocación de Préstamos
                 Dim crTemp As New crAperturaCred
                 Me.Cursor = Cursors.WaitCursor
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 48 'Vencimientos Cuentas de Ahorro
-                Dim crTemp As New crAhVencimientosAhorro
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 49 'Captación DPF Acumulado
-                Dim crTemp As New crAcumuladoDPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 50 'Préstamos Gerenciales
-                Dim crTemp As New crPrestamosGerenciales
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 51 'Ingreso Asociados
-                Dim crTemp As New crGerIngresoAsoc
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 52 'Apertura Aportaciones
-                Dim crTemp As New crAperturaAportacion
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 53 'Resumen Movimientos de Caja agrupados por Documentos
                 Dim crTemp As New crMovCajaxDoc
                 Me.Cursor = Cursors.WaitCursor
@@ -488,66 +385,10 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 60 'REPORTE MOVIMIENTOS DIARIOS DE AHORROS
-                Dim crTemp As New crRepMovimientosAhorros
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 61 'REPORTE DE SALDOS DE APORTACIONES
-                Dim crTemp As New crSaldosAportacion
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 62 'REPORTE DE SALDOS POR DEPOSITOS A PLAZO FIJO (DPF)
-                Dim crTemp As New crSaldosDPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 63 'REPORTE DE SALDOS CUENTAS DE AHORRO
-                Dim crTemp As New crSaldosAhorros
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 64 'REPORTE DE SALDO DE PRESTAMOS PARA ASEGURADORA
-                Dim crTemp As New crSaldoPrestamoAseguradora
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 65 'REPORTE CUENTAS DE ASOCIADOS
-                Dim crTemp As New crASCuentasAsociado
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 66 'REPORTE DE INTERESES POR ASOCIADOS
-                Dim crTemp As New crAhorroInteresxAsociado
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 67 'Recibo Provisional
-                Dim crTemp As New crRecibo
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 68 'REPORT DE SALDOS POR ASOCIADO
-                Dim crTemp As New crSaldosAsociado
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 69 'REPORTE DE SALDOS DE PRÉSTAMOS ADMINISTRATIVOS
-                Dim crTemp As New crSaldosPrestamosAdm
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
+
+
+
             Case 70 'Reporte de Saldos por Tipos de Préstamos
                 Dim crTemp As New crPRRepSaldosPrestamosxTipo
                 Me.Cursor = Cursors.WaitCursor
@@ -560,47 +401,14 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 72 'REPORTE DE SALDOS DE CUENTAS DE APORTACIÓN CANCELADAS
-                Dim crTemp As New crSaldosCtasCanceladas
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 73 'REPORTE DE VENCIMIENTOS DPF
-                Dim crTemp As New crVencimientos_DPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 74 'REPORTE DE TRANSFERENCIAS
                 Dim crTemp As New crTransferencias
                 Me.Cursor = Cursors.WaitCursor
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 75 'RETIRO DE ASOCIADOS
-                Dim crTemp As New crRetiros_Asociados
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 76 'REPORTE DIARIO DE ASOCIADOS EN MORA
-                Dim crTemp As New crAsociados_Mora
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 77 'CARTERA EN DOCUMENTOS EN PROTESTO CON RESERVA
-                Dim crTemp As New crDocProtesto_Reserva
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 79 'ASOCIADOS INHABILITADOS
-                Dim crTemp As New crAsociados_Inhabilitados
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
+
                 Me.Cursor = Cursors.Default
             Case 80 'REPORTE PARA DETALLE DE FIADORES
                 Dim crTemp As New crFiadoresPrestamos
@@ -614,12 +422,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 82 'REPORTE DE CUENTAS INACTIVAS
-                Dim crTemp As New crCtasInact
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 83 'Reporte de Reversiones diarias
                 Dim crTemp As New crReversiones
                 Me.Cursor = Cursors.WaitCursor
@@ -632,12 +435,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 85 'REPORTE CONSOLIDADO DE CARTERA DE DEPOSITOS A PLAZO FIJO (DPF)
-                Dim crTemp As New crGerencialCarteraDPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 86 'REPORTE GERENCIAL CON GARANTIAS DPF EN MORA
                 Dim crTemp As New crGarantiaDPFMora
                 Me.Cursor = Cursors.WaitCursor
@@ -650,30 +448,15 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 88 'REPORTE DE DATOS DPF
-                Dim crTemp As New crDatosDPF
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 89 'IMPRESIÓN DE CERTIFICADO DPF
                 Dim crTemp As New crCertificadoDPF
                 Me.Cursor = Cursors.WaitCursor
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 90 'COMISIONES DE MERCADEO
-                Dim crTemp As New crComisiones
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 91 'REPORTE DE DATOS DE PRÉSTAMOS
-                Dim crTemp As New crDatosPrestamos
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
+
             Case 92 'CÁLCULO DE CUOTA PARA PRÉSTAMOS
                 Dim crTemp As New crCuota
                 Me.Cursor = Cursors.WaitCursor
@@ -704,24 +487,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 97 'REPORTE DE SALDOS DE APORTACIONES CANCELADAS POR PERÍODO
-                Dim crTemp As New crCuentas_Canceladas
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 98 'REPORTE DE CUENTAS PIGNORADAS POR TIPO DE CUENTA
-                Dim crTemp As New crCuentas_Pignoradas
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 99 'REPORTE DE APLICACIONES VALOR FECHA PARA PRÉSTAMOS
-                Dim crTemp As New crReversiones_Prestamos
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 100 'REPORTE DE MOVIMIENTOS DE CAJA
                 Dim crTemp As New crMov_de_Caja
                 Me.Cursor = Cursors.WaitCursor
@@ -734,24 +500,8 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 102 'DETERMINACIÓN DE RESERVAS CONSOLIDADA
-                Dim crTemp As New crDetReservaConsolidado
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 103 'CONTROL DE RUTA DE COBRO GENERAL
-                Dim crTemp As New crRutaCobro
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 104 'DETALLE DE CUOTA PARA CONTROL DE RUTA DE COBRO GENERAL
-                Dim crTemp As New crDetalleCuotaRuta
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
+
             Case 105 'Frente libreta de ahorro programado
                 Dim crTemp As New crAhLibretaProgramado
                 Me.Cursor = Cursors.WaitCursor
@@ -765,60 +515,15 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 107 'DEPÓSITOS A PLAZO FIJO ANULADOS
-                Dim crTemp As New crDPFAnulados
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 108 'REPORTE APLICACIONES VALOR FECHA AHORROS
                 Dim crTemp As New crAplicacionesV_F_A
                 Me.Cursor = Cursors.WaitCursor
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 109 'REPORTE DE ASOCIADOS CON CUENTAS
-                Dim crTemp As New crAsociadosAhorrantes
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 110 'REPORTE DE ASOCIADOS INHABILITADOS
-                Dim crTemp As New crAsociadosInhabilitados
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 111 'REPORTE DE ASOCIADOS EXCLUIDOS
-                Dim crTemp As New crAsociados_Excluidos
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 112 'COMPROBANTE DE APLICACION VALOR FECHA
-                Dim crTemp As New crComprobanteReversion
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 113 'Estado de Cuenta Proyecciones
-                Dim crTemp As New crPREstadoCuenta
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 114 'REPORTE DE CANCELACIONES DE CUENTAS POR TIPO DE TRANSACCIÓN
-                Dim crTemp As New crCancelacionCtas_Transf
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 115 'REPORTE DE CRÉDITOS CANCELADOS EN EL MES
-                Dim crTemp As New crCreditos_Cancelados_en_elMes
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
+
             Case 116 'COMPROBANTE DE APLICACION VALOR FECHA AHORROS
                 Dim crTemp As New crComprobante_RevAhorros
                 Me.Cursor = Cursors.WaitCursor
@@ -831,12 +536,7 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 118 'REPORTE DE SALDOS DE PRÉSTAMOS JURÍDICOS
-                Dim crTemp As New crSaldosPrestamosJur
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
+
             Case 119 'CARTERA DE PRÉSTAMOS POR GESTOR
                 Dim crTemp As New crCarteraPrestamos_Gestor
                 Me.Cursor = Cursors.WaitCursor
@@ -855,36 +555,10 @@ Public Class frmVisorLib
                 crtemp.SetDataSource(ds)
                 crView().ReportSource = crtemp
                 Me.Cursor = Cursors.Default
-            Case 122 'PROYECCIÓN DE SALDOS
-                Dim crTemp As New crProyeccionSaldos
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 123 'Préstamos Hipotecarios
-                Dim crTemp As New crSaldoPrestamoHipotecario
-                Me.Cursor = Cursors.WaitCursor
-                crtemp.SetDataSource(ds)
-                crView().ReportSource = crtemp
-                Me.Cursor = Cursors.Default
-            Case 124 'DETERMINACIÓN DE RESERVAS CONSOLIDADA X GARANTÍA
-                Dim crTemp As New crDetReservaConsolidadoGar
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 125 'REPORTE DE CANCELACIONES DE CUENTAS 
-                Dim crTemp As New crCancelacionCtas
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 126 'Nuevos Asociados Aportaciones
-                Dim crTemp As New crNuevosAsociadosAportaciones
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
+
+
+
             Case 127 'REPORTE DE MORA POR DÍAS
                 Dim crTemp As New crMora_porDias
                 Me.Cursor = Cursors.WaitCursor
@@ -897,30 +571,14 @@ Public Class frmVisorLib
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crTemp
                 Me.Cursor = Cursors.Default
-            Case 129 'REPORTE RESERVA DOCUMENTOS POR COBRAR
-                Dim crTemp As New crDocProtesto_Reserva_DXC
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
-            Case 130 'REPORTE DE MORA POR COLECTOR
-                Dim crTemp As New crMoraxTipo
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 131 'FORMULARIO DE RENUNCIA
                 Dim crTemp As New crFormRenuncia
                 Me.Cursor = Cursors.WaitCursor
                 crTemp.SetDataSource(ds)
                 crView().ReportSource = crTemp
                 Me.Cursor = Cursors.Default
-            Case 132 'ORDEN DE DESCUENTO - PRÉSTAMOS (FORMATO 2)
-                Dim crTemp As New crPrOrden_DescuentoF2
-                Me.Cursor = Cursors.WaitCursor
-                crTemp.SetDataSource(ds)
-                crView().ReportSource = crTemp
-                Me.Cursor = Cursors.Default
+
             Case 133 ' Posteo de libretas hoja par
                 Dim crTemp As New crPosteoHojaPar
                 Me.Cursor = Cursors.WaitCursor

@@ -6,7 +6,7 @@ Public Class frmMPRDescuentos
     Friend WithEvents btnModificar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnAgregar1 As MetroFramework.Controls.MetroButton
 
-    'Private vTipoDeduccion As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Private vTipoDeduccion As Prestamos.clsPrestamos.TipoDeduccion
     Private vTipoDeduccion As sifLib.Prestamos.clsPrestamos.TipoDeduccion
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -52,18 +52,19 @@ Public Class frmMPRDescuentos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "20,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 97)
+        Me.fg.Location = New System.Drawing.Point(28, 112)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Size = New System.Drawing.Size(484, 180)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(474, 158)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 22
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 63)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 73)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 236
         Me.btnConsultar1.Text = "Consultar"
@@ -73,9 +74,9 @@ Public Class frmMPRDescuentos
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 73)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 235
         Me.btnEliminar1.Text = "Eliminar"
@@ -85,9 +86,9 @@ Public Class frmMPRDescuentos
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 73)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 234
         Me.btnModificar1.Text = "Modificar"
@@ -97,9 +98,9 @@ Public Class frmMPRDescuentos
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 73)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 233
         Me.btnAgregar1.Text = "Agregar"
@@ -109,7 +110,7 @@ Public Class frmMPRDescuentos
         '
         'frmMPRDescuentos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(530, 322)
         Me.Controls.Add(Me.btnConsultar1)
@@ -128,12 +129,12 @@ Public Class frmMPRDescuentos
 #End Region
 
 #Region "Propiedades"
-    'Public Property TipoDeduccion() As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion
+    'Public Property TipoDeduccion() As Prestamos.clsPrestamos.TipoDeduccion
     Public Property TipoDeduccion() As sifLib.Prestamos.clsPrestamos.TipoDeduccion
         Get
             Return vTipoDeduccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion)
+        'Set(ByVal Value As Prestamos.clsPrestamos.TipoDeduccion)
         Set(ByVal Value As sifLib.Prestamos.clsPrestamos.TipoDeduccion)
             vTipoDeduccion = Value
         End Set
@@ -145,11 +146,11 @@ Public Class frmMPRDescuentos
         Dim ds As Data.DataSet = New Data.DataSet
         Try
             oCred = New wrPrestamo.wsLibPrest
-            ds = oCred.ConsultarPRDeduccionesxTipoCredito("*", "a.Tipo='" & vTipoDeduccion & "'", "", vTipoDeduccion, sUsuario, sPassword, sSucursal)
+            ds = oCred.ConsultarPRDeduccionesxTipoCredito("*", "a.Tipo='" & 2 & "'", "", 2, sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -171,22 +172,22 @@ Public Class frmMPRDescuentos
     End Sub
 
     Private Sub frmMPRDescuentos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
-        If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
-            Me.Text = "Gastos de Escrituración"
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
-        ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
-            Me.Text = "Mantenimiento - Honorarios"
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
-        ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
-            Me.Text = "Mantenimiento - Gastos de Tramitación"
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
-        ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
-            Me.Text = " Gastos de Tramitación por Rango"
-            'ElseIf Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-        ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-            Me.Text = "Gastos de Escrituración por Rango"
-        End If
+        ''If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
+        'If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Escrituracion Then
+        '    Me.Text = "Gastos de Escrituración"
+        '    'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
+        'ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Honorario Then
+        '    Me.Text = "Mantenimiento - Honorarios"
+        '    'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
+        'ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.Tramitacion Then
+        '    Me.Text = "Mantenimiento - Gastos de Tramitación"
+        '    'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
+        'ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Then
+        '    Me.Text = " Gastos de Tramitación por Rango"
+        '    'ElseIf Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
+        'ElseIf Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
+        '    Me.Text = "Gastos de Escrituración por Rango"
+        'End If
         ActualizaGrid()
     End Sub
 
@@ -204,24 +205,16 @@ Public Class frmMPRDescuentos
 
     Private Sub btnAgregar1_Click(sender As Object, e As EventArgs) Handles btnAgregar1.Click
         Try
-            'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-            If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-                Dim frmR As New frmMSCrEncDescRango
-                frmR.TipoDeduccion = vTipoDeduccion
-                frmR.Accion = "Guardar"
-                frmR.StartPosition = FormStartPosition.CenterScreen
-                frmR.ShowDialog()
-                ActualizaGrid()
-            Else
-                Dim frm As New frmMsCrEncDescuentos
-                frm.TipoDeduccion = vTipoDeduccion
-                frm.Accion = "Guardar"
+
+            Dim frm As New frmMsCrEncDescuentos
+            frm.TipoDeduccion = 2
+            frm.Accion = "Guardar"
                 frm.StartPosition = FormStartPosition.CenterScreen
                 frm.ShowDialog()
                 ActualizaGrid()
-            End If
+
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -229,26 +222,19 @@ Public Class frmMPRDescuentos
         Try
             If fg.Row > -1 Then
                 Dim oCred As wrPrestamo.wsLibPrest = New wrPrestamo.wsLibPrest
-                'If Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = AlcalaLibs.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-                If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-                    Dim frmR As New frmMSCrEncDescRango
-                    frmR.TipoDeduccion = vTipoDeduccion
-                    frmR.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
-                    frmR.Accion = "Modificar"
-                    frmR.StartPosition = FormStartPosition.CenterScreen
-                    frmR.ShowDialog()
-                Else
-                    Dim frm As New frmMsCrEncDescuentos
-                    frm.TipoDeduccion = vTipoDeduccion
-                    frm.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
+                'If Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
+
+                Dim frm As New frmMsCrEncDescuentos
+                frm.TipoDeduccion = 2
+                frm.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
                     frm.Accion = "Modificar"
                     frm.StartPosition = FormStartPosition.CenterScreen
                     frm.ShowDialog()
-                End If
+
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -259,12 +245,12 @@ Public Class frmMPRDescuentos
                 'Dim dr As Data.DataRow, 
                 Dim ds As New Data.DataSet
                 If MsgBox("¿Está seguro que desea eliminar el registro seleccionado?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.Yes Then
-                    oCred.EliminarPRDeducciones("CodTipoCredito='" & fg.Item(fg.Row, "CodTipoCredito") & "' and Tipo='" & vTipoDeduccion & "'", vTipoDeduccion, sUsuario, sPassword, sSucursal)
+                    oCred.EliminarPRDeducciones("CodTipoCredito='" & fg.Item(fg.Row, "CodTipoCredito") & "' and Tipo='" & 2 & "'", 2, sUsuario, sPassword, sSucursal)
                     ActualizaGrid()
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -272,30 +258,21 @@ Public Class frmMPRDescuentos
         Try
             If fg.Row > -1 Then
                 Dim oCred As wrPrestamo.wsLibPrest = New wrPrestamo.wsLibPrest
-                If Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.TramitacionxRango Or Me.vTipoDeduccion = sifLib.Prestamos.clsPrestamos.TipoDeduccion.EscrituracionxRango Then
-                    Dim frmR As New frmMSCrEncDescRango
-                    frmR.TipoDeduccion = vTipoDeduccion
-                    frmR.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
-                    frmR.Accion = "Modificar"
-                    frmR.btNew1.Visible = False
-                    frmR.btEdit1.Location = New Point(8, 16)
-                    frmR.StartPosition = FormStartPosition.CenterScreen
-                    frmR.ShowDialog()
-                Else
-                    Dim frm As New frmMsCrEncDescuentos
-                    frm.TipoDeduccion = vTipoDeduccion
-                    frm.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
+
+                Dim frm As New frmMsCrEncDescuentos
+                frm.TipoDeduccion = 2
+                frm.txtCodTipoCredito.Text = fg.Item(fg.Row, "CodTipoCredito")
                     frm.Accion = "Modificar"
                     frm.btNew1.Visible = False
                     frm.btDel1.Visible = False
                     frm.btEdit1.Location = New Point(8, 16)
                     frm.StartPosition = FormStartPosition.CenterScreen
                     frm.ShowDialog()
-                End If
+
                 ActualizaGrid()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

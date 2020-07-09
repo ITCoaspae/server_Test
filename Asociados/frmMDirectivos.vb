@@ -53,18 +53,20 @@ Public Class frmMDirectivos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 97)
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fg.Location = New System.Drawing.Point(28, 112)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(640, 317)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(631, 299)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 47
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 63)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 73)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 60
         Me.btnConsultar1.Text = "Consultar"
@@ -73,9 +75,9 @@ Public Class frmMDirectivos
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 73)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 59
         Me.btnEliminar1.Text = "Eliminar"
@@ -84,9 +86,9 @@ Public Class frmMDirectivos
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 73)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 58
         Me.btnModificar1.Text = "Modificar"
@@ -95,9 +97,9 @@ Public Class frmMDirectivos
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 73)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 57
         Me.btnAgregar1.Text = "Agregar"
@@ -106,7 +108,7 @@ Public Class frmMDirectivos
         '
         'frmMDirectivos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.ClientSize = New System.Drawing.Size(686, 437)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
@@ -114,6 +116,7 @@ Public Class frmMDirectivos
         Me.Controls.Add(Me.btnAgregar1)
         Me.Controls.Add(Me.fg)
         Me.Name = "frmMDirectivos"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Directivos"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -161,7 +164,7 @@ Public Class frmMDirectivos
 
 
     Private Sub btnAgregar1_Click(sender As Object, e As EventArgs) Handles btnAgregar1.Click
-        Dim frm As frmMsDirectivos = New frmMsDirectivos
+        Dim frm As New frmMsDirectivos
         frm.pAccion = "Agregar"
         frm.pCodigo = ""
         frm.StartPosition = FormStartPosition.CenterScreen
@@ -171,7 +174,7 @@ Public Class frmMDirectivos
 
     Private Sub btnModificar1_Click(sender As Object, e As EventArgs) Handles btnModificar1.Click
         If fg.Row <> -1 Then
-            Dim frm As frmMsDirectivos = New frmMsDirectivos
+            Dim frm As New frmMsDirectivos
             frm.pAccion = "Modificar"
             frm.btnGuardar1.Text = "&Modificar"
             frm.pCodigo = fg.Item(fg.Row, "Codigo")
@@ -185,7 +188,9 @@ Public Class frmMDirectivos
         If fg.Row <> -1 Then
             If MsgBox("¿Desea eliminar el Comité o Junta seleccionado?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Eliminar registro") = MsgBoxResult.Yes Then
                 Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc
-                oAsoc.EliminarDirectivos("Codigo='" & fg.Item(fg.Row, "Codigo") & "'", sUsuario, sPassword, sSucursal)
+                If (oAsoc.EliminarDirectivos("Codigo='" & fg.Item(fg.Row, "Codigo") & "'", sUsuario, sPassword, sSucursal)) = True Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeDeleteRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                End If
                 ActualizaGrid()
             End If
         End If
@@ -193,7 +198,7 @@ Public Class frmMDirectivos
 
     Private Sub btnConsultar1_Click(sender As Object, e As EventArgs) Handles btnConsultar1.Click
         If fg.Row <> -1 Then
-            Dim frm As frmMsDirectivos = New frmMsDirectivos
+            Dim frm As New frmMsDirectivos
             frm.pAccion = "Modificar"
             frm.pCodigo = fg.Item(fg.Row, "Codigo")
             frm.btnGuardar1.Enabled = False
@@ -202,6 +207,12 @@ Public Class frmMDirectivos
             frm.StartPosition = FormStartPosition.CenterScreen
             frm.ShowDialog()
             ActualizaGrid()
+        End If
+    End Sub
+
+    Private Sub frmMDirectivos_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

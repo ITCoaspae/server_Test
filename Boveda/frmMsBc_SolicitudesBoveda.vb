@@ -264,7 +264,7 @@
                 MsgBox("El monto debe ser mayor que cero.", MsgBoxStyle.Information, "Módulo - Bóveda")
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -309,7 +309,7 @@
                 MsgBox("Detalle de billetes no coincide con monto de solicitud.", MsgBoxStyle.Critical, "Bóveda")
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
 
@@ -318,18 +318,20 @@
     Private Sub MetroButton1_Click_1(sender As Object, e As EventArgs) Handles btnDenegar.Click
         Try
             Dim resultado As Integer
-            resultado = Bancos.ActivarSolicitudBoveda("Solicitud Denegada.",
-                                                      False, sUsuario, Format(Now, "short date"), Now.Hour.ToString.PadLeft(2, "0") & ":" & Now.Minute.ToString.PadLeft(2, "0"),
-                                                      codSolic)
-            MsgBox("Solicitud Denegada.", MsgBoxStyle.Information, "Bóveda")
+            'resultado = Bancos.anularSolicitudBoveda(codSolic)
+            If resultado > 0 Then
+                MetroFramework.MetroMessageBox.Show(Me, "Solicitud denegada", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
 
-    Private Sub frmMsBc_SolicitudesBoveda_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+    Private Sub frmMsBc_SolicitudesBoveda_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 #End Region
 

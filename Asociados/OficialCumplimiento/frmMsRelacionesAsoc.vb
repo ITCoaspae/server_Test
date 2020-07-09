@@ -103,4 +103,10 @@
             End If
         End If
     End Sub
+
+    Private Sub frmMsRelacionesAsoc_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

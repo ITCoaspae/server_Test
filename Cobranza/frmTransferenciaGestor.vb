@@ -278,7 +278,7 @@ Public Class frmTransferenciaGestor
                 Else
 
                     Campos = "CodGestor,CodPrestamo,Dui,FechaAsignacion,Estado"
-                    ds = oCred.ConsultarGestoresxCredito("*", "CodGestor='" & Me.txtCodActualGestor.Text.Trim & "'", "FechaAsignacion", sUsuario, sPassword, sSucursal)
+                    ds = oCred.ConsultarGestoresxCredito("*", "CodGestor='" & Me.txtCodActualGestor.Text.Trim & "' and estado= 'A'", "FechaAsignacion", sUsuario, sPassword, sSucursal)
                     For Each dr In ds.Tables(0).Rows
                         Valores = "'" & Me.txtCodNuevoGestor.Text.Trim & "','" & dr("CodPrestamo") & "','" & dr("Dui") & "','" & Me.dtpFecha.Value.ToShortDateString & "','A'"
                         If oCred.ModificarGestoresxCredito("CodGestor='" & Me.txtCodActualGestor.Text.Trim & "' and CodPrestamo='" & dr("CodPrestamo") & "' and FechaAsignacion='" & dr("FechaAsignacion") & "'", "Estado ='H'", sUsuario, sPassword, sSucursal) = True Then
@@ -293,7 +293,7 @@ Public Class frmTransferenciaGestor
                 ofrmAut.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

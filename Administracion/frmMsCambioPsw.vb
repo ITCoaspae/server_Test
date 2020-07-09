@@ -57,41 +57,41 @@ Public Class frmMsCambioPsw
         '
         Me.txtConfirmarClave.BackColor = System.Drawing.Color.White
         Me.txtConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtConfirmarClave.Location = New System.Drawing.Point(156, 136)
+        Me.txtConfirmarClave.Location = New System.Drawing.Point(187, 157)
         Me.txtConfirmarClave.MaxLength = 20
         Me.txtConfirmarClave.Name = "txtConfirmarClave"
         Me.txtConfirmarClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfirmarClave.Size = New System.Drawing.Size(233, 20)
+        Me.txtConfirmarClave.Size = New System.Drawing.Size(280, 22)
         Me.txtConfirmarClave.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(23, 138)
+        Me.Label6.Location = New System.Drawing.Point(28, 159)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(127, 20)
+        Me.Label6.Size = New System.Drawing.Size(152, 23)
         Me.Label6.TabIndex = 113
-        Me.Label6.Text = "Confirmar Nueva Clave:"
+        Me.Label6.Text = "Confirmar:"
         '
         'txtClave
         '
         Me.txtClave.BackColor = System.Drawing.Color.White
         Me.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtClave.Location = New System.Drawing.Point(156, 110)
+        Me.txtClave.Location = New System.Drawing.Point(187, 127)
         Me.txtClave.MaxLength = 20
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtClave.Size = New System.Drawing.Size(233, 20)
+        Me.txtClave.Size = New System.Drawing.Size(280, 22)
         Me.txtClave.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(23, 112)
+        Me.Label1.Location = New System.Drawing.Point(28, 129)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 16)
+        Me.Label1.Size = New System.Drawing.Size(105, 19)
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "Nueva Clave:"
         '
@@ -100,20 +100,20 @@ Public Class frmMsCambioPsw
         Me.txtUsuario.BackColor = System.Drawing.Color.White
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUsuario.CausesValidation = False
-        Me.txtUsuario.Location = New System.Drawing.Point(156, 60)
+        Me.txtUsuario.Location = New System.Drawing.Point(187, 69)
         Me.txtUsuario.MaxLength = 20
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.ReadOnly = True
-        Me.txtUsuario.Size = New System.Drawing.Size(233, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(280, 22)
         Me.txtUsuario.TabIndex = 1000
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(23, 60)
+        Me.Label2.Location = New System.Drawing.Point(28, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(67, 19)
         Me.Label2.TabIndex = 111
         Me.Label2.Text = "Usuario:"
         '
@@ -121,9 +121,9 @@ Public Class frmMsCambioPsw
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(23, 86)
+        Me.Label3.Location = New System.Drawing.Point(28, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 18)
+        Me.Label3.Size = New System.Drawing.Size(100, 21)
         Me.Label3.TabIndex = 114
         Me.Label3.Text = "Clave anterior:"
         '
@@ -131,11 +131,11 @@ Public Class frmMsCambioPsw
         '
         Me.txtClaveAnterior.BackColor = System.Drawing.Color.White
         Me.txtClaveAnterior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtClaveAnterior.Location = New System.Drawing.Point(156, 84)
+        Me.txtClaveAnterior.Location = New System.Drawing.Point(187, 97)
         Me.txtClaveAnterior.MaxLength = 20
         Me.txtClaveAnterior.Name = "txtClaveAnterior"
         Me.txtClaveAnterior.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtClaveAnterior.Size = New System.Drawing.Size(233, 20)
+        Me.txtClaveAnterior.Size = New System.Drawing.Size(280, 22)
         Me.txtClaveAnterior.TabIndex = 0
         '
         'Label4
@@ -144,17 +144,17 @@ Public Class frmMsCambioPsw
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(153, 159)
+        Me.Label4.Location = New System.Drawing.Point(28, 187)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(236, 26)
+        Me.Label4.Size = New System.Drawing.Size(438, 15)
         Me.Label4.TabIndex = 1003
-        Me.Label4.Text = "La contraseña debe tener al menos 8 caracteres," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "letras mayúsculas y números."
+        Me.Label4.Text = "La contraseña debe tener al menos 8 caracteres, letras mayúsculas y números."
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(26, 161)
+        Me.btnGuardar1.Location = New System.Drawing.Point(377, 213)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 1004
         Me.btnGuardar1.Text = "Guardar"
@@ -163,9 +163,9 @@ Public Class frmMsCambioPsw
         '
         'frmMsCambioPsw
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(458, 234)
+        Me.ClientSize = New System.Drawing.Size(485, 271)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtConfirmarClave)
@@ -296,7 +296,7 @@ Public Class frmMsCambioPsw
 
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

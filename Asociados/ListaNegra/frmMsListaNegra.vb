@@ -76,6 +76,12 @@
                                                           txtNoOficio.Text.Trim, txtRefOficio.Text.Trim.ToUpper,
                                                           txtInfComp.Text.Trim.ToUpper, cbEstado.SelectedValue)
 
+                If resultado <> 0 Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                Else
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                End If
+
             ElseIf accion = 2 Then
                 resultado = listaNegra.modificartarListaNegra(txtNomReport.Text.Trim.ToUpper,
                                                           Now, txtInstReporta.Text.Trim.ToUpper,
@@ -87,19 +93,28 @@
                                                           txtMotIngreso.Text, txtAlias.Text.Trim.ToUpper,
                                                           txtNoOficio.Text.Trim, txtRefOficio.Text.Trim.ToUpper,
                                                           txtInfComp.Text.Trim.ToUpper, cbEstado.SelectedValue)
+                If resultado <> 0 Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeUpdateRegistro, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+                Else
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                End If
+
             End If
-            If resultado <> 0 Then
-                MsgBox("Registro ingresado exitosamente", MsgBoxStyle.Information, "Oficial de Cumplimiento")
-            Else
-                MsgBox("El registro no pudo ser ingresado, por favor comunicarse con el administrador del sistema", MsgBoxStyle.Critical, "Oficial de Cumplimiento")
-            End If
+
+
             Me.Close()
         Catch ex As Exception
-            MsgBox("El registro no pudo ser ingresado, por favor comunicarse con el administrador del sistema", MsgBoxStyle.Critical, "Oficial de Cumplimiento")
+            MetroFramework.MetroMessageBox.Show(Me, ex.Source.ToString, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnCerrar1_Click(sender As Object, e As EventArgs) Handles btnCerrar1.Click
         Me.Close()
+    End Sub
+
+    Private Sub frmMsListaNegra_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

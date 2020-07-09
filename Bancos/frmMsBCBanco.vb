@@ -331,18 +331,18 @@ Public Class frmMsBCBanco
 #End Region
 
 #Region "Declaraciones"
-    'Private vAccion As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+    'Private vAccion As Seguridad.clsUsuario.TipoAccion
     Private vAccion As sifLib.Seguridad.clsUsuario.TipoAccion
 
 #End Region
 
 #Region "Propiedades"
-    'Public Property Accion() As AlcalaLibs.Seguridad.clsUsuario.TipoAccion
+    'Public Property Accion() As Seguridad.clsUsuario.TipoAccion
     Public Property Accion() As sifLib.Seguridad.clsUsuario.TipoAccion
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Seguridad.clsUsuario.TipoAccion)
+        'Set(ByVal Value As Seguridad.clsUsuario.TipoAccion)
         Set(ByVal Value As sifLib.Seguridad.clsUsuario.TipoAccion)
             vAccion = Value
         End Set
@@ -361,7 +361,7 @@ Public Class frmMsBCBanco
 #End Region
 
     Private Sub frmMsBCBanco_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'If Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar Then
+        'If Me.Accion = Seguridad.clsUsuario.TipoAccion.Insertar Then
         If Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar Then
 
         End If
@@ -370,7 +370,7 @@ Public Class frmMsBCBanco
     Private Sub btnSaveTb2_Click(sender As Object, e As EventArgs) Handles btnSaveTb2.Click
         Try
             Dim oLibBco As New wrBancos.wsLibBancos
-            'If Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Insertar Then
+            'If Me.Accion = Seguridad.clsUsuario.TipoAccion.Insertar Then
             If Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Insertar Then
                 If oLibBco.InsertaBanco("Nom_Banco,Direccion,Telefono1,Telefono2,Fax,Nom_Ejecutivo,Dir_Web,EMail", "'" & Me.txtNombreBanco.Text & "','" & Me.txtDireccion.Text & "','" & Me.txtTel1.Text & "','" & Me.txtTel2.Text & "','" & Me.txtFax.Text & "','" & Me.txtEjecutivo.Text & "','" & Me.txtDirWeb.Text & "','" & Me.txtEmail.Text & "'", sUsuario, sPassword, sSucursal) Then
                     MessageBox.Show("Banco Agregado al Sistema", "Ingreso de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
@@ -378,7 +378,7 @@ Public Class frmMsBCBanco
                 Else
                     MessageBox.Show("Banco NO Agregado al Sistema", "Ingreso de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
                 End If
-                'ElseIf Me.Accion = AlcalaLibs.Seguridad.clsUsuario.TipoAccion.Modificar Then
+                'ElseIf Me.Accion = Seguridad.clsUsuario.TipoAccion.Modificar Then
             ElseIf Me.Accion = sifLib.Seguridad.clsUsuario.TipoAccion.Modificar Then
                 If oLibBco.ModificaBanco(Me.txtCodBanco.Text.Trim, "Nom_Banco='" & Me.txtNombreBanco.Text & "',Direccion='" & Me.txtDireccion.Text & "',Telefono1='" & Me.txtTel1.Text & "',Telefono2='" & Me.txtTel2.Text & "',Fax='" & Me.txtFax.Text & "',Nom_Ejecutivo='" & Me.txtEjecutivo.Text & "',Dir_Web='" & Me.txtDirWeb.Text & "',EMail='" & Me.txtEmail.Text & "'", sUsuario, sPassword, sSucursal) Then
                     MessageBox.Show("Banco Modificado en Sistema", "Modificación de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
@@ -387,7 +387,13 @@ Public Class frmMsBCBanco
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMsBCBanco_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

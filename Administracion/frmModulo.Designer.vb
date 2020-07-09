@@ -60,7 +60,7 @@ Partial Class frmModulo
         Me.administracion.Style = MetroFramework.MetroColorStyle.Teal
         Me.administracion.TabIndex = 2
         Me.administracion.Text = "ADMINISTRACIÓN"
-        Me.administracion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.administracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.administracion.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
         Me.administracion.UseSelectable = True
         '

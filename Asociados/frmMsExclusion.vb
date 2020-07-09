@@ -136,9 +136,9 @@ Public Class frmMsExclusion
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 136)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 157)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(548, 87)
+        Me.GroupBox1.Size = New System.Drawing.Size(657, 100)
         Me.GroupBox1.TabIndex = 101
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Dictamen de la Junta de Vigilancia"
@@ -147,9 +147,9 @@ Public Class frmMsExclusion
         '
         Me.chkResJV.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkResJV.ForeColor = System.Drawing.Color.Black
-        Me.chkResJV.Location = New System.Drawing.Point(379, 22)
+        Me.chkResJV.Location = New System.Drawing.Point(455, 25)
         Me.chkResJV.Name = "chkResJV"
-        Me.chkResJV.Size = New System.Drawing.Size(80, 16)
+        Me.chkResJV.Size = New System.Drawing.Size(96, 19)
         Me.chkResJV.TabIndex = 5
         Me.chkResJV.Text = "&Resolución"
         '
@@ -157,9 +157,9 @@ Public Class frmMsExclusion
         '
         Me.dtpFecJV.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecJV.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecJV.Location = New System.Drawing.Point(264, 19)
+        Me.dtpFecJV.Location = New System.Drawing.Point(317, 22)
         Me.dtpFecJV.Name = "dtpFecJV"
-        Me.dtpFecJV.Size = New System.Drawing.Size(97, 20)
+        Me.dtpFecJV.Size = New System.Drawing.Size(116, 23)
         Me.dtpFecJV.TabIndex = 3
         Me.dtpFecJV.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -167,9 +167,9 @@ Public Class frmMsExclusion
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(186, 23)
+        Me.Label4.Location = New System.Drawing.Point(223, 27)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 16)
+        Me.Label4.Size = New System.Drawing.Size(87, 18)
         Me.Label4.TabIndex = 101
         Me.Label4.Text = "Fecha Acta:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -178,37 +178,37 @@ Public Class frmMsExclusion
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(6, 23)
+        Me.Label3.Location = New System.Drawing.Point(7, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 16)
+        Me.Label3.Size = New System.Drawing.Size(96, 18)
         Me.Label3.TabIndex = 99
         Me.Label3.Text = "No. de Acta:"
         '
         'txtNoActaJV
         '
-        Me.txtNoActaJV.Location = New System.Drawing.Point(92, 19)
+        Me.txtNoActaJV.Location = New System.Drawing.Point(110, 22)
         Me.txtNoActaJV.MaxLength = 20
         Me.txtNoActaJV.Name = "txtNoActaJV"
-        Me.txtNoActaJV.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaJV.Size = New System.Drawing.Size(106, 23)
         Me.txtNoActaJV.TabIndex = 2
         '
         'txtObsJV
         '
-        Me.txtObsJV.Location = New System.Drawing.Point(92, 45)
+        Me.txtObsJV.Location = New System.Drawing.Point(110, 52)
         Me.txtObsJV.MaxLength = 255
         Me.txtObsJV.Multiline = True
         Me.txtObsJV.Name = "txtObsJV"
         Me.txtObsJV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObsJV.Size = New System.Drawing.Size(442, 34)
+        Me.txtObsJV.Size = New System.Drawing.Size(531, 39)
         Me.txtObsJV.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(6, 57)
+        Me.Label1.Location = New System.Drawing.Point(7, 66)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 22)
+        Me.Label1.Size = New System.Drawing.Size(96, 25)
         Me.Label1.TabIndex = 85
         Me.Label1.Text = "Observaciones:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -225,9 +225,9 @@ Public Class frmMsExclusion
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 229)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 264)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(548, 85)
+        Me.GroupBox2.Size = New System.Drawing.Size(657, 98)
         Me.GroupBox2.TabIndex = 102
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Dictamen del Consejo de Administración"
@@ -236,9 +236,9 @@ Public Class frmMsExclusion
         '
         Me.chkResCA.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkResCA.ForeColor = System.Drawing.Color.Black
-        Me.chkResCA.Location = New System.Drawing.Point(379, 19)
+        Me.chkResCA.Location = New System.Drawing.Point(455, 22)
         Me.chkResCA.Name = "chkResCA"
-        Me.chkResCA.Size = New System.Drawing.Size(80, 16)
+        Me.chkResCA.Size = New System.Drawing.Size(96, 18)
         Me.chkResCA.TabIndex = 9
         Me.chkResCA.Text = "Re&solución"
         Me.chkResCA.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -247,9 +247,9 @@ Public Class frmMsExclusion
         '
         Me.dtpFecCA.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecCA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecCA.Location = New System.Drawing.Point(264, 19)
+        Me.dtpFecCA.Location = New System.Drawing.Point(317, 22)
         Me.dtpFecCA.Name = "dtpFecCA"
-        Me.dtpFecCA.Size = New System.Drawing.Size(97, 20)
+        Me.dtpFecCA.Size = New System.Drawing.Size(116, 23)
         Me.dtpFecCA.TabIndex = 7
         Me.dtpFecCA.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -257,9 +257,9 @@ Public Class frmMsExclusion
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(186, 23)
+        Me.Label5.Location = New System.Drawing.Point(223, 27)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.Size = New System.Drawing.Size(87, 18)
         Me.Label5.TabIndex = 101
         Me.Label5.Text = "Fecha Acta:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -268,37 +268,37 @@ Public Class frmMsExclusion
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(6, 24)
+        Me.Label6.Location = New System.Drawing.Point(7, 28)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 16)
+        Me.Label6.Size = New System.Drawing.Size(96, 18)
         Me.Label6.TabIndex = 99
         Me.Label6.Text = "No. de Acta:"
         '
         'txtNoActaCA
         '
-        Me.txtNoActaCA.Location = New System.Drawing.Point(92, 19)
+        Me.txtNoActaCA.Location = New System.Drawing.Point(110, 22)
         Me.txtNoActaCA.MaxLength = 20
         Me.txtNoActaCA.Name = "txtNoActaCA"
-        Me.txtNoActaCA.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoActaCA.Size = New System.Drawing.Size(106, 23)
         Me.txtNoActaCA.TabIndex = 6
         '
         'txtObsCA
         '
-        Me.txtObsCA.Location = New System.Drawing.Point(92, 45)
+        Me.txtObsCA.Location = New System.Drawing.Point(110, 52)
         Me.txtObsCA.MaxLength = 255
         Me.txtObsCA.Multiline = True
         Me.txtObsCA.Name = "txtObsCA"
         Me.txtObsCA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObsCA.Size = New System.Drawing.Size(442, 34)
+        Me.txtObsCA.Size = New System.Drawing.Size(531, 39)
         Me.txtObsCA.TabIndex = 8
         '
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(6, 56)
+        Me.Label7.Location = New System.Drawing.Point(7, 65)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 18)
+        Me.Label7.Size = New System.Drawing.Size(96, 20)
         Me.Label7.TabIndex = 85
         Me.Label7.Text = "Observaciones:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -322,28 +322,28 @@ Public Class frmMsExclusion
         Me.GroupBox3.Controls.Add(Me.txtNoCheque)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(23, 320)
+        Me.GroupBox3.Location = New System.Drawing.Point(28, 369)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(548, 149)
+        Me.GroupBox3.Size = New System.Drawing.Size(657, 172)
         Me.GroupBox3.TabIndex = 103
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Datos de la Exclusión"
         '
         'txtNoLiquidacion
         '
-        Me.txtNoLiquidacion.Location = New System.Drawing.Point(438, 83)
+        Me.txtNoLiquidacion.Location = New System.Drawing.Point(526, 96)
         Me.txtNoLiquidacion.MaxLength = 20
         Me.txtNoLiquidacion.Name = "txtNoLiquidacion"
-        Me.txtNoLiquidacion.Size = New System.Drawing.Size(96, 20)
+        Me.txtNoLiquidacion.Size = New System.Drawing.Size(115, 23)
         Me.txtNoLiquidacion.TabIndex = 18
         '
         'Label12
         '
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(240, 79)
+        Me.Label12.Location = New System.Drawing.Point(288, 91)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(104, 16)
+        Me.Label12.Size = New System.Drawing.Size(125, 19)
         Me.Label12.TabIndex = 110
         Me.Label12.Text = "No. de liquidación:"
         '
@@ -352,9 +352,9 @@ Public Class frmMsExclusion
         Me.chkNotificacion.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkNotificacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkNotificacion.ForeColor = System.Drawing.Color.Black
-        Me.chkNotificacion.Location = New System.Drawing.Point(9, 57)
+        Me.chkNotificacion.Location = New System.Drawing.Point(11, 66)
         Me.chkNotificacion.Name = "chkNotificacion"
-        Me.chkNotificacion.Size = New System.Drawing.Size(200, 16)
+        Me.chkNotificacion.Size = New System.Drawing.Size(240, 18)
         Me.chkNotificacion.TabIndex = 15
         Me.chkNotificacion.Text = "&Notificación de Exclusión &emitida"
         '
@@ -363,9 +363,9 @@ Public Class frmMsExclusion
         Me.chkNotifRecibida.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkNotifRecibida.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkNotifRecibida.ForeColor = System.Drawing.Color.Black
-        Me.chkNotifRecibida.Location = New System.Drawing.Point(9, 79)
+        Me.chkNotifRecibida.Location = New System.Drawing.Point(11, 91)
         Me.chkNotifRecibida.Name = "chkNotifRecibida"
-        Me.chkNotifRecibida.Size = New System.Drawing.Size(200, 16)
+        Me.chkNotifRecibida.Size = New System.Drawing.Size(240, 19)
         Me.chkNotifRecibida.TabIndex = 16
         Me.chkNotifRecibida.Text = "Notificación de Exclusión &recibida"
         '
@@ -375,9 +375,9 @@ Public Class frmMsExclusion
         Me.chkExclusionEfectuada.Enabled = False
         Me.chkExclusionEfectuada.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkExclusionEfectuada.ForeColor = System.Drawing.Color.Black
-        Me.chkExclusionEfectuada.Location = New System.Drawing.Point(9, 123)
+        Me.chkExclusionEfectuada.Location = New System.Drawing.Point(11, 142)
         Me.chkExclusionEfectuada.Name = "chkExclusionEfectuada"
-        Me.chkExclusionEfectuada.Size = New System.Drawing.Size(144, 16)
+        Me.chkExclusionEfectuada.Size = New System.Drawing.Size(173, 18)
         Me.chkExclusionEfectuada.TabIndex = 17
         Me.chkExclusionEfectuada.Text = "&Exclusión efectuada"
         '
@@ -385,9 +385,9 @@ Public Class frmMsExclusion
         '
         Me.dtpFecRecepcion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecRecepcion.Location = New System.Drawing.Point(446, 27)
+        Me.dtpFecRecepcion.Location = New System.Drawing.Point(535, 31)
         Me.dtpFecRecepcion.Name = "dtpFecRecepcion"
-        Me.dtpFecRecepcion.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecRecepcion.Size = New System.Drawing.Size(106, 23)
         Me.dtpFecRecepcion.TabIndex = 13
         Me.dtpFecRecepcion.Value = New Date(2004, 9, 9, 11, 33, 0, 0)
         '
@@ -395,9 +395,9 @@ Public Class frmMsExclusion
         '
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(350, 22)
+        Me.Label11.Location = New System.Drawing.Point(420, 25)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 27)
+        Me.Label11.Size = New System.Drawing.Size(121, 32)
         Me.Label11.TabIndex = 106
         Me.Label11.Text = "Fecha Recepción " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de Notificación:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -406,9 +406,9 @@ Public Class frmMsExclusion
         '
         Me.dtpFecExclusion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecExclusion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecExclusion.Location = New System.Drawing.Point(71, 27)
+        Me.dtpFecExclusion.Location = New System.Drawing.Point(85, 31)
         Me.dtpFecExclusion.Name = "dtpFecExclusion"
-        Me.dtpFecExclusion.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecExclusion.Size = New System.Drawing.Size(106, 23)
         Me.dtpFecExclusion.TabIndex = 10
         Me.dtpFecExclusion.Value = New Date(2004, 9, 9, 11, 33, 0, 0)
         '
@@ -416,9 +416,9 @@ Public Class frmMsExclusion
         '
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(6, 22)
+        Me.Label9.Location = New System.Drawing.Point(7, 25)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 32)
+        Me.Label9.Size = New System.Drawing.Size(71, 37)
         Me.Label9.TabIndex = 104
         Me.Label9.Text = "Fecha " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Exclusión:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -428,9 +428,9 @@ Public Class frmMsExclusion
         Me.chkLiquidacion.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkLiquidacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkLiquidacion.ForeColor = System.Drawing.Color.Black
-        Me.chkLiquidacion.Location = New System.Drawing.Point(9, 101)
+        Me.chkLiquidacion.Location = New System.Drawing.Point(11, 117)
         Me.chkLiquidacion.Name = "chkLiquidacion"
-        Me.chkLiquidacion.Size = New System.Drawing.Size(144, 16)
+        Me.chkLiquidacion.Size = New System.Drawing.Size(173, 18)
         Me.chkLiquidacion.TabIndex = 14
         Me.chkLiquidacion.Text = "&Liquidación caja"
         '
@@ -438,9 +438,9 @@ Public Class frmMsExclusion
         '
         Me.dtpFecEmision.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecEmision.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecEmision.Location = New System.Drawing.Point(264, 27)
+        Me.dtpFecEmision.Location = New System.Drawing.Point(317, 31)
         Me.dtpFecEmision.Name = "dtpFecEmision"
-        Me.dtpFecEmision.Size = New System.Drawing.Size(80, 20)
+        Me.dtpFecEmision.Size = New System.Drawing.Size(96, 23)
         Me.dtpFecEmision.TabIndex = 12
         Me.dtpFecEmision.Value = New Date(2004, 9, 9, 11, 32, 0, 0)
         '
@@ -448,9 +448,9 @@ Public Class frmMsExclusion
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(176, 22)
+        Me.Label8.Location = New System.Drawing.Point(211, 25)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(82, 32)
+        Me.Label8.Size = New System.Drawing.Size(99, 37)
         Me.Label8.TabIndex = 101
         Me.Label8.Text = "Fecha Emisión " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de Notificación:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -459,18 +459,18 @@ Public Class frmMsExclusion
         '
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(241, 57)
+        Me.Label10.Location = New System.Drawing.Point(289, 66)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(184, 16)
+        Me.Label10.Size = New System.Drawing.Size(221, 18)
         Me.Label10.TabIndex = 99
         Me.Label10.Text = "No. de cheque cancela liquidación:"
         '
         'txtNoCheque
         '
-        Me.txtNoCheque.Location = New System.Drawing.Point(446, 57)
+        Me.txtNoCheque.Location = New System.Drawing.Point(535, 66)
         Me.txtNoCheque.MaxLength = 20
         Me.txtNoCheque.Name = "txtNoCheque"
-        Me.txtNoCheque.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoCheque.Size = New System.Drawing.Size(106, 23)
         Me.txtNoCheque.TabIndex = 11
         '
         'GroupBox4
@@ -486,9 +486,9 @@ Public Class frmMsExclusion
         Me.GroupBox4.Controls.Add(Me.Label21)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox4.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(548, 67)
+        Me.GroupBox4.Size = New System.Drawing.Size(657, 77)
         Me.GroupBox4.TabIndex = 106
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos del Asociado"
@@ -496,28 +496,28 @@ Public Class frmMsExclusion
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(224, 13)
+        Me.txtDui.Location = New System.Drawing.Point(269, 15)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(120, 20)
+        Me.txtDui.Size = New System.Drawing.Size(144, 24)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtCodAntiguo
         '
-        Me.txtCodAntiguo.Location = New System.Drawing.Point(438, 12)
+        Me.txtCodAntiguo.Location = New System.Drawing.Point(526, 14)
         Me.txtCodAntiguo.MaxLength = 10
         Me.txtCodAntiguo.Name = "txtCodAntiguo"
-        Me.txtCodAntiguo.Size = New System.Drawing.Size(104, 20)
+        Me.txtCodAntiguo.Size = New System.Drawing.Size(124, 23)
         Me.txtCodAntiguo.TabIndex = 2
         '
         'Label48
         '
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(350, 16)
+        Me.Label48.Location = New System.Drawing.Point(420, 18)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(88, 16)
+        Me.Label48.Size = New System.Drawing.Size(106, 19)
         Me.Label48.TabIndex = 114
         Me.Label48.Text = "Código Antiguo:"
         '
@@ -525,56 +525,56 @@ Public Class frmMsExclusion
         '
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(186, 16)
+        Me.Label31.Location = New System.Drawing.Point(223, 18)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
+        Me.Label31.Size = New System.Drawing.Size(39, 19)
         Me.Label31.TabIndex = 94
         Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(92, 13)
+        Me.txtNoSocio.Location = New System.Drawing.Point(110, 15)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSocio.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(6, 16)
+        Me.Label2.Location = New System.Drawing.Point(7, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "No. Asociado:"
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(92, 39)
+        Me.txtNombre.Location = New System.Drawing.Point(110, 45)
         Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(450, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(540, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(6, 40)
+        Me.Label21.Location = New System.Drawing.Point(7, 46)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(80, 16)
+        Me.Label21.Size = New System.Drawing.Size(96, 19)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Asociado:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(484, 475)
+        Me.btnGuardar1.Location = New System.Drawing.Point(581, 548)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(87, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(104, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 139
         Me.btnGuardar1.Text = "&Guardar"
@@ -583,8 +583,8 @@ Public Class frmMsExclusion
         '
         'frmMsExclusion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(590, 520)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(712, 638)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
@@ -595,6 +595,7 @@ Public Class frmMsExclusion
         Me.Name = "frmMsExclusion"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Proceso Exclusión de Asociados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -921,5 +922,11 @@ Public Class frmMsExclusion
     Private Sub btnGuardar1_Click(sender As Object, e As EventArgs) Handles btnGuardar1.Click
 
         Guardar()
+    End Sub
+
+    Private Sub frmMsExclusion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

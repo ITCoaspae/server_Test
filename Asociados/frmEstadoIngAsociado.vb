@@ -26,7 +26,6 @@ Public Class frmEstadoIngAsociado
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents rbTodos As System.Windows.Forms.RadioButton
     Friend WithEvents rbNoSocio As System.Windows.Forms.RadioButton
     Friend WithEvents rbDui As System.Windows.Forms.RadioButton
@@ -43,7 +42,7 @@ Public Class frmEstadoIngAsociado
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEstadoIngAsociado))
         Me.fgEstadoIngreso = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNombres = New System.Windows.Forms.TextBox()
         Me.rbNombres = New System.Windows.Forms.RadioButton()
@@ -52,12 +51,10 @@ Public Class frmEstadoIngAsociado
         Me.rbTodos = New System.Windows.Forms.RadioButton()
         Me.rbNoSocio = New System.Windows.Forms.RadioButton()
         Me.rbDui = New System.Windows.Forms.RadioButton()
-        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.btnActivar = New MetroFramework.Controls.MetroButton()
         Me.btnConsultar1 = New MetroFramework.Controls.MetroButton()
         Me.btnBuscar1 = New MetroFramework.Controls.MetroButton()
         CType(Me.fgEstadoIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,41 +65,34 @@ Public Class frmEstadoIngAsociado
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgEstadoIngreso.BackColor = System.Drawing.Color.White
-        Me.fgEstadoIngreso.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:45;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:97;TextAlign:RightCenter;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:150" &
-    ";}" & Global.Microsoft.VisualBasic.ChrW(9) & "3{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "4{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "5{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgEstadoIngreso.Location = New System.Drawing.Point(23, 217)
+        Me.fgEstadoIngreso.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:45;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:97;Style:""TextAlign:RightCenter;"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{" &
+    "Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "3{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "4{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9) & "5{Width:150;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgEstadoIngreso.Location = New System.Drawing.Point(28, 250)
         Me.fgEstadoIngreso.Name = "fgEstadoIngreso"
         Me.fgEstadoIngreso.Rows.Count = 2
-        Me.fgEstadoIngreso.Size = New System.Drawing.Size(681, 187)
-        Me.fgEstadoIngreso.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgEstadoIngreso.Styles"))
+        Me.fgEstadoIngreso.Rows.DefaultSize = 21
+        Me.fgEstadoIngreso.Size = New System.Drawing.Size(637, 276)
+        Me.fgEstadoIngreso.StyleInfo = resources.GetString("fgEstadoIngreso.StyleInfo")
         Me.fgEstadoIngreso.TabIndex = 19
         '
-        'GroupBox2
+        'MetroButton1
         '
-        Me.GroupBox2.Controls.Add(Me.MetroButton1)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbTodos)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(681, 114)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Filtrar por:"
+        Me.MetroButton1.Location = New System.Drawing.Point(166, 143)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(90, 32)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton1.TabIndex = 9
+        Me.MetroButton1.Text = "Mostrar"
+        Me.MetroButton1.UseSelectable = True
+        Me.MetroButton1.UseStyleColors = True
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(6, 47)
+        Me.txtDui.Location = New System.Drawing.Point(166, 84)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(152, 20)
+        Me.txtDui.Size = New System.Drawing.Size(183, 23)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
@@ -110,18 +100,18 @@ Public Class frmEstadoIngAsociado
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(299, 47)
+        Me.txtNombres.Location = New System.Drawing.Point(355, 113)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(236, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(283, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(164, 18)
+        Me.rbNombres.Location = New System.Drawing.Point(23, 115)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(152, 23)
+        Me.rbNombres.Size = New System.Drawing.Size(137, 26)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -131,25 +121,25 @@ Public Class frmEstadoIngAsociado
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(164, 47)
+        Me.cbNombres.Location = New System.Drawing.Point(166, 113)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(129, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(183, 24)
         Me.cbNombres.TabIndex = 5
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(541, 46)
+        Me.txtNoSocio.Location = New System.Drawing.Point(505, 85)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(111, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(133, 22)
         Me.txtNoSocio.TabIndex = 8
         '
         'rbTodos
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(8, 86)
+        Me.rbTodos.Location = New System.Drawing.Point(23, 147)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(72, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(86, 28)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -158,9 +148,9 @@ Public Class frmEstadoIngAsociado
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(540, 17)
+        Me.rbNoSocio.Location = New System.Drawing.Point(355, 82)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(112, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(134, 27)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. de Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -168,28 +158,19 @@ Public Class frmEstadoIngAsociado
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(6, 18)
+        Me.rbDui.Location = New System.Drawing.Point(23, 82)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(152, 24)
+        Me.rbDui.Size = New System.Drawing.Size(137, 27)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI de Asociado"
         Me.rbDui.UseVisualStyleBackColor = False
         '
-        'MetroButton1
-        '
-        Me.MetroButton1.Location = New System.Drawing.Point(577, 72)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
-        Me.MetroButton1.TabIndex = 9
-        Me.MetroButton1.Text = "Mostrar"
-        Me.MetroButton1.UseSelectable = True
-        Me.MetroButton1.UseStyleColors = True
-        '
         'btnActivar
         '
-        Me.btnActivar.Location = New System.Drawing.Point(23, 183)
+        Me.btnActivar.Location = New System.Drawing.Point(28, 211)
         Me.btnActivar.Name = "btnActivar"
-        Me.btnActivar.Size = New System.Drawing.Size(75, 28)
+        Me.btnActivar.Size = New System.Drawing.Size(90, 32)
+        Me.btnActivar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnActivar.TabIndex = 10
         Me.btnActivar.Text = "Activar"
         Me.btnActivar.UseSelectable = True
@@ -197,9 +178,10 @@ Public Class frmEstadoIngAsociado
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(106, 183)
+        Me.btnConsultar1.Location = New System.Drawing.Point(127, 211)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 11
         Me.btnConsultar1.Text = "Consultar"
         Me.btnConsultar1.UseSelectable = True
@@ -207,9 +189,10 @@ Public Class frmEstadoIngAsociado
         '
         'btnBuscar1
         '
-        Me.btnBuscar1.Location = New System.Drawing.Point(187, 183)
+        Me.btnBuscar1.Location = New System.Drawing.Point(224, 211)
         Me.btnBuscar1.Name = "btnBuscar1"
-        Me.btnBuscar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnBuscar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnBuscar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnBuscar1.TabIndex = 12
         Me.btnBuscar1.Text = "Buscar"
         Me.btnBuscar1.UseSelectable = True
@@ -217,20 +200,28 @@ Public Class frmEstadoIngAsociado
         '
         'frmEstadoIngAsociado
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(725, 436)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(690, 664)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btnBuscar1)
+        Me.Controls.Add(Me.rbTodos)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.rbNoSocio)
+        Me.Controls.Add(Me.txtDui)
+        Me.Controls.Add(Me.cbNombres)
+        Me.Controls.Add(Me.rbNombres)
         Me.Controls.Add(Me.btnConsultar1)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnActivar)
         Me.Controls.Add(Me.fgEstadoIngreso)
+        Me.Controls.Add(Me.rbDui)
         Me.Name = "frmEstadoIngAsociado"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Activación de Aspirantes"
         CType(Me.fgEstadoIngreso, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -443,5 +434,11 @@ Public Class frmEstadoIngAsociado
         Catch ex As Exception
             MessageBox.Show("Error en la recuperación de datos tabla Estado Ingreso de Asociados- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmEstadoIngAsociado_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

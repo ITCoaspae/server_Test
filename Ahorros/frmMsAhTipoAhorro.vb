@@ -29,11 +29,6 @@ Public Class frmMsAhTipoAhorro
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtCodigo As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -45,7 +40,6 @@ Public Class frmMsAhTipoAhorro
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents txtCuenta As C1.Win.C1Input.C1TextBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtCodCuenta = New C1.Win.C1Input.C1TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtCuenta = New C1.Win.C1Input.C1TextBox()
@@ -57,46 +51,27 @@ Public Class frmMsAhTipoAhorro
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnGuardar = New MetroFramework.Controls.MetroButton()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.txtCodCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1nPlazo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtCodCuenta)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.txtCuenta)
-        Me.GroupBox1.Controls.Add(Me.chkJunior)
-        Me.GroupBox1.Controls.Add(Me.c1nPlazo)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
-        Me.GroupBox1.Controls.Add(Me.txtCodigo)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(536, 112)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        '
         'txtCodCuenta
         '
         Me.txtCodCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodCuenta.Location = New System.Drawing.Point(112, 80)
+        Me.txtCodCuenta.Location = New System.Drawing.Point(116, 138)
         Me.txtCodCuenta.MaxLength = 14
         Me.txtCodCuenta.Name = "txtCodCuenta"
         Me.txtCodCuenta.NumericInput = False
-        Me.txtCodCuenta.Size = New System.Drawing.Size(88, 20)
+        Me.txtCodCuenta.Size = New System.Drawing.Size(106, 20)
         Me.txtCodCuenta.TabIndex = 3
         Me.txtCodCuenta.Tag = Nothing
         '
         'Label17
         '
-        Me.Label17.Location = New System.Drawing.Point(16, 80)
+        Me.Label17.Location = New System.Drawing.Point(23, 138)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(96, 16)
+        Me.Label17.Size = New System.Drawing.Size(87, 19)
         Me.Label17.TabIndex = 171
         Me.Label17.Text = "Cuenta Contable:"
         '
@@ -104,20 +79,20 @@ Public Class frmMsAhTipoAhorro
         '
         Me.txtCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCuenta.Enabled = False
-        Me.txtCuenta.Location = New System.Drawing.Point(208, 80)
+        Me.txtCuenta.Location = New System.Drawing.Point(232, 138)
         Me.txtCuenta.MaxLength = 14
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.NumericInput = False
         Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.Size = New System.Drawing.Size(304, 20)
+        Me.txtCuenta.Size = New System.Drawing.Size(364, 20)
         Me.txtCuenta.TabIndex = 4
         Me.txtCuenta.Tag = Nothing
         '
         'chkJunior
         '
-        Me.chkJunior.Location = New System.Drawing.Point(408, 16)
+        Me.chkJunior.Location = New System.Drawing.Point(26, 164)
         Me.chkJunior.Name = "chkJunior"
-        Me.chkJunior.Size = New System.Drawing.Size(104, 16)
+        Me.chkJunior.Size = New System.Drawing.Size(124, 19)
         Me.chkJunior.TabIndex = 3
         Me.chkJunior.Text = "Ahorro &Junior"
         Me.chkJunior.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -129,65 +104,64 @@ Public Class frmMsAhTipoAhorro
         Me.c1nPlazo.DataType = GetType(Short)
         Me.c1nPlazo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1nPlazo.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.c1nPlazo.Increment = CType(1, Short)
-        Me.c1nPlazo.Location = New System.Drawing.Point(296, 16)
+        Me.c1nPlazo.ImagePadding = New System.Windows.Forms.Padding(0)
+        Me.c1nPlazo.Location = New System.Drawing.Point(407, 81)
         Me.c1nPlazo.Name = "c1nPlazo"
         Me.c1nPlazo.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nPlazo.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nPlazo.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(CType(0, Long), Nothing, True, True)})
-        Me.c1nPlazo.ShowDropDownButton = False
-        Me.c1nPlazo.ShowUpDownButtons = False
-        Me.c1nPlazo.Size = New System.Drawing.Size(88, 21)
+        Me.c1nPlazo.Size = New System.Drawing.Size(189, 23)
         Me.c1nPlazo.TabIndex = 1
         Me.c1nPlazo.Tag = Nothing
         Me.c1nPlazo.Value = CType(0, Short)
+        Me.c1nPlazo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(240, 16)
+        Me.Label3.Location = New System.Drawing.Point(353, 85)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
+        Me.Label3.Size = New System.Drawing.Size(48, 19)
         Me.Label3.TabIndex = 80
         Me.Label3.Text = "Plazo:"
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(112, 48)
+        Me.txtDescripcion.Location = New System.Drawing.Point(116, 110)
         Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(400, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(480, 22)
         Me.txtDescripcion.TabIndex = 2
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(112, 16)
+        Me.txtCodigo.Location = New System.Drawing.Point(116, 82)
         Me.txtCodigo.MaxLength = 5
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(189, 22)
         Me.txtCodigo.TabIndex = 0
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(16, 48)
+        Me.Label2.Location = New System.Drawing.Point(23, 106)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 16)
+        Me.Label2.Size = New System.Drawing.Size(87, 19)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Descripción:"
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(16, 16)
+        Me.Label1.Location = New System.Drawing.Point(23, 84)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 16)
+        Me.Label1.Size = New System.Drawing.Size(58, 19)
         Me.Label1.TabIndex = 78
         Me.Label1.Text = "Código:"
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(479, 181)
+        Me.btnGuardar.Location = New System.Drawing.Point(500, 164)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(80, 28)
-        Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnGuardar.Size = New System.Drawing.Size(96, 32)
+        Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar.TabIndex = 216
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseSelectable = True
@@ -195,22 +169,30 @@ Public Class frmMsAhTipoAhorro
         '
         'frmMsAhTipoAhorro
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(579, 221)
+        Me.ClientSize = New System.Drawing.Size(620, 281)
+        Me.Controls.Add(Me.chkJunior)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.txtCodCuenta)
+        Me.Controls.Add(Me.txtCuenta)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtCodigo)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.c1nPlazo)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label3)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsAhTipoAhorro"
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Tipos de Ahorro"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.txtCodCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1nPlazo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -287,7 +269,7 @@ Public Class frmMsAhTipoAhorro
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -312,4 +294,9 @@ Public Class frmMsAhTipoAhorro
         End Try
     End Sub
 
+    Private Sub frmMsAhTipoAhorro_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

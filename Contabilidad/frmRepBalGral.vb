@@ -48,26 +48,26 @@ Public Class frmRepBalGral
         '
         Me.dtpMes.CustomFormat = "MMMM/yyyy"
         Me.dtpMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpMes.Location = New System.Drawing.Point(85, 88)
+        Me.dtpMes.Location = New System.Drawing.Point(102, 102)
         Me.dtpMes.Name = "dtpMes"
-        Me.dtpMes.Size = New System.Drawing.Size(133, 20)
+        Me.dtpMes.Size = New System.Drawing.Size(160, 22)
         Me.dtpMes.TabIndex = 21
         '
         'lblCentroCosto
         '
         Me.lblCentroCosto.AutoSize = True
-        Me.lblCentroCosto.Location = New System.Drawing.Point(23, 60)
+        Me.lblCentroCosto.Location = New System.Drawing.Point(28, 69)
         Me.lblCentroCosto.Name = "lblCentroCosto"
-        Me.lblCentroCosto.Size = New System.Drawing.Size(56, 26)
+        Me.lblCentroCosto.Size = New System.Drawing.Size(74, 34)
         Me.lblCentroCosto.TabIndex = 29
         Me.lblCentroCosto.Text = "Centro de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Costos:"
         '
         'lblMes
         '
         Me.lblMes.AutoSize = True
-        Me.lblMes.Location = New System.Drawing.Point(23, 94)
+        Me.lblMes.Location = New System.Drawing.Point(28, 108)
         Me.lblMes.Name = "lblMes"
-        Me.lblMes.Size = New System.Drawing.Size(30, 13)
+        Me.lblMes.Size = New System.Drawing.Size(38, 17)
         Me.lblMes.TabIndex = 31
         Me.lblMes.Text = "Mes:"
         '
@@ -75,10 +75,10 @@ Public Class frmRepBalGral
         '
         Me.cbCC.FontSize = MetroFramework.MetroComboBoxSize.Small
         Me.cbCC.FormattingEnabled = True
-        Me.cbCC.ItemHeight = 19
-        Me.cbCC.Location = New System.Drawing.Point(85, 57)
+        Me.cbCC.ItemHeight = 21
+        Me.cbCC.Location = New System.Drawing.Point(102, 66)
         Me.cbCC.Name = "cbCC"
-        Me.cbCC.Size = New System.Drawing.Size(308, 25)
+        Me.cbCC.Size = New System.Drawing.Size(370, 27)
         Me.cbCC.Style = MetroFramework.MetroColorStyle.Teal
         Me.cbCC.TabIndex = 32
         Me.cbCC.Theme = MetroFramework.MetroThemeStyle.Light
@@ -87,9 +87,9 @@ Public Class frmRepBalGral
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(224, 85)
+        Me.btnProcesar1.Location = New System.Drawing.Point(269, 98)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(169, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(203, 32)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 33
         Me.btnProcesar1.Text = "Procesar Reporte"
@@ -99,16 +99,16 @@ Public Class frmRepBalGral
         '
         'frmRepBalGral
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(414, 128)
+        Me.ClientSize = New System.Drawing.Size(497, 148)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.cbCC)
         Me.Controls.Add(Me.lblMes)
         Me.Controls.Add(Me.dtpMes)
         Me.Controls.Add(Me.lblCentroCosto)
-        Me.MaximumSize = New System.Drawing.Size(414, 128)
-        Me.MinimumSize = New System.Drawing.Size(414, 128)
+        Me.MaximumSize = New System.Drawing.Size(497, 148)
+        Me.MinimumSize = New System.Drawing.Size(497, 148)
         Me.Name = "frmRepBalGral"
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Reporte Balance General"
@@ -168,7 +168,7 @@ Public Class frmRepBalGral
             oTabla.Rows.Add(vRow)
             ds.Tables.Add(oTabla)
             Dim ofrm As New frmVisor(ds, 2, 0)
-            'ofrm.MdiParent = ofrmMain
+            '
             ofrm.Show(Me)
 
             'Me.Cursor = Cursors.Default

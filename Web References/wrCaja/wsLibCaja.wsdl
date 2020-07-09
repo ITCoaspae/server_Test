@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibCaja" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibCaja" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibCaja" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibCaja" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibCaja">
-      <s:element name="ObtenerFacturaVacia">
+      <s:element name="consultarAplicacionFormUIF">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerFacturaVaciaResponse">
+      <s:element name="consultarAplicacionFormUIFResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerFacturaVaciaResult">
+            <s:element minOccurs="0" maxOccurs="1" name="consultarAplicacionFormUIFResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -25,21 +25,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerItem">
+      <s:element name="consultarTranccionReporteUIF">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pCodItem" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idMovimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="opcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerItemResponse">
+      <s:element name="consultarTranccionReporteUIFResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerItemResult">
+            <s:element minOccurs="0" maxOccurs="1" name="consultarTranccionReporteUIFResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -47,400 +46,6 @@
                 </s:sequence>
               </s:complexType>
             </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerItemxRubro">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerItemxRubroResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerItemxRubroResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaFacturas">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pTodas" type="s:boolean" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCodPrestamo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pDUIAsociado" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaFacturasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaFacturasResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaItems">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaItemsResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaItemsResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaRubros">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerListaRubrosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaRubrosResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerMensajeCajas">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerMensajeCajasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMensajeCajasResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNumItem">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerNumItemResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ObtenerNumItemResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Redondear">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pValor" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="pDecimales" type="s:double" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RedondearResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="RedondearResult" type="s:double" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteCorteCaja">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltroBanco" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltroCaja" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFiltroCajero" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pSubTotalEfectivo" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="pSubTotalCheque" type="s:double" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteCorteCajaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReporteCorteCajaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteCorteMovCaja">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteCorteMovCajaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReporteCorteMovCajaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteResumenMovCajaxDoc">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteResumenMovCajaxDocResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReporteResumenMovCajaxDocResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteResumenMovCajaxTransac">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReporteResumenMovCajaxTransacResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReporteResumenMovCajaxTransacResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepReversionesDiarias">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepReversionesDiariasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepReversionesDiariasResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepTransferencias">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pTipo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepTransferenciasResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepTransferenciasResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepTransferenciasConsolidada">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pNoFactura" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTipo" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RepTransferenciasConsolidadaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RepTransferenciasConsolidadaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReversionTransferencia">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pNoDoc" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pFecTransf" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="pNoCaja" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pCodCajero" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pObservacion" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ReversionTransferenciaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReversionTransferenciaResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCajero">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="sClave" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCajeroResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="VerificaCajeroResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCorrelativo">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pTabla" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pTipo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pIdMovimiento" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerificaCorrelativoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="VerificaCorrelativoResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -727,6 +332,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="nocaja" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="codcajero" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="fechaApertura" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="vCodSolicitud" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="horaApertura" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="montoApertura" type="s:double" />
             <s:element minOccurs="0" maxOccurs="1" name="horaCierre" type="s:string" />
@@ -765,6 +371,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="nocaja" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="codCajero" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="vCodSolicitud" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:double" />
             <s:element minOccurs="0" maxOccurs="1" name="tipoMov" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="cantidadUno" type="s:double" />
@@ -2290,121 +1897,461 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ObtenerFacturaVacia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerFacturaVaciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerFacturaVaciaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCodItem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerItemxRubro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerItemxRubroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerItemxRubroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaFacturas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTodas" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaIni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCodPrestamo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDUIAsociado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaFacturasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaFacturasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaRubros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCampos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaRubrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaRubrosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMensajeCajas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMensajeCajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMensajeCajasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNumItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNumItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerNumItemResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Redondear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pValor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="pDecimales" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RedondearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RedondearResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteCorteCaja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltroBanco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltroCaja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltroCajero" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pSubTotalEfectivo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="pSubTotalCheque" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteCorteCajaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReporteCorteCajaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteCorteMovCaja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteCorteMovCajaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReporteCorteMovCajaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteResumenMovCajaxDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteResumenMovCajaxDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReporteResumenMovCajaxDocResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteResumenMovCajaxTransac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNoCaja" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReporteResumenMovCajaxTransacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReporteResumenMovCajaxTransacResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepReversionesDiarias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepReversionesDiariasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepReversionesDiariasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepTransferencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pFechaIni" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTodos" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepTransferenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepTransferenciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepTransferenciasConsolidada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNoFactura" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTipo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepTransferenciasConsolidadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RepTransferenciasConsolidadaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReversionTransferencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNoDoc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecTransf" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pNoCaja" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCodCajero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pObservacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReversionTransferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReversionTransferenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCajero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sClave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCajeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaCajeroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCorrelativo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pTabla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pAnio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIdMovimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCorrelativoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificaCorrelativoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="ObtenerFacturaVaciaSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerFacturaVacia" />
+  <wsdl:message name="consultarAplicacionFormUIFSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarAplicacionFormUIF" />
   </wsdl:message>
-  <wsdl:message name="ObtenerFacturaVaciaSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerFacturaVaciaResponse" />
+  <wsdl:message name="consultarAplicacionFormUIFSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarAplicacionFormUIFResponse" />
   </wsdl:message>
-  <wsdl:message name="ObtenerItemSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerItem" />
+  <wsdl:message name="consultarTranccionReporteUIFSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarTranccionReporteUIF" />
   </wsdl:message>
-  <wsdl:message name="ObtenerItemSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerItemResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerItemxRubroSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerItemxRubro" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerItemxRubroSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerItemxRubroResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaFacturasSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerListaFacturas" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaFacturasSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerListaFacturasResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaItemsSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerListaItems" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaItemsSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerListaItemsResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaRubrosSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerListaRubros" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerListaRubrosSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerListaRubrosResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerMensajeCajasSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerMensajeCajas" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerMensajeCajasSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerMensajeCajasResponse" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNumItemSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerNumItem" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerNumItemSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerNumItemResponse" />
-  </wsdl:message>
-  <wsdl:message name="RedondearSoapIn">
-    <wsdl:part name="parameters" element="tns:Redondear" />
-  </wsdl:message>
-  <wsdl:message name="RedondearSoapOut">
-    <wsdl:part name="parameters" element="tns:RedondearResponse" />
-  </wsdl:message>
-  <wsdl:message name="ReporteCorteCajaSoapIn">
-    <wsdl:part name="parameters" element="tns:ReporteCorteCaja" />
-  </wsdl:message>
-  <wsdl:message name="ReporteCorteCajaSoapOut">
-    <wsdl:part name="parameters" element="tns:ReporteCorteCajaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ReporteCorteMovCajaSoapIn">
-    <wsdl:part name="parameters" element="tns:ReporteCorteMovCaja" />
-  </wsdl:message>
-  <wsdl:message name="ReporteCorteMovCajaSoapOut">
-    <wsdl:part name="parameters" element="tns:ReporteCorteMovCajaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ReporteResumenMovCajaxDocSoapIn">
-    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxDoc" />
-  </wsdl:message>
-  <wsdl:message name="ReporteResumenMovCajaxDocSoapOut">
-    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxDocResponse" />
-  </wsdl:message>
-  <wsdl:message name="ReporteResumenMovCajaxTransacSoapIn">
-    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxTransac" />
-  </wsdl:message>
-  <wsdl:message name="ReporteResumenMovCajaxTransacSoapOut">
-    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxTransacResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepReversionesDiariasSoapIn">
-    <wsdl:part name="parameters" element="tns:RepReversionesDiarias" />
-  </wsdl:message>
-  <wsdl:message name="RepReversionesDiariasSoapOut">
-    <wsdl:part name="parameters" element="tns:RepReversionesDiariasResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepTransferenciasSoapIn">
-    <wsdl:part name="parameters" element="tns:RepTransferencias" />
-  </wsdl:message>
-  <wsdl:message name="RepTransferenciasSoapOut">
-    <wsdl:part name="parameters" element="tns:RepTransferenciasResponse" />
-  </wsdl:message>
-  <wsdl:message name="RepTransferenciasConsolidadaSoapIn">
-    <wsdl:part name="parameters" element="tns:RepTransferenciasConsolidada" />
-  </wsdl:message>
-  <wsdl:message name="RepTransferenciasConsolidadaSoapOut">
-    <wsdl:part name="parameters" element="tns:RepTransferenciasConsolidadaResponse" />
-  </wsdl:message>
-  <wsdl:message name="ReversionTransferenciaSoapIn">
-    <wsdl:part name="parameters" element="tns:ReversionTransferencia" />
-  </wsdl:message>
-  <wsdl:message name="ReversionTransferenciaSoapOut">
-    <wsdl:part name="parameters" element="tns:ReversionTransferenciaResponse" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCajeroSoapIn">
-    <wsdl:part name="parameters" element="tns:VerificaCajero" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCajeroSoapOut">
-    <wsdl:part name="parameters" element="tns:VerificaCajeroResponse" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCorrelativoSoapIn">
-    <wsdl:part name="parameters" element="tns:VerificaCorrelativo" />
-  </wsdl:message>
-  <wsdl:message name="VerificaCorrelativoSoapOut">
-    <wsdl:part name="parameters" element="tns:VerificaCorrelativoResponse" />
+  <wsdl:message name="consultarTranccionReporteUIFSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarTranccionReporteUIFResponse" />
   </wsdl:message>
   <wsdl:message name="GuardarChequesBovedaSoapIn">
     <wsdl:part name="parameters" element="tns:GuardarChequesBoveda" />
@@ -2904,82 +2851,128 @@
   <wsdl:message name="ObtenerFacturaSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerFacturaResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerFacturaVaciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerFacturaVacia" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerFacturaVaciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerFacturaVaciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerItemSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerItem" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerItemSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerItemxRubroSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerItemxRubro" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerItemxRubroSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerItemxRubroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaFacturasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaFacturas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaFacturasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaFacturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaItems" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaRubrosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaRubros" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaRubrosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaRubrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMensajeCajasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeCajas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMensajeCajasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeCajasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNumItemSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNumItem" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNumItemSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNumItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="RedondearSoapIn">
+    <wsdl:part name="parameters" element="tns:Redondear" />
+  </wsdl:message>
+  <wsdl:message name="RedondearSoapOut">
+    <wsdl:part name="parameters" element="tns:RedondearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReporteCorteCajaSoapIn">
+    <wsdl:part name="parameters" element="tns:ReporteCorteCaja" />
+  </wsdl:message>
+  <wsdl:message name="ReporteCorteCajaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReporteCorteCajaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReporteCorteMovCajaSoapIn">
+    <wsdl:part name="parameters" element="tns:ReporteCorteMovCaja" />
+  </wsdl:message>
+  <wsdl:message name="ReporteCorteMovCajaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReporteCorteMovCajaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReporteResumenMovCajaxDocSoapIn">
+    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxDoc" />
+  </wsdl:message>
+  <wsdl:message name="ReporteResumenMovCajaxDocSoapOut">
+    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReporteResumenMovCajaxTransacSoapIn">
+    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxTransac" />
+  </wsdl:message>
+  <wsdl:message name="ReporteResumenMovCajaxTransacSoapOut">
+    <wsdl:part name="parameters" element="tns:ReporteResumenMovCajaxTransacResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepReversionesDiariasSoapIn">
+    <wsdl:part name="parameters" element="tns:RepReversionesDiarias" />
+  </wsdl:message>
+  <wsdl:message name="RepReversionesDiariasSoapOut">
+    <wsdl:part name="parameters" element="tns:RepReversionesDiariasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepTransferenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:RepTransferencias" />
+  </wsdl:message>
+  <wsdl:message name="RepTransferenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:RepTransferenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepTransferenciasConsolidadaSoapIn">
+    <wsdl:part name="parameters" element="tns:RepTransferenciasConsolidada" />
+  </wsdl:message>
+  <wsdl:message name="RepTransferenciasConsolidadaSoapOut">
+    <wsdl:part name="parameters" element="tns:RepTransferenciasConsolidadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReversionTransferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ReversionTransferencia" />
+  </wsdl:message>
+  <wsdl:message name="ReversionTransferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReversionTransferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCajeroSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCajero" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCajeroSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCajeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCorrelativoSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCorrelativo" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCorrelativoSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCorrelativoResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsLibCajaSoap">
-    <wsdl:operation name="ObtenerFacturaVacia">
-      <wsdl:input message="tns:ObtenerFacturaVaciaSoapIn" />
-      <wsdl:output message="tns:ObtenerFacturaVaciaSoapOut" />
+    <wsdl:operation name="consultarAplicacionFormUIF">
+      <wsdl:input message="tns:consultarAplicacionFormUIFSoapIn" />
+      <wsdl:output message="tns:consultarAplicacionFormUIFSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ObtenerItem">
-      <wsdl:input message="tns:ObtenerItemSoapIn" />
-      <wsdl:output message="tns:ObtenerItemSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerItemxRubro">
-      <wsdl:input message="tns:ObtenerItemxRubroSoapIn" />
-      <wsdl:output message="tns:ObtenerItemxRubroSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaFacturas">
-      <wsdl:input message="tns:ObtenerListaFacturasSoapIn" />
-      <wsdl:output message="tns:ObtenerListaFacturasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaItems">
-      <wsdl:input message="tns:ObtenerListaItemsSoapIn" />
-      <wsdl:output message="tns:ObtenerListaItemsSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaRubros">
-      <wsdl:input message="tns:ObtenerListaRubrosSoapIn" />
-      <wsdl:output message="tns:ObtenerListaRubrosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerMensajeCajas">
-      <wsdl:input message="tns:ObtenerMensajeCajasSoapIn" />
-      <wsdl:output message="tns:ObtenerMensajeCajasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNumItem">
-      <wsdl:input message="tns:ObtenerNumItemSoapIn" />
-      <wsdl:output message="tns:ObtenerNumItemSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Redondear">
-      <wsdl:input message="tns:RedondearSoapIn" />
-      <wsdl:output message="tns:RedondearSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ReporteCorteCaja">
-      <wsdl:input message="tns:ReporteCorteCajaSoapIn" />
-      <wsdl:output message="tns:ReporteCorteCajaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ReporteCorteMovCaja">
-      <wsdl:input message="tns:ReporteCorteMovCajaSoapIn" />
-      <wsdl:output message="tns:ReporteCorteMovCajaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ReporteResumenMovCajaxDoc">
-      <wsdl:input message="tns:ReporteResumenMovCajaxDocSoapIn" />
-      <wsdl:output message="tns:ReporteResumenMovCajaxDocSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ReporteResumenMovCajaxTransac">
-      <wsdl:input message="tns:ReporteResumenMovCajaxTransacSoapIn" />
-      <wsdl:output message="tns:ReporteResumenMovCajaxTransacSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepReversionesDiarias">
-      <wsdl:input message="tns:RepReversionesDiariasSoapIn" />
-      <wsdl:output message="tns:RepReversionesDiariasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepTransferencias">
-      <wsdl:input message="tns:RepTransferenciasSoapIn" />
-      <wsdl:output message="tns:RepTransferenciasSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RepTransferenciasConsolidada">
-      <wsdl:input message="tns:RepTransferenciasConsolidadaSoapIn" />
-      <wsdl:output message="tns:RepTransferenciasConsolidadaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ReversionTransferencia">
-      <wsdl:input message="tns:ReversionTransferenciaSoapIn" />
-      <wsdl:output message="tns:ReversionTransferenciaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCajero">
-      <wsdl:input message="tns:VerificaCajeroSoapIn" />
-      <wsdl:output message="tns:VerificaCajeroSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCorrelativo">
-      <wsdl:input message="tns:VerificaCorrelativoSoapIn" />
-      <wsdl:output message="tns:VerificaCorrelativoSoapOut" />
+    <wsdl:operation name="consultarTranccionReporteUIF">
+      <wsdl:input message="tns:consultarTranccionReporteUIFSoapIn" />
+      <wsdl:output message="tns:consultarTranccionReporteUIFSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GuardarChequesBoveda">
       <wsdl:input message="tns:GuardarChequesBovedaSoapIn" />
@@ -3313,11 +3306,87 @@
       <wsdl:input message="tns:ObtenerFacturaSoapIn" />
       <wsdl:output message="tns:ObtenerFacturaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerFacturaVacia">
+      <wsdl:input message="tns:ObtenerFacturaVaciaSoapIn" />
+      <wsdl:output message="tns:ObtenerFacturaVaciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItem">
+      <wsdl:input message="tns:ObtenerItemSoapIn" />
+      <wsdl:output message="tns:ObtenerItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItemxRubro">
+      <wsdl:input message="tns:ObtenerItemxRubroSoapIn" />
+      <wsdl:output message="tns:ObtenerItemxRubroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaFacturas">
+      <wsdl:input message="tns:ObtenerListaFacturasSoapIn" />
+      <wsdl:output message="tns:ObtenerListaFacturasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaItems">
+      <wsdl:input message="tns:ObtenerListaItemsSoapIn" />
+      <wsdl:output message="tns:ObtenerListaItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaRubros">
+      <wsdl:input message="tns:ObtenerListaRubrosSoapIn" />
+      <wsdl:output message="tns:ObtenerListaRubrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeCajas">
+      <wsdl:input message="tns:ObtenerMensajeCajasSoapIn" />
+      <wsdl:output message="tns:ObtenerMensajeCajasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNumItem">
+      <wsdl:input message="tns:ObtenerNumItemSoapIn" />
+      <wsdl:output message="tns:ObtenerNumItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Redondear">
+      <wsdl:input message="tns:RedondearSoapIn" />
+      <wsdl:output message="tns:RedondearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCorteCaja">
+      <wsdl:input message="tns:ReporteCorteCajaSoapIn" />
+      <wsdl:output message="tns:ReporteCorteCajaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCorteMovCaja">
+      <wsdl:input message="tns:ReporteCorteMovCajaSoapIn" />
+      <wsdl:output message="tns:ReporteCorteMovCajaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteResumenMovCajaxDoc">
+      <wsdl:input message="tns:ReporteResumenMovCajaxDocSoapIn" />
+      <wsdl:output message="tns:ReporteResumenMovCajaxDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteResumenMovCajaxTransac">
+      <wsdl:input message="tns:ReporteResumenMovCajaxTransacSoapIn" />
+      <wsdl:output message="tns:ReporteResumenMovCajaxTransacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepReversionesDiarias">
+      <wsdl:input message="tns:RepReversionesDiariasSoapIn" />
+      <wsdl:output message="tns:RepReversionesDiariasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepTransferencias">
+      <wsdl:input message="tns:RepTransferenciasSoapIn" />
+      <wsdl:output message="tns:RepTransferenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepTransferenciasConsolidada">
+      <wsdl:input message="tns:RepTransferenciasConsolidadaSoapIn" />
+      <wsdl:output message="tns:RepTransferenciasConsolidadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReversionTransferencia">
+      <wsdl:input message="tns:ReversionTransferenciaSoapIn" />
+      <wsdl:output message="tns:ReversionTransferenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCajero">
+      <wsdl:input message="tns:VerificaCajeroSoapIn" />
+      <wsdl:output message="tns:VerificaCajeroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCorrelativo">
+      <wsdl:input message="tns:VerificaCorrelativoSoapIn" />
+      <wsdl:output message="tns:VerificaCorrelativoSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsLibCajaSoap" type="tns:wsLibCajaSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="ObtenerFacturaVacia">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerFacturaVacia" style="document" />
+    <wsdl:operation name="consultarAplicacionFormUIF">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/consultarAplicacionFormUIF" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3325,161 +3394,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ObtenerItem">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItem" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerItemxRubro">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItemxRubro" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaFacturas">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaFacturas" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaItems">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaItems" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerListaRubros">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaRubros" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerMensajeCajas">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerMensajeCajas" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerNumItem">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerNumItem" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Redondear">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/Redondear" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ReporteCorteCaja">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteCaja" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ReporteCorteMovCaja">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteMovCaja" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ReporteResumenMovCajaxDoc">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxDoc" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ReporteResumenMovCajaxTransac">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxTransac" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepReversionesDiarias">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepReversionesDiarias" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepTransferencias">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferencias" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RepTransferenciasConsolidada">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferenciasConsolidada" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ReversionTransferencia">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReversionTransferencia" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCajero">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCajero" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerificaCorrelativo">
-      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCorrelativo" style="document" />
+    <wsdl:operation name="consultarTranccionReporteUIF">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/consultarTranccionReporteUIF" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4234,164 +4150,182 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="wsLibCajaSoap12" type="tns:wsLibCajaSoap">
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ObtenerFacturaVacia">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerFacturaVacia" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerFacturaVacia" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerItem">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItem" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItem" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerItemxRubro">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItemxRubro" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItemxRubro" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerListaFacturas">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaFacturas" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaFacturas" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerListaItems">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaItems" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaItems" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerListaRubros">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaRubros" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaRubros" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerMensajeCajas">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerMensajeCajas" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerMensajeCajas" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ObtenerNumItem">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerNumItem" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerNumItem" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Redondear">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/Redondear" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/Redondear" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReporteCorteCaja">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteCaja" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteCaja" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReporteCorteMovCaja">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteMovCaja" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteMovCaja" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReporteResumenMovCajaxDoc">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxDoc" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxDoc" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReporteResumenMovCajaxTransac">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxTransac" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxTransac" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepReversionesDiarias">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepReversionesDiarias" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepReversionesDiarias" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepTransferencias">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferencias" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferencias" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RepTransferenciasConsolidada">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferenciasConsolidada" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferenciasConsolidada" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReversionTransferencia">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReversionTransferencia" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReversionTransferencia" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="VerificaCajero">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCajero" style="document" />
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCorrelativo">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCorrelativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLibCajaSoap12" type="tns:wsLibCajaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarAplicacionFormUIF">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/consultarAplicacionFormUIF" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -4399,8 +4333,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="VerificaCorrelativo">
-      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCorrelativo" style="document" />
+    <wsdl:operation name="consultarTranccionReporteUIF">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/consultarTranccionReporteUIF" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5155,13 +5089,184 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerFacturaVacia">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerFacturaVacia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItem">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItemxRubro">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerItemxRubro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaFacturas">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaFacturas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaItems">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaRubros">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerListaRubros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeCajas">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerMensajeCajas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNumItem">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ObtenerNumItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Redondear">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/Redondear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCorteCaja">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteCaja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCorteMovCaja">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteCorteMovCaja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteResumenMovCajaxDoc">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteResumenMovCajaxTransac">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReporteResumenMovCajaxTransac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepReversionesDiarias">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepReversionesDiarias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepTransferencias">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepTransferenciasConsolidada">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/RepTransferenciasConsolidada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReversionTransferencia">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/ReversionTransferencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCajero">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCorrelativo">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibCaja/VerificaCorrelativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="wsLibCaja">
     <wsdl:port name="wsLibCajaSoap" binding="tns:wsLibCajaSoap">
-      <soap:address location="http://localhost:57126/wsLibCaja.asmx" />
+      <soap:address location="http://192.168.1.115:9100/wsLibCaja.asmx" />
     </wsdl:port>
     <wsdl:port name="wsLibCajaSoap12" binding="tns:wsLibCajaSoap12">
-      <soap12:address location="http://localhost:57126/wsLibCaja.asmx" />
+      <soap12:address location="http://192.168.1.115:9100/wsLibCaja.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

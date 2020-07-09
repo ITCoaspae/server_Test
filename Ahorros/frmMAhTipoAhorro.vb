@@ -70,9 +70,9 @@ Public Class frmMAhTipoAhorro
         Me.GroupBox2.Controls.Add(Me.rbDescripcion)
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(549, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(658, 115)
         Me.GroupBox2.TabIndex = 37
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Tipos de Ahorro por:"
@@ -81,9 +81,9 @@ Public Class frmMAhTipoAhorro
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(334, 24)
+        Me.rbTodos.Location = New System.Drawing.Point(401, 28)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(182, 27)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -92,25 +92,25 @@ Public Class frmMAhTipoAhorro
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(174, 56)
+        Me.txtDescripcion.Location = New System.Drawing.Point(209, 65)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(152, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(182, 22)
         Me.txtDescripcion.TabIndex = 3
         '
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodigo.Location = New System.Drawing.Point(19, 65)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(183, 22)
         Me.txtCodigo.TabIndex = 1
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(334, 54)
+        Me.btnMostrar1.Location = New System.Drawing.Point(401, 62)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 33)
+        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 191
         Me.btnMostrar1.Text = "Mostrar"
         Me.btnMostrar1.UseSelectable = True
@@ -119,9 +119,9 @@ Public Class frmMAhTipoAhorro
         'rbDescripcion
         '
         Me.rbDescripcion.BackColor = System.Drawing.Color.White
-        Me.rbDescripcion.Location = New System.Drawing.Point(176, 24)
+        Me.rbDescripcion.Location = New System.Drawing.Point(211, 28)
         Me.rbDescripcion.Name = "rbDescripcion"
-        Me.rbDescripcion.Size = New System.Drawing.Size(152, 24)
+        Me.rbDescripcion.Size = New System.Drawing.Size(183, 27)
         Me.rbDescripcion.TabIndex = 2
         Me.rbDescripcion.Text = "&Descripción"
         Me.rbDescripcion.UseVisualStyleBackColor = False
@@ -129,9 +129,9 @@ Public Class frmMAhTipoAhorro
         'rbCodigo
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
-        Me.rbCodigo.Location = New System.Drawing.Point(16, 24)
+        Me.rbCodigo.Location = New System.Drawing.Point(19, 28)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(183, 27)
         Me.rbCodigo.TabIndex = 0
         Me.rbCodigo.Text = "&Código"
         Me.rbCodigo.UseVisualStyleBackColor = False
@@ -144,18 +144,19 @@ Public Class frmMAhTipoAhorro
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 203)
+        Me.fg.Location = New System.Drawing.Point(28, 234)
         Me.fg.Name = "fg"
-        Me.fg.Size = New System.Drawing.Size(549, 179)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(661, 144)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 40
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 169)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 195)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 193
         Me.btnEliminar1.Text = "Eliminar"
         Me.btnEliminar1.UseSelectable = True
@@ -163,10 +164,10 @@ Public Class frmMAhTipoAhorro
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 169)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 195)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 192
         Me.btnConsultar1.Text = "Consultar"
         Me.btnConsultar1.UseSelectable = True
@@ -174,10 +175,10 @@ Public Class frmMAhTipoAhorro
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 169)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 195)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 190
         Me.btnModificar1.Text = "Modificar"
         Me.btnModificar1.UseSelectable = True
@@ -185,10 +186,10 @@ Public Class frmMAhTipoAhorro
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 169)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 195)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 189
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.UseSelectable = True
@@ -196,9 +197,9 @@ Public Class frmMAhTipoAhorro
         '
         'frmMAhTipoAhorro
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(597, 438)
+        Me.ClientSize = New System.Drawing.Size(719, 472)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -208,7 +209,7 @@ Public Class frmMAhTipoAhorro
         Me.Name = "frmMAhTipoAhorro"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Tipos de Ahorro"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -242,7 +243,7 @@ Public Class frmMAhTipoAhorro
             ds = oAh.ConsultarTipoAhorro("*", "", "CodTipoAhorro,Descripcion", sUsuario, sPassword, sSucursal)
             fg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
         Encabezado()
     End Sub
@@ -302,7 +303,7 @@ Public Class frmMAhTipoAhorro
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -314,7 +315,7 @@ Public Class frmMAhTipoAhorro
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -333,7 +334,7 @@ Public Class frmMAhTipoAhorro
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -349,7 +350,7 @@ Public Class frmMAhTipoAhorro
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -369,7 +370,13 @@ Public Class frmMAhTipoAhorro
                 txtDescripcion.Enabled = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMAhTipoAhorro_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

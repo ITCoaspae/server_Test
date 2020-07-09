@@ -74,11 +74,17 @@
                 '                                                  sUsuario, sPassword, sSucursal)) > 0 Then
                 '    MsgBox("Suspensión realizada con exito", MsgBoxStyle.Information)
                 'Else
-                '    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                '     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 'End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmAsocTransferenciasAutomaticas_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

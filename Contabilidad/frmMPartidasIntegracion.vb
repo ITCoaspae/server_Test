@@ -69,28 +69,30 @@ Public Class frmMPartidasIntegracion
         Me.fg.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 205)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 237)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(587, 225)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(708, 225)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 14
         '
         'txtDescripcion
         '
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescripcion.Location = New System.Drawing.Point(291, 70)
+        Me.txtDescripcion.Location = New System.Drawing.Point(349, 81)
         Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(152, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(183, 22)
         Me.txtDescripcion.TabIndex = 5
         '
         'rbDescripcion
         '
         Me.rbDescripcion.BackColor = System.Drawing.Color.White
-        Me.rbDescripcion.Location = New System.Drawing.Point(291, 41)
+        Me.rbDescripcion.Location = New System.Drawing.Point(349, 47)
         Me.rbDescripcion.Name = "rbDescripcion"
-        Me.rbDescripcion.Size = New System.Drawing.Size(152, 24)
+        Me.rbDescripcion.Size = New System.Drawing.Size(183, 28)
         Me.rbDescripcion.TabIndex = 4
         Me.rbDescripcion.Text = "Descripción:"
         Me.rbDescripcion.UseVisualStyleBackColor = False
@@ -98,26 +100,26 @@ Public Class frmMPartidasIntegracion
         'cmbTipoPartidas
         '
         Me.cmbTipoPartidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbTipoPartidas.Location = New System.Drawing.Point(133, 70)
+        Me.cmbTipoPartidas.Location = New System.Drawing.Point(160, 81)
         Me.cmbTipoPartidas.Name = "cmbTipoPartidas"
-        Me.cmbTipoPartidas.Size = New System.Drawing.Size(152, 21)
+        Me.cmbTipoPartidas.Size = New System.Drawing.Size(182, 24)
         Me.cmbTipoPartidas.TabIndex = 3
         '
         'txtNumero
         '
         Me.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNumero.Location = New System.Drawing.Point(15, 71)
+        Me.txtNumero.Location = New System.Drawing.Point(18, 82)
         Me.txtNumero.MaxLength = 6
         Me.txtNumero.Name = "txtNumero"
-        Me.txtNumero.Size = New System.Drawing.Size(112, 20)
+        Me.txtNumero.Size = New System.Drawing.Size(134, 22)
         Me.txtNumero.TabIndex = 1
         '
         'rbTipo
         '
         Me.rbTipo.BackColor = System.Drawing.Color.White
-        Me.rbTipo.Location = New System.Drawing.Point(133, 41)
+        Me.rbTipo.Location = New System.Drawing.Point(160, 47)
         Me.rbTipo.Name = "rbTipo"
-        Me.rbTipo.Size = New System.Drawing.Size(152, 24)
+        Me.rbTipo.Size = New System.Drawing.Size(182, 28)
         Me.rbTipo.TabIndex = 2
         Me.rbTipo.Text = "Tipo Comprobante"
         Me.rbTipo.UseVisualStyleBackColor = False
@@ -126,9 +128,9 @@ Public Class frmMPartidasIntegracion
         '
         Me.rbNumero.BackColor = System.Drawing.Color.White
         Me.rbNumero.Checked = True
-        Me.rbNumero.Location = New System.Drawing.Point(15, 41)
+        Me.rbNumero.Location = New System.Drawing.Point(18, 47)
         Me.rbNumero.Name = "rbNumero"
-        Me.rbNumero.Size = New System.Drawing.Size(112, 24)
+        Me.rbNumero.Size = New System.Drawing.Size(134, 28)
         Me.rbNumero.TabIndex = 0
         Me.rbNumero.TabStop = True
         Me.rbNumero.Text = "Número"
@@ -146,20 +148,20 @@ Public Class frmMPartidasIntegracion
         Me.MetroPanel1.Controls.Add(Me.rbTipo)
         Me.MetroPanel1.HorizontalScrollbarBarColor = True
         Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroPanel1.HorizontalScrollbarSize = 10
-        Me.MetroPanel1.Location = New System.Drawing.Point(23, 63)
+        Me.MetroPanel1.HorizontalScrollbarSize = 12
+        Me.MetroPanel1.Location = New System.Drawing.Point(28, 73)
         Me.MetroPanel1.Name = "MetroPanel1"
-        Me.MetroPanel1.Size = New System.Drawing.Size(584, 102)
+        Me.MetroPanel1.Size = New System.Drawing.Size(700, 117)
         Me.MetroPanel1.TabIndex = 15
         Me.MetroPanel1.VerticalScrollbarBarColor = True
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroPanel1.VerticalScrollbarSize = 10
+        Me.MetroPanel1.VerticalScrollbarSize = 12
         '
         'btnMostrar
         '
-        Me.btnMostrar.Location = New System.Drawing.Point(469, 63)
+        Me.btnMostrar.Location = New System.Drawing.Point(563, 73)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar.TabIndex = 17
         Me.btnMostrar.Text = "Mostrar"
@@ -170,17 +172,17 @@ Public Class frmMPartidasIntegracion
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(15, 9)
+        Me.MetroLabel1.Location = New System.Drawing.Point(18, 10)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(124, 19)
+        Me.MetroLabel1.Size = New System.Drawing.Size(129, 20)
         Me.MetroLabel1.TabIndex = 7
         Me.MetroLabel1.Text = "Buscar Registro por"
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(23, 171)
+        Me.btnAgregar.Location = New System.Drawing.Point(28, 197)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar.Size = New System.Drawing.Size(90, 33)
         Me.btnAgregar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar.TabIndex = 16
         Me.btnAgregar.Text = "Agregar"
@@ -190,9 +192,9 @@ Public Class frmMPartidasIntegracion
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(104, 171)
+        Me.btnModificar.Location = New System.Drawing.Point(125, 197)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar.Size = New System.Drawing.Size(90, 33)
         Me.btnModificar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar.TabIndex = 17
         Me.btnModificar.Text = "Modificar"
@@ -202,9 +204,9 @@ Public Class frmMPartidasIntegracion
         '
         'btnConsultar
         '
-        Me.btnConsultar.Location = New System.Drawing.Point(185, 171)
+        Me.btnConsultar.Location = New System.Drawing.Point(222, 197)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar.Size = New System.Drawing.Size(90, 33)
         Me.btnConsultar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar.TabIndex = 18
         Me.btnConsultar.Text = "Consultar"
@@ -214,9 +216,9 @@ Public Class frmMPartidasIntegracion
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(266, 171)
+        Me.btnEliminar.Location = New System.Drawing.Point(319, 197)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar.Size = New System.Drawing.Size(90, 33)
         Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 19
         Me.btnEliminar.Text = "Eliminar"
@@ -226,16 +228,16 @@ Public Class frmMPartidasIntegracion
         '
         'frmMPartidasIntegracion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(633, 453)
+        Me.ClientSize = New System.Drawing.Size(764, 545)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.MetroPanel1)
         Me.Controls.Add(Me.fg)
-        Me.MinimumSize = New System.Drawing.Size(633, 453)
+        Me.MinimumSize = New System.Drawing.Size(760, 523)
         Me.Name = "frmMPartidasIntegracion"
         Me.ShowInTaskbar = False
         Me.Style = MetroFramework.MetroColorStyle.Teal

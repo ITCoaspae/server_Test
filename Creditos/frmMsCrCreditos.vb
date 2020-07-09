@@ -818,7 +818,7 @@ Public Class frmMsCrCreditos
         Me.txtDuiE.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.txtDuiE.PreValidation.Inherit = CType(((C1.Win.C1Input.PreValidationInheritFlags.CaseSensitive Or C1.Win.C1Input.PreValidationInheritFlags.TrimStart) _
             Or C1.Win.C1Input.PreValidationInheritFlags.TrimEnd), C1.Win.C1Input.PreValidationInheritFlags)
-        Me.txtDuiE.Size = New System.Drawing.Size(173, 23)
+        Me.txtDuiE.Size = New System.Drawing.Size(173, 21)
         Me.txtDuiE.TabIndex = 1
         Me.txtDuiE.Tag = Nothing
         Me.txtDuiE.TrimStart = True
@@ -856,7 +856,7 @@ Public Class frmMsCrCreditos
         Me.txtNitE.MaxLength = 20
         Me.txtNitE.Name = "txtNitE"
         Me.txtNitE.NumericInput = False
-        Me.txtNitE.Size = New System.Drawing.Size(173, 23)
+        Me.txtNitE.Size = New System.Drawing.Size(173, 21)
         Me.txtNitE.TabIndex = 13
         Me.txtNitE.Tag = Nothing
         '
@@ -1260,7 +1260,7 @@ Public Class frmMsCrCreditos
         '
         Me.txtCodEjecAp.BackColor = System.Drawing.Color.White
         Me.txtCodEjecAp.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodEjecAp.Location = New System.Drawing.Point(96, 105)
+        Me.txtCodEjecAp.Location = New System.Drawing.Point(147, 105)
         Me.txtCodEjecAp.MaxLength = 10
         Me.txtCodEjecAp.Name = "txtCodEjecAp"
         Me.txtCodEjecAp.Size = New System.Drawing.Size(76, 23)
@@ -1318,7 +1318,7 @@ Public Class frmMsCrCreditos
         Me.Label78.ForeColor = System.Drawing.Color.Black
         Me.Label78.Location = New System.Drawing.Point(7, 110)
         Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(118, 18)
+        Me.Label78.Size = New System.Drawing.Size(131, 18)
         Me.Label78.TabIndex = 139
         Me.Label78.Text = "Ejecutivo Apertura:"
         '
@@ -1326,11 +1326,11 @@ Public Class frmMsCrCreditos
         '
         Me.txtNomCodEjecAp.BackColor = System.Drawing.Color.White
         Me.txtNomCodEjecAp.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomCodEjecAp.Location = New System.Drawing.Point(178, 106)
+        Me.txtNomCodEjecAp.Location = New System.Drawing.Point(229, 106)
         Me.txtNomCodEjecAp.MaxLength = 110
         Me.txtNomCodEjecAp.Name = "txtNomCodEjecAp"
         Me.txtNomCodEjecAp.ReadOnly = True
-        Me.txtNomCodEjecAp.Size = New System.Drawing.Size(660, 23)
+        Me.txtNomCodEjecAp.Size = New System.Drawing.Size(607, 23)
         Me.txtNomCodEjecAp.TabIndex = 141
         '
         'Label1
@@ -1379,18 +1379,18 @@ Public Class frmMsCrCreditos
         '
         Me.txtEjecMercR.BackColor = System.Drawing.Color.White
         Me.txtEjecMercR.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEjecMercR.Location = New System.Drawing.Point(178, 76)
+        Me.txtEjecMercR.Location = New System.Drawing.Point(229, 76)
         Me.txtEjecMercR.MaxLength = 110
         Me.txtEjecMercR.Name = "txtEjecMercR"
         Me.txtEjecMercR.ReadOnly = True
-        Me.txtEjecMercR.Size = New System.Drawing.Size(660, 23)
+        Me.txtEjecMercR.Size = New System.Drawing.Size(607, 23)
         Me.txtEjecMercR.TabIndex = 9
         '
         'txtCodEjecMercR
         '
         Me.txtCodEjecMercR.BackColor = System.Drawing.Color.White
         Me.txtCodEjecMercR.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodEjecMercR.Location = New System.Drawing.Point(96, 76)
+        Me.txtCodEjecMercR.Location = New System.Drawing.Point(147, 76)
         Me.txtCodEjecMercR.MaxLength = 10
         Me.txtCodEjecMercR.Name = "txtCodEjecMercR"
         Me.txtCodEjecMercR.Size = New System.Drawing.Size(76, 23)
@@ -1402,7 +1402,7 @@ Public Class frmMsCrCreditos
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(7, 80)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(118, 18)
+        Me.Label5.Size = New System.Drawing.Size(131, 18)
         Me.Label5.TabIndex = 127
         Me.Label5.Text = "Ejecutivo Gestión:"
         '
@@ -3629,7 +3629,7 @@ Public Class frmMsCrCreditos
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3660,7 +3660,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -3686,7 +3686,7 @@ Public Class frmMsCrCreditos
             txtCodSuc.Text = ofrm.Resultado4.Trim
             txtCodTipoCredito.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3711,7 +3711,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -3737,7 +3737,7 @@ Public Class frmMsCrCreditos
             txtTasaMora.Value = ofrm.Resultado5
             txtMontoSolicitado.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3807,7 +3807,7 @@ Public Class frmMsCrCreditos
             Me.fgRefFam.Cols.Item(12).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3842,7 +3842,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -3866,7 +3866,7 @@ Public Class frmMsCrCreditos
             Me.txtProfdG.Text = ofrm.Resultado2.Trim
             chkAsociado.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3916,7 +3916,7 @@ Public Class frmMsCrCreditos
             Me.fgRefPer.Cols.Item(8).Width = 77
             Me.fgRefPer.Cols.Item(9).Width = 77
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3946,7 +3946,7 @@ Public Class frmMsCrCreditos
             Me.fgRefCom.Cols.Item(6).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3976,7 +3976,7 @@ Public Class frmMsCrCreditos
             Me.fgRefBan.Cols.Item(6).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4004,7 +4004,7 @@ Public Class frmMsCrCreditos
             Me.fgVehiculos.Cols.Item(5).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4036,7 +4036,7 @@ Public Class frmMsCrCreditos
             Me.fgBienes.Cols.Item(5).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4086,7 +4086,7 @@ Public Class frmMsCrCreditos
             Me.fgIngresos.Cols.Item(4).Format = "##0.00"
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4122,7 +4122,7 @@ Public Class frmMsCrCreditos
             Me.fgGastos.Cols.Item(5).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4177,7 +4177,7 @@ Public Class frmMsCrCreditos
             Me.fgOblig.Cols.Item(7).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4205,7 +4205,7 @@ Public Class frmMsCrCreditos
 
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4230,7 +4230,7 @@ Public Class frmMsCrCreditos
             txtCodSuc.Text = ofrm.Resultado4.Trim
             btnAtrasTb2_1.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4260,7 +4260,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -4291,7 +4291,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -4320,7 +4320,7 @@ Public Class frmMsCrCreditos
             End If
             btnSigTb1_1.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4351,7 +4351,7 @@ Public Class frmMsCrCreditos
                 Me.c1nTasaDPF.Value = 0
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Function
 
@@ -4381,7 +4381,7 @@ Public Class frmMsCrCreditos
             Me.fgGr.Cols.Item(6).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4418,7 +4418,7 @@ Public Class frmMsCrCreditos
             Me.fgFd.DataSource = ds.Tables(0)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4433,7 +4433,7 @@ Public Class frmMsCrCreditos
             Me.fgCd.DataSource = ds.Tables(0)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4619,7 +4619,7 @@ Public Class frmMsCrCreditos
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -4639,7 +4639,7 @@ Public Class frmMsCrCreditos
             Me.txtSucursal.Text = ofrm.Resultado2.Trim
             Me.C1NEMonto.Focus()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4658,7 +4658,7 @@ Public Class frmMsCrCreditos
             Me.txtPagaduria.Text = ofrm.Resultado2.Trim
             Me.lblCategoria.Text = IIf(ofrm.Resultado3.Trim.Length = 0, "P/E", ofrm.Resultado3.Trim)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4703,7 +4703,7 @@ Public Class frmMsCrCreditos
             txtCodEjecAp.Text = ofrm.Resultado.Trim
             txtNomCodEjecAp.Text = ofrm.Resultado2.Trim
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4730,7 +4730,7 @@ Public Class frmMsCrCreditos
                 End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
 
         End If
@@ -4862,7 +4862,7 @@ Public Class frmMsCrCreditos
                 ofrmAut.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4870,7 +4870,7 @@ Public Class frmMsCrCreditos
         Try
             Me.tbSolic.SelectedIndex = Me.tbSolic.SelectedIndex - 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4879,7 +4879,7 @@ Public Class frmMsCrCreditos
             pTab = 9
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4893,7 +4893,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridVh()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4911,7 +4911,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridIng()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4925,7 +4925,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4939,7 +4939,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridBI()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4957,7 +4957,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridBI()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4971,7 +4971,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -4988,7 +4988,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridCd()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5009,7 +5009,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridCd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5023,7 +5023,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5039,7 +5039,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridFd()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5054,12 +5054,14 @@ Public Class frmMsCrCreditos
                 frm.btnSaveTb1_1.Text = "&Modificar"
                 frm.btnSaveTb2_1.Text = "&Modificar"
                 frm.btnSaveTb3_1.Text = "&Modificar"
+                frm.txtDuidG.Enabled = False
+                frm.txtNit.Enabled = False
                 frm.StartPosition = FormStartPosition.CenterScreen
                 frm.ShowDialog()
                 ActualizaGridFd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5073,7 +5075,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5088,7 +5090,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridGr()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5107,7 +5109,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridGr()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5121,7 +5123,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5134,7 +5136,7 @@ Public Class frmMsCrCreditos
             ofrm.Nombre = Me.txtNombresE.Text.Trim & " " & Me.txtApe1E.Text.Trim & " " & Me.txtApe1E.Text.Trim
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5142,7 +5144,7 @@ Public Class frmMsCrCreditos
         Try
             Me.tbSolic.SelectedIndex = Me.tbSolic.SelectedIndex - 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5150,7 +5152,7 @@ Public Class frmMsCrCreditos
         Try
             Me.tbSolic.SelectedIndex = Me.tbSolic.SelectedIndex + 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5158,7 +5160,7 @@ Public Class frmMsCrCreditos
         Try
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5175,7 +5177,7 @@ Public Class frmMsCrCreditos
             pTab = 7
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5189,7 +5191,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridRefBan()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5207,7 +5209,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridRefBan()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5221,7 +5223,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5235,7 +5237,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridRefCom()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5253,7 +5255,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridRefCom()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5267,7 +5269,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5284,7 +5286,7 @@ Public Class frmMsCrCreditos
             pTab = 10
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5300,7 +5302,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridOA()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5319,7 +5321,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridOA()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5333,7 +5335,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5347,7 +5349,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridOb()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5365,7 +5367,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridOb()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5379,7 +5381,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5396,7 +5398,7 @@ Public Class frmMsCrCreditos
             pTab = 8
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5410,7 +5412,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridGt()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5428,7 +5430,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridGt()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5442,7 +5444,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5456,7 +5458,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridIng()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5474,7 +5476,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridIng()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5488,7 +5490,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5502,7 +5504,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridRefPer()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5519,7 +5521,7 @@ Public Class frmMsCrCreditos
             pTab = 6
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5537,7 +5539,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridRefPer()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5551,7 +5553,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5565,7 +5567,7 @@ Public Class frmMsCrCreditos
             frm.ShowDialog()
             ActualizaGridRefFam()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5583,7 +5585,7 @@ Public Class frmMsCrCreditos
                 ActualizaGridRefFam()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5597,7 +5599,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5625,7 +5627,7 @@ Public Class frmMsCrCreditos
             Me.tbSolic.TabPages(8).Enabled = pvalor
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5763,7 +5765,7 @@ Public Class frmMsCrCreditos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5866,7 +5868,7 @@ Public Class frmMsCrCreditos
 
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -5905,7 +5907,7 @@ Public Class frmMsCrCreditos
             .btnImprimir1.Visible = False
             .btPlanPago1.Visible = False
             .btnLimpiar1.Visible = False
-            .btnExportar1.Visible = False
+            '.btnExportar1.Visible = False
             .btnAsignar1.Visible = False
             .ShowDialog()
         End With
@@ -5936,12 +5938,28 @@ Public Class frmMsCrCreditos
         End With
     End Sub
 
+    Private Sub txtCodEjecMercR_TextChanged(sender As Object, e As EventArgs) Handles txtCodEjecMercR.TextChanged
+
+    End Sub
+
+    Private Sub txtNoSolic_TextChanged(sender As Object, e As EventArgs) Handles txtNoSolic.TextChanged
+
+    End Sub
+
+    Private Sub txtCodEjecAp_TextChanged(sender As Object, e As EventArgs) Handles txtCodEjecAp.TextChanged
+
+    End Sub
+
+    Private Sub tbRecibido_Click(sender As Object, e As EventArgs) Handles tbRecibido.Click
+
+    End Sub
+
     Private Sub btnSaveTb4_1_Click(sender As Object, e As EventArgs)
         Try
             pTab = 4
             'Me.btnSaveTb3_1_Click(sender, e)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -6068,7 +6086,7 @@ Public Class frmMsCrCreditos
                 'Me.txtAsociado.Text = Trim(dr("Nombres")) & ", " & dr("Apellido1") & " " & dr("Apellido2") & " " & dr("ApellidoCas")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

@@ -27,7 +27,6 @@ Public Class frmMFallecimiento
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
     Friend WithEvents fgFallecimiento As C1.Win.C1FlexGrid.C1FlexGrid
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
     Friend WithEvents txtNombres As System.Windows.Forms.TextBox
     Friend WithEvents rbNombres As System.Windows.Forms.RadioButton
@@ -44,7 +43,6 @@ Public Class frmMFallecimiento
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMFallecimiento))
         Me.fgFallecimiento = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnMostrar1 = New MetroFramework.Controls.MetroButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
@@ -59,7 +57,6 @@ Public Class frmMFallecimiento
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
         CType(Me.fgFallecimiento, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,38 +68,18 @@ Public Class frmMFallecimiento
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgFallecimiento.BackColor = System.Drawing.Color.White
         Me.fgFallecimiento.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgFallecimiento.Location = New System.Drawing.Point(23, 179)
+        Me.fgFallecimiento.Location = New System.Drawing.Point(23, 214)
         Me.fgFallecimiento.Name = "fgFallecimiento"
-        Me.fgFallecimiento.Size = New System.Drawing.Size(634, 183)
-        Me.fgFallecimiento.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgFallecimiento.Styles"))
+        Me.fgFallecimiento.Rows.DefaultSize = 21
+        Me.fgFallecimiento.Size = New System.Drawing.Size(576, 249)
+        Me.fgFallecimiento.StyleInfo = resources.GetString("fgFallecimiento.StyleInfo")
         Me.fgFallecimiento.TabIndex = 36
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.btnMostrar1)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbTodos)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(634, 76)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Busqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(545, 35)
+        Me.btnMostrar1.Location = New System.Drawing.Point(507, 136)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 33)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 18
         Me.btnMostrar1.Text = "Mostrar"
@@ -112,33 +89,33 @@ Public Class frmMFallecimiento
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(6, 44)
+        Me.txtDui.Location = New System.Drawing.Point(120, 76)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(124, 44)
+        Me.txtNoSocio.Location = New System.Drawing.Point(462, 76)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(108, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(135, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'txtNombres
         '
-        Me.txtNombres.Location = New System.Drawing.Point(355, 43)
+        Me.txtNombres.Location = New System.Drawing.Point(259, 112)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(184, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(338, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
-        Me.rbNombres.Location = New System.Drawing.Point(238, 19)
+        Me.rbNombres.Location = New System.Drawing.Point(23, 107)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(111, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(91, 28)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "Nombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -147,9 +124,9 @@ Public Class frmMFallecimiento
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(355, 19)
+        Me.rbTodos.Location = New System.Drawing.Point(23, 141)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(229, 28)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -159,17 +136,17 @@ Public Class frmMFallecimiento
         '
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(238, 43)
+        Me.cbNombres.Location = New System.Drawing.Point(120, 110)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(111, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(133, 24)
         Me.cbNombres.TabIndex = 5
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(124, 19)
+        Me.rbNoSocio.Location = New System.Drawing.Point(337, 73)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(108, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(119, 28)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -177,18 +154,18 @@ Public Class frmMFallecimiento
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(6, 19)
+        Me.rbDui.Location = New System.Drawing.Point(23, 73)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(112, 24)
+        Me.rbDui.Size = New System.Drawing.Size(63, 28)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI"
         Me.rbDui.UseVisualStyleBackColor = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 145)
+        Me.btnConsultar1.Location = New System.Drawing.Point(314, 175)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 33)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 68
         Me.btnConsultar1.Text = "Consultar"
@@ -197,9 +174,9 @@ Public Class frmMFallecimiento
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 145)
+        Me.btnEliminar1.Location = New System.Drawing.Point(217, 175)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 33)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 67
         Me.btnEliminar1.Text = "Eliminar"
@@ -208,9 +185,9 @@ Public Class frmMFallecimiento
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 145)
+        Me.btnModificar1.Location = New System.Drawing.Point(120, 175)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 33)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 66
         Me.btnModificar1.Text = "Modificar"
@@ -219,9 +196,9 @@ Public Class frmMFallecimiento
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 145)
+        Me.btnAgregar1.Location = New System.Drawing.Point(23, 175)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 33)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 65
         Me.btnAgregar1.Text = "Agregar"
@@ -230,21 +207,29 @@ Public Class frmMFallecimiento
         '
         'frmMFallecimiento
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(680, 385)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(627, 523)
+        Me.Controls.Add(Me.btnMostrar1)
         Me.Controls.Add(Me.btnConsultar1)
+        Me.Controls.Add(Me.rbTodos)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.rbNombres)
+        Me.Controls.Add(Me.cbNombres)
+        Me.Controls.Add(Me.txtDui)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.rbNoSocio)
         Me.Controls.Add(Me.fgFallecimiento)
+        Me.Controls.Add(Me.rbDui)
         Me.Name = "frmMFallecimiento"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Proceso de Registro de Asociados Fallecidos"
         CType(Me.fgFallecimiento, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -513,6 +498,12 @@ Public Class frmMFallecimiento
             txtNombres.Enabled = False
             txtNoSocio.Enabled = False
             cbNombres.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMFallecimiento_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

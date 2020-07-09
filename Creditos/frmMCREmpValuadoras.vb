@@ -71,9 +71,9 @@ Public Class frmMCREmpValuadoras
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(628, 92)
+        Me.GroupBox2.Size = New System.Drawing.Size(753, 106)
         Me.GroupBox2.TabIndex = 38
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Filtrar Empresas por:"
@@ -83,9 +83,9 @@ Public Class frmMCREmpValuadoras
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
         Me.rbTodos.ForeColor = System.Drawing.Color.Black
-        Me.rbTodos.Location = New System.Drawing.Point(340, 24)
+        Me.rbTodos.Location = New System.Drawing.Point(408, 28)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(152, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(182, 27)
         Me.rbTodos.TabIndex = 4
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -94,26 +94,26 @@ Public Class frmMCREmpValuadoras
         'txtEmpresa
         '
         Me.txtEmpresa.Enabled = False
-        Me.txtEmpresa.Location = New System.Drawing.Point(174, 56)
+        Me.txtEmpresa.Location = New System.Drawing.Point(209, 65)
         Me.txtEmpresa.Name = "txtEmpresa"
-        Me.txtEmpresa.Size = New System.Drawing.Size(152, 20)
+        Me.txtEmpresa.Size = New System.Drawing.Size(182, 22)
         Me.txtEmpresa.TabIndex = 3
         '
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(16, 56)
+        Me.txtCodigo.Location = New System.Drawing.Point(19, 65)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(152, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(183, 22)
         Me.txtCodigo.TabIndex = 1
         '
         'btnMostrar
         '
         Me.btnMostrar.BackColor = System.Drawing.SystemColors.Control
         Me.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMostrar.Location = New System.Drawing.Point(332, 54)
+        Me.btnMostrar.Location = New System.Drawing.Point(398, 62)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(112, 24)
+        Me.btnMostrar.Size = New System.Drawing.Size(135, 28)
         Me.btnMostrar.TabIndex = 5
         Me.btnMostrar.Text = "Mos&trar"
         Me.btnMostrar.UseVisualStyleBackColor = False
@@ -122,9 +122,9 @@ Public Class frmMCREmpValuadoras
         '
         Me.rbEmpresa.BackColor = System.Drawing.Color.White
         Me.rbEmpresa.ForeColor = System.Drawing.Color.Black
-        Me.rbEmpresa.Location = New System.Drawing.Point(174, 24)
+        Me.rbEmpresa.Location = New System.Drawing.Point(209, 28)
         Me.rbEmpresa.Name = "rbEmpresa"
-        Me.rbEmpresa.Size = New System.Drawing.Size(152, 24)
+        Me.rbEmpresa.Size = New System.Drawing.Size(182, 27)
         Me.rbEmpresa.TabIndex = 2
         Me.rbEmpresa.Text = "&Nombre Empresa:"
         Me.rbEmpresa.UseVisualStyleBackColor = False
@@ -133,9 +133,9 @@ Public Class frmMCREmpValuadoras
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
         Me.rbCodigo.ForeColor = System.Drawing.Color.Black
-        Me.rbCodigo.Location = New System.Drawing.Point(16, 24)
+        Me.rbCodigo.Location = New System.Drawing.Point(19, 28)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(152, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(183, 27)
         Me.rbCodigo.TabIndex = 0
         Me.rbCodigo.Text = "&Código:"
         Me.rbCodigo.UseVisualStyleBackColor = False
@@ -148,18 +148,19 @@ Public Class frmMCREmpValuadoras
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 196)
+        Me.fg.Location = New System.Drawing.Point(28, 226)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(630, 275)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(621, 237)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 37
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 162)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 187)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 199
         Me.btnConsultar1.Text = "Consultar"
@@ -169,9 +170,9 @@ Public Class frmMCREmpValuadoras
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 162)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 187)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 198
         Me.btnEliminar1.Text = "Eliminar"
@@ -181,9 +182,9 @@ Public Class frmMCREmpValuadoras
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 162)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 187)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 197
         Me.btnModificar1.Text = "Modificar"
@@ -193,9 +194,9 @@ Public Class frmMCREmpValuadoras
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 162)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 187)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 196
         Me.btnAgregar1.Text = "Agregar"
@@ -205,7 +206,7 @@ Public Class frmMCREmpValuadoras
         '
         'frmMCREmpValuadoras
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(676, 518)
         Me.Controls.Add(Me.btnConsultar1)
@@ -233,7 +234,7 @@ Public Class frmMCREmpValuadoras
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -298,7 +299,7 @@ Public Class frmMCREmpValuadoras
             Me.fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -322,7 +323,7 @@ Public Class frmMCREmpValuadoras
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -341,7 +342,7 @@ Public Class frmMCREmpValuadoras
                 Me.txtEmpresa.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -357,7 +358,7 @@ Public Class frmMCREmpValuadoras
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -377,7 +378,7 @@ Public Class frmMCREmpValuadoras
                 Me.txtEmpresa.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

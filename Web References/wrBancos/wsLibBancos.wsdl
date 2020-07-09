@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibBancos" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibBancos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wsSif/wsLibBancos" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/wsSif/wsLibBancos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wsSif/wsLibBancos">
       <s:import namespace="http://microsoft.com/wsdl/types/" />
@@ -101,6 +101,20 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="eliminarBcCatCtasContablesChequesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anularSolicitudBoveda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anularSolicitudBovedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anularSolicitudBovedaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1291,6 +1305,12 @@
   <wsdl:message name="eliminarBcCatCtasContablesChequesSoapOut">
     <wsdl:part name="parameters" element="tns:eliminarBcCatCtasContablesChequesResponse" />
   </wsdl:message>
+  <wsdl:message name="anularSolicitudBovedaSoapIn">
+    <wsdl:part name="parameters" element="tns:anularSolicitudBoveda" />
+  </wsdl:message>
+  <wsdl:message name="anularSolicitudBovedaSoapOut">
+    <wsdl:part name="parameters" element="tns:anularSolicitudBovedaResponse" />
+  </wsdl:message>
   <wsdl:message name="insertarDetalleRemesaBancoSoapIn">
     <wsdl:part name="parameters" element="tns:insertarDetalleRemesaBanco" />
   </wsdl:message>
@@ -1624,6 +1644,10 @@
       <wsdl:input message="tns:eliminarBcCatCtasContablesChequesSoapIn" />
       <wsdl:output message="tns:eliminarBcCatCtasContablesChequesSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="anularSolicitudBoveda">
+      <wsdl:input message="tns:anularSolicitudBovedaSoapIn" />
+      <wsdl:output message="tns:anularSolicitudBovedaSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="insertarDetalleRemesaBanco">
       <wsdl:input message="tns:insertarDetalleRemesaBancoSoapIn" />
       <wsdl:output message="tns:insertarDetalleRemesaBancoSoapOut" />
@@ -1873,6 +1897,15 @@
     </wsdl:operation>
     <wsdl:operation name="eliminarBcCatCtasContablesCheques">
       <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/eliminarBcCatCtasContablesCheques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anularSolicitudBoveda">
+      <soap:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/anularSolicitudBoveda" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2396,6 +2429,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anularSolicitudBoveda">
+      <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/anularSolicitudBoveda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertarDetalleRemesaBanco">
       <soap12:operation soapAction="http://tempuri.org/wsSif/wsLibBancos/insertarDetalleRemesaBanco" style="document" />
       <wsdl:input>
@@ -2867,10 +2909,10 @@
   </wsdl:binding>
   <wsdl:service name="wsLibBancos">
     <wsdl:port name="wsLibBancosSoap" binding="tns:wsLibBancosSoap">
-      <soap:address location="http://localhost:57126/wsLibBancos.asmx" />
+      <soap:address location="http://192.168.1.115:9100/wsLibBancos.asmx" />
     </wsdl:port>
     <wsdl:port name="wsLibBancosSoap12" binding="tns:wsLibBancosSoap12">
-      <soap12:address location="http://localhost:57126/wsLibBancos.asmx" />
+      <soap12:address location="http://192.168.1.115:9100/wsLibBancos.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

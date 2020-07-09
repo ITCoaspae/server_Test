@@ -65,10 +65,6 @@ Public Class frmMsCRDetPrestamo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents txtFechaVencimiento As System.Windows.Forms.TextBox
     Friend WithEvents txtCategoria As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
@@ -87,21 +83,8 @@ Public Class frmMsCRDetPrestamo
     Friend WithEvents txtCuota As System.Windows.Forms.TextBox
     Friend WithEvents txtCodTablaAmortiza As System.Windows.Forms.TextBox
     Friend WithEvents tbSaldos As System.Windows.Forms.TabPage
-    Friend WithEvents txtSaldoDiaInteresMora As System.Windows.Forms.TextBox
-    Friend WithEvents txtSaldoDiaCapitalMora As System.Windows.Forms.TextBox
-    Friend WithEvents txtSaldoDiaInteres As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents txtSaldoDiaSegDeuda As System.Windows.Forms.TextBox
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents txtSaldoDiaComision As System.Windows.Forms.TextBox
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents txtSaldoDiaSegDanios As System.Windows.Forms.TextBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents txtSaldoDiaAhorro As System.Windows.Forms.TextBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents C1fgrdDetalleTA As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents C1fgrdProv As C1.Win.C1FlexGrid.C1FlexGrid
-    Friend WithEvents txtSaldoDiaAportacion As System.Windows.Forms.TextBox
     Friend WithEvents tbGarantias As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
@@ -136,6 +119,26 @@ Public Class frmMsCRDetPrestamo
     Friend WithEvents btNewGr1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btConsultaGarantiasInt1 As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroButton4 As MetroFramework.Controls.MetroButton
+    Friend WithEvents SaveButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TxtCuotaTotal As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents txtSaldoDiaAportacion As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtSaldoDiaComision As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents txtSaldoDiaSegDanios As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents txtSaldoDiaAhorro As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents txtSaldoDiaSegDeuda As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtSaldoDiaInteresMora As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents txtSaldoDiaCapitalMora As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents txtSaldoDiaInteres As TextBox
+    Friend WithEvents Label25 As Label
     Friend WithEvents txtFechayHora As System.Windows.Forms.TextBox
 
 
@@ -181,6 +184,7 @@ Public Class frmMsCRDetPrestamo
         Me.txtCodAnterior = New System.Windows.Forms.TextBox()
         Me.txtMonto = New System.Windows.Forms.TextBox()
         Me.tbTblAmort = New System.Windows.Forms.TabPage()
+        Me.MetroButton4 = New MetroFramework.Controls.MetroButton()
         Me.btnSigTb2_1 = New MetroFramework.Controls.MetroButton()
         Me.btAtrasTb2_1 = New MetroFramework.Controls.MetroButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -203,6 +207,7 @@ Public Class frmMsCRDetPrestamo
         Me.txtCodTablaAmortiza = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.tbSaldos = New System.Windows.Forms.TabPage()
+        Me.SaveButton = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -223,6 +228,8 @@ Public Class frmMsCRDetPrestamo
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txtSaldoDiaInteres = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
+        Me.TxtCuotaTotal = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.C1fgrdProv = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.tbHistorial = New System.Windows.Forms.TabPage()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
@@ -248,7 +255,6 @@ Public Class frmMsCRDetPrestamo
         Me.btNewGr1 = New MetroFramework.Controls.MetroButton()
         Me.fgGr = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.ttipAsoc = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MetroButton4 = New MetroFramework.Controls.MetroButton()
         Me.tb.SuspendLayout()
         Me.tbDatGral.SuspendLayout()
         Me.gbDatDoc.SuspendLayout()
@@ -739,6 +745,18 @@ Public Class frmMsCRDetPrestamo
         Me.tbTblAmort.Text = "B - Tablas Amortización"
         Me.tbTblAmort.ToolTipText = "Tabla de Amortización vigente para Control del Préstamo"
         '
+        'MetroButton4
+        '
+        Me.MetroButton4.Location = New System.Drawing.Point(384, 374)
+        Me.MetroButton4.Name = "MetroButton4"
+        Me.MetroButton4.Size = New System.Drawing.Size(200, 32)
+        Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton4.TabIndex = 217
+        Me.MetroButton4.Text = "Imprimir Tabla de Amortización"
+        Me.MetroButton4.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroButton4.UseSelectable = True
+        Me.MetroButton4.UseStyleColors = True
+        '
         'btnSigTb2_1
         '
         Me.btnSigTb2_1.Location = New System.Drawing.Point(688, 374)
@@ -964,6 +982,7 @@ Public Class frmMsCRDetPrestamo
         Me.C1fgrdDetalleTA.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdDetalleTA.BackColor = System.Drawing.Color.White
         Me.C1fgrdDetalleTA.ColumnInfo = resources.GetString("C1fgrdDetalleTA.ColumnInfo")
+        Me.C1fgrdDetalleTA.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.C1fgrdDetalleTA.ForeColor = System.Drawing.Color.Teal
         Me.C1fgrdDetalleTA.Location = New System.Drawing.Point(7, 76)
         Me.C1fgrdDetalleTA.Name = "C1fgrdDetalleTA"
@@ -997,6 +1016,7 @@ Public Class frmMsCRDetPrestamo
         'tbSaldos
         '
         Me.tbSaldos.BackColor = System.Drawing.Color.White
+        Me.tbSaldos.Controls.Add(Me.SaveButton)
         Me.tbSaldos.Controls.Add(Me.MetroButton1)
         Me.tbSaldos.Controls.Add(Me.MetroButton2)
         Me.tbSaldos.Controls.Add(Me.GroupBox1)
@@ -1006,6 +1026,20 @@ Public Class frmMsCRDetPrestamo
         Me.tbSaldos.TabIndex = 3
         Me.tbSaldos.Text = "C - Consulta Saldos al Día"
         Me.tbSaldos.ToolTipText = "Consulta de Saldos al Día del Préstamo"
+        '
+        'SaveButton
+        '
+        Me.SaveButton.Enabled = False
+        Me.SaveButton.Location = New System.Drawing.Point(479, 373)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(90, 32)
+        Me.SaveButton.Style = MetroFramework.MetroColorStyle.Teal
+        Me.SaveButton.TabIndex = 219
+        Me.SaveButton.Text = "Guardar"
+        Me.SaveButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.SaveButton.UseSelectable = True
+        Me.SaveButton.UseStyleColors = True
+        Me.SaveButton.Visible = False
         '
         'MetroButton1
         '
@@ -1064,6 +1098,8 @@ Public Class frmMsCRDetPrestamo
         Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.txtSaldoDiaInteres)
         Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.TxtCuotaTotal)
+        Me.GroupBox2.Controls.Add(Me.Label29)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 255)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(749, 102)
@@ -1075,7 +1111,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaAportacion.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaAportacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaAportacion.Location = New System.Drawing.Point(643, 65)
+        Me.txtSaldoDiaAportacion.Location = New System.Drawing.Point(643, 45)
         Me.txtSaldoDiaAportacion.MaxLength = 8
         Me.txtSaldoDiaAportacion.Name = "txtSaldoDiaAportacion"
         Me.txtSaldoDiaAportacion.ReadOnly = True
@@ -1087,9 +1123,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(566, 67)
+        Me.Label15.Location = New System.Drawing.Point(566, 47)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(96, 18)
+        Me.Label15.Size = New System.Drawing.Size(96, 19)
         Me.Label15.TabIndex = 162
         Me.Label15.Text = "Aportación:"
         '
@@ -1097,7 +1133,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaComision.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaComision.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaComision.Location = New System.Drawing.Point(461, 65)
+        Me.txtSaldoDiaComision.Location = New System.Drawing.Point(461, 45)
         Me.txtSaldoDiaComision.MaxLength = 8
         Me.txtSaldoDiaComision.Name = "txtSaldoDiaComision"
         Me.txtSaldoDiaComision.ReadOnly = True
@@ -1109,17 +1145,17 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(346, 67)
+        Me.Label22.Location = New System.Drawing.Point(346, 47)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(134, 18)
+        Me.Label22.Size = New System.Drawing.Size(134, 19)
         Me.Label22.TabIndex = 161
-        Me.Label22.Text = "Comisión Manejo:"
+        Me.Label22.Text = "Seg. Vehiculo:"
         '
         'txtSaldoDiaSegDanios
         '
         Me.txtSaldoDiaSegDanios.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaSegDanios.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaSegDanios.Location = New System.Drawing.Point(240, 65)
+        Me.txtSaldoDiaSegDanios.Location = New System.Drawing.Point(240, 45)
         Me.txtSaldoDiaSegDanios.MaxLength = 8
         Me.txtSaldoDiaSegDanios.Name = "txtSaldoDiaSegDanios"
         Me.txtSaldoDiaSegDanios.ReadOnly = True
@@ -1131,9 +1167,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(154, 67)
+        Me.Label24.Location = New System.Drawing.Point(154, 47)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(76, 18)
+        Me.Label24.Size = New System.Drawing.Size(76, 19)
         Me.Label24.TabIndex = 159
         Me.Label24.Text = "Seg.Daños:"
         '
@@ -1141,7 +1177,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaAhorro.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaAhorro.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaAhorro.Location = New System.Drawing.Point(58, 65)
+        Me.txtSaldoDiaAhorro.Location = New System.Drawing.Point(58, 45)
         Me.txtSaldoDiaAhorro.MaxLength = 8
         Me.txtSaldoDiaAhorro.Name = "txtSaldoDiaAhorro"
         Me.txtSaldoDiaAhorro.ReadOnly = True
@@ -1153,9 +1189,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(10, 67)
+        Me.Label26.Location = New System.Drawing.Point(10, 47)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(48, 18)
+        Me.Label26.Size = New System.Drawing.Size(48, 19)
         Me.Label26.TabIndex = 157
         Me.Label26.Text = "Ahorro:"
         '
@@ -1163,7 +1199,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaSegDeuda.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaSegDeuda.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaSegDeuda.Location = New System.Drawing.Point(643, 25)
+        Me.txtSaldoDiaSegDeuda.Location = New System.Drawing.Point(643, 16)
         Me.txtSaldoDiaSegDeuda.MaxLength = 8
         Me.txtSaldoDiaSegDeuda.Name = "txtSaldoDiaSegDeuda"
         Me.txtSaldoDiaSegDeuda.ReadOnly = True
@@ -1175,9 +1211,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(566, 28)
+        Me.Label14.Location = New System.Drawing.Point(566, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(96, 18)
+        Me.Label14.Size = New System.Drawing.Size(96, 19)
         Me.Label14.TabIndex = 154
         Me.Label14.Text = "Seg. Deuda:"
         '
@@ -1185,7 +1221,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaInteresMora.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaInteresMora.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaInteresMora.Location = New System.Drawing.Point(461, 25)
+        Me.txtSaldoDiaInteresMora.Location = New System.Drawing.Point(461, 16)
         Me.txtSaldoDiaInteresMora.MaxLength = 8
         Me.txtSaldoDiaInteresMora.Name = "txtSaldoDiaInteresMora"
         Me.txtSaldoDiaInteresMora.ReadOnly = True
@@ -1197,9 +1233,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(346, 28)
+        Me.Label21.Location = New System.Drawing.Point(346, 18)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(115, 18)
+        Me.Label21.Size = New System.Drawing.Size(115, 19)
         Me.Label21.TabIndex = 153
         Me.Label21.Text = "Interés Moratorio:"
         '
@@ -1207,7 +1243,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaCapitalMora.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaCapitalMora.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaCapitalMora.Location = New System.Drawing.Point(240, 25)
+        Me.txtSaldoDiaCapitalMora.Location = New System.Drawing.Point(240, 16)
         Me.txtSaldoDiaCapitalMora.MaxLength = 8
         Me.txtSaldoDiaCapitalMora.Name = "txtSaldoDiaCapitalMora"
         Me.txtSaldoDiaCapitalMora.ReadOnly = True
@@ -1219,9 +1255,9 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.Location = New System.Drawing.Point(154, 28)
+        Me.Label23.Location = New System.Drawing.Point(154, 18)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(86, 18)
+        Me.Label23.Size = New System.Drawing.Size(86, 19)
         Me.Label23.TabIndex = 149
         Me.Label23.Text = "Capital Mora:"
         '
@@ -1229,7 +1265,7 @@ Public Class frmMsCRDetPrestamo
         '
         Me.txtSaldoDiaInteres.BackColor = System.Drawing.Color.White
         Me.txtSaldoDiaInteres.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSaldoDiaInteres.Location = New System.Drawing.Point(58, 25)
+        Me.txtSaldoDiaInteres.Location = New System.Drawing.Point(58, 16)
         Me.txtSaldoDiaInteres.MaxLength = 8
         Me.txtSaldoDiaInteres.Name = "txtSaldoDiaInteres"
         Me.txtSaldoDiaInteres.ReadOnly = True
@@ -1241,11 +1277,32 @@ Public Class frmMsCRDetPrestamo
         '
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(10, 28)
+        Me.Label25.Location = New System.Drawing.Point(10, 18)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(48, 18)
+        Me.Label25.Size = New System.Drawing.Size(48, 19)
         Me.Label25.TabIndex = 145
         Me.Label25.Text = "Interés:"
+        '
+        'TxtCuotaTotal
+        '
+        Me.TxtCuotaTotal.BackColor = System.Drawing.Color.White
+        Me.TxtCuotaTotal.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCuotaTotal.Location = New System.Drawing.Point(137, 70)
+        Me.TxtCuotaTotal.MaxLength = 8
+        Me.TxtCuotaTotal.Name = "TxtCuotaTotal"
+        Me.TxtCuotaTotal.Size = New System.Drawing.Size(105, 23)
+        Me.TxtCuotaTotal.TabIndex = 164
+        Me.TxtCuotaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label29
+        '
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.Black
+        Me.Label29.Location = New System.Drawing.Point(47, 74)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(90, 18)
+        Me.Label29.TabIndex = 165
+        Me.Label29.Text = "Cuota Total: $"
         '
         'C1fgrdProv
         '
@@ -1256,6 +1313,7 @@ Public Class frmMsCRDetPrestamo
         Me.C1fgrdProv.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdProv.BackColor = System.Drawing.Color.White
         Me.C1fgrdProv.ColumnInfo = resources.GetString("C1fgrdProv.ColumnInfo")
+        Me.C1fgrdProv.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.C1fgrdProv.ForeColor = System.Drawing.Color.Teal
         Me.C1fgrdProv.Location = New System.Drawing.Point(10, 18)
         Me.C1fgrdProv.Name = "C1fgrdProv"
@@ -1295,6 +1353,7 @@ Public Class frmMsCRDetPrestamo
         Me.fgDetalleHistorial.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.fgDetalleHistorial.BackColor = System.Drawing.Color.White
         Me.fgDetalleHistorial.ColumnInfo = resources.GetString("fgDetalleHistorial.ColumnInfo")
+        Me.fgDetalleHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fgDetalleHistorial.Location = New System.Drawing.Point(10, 18)
         Me.fgDetalleHistorial.Name = "fgDetalleHistorial"
         Me.fgDetalleHistorial.Rows.Count = 2
@@ -1325,6 +1384,7 @@ Public Class frmMsCRDetPrestamo
         Me.fgHistorial.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.fgHistorial.BackColor = System.Drawing.Color.White
         Me.fgHistorial.ColumnInfo = resources.GetString("fgHistorial.ColumnInfo")
+        Me.fgHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.fgHistorial.Location = New System.Drawing.Point(10, 18)
         Me.fgHistorial.Name = "fgHistorial"
         Me.fgHistorial.Rows.Count = 2
@@ -1418,6 +1478,7 @@ Public Class frmMsCRDetPrestamo
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgCd.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgCd.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.fgCd.ForeColor = System.Drawing.Color.Teal
         Me.fgCd.Location = New System.Drawing.Point(10, 45)
         Me.fgCd.Name = "fgCd"
@@ -1486,6 +1547,7 @@ Public Class frmMsCRDetPrestamo
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgFd.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgFd.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.fgFd.ForeColor = System.Drawing.Color.Teal
         Me.fgFd.Location = New System.Drawing.Point(10, 45)
         Me.fgFd.Name = "fgFd"
@@ -1567,6 +1629,7 @@ Public Class frmMsCRDetPrestamo
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgGr.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgGr.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold)
         Me.fgGr.ForeColor = System.Drawing.Color.Teal
         Me.fgGr.Location = New System.Drawing.Point(10, 45)
         Me.fgGr.Name = "fgGr"
@@ -1576,23 +1639,11 @@ Public Class frmMsCRDetPrestamo
         Me.fgGr.StyleInfo = resources.GetString("fgGr.StyleInfo")
         Me.fgGr.TabIndex = 4
         '
-        'MetroButton4
-        '
-        Me.MetroButton4.Location = New System.Drawing.Point(384, 374)
-        Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(200, 32)
-        Me.MetroButton4.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroButton4.TabIndex = 217
-        Me.MetroButton4.Text = "Imprimir Tabla de Amortización"
-        Me.MetroButton4.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroButton4.UseSelectable = True
-        Me.MetroButton4.UseStyleColors = True
-        '
         'frmMsCRDetPrestamo
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(839, 556)
+        Me.ClientSize = New System.Drawing.Size(914, 673)
         Me.Controls.Add(Me.tb)
         Me.ForeColor = System.Drawing.Color.White
         Me.MaximizeBox = False
@@ -1664,19 +1715,26 @@ Public Class frmMsCRDetPrestamo
 
 
 #End Region
-
-
+    'Cambio de PrPrestamos por COVID19
+    Dim dtPrest As New DataTable
 
     Private Sub frmMsCRDetPrestamo_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim oPrest As New wrPrestamo.wsLibPrest, oCred As New wrCredito.wsLibCred
         Dim ds As New DataSet("Prestamo"), dr As DataRow ', drTbAm As DataRow
         Dim ds2 As New DataSet
+
         Dim oPerif As wrCredito.wsLibCred = New wrCredito.wsLibCred
         'Dim pNumSolicitud As String
         Try
             ds = oPrest.CargaDatosPrestamo(Me.IdPrestamo, sUsuario, sPassword, sSucursal)
             If ds.Tables("Prestamo").Rows.Count <= 0 Then Exit Sub
             dr = ds.Tables("Prestamo").Rows(0)
+            '--------------------------------------------
+            'Cambio de PrPrestamos por COVID19
+            dtPrest.TableName = "SaldoAnt"
+            dtPrest.ImportRow(ds.Tables("Prestamo").Rows(0))
+
+            '--------------------------------------------
 
             Me.txtCodPrestamo.Text = IIf(IsDBNull(dr("CodPrestamo")), 0, dr("CodPrestamo"))
             Me.txtCodAnterior.Text = IIf(IsDBNull(dr("CodAnteriorPrestamo")), 0, dr("CodAnteriorPrestamo"))
@@ -1714,8 +1772,8 @@ Public Class frmMsCRDetPrestamo
             End If
             Me.txtSaldoDiaInteres.Text = Format(IIf(IsDBNull(dr("SaldoDia_Interes")), " ", dr("SaldoDia_Interes")), "###,##0.00")
             If IIf(IsDBNull(dr("DiaGracia")), "N", dr("DiaGracia")) = "S" Then
-                Me.txtSaldoDiaCapitalMora.Text = Format(IIf(IsDBNull(dr("Saldo_CapMoraGracia")), " ", dr("Saldo_CapMoraGracia")), "###,##0.00")
-                Me.txtSaldoDiaInteresMora.Text = Format(IIf(IsDBNull(dr("Saldo_IntMoraGracia")), " ", dr("Saldo_IntMoraGracia")), "###,##0.00")
+                Me.txtSaldoDiaCapitalMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_CapitalMora")), " ", dr("SaldoDia_CapitalMora")), "###,##0.00")
+                Me.txtSaldoDiaInteresMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_InteresMora")), " ", dr("SaldoDia_InteresMora")), "###,##0.00")
             Else
                 Me.txtSaldoDiaCapitalMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_CapitalMora")), " ", dr("SaldoDia_CapitalMora")), "###,##0.00")
                 Me.txtSaldoDiaInteresMora.Text = Format(IIf(IsDBNull(dr("SaldoDia_InteresMora")), " ", dr("SaldoDia_InteresMora")), "###,##0.00")
@@ -1723,9 +1781,12 @@ Public Class frmMsCRDetPrestamo
             Me.txtSaldoDiaSegDeuda.Text = Format(IIf(IsDBNull(dr("SaldoDia_SeguroDeuda")), " ", dr("SaldoDia_SeguroDeuda")), "###,##0.00")
             Me.txtSaldoDiaAhorro.Text = Format(IIf(IsDBNull(dr("SaldoDia_Ahorro")), " ", dr("SaldoDia_Ahorro")), "###,##0.00")
             Me.txtSaldoDiaSegDanios.Text = Format(IIf(IsDBNull(dr("SaldoDia_SeguroDaniosyLA")), " ", dr("SaldoDia_SeguroDaniosyLA")), "###,##0.00")
-            Me.txtSaldoDiaComision.Text = Format(IIf(IsDBNull(dr("SaldoDia_ComisionManejo")), " ", dr("SaldoDia_ComisionManejo")), "###,##0.00")
+            'PrPrestamos COVID19
+            Me.txtSaldoDiaComision.Text = Format(IIf(IsDBNull(dr("SaldoDia_SeguroVehiculo")), " ", dr("SaldoDia_SeguroVehiculo")), "###,##0.00")
+            '--------------------------------
             Me.txtSaldoDiaAportacion.Text = Format(IIf(IsDBNull(dr("SaldoDia_Aportacion")), " ", dr("SaldoDia_Aportacion")), "###,##0.00")
             Me.txtCuota.Text = Format(IIf(IsDBNull(dr("CuotaTotal")), 0, dr("CuotaTotal")), "###,##0.00")
+            Me.TxtCuotaTotal.Text = Format(IIf(IsDBNull(dr("CuotaTotal")), 0, dr("CuotaTotal")), "###,##0.00")
             Me.txtSaldo.Text = Format(IIf(IsDBNull(dr("Saldo_Capital")), 0, dr("Saldo_Capital")), "###,##0.00")
             Me.txtInteresPagado.Text = Format(IIf(IsDBNull(dr("Intereses_Pagados")), 0, dr("Intereses_Pagados")), "###,##0.00")
             Me.C1fgrdDetalleTA.DataSource = ds.Tables("TablaAmortiza").DefaultView
@@ -1754,7 +1815,7 @@ Public Class frmMsCRDetPrestamo
             Me.txtFechayHora.Text = IIf(IsDBNull(dr("FechaCreacion")), "", dr("FechaCreacion"))
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
 
@@ -1787,7 +1848,7 @@ Public Class frmMsCRDetPrestamo
             Me.fgGr.Cols.Item(6).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -1804,7 +1865,7 @@ Public Class frmMsCRDetPrestamo
             Me.fgFd.DataSource = ds.Tables(0)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -1819,7 +1880,7 @@ Public Class frmMsCRDetPrestamo
 
             Me.fgCd.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -1869,7 +1930,7 @@ Public Class frmMsCRDetPrestamo
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1933,7 +1994,7 @@ Public Class frmMsCRDetPrestamo
                 Me.frmMsCRDetPrestamo_Load(sender, e)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1962,7 +2023,7 @@ Public Class frmMsCRDetPrestamo
             frm.ShowDialog()
             ActualizaGridCd()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1983,7 +2044,7 @@ Public Class frmMsCRDetPrestamo
                 ActualizaGridCd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1997,7 +2058,7 @@ Public Class frmMsCRDetPrestamo
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2013,7 +2074,7 @@ Public Class frmMsCRDetPrestamo
             frm.ShowDialog()
             ActualizaGridFd()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2037,7 +2098,7 @@ Public Class frmMsCRDetPrestamo
                 ActualizaGridFd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2051,7 +2112,7 @@ Public Class frmMsCRDetPrestamo
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2066,7 +2127,7 @@ Public Class frmMsCRDetPrestamo
             frm.ShowDialog()
             ActualizaGridGr()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2085,7 +2146,7 @@ Public Class frmMsCRDetPrestamo
                 ActualizaGridGr()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2099,7 +2160,7 @@ Public Class frmMsCRDetPrestamo
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2112,8 +2173,37 @@ Public Class frmMsCRDetPrestamo
             ofrm.TopMost = True
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+
+        Dim oCred2 As wrCredito.wsLibCred = New wrCredito.wsLibCred, pCampos As String ', pValores As String, Filas As Data.DataRowCollection, ds As New Data.DataSet
+        'Dim oAhorro As wrAhorro.wsLibAhorro = New wrAhorro.wsLibAhorro, pTasaIntMora As Double, pFecVen As Date, pGeneraReserva As String
+
+
+
+        pCampos = "SaldoDia_Interes='" & Me.txtSaldoDiaInteres.Text &
+        "',SaldoDia_CapitalMora='" & Me.txtSaldoDiaCapitalMora.Text &
+        "',Saldo_CapMoraGracia='" & Me.txtSaldoDiaCapitalMora.Text &
+        "',SaldoDia_InteresMora='" & Me.txtSaldoDiaInteresMora.Text &
+        "',Saldo_IntMoraGracia='" & Me.txtSaldoDiaInteresMora.Text &
+        "',SaldoDia_SeguroDeuda = '" & Me.txtSaldoDiaSegDeuda.Text &
+        "',SaldoDia_Ahorro = '" & Me.txtSaldoDiaAhorro.Text &
+        "',SaldoDia_SeguroDaniosyLA = '" & Me.txtSaldoDiaSegDanios.Text &
+        "',SaldoDia_SeguroVehiculo = '" & Me.txtSaldoDiaComision.Text &
+        "',CuotaTotal = '" & Me.TxtCuotaTotal.Text &
+        "',SaldoDia_Aportacion = " & Me.txtSaldoDiaAportacion.Text & " "
+
+        If oCred2.ModificarPrestamos(Me.txtNumSolicitud.Text.Trim, pCampos, sUsuario, sPassword, sSucursal) = True Then
+            MsgBox("Información actualizada exitosamente", MsgBoxStyle.Information, "Créditos - Prestamos")
+        End If
+
+    End Sub
+
+    Private Sub txtSaldoDiaCapitalMora_TextChanged(sender As Object, e As EventArgs) Handles txtSaldoDiaCapitalMora.TextChanged
+
     End Sub
 
     Private Sub btConsultaGarantiasInt1_Click(sender As Object, e As EventArgs) Handles btConsultaGarantiasInt1.Click
@@ -2125,7 +2215,7 @@ Public Class frmMsCRDetPrestamo
             ofrm.Nombre = Me.txtNombre.Text.Trim
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

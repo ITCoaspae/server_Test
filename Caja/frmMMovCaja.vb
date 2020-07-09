@@ -67,11 +67,12 @@ Public Class frmMMovCaja
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 190)
+        Me.fg.Location = New System.Drawing.Point(28, 219)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
-        Me.fg.Size = New System.Drawing.Size(671, 158)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(662, 122)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 40
         '
         'GroupBox2
@@ -84,18 +85,18 @@ Public Class frmMMovCaja
         Me.GroupBox2.Controls.Add(Me.rbtNoCaja)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(398, 87)
+        Me.GroupBox2.Size = New System.Drawing.Size(477, 100)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "&Filtrar registros por:"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(291, 37)
+        Me.btnMostrar1.Location = New System.Drawing.Point(349, 43)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 59
         Me.btnMostrar1.Text = "Mostrar"
@@ -106,18 +107,18 @@ Public Class frmMMovCaja
         'txtNoCaja
         '
         Me.txtNoCaja.BackColor = System.Drawing.Color.White
-        Me.txtNoCaja.Location = New System.Drawing.Point(16, 56)
+        Me.txtNoCaja.Location = New System.Drawing.Point(19, 65)
         Me.txtNoCaja.Name = "txtNoCaja"
-        Me.txtNoCaja.Size = New System.Drawing.Size(112, 20)
+        Me.txtNoCaja.Size = New System.Drawing.Size(135, 22)
         Me.txtNoCaja.TabIndex = 1
         '
         'dtpFecha
         '
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(174, 56)
+        Me.dtpFecha.Location = New System.Drawing.Point(209, 65)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(105, 22)
         Me.dtpFecha.TabIndex = 3
         Me.dtpFecha.Value = New Date(2006, 12, 19, 16, 2, 34, 463)
         '
@@ -125,9 +126,9 @@ Public Class frmMMovCaja
         '
         Me.rbtFecha.BackColor = System.Drawing.Color.White
         Me.rbtFecha.ForeColor = System.Drawing.Color.Black
-        Me.rbtFecha.Location = New System.Drawing.Point(174, 24)
+        Me.rbtFecha.Location = New System.Drawing.Point(209, 28)
         Me.rbtFecha.Name = "rbtFecha"
-        Me.rbtFecha.Size = New System.Drawing.Size(56, 24)
+        Me.rbtFecha.Size = New System.Drawing.Size(67, 27)
         Me.rbtFecha.TabIndex = 2
         Me.rbtFecha.Text = "&Fecha"
         Me.rbtFecha.UseVisualStyleBackColor = False
@@ -137,9 +138,9 @@ Public Class frmMMovCaja
         Me.rbtNoCaja.BackColor = System.Drawing.Color.White
         Me.rbtNoCaja.Checked = True
         Me.rbtNoCaja.ForeColor = System.Drawing.Color.Black
-        Me.rbtNoCaja.Location = New System.Drawing.Point(16, 24)
+        Me.rbtNoCaja.Location = New System.Drawing.Point(19, 28)
         Me.rbtNoCaja.Name = "rbtNoCaja"
-        Me.rbtNoCaja.Size = New System.Drawing.Size(152, 24)
+        Me.rbtNoCaja.Size = New System.Drawing.Size(183, 27)
         Me.rbtNoCaja.TabIndex = 0
         Me.rbtNoCaja.TabStop = True
         Me.rbtNoCaja.Text = "&Número de Caja"
@@ -147,9 +148,9 @@ Public Class frmMMovCaja
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(185, 156)
+        Me.btnConsultar1.Location = New System.Drawing.Point(222, 180)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 68
         Me.btnConsultar1.Text = "Consultar"
@@ -159,9 +160,9 @@ Public Class frmMMovCaja
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 156)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 180)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 67
         Me.btnAgregar1.Text = "Agregar"
@@ -171,9 +172,9 @@ Public Class frmMMovCaja
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 156)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 180)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 66
         Me.btnModificar1.Text = "Modificar"
@@ -183,7 +184,7 @@ Public Class frmMMovCaja
         '
         'frmMMovCaja
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(717, 396)
         Me.Controls.Add(Me.btnConsultar1)
@@ -321,7 +322,7 @@ Public Class frmMMovCaja
             End If
             CargarDatos()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -424,7 +425,7 @@ Public Class frmMMovCaja
 
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -475,7 +476,7 @@ Public Class frmMMovCaja
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

@@ -37,18 +37,21 @@ Partial Class frmMBC_Boveda
         Me.dgBoveda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgBoveda.BackgroundColor = System.Drawing.Color.White
         Me.dgBoveda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgBoveda.Location = New System.Drawing.Point(23, 97)
+        Me.dgBoveda.Location = New System.Drawing.Point(31, 119)
+        Me.dgBoveda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgBoveda.Name = "dgBoveda"
         Me.dgBoveda.ReadOnly = True
-        Me.dgBoveda.Size = New System.Drawing.Size(430, 124)
+        Me.dgBoveda.Size = New System.Drawing.Size(573, 153)
         Me.dgBoveda.TabIndex = 0
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(104, 63)
+        Me.MetroButton1.Location = New System.Drawing.Point(139, 78)
+        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(100, 34)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 170
         Me.MetroButton1.Text = "Actualizar"
@@ -58,9 +61,10 @@ Partial Class frmMBC_Boveda
         '
         'btnImp
         '
-        Me.btnImp.Location = New System.Drawing.Point(266, 63)
+        Me.btnImp.Location = New System.Drawing.Point(355, 78)
+        Me.btnImp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnImp.Name = "btnImp"
-        Me.btnImp.Size = New System.Drawing.Size(75, 28)
+        Me.btnImp.Size = New System.Drawing.Size(100, 34)
         Me.btnImp.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnImp.TabIndex = 169
         Me.btnImp.Text = "Consultar"
@@ -70,9 +74,10 @@ Partial Class frmMBC_Boveda
         '
         'btnDel
         '
-        Me.btnDel.Location = New System.Drawing.Point(185, 63)
+        Me.btnDel.Location = New System.Drawing.Point(247, 78)
+        Me.btnDel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(75, 28)
+        Me.btnDel.Size = New System.Drawing.Size(100, 34)
         Me.btnDel.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnDel.TabIndex = 168
         Me.btnDel.Text = "Eliminar"
@@ -82,9 +87,10 @@ Partial Class frmMBC_Boveda
         '
         'MetroButton2
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(23, 63)
+        Me.MetroButton2.Location = New System.Drawing.Point(31, 78)
+        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(75, 28)
+        Me.MetroButton2.Size = New System.Drawing.Size(100, 34)
         Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton2.TabIndex = 167
         Me.MetroButton2.Text = "Agregar"
@@ -94,17 +100,19 @@ Partial Class frmMBC_Boveda
         '
         'frmMBC_Boveda
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(476, 272)
+        Me.ClientSize = New System.Drawing.Size(635, 335)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btnImp)
         Me.Controls.Add(Me.btnDel)
         Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.dgBoveda)
-        Me.MinimumSize = New System.Drawing.Size(476, 272)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimumSize = New System.Drawing.Size(635, 335)
         Me.Name = "frmMBC_Boveda"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.ShowIcon = False
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = " Mantenimiento de Boveda"

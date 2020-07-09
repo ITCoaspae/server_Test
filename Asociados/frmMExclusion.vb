@@ -71,11 +71,13 @@ Public Class frmMExclusion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgExclusion.BackColor = System.Drawing.Color.White
         Me.fgExclusion.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgExclusion.Location = New System.Drawing.Point(23, 190)
+        Me.fgExclusion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.fgExclusion.Location = New System.Drawing.Point(28, 219)
         Me.fgExclusion.Name = "fgExclusion"
         Me.fgExclusion.Rows.Count = 2
-        Me.fgExclusion.Size = New System.Drawing.Size(690, 224)
-        Me.fgExclusion.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgExclusion.Styles"))
+        Me.fgExclusion.Rows.DefaultSize = 21
+        Me.fgExclusion.Size = New System.Drawing.Size(820, 292)
+        Me.fgExclusion.StyleInfo = resources.GetString("fgExclusion.StyleInfo")
         Me.fgExclusion.TabIndex = 33
         '
         'GroupBox2
@@ -92,18 +94,18 @@ Public Class frmMExclusion
         Me.GroupBox2.Controls.Add(Me.rbNoSocio)
         Me.GroupBox2.Controls.Add(Me.rbDui)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(690, 86)
+        Me.GroupBox2.Size = New System.Drawing.Size(820, 99)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Busqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(591, 45)
+        Me.btnMostrar1.Location = New System.Drawing.Point(709, 52)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 17
         Me.btnMostrar1.Text = "Mostrar"
@@ -113,33 +115,33 @@ Public Class frmMExclusion
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(16, 54)
+        Me.txtDui.Location = New System.Drawing.Point(19, 62)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(152, 20)
+        Me.txtDui.Size = New System.Drawing.Size(183, 20)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(174, 54)
+        Me.txtNoSocio.Location = New System.Drawing.Point(209, 62)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(95, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(114, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'txtNombres
         '
-        Me.txtNombres.Location = New System.Drawing.Point(433, 53)
+        Me.txtNombres.Location = New System.Drawing.Point(520, 61)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(152, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(182, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
-        Me.rbNombres.Location = New System.Drawing.Point(275, 24)
+        Me.rbNombres.Location = New System.Drawing.Point(330, 28)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(152, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(182, 27)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "Nombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -148,9 +150,9 @@ Public Class frmMExclusion
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(433, 19)
+        Me.rbTodos.Location = New System.Drawing.Point(520, 22)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(77, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(92, 28)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -160,17 +162,17 @@ Public Class frmMExclusion
         '
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(275, 53)
+        Me.cbNombres.Location = New System.Drawing.Point(330, 61)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(152, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(182, 24)
         Me.cbNombres.TabIndex = 5
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(174, 24)
+        Me.rbNoSocio.Location = New System.Drawing.Point(209, 28)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(95, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(114, 27)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -178,18 +180,18 @@ Public Class frmMExclusion
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(16, 24)
+        Me.rbDui.Location = New System.Drawing.Point(19, 28)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(152, 24)
+        Me.rbDui.Size = New System.Drawing.Size(183, 27)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI de Asociado"
         Me.rbDui.UseVisualStyleBackColor = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 156)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 180)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 64
         Me.btnConsultar1.Text = "Consultar"
@@ -198,9 +200,9 @@ Public Class frmMExclusion
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 156)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 180)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 63
         Me.btnEliminar1.Text = "Eliminar"
@@ -209,9 +211,9 @@ Public Class frmMExclusion
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 156)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 180)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 62
         Me.btnModificar1.Text = "Modificar"
@@ -220,9 +222,9 @@ Public Class frmMExclusion
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 156)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 180)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 61
         Me.btnAgregar1.Text = "Agregar"
@@ -231,8 +233,8 @@ Public Class frmMExclusion
         '
         'frmMExclusion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(736, 437)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(875, 574)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -240,6 +242,7 @@ Public Class frmMExclusion
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.fgExclusion)
         Me.Name = "frmMExclusion"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Proceso de Exclusión de Asociados"
         CType(Me.fgExclusion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
@@ -494,6 +497,12 @@ Public Class frmMExclusion
             txtNombres.Enabled = False
             txtNoSocio.Enabled = False
             cbNombres.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMExclusion_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

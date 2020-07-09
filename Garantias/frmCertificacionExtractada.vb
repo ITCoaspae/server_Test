@@ -233,10 +233,10 @@ Public Class frmCertificacionExtractada
         Me.tb.Controls.Add(Me.TabPage1)
         Me.tb.Controls.Add(Me.TabPage2)
         Me.tb.Controls.Add(Me.TabPage3)
-        Me.tb.Location = New System.Drawing.Point(23, 117)
+        Me.tb.Location = New System.Drawing.Point(28, 135)
         Me.tb.Name = "tb"
         Me.tb.SelectedIndex = 0
-        Me.tb.Size = New System.Drawing.Size(632, 389)
+        Me.tb.Size = New System.Drawing.Size(758, 449)
         Me.tb.TabIndex = 2
         '
         'TabPage1
@@ -244,9 +244,9 @@ Public Class frmCertificacionExtractada
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(624, 363)
+        Me.TabPage1.Size = New System.Drawing.Size(750, 420)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Datos Generales"
         '
@@ -278,9 +278,9 @@ Public Class frmCertificacionExtractada
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 64)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 74)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(608, 292)
+        Me.GroupBox3.Size = New System.Drawing.Size(729, 337)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "DATOS DE LA INSCRIPCIÓN"
@@ -288,30 +288,30 @@ Public Class frmCertificacionExtractada
         'txtCodSeccion
         '
         Me.txtCodSeccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodSeccion.Location = New System.Drawing.Point(107, 236)
+        Me.txtCodSeccion.Location = New System.Drawing.Point(128, 272)
         Me.txtCodSeccion.MaxLength = 2
         Me.txtCodSeccion.Name = "txtCodSeccion"
-        Me.txtCodSeccion.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodSeccion.Size = New System.Drawing.Size(77, 23)
         Me.txtCodSeccion.TabIndex = 8
         '
         'txtSeccionRegistro
         '
         Me.txtSeccionRegistro.BackColor = System.Drawing.Color.White
         Me.txtSeccionRegistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSeccionRegistro.Location = New System.Drawing.Point(178, 236)
+        Me.txtSeccionRegistro.Location = New System.Drawing.Point(214, 272)
         Me.txtSeccionRegistro.MaxLength = 100
         Me.txtSeccionRegistro.Name = "txtSeccionRegistro"
         Me.txtSeccionRegistro.ReadOnly = True
-        Me.txtSeccionRegistro.Size = New System.Drawing.Size(414, 20)
+        Me.txtSeccionRegistro.Size = New System.Drawing.Size(496, 23)
         Me.txtSeccionRegistro.TabIndex = 105
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(6, 233)
+        Me.Label4.Location = New System.Drawing.Point(7, 269)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 28)
+        Me.Label4.Size = New System.Drawing.Size(114, 32)
         Me.Label4.TabIndex = 103
         Me.Label4.Text = "Sección del Registro:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -319,30 +319,30 @@ Public Class frmCertificacionExtractada
         'txtCodDpto
         '
         Me.txtCodDpto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodDpto.Location = New System.Drawing.Point(108, 184)
+        Me.txtCodDpto.Location = New System.Drawing.Point(130, 212)
         Me.txtCodDpto.MaxLength = 2
         Me.txtCodDpto.Name = "txtCodDpto"
-        Me.txtCodDpto.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodDpto.Size = New System.Drawing.Size(76, 23)
         Me.txtCodDpto.TabIndex = 6
         '
         'txtDpto
         '
         Me.txtDpto.BackColor = System.Drawing.Color.White
         Me.txtDpto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDpto.Location = New System.Drawing.Point(178, 184)
+        Me.txtDpto.Location = New System.Drawing.Point(214, 212)
         Me.txtDpto.MaxLength = 30
         Me.txtDpto.Name = "txtDpto"
         Me.txtDpto.ReadOnly = True
-        Me.txtDpto.Size = New System.Drawing.Size(414, 20)
+        Me.txtDpto.Size = New System.Drawing.Size(496, 23)
         Me.txtDpto.TabIndex = 102
         '
         'Label38
         '
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.Color.Black
-        Me.Label38.Location = New System.Drawing.Point(6, 184)
+        Me.Label38.Location = New System.Drawing.Point(7, 212)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(80, 16)
+        Me.Label38.Size = New System.Drawing.Size(96, 19)
         Me.Label38.TabIndex = 101
         Me.Label38.Text = "Departamento:"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -350,30 +350,30 @@ Public Class frmCertificacionExtractada
         'txtCodMun
         '
         Me.txtCodMun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodMun.Location = New System.Drawing.Point(107, 210)
+        Me.txtCodMun.Location = New System.Drawing.Point(128, 242)
         Me.txtCodMun.MaxLength = 2
         Me.txtCodMun.Name = "txtCodMun"
-        Me.txtCodMun.Size = New System.Drawing.Size(64, 20)
+        Me.txtCodMun.Size = New System.Drawing.Size(77, 23)
         Me.txtCodMun.TabIndex = 7
         '
         'txtMunicipio
         '
         Me.txtMunicipio.BackColor = System.Drawing.Color.White
         Me.txtMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtMunicipio.Location = New System.Drawing.Point(177, 210)
+        Me.txtMunicipio.Location = New System.Drawing.Point(212, 242)
         Me.txtMunicipio.MaxLength = 100
         Me.txtMunicipio.Name = "txtMunicipio"
         Me.txtMunicipio.ReadOnly = True
-        Me.txtMunicipio.Size = New System.Drawing.Size(415, 20)
+        Me.txtMunicipio.Size = New System.Drawing.Size(498, 23)
         Me.txtMunicipio.TabIndex = 100
         '
         'Label37
         '
         Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.Color.Black
-        Me.Label37.Location = New System.Drawing.Point(8, 210)
+        Me.Label37.Location = New System.Drawing.Point(10, 242)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(72, 16)
+        Me.Label37.Size = New System.Drawing.Size(86, 19)
         Me.Label37.TabIndex = 99
         Me.Label37.Text = "Municipio:"
         Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -382,9 +382,9 @@ Public Class frmCertificacionExtractada
         '
         Me.Label3.Font = New System.Drawing.Font("Arial", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(6, 68)
+        Me.Label3.Location = New System.Drawing.Point(7, 78)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 16)
+        Me.Label3.Size = New System.Drawing.Size(125, 19)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Computarizada"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -393,36 +393,36 @@ Public Class frmCertificacionExtractada
         '
         Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Teal
-        Me.Label2.Location = New System.Drawing.Point(8, 16)
+        Me.Label2.Location = New System.Drawing.Point(10, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 16)
+        Me.Label2.Size = New System.Drawing.Size(62, 19)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Manual"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtArea
         '
-        Me.txtArea.Location = New System.Drawing.Point(108, 158)
+        Me.txtArea.Location = New System.Drawing.Point(130, 182)
         Me.txtArea.Name = "txtArea"
-        Me.txtArea.Size = New System.Drawing.Size(119, 20)
+        Me.txtArea.Size = New System.Drawing.Size(142, 23)
         Me.txtArea.TabIndex = 5
         '
         'txtUbicacion
         '
-        Me.txtUbicacion.Location = New System.Drawing.Point(107, 120)
+        Me.txtUbicacion.Location = New System.Drawing.Point(128, 138)
         Me.txtUbicacion.Multiline = True
         Me.txtUbicacion.Name = "txtUbicacion"
         Me.txtUbicacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtUbicacion.Size = New System.Drawing.Size(485, 32)
+        Me.txtUbicacion.Size = New System.Drawing.Size(582, 37)
         Me.txtUbicacion.TabIndex = 4
         '
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(6, 162)
+        Me.Label9.Location = New System.Drawing.Point(7, 187)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 16)
+        Me.Label9.Size = New System.Drawing.Size(77, 18)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Área (mt2):"
         '
@@ -430,9 +430,9 @@ Public Class frmCertificacionExtractada
         '
         Me.Label8.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(6, 123)
+        Me.Label8.Location = New System.Drawing.Point(7, 142)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 33)
+        Me.Label8.Size = New System.Drawing.Size(114, 38)
         Me.Label8.TabIndex = 9
         Me.Label8.Text = "Ubicación Inmueble:"
         '
@@ -440,67 +440,67 @@ Public Class frmCertificacionExtractada
         '
         Me.Label7.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(378, 94)
+        Me.Label7.Location = New System.Drawing.Point(454, 108)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 16)
+        Me.Label7.Size = New System.Drawing.Size(105, 19)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "No. de Asiento"
         '
         'txtNoAsiento
         '
-        Me.txtNoAsiento.Location = New System.Drawing.Point(472, 94)
+        Me.txtNoAsiento.Location = New System.Drawing.Point(566, 108)
         Me.txtNoAsiento.Name = "txtNoAsiento"
-        Me.txtNoAsiento.Size = New System.Drawing.Size(120, 20)
+        Me.txtNoAsiento.Size = New System.Drawing.Size(144, 23)
         Me.txtNoAsiento.TabIndex = 3
         '
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(6, 94)
+        Me.Label10.Location = New System.Drawing.Point(7, 108)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 16)
+        Me.Label10.Size = New System.Drawing.Size(115, 19)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "No. de Matrícula"
         '
         'txtNoMatricula
         '
-        Me.txtNoMatricula.Location = New System.Drawing.Point(108, 94)
+        Me.txtNoMatricula.Location = New System.Drawing.Point(130, 108)
         Me.txtNoMatricula.Name = "txtNoMatricula"
-        Me.txtNoMatricula.Size = New System.Drawing.Size(120, 20)
+        Me.txtNoMatricula.Size = New System.Drawing.Size(144, 23)
         Me.txtNoMatricula.TabIndex = 2
         '
         'txtNoLibro
         '
-        Me.txtNoLibro.Location = New System.Drawing.Point(472, 45)
+        Me.txtNoLibro.Location = New System.Drawing.Point(566, 52)
         Me.txtNoLibro.Name = "txtNoLibro"
-        Me.txtNoLibro.Size = New System.Drawing.Size(120, 20)
+        Me.txtNoLibro.Size = New System.Drawing.Size(144, 23)
         Me.txtNoLibro.TabIndex = 1
         '
         'Label13
         '
         Me.Label13.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(378, 45)
+        Me.Label13.Location = New System.Drawing.Point(454, 52)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(95, 16)
+        Me.Label13.Size = New System.Drawing.Size(114, 18)
         Me.Label13.TabIndex = 2
         Me.Label13.Text = "No. de Libro"
         '
         'txtNoInscripcion
         '
-        Me.txtNoInscripcion.Location = New System.Drawing.Point(107, 45)
+        Me.txtNoInscripcion.Location = New System.Drawing.Point(128, 52)
         Me.txtNoInscripcion.Name = "txtNoInscripcion"
-        Me.txtNoInscripcion.Size = New System.Drawing.Size(120, 20)
+        Me.txtNoInscripcion.Size = New System.Drawing.Size(144, 23)
         Me.txtNoInscripcion.TabIndex = 0
         '
         'Label14
         '
         Me.Label14.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(6, 45)
+        Me.Label14.Location = New System.Drawing.Point(7, 52)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(95, 16)
+        Me.Label14.Size = New System.Drawing.Size(114, 18)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "No. de Inscripción"
         '
@@ -513,9 +513,9 @@ Public Class frmCertificacionExtractada
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 9)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(608, 56)
+        Me.GroupBox1.Size = New System.Drawing.Size(729, 65)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GENERALES DEL INMUEBLE"
@@ -525,35 +525,35 @@ Public Class frmCertificacionExtractada
         Me.dtpFecha.CalendarFont = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.CustomFormat = "dd/MM/yyyy"
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(504, 24)
+        Me.dtpFecha.Location = New System.Drawing.Point(605, 28)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecha.TabIndex = 1
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(392, 24)
+        Me.Label15.Location = New System.Drawing.Point(470, 28)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(104, 16)
+        Me.Label15.Size = New System.Drawing.Size(125, 18)
         Me.Label15.TabIndex = 12
         Me.Label15.Text = "Fecha de Solicitud:"
         '
         'txtNocomprobante
         '
-        Me.txtNocomprobante.Location = New System.Drawing.Point(192, 24)
+        Me.txtNocomprobante.Location = New System.Drawing.Point(230, 28)
         Me.txtNocomprobante.Name = "txtNocomprobante"
-        Me.txtNocomprobante.Size = New System.Drawing.Size(104, 20)
+        Me.txtNocomprobante.Size = New System.Drawing.Size(125, 23)
         Me.txtNocomprobante.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(8, 24)
+        Me.Label1.Location = New System.Drawing.Point(10, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(184, 16)
+        Me.Label1.Size = New System.Drawing.Size(220, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Comprobante de Cert. Extratada:"
         '
@@ -562,9 +562,9 @@ Public Class frmCertificacionExtractada
         Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.gbAcreedores)
         Me.TabPage2.Controls.Add(Me.gbInmueble)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(624, 363)
+        Me.TabPage2.Size = New System.Drawing.Size(750, 420)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Dueños del Inmueble - Acreedores"
         Me.TabPage2.Visible = False
@@ -578,18 +578,18 @@ Public Class frmCertificacionExtractada
         Me.gbAcreedores.Controls.Add(Me.btNewAcreedor1)
         Me.gbAcreedores.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbAcreedores.ForeColor = System.Drawing.Color.Teal
-        Me.gbAcreedores.Location = New System.Drawing.Point(7, 190)
+        Me.gbAcreedores.Location = New System.Drawing.Point(8, 219)
         Me.gbAcreedores.Name = "gbAcreedores"
-        Me.gbAcreedores.Size = New System.Drawing.Size(608, 177)
+        Me.gbAcreedores.Size = New System.Drawing.Size(730, 204)
         Me.gbAcreedores.TabIndex = 1
         Me.gbAcreedores.TabStop = False
         Me.gbAcreedores.Text = "ACREEDORES (GRAVAMENES)"
         '
         'btEditAcreedor1
         '
-        Me.btEditAcreedor1.Location = New System.Drawing.Point(87, 19)
+        Me.btEditAcreedor1.Location = New System.Drawing.Point(104, 22)
         Me.btEditAcreedor1.Name = "btEditAcreedor1"
-        Me.btEditAcreedor1.Size = New System.Drawing.Size(75, 28)
+        Me.btEditAcreedor1.Size = New System.Drawing.Size(90, 32)
         Me.btEditAcreedor1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditAcreedor1.TabIndex = 208
         Me.btEditAcreedor1.Text = "Modificar"
@@ -599,9 +599,9 @@ Public Class frmCertificacionExtractada
         '
         'btnDelAcreedor1
         '
-        Me.btnDelAcreedor1.Location = New System.Drawing.Point(168, 19)
+        Me.btnDelAcreedor1.Location = New System.Drawing.Point(202, 22)
         Me.btnDelAcreedor1.Name = "btnDelAcreedor1"
-        Me.btnDelAcreedor1.Size = New System.Drawing.Size(75, 28)
+        Me.btnDelAcreedor1.Size = New System.Drawing.Size(90, 32)
         Me.btnDelAcreedor1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnDelAcreedor1.TabIndex = 207
         Me.btnDelAcreedor1.Text = "Eliminar"
@@ -616,20 +616,22 @@ Public Class frmCertificacionExtractada
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgAcreedor.BackColor = System.Drawing.Color.White
-        Me.fgAcreedor.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgAcreedor.Location = New System.Drawing.Point(6, 53)
+        Me.fgAcreedor.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgAcreedor.ForeColor = System.Drawing.Color.Teal
+        Me.fgAcreedor.Location = New System.Drawing.Point(7, 61)
         Me.fgAcreedor.Name = "fgAcreedor"
         Me.fgAcreedor.Rows.Count = 1
+        Me.fgAcreedor.Rows.DefaultSize = 22
         Me.fgAcreedor.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.fgAcreedor.Size = New System.Drawing.Size(596, 112)
-        Me.fgAcreedor.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgAcreedor.Styles"))
+        Me.fgAcreedor.Size = New System.Drawing.Size(715, 129)
+        Me.fgAcreedor.StyleInfo = resources.GetString("fgAcreedor.StyleInfo")
         Me.fgAcreedor.TabIndex = 3
         '
         'btNewAcreedor1
         '
-        Me.btNewAcreedor1.Location = New System.Drawing.Point(6, 19)
+        Me.btNewAcreedor1.Location = New System.Drawing.Point(7, 22)
         Me.btNewAcreedor1.Name = "btNewAcreedor1"
-        Me.btNewAcreedor1.Size = New System.Drawing.Size(75, 28)
+        Me.btNewAcreedor1.Size = New System.Drawing.Size(90, 32)
         Me.btNewAcreedor1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewAcreedor1.TabIndex = 206
         Me.btNewAcreedor1.Text = "Agregar"
@@ -646,18 +648,18 @@ Public Class frmCertificacionExtractada
         Me.gbInmueble.Controls.Add(Me.fgInmueble)
         Me.gbInmueble.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbInmueble.ForeColor = System.Drawing.Color.Teal
-        Me.gbInmueble.Location = New System.Drawing.Point(8, 7)
+        Me.gbInmueble.Location = New System.Drawing.Point(10, 8)
         Me.gbInmueble.Name = "gbInmueble"
-        Me.gbInmueble.Size = New System.Drawing.Size(608, 177)
+        Me.gbInmueble.Size = New System.Drawing.Size(729, 204)
         Me.gbInmueble.TabIndex = 0
         Me.gbInmueble.TabStop = False
         Me.gbInmueble.Text = "DUEÑOS DEL INMUEBLE"
         '
         'btEditInmueble1
         '
-        Me.btEditInmueble1.Location = New System.Drawing.Point(87, 19)
+        Me.btEditInmueble1.Location = New System.Drawing.Point(104, 22)
         Me.btEditInmueble1.Name = "btEditInmueble1"
-        Me.btEditInmueble1.Size = New System.Drawing.Size(75, 28)
+        Me.btEditInmueble1.Size = New System.Drawing.Size(90, 32)
         Me.btEditInmueble1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditInmueble1.TabIndex = 205
         Me.btEditInmueble1.Text = "Modificar"
@@ -667,9 +669,9 @@ Public Class frmCertificacionExtractada
         '
         'btDelInmueble1
         '
-        Me.btDelInmueble1.Location = New System.Drawing.Point(168, 19)
+        Me.btDelInmueble1.Location = New System.Drawing.Point(202, 22)
         Me.btDelInmueble1.Name = "btDelInmueble1"
-        Me.btDelInmueble1.Size = New System.Drawing.Size(75, 28)
+        Me.btDelInmueble1.Size = New System.Drawing.Size(90, 32)
         Me.btDelInmueble1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDelInmueble1.TabIndex = 204
         Me.btDelInmueble1.Text = "Eliminar"
@@ -679,9 +681,9 @@ Public Class frmCertificacionExtractada
         '
         'btNewInmueble1
         '
-        Me.btNewInmueble1.Location = New System.Drawing.Point(6, 19)
+        Me.btNewInmueble1.Location = New System.Drawing.Point(7, 22)
         Me.btNewInmueble1.Name = "btNewInmueble1"
-        Me.btNewInmueble1.Size = New System.Drawing.Size(75, 28)
+        Me.btNewInmueble1.Size = New System.Drawing.Size(90, 32)
         Me.btNewInmueble1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewInmueble1.TabIndex = 203
         Me.btNewInmueble1.Text = "Agregar"
@@ -696,22 +698,24 @@ Public Class frmCertificacionExtractada
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgInmueble.BackColor = System.Drawing.Color.White
-        Me.fgInmueble.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgInmueble.Location = New System.Drawing.Point(6, 56)
+        Me.fgInmueble.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgInmueble.ForeColor = System.Drawing.Color.Teal
+        Me.fgInmueble.Location = New System.Drawing.Point(7, 65)
         Me.fgInmueble.Name = "fgInmueble"
         Me.fgInmueble.Rows.Count = 1
+        Me.fgInmueble.Rows.DefaultSize = 22
         Me.fgInmueble.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgInmueble.Size = New System.Drawing.Size(595, 112)
-        Me.fgInmueble.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgInmueble.Styles"))
+        Me.fgInmueble.Size = New System.Drawing.Size(714, 129)
+        Me.fgInmueble.StyleInfo = resources.GetString("fgInmueble.StyleInfo")
         Me.fgInmueble.TabIndex = 5
         '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.gbPresentaciones)
         Me.TabPage3.Controls.Add(Me.gbRestricciones)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(624, 363)
+        Me.TabPage3.Size = New System.Drawing.Size(750, 420)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Restricciones - Presentaciones"
         Me.TabPage3.Visible = False
@@ -725,18 +729,18 @@ Public Class frmCertificacionExtractada
         Me.gbPresentaciones.Controls.Add(Me.fgPresentacion)
         Me.gbPresentaciones.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbPresentaciones.ForeColor = System.Drawing.Color.Teal
-        Me.gbPresentaciones.Location = New System.Drawing.Point(8, 182)
+        Me.gbPresentaciones.Location = New System.Drawing.Point(10, 210)
         Me.gbPresentaciones.Name = "gbPresentaciones"
-        Me.gbPresentaciones.Size = New System.Drawing.Size(608, 168)
+        Me.gbPresentaciones.Size = New System.Drawing.Size(729, 194)
         Me.gbPresentaciones.TabIndex = 1
         Me.gbPresentaciones.TabStop = False
         Me.gbPresentaciones.Text = "PRESENTACIONES"
         '
         'btEditPres1
         '
-        Me.btEditPres1.Location = New System.Drawing.Point(87, 19)
+        Me.btEditPres1.Location = New System.Drawing.Point(104, 22)
         Me.btEditPres1.Name = "btEditPres1"
-        Me.btEditPres1.Size = New System.Drawing.Size(75, 28)
+        Me.btEditPres1.Size = New System.Drawing.Size(90, 32)
         Me.btEditPres1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditPres1.TabIndex = 205
         Me.btEditPres1.Text = "Modificar"
@@ -746,9 +750,9 @@ Public Class frmCertificacionExtractada
         '
         'btDelPres1
         '
-        Me.btDelPres1.Location = New System.Drawing.Point(168, 19)
+        Me.btDelPres1.Location = New System.Drawing.Point(202, 22)
         Me.btDelPres1.Name = "btDelPres1"
-        Me.btDelPres1.Size = New System.Drawing.Size(75, 28)
+        Me.btDelPres1.Size = New System.Drawing.Size(90, 32)
         Me.btDelPres1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDelPres1.TabIndex = 204
         Me.btDelPres1.Text = "Eliminar"
@@ -758,9 +762,9 @@ Public Class frmCertificacionExtractada
         '
         'btNewPres1
         '
-        Me.btNewPres1.Location = New System.Drawing.Point(6, 19)
+        Me.btNewPres1.Location = New System.Drawing.Point(7, 22)
         Me.btNewPres1.Name = "btNewPres1"
-        Me.btNewPres1.Size = New System.Drawing.Size(75, 28)
+        Me.btNewPres1.Size = New System.Drawing.Size(90, 32)
         Me.btNewPres1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewPres1.TabIndex = 203
         Me.btNewPres1.Text = "Agregar"
@@ -776,14 +780,15 @@ Public Class frmCertificacionExtractada
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgPresentacion.BackColor = System.Drawing.Color.White
         Me.fgPresentacion.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgPresentacion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fgPresentacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fgPresentacion.ForeColor = System.Drawing.Color.Black
-        Me.fgPresentacion.Location = New System.Drawing.Point(6, 53)
+        Me.fgPresentacion.Location = New System.Drawing.Point(7, 61)
         Me.fgPresentacion.Name = "fgPresentacion"
         Me.fgPresentacion.Rows.Count = 1
+        Me.fgPresentacion.Rows.DefaultSize = 21
         Me.fgPresentacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgPresentacion.Size = New System.Drawing.Size(596, 104)
-        Me.fgPresentacion.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgPresentacion.Styles"))
+        Me.fgPresentacion.Size = New System.Drawing.Size(715, 120)
+        Me.fgPresentacion.StyleInfo = resources.GetString("fgPresentacion.StyleInfo")
         Me.fgPresentacion.TabIndex = 5
         '
         'gbRestricciones
@@ -795,18 +800,18 @@ Public Class frmCertificacionExtractada
         Me.gbRestricciones.Controls.Add(Me.fgRestriccion)
         Me.gbRestricciones.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbRestricciones.ForeColor = System.Drawing.Color.Teal
-        Me.gbRestricciones.Location = New System.Drawing.Point(8, 8)
+        Me.gbRestricciones.Location = New System.Drawing.Point(10, 9)
         Me.gbRestricciones.Name = "gbRestricciones"
-        Me.gbRestricciones.Size = New System.Drawing.Size(608, 168)
+        Me.gbRestricciones.Size = New System.Drawing.Size(729, 194)
         Me.gbRestricciones.TabIndex = 0
         Me.gbRestricciones.TabStop = False
         Me.gbRestricciones.Text = "RESTRICCIONES"
         '
         'btEditRest1
         '
-        Me.btEditRest1.Location = New System.Drawing.Point(87, 19)
+        Me.btEditRest1.Location = New System.Drawing.Point(104, 22)
         Me.btEditRest1.Name = "btEditRest1"
-        Me.btEditRest1.Size = New System.Drawing.Size(75, 28)
+        Me.btEditRest1.Size = New System.Drawing.Size(90, 32)
         Me.btEditRest1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditRest1.TabIndex = 205
         Me.btEditRest1.Text = "Modificar"
@@ -816,9 +821,9 @@ Public Class frmCertificacionExtractada
         '
         'btDelRest1
         '
-        Me.btDelRest1.Location = New System.Drawing.Point(168, 19)
+        Me.btDelRest1.Location = New System.Drawing.Point(202, 22)
         Me.btDelRest1.Name = "btDelRest1"
-        Me.btDelRest1.Size = New System.Drawing.Size(75, 28)
+        Me.btDelRest1.Size = New System.Drawing.Size(90, 32)
         Me.btDelRest1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btDelRest1.TabIndex = 204
         Me.btDelRest1.Text = "Eliminar"
@@ -828,9 +833,9 @@ Public Class frmCertificacionExtractada
         '
         'btNewRest1
         '
-        Me.btNewRest1.Location = New System.Drawing.Point(6, 19)
+        Me.btNewRest1.Location = New System.Drawing.Point(7, 22)
         Me.btNewRest1.Name = "btNewRest1"
-        Me.btNewRest1.Size = New System.Drawing.Size(75, 28)
+        Me.btNewRest1.Size = New System.Drawing.Size(90, 32)
         Me.btNewRest1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btNewRest1.TabIndex = 203
         Me.btNewRest1.Text = "Agregar"
@@ -845,13 +850,15 @@ Public Class frmCertificacionExtractada
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgRestriccion.BackColor = System.Drawing.Color.White
-        Me.fgRestriccion.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgRestriccion.Location = New System.Drawing.Point(6, 56)
+        Me.fgRestriccion.ColumnInfo = "10,0,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgRestriccion.ForeColor = System.Drawing.Color.Teal
+        Me.fgRestriccion.Location = New System.Drawing.Point(7, 65)
         Me.fgRestriccion.Name = "fgRestriccion"
         Me.fgRestriccion.Rows.Count = 1
+        Me.fgRestriccion.Rows.DefaultSize = 22
         Me.fgRestriccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.fgRestriccion.Size = New System.Drawing.Size(596, 104)
-        Me.fgRestriccion.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgRestriccion.Styles"))
+        Me.fgRestriccion.Size = New System.Drawing.Size(715, 120)
+        Me.fgRestriccion.StyleInfo = resources.GetString("fgRestriccion.StyleInfo")
         Me.fgRestriccion.TabIndex = 7
         '
         'GroupBox4
@@ -862,41 +869,41 @@ Public Class frmCertificacionExtractada
         Me.GroupBox4.Controls.Add(Me.lblConcedido)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox4.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(632, 48)
+        Me.GroupBox4.Size = New System.Drawing.Size(758, 55)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
         'lblPlazo
         '
-        Me.lblPlazo.Location = New System.Drawing.Point(552, 16)
+        Me.lblPlazo.Location = New System.Drawing.Point(662, 18)
         Me.lblPlazo.Name = "lblPlazo"
-        Me.lblPlazo.Size = New System.Drawing.Size(64, 16)
+        Me.lblPlazo.Size = New System.Drawing.Size(77, 19)
         Me.lblPlazo.TabIndex = 3
         Me.lblPlazo.Text = "Plazo:"
         '
         'lblMonto
         '
-        Me.lblMonto.Location = New System.Drawing.Point(416, 16)
+        Me.lblMonto.Location = New System.Drawing.Point(499, 18)
         Me.lblMonto.Name = "lblMonto"
-        Me.lblMonto.Size = New System.Drawing.Size(120, 16)
+        Me.lblMonto.Size = New System.Drawing.Size(144, 19)
         Me.lblMonto.TabIndex = 2
         Me.lblMonto.Text = "Monto:"
         '
         'lblConcedido
         '
-        Me.lblConcedido.Location = New System.Drawing.Point(8, 16)
+        Me.lblConcedido.Location = New System.Drawing.Point(10, 18)
         Me.lblConcedido.Name = "lblConcedido"
-        Me.lblConcedido.Size = New System.Drawing.Size(400, 24)
+        Me.lblConcedido.Size = New System.Drawing.Size(480, 28)
         Me.lblConcedido.TabIndex = 1
         Me.lblConcedido.Text = "Crédito concedido a:"
         '
         'btnSig1
         '
-        Me.btnSig1.Location = New System.Drawing.Point(499, 512)
+        Me.btnSig1.Location = New System.Drawing.Point(599, 591)
         Me.btnSig1.Name = "btnSig1"
-        Me.btnSig1.Size = New System.Drawing.Size(75, 28)
+        Me.btnSig1.Size = New System.Drawing.Size(90, 32)
         Me.btnSig1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnSig1.TabIndex = 208
         Me.btnSig1.Text = "Siguiente"
@@ -906,9 +913,9 @@ Public Class frmCertificacionExtractada
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(580, 512)
+        Me.btnGuardar1.Location = New System.Drawing.Point(696, 591)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(90, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 207
         Me.btnGuardar1.Text = "Guardar"
@@ -918,9 +925,9 @@ Public Class frmCertificacionExtractada
         '
         'btAtras1
         '
-        Me.btAtras1.Location = New System.Drawing.Point(418, 512)
+        Me.btAtras1.Location = New System.Drawing.Point(502, 591)
         Me.btAtras1.Name = "btAtras1"
-        Me.btAtras1.Size = New System.Drawing.Size(75, 28)
+        Me.btAtras1.Size = New System.Drawing.Size(90, 32)
         Me.btAtras1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btAtras1.TabIndex = 206
         Me.btAtras1.Text = "Atrás"
@@ -930,18 +937,18 @@ Public Class frmCertificacionExtractada
         '
         'frmCertificacionExtractada
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(676, 563)
+        Me.ClientSize = New System.Drawing.Size(811, 650)
         Me.Controls.Add(Me.btnSig1)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.btAtras1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.tb)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(676, 563)
+        Me.MaximumSize = New System.Drawing.Size(811, 650)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(676, 563)
+        Me.MinimumSize = New System.Drawing.Size(811, 650)
         Me.Name = "frmCertificacionExtractada"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -1058,7 +1065,7 @@ Public Class frmCertificacionExtractada
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1190,7 +1197,7 @@ Public Class frmCertificacionExtractada
             Me.fgRestriccion.DataSource = oCred.CONSULTARRESTRICCIONES(sUsuario, sPassword, sSucursal, Me.pNoDoc, 1, 0).Tables(0)
             fgRestriccion.Cols.Item(0).Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1209,7 +1216,7 @@ Public Class frmCertificacionExtractada
                 Me.fgRestriccion.Cols.Item(0).Width = 0
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1228,7 +1235,7 @@ Public Class frmCertificacionExtractada
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1243,7 +1250,7 @@ Public Class frmCertificacionExtractada
             Me.fgPresentacion.DataSource = oCred.CONSULTARPRESENTACIONES(sUsuario, sPassword, sSucursal, Me.pNoDoc, 1, 0).Tables(0)
             fgPresentacion.Cols.Item(0).Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1263,7 +1270,7 @@ Public Class frmCertificacionExtractada
                 Me.fgPresentacion.Cols.Item(0).Width = 0
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1278,7 +1285,7 @@ Public Class frmCertificacionExtractada
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1294,7 +1301,7 @@ Public Class frmCertificacionExtractada
             '        Me.fgInmueble.DataSource = oCred.ConsultarDuenosInmueble("Correlativo,Nombre,Porcentaje,Asociado", "NoComprobante='" & Me.pNoDoc & "'", "Correlativo", sUsuario, sPassword,sSucursal).Tables(0)
             fgInmueble.Cols.Item(0).Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1314,7 +1321,7 @@ Public Class frmCertificacionExtractada
                 fgInmueble.Cols.Item(0).Width = 0
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1330,7 +1337,7 @@ Public Class frmCertificacionExtractada
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1345,7 +1352,7 @@ Public Class frmCertificacionExtractada
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1363,7 +1370,7 @@ Public Class frmCertificacionExtractada
             Me.fgAcreedor.DataSource = dts.Tables(0)
             fgAcreedor.Cols.Item(0).Width = 0
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1383,7 +1390,7 @@ Public Class frmCertificacionExtractada
                 fgAcreedor.Cols.Item(0).Width = 0
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -1441,7 +1448,7 @@ Public Class frmCertificacionExtractada
                 Me.gbRestricciones.Enabled = True
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

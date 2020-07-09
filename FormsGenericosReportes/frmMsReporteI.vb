@@ -408,26 +408,7 @@ Public Class frmMsReporteI
                     ds = oCred.Gestiones_Diarias_Cobranza(Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
                     Dim ofrm As New frmVisor(ds, 120, 0)
                     ofrm.ShowDialog()
-                Case 37 'Reporte de Activo Fijo x Accesorios
-                    Dim oActF As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oActF.Reporte_ActivoFijoxAgrupacion(Me.dtpFecha.Value, Me.dtpFecha2.Value, "a.IdSubClasif='00012'", "REPORTE DE ACTIVO FIJO POR ACCESORIOS EXISTENTES ", wrActivoFijo.TipoReporte.xAgrupacion, False, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 156, 0)
-                    ofrm.ShowDialog()
-                Case 38 'Reporte de Activo Fijo Mobiliario y Equipo
-                    Dim oActF As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oActF.Reporte_ActivoFijoxAgrupacion(Me.dtpFecha.Value, Me.dtpFecha2.Value, "(a.IdSubClasif='00008' or a.IdSubClasif='00010' or a.IdSubClasif='00004' or a.IdSubClasif='00005' or a.IdSubClasif='00006')", "REPORTE DE ACTIVO FIJO DE MOBILIARIO Y EQUIPO DE OFICINA", wrActivoFijo.TipoReporte.xAgrupacion, False, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 157, 0)
-                    ofrm.ShowDialog()
-                Case 39 'Reporte de Activo con Depreciación
-                    Dim oActF As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oActF.Reporte_ActivoFijoxAgrupacion(Me.dtpFecha.Value, Me.dtpFecha2.Value, "", "REPORTE DE ACTIVO FIJO CON DEPRECIACIÓN", wrActivoFijo.TipoReporte.xAgrupacion, True, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 160, 0)
-                    ofrm.ShowDialog()
-                Case 40 'Reporte de Activo Fijo Instalaciones
-                    Dim oActF As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oActF.Reporte_ActivoFijoxAgrupacion(Me.dtpFecha.Value, Me.dtpFecha2.Value, "a.IdSubClasif='00011'", "REPORTE DE ACTIVO FIJO INSTALACIONES", wrActivoFijo.TipoReporte.xAgrupacion, False, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 159, 0)
-                    ofrm.ShowDialog()
+
                 Case "41" 'REPORTE MOVIMIENTOS DIARIOS DE ABONOS A PRESTAMOS 
                     Dim oPrest As New wrPrestamo.wsLibPrest, ds As New DataSet
                     ds = oPrest.MovAbonoPrestamos(Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
@@ -438,16 +419,7 @@ Public Class frmMsReporteI
                     ds = oPrest.MovCargoPrestamos(Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
                     Dim ofrm As New frmVisor(ds, 164, 0)
                     ofrm.ShowDialog()
-                Case "43" 'REPORTE DE ACTIVO FIJO CON SU VALOR
-                    Dim oAct As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oAct.Reporte_ActivoFijoValor(Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 166, 0)
-                    ofrm.ShowDialog()
-                Case "44" 'REPORTE DE ACTIVO FIJO VIGENTES
-                    Dim oActF As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oActF.Reporte_ActivoFijoxAgrupacion(Me.dtpFecha.Value, Me.dtpFecha2.Value, "", "REPORTE DE ACTIVO FIJO VIGENTES", wrActivoFijo.TipoReporte.xAgrupacion, True, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 167, 0)
-                    ofrm.ShowDialog()
+
                 Case "45" 'REPORTE DE ASOCIADOS FALLECIDOS
                     Dim oAsoc As New wrAsociados.wsLibAsoc, ds As New DataSet
                     ds = oAsoc.RepAsociadosFallecidos(Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
@@ -611,7 +583,7 @@ Public Class frmMsReporteI
                     ofrm.ShowDialog()
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

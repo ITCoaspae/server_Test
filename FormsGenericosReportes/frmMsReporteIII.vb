@@ -54,7 +54,7 @@ Public Class frmMsReporteIII
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(328, 56)
+        Me.GroupBox1.Size = New System.Drawing.Size(393, 64)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -63,18 +63,18 @@ Public Class frmMsReporteIII
         Me.chkMora.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkMora.Checked = True
         Me.chkMora.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkMora.Location = New System.Drawing.Point(202, 24)
+        Me.chkMora.Location = New System.Drawing.Point(242, 28)
         Me.chkMora.Name = "chkMora"
-        Me.chkMora.Size = New System.Drawing.Size(80, 16)
+        Me.chkMora.Size = New System.Drawing.Size(96, 18)
         Me.chkMora.TabIndex = 1
         Me.chkMora.Text = "Con &Mora"
         Me.chkMora.Visible = False
         '
         'lblFecha
         '
-        Me.lblFecha.Location = New System.Drawing.Point(6, 24)
+        Me.lblFecha.Location = New System.Drawing.Point(7, 28)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(96, 16)
+        Me.lblFecha.Size = New System.Drawing.Size(115, 18)
         Me.lblFecha.TabIndex = 38
         Me.lblFecha.Text = "Saldos al día:"
         '
@@ -83,9 +83,9 @@ Public Class frmMsReporteIII
         Me.dtpFecha.CustomFormat = ""
         Me.dtpFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(108, 24)
+        Me.dtpFecha.Location = New System.Drawing.Point(130, 28)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(105, 23)
         Me.dtpFecha.TabIndex = 0
         '
         'C1fgrdPrestamos
@@ -95,19 +95,20 @@ Public Class frmMsReporteIII
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "30,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Caption:""CodPrestamo"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Caption:""Dui"";}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(61, 128)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(23, 172)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(82, 25)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(393, 116)
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 8
         Me.C1fgrdPrestamos.Visible = False
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(276, 125)
+        Me.btnProcesar1.Location = New System.Drawing.Point(326, 133)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(90, 33)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 1026
         Me.btnProcesar1.Text = "Mostrar"
@@ -117,9 +118,9 @@ Public Class frmMsReporteIII
         '
         'frmMsReporteIII
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(375, 193)
+        Me.ClientSize = New System.Drawing.Size(431, 352)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.C1fgrdPrestamos)
         Me.Controls.Add(Me.GroupBox1)
@@ -342,11 +343,7 @@ Public Class frmMsReporteIII
                     ds = oCred.RepDocxCobrar("P", Me.dtpFecha.Value, False, sUsuario, sPassword, sSucursal)
                     Dim ofrm As New frmVisor(ds, 44, 0)
                     ofrm.ShowDialog()
-                Case 30 'REPORTE DE ACTIVO FIJO GLOBAL
-                    Dim oAct As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oAct.Reporte_ActivoFijoGlobal(Me.dtpFecha.Value, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 165, 0)
-                    ofrm.ShowDialog()
+
                 Case 31 'Dividendos por pagar
                     Dim oAsoc As New wrAsociados.wsLibAsoc, ds As New DataSet
                     ds = oAsoc.Impresion_DividendosxPagar(Me.dtpFecha.Value, sUsuario, sPassword, sSucursal)
@@ -362,11 +359,7 @@ Public Class frmMsReporteIII
                     ds = oPrest.ReporteMora_DXC(Me.dtpFecha.Value, sUsuario, sPassword, sSucursal)
                     Dim ofrm As New frmVisor(ds, 195, 0)
                     ofrm.ShowDialog()
-                Case 34 'Detalle de Depreciaciones de Activo Fijo
-                    Dim oAct As New wrActivoFijo.wsLibActivoFijo, ds As New DataSet
-                    ds = oAct.Reporte_DetalleActivoFijo(Me.dtpFecha.Value, sUsuario, sPassword, sSucursal)
-                    Dim ofrm As New frmVisor(ds, 197, 0)
-                    ofrm.ShowDialog()
+
                 Case 35 'Dividendos Ahorros
                     Dim oAsoc As New wrAsociados.wsLibAsoc, ds As New DataSet
                     ds = oAsoc.ReporteDividendosAh(Me.dtpFecha.Value.Year + 1, sUsuario, sPassword, sSucursal)
@@ -386,7 +379,7 @@ Public Class frmMsReporteIII
                     ofrm.ShowDialog()
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

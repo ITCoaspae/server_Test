@@ -117,18 +117,6 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property CONNPLANILLAS() As String
-            Get
-                Return CType(Me("CONNPLANILLAS"),String)
-            End Get
-            Set
-                Me("CONNPLANILLAS") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property saldosCC() As String
             Get
                 Return CType(Me("saldosCC"),String)
@@ -184,18 +172,30 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibActivoFijo.asmx")>  _
-        Public ReadOnly Property SIF_ERP_wrActivoFijo_wsLibActivoFijo() As String
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-H5QPF2OG\SQLEXPRESS;Initial Catalog=SIF;Integrated Security=Tr"& _ 
+            "ue")>  _
+        Public ReadOnly Property TestLocal() As String
             Get
-                Return CType(Me("SIF_ERP_wrActivoFijo_wsLibActivoFijo"),String)
+                Return CType(Me("TestLocal"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-H5QPF2OG\SQLEXPRESS;Initial Catalog=SIF;Integrated Security=Tr"& _ 
+            "ue")>  _
+        Public ReadOnly Property CONNPLANILLAS() As String
+            Get
+                Return CType(Me("CONNPLANILLAS"),String)
             End Get
         End Property
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibAdmin.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibAdmin.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrAdmin_wsLibAdmin() As String
             Get
                 Return CType(Me("SIF_ERP_wrAdmin_wsLibAdmin"),String)
@@ -205,7 +205,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibAhorro.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibAhorro.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrAhorro_wsLibAhorro() As String
             Get
                 Return CType(Me("SIF_ERP_wrAhorro_wsLibAhorro"),String)
@@ -215,7 +215,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibAsoc.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibAsoc.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrAsociados_wsLibAsoc() As String
             Get
                 Return CType(Me("SIF_ERP_wrAsociados_wsLibAsoc"),String)
@@ -225,7 +225,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibBancos.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibBancos.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrBancos_wsLibBancos() As String
             Get
                 Return CType(Me("SIF_ERP_wrBancos_wsLibBancos"),String)
@@ -235,17 +235,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibCaja.asmx")>  _
-        Public ReadOnly Property SIF_ERP_wrCaja_wsLibCaja() As String
-            Get
-                Return CType(Me("SIF_ERP_wrCaja_wsLibCaja"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibContab.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibContab.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrConta_wsLibContab() As String
             Get
                 Return CType(Me("SIF_ERP_wrConta_wsLibContab"),String)
@@ -255,7 +245,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibCred.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibCred.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrCredito_wsLibCred() As String
             Get
                 Return CType(Me("SIF_ERP_wrCredito_wsLibCred"),String)
@@ -265,7 +255,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibPlanilla.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibPlanilla.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrPlanilla_wsLibPlanilla() As String
             Get
                 Return CType(Me("SIF_ERP_wrPlanilla_wsLibPlanilla"),String)
@@ -275,7 +265,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:57126/wsLibPrest.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibPrest.asmx")>  _
         Public ReadOnly Property SIF_ERP_wrPrestamo_wsLibPrest() As String
             Get
                 Return CType(Me("SIF_ERP_wrPrestamo_wsLibPrest"),String)
@@ -284,12 +274,11 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-H5QPF2OG\SQLEXPRESS;Initial Catalog=SIF;Integrated Security=Tr"& _ 
-            "ue")>  _
-        Public ReadOnly Property TestLocal() As String
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.115:9100/wsLibCaja.asmx")>  _
+        Public ReadOnly Property SIF_ERP_wrCaja_wsLibCaja() As String
             Get
-                Return CType(Me("TestLocal"),String)
+                Return CType(Me("SIF_ERP_wrCaja_wsLibCaja"),String)
             End Get
         End Property
     End Class

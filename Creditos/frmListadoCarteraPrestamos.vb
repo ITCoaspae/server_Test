@@ -70,43 +70,43 @@ Public Class frmListadoCarteraPrestamos
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dtpFechaInicio)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(559, 48)
+        Me.GroupBox1.Size = New System.Drawing.Size(670, 55)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'dtpFechaFin
         '
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(376, 16)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(451, 18)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaFin.Size = New System.Drawing.Size(106, 22)
         Me.dtpFechaFin.TabIndex = 1
         Me.dtpFechaFin.Value = New Date(2017, 11, 14, 0, 0, 0, 0)
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(304, 16)
+        Me.Label2.Location = New System.Drawing.Point(365, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 23)
+        Me.Label2.Size = New System.Drawing.Size(77, 27)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Fecha Fin:"
         '
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(88, 16)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(106, 18)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(88, 20)
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(105, 22)
         Me.dtpFechaInicio.TabIndex = 0
         Me.dtpFechaInicio.Value = New Date(2017, 11, 14, 0, 0, 0, 0)
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(8, 16)
+        Me.Label1.Location = New System.Drawing.Point(10, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 23)
+        Me.Label1.Size = New System.Drawing.Size(96, 27)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Fecha Inicio:"
         '
@@ -116,34 +116,34 @@ Public Class frmListadoCarteraPrestamos
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.cmbTipoCredito)
         Me.GroupBox2.Controls.Add(Me.chkTodos)
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 117)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 135)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(559, 48)
+        Me.GroupBox2.Size = New System.Drawing.Size(670, 55)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(88, 16)
+        Me.Label3.Location = New System.Drawing.Point(106, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(86, 19)
         Me.Label3.TabIndex = 38
         Me.Label3.Text = "Tipo Crédito"
         '
         'cmbTipoCredito
         '
-        Me.cmbTipoCredito.Location = New System.Drawing.Point(168, 16)
+        Me.cmbTipoCredito.Location = New System.Drawing.Point(202, 18)
         Me.cmbTipoCredito.Name = "cmbTipoCredito"
-        Me.cmbTipoCredito.Size = New System.Drawing.Size(385, 21)
+        Me.cmbTipoCredito.Size = New System.Drawing.Size(462, 24)
         Me.cmbTipoCredito.TabIndex = 1
         '
         'chkTodos
         '
         Me.chkTodos.Checked = True
         Me.chkTodos.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkTodos.Location = New System.Drawing.Point(16, 18)
+        Me.chkTodos.Location = New System.Drawing.Point(19, 21)
         Me.chkTodos.Name = "chkTodos"
-        Me.chkTodos.Size = New System.Drawing.Size(120, 16)
+        Me.chkTodos.Size = New System.Drawing.Size(144, 18)
         Me.chkTodos.TabIndex = 0
         Me.chkTodos.Text = "Todos"
         '
@@ -156,19 +156,20 @@ Public Class frmListadoCarteraPrestamos
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "30,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Caption:""CodPrestamo"";}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Caption:""Dui"";}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(48, 305)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(58, 352)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(163, 0)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(200, 19)
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 9
         Me.C1fgrdPrestamos.Visible = False
         '
         'btnExportar1
         '
-        Me.btnExportar1.Location = New System.Drawing.Point(104, 171)
+        Me.btnExportar1.Location = New System.Drawing.Point(125, 197)
         Me.btnExportar1.Name = "btnExportar1"
-        Me.btnExportar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnExportar1.Size = New System.Drawing.Size(90, 33)
         Me.btnExportar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnExportar1.TabIndex = 191
         Me.btnExportar1.Text = "Exportar"
@@ -178,9 +179,9 @@ Public Class frmListadoCarteraPrestamos
         '
         'btnProcesar1
         '
-        Me.btnProcesar1.Location = New System.Drawing.Point(23, 171)
+        Me.btnProcesar1.Location = New System.Drawing.Point(28, 197)
         Me.btnProcesar1.Name = "btnProcesar1"
-        Me.btnProcesar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnProcesar1.Size = New System.Drawing.Size(90, 33)
         Me.btnProcesar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnProcesar1.TabIndex = 190
         Me.btnProcesar1.Text = "Generar"
@@ -190,9 +191,9 @@ Public Class frmListadoCarteraPrestamos
         '
         'frmListadoCarteraPrestamos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(605, 217)
+        Me.ClientSize = New System.Drawing.Size(731, 269)
         Me.Controls.Add(Me.btnExportar1)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.GroupBox2)
@@ -241,7 +242,7 @@ Public Class frmListadoCarteraPrestamos
                 Me.btnExportar1.Visible = False
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -267,7 +268,7 @@ Public Class frmListadoCarteraPrestamos
                 ofrm.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -302,7 +303,7 @@ Public Class frmListadoCarteraPrestamos
                     End Try
             End Select
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

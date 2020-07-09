@@ -5,6 +5,7 @@ Public Class frmMsCrControlEstado
     Public rsc As System.Resources.ResourceManager
     Dim libAhorro As New sifLib.Ahorro.clsAhorros
     Dim credito As New wrCredito.wsLibCred
+    Dim clientes As New wrAsociados.wsLibAsoc
 
     Public pNoSolic As Long, pCodEnlace As Long
     Friend WithEvents chkArreglo As System.Windows.Forms.CheckBox
@@ -52,6 +53,11 @@ Public Class frmMsCrControlEstado
     Friend WithEvents Label27 As Label
     Friend WithEvents btnImprimir1 As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents txtEjecMercR As TextBox
+    Friend WithEvents txtCodEjecMercR As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnGuardarGestor As MetroFramework.Controls.MetroButton
     Friend WithEvents dgTabla As DataGridView
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -97,7 +103,7 @@ Public Class frmMsCrControlEstado
     Friend WithEvents txtNoActa As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents fg As C1.Win.C1FlexGrid.C1FlexGrid
-    Friend WithEvents tbPpal As System.Windows.Forms.TabControl
+    Friend WithEvents tbPGestor As System.Windows.Forms.TabControl
     Friend WithEvents tbCheques As System.Windows.Forms.TabPage
     Friend WithEvents tbEstado As System.Windows.Forms.TabPage
     Friend WithEvents tbDeducciones As System.Windows.Forms.TabPage
@@ -145,7 +151,7 @@ Public Class frmMsCrControlEstado
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMsCrControlEstado))
-        Me.tbPpal = New System.Windows.Forms.TabControl()
+        Me.tbPGestor = New System.Windows.Forms.TabControl()
         Me.tbEstado = New System.Windows.Forms.TabPage()
         Me.txtItem = New System.Windows.Forms.TextBox()
         Me.txtCodTipoAhorro = New System.Windows.Forms.TextBox()
@@ -240,6 +246,11 @@ Public Class frmMsCrControlEstado
         Me.txtCodTablaAmortiza = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnGuardarGestor = New MetroFramework.Controls.MetroButton()
+        Me.txtEjecMercR = New System.Windows.Forms.TextBox()
+        Me.txtCodEjecMercR = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.tbCondiciones = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.txtTasaExtPrima = New C1.Win.C1Input.C1NumericEdit()
@@ -255,7 +266,7 @@ Public Class frmMsCrControlEstado
         Me.btnProcesar1 = New MetroFramework.Controls.MetroButton()
         Me.btAtrasTb2_1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.tbPpal.SuspendLayout()
+        Me.tbPGestor.SuspendLayout()
         Me.tbEstado.SuspendLayout()
         CType(Me.c1nMontoRef, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1nCuota, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -274,24 +285,26 @@ Public Class frmMsCrControlEstado
         CType(Me.txtMonto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgTabla, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.tbCondiciones.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         CType(Me.txtTasaExtPrima, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'tbPpal
+        'tbPGestor
         '
-        Me.tbPpal.Controls.Add(Me.tbEstado)
-        Me.tbPpal.Controls.Add(Me.tbDeducciones)
-        Me.tbPpal.Controls.Add(Me.tbCheques)
-        Me.tbPpal.Controls.Add(Me.tbTrans)
-        Me.tbPpal.Controls.Add(Me.TabPage1)
-        Me.tbPpal.Controls.Add(Me.tbCondiciones)
-        Me.tbPpal.Location = New System.Drawing.Point(28, 73)
-        Me.tbPpal.Name = "tbPpal"
-        Me.tbPpal.SelectedIndex = 0
-        Me.tbPpal.Size = New System.Drawing.Size(739, 592)
-        Me.tbPpal.TabIndex = 4
+        Me.tbPGestor.Controls.Add(Me.tbEstado)
+        Me.tbPGestor.Controls.Add(Me.tbDeducciones)
+        Me.tbPGestor.Controls.Add(Me.tbCheques)
+        Me.tbPGestor.Controls.Add(Me.tbTrans)
+        Me.tbPGestor.Controls.Add(Me.TabPage1)
+        Me.tbPGestor.Controls.Add(Me.TabPage2)
+        Me.tbPGestor.Controls.Add(Me.tbCondiciones)
+        Me.tbPGestor.Location = New System.Drawing.Point(25, 74)
+        Me.tbPGestor.Name = "tbPGestor"
+        Me.tbPGestor.SelectedIndex = 0
+        Me.tbPGestor.Size = New System.Drawing.Size(739, 592)
+        Me.tbPGestor.TabIndex = 0
         '
         'tbEstado
         '
@@ -364,7 +377,7 @@ Public Class frmMsCrControlEstado
         Me.txtItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtItem.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtItem.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtItem.Location = New System.Drawing.Point(280, 490)
+        Me.txtItem.Location = New System.Drawing.Point(280, 524)
         Me.txtItem.Name = "txtItem"
         Me.txtItem.ReadOnly = True
         Me.txtItem.Size = New System.Drawing.Size(432, 25)
@@ -387,7 +400,7 @@ Public Class frmMsCrControlEstado
         Me.txtCodItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodItem.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodItem.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtCodItem.Location = New System.Drawing.Point(198, 490)
+        Me.txtCodItem.Location = New System.Drawing.Point(198, 524)
         Me.txtCodItem.Name = "txtCodItem"
         Me.txtCodItem.ReadOnly = True
         Me.txtCodItem.Size = New System.Drawing.Size(67, 25)
@@ -403,13 +416,13 @@ Public Class frmMsCrControlEstado
         Me.c1nMontoRef.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1nMontoRef.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.c1nMontoRef.Increment = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.c1nMontoRef.Location = New System.Drawing.Point(242, 464)
+        Me.c1nMontoRef.Location = New System.Drawing.Point(242, 489)
         Me.c1nMontoRef.Name = "c1nMontoRef"
         Me.c1nMontoRef.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nMontoRef.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nMontoRef.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
         Me.c1nMontoRef.ReadOnly = True
-        Me.c1nMontoRef.Size = New System.Drawing.Size(101, 23)
+        Me.c1nMontoRef.Size = New System.Drawing.Size(101, 27)
         Me.c1nMontoRef.TabIndex = 1
         Me.c1nMontoRef.Tag = Nothing
         Me.c1nMontoRef.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -417,7 +430,7 @@ Public Class frmMsCrControlEstado
         '
         'chkCasoEspecial
         '
-        Me.chkCasoEspecial.Location = New System.Drawing.Point(7, 489)
+        Me.chkCasoEspecial.Location = New System.Drawing.Point(7, 523)
         Me.chkCasoEspecial.Name = "chkCasoEspecial"
         Me.chkCasoEspecial.Size = New System.Drawing.Size(162, 26)
         Me.chkCasoEspecial.TabIndex = 175
@@ -429,7 +442,7 @@ Public Class frmMsCrControlEstado
         Me.lblCategoria.BackColor = System.Drawing.Color.White
         Me.lblCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCategoria.ForeColor = System.Drawing.Color.Teal
-        Me.lblCategoria.Location = New System.Drawing.Point(466, 399)
+        Me.lblCategoria.Location = New System.Drawing.Point(466, 408)
         Me.lblCategoria.Name = "lblCategoria"
         Me.lblCategoria.Size = New System.Drawing.Size(55, 29)
         Me.lblCategoria.TabIndex = 179
@@ -438,7 +451,7 @@ Public Class frmMsCrControlEstado
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(372, 405)
+        Me.Label19.Location = New System.Drawing.Point(372, 415)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(90, 17)
         Me.Label19.TabIndex = 180
@@ -448,7 +461,7 @@ Public Class frmMsCrControlEstado
         '
         Me.Label10.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(194, 465)
+        Me.Label10.Location = New System.Drawing.Point(194, 490)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(58, 18)
         Me.Label10.TabIndex = 165
@@ -467,7 +480,7 @@ Public Class frmMsCrControlEstado
         '
         'chkRef
         '
-        Me.chkRef.Location = New System.Drawing.Point(7, 464)
+        Me.chkRef.Location = New System.Drawing.Point(7, 489)
         Me.chkRef.Name = "chkRef"
         Me.chkRef.Size = New System.Drawing.Size(181, 18)
         Me.chkRef.TabIndex = 0
@@ -489,7 +502,7 @@ Public Class frmMsCrControlEstado
         Me.txtPagaduria.BackColor = System.Drawing.Color.White
         Me.txtPagaduria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPagaduria.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPagaduria.Location = New System.Drawing.Point(198, 434)
+        Me.txtPagaduria.Location = New System.Drawing.Point(198, 451)
         Me.txtPagaduria.MaxLength = 100
         Me.txtPagaduria.Name = "txtPagaduria"
         Me.txtPagaduria.ReadOnly = True
@@ -511,7 +524,7 @@ Public Class frmMsCrControlEstado
         Me.txtCodPagaduria.BackColor = System.Drawing.Color.White
         Me.txtCodPagaduria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPagaduria.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodPagaduria.Location = New System.Drawing.Point(102, 434)
+        Me.txtCodPagaduria.Location = New System.Drawing.Point(102, 451)
         Me.txtCodPagaduria.MaxLength = 10
         Me.txtCodPagaduria.Name = "txtCodPagaduria"
         Me.txtCodPagaduria.ReadOnly = True
@@ -533,9 +546,9 @@ Public Class frmMsCrControlEstado
         '
         Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label77.ForeColor = System.Drawing.Color.Black
-        Me.Label77.Location = New System.Drawing.Point(4, 429)
+        Me.Label77.Location = New System.Drawing.Point(4, 447)
         Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(76, 19)
+        Me.Label77.Size = New System.Drawing.Size(76, 18)
         Me.Label77.TabIndex = 173
         Me.Label77.Text = "Pagaduría:"
         '
@@ -589,7 +602,7 @@ Public Class frmMsCrControlEstado
         Me.c1nCuota.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1nCuota.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1nCuota.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.c1nCuota.Size = New System.Drawing.Size(241, 23)
+        Me.c1nCuota.Size = New System.Drawing.Size(241, 26)
         Me.c1nCuota.TabIndex = 9
         Me.c1nCuota.Tag = Nothing
         Me.c1nCuota.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -615,12 +628,12 @@ Public Class frmMsCrControlEstado
         Me.C1NEMontoGarantia.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.C1NEMontoGarantia.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NEMontoGarantia.Increment = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.C1NEMontoGarantia.Location = New System.Drawing.Point(198, 403)
+        Me.C1NEMontoGarantia.Location = New System.Drawing.Point(198, 413)
         Me.C1NEMontoGarantia.Name = "C1NEMontoGarantia"
         Me.C1NEMontoGarantia.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEMontoGarantia.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEMontoGarantia.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.C1NEMontoGarantia.Size = New System.Drawing.Size(145, 23)
+        Me.C1NEMontoGarantia.Size = New System.Drawing.Size(145, 27)
         Me.C1NEMontoGarantia.TabIndex = 11
         Me.C1NEMontoGarantia.Tag = Nothing
         Me.C1NEMontoGarantia.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -652,9 +665,9 @@ Public Class frmMsCrControlEstado
         '
         Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(4, 405)
+        Me.Label5.Location = New System.Drawing.Point(4, 415)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(188, 24)
+        Me.Label5.Size = New System.Drawing.Size(188, 23)
         Me.Label5.TabIndex = 158
         Me.Label5.Text = "Monto Garantía (Hipotecaria):"
         '
@@ -845,7 +858,7 @@ Public Class frmMsCrControlEstado
         Me.C1NEPlazo.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEPlazo.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEPlazo.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(CType(0, Long), Nothing, True, True)})
-        Me.C1NEPlazo.Size = New System.Drawing.Size(242, 23)
+        Me.C1NEPlazo.Size = New System.Drawing.Size(242, 26)
         Me.C1NEPlazo.TabIndex = 7
         Me.C1NEPlazo.Tag = Nothing
         Me.C1NEPlazo.Value = CType(0, Short)
@@ -865,7 +878,7 @@ Public Class frmMsCrControlEstado
         Me.C1NEInteres.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEInteres.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEInteres.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.C1NEInteres.Size = New System.Drawing.Size(241, 23)
+        Me.C1NEInteres.Size = New System.Drawing.Size(241, 27)
         Me.C1NEInteres.TabIndex = 6
         Me.C1NEInteres.Tag = Nothing
         Me.C1NEInteres.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -887,7 +900,6 @@ Public Class frmMsCrControlEstado
         Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label6.TabIndex = 160
         Me.Label13.Location = New System.Drawing.Point(372, 14)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(91, 18)
@@ -901,13 +913,14 @@ Public Class frmMsCrControlEstado
         Me.Label6.Location = New System.Drawing.Point(372, 225)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 18)
+        Me.Label6.TabIndex = 160
         Me.Label6.Text = "Otorgamiento:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.White
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(4, 148)
         Me.Label14.Name = "Label14"
@@ -982,7 +995,7 @@ Public Class frmMsCrControlEstado
         Me.C1NEMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.C1NEMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.C1NEMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.C1NEMonto.Size = New System.Drawing.Size(241, 23)
+        Me.C1NEMonto.Size = New System.Drawing.Size(241, 27)
         Me.C1NEMonto.TabIndex = 2
         Me.C1NEMonto.Tag = Nothing
         Me.C1NEMonto.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -1276,7 +1289,7 @@ Public Class frmMsCrControlEstado
         Me.txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.txtMonto.Size = New System.Drawing.Size(234, 23)
+        Me.txtMonto.Size = New System.Drawing.Size(234, 27)
         Me.txtMonto.TabIndex = 8
         Me.txtMonto.Tag = Nothing
         Me.txtMonto.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -1461,6 +1474,63 @@ Public Class frmMsCrControlEstado
         Me.Label27.Text = "Usuario que creó la Tabla:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.btnGuardarGestor)
+        Me.TabPage2.Controls.Add(Me.txtEjecMercR)
+        Me.TabPage2.Controls.Add(Me.txtCodEjecMercR)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(731, 563)
+        Me.TabPage2.TabIndex = 7
+        Me.TabPage2.Text = "Gestor Cobros"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnGuardarGestor
+        '
+        Me.btnGuardarGestor.Location = New System.Drawing.Point(24, 120)
+        Me.btnGuardarGestor.Name = "btnGuardarGestor"
+        Me.btnGuardarGestor.Size = New System.Drawing.Size(90, 32)
+        Me.btnGuardarGestor.Style = MetroFramework.MetroColorStyle.Teal
+        Me.btnGuardarGestor.TabIndex = 206
+        Me.btnGuardarGestor.Text = "Guardar"
+        Me.btnGuardarGestor.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnGuardarGestor.UseSelectable = True
+        Me.btnGuardarGestor.UseStyleColors = True
+        '
+        'txtEjecMercR
+        '
+        Me.txtEjecMercR.BackColor = System.Drawing.Color.White
+        Me.txtEjecMercR.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEjecMercR.Location = New System.Drawing.Point(109, 57)
+        Me.txtEjecMercR.MaxLength = 110
+        Me.txtEjecMercR.Name = "txtEjecMercR"
+        Me.txtEjecMercR.ReadOnly = True
+        Me.txtEjecMercR.Size = New System.Drawing.Size(613, 23)
+        Me.txtEjecMercR.TabIndex = 185
+        '
+        'txtCodEjecMercR
+        '
+        Me.txtCodEjecMercR.BackColor = System.Drawing.Color.White
+        Me.txtCodEjecMercR.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodEjecMercR.Location = New System.Drawing.Point(25, 57)
+        Me.txtCodEjecMercR.MaxLength = 10
+        Me.txtCodEjecMercR.Name = "txtCodEjecMercR"
+        Me.txtCodEjecMercR.Size = New System.Drawing.Size(77, 23)
+        Me.txtCodEjecMercR.TabIndex = 184
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(22, 35)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(126, 18)
+        Me.Label7.TabIndex = 186
+        Me.Label7.Text = "Ejecutivo Cobros:"
+        '
         'tbCondiciones
         '
         Me.tbCondiciones.BackColor = System.Drawing.Color.White
@@ -1501,7 +1571,7 @@ Public Class frmMsCrControlEstado
         Me.txtTasaExtPrima.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.txtTasaExtPrima.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.txtTasaExtPrima.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(New Decimal(New Integer() {0, 0, 0, 0}), Nothing, True, True)})
-        Me.txtTasaExtPrima.Size = New System.Drawing.Size(115, 23)
+        Me.txtTasaExtPrima.Size = New System.Drawing.Size(115, 26)
         Me.txtTasaExtPrima.TabIndex = 177
         Me.txtTasaExtPrima.Tag = Nothing
         Me.txtTasaExtPrima.Value = New Decimal(New Integer() {0, 0, 0, 0})
@@ -1635,13 +1705,13 @@ Public Class frmMsCrControlEstado
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(787, 735)
+        Me.ClientSize = New System.Drawing.Size(794, 716)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btAtrasTb2_1)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.btnProcesar1)
         Me.Controls.Add(Me.btnSigTb1_1)
-        Me.Controls.Add(Me.tbPpal)
+        Me.Controls.Add(Me.tbPGestor)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsCrControlEstado"
@@ -1649,7 +1719,7 @@ Public Class frmMsCrControlEstado
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Desembolso de Créditos"
-        Me.tbPpal.ResumeLayout(False)
+        Me.tbPGestor.ResumeLayout(False)
         Me.tbEstado.ResumeLayout(False)
         Me.tbEstado.PerformLayout()
         CType(Me.c1nMontoRef, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1671,6 +1741,8 @@ Public Class frmMsCrControlEstado
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.dgTabla, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.tbCondiciones.ResumeLayout(False)
         Me.tbCondiciones.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
@@ -1719,9 +1791,6 @@ Public Class frmMsCrControlEstado
         End Set
     End Property
 #End Region
-
-
-
     Private Sub frmMsCrControlEstado_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Try
@@ -1737,6 +1806,8 @@ Public Class frmMsCrControlEstado
             Me.chkGeneraReserva.Enabled = False
             Dim dtsRoles As New DataSet
             Dim dtsProcesos As New DataSet
+            Dim oAsoc As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, y As Integer
+            Dim oPl As New wrPlanilla.wsLibPlanilla
             dtsRoles = administracion.ConsultarRolesUsuario(sUsuario, "", 2)
             If dtsRoles.Tables.Count > 0 Then
                 If dtsRoles.Tables(0).Rows.Count > 0 Then
@@ -1776,7 +1847,8 @@ Public Class frmMsCrControlEstado
             Me.dtpFechaActa.Value = Now
             Me.dtpFecOtorgamiento.Value = Now
 
-            Dim oItem As New wrPrestamo.wsLibPrest, oAsoc As New wrAsociados.wsLibAsoc, dr As DataRow, oCaja As New wrCaja.wsLibCaja
+            Dim oItem As New wrPrestamo.wsLibPrest,' oAsoc As New wrAsociados.wsLibAsoc,
+            dr As DataRow, oCaja As New wrCaja.wsLibCaja
             Dim oCred As wrCredito.wsLibCred = New wrCredito.wsLibCred, Filas As Data.DataRowCollection, ds As New Data.DataSet, x As Integer, dsCheques As New DataSet
 
             ds = oAsoc.ConsultarAsociado("Nombres,Apellido1,Apellido2,NoSocio", "Dui='" & pDui & "'", "Dui", sUsuario, sPassword, sSucursal)
@@ -2016,6 +2088,8 @@ Public Class frmMsCrControlEstado
                     vTipoGar = IIf(IsDBNull(Filas.Item(0)("CodTipoGarantias")), "", Filas.Item(0)("CodTipoGarantias"))
                 End If
 
+
+                'Fin de modificacion 
                 Me.C1NEMonto.Value = pMonto
                 Me.C1NEInteres.Value = pInteres
                 Me.C1NEPlazo.Value = pPlazo
@@ -2023,14 +2097,48 @@ Public Class frmMsCrControlEstado
                     If vTipoGar.Trim = "00002" Then Puntos_DPF()
                 End If
 
-
-
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+
+    'Private Sub txtCodEjecMercR_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
+
+
+    'End Sub
+
+    Private Sub txtCodEjecMercR_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+
+            Dim oPl As New wrPlanilla.wsLibPlanilla
+            Dim oPerif As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc, ds As New Data.DataSet, Filas As Data.DataRowCollection
+            Try
+                ds = oPerif.ConsultarEjecutivosMercadeo("*", "CodEjecMercadeo='" & Trim(Me.txtCodEjecMercR.Text) & "'", "CodEjecMercadeo", sUsuario, sPassword, sSucursal)
+                Filas = ds.Tables(0).Rows()
+                If Filas.Count > 0 Then
+                    If Not (Filas.Item(0)("CodEmpleado") Is DBNull.Value) Then
+                        Me.txtEjecMercR.Text = CStr(Filas.Item(0)("CodEmpleado"))
+                        'Me.txtCodSuc.Text = Filas.Item(0)("codSucursal")
+                        ds = oPl.ConsultarEmpleados("*", "CodEmpleado='" & Trim(Me.txtEjecMercR.Text) & "'", "CodEmpleado", sUsuario, sPassword, sSucursal)
+                        Filas = ds.Tables(0).Rows()
+                        If Filas.Count > 0 Then
+                            Me.txtEjecMercR.Text = IIf(IsDBNull(Filas.Item(0)("Nombres")), "", Filas.Item(0)("Nombres")) & " " & IIf(IsDBNull(Filas.Item(0)("Apellido1")), "", Filas.Item(0)("Apellido1")) & " " & IIf(IsDBNull(Filas.Item(0)("Apellido2")), "", Filas.Item(0)("Apellido2"))
+                        End If
+                        txtCodTipoCredito.Focus()
+                    End If
+                Else
+                    txtCodEjecMercR_DoubleClick(sender, e)
+                End If
+
+            Catch ex As Exception
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            End Try
+
+        End If
     End Sub
 
 
@@ -2061,7 +2169,7 @@ Public Class frmMsCrControlEstado
             End If
             'Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
         'Dim ds As New Data.DataSet
         'Dim oItem As New wrPrestamo.wsLibPrest
@@ -2070,7 +2178,7 @@ Public Class frmMsCrControlEstado
         '    fg.DataSource = ds.Tables(0)
         '    Encabezado()
         'Catch ex As Exception
-        '    MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '   MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         'End Try
     End Sub
 
@@ -2125,7 +2233,7 @@ Public Class frmMsCrControlEstado
             fgDeducciones.Cols.Item(18).Width = 0
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -2236,7 +2344,7 @@ Public Class frmMsCrControlEstado
             Me.txtPagaduria.Text = ofrm.Resultado2.Trim
             Me.lblCategoria.Text = If(ofrm.Resultado3.Trim.Length = 0, "N/E", ofrm.Resultado3.Trim)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2297,7 +2405,7 @@ Public Class frmMsCrControlEstado
             txtTipoCredito.Text = ofrm.Resultado2.Trim
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2326,7 +2434,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Function
 #Region "Transferencias"
@@ -2491,7 +2599,7 @@ Public Class frmMsCrControlEstado
         '    Me.Cursor = Cursors.WaitCursor
 
         '    Dim ofrm As New frmVisorRep
-        '    'ofrm.ReportePrestamos = AlcalaLibs.Prestamos.clsPrestamos.ReportesPrestamos.DetalleSolicitud
+        '    'ofrm.ReportePrestamos = Prestamos.clsPrestamos.ReportesPrestamos.DetalleSolicitud
         '    'ofrm.ReportePrestamos = sifLib.Prestamos.clsPrestamos.ReportesPrestamos.DetalleSolicitud
         '    'ofrm.CodigoPrestamo = pNoSolic
         '    'ofrm.DuiAsociado = pDui
@@ -2517,7 +2625,7 @@ Public Class frmMsCrControlEstado
 
         'Catch ex As Exception
         '    Me.Cursor = Cursors.Default
-        '    MsgBox(mensajeError, MsgBoxStyle.Critical)
+        '     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         'End Try
     End Sub
 
@@ -2527,9 +2635,9 @@ Public Class frmMsCrControlEstado
 
     Private Sub btnSigTb1_1_Click(sender As Object, e As EventArgs) Handles btnSigTb1_1.Click
         Try
-            If Me.tbPpal.SelectedIndex <> 2 Then Me.tbPpal.SelectedIndex = Me.tbPpal.SelectedIndex() + 1
+            If Me.tbPGestor.SelectedIndex <> 2 Then Me.tbPGestor.SelectedIndex = Me.tbPGestor.SelectedIndex() + 1
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2698,7 +2806,7 @@ Public Class frmMsCrControlEstado
             '   Me.Dispose()
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2746,7 +2854,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2771,7 +2879,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -2902,7 +3010,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
         'Dim ofrm As New frmAGenerico
 
@@ -3010,7 +3118,7 @@ Public Class frmMsCrControlEstado
         '        End If
         '    End If
         'Catch ex As Exception
-        '    MsgBox(mensajeError, MsgBoxStyle.Critical)
+        '     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         'End Try
     End Sub
 
@@ -3025,7 +3133,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3051,7 +3159,7 @@ Public Class frmMsCrControlEstado
             'ofrm.ShowDialog()
             RefrescarGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -3090,7 +3198,7 @@ Public Class frmMsCrControlEstado
                 RefrescarGrid()
                 'Encabezado()
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
@@ -3107,7 +3215,7 @@ Public Class frmMsCrControlEstado
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3288,12 +3396,12 @@ Public Class frmMsCrControlEstado
             End If
             Limpiar()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles btAtrasTb2_1.Click
-        If Me.tbPpal.SelectedIndex <> 0 Then Me.tbPpal.SelectedIndex = Me.tbPpal.SelectedIndex() - 1
+        If Me.tbPGestor.SelectedIndex <> 0 Then Me.tbPGestor.SelectedIndex = Me.tbPGestor.SelectedIndex() - 1
     End Sub
 
     Private Sub btnAsinaTA1_Click(sender As Object, e As EventArgs) Handles btnAsinaTA1.Click
@@ -3356,7 +3464,7 @@ Public Class frmMsCrControlEstado
             'Recuperamos datos de tabla de amortización
             llenarDatosTablaAmortizacion()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Protected Sub llenarDatosTablaAmortizacion()
@@ -3396,7 +3504,7 @@ Public Class frmMsCrControlEstado
                 ofrm.Show()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -3414,9 +3522,22 @@ Public Class frmMsCrControlEstado
                 ofrm.Show()
 
             Catch ex As Exception
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End Try
         End If
+    End Sub
+
+    Private Sub txtCodEjecMercR_TextChanged(sender As Object, e As EventArgs) Handles txtCodEjecMercR.TextChanged
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+
+    Private Sub tbEstado_Click(sender As Object, e As EventArgs) Handles tbEstado.Click
+
     End Sub
 
     Private Sub btnProcesarTran1_Click(sender As Object, e As EventArgs) Handles btnProcesarTran1.Click
@@ -3513,10 +3634,35 @@ Public Class frmMsCrControlEstado
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
+    Private Sub btnGuardarGestor_Click(sender As Object, e As EventArgs) Handles btnGuardarGestor.Click
+        Dim pcampos As String = ""
+        Dim pvalores As String = ""
+        Dim dtsCred As New DataSet
+        pcampos = "CodGestor,CodPrestamo,Dui,FechaAsignacion,Estado"
+        pvalores = "'" & txtCodEjecMercR.Text.Trim & "','" & txtCodigo.Text.Trim & "','" & pDui & "','" & Now.ToShortDateString & "','A'"
+        ' ??? LA VALIDACIÓN??????????
+        dtsCred = credito.ConsultarCred(pcampos, " CodPrestamo = '" & txtCodigo.Text.Trim & "' ", "", sUsuario, sPassword, sSucursal)
+
+        If dtsCred.Tables.Count > 0 Then
+            If dtsCred.Tables(0).Rows.Count > 0 Then 'Valida que dataset retorna más de una fila
+                MetroFramework.MetroMessageBox.Show(Me, "Gestor Asignado Previamente", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                Exit Sub 'Forzamos la salida del metodo
+            Else
+                If credito.InsertarGestoresxCredito(pcampos, pvalores, sUsuario, sPassword, sSucursal) = True Then
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeIngresoRegistro, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Else
+                    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                End If
+            End If
+        Else
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End If
+    End Sub
 
     Private Sub chkPrincipal_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkPrincipal.CheckedChanged
         If Me.chkPrincipal.Checked = True Then
@@ -3529,5 +3675,28 @@ Public Class frmMsCrControlEstado
 
     Private Sub dtpFecOtorgamiento_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFecOtorgamiento.ValueChanged
         Me.dtpFec1Cuota.Value = dtpFecOtorgamiento.Value.AddMonths(1)
+    End Sub
+
+    Private Sub txtCodEjecMercR_DoubleClick(sender As Object, e As EventArgs) Handles txtCodEjecMercR.DoubleClick
+        Dim ofrm As New frmAGenerico
+        Dim oCred As wrCredito.wsLibCred = New wrCredito.wsLibCred, ds As New Data.DataSet ', Filas As Data.DataRowCollection
+
+        ofrm.Text = "Buscar Ejecutivos de Cobros"
+        Dim oPerif As wrAsociados.wsLibAsoc = New wrAsociados.wsLibAsoc
+        Try
+            oPerif = New wrAsociados.wsLibAsoc
+            ds = oCred.ConsultarGestores("CodGestor,Nombre", "", "Nombre", sUsuario, sPassword, sSucursal)
+            ofrm.Datos = ds
+            ofrm.ColSeleccion = 0
+            ofrm.RefrescarGrid()
+            ofrm.ShowDialog()
+            txtCodEjecMercR.Text = ofrm.Resultado.Trim
+            txtEjecMercR.Text = ofrm.Resultado2.Trim
+            ' txtCodSuc.Text = ofrm.Resultado4.Trim
+            ' btnAtrasTb2_1.Focus()
+        Catch ex As Exception
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 End Class

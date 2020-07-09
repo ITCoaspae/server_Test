@@ -109,9 +109,9 @@ Public Class frmConsultaDICOM
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(606, 246)
+        Me.GroupBox1.Size = New System.Drawing.Size(727, 284)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -120,26 +120,26 @@ Public Class frmConsultaDICOM
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(96, 42)
+        Me.txtNoSocio.Location = New System.Drawing.Point(115, 48)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(158, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(190, 23)
         Me.txtNoSocio.TabIndex = 74
         '
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(8, 44)
+        Me.Label13.Location = New System.Drawing.Point(10, 51)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(80, 16)
+        Me.Label13.Size = New System.Drawing.Size(96, 18)
         Me.Label13.TabIndex = 78
         Me.Label13.Text = "No. Asociado:"
         '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(206, 14)
+        Me.Label11.Location = New System.Drawing.Point(247, 16)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(64, 16)
+        Me.Label11.Size = New System.Drawing.Size(77, 19)
         Me.Label11.TabIndex = 77
         Me.Label11.Text = "Asociado:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -150,48 +150,48 @@ Public Class frmConsultaDICOM
         Me.txtAsociado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsociado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAsociado.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtAsociado.Location = New System.Drawing.Point(276, 12)
+        Me.txtAsociado.Location = New System.Drawing.Point(331, 14)
         Me.txtAsociado.Multiline = True
         Me.txtAsociado.Name = "txtAsociado"
         Me.txtAsociado.ReadOnly = True
-        Me.txtAsociado.Size = New System.Drawing.Size(308, 24)
+        Me.txtAsociado.Size = New System.Drawing.Size(370, 28)
         Me.txtAsociado.TabIndex = 76
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(96, 16)
+        Me.txtDui.Location = New System.Drawing.Point(115, 18)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(104, 20)
+        Me.txtDui.Size = New System.Drawing.Size(125, 24)
         Me.txtDui.TabIndex = 73
         Me.txtDui.Tag = Nothing
         '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(8, 16)
+        Me.Label14.Location = New System.Drawing.Point(10, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(80, 16)
+        Me.Label14.Size = New System.Drawing.Size(96, 19)
         Me.Label14.TabIndex = 75
         Me.Label14.Text = "DUI Asociado:"
         '
         'c1txtCodPrestamo
         '
         Me.c1txtCodPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtCodPrestamo.Location = New System.Drawing.Point(426, 42)
+        Me.c1txtCodPrestamo.Location = New System.Drawing.Point(511, 48)
         Me.c1txtCodPrestamo.MaxLength = 255
         Me.c1txtCodPrestamo.Name = "c1txtCodPrestamo"
         Me.c1txtCodPrestamo.NumericInput = False
-        Me.c1txtCodPrestamo.Size = New System.Drawing.Size(158, 20)
+        Me.c1txtCodPrestamo.Size = New System.Drawing.Size(190, 24)
         Me.c1txtCodPrestamo.TabIndex = 72
         Me.c1txtCodPrestamo.Tag = Nothing
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(322, 44)
+        Me.Label3.Location = New System.Drawing.Point(386, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 16)
+        Me.Label3.Size = New System.Drawing.Size(96, 18)
         Me.Label3.TabIndex = 71
         Me.Label3.Text = "Prestamo:"
         '
@@ -203,30 +203,29 @@ Public Class frmConsultaDICOM
         Me.txtNoSolicitud.DataType = GetType(Integer)
         Me.txtNoSolicitud.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.txtNoSolicitud.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.txtNoSolicitud.Increment = 1
-        Me.txtNoSolicitud.Location = New System.Drawing.Point(96, 68)
+        Me.txtNoSolicitud.ImagePadding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.txtNoSolicitud.Location = New System.Drawing.Point(115, 78)
         Me.txtNoSolicitud.Name = "txtNoSolicitud"
         Me.txtNoSolicitud.ReadOnly = True
-        Me.txtNoSolicitud.ShowDropDownButton = False
-        Me.txtNoSolicitud.ShowUpDownButtons = False
-        Me.txtNoSolicitud.Size = New System.Drawing.Size(158, 21)
+        Me.txtNoSolicitud.Size = New System.Drawing.Size(190, 27)
         Me.txtNoSolicitud.TabIndex = 70
         Me.txtNoSolicitud.Tag = Nothing
         Me.txtNoSolicitud.Value = 0
+        Me.txtNoSolicitud.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'c1txtObservaciones
         '
         Me.c1txtObservaciones.BackColor = System.Drawing.Color.White
         Me.c1txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.c1txtObservaciones.EditMask = "0000-000000-000-0"
-        Me.c1txtObservaciones.Location = New System.Drawing.Point(96, 177)
+        Me.c1txtObservaciones.Location = New System.Drawing.Point(115, 204)
         Me.c1txtObservaciones.MaxLength = 255
         Me.c1txtObservaciones.Multiline = True
         Me.c1txtObservaciones.Name = "c1txtObservaciones"
         Me.c1txtObservaciones.NumericInput = False
         Me.c1txtObservaciones.ReadOnly = True
         Me.c1txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.c1txtObservaciones.Size = New System.Drawing.Size(488, 48)
+        Me.c1txtObservaciones.Size = New System.Drawing.Size(586, 56)
         Me.c1txtObservaciones.TabIndex = 69
         Me.c1txtObservaciones.Tag = Nothing
         '
@@ -235,12 +234,12 @@ Public Class frmConsultaDICOM
         Me.c1txtNIT.BackColor = System.Drawing.Color.White
         Me.c1txtNIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.c1txtNIT.EditMask = "0000-000000-000-0"
-        Me.c1txtNIT.Location = New System.Drawing.Point(96, 151)
+        Me.c1txtNIT.Location = New System.Drawing.Point(115, 174)
         Me.c1txtNIT.MaxLength = 14
         Me.c1txtNIT.Name = "c1txtNIT"
         Me.c1txtNIT.NumericInput = False
         Me.c1txtNIT.ReadOnly = True
-        Me.c1txtNIT.Size = New System.Drawing.Size(128, 20)
+        Me.c1txtNIT.Size = New System.Drawing.Size(154, 23)
         Me.c1txtNIT.TabIndex = 68
         Me.c1txtNIT.Tag = Nothing
         '
@@ -248,62 +247,62 @@ Public Class frmConsultaDICOM
         '
         Me.c1txtNombre.BackColor = System.Drawing.Color.White
         Me.c1txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtNombre.Location = New System.Drawing.Point(96, 125)
+        Me.c1txtNombre.Location = New System.Drawing.Point(115, 144)
         Me.c1txtNombre.MaxLength = 255
         Me.c1txtNombre.Name = "c1txtNombre"
         Me.c1txtNombre.NumericInput = False
         Me.c1txtNombre.ReadOnly = True
-        Me.c1txtNombre.Size = New System.Drawing.Size(488, 20)
+        Me.c1txtNombre.Size = New System.Drawing.Size(586, 23)
         Me.c1txtNombre.TabIndex = 67
         Me.c1txtNombre.Tag = Nothing
         '
         'chkFiador
         '
         Me.chkFiador.Enabled = False
-        Me.chkFiador.Location = New System.Drawing.Point(150, 95)
+        Me.chkFiador.Location = New System.Drawing.Point(180, 110)
         Me.chkFiador.Name = "chkFiador"
-        Me.chkFiador.Size = New System.Drawing.Size(104, 24)
+        Me.chkFiador.Size = New System.Drawing.Size(125, 27)
         Me.chkFiador.TabIndex = 66
         Me.chkFiador.Text = "Fiador"
         '
         'chkSolicitante
         '
         Me.chkSolicitante.Enabled = False
-        Me.chkSolicitante.Location = New System.Drawing.Point(11, 95)
+        Me.chkSolicitante.Location = New System.Drawing.Point(13, 110)
         Me.chkSolicitante.Name = "chkSolicitante"
-        Me.chkSolicitante.Size = New System.Drawing.Size(104, 24)
+        Me.chkSolicitante.Size = New System.Drawing.Size(125, 27)
         Me.chkSolicitante.TabIndex = 65
         Me.chkSolicitante.Text = "Solicitante"
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(8, 177)
+        Me.Label7.Location = New System.Drawing.Point(10, 204)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 16)
+        Me.Label7.Size = New System.Drawing.Size(96, 19)
         Me.Label7.TabIndex = 64
         Me.Label7.Text = "Observaciones:"
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(8, 151)
+        Me.Label6.Location = New System.Drawing.Point(10, 174)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 16)
+        Me.Label6.Size = New System.Drawing.Size(96, 19)
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "NIT:"
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(8, 129)
+        Me.Label5.Location = New System.Drawing.Point(10, 149)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 16)
+        Me.Label5.Size = New System.Drawing.Size(96, 18)
         Me.Label5.TabIndex = 62
         Me.Label5.Text = "Nombre:"
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(322, 68)
+        Me.Label1.Location = New System.Drawing.Point(386, 78)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 16)
+        Me.Label1.Size = New System.Drawing.Size(96, 19)
         Me.Label1.TabIndex = 60
         Me.Label1.Text = "Fecha y Hora:"
         '
@@ -311,17 +310,17 @@ Public Class frmConsultaDICOM
         '
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(426, 68)
+        Me.dtpFecha.Location = New System.Drawing.Point(511, 78)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(158, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(190, 22)
         Me.dtpFecha.TabIndex = 59
         Me.dtpFecha.Value = New Date(2006, 12, 19, 16, 42, 14, 734)
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(8, 68)
+        Me.Label2.Location = New System.Drawing.Point(10, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 61
         Me.Label2.Text = "No. Solicitud:"
         '
@@ -331,26 +330,28 @@ Public Class frmConsultaDICOM
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fg.BackColor = System.Drawing.SystemColors.Window
+        Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "20,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 315)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(28, 363)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Size = New System.Drawing.Size(609, 129)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(730, 149)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 19
         '
         'frmConsultaDICOM
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(655, 482)
+        Me.ClientSize = New System.Drawing.Size(786, 556)
         Me.Controls.Add(Me.fg)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(655, 482)
+        Me.MaximumSize = New System.Drawing.Size(786, 556)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(655, 482)
+        Me.MinimumSize = New System.Drawing.Size(786, 556)
         Me.Name = "frmConsultaDICOM"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -416,7 +417,7 @@ Public Class frmConsultaDICOM
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
   
@@ -443,7 +444,7 @@ Public Class frmConsultaDICOM
                 Me.txtNoSocio.Text = Trim(dr("NoSocio"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -470,7 +471,7 @@ Public Class frmConsultaDICOM
                 Me.txtNoSocio.Text = Trim(dr("NoSocio"))
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -508,7 +509,7 @@ Public Class frmConsultaDICOM
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

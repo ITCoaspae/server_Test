@@ -1,26 +1,11 @@
 ﻿Public Class frmMListaNegra
     Dim listaNegra As New wrAsociados.wsLibAsoc
-    Protected Sub llenarDg(ByVal opcion As Integer)
-        Try
-            Dim dts As New DataSet
-            dts = listaNegra.consultarListaNegra(opcion)
-            If dts.Tables.Count > 0 Then
-                If dts.Tables(0).Rows.Count > 0 Then
-                    Me.dgListaNegra1.DataSource = dts.Tables(0)
 
-                End If
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Módulo - Asociados")
-
-        End Try
-       
-    End Sub
 
 
 
     Private Sub frmMListaNegra_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        llenarDg(1)
+
     End Sub
 
 
@@ -32,7 +17,7 @@
                 .accion = 1
                 .ShowDialog()
             End With
-            llenarDg(1)
+            btnBuscar_Click(sender, e)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Módulo - Asociados")
         End Try
@@ -65,7 +50,7 @@
                     .accion = 2
                     .ShowDialog()
                 End With
-                llenarDg(1)
+                btnBuscar_Click(sender, e)
             End If
 
         Catch ex As Exception
@@ -77,19 +62,59 @@
         Try
             If Me.dgListaNegra1.RowCount > 0 Then
                 If Me.dgListaNegra1.Item("activo", Me.dgListaNegra1.CurrentRow.Index).Value = True Then
-                    If MsgBox("¿Desea inactivar el registro?", MsgBoxStyle.YesNo, "Módulo - Asociados") = MsgBoxResult.Yes Then
+
+                    If MetroFramework.MetroMessageBox.Show(Me, "Desea desactivar el registro seleccionado.", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                         If (listaNegra.cambiarEstadoListaNegra(sUsuario, Now, False, Me.dgListaNegra1.Item("idLista", Me.dgListaNegra1.CurrentRow.Index).Value)) > 0 Then
-                            MsgBox("Registro inactivo", MsgBoxStyle.Information, "Módulo - Asociados")
+                            MetroFramework.MetroMessageBox.Show(Me, "Registro desactivado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Else
-                            MsgBox("El registro no pudo ser modificado.", MsgBoxStyle.Critical, "Módulo - Asociados")
+                            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                         End If
                     End If
                 End If
             End If
-            llenarDg(1)
+            btnBuscar_Click(sender, e)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Módulo - Asociados")
         End Try
     End Sub
+
+    Private Sub frmMListaNegra_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim dts As New DataSet
+        Dim reportado As String = ""
+        Dim institucion As String = ""
+        Dim oficio As String = ""
+        Dim opcion As Integer = 0
+        If rbReportado.Checked = True Then
+            reportado = txtNombre.Text.Trim
+            txtInstitucion.Text = ""
+            txtOficio.Text = ""
+            opcion = 2
+        ElseIf rbInstitucion.Checked = True Then
+            txtNombre.Text = ""
+            institucion = txtInstitucion.Text
+            txtOficio.Text = ""
+            opcion = 3
+        ElseIf rbOficio.Checked = True Then
+            txtNombre.Text = ""
+            txtInstitucion.Text = ""
+            oficio = txtOficio.Text
+            opcion = 4
+        ElseIf rbTodos.Checked = True Then
+            txtNombre.Text = ""
+            txtInstitucion.Text = ""
+            txtOficio.Text = ""
+            opcion = 1
+        End If
+
+        dts = listaNegra.consultarListaNegra(opcion, reportado, institucion, oficio)
+        dgListaNegra1.DataSource = dts.Tables(0)
+    End Sub
+
 
 End Class

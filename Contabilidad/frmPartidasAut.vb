@@ -4,16 +4,16 @@ Imports System.Threading
 Public Class frmPartidasAut
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-    'Private vAccion As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Private vAccion As Contabilidad.clsPartida.TipoAccionPartidas
     Private vAccion As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
-    'Private vAccionDetalle As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Private vAccionDetalle As Contabilidad.clsPartida.TipoAccionPartidas
     Private vAccionDetalle As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
     Private vdsDetalle As System.Data.DataSet, vCorrel As Integer
     Private vC As Decimal, vA As Decimal
     Private errorProvider1 As System.Windows.Forms.ErrorProvider = New System.Windows.Forms.ErrorProvider
     Private vIdModifica As String
     Private vPref As String
-    'Private vTipo As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo
+    'Private vTipo As Contabilidad.clsPartida.TipoPartidaModulo
     Private vTipo As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Private pdrNueva As System.Data.DataRow
@@ -635,23 +635,23 @@ Public Class frmPartidasAut
         End Set
     End Property
 
-    'Public Property Accion() As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Public Property Accion() As Contabilidad.clsPartida.TipoAccionPartidas
     Public Property Accion() As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
         Get
             Return vAccion
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoAccionPartidas)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas)
             vAccion = Value
         End Set
     End Property
 
-    'Public Property AccionDetalle() As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas
+    'Public Property AccionDetalle() As Contabilidad.clsPartida.TipoAccionPartidas
     Public Property AccionDetalle() As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas
         Get
             Return vAccionDetalle
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoAccionPartidas)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoAccionPartidas)
             vAccionDetalle = Value
         End Set
@@ -693,12 +693,12 @@ Public Class frmPartidasAut
         End Set
     End Property
 
-    'Public Property Tipo() As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo
+    'Public Property Tipo() As Contabilidad.clsPartida.TipoPartidaModulo
     Public Property Tipo() As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo
         Get
             Return vTipo
         End Get
-        'Set(ByVal Value As AlcalaLibs.Contabilidad.clsPartida.TipoPartidaModulo)
+        'Set(ByVal Value As Contabilidad.clsPartida.TipoPartidaModulo)
         Set(ByVal Value As sifLib.Contabilidad.clsPartidas.TipoPartidaModulo)
             vTipo = Value
         End Set
@@ -749,7 +749,7 @@ Public Class frmPartidasAut
             Me.btnAceptarLin1.Enabled = False
         End If
         Select Case Me.Accion
-            'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
+            'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.AgregarPartida
             Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.AgregarPartida
                 Me.Detalle = oPartida.ObtenerPartidaVacia(sUsuario, sPassword, sSucursal)
                 If Not (Me.drNueva Is Nothing) Then
@@ -769,7 +769,7 @@ Public Class frmPartidasAut
                 End If
                 C1fgrdDetalle.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
                 C1fgrdDetalle.DataSource = Me.Detalle.Tables(0)
-            'Case Is = AlcalaLibs.Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
+            'Case Is = Contabilidad.clsPartida.TipoAccionPartidas.ModificarPartida
             Case Is = sifLib.Contabilidad.clsPartidas.TipoAccionPartidas.ModificarPartida
 
                 Me.Detalle = oPartida.CargaPartidaAut(Me.IdModifica, sUsuario, sPassword, sSucursal)

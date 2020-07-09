@@ -47,19 +47,21 @@ Public Class frmMAhTasasInteres
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "36,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fg.Location = New System.Drawing.Point(23, 107)
+        Me.fg.ForeColor = System.Drawing.Color.Navy
+        Me.fg.Location = New System.Drawing.Point(28, 123)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
-        Me.fg.Size = New System.Drawing.Size(532, 246)
-        Me.fg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fg.Styles"))
+        Me.fg.Rows.DefaultSize = 21
+        Me.fg.Size = New System.Drawing.Size(522, 219)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 24
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 73)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 192
         Me.btnEliminar1.Text = "Eliminar"
         Me.btnEliminar1.UseSelectable = True
@@ -67,10 +69,10 @@ Public Class frmMAhTasasInteres
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 73)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 190
         Me.btnModificar1.Text = "Modificar"
         Me.btnModificar1.UseSelectable = True
@@ -78,10 +80,10 @@ Public Class frmMAhTasasInteres
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 73)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
-        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
+        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 189
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.UseSelectable = True
@@ -89,7 +91,7 @@ Public Class frmMAhTasasInteres
         '
         'frmMAhTasasInteres
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(578, 421)
         Me.Controls.Add(Me.btnEliminar1)
@@ -97,7 +99,7 @@ Public Class frmMAhTasasInteres
         Me.Controls.Add(Me.btnAgregar1)
         Me.Controls.Add(Me.fg)
         Me.Name = "frmMAhTasasInteres"
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Tasas de Interés DPF"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -128,7 +130,7 @@ Public Class frmMAhTasasInteres
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
         Encabezado()
     End Sub
@@ -148,7 +150,7 @@ Public Class frmMAhTasasInteres
             frm.ShowDialog()
             ActualizarGrid()
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -164,7 +166,7 @@ Public Class frmMAhTasasInteres
                 ActualizarGrid()
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -178,7 +180,13 @@ Public Class frmMAhTasasInteres
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmMAhTasasInteres_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

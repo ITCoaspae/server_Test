@@ -9,7 +9,6 @@ Public Class frmMsCaLogin
     'Modificación 04/10/2013
     'Javier Martinez
     Dim asociados As New wrAsociados.wsLibAsoc
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnLogin1 As MetroFramework.Controls.MetroButton
     Dim bancos As New wrBancos.wsLibBancos
 
@@ -48,15 +47,13 @@ Public Class frmMsCaLogin
         Me.txtCajero = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbSucursales = New System.Windows.Forms.ComboBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogin1 = New MetroFramework.Controls.MetroButton()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 115)
+        Me.Label2.Location = New System.Drawing.Point(23, 125)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(105, 22)
         Me.Label2.TabIndex = 35
@@ -65,9 +62,9 @@ Public Class frmMsCaLogin
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(14, 61)
+        Me.Label1.Location = New System.Drawing.Point(23, 93)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 22)
+        Me.Label1.Size = New System.Drawing.Size(77, 22)
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Usuario:"
         '
@@ -75,7 +72,7 @@ Public Class frmMsCaLogin
         '
         Me.txtPassword.BackColor = System.Drawing.Color.White
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(18, 141)
+        Me.txtPassword.Location = New System.Drawing.Point(134, 125)
         Me.txtPassword.MaxLength = 10
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -86,18 +83,18 @@ Public Class frmMsCaLogin
         '
         Me.txtCajero.BackColor = System.Drawing.Color.White
         Me.txtCajero.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCajero.Location = New System.Drawing.Point(18, 87)
+        Me.txtCajero.Location = New System.Drawing.Point(134, 93)
         Me.txtCajero.MaxLength = 20
         Me.txtCajero.Name = "txtCajero"
-        Me.txtCajero.Size = New System.Drawing.Size(271, 26)
+        Me.txtCajero.Size = New System.Drawing.Size(269, 26)
         Me.txtCajero.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(14, 12)
+        Me.Label3.Location = New System.Drawing.Point(23, 60)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(105, 18)
+        Me.Label3.Size = New System.Drawing.Size(77, 18)
         Me.Label3.TabIndex = 36
         Me.Label3.Text = "Sucusal:"
         '
@@ -107,29 +104,14 @@ Public Class frmMsCaLogin
         Me.cbSucursales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSucursales.Enabled = False
         Me.cbSucursales.FormattingEnabled = True
-        Me.cbSucursales.Location = New System.Drawing.Point(18, 33)
+        Me.cbSucursales.Location = New System.Drawing.Point(134, 63)
         Me.cbSucursales.Name = "cbSucursales"
-        Me.cbSucursales.Size = New System.Drawing.Size(271, 24)
+        Me.cbSucursales.Size = New System.Drawing.Size(269, 24)
         Me.cbSucursales.TabIndex = 161
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Panel1.Controls.Add(Me.cbSucursales)
-        Me.Panel1.Controls.Add(Me.txtPassword)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.txtCajero)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(28, 73)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(298, 177)
-        Me.Panel1.TabIndex = 162
         '
         'btnLogin1
         '
-        Me.btnLogin1.Location = New System.Drawing.Point(236, 257)
+        Me.btnLogin1.Location = New System.Drawing.Point(313, 157)
         Me.btnLogin1.Name = "btnLogin1"
         Me.btnLogin1.Size = New System.Drawing.Size(90, 33)
         Me.btnLogin1.Style = MetroFramework.MetroColorStyle.Teal
@@ -143,9 +125,14 @@ Public Class frmMsCaLogin
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(354, 310)
+        Me.ClientSize = New System.Drawing.Size(433, 225)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.cbSucursales)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtCajero)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnLogin1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label3)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMsCaLogin"
@@ -155,9 +142,8 @@ Public Class frmMsCaLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Inicio de sesión Caja"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -320,7 +306,7 @@ Public Class frmMsCaLogin
                 Me.Dispose()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -369,7 +355,7 @@ Public Class frmMsCaLogin
     '        ofrm.ShowDialog()
     '        Me.txtCodSuc.Text = ofrm.Resultado.Trim
     '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '       MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
     '    End Try
     'End Sub
     '================================================================================

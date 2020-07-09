@@ -138,36 +138,36 @@ Public Class ConsultaGarantias
         Me.GroupBox4.Controls.Add(Me.lblMonto)
         Me.GroupBox4.Controls.Add(Me.lblConcedido)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox4.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(640, 48)
+        Me.GroupBox4.Size = New System.Drawing.Size(768, 55)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
         'lblPlazo
         '
         Me.lblPlazo.ForeColor = System.Drawing.Color.Teal
-        Me.lblPlazo.Location = New System.Drawing.Point(552, 16)
+        Me.lblPlazo.Location = New System.Drawing.Point(662, 18)
         Me.lblPlazo.Name = "lblPlazo"
-        Me.lblPlazo.Size = New System.Drawing.Size(64, 16)
+        Me.lblPlazo.Size = New System.Drawing.Size(77, 19)
         Me.lblPlazo.TabIndex = 3
         Me.lblPlazo.Text = "Plazo:"
         '
         'lblMonto
         '
         Me.lblMonto.ForeColor = System.Drawing.Color.Teal
-        Me.lblMonto.Location = New System.Drawing.Point(416, 16)
+        Me.lblMonto.Location = New System.Drawing.Point(499, 18)
         Me.lblMonto.Name = "lblMonto"
-        Me.lblMonto.Size = New System.Drawing.Size(120, 16)
+        Me.lblMonto.Size = New System.Drawing.Size(144, 19)
         Me.lblMonto.TabIndex = 2
         Me.lblMonto.Text = "Monto:"
         '
         'lblConcedido
         '
         Me.lblConcedido.ForeColor = System.Drawing.Color.Teal
-        Me.lblConcedido.Location = New System.Drawing.Point(8, 16)
+        Me.lblConcedido.Location = New System.Drawing.Point(10, 18)
         Me.lblConcedido.Name = "lblConcedido"
-        Me.lblConcedido.Size = New System.Drawing.Size(400, 24)
+        Me.lblConcedido.Size = New System.Drawing.Size(480, 28)
         Me.lblConcedido.TabIndex = 1
         Me.lblConcedido.Text = "Crédito concedido a:"
         '
@@ -178,12 +178,14 @@ Public Class ConsultaGarantias
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgGr.BackColor = System.Drawing.Color.White
-        Me.fgGr.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgGr.Location = New System.Drawing.Point(3, 37)
+        Me.fgGr.ColumnInfo = "10,0,0,0,0,105,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgGr.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.fgGr.Location = New System.Drawing.Point(4, 43)
         Me.fgGr.Name = "fgGr"
         Me.fgGr.Rows.Count = 1
-        Me.fgGr.Size = New System.Drawing.Size(622, 248)
-        Me.fgGr.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgGr.Styles"))
+        Me.fgGr.Rows.DefaultSize = 21
+        Me.fgGr.Size = New System.Drawing.Size(657, 263)
+        Me.fgGr.StyleInfo = resources.GetString("fgGr.StyleInfo")
         Me.fgGr.TabIndex = 4
         '
         'fgFd
@@ -193,12 +195,14 @@ Public Class ConsultaGarantias
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgFd.BackColor = System.Drawing.Color.White
-        Me.fgFd.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgFd.Location = New System.Drawing.Point(3, 37)
+        Me.fgFd.ColumnInfo = "10,0,0,0,0,105,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgFd.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.fgFd.Location = New System.Drawing.Point(4, 43)
         Me.fgFd.Name = "fgFd"
         Me.fgFd.Rows.Count = 1
-        Me.fgFd.Size = New System.Drawing.Size(622, 248)
-        Me.fgFd.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgFd.Styles"))
+        Me.fgFd.Rows.DefaultSize = 21
+        Me.fgFd.Size = New System.Drawing.Size(657, 263)
+        Me.fgFd.StyleInfo = resources.GetString("fgFd.StyleInfo")
         Me.fgFd.TabIndex = 5
         '
         'fgCd
@@ -208,19 +212,21 @@ Public Class ConsultaGarantias
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgCd.BackColor = System.Drawing.Color.White
-        Me.fgCd.ColumnInfo = "10,0,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgCd.Location = New System.Drawing.Point(3, 37)
+        Me.fgCd.ColumnInfo = "10,0,0,0,0,105,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.fgCd.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.fgCd.Location = New System.Drawing.Point(4, 43)
         Me.fgCd.Name = "fgCd"
         Me.fgCd.Rows.Count = 1
-        Me.fgCd.Size = New System.Drawing.Size(622, 248)
-        Me.fgCd.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgCd.Styles"))
+        Me.fgCd.Rows.DefaultSize = 21
+        Me.fgCd.Size = New System.Drawing.Size(750, 262)
+        Me.fgCd.StyleInfo = resources.GetString("fgCd.StyleInfo")
         Me.fgCd.TabIndex = 5
         '
         'btEditGr1
         '
-        Me.btEditGr1.Location = New System.Drawing.Point(3, 3)
+        Me.btEditGr1.Location = New System.Drawing.Point(4, 3)
         Me.btEditGr1.Name = "btEditGr1"
-        Me.btEditGr1.Size = New System.Drawing.Size(90, 28)
+        Me.btEditGr1.Size = New System.Drawing.Size(108, 33)
         Me.btEditGr1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditGr1.TabIndex = 185
         Me.btEditGr1.Text = "Mostrar"
@@ -230,9 +236,9 @@ Public Class ConsultaGarantias
         '
         'btConsultaGarantiasInt1
         '
-        Me.btConsultaGarantiasInt1.Location = New System.Drawing.Point(99, 3)
+        Me.btConsultaGarantiasInt1.Location = New System.Drawing.Point(119, 3)
         Me.btConsultaGarantiasInt1.Name = "btConsultaGarantiasInt1"
-        Me.btConsultaGarantiasInt1.Size = New System.Drawing.Size(107, 28)
+        Me.btConsultaGarantiasInt1.Size = New System.Drawing.Size(128, 33)
         Me.btConsultaGarantiasInt1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btConsultaGarantiasInt1.TabIndex = 186
         Me.btConsultaGarantiasInt1.Text = "Garantías Internas"
@@ -242,9 +248,9 @@ Public Class ConsultaGarantias
         '
         'btEditFd1
         '
-        Me.btEditFd1.Location = New System.Drawing.Point(3, 3)
+        Me.btEditFd1.Location = New System.Drawing.Point(4, 3)
         Me.btEditFd1.Name = "btEditFd1"
-        Me.btEditFd1.Size = New System.Drawing.Size(90, 28)
+        Me.btEditFd1.Size = New System.Drawing.Size(108, 33)
         Me.btEditFd1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditFd1.TabIndex = 186
         Me.btEditFd1.Text = "Mostrar"
@@ -254,9 +260,9 @@ Public Class ConsultaGarantias
         '
         'btEditCd1
         '
-        Me.btEditCd1.Location = New System.Drawing.Point(3, 3)
+        Me.btEditCd1.Location = New System.Drawing.Point(4, 3)
         Me.btEditCd1.Name = "btEditCd1"
-        Me.btEditCd1.Size = New System.Drawing.Size(90, 28)
+        Me.btEditCd1.Size = New System.Drawing.Size(108, 33)
         Me.btEditCd1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btEditCd1.TabIndex = 186
         Me.btEditCd1.Text = "Mostrar"
@@ -270,12 +276,12 @@ Public Class ConsultaGarantias
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(23, 117)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+        Me.MetroTabControl1.Location = New System.Drawing.Point(28, 135)
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 2
-        Me.MetroTabControl1.Size = New System.Drawing.Size(638, 332)
+        Me.MetroTabControl1.Size = New System.Drawing.Size(769, 359)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroTabControl1.TabIndex = 13
         Me.MetroTabControl1.UseSelectable = True
@@ -288,15 +294,15 @@ Public Class ConsultaGarantias
         Me.MetroTabPage1.Controls.Add(Me.btEditGr1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
         Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.HorizontalScrollbarSize = 10
+        Me.MetroTabPage1.HorizontalScrollbarSize = 12
         Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(630, 290)
+        Me.MetroTabPage1.Size = New System.Drawing.Size(668, 317)
         Me.MetroTabPage1.TabIndex = 0
         Me.MetroTabPage1.Text = "Garantías"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.VerticalScrollbarSize = 10
+        Me.MetroTabPage1.VerticalScrollbarSize = 12
         '
         'MetroTabPage2
         '
@@ -305,15 +311,15 @@ Public Class ConsultaGarantias
         Me.MetroTabPage2.Controls.Add(Me.btEditFd1)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
         Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.HorizontalScrollbarSize = 10
+        Me.MetroTabPage2.HorizontalScrollbarSize = 12
         Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(630, 290)
+        Me.MetroTabPage2.Size = New System.Drawing.Size(668, 317)
         Me.MetroTabPage2.TabIndex = 1
         Me.MetroTabPage2.Text = "Fiadores"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.VerticalScrollbarSize = 10
+        Me.MetroTabPage2.VerticalScrollbarSize = 12
         '
         'MetroTabPage3
         '
@@ -322,21 +328,21 @@ Public Class ConsultaGarantias
         Me.MetroTabPage3.Controls.Add(Me.btEditCd1)
         Me.MetroTabPage3.HorizontalScrollbarBarColor = True
         Me.MetroTabPage3.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage3.HorizontalScrollbarSize = 10
+        Me.MetroTabPage3.HorizontalScrollbarSize = 12
         Me.MetroTabPage3.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage3.Name = "MetroTabPage3"
-        Me.MetroTabPage3.Size = New System.Drawing.Size(630, 290)
+        Me.MetroTabPage3.Size = New System.Drawing.Size(761, 317)
         Me.MetroTabPage3.TabIndex = 2
         Me.MetroTabPage3.Text = "Codeudores"
         Me.MetroTabPage3.VerticalScrollbarBarColor = True
         Me.MetroTabPage3.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage3.VerticalScrollbarSize = 10
+        Me.MetroTabPage3.VerticalScrollbarSize = 12
         '
         'ConsultaGarantias
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(676, 490)
+        Me.ClientSize = New System.Drawing.Size(815, 541)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.Controls.Add(Me.GroupBox4)
         Me.MaximizeBox = False
@@ -417,7 +423,7 @@ Public Class ConsultaGarantias
             Me.fgGr.Cols.Item(6).Width = 77
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -439,7 +445,7 @@ Public Class ConsultaGarantias
                 ActualizaGridFd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -460,7 +466,7 @@ Public Class ConsultaGarantias
                 ActualizaGridCd()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -473,7 +479,7 @@ Public Class ConsultaGarantias
             ofrm.Nombre = vNombre
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -492,7 +498,7 @@ Public Class ConsultaGarantias
                 ActualizaGridGr()
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -508,7 +514,7 @@ Public Class ConsultaGarantias
             Me.fgFd.DataSource = ds.Tables(0)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -522,7 +528,7 @@ Public Class ConsultaGarantias
 
             Me.fgCd.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub

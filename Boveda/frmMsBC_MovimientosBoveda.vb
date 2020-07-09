@@ -420,6 +420,12 @@ Public Class frmMsBC_MovimientosBoveda
         End If
     End Sub
 
+    Private Sub frmMsBC_MovimientosBoveda_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
 #End Region
 
 End Class

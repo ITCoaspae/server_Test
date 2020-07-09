@@ -110,9 +110,9 @@ Public Class frmMsDetReferencia
         Me.GroupBox2.Controls.Add(Me.Label22)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 253)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 292)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(502, 157)
+        Me.GroupBox2.Size = New System.Drawing.Size(598, 181)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del Trabajo"
@@ -120,19 +120,19 @@ Public Class frmMsDetReferencia
         'txtCelular
         '
         Me.txtCelular.BackColor = System.Drawing.Color.White
-        Me.txtCelular.Location = New System.Drawing.Point(398, 124)
+        Me.txtCelular.Location = New System.Drawing.Point(478, 143)
         Me.txtCelular.Mask = "0000-0000"
         Me.txtCelular.Name = "txtCelular"
-        Me.txtCelular.Size = New System.Drawing.Size(88, 20)
+        Me.txtCelular.Size = New System.Drawing.Size(105, 23)
         Me.txtCelular.TabIndex = 89
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(338, 128)
+        Me.Label2.Location = New System.Drawing.Point(406, 148)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 16)
+        Me.Label2.Size = New System.Drawing.Size(64, 18)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Celular:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -140,19 +140,19 @@ Public Class frmMsDetReferencia
         'txtTelOfic
         '
         Me.txtTelOfic.BackColor = System.Drawing.Color.White
-        Me.txtTelOfic.Location = New System.Drawing.Point(110, 124)
+        Me.txtTelOfic.Location = New System.Drawing.Point(132, 143)
         Me.txtTelOfic.Mask = "0000-0000"
         Me.txtTelOfic.Name = "txtTelOfic"
-        Me.txtTelOfic.Size = New System.Drawing.Size(101, 20)
+        Me.txtTelOfic.Size = New System.Drawing.Size(121, 23)
         Me.txtTelOfic.TabIndex = 88
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(8, 121)
+        Me.Label15.Location = New System.Drawing.Point(10, 140)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(72, 33)
+        Me.Label15.Size = New System.Drawing.Size(86, 38)
         Me.Label15.TabIndex = 77
         Me.Label15.Text = "Teléfono " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de Oficina:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -161,20 +161,20 @@ Public Class frmMsDetReferencia
         '
         Me.txtCargo.BackColor = System.Drawing.Color.White
         Me.txtCargo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCargo.Location = New System.Drawing.Point(110, 98)
+        Me.txtCargo.Location = New System.Drawing.Point(132, 113)
         Me.txtCargo.MaxLength = 50
         Me.txtCargo.Name = "txtCargo"
         Me.txtCargo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtCargo.Size = New System.Drawing.Size(376, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(451, 23)
         Me.txtCargo.TabIndex = 2
         '
         'Label26
         '
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(8, 98)
+        Me.Label26.Location = New System.Drawing.Point(10, 113)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(40, 16)
+        Me.Label26.Size = New System.Drawing.Size(48, 19)
         Me.Label26.TabIndex = 56
         Me.Label26.Text = "Cargo:"
         '
@@ -182,9 +182,9 @@ Public Class frmMsDetReferencia
         '
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(8, 50)
+        Me.Label25.Location = New System.Drawing.Point(10, 58)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(64, 16)
+        Me.Label25.Size = New System.Drawing.Size(76, 18)
         Me.Label25.TabIndex = 55
         Me.Label25.Text = "Dirección:"
         '
@@ -192,32 +192,32 @@ Public Class frmMsDetReferencia
         '
         Me.txtLugTrab.BackColor = System.Drawing.Color.White
         Me.txtLugTrab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLugTrab.Location = New System.Drawing.Point(110, 21)
+        Me.txtLugTrab.Location = New System.Drawing.Point(132, 24)
         Me.txtLugTrab.MaxLength = 100
         Me.txtLugTrab.Name = "txtLugTrab"
         Me.txtLugTrab.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLugTrab.Size = New System.Drawing.Size(376, 20)
+        Me.txtLugTrab.Size = New System.Drawing.Size(451, 23)
         Me.txtLugTrab.TabIndex = 0
         '
         'txtDirTrab
         '
         Me.txtDirTrab.BackColor = System.Drawing.Color.White
         Me.txtDirTrab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDirTrab.Location = New System.Drawing.Point(110, 47)
+        Me.txtDirTrab.Location = New System.Drawing.Point(132, 54)
         Me.txtDirTrab.MaxLength = 255
         Me.txtDirTrab.Multiline = True
         Me.txtDirTrab.Name = "txtDirTrab"
         Me.txtDirTrab.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDirTrab.Size = New System.Drawing.Size(376, 45)
+        Me.txtDirTrab.Size = New System.Drawing.Size(451, 52)
         Me.txtDirTrab.TabIndex = 1
         '
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(8, 24)
+        Me.Label22.Location = New System.Drawing.Point(10, 28)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(96, 16)
+        Me.Label22.Size = New System.Drawing.Size(115, 18)
         Me.Label22.TabIndex = 48
         Me.Label22.Text = "Lugar de trabajo:"
         '
@@ -243,9 +243,9 @@ Public Class frmMsDetReferencia
         Me.gbDatos.Controls.Add(Me.cbParentesco)
         Me.gbDatos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbDatos.ForeColor = System.Drawing.Color.Black
-        Me.gbDatos.Location = New System.Drawing.Point(23, 63)
+        Me.gbDatos.Location = New System.Drawing.Point(28, 73)
         Me.gbDatos.Name = "gbDatos"
-        Me.gbDatos.Size = New System.Drawing.Size(502, 184)
+        Me.gbDatos.Size = New System.Drawing.Size(598, 212)
         Me.gbDatos.TabIndex = 0
         Me.gbDatos.TabStop = False
         Me.gbDatos.Text = "Datos de la Referencia"
@@ -253,28 +253,28 @@ Public Class frmMsDetReferencia
         'txtTelCasa
         '
         Me.txtTelCasa.BackColor = System.Drawing.Color.White
-        Me.txtTelCasa.Location = New System.Drawing.Point(86, 73)
+        Me.txtTelCasa.Location = New System.Drawing.Point(103, 84)
         Me.txtTelCasa.Mask = "0000-0000"
         Me.txtTelCasa.Name = "txtTelCasa"
-        Me.txtTelCasa.Size = New System.Drawing.Size(88, 20)
+        Me.txtTelCasa.Size = New System.Drawing.Size(106, 23)
         Me.txtTelCasa.TabIndex = 87
         '
         'cbPar
         '
         Me.cbPar.BackColor = System.Drawing.Color.White
         Me.cbPar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbPar.Location = New System.Drawing.Point(86, 152)
+        Me.cbPar.Location = New System.Drawing.Point(103, 175)
         Me.cbPar.Name = "cbPar"
-        Me.cbPar.Size = New System.Drawing.Size(396, 22)
+        Me.cbPar.Size = New System.Drawing.Size(475, 24)
         Me.cbPar.TabIndex = 86
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(8, 153)
+        Me.Label1.Location = New System.Drawing.Point(10, 177)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 16)
+        Me.Label1.Size = New System.Drawing.Size(86, 18)
         Me.Label1.TabIndex = 85
         Me.Label1.Text = "*Parentesco:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -282,28 +282,28 @@ Public Class frmMsDetReferencia
         'txtApe2
         '
         Me.txtApe2.BackColor = System.Drawing.Color.White
-        Me.txtApe2.Location = New System.Drawing.Point(322, 45)
+        Me.txtApe2.Location = New System.Drawing.Point(386, 52)
         Me.txtApe2.MaxLength = 25
         Me.txtApe2.Name = "txtApe2"
-        Me.txtApe2.Size = New System.Drawing.Size(160, 20)
+        Me.txtApe2.Size = New System.Drawing.Size(192, 23)
         Me.txtApe2.TabIndex = 2
         '
         'txtApe1
         '
         Me.txtApe1.BackColor = System.Drawing.Color.White
-        Me.txtApe1.Location = New System.Drawing.Point(86, 44)
+        Me.txtApe1.Location = New System.Drawing.Point(103, 51)
         Me.txtApe1.MaxLength = 25
         Me.txtApe1.Name = "txtApe1"
-        Me.txtApe1.Size = New System.Drawing.Size(160, 20)
+        Me.txtApe1.Size = New System.Drawing.Size(192, 23)
         Me.txtApe1.TabIndex = 1
         '
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(252, 47)
+        Me.Label9.Location = New System.Drawing.Point(302, 54)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 16)
+        Me.Label9.Size = New System.Drawing.Size(77, 19)
         Me.Label9.TabIndex = 84
         Me.Label9.Text = "Apellido 2:"
         '
@@ -311,9 +311,9 @@ Public Class frmMsDetReferencia
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(8, 45)
+        Me.Label8.Location = New System.Drawing.Point(10, 52)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 16)
+        Me.Label8.Size = New System.Drawing.Size(76, 18)
         Me.Label8.TabIndex = 83
         Me.Label8.Text = "*Apellido 1:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -321,19 +321,19 @@ Public Class frmMsDetReferencia
         'txtNombres
         '
         Me.txtNombres.BackColor = System.Drawing.Color.White
-        Me.txtNombres.Location = New System.Drawing.Point(86, 18)
+        Me.txtNombres.Location = New System.Drawing.Point(103, 21)
         Me.txtNombres.MaxLength = 50
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(396, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(475, 23)
         Me.txtNombres.TabIndex = 0
         '
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(8, 19)
+        Me.Label10.Location = New System.Drawing.Point(10, 22)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 16)
+        Me.Label10.Size = New System.Drawing.Size(86, 18)
         Me.Label10.TabIndex = 82
         Me.Label10.Text = "*Nombres:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -341,31 +341,31 @@ Public Class frmMsDetReferencia
         'txtCorreo
         '
         Me.txtCorreo.BackColor = System.Drawing.Color.White
-        Me.txtCorreo.Location = New System.Drawing.Point(288, 74)
+        Me.txtCorreo.Location = New System.Drawing.Point(346, 85)
         Me.txtCorreo.MaxLength = 50
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtCorreo.Size = New System.Drawing.Size(194, 20)
+        Me.txtCorreo.Size = New System.Drawing.Size(232, 23)
         Me.txtCorreo.TabIndex = 6
         '
         'txtDir
         '
         Me.txtDir.BackColor = System.Drawing.Color.White
-        Me.txtDir.Location = New System.Drawing.Point(86, 99)
+        Me.txtDir.Location = New System.Drawing.Point(103, 114)
         Me.txtDir.MaxLength = 255
         Me.txtDir.Multiline = True
         Me.txtDir.Name = "txtDir"
         Me.txtDir.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDir.Size = New System.Drawing.Size(396, 48)
+        Me.txtDir.Size = New System.Drawing.Size(475, 56)
         Me.txtDir.TabIndex = 4
         '
         'Label14
         '
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(8, 67)
+        Me.Label14.Location = New System.Drawing.Point(10, 77)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(64, 31)
+        Me.Label14.Size = New System.Drawing.Size(76, 36)
         Me.Label14.TabIndex = 69
         Me.Label14.Text = "Teléfono " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Casa:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -374,9 +374,9 @@ Public Class frmMsDetReferencia
         '
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(8, 100)
+        Me.Label13.Location = New System.Drawing.Point(10, 115)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 16)
+        Me.Label13.Size = New System.Drawing.Size(67, 19)
         Me.Label13.TabIndex = 68
         Me.Label13.Text = "Dirección:"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -385,9 +385,9 @@ Public Class frmMsDetReferencia
         '
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.Black
-        Me.Label33.Location = New System.Drawing.Point(188, 74)
+        Me.Label33.Location = New System.Drawing.Point(226, 85)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(101, 19)
+        Me.Label33.Size = New System.Drawing.Size(121, 22)
         Me.Label33.TabIndex = 78
         Me.Label33.Text = "Correo electrónico:"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -395,17 +395,17 @@ Public Class frmMsDetReferencia
         'cbParentesco
         '
         Me.cbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbParentesco.Location = New System.Drawing.Point(86, 152)
+        Me.cbParentesco.Location = New System.Drawing.Point(103, 175)
         Me.cbParentesco.Name = "cbParentesco"
-        Me.cbParentesco.Size = New System.Drawing.Size(192, 22)
+        Me.cbParentesco.Size = New System.Drawing.Size(231, 24)
         Me.cbParentesco.TabIndex = 5
         Me.cbParentesco.Visible = False
         '
         'btnGuardar1
         '
-        Me.btnGuardar1.Location = New System.Drawing.Point(438, 416)
+        Me.btnGuardar1.Location = New System.Drawing.Point(526, 480)
         Me.btnGuardar1.Name = "btnGuardar1"
-        Me.btnGuardar1.Size = New System.Drawing.Size(87, 28)
+        Me.btnGuardar1.Size = New System.Drawing.Size(104, 32)
         Me.btnGuardar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnGuardar1.TabIndex = 133
         Me.btnGuardar1.Text = "&Guardar"
@@ -418,8 +418,8 @@ Public Class frmMsDetReferencia
         '
         'frmMsDetReferencia
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(548, 457)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(654, 585)
         Me.Controls.Add(Me.btnGuardar1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.gbDatos)
@@ -427,6 +427,7 @@ Public Class frmMsDetReferencia
         Me.MinimizeBox = False
         Me.Name = "frmMsDetReferencia"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Referencias Personales"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -584,4 +585,10 @@ Public Class frmMsDetReferencia
         End If
         Return valido
     End Function
+
+    Private Sub frmMsDetReferencia_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

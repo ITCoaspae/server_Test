@@ -2,12 +2,14 @@ Public Class frmMPrestamos
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
     Dim ofrm2 As New frmCRTablaAmort
+    Private Seguridad As New wrAdmin.wsLibAdmin
 
     Private dsPrestamo As DataSet, vIdPrestamo As String, vIdAmortiza As String, vFechaOtorgamiento As Date
-    Private pMonto As Double, pMontoGarantia As Double, pTasa As Double, pPlazo As Integer, pModulo As Modulo
+    Private pMonto As Double, pMontoGarantia As Double, pTasa As Double, pPlazo As Integer, pModulo As Modulo, pEditar As Integer
     Friend WithEvents lblEstado As Label
     Friend WithEvents btnModificar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnAgregar1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnBuscar1 As MetroFramework.Controls.MetroButton
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -66,6 +68,7 @@ Public Class frmMPrestamos
         Me.rbCodigo = New System.Windows.Forms.RadioButton()
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         CType(Me.C1fgrdPrestamos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.txtNoSolicitud, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +90,7 @@ Public Class frmMPrestamos
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
         Me.C1fgrdPrestamos.Rows.DefaultSize = 21
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(797, 294)
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(796, 293)
         Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 6
         '
@@ -150,7 +153,7 @@ Public Class frmMPrestamos
         Me.txtNoSolicitud.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.txtNoSolicitud.Location = New System.Drawing.Point(338, 61)
         Me.txtNoSolicitud.Name = "txtNoSolicitud"
-        Me.txtNoSolicitud.Size = New System.Drawing.Size(135, 23)
+        Me.txtNoSolicitud.Size = New System.Drawing.Size(135, 27)
         Me.txtNoSolicitud.TabIndex = 10
         Me.txtNoSolicitud.Tag = Nothing
         Me.txtNoSolicitud.Value = 0
@@ -176,7 +179,7 @@ Public Class frmMPrestamos
         Me.txtDui.Location = New System.Drawing.Point(73, 27)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(135, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
@@ -192,7 +195,7 @@ Public Class frmMPrestamos
         Me.txtNoSocio.Location = New System.Drawing.Point(631, 61)
         Me.txtNoSocio.MaxLength = 10
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(135, 23)
+        Me.txtNoSocio.Size = New System.Drawing.Size(135, 27)
         Me.txtNoSocio.TabIndex = 3
         Me.txtNoSocio.Tag = Nothing
         Me.txtNoSocio.Value = 0
@@ -297,11 +300,26 @@ Public Class frmMPrestamos
         Me.btnAgregar1.UseSelectable = True
         Me.btnAgregar1.UseStyleColors = True
         '
+        'MetroButton1
+        '
+        Me.MetroButton1.Enabled = False
+        Me.MetroButton1.Location = New System.Drawing.Point(276, 219)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(162, 33)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroButton1.TabIndex = 239
+        Me.MetroButton1.Text = "Modificar Saldos"
+        Me.MetroButton1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroButton1.UseSelectable = True
+        Me.MetroButton1.UseStyleColors = True
+        Me.MetroButton1.Visible = False
+        '
         'frmMPrestamos
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
         Me.ClientSize = New System.Drawing.Size(853, 617)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.btnModificar1)
         Me.Controls.Add(Me.btnAgregar1)
         Me.Controls.Add(Me.GroupBox2)
@@ -354,8 +372,24 @@ Public Class frmMPrestamos
             dsPrest = oPrestamos.CargarListaPrestamosxFiltro("a.CodPrestamo,a.DUI,b.Nombres+ ' ' + b.Apellido1 + ' ' + b.Apellido2 as Nombres,a.CodAnteriorPrestamo,a.NumSolicitud,a.CodTipoCredito,a.NoSocio,a.IdMovimiento,a.Num_Partida,a.Cuota,a.CuotaTotal,a.Monto,a.Monto_Garantia,a.Tasa_Interes,a.Tasa_Interes_Mora,a.PlazoMeses,a.NoActa,a.FechaActa,a.ArchivoActa,a.FechaOtorgamiento,FechaPrimeraCuota,FechaVencimiento,CodTablaAmortiza,GeneraReserva,CodEmpleadoCobro,Categoria,CodTipoPago,DiaCobro,CodPagaduria,CodRuta,CodEstadoPrestamo,FechaUltimoPago,FechaInicioProvision,Saldo_Capital,Intereses_pagados,SaldoDia_Interes,SaldoDia_CapitalMora,SaldoDia_InteresMora,SaldoDia_SeguroDeuda,SaldoDia_SeguroDaniosyLA,SaldoDia_SeguroVida,SaldoDia_SeguroDesempleo,SaldoDia_Aportacion,SaldoDia_Ahorro,SaldoDia_ComisionManejo,SaldoDia_Otros,DiasMora,a.Estado,Baja,a.Tipo,Digito,Refinanciamiento,MontoRefinanciamiento,FechaUltProv", False, "FechaOtorgamiento>='" & Now.ToShortDateString & "' and FechaOtorgamiento<='" & Now.ToShortDateString & "'", sUsuario, sPassword, sSucursal)
             C1fgrdPrestamos.Clear(C1.Win.C1FlexGrid.ClearFlags.UserData)
             C1fgrdPrestamos.DataSource = dsPrest.Tables(0)
+
+            ' Activacion de Modificacion directa a PRPrestamos
+            ' Cambio Desde 20/04/2020
+            'PROG01
+            Dim dtRoles As New DataSet
+            dtRoles = Seguridad.ConsultarRolesUsuario(sUsuario, "", 2)
+            For I As Integer = 0 To dtRoles.Tables(0).Rows.Count - 1
+                If Seguridad.ConsultarPermisoProcesos("CRX009", dtRoles.Tables(0).Rows(I).Item("CODROL").ToString.Trim, 4) Then
+                    MetroButton1.Enabled = True
+                    MetroButton1.Visible = True
+                Else
+                    MetroButton1.Enabled = False
+                    MetroButton1.Visible = False
+                End If
+            Next
+            '--------------------------------------------------------------------------------------------------------------
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -450,6 +484,7 @@ Public Class frmMPrestamos
         Dim oPrestamos As New wrPrestamo.wsLibPrest, oAsoc As New wrAsociados.wsLibAsoc
         Dim dsPrest As New DataSet, ds As New DataSet, dr As DataRow, pFiltro As String
         Try
+
             If Me.rbCodigo.Checked = True Then
                 dsPrest = oPrestamos.CargarListaPrestamosxFiltro("a.CodPrestamo,a.DUI,b.Nombres+ ' ' + b.Apellido1 + ' ' + b.Apellido2 as Nombres,a.CodAnteriorPrestamo,a.NumSolicitud,a.CodTipoCredito,a.NoSocio,a.IdMovimiento,a.Num_Partida,a.Cuota,a.CuotaTotal,a.Monto,a.Monto_Garantia,a.Tasa_Interes,a.Tasa_Interes_Mora,a.PlazoMeses,a.NoActa,a.FechaActa,a.ArchivoActa,a.FechaOtorgamiento,FechaPrimeraCuota,FechaVencimiento,CodTablaAmortiza,GeneraReserva,CodEmpleadoCobro,Categoria,CodTipoPago,DiaCobro,CodPagaduria,CodRuta,CodEstadoPrestamo,FechaUltimoPago,FechaInicioProvision,Saldo_Capital,Intereses_pagados,SaldoDia_Interes,SaldoDia_CapitalMora,SaldoDia_InteresMora,SaldoDia_SeguroDeuda,SaldoDia_SeguroDaniosyLA,SaldoDia_SeguroVida,SaldoDia_SeguroDesempleo,SaldoDia_Aportacion,SaldoDia_Ahorro,SaldoDia_ComisionManejo,SaldoDia_Otros,DiasMora,a.Estado,Baja,a.Tipo,Digito,Refinanciamiento,MontoRefinanciamiento,FechaUltProv", False, "a.CodPrestamo='" & Me.txtdelCodPrest.Text.Trim & "'", sUsuario, sPassword, sSucursal)
             ElseIf Me.rbNoSocio.Checked = True Then
@@ -466,7 +501,6 @@ Public Class frmMPrestamos
                 ElseIf cbNombres.SelectedIndex = 2 Then
                     ds = oAsoc.ConsultarAsociado("Dui", "Nombres like '" & Trim(txtNombres.Text) & "%'", "Apellido1", sUsuario, sPassword, sSucursal)
                 End If
-                pFiltro = ""
                 For Each dr In ds.Tables(0).Rows
                     If pFiltro.Trim = "" Then
                         pFiltro = "a.Dui='" & dr("Dui") & "'"
@@ -485,7 +519,7 @@ Public Class frmMPrestamos
             C1fgrdPrestamos.DataSource = dsPrest.Tables(0)
             C1fgrdPrestamos.Cols.Item(0).Width = 30
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -494,6 +528,7 @@ Public Class frmMPrestamos
         Try
 
             Dim ofrm As New frmMsCRDetPrestamo
+            pEditar = 0
             If Me.pModulo = Modulo.Creditos Then
                 ofrm.btNewCd1.Enabled = False
                 ofrm.btEditCd1.Enabled = False
@@ -515,7 +550,47 @@ Public Class frmMPrestamos
             'ofrm.TopMost = True
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        Try
+
+            Dim ofrm As New frmMsCRDetPrestamo
+            If Me.pModulo = Modulo.Creditos Then
+                ofrm.btNewCd1.Enabled = False
+                ofrm.btEditCd1.Enabled = False
+                ofrm.btDelCd1.Visible = False
+                ofrm.btNewGr1.Enabled = False
+                ofrm.btEditGr1.Enabled = False
+                ofrm.btDelGr1.Visible = False
+                ofrm.btNewFd1.Enabled = False
+                ofrm.btEditFd1.Enabled = False
+                ofrm.btDelFd1.Visible = False
+                ofrm.SaveButton.Visible = True
+                ofrm.SaveButton.Enabled = True
+                ofrm.txtSaldoDiaInteres.ReadOnly = False
+                ofrm.txtSaldoDiaCapitalMora.ReadOnly = False
+                ofrm.txtSaldoDiaInteresMora.ReadOnly = False
+                ofrm.txtSaldoDiaSegDeuda.ReadOnly = False
+                ofrm.txtSaldoDiaAhorro.ReadOnly = False
+                ofrm.txtSaldoDiaSegDanios.ReadOnly = False
+                ofrm.txtSaldoDiaComision.ReadOnly = False
+                ofrm.txtSaldoDiaAportacion.ReadOnly = False
+
+            ElseIf Me.pModulo = Modulo.Garantias Then
+                ofrm.btnAsinaTA1.Visible = False
+            End If
+            If Me.IdPrestamo Is Nothing Then Exit Sub
+            If Me.IdPrestamo.Trim = "" Then Exit Sub
+            ofrm.IdPrestamo = Me.IdPrestamo.Trim
+            'luis alvarenga
+            ofrm2.pNombre = C1fgrdPrestamos.Item(C1fgrdPrestamos.Row, "Nombres")
+            'ofrm.TopMost = True
+            ofrm.ShowDialog()
+        Catch ex As Exception
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -581,7 +656,7 @@ Public Class frmMPrestamos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

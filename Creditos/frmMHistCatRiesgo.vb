@@ -73,11 +73,12 @@ Public Class frmMHistCatRiesgo
         Me.C1fgrdPrestamos.AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
         Me.C1fgrdPrestamos.BackColor = System.Drawing.Color.White
         Me.C1fgrdPrestamos.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:21;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(23, 183)
+        Me.C1fgrdPrestamos.Location = New System.Drawing.Point(28, 211)
         Me.C1fgrdPrestamos.Name = "C1fgrdPrestamos"
         Me.C1fgrdPrestamos.Rows.Count = 2
-        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(651, 155)
-        Me.C1fgrdPrestamos.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fgrdPrestamos.Styles"))
+        Me.C1fgrdPrestamos.Rows.DefaultSize = 21
+        Me.C1fgrdPrestamos.Size = New System.Drawing.Size(781, 206)
+        Me.C1fgrdPrestamos.StyleInfo = resources.GetString("C1fgrdPrestamos.StyleInfo")
         Me.C1fgrdPrestamos.TabIndex = 6
         '
         'GroupBox2
@@ -97,18 +98,18 @@ Public Class frmMHistCatRiesgo
         Me.GroupBox2.Controls.Add(Me.rbDui)
         Me.GroupBox2.Controls.Add(Me.rbCodigo)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(649, 114)
+        Me.GroupBox2.Size = New System.Drawing.Size(778, 131)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscar por filtro:"
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(92, 80)
+        Me.MetroButton1.Location = New System.Drawing.Point(110, 92)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(140, 28)
+        Me.MetroButton1.Size = New System.Drawing.Size(168, 33)
         Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroButton1.TabIndex = 231
         Me.MetroButton1.Text = "&Generar Reporte"
@@ -118,9 +119,9 @@ Public Class frmMHistCatRiesgo
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(11, 80)
+        Me.btnMostrar1.Location = New System.Drawing.Point(13, 92)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 33)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 230
         Me.btnMostrar1.Text = "Mostrar"
@@ -131,16 +132,16 @@ Public Class frmMHistCatRiesgo
         'txtCat
         '
         Me.txtCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCat.Location = New System.Drawing.Point(526, 20)
+        Me.txtCat.Location = New System.Drawing.Point(631, 23)
         Me.txtCat.Name = "txtCat"
-        Me.txtCat.Size = New System.Drawing.Size(112, 20)
+        Me.txtCat.Size = New System.Drawing.Size(135, 22)
         Me.txtCat.TabIndex = 4
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(8, 24)
+        Me.Label1.Location = New System.Drawing.Point(10, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 16)
+        Me.Label1.Size = New System.Drawing.Size(192, 18)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Seleccione el año de consulta:"
         '
@@ -148,37 +149,37 @@ Public Class frmMHistCatRiesgo
         '
         Me.dtpFecha.CustomFormat = "yyyy"
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFecha.Location = New System.Drawing.Point(174, 20)
+        Me.dtpFecha.Location = New System.Drawing.Point(209, 23)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.ShowUpDown = True
-        Me.dtpFecha.Size = New System.Drawing.Size(56, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(67, 22)
         Me.dtpFecha.TabIndex = 0
         '
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(292, 20)
+        Me.txtDui.Location = New System.Drawing.Point(350, 23)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 2
         Me.txtDui.Tag = Nothing
         '
         'txtNombres
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombres.Location = New System.Drawing.Point(236, 48)
+        Me.txtNombres.Location = New System.Drawing.Point(283, 55)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(168, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(202, 22)
         Me.txtNombres.TabIndex = 7
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(11, 47)
+        Me.rbNombres.Location = New System.Drawing.Point(13, 54)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(73, 16)
+        Me.rbNombres.Size = New System.Drawing.Size(88, 19)
         Me.rbNombres.TabIndex = 5
         Me.rbNombres.Text = "N&ombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -187,18 +188,18 @@ Public Class frmMHistCatRiesgo
         '
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(90, 47)
+        Me.cbNombres.Location = New System.Drawing.Point(108, 54)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(140, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(168, 24)
         Me.cbNombres.TabIndex = 6
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
         Me.rbNoSocio.ForeColor = System.Drawing.Color.Black
-        Me.rbNoSocio.Location = New System.Drawing.Point(410, 22)
+        Me.rbNoSocio.Location = New System.Drawing.Point(492, 25)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(110, 16)
+        Me.rbNoSocio.Size = New System.Drawing.Size(132, 19)
         Me.rbNoSocio.TabIndex = 3
         Me.rbNoSocio.Text = "Categoría Riesgo"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -206,17 +207,17 @@ Public Class frmMHistCatRiesgo
         'txtdelCodPrest
         '
         Me.txtdelCodPrest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtdelCodPrest.Location = New System.Drawing.Point(526, 48)
+        Me.txtdelCodPrest.Location = New System.Drawing.Point(631, 55)
         Me.txtdelCodPrest.Name = "txtdelCodPrest"
-        Me.txtdelCodPrest.Size = New System.Drawing.Size(112, 20)
+        Me.txtdelCodPrest.Size = New System.Drawing.Size(135, 22)
         Me.txtdelCodPrest.TabIndex = 9
         '
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(236, 19)
+        Me.rbDui.Location = New System.Drawing.Point(283, 22)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(50, 24)
+        Me.rbDui.Size = New System.Drawing.Size(60, 28)
         Me.rbDui.TabIndex = 1
         Me.rbDui.Text = "DUI:"
         Me.rbDui.UseVisualStyleBackColor = False
@@ -225,9 +226,9 @@ Public Class frmMHistCatRiesgo
         '
         Me.rbCodigo.BackColor = System.Drawing.Color.White
         Me.rbCodigo.Checked = True
-        Me.rbCodigo.Location = New System.Drawing.Point(410, 43)
+        Me.rbCodigo.Location = New System.Drawing.Point(492, 50)
         Me.rbCodigo.Name = "rbCodigo"
-        Me.rbCodigo.Size = New System.Drawing.Size(74, 24)
+        Me.rbCodigo.Size = New System.Drawing.Size(89, 27)
         Me.rbCodigo.TabIndex = 8
         Me.rbCodigo.TabStop = True
         Me.rbCodigo.Text = "Préstamo"
@@ -235,9 +236,9 @@ Public Class frmMHistCatRiesgo
         '
         'frmMHistCatRiesgo
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(697, 387)
+        Me.ClientSize = New System.Drawing.Size(836, 474)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.C1fgrdPrestamos)
         Me.Name = "frmMHistCatRiesgo"
@@ -295,7 +296,7 @@ Public Class frmMHistCatRiesgo
             End If
             Me.C1fgrdPrestamos.DataSource = ds.Tables("Datos")
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -304,7 +305,7 @@ Public Class frmMHistCatRiesgo
             Dim frm As New frmVisor(ds, 198, 0)
             frm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

@@ -1,7 +1,7 @@
 Public Class frmListadoCreditoSinPagoXGestion
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-
+    Dim credito As New wrCredito.wsLibCred
 #Region " Código generado por el Diseñador de Windows Forms "
 
     Public Sub New()
@@ -159,10 +159,10 @@ Public Class frmListadoCreditoSinPagoXGestion
     Private Sub txtCodGestor_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodGestor.DoubleClick
         Dim ofrm As New frmAGenerico
         ofrm.Text = "Buscar Gestor"
-        Dim oPerif As wrCredito.wsLibCred, ds As New Data.DataSet
+        Dim ds As New DataSet
         Try
-            oPerif = New wrCredito.wsLibCred
-            ds = oPerif.ConsultarGestores("*", "", "CodGestor", sUsuario, sPassword, sSucursal)
+
+            ds = credito.ConsultarGestores("*", "", "CodGestor", sUsuario, sPassword, sSucursal)
             ofrm.Datos = ds
             ofrm.ColSeleccion = 0
             ofrm.RefrescarGrid()
@@ -182,14 +182,14 @@ Public Class frmListadoCreditoSinPagoXGestion
 
     Private Sub btProcesar1_Click(sender As Object, e As EventArgs) Handles btProcesar1.Click
         Dim ds As New Data.DataSet
-        Dim oItem As New wrCredito.wsLibCred
+
         Dim pAceptada As Boolean = False
         Try
-            ds = oItem.CreditosSinPagoMesXGestionCredito(Me.chkTodos.Checked, Me.txtCodGestor.Text, Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
+            ds = credito.CreditosSinPagoMesXGestionCredito(Me.chkTodos.Checked, Me.txtCodGestor.Text, Me.dtpFecha.Value, Me.dtpFecha2.Value, sUsuario, sPassword, sSucursal)
             Dim ofrm As New frmVisor(ds, 40, 0)
             ofrm.ShowDialog()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

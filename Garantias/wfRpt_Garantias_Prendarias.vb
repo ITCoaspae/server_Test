@@ -31,7 +31,7 @@ Public Class wfRpt_Garantias_Prendarias
         Try
             LLENAR_RPT(Format(Me.dtFECHAINICIO.Value, "SHORT DATE"), Format(Me.dtFECHAFIN.Value, "SHORT DATE"))
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

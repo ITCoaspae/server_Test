@@ -49,18 +49,19 @@ Public Class frmMCrTipoGarantia
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fgTipoGarantia.BackColor = System.Drawing.Color.White
         Me.fgTipoGarantia.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9) & "1{Width:167;}" & Global.Microsoft.VisualBasic.ChrW(9) & "2{Width:178;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.fgTipoGarantia.Location = New System.Drawing.Point(23, 97)
+        Me.fgTipoGarantia.Location = New System.Drawing.Point(28, 112)
         Me.fgTipoGarantia.Name = "fgTipoGarantia"
         Me.fgTipoGarantia.Rows.Count = 2
-        Me.fgTipoGarantia.Size = New System.Drawing.Size(532, 193)
-        Me.fgTipoGarantia.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("fgTipoGarantia.Styles"))
+        Me.fgTipoGarantia.Rows.DefaultSize = 21
+        Me.fgTipoGarantia.Size = New System.Drawing.Size(795, 358)
+        Me.fgTipoGarantia.StyleInfo = resources.GetString("fgTipoGarantia.StyleInfo")
         Me.fgTipoGarantia.TabIndex = 23
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 63)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 73)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 211
         Me.btnConsultar1.Text = "Consultar"
@@ -70,9 +71,9 @@ Public Class frmMCrTipoGarantia
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 63)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 73)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 210
         Me.btnEliminar1.Text = "Eliminar"
@@ -82,9 +83,9 @@ Public Class frmMCrTipoGarantia
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 63)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 73)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 209
         Me.btnModificar1.Text = "Modificar"
@@ -94,9 +95,9 @@ Public Class frmMCrTipoGarantia
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 63)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 73)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 208
         Me.btnAgregar1.Text = "Agregar"
@@ -106,9 +107,9 @@ Public Class frmMCrTipoGarantia
         '
         'frmMCrTipoGarantia
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(578, 345)
+        Me.ClientSize = New System.Drawing.Size(851, 533)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -139,7 +140,7 @@ Public Class frmMCrTipoGarantia
             fgTipoGarantia.Cols.Item(1).Width = 77
             fgTipoGarantia.Cols.Item(2).Width = 150
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -155,7 +156,7 @@ Public Class frmMCrTipoGarantia
             frm.ShowDialog()
             ActualizaGrid()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -173,7 +174,7 @@ Public Class frmMCrTipoGarantia
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -187,7 +188,7 @@ Public Class frmMCrTipoGarantia
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -207,7 +208,7 @@ Public Class frmMCrTipoGarantia
             End If
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

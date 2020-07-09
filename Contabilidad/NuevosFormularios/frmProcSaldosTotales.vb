@@ -50,8 +50,9 @@
 
 
             Me.C1FlexGrid1.DataSource = ds.Tables(0)
+
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
 

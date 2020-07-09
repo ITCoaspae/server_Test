@@ -82,18 +82,18 @@ Public Class frmMBeneficiarios
         Me.GroupBox2.Controls.Add(Me.rbNoSocio)
         Me.GroupBox2.Controls.Add(Me.rbDui)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(624, 78)
+        Me.GroupBox2.Size = New System.Drawing.Size(726, 90)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Busqueda"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(515, 40)
+        Me.btnMostrar1.Location = New System.Drawing.Point(618, 46)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 16
         Me.btnMostrar1.Text = "Mostrar"
@@ -103,33 +103,33 @@ Public Class frmMBeneficiarios
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(6, 49)
+        Me.txtDui.Location = New System.Drawing.Point(7, 57)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(112, 20)
+        Me.txtDui.Size = New System.Drawing.Size(135, 23)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(125, 49)
+        Me.txtNoSocio.Location = New System.Drawing.Point(150, 57)
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(106, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(127, 22)
         Me.txtNoSocio.TabIndex = 3
         '
         'txtNombres
         '
-        Me.txtNombres.Location = New System.Drawing.Point(357, 48)
+        Me.txtNombres.Location = New System.Drawing.Point(428, 55)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(152, 20)
+        Me.txtNombres.Size = New System.Drawing.Size(183, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
-        Me.rbNombres.Location = New System.Drawing.Point(237, 18)
+        Me.rbNombres.Location = New System.Drawing.Point(284, 21)
         Me.rbNombres.Name = "rbNombres"
-        Me.rbNombres.Size = New System.Drawing.Size(114, 24)
+        Me.rbNombres.Size = New System.Drawing.Size(137, 27)
         Me.rbNombres.TabIndex = 4
         Me.rbNombres.Text = "Nombres"
         Me.rbNombres.UseVisualStyleBackColor = False
@@ -138,9 +138,9 @@ Public Class frmMBeneficiarios
         '
         Me.rbTodos.BackColor = System.Drawing.Color.White
         Me.rbTodos.Checked = True
-        Me.rbTodos.Location = New System.Drawing.Point(515, 19)
+        Me.rbTodos.Location = New System.Drawing.Point(618, 22)
         Me.rbTodos.Name = "rbTodos"
-        Me.rbTodos.Size = New System.Drawing.Size(75, 24)
+        Me.rbTodos.Size = New System.Drawing.Size(90, 28)
         Me.rbTodos.TabIndex = 7
         Me.rbTodos.TabStop = True
         Me.rbTodos.Text = "Todos"
@@ -150,17 +150,17 @@ Public Class frmMBeneficiarios
         '
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(237, 48)
+        Me.cbNombres.Location = New System.Drawing.Point(284, 55)
         Me.cbNombres.Name = "cbNombres"
-        Me.cbNombres.Size = New System.Drawing.Size(114, 21)
+        Me.cbNombres.Size = New System.Drawing.Size(137, 24)
         Me.cbNombres.TabIndex = 5
         '
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(124, 19)
+        Me.rbNoSocio.Location = New System.Drawing.Point(149, 22)
         Me.rbNoSocio.Name = "rbNoSocio"
-        Me.rbNoSocio.Size = New System.Drawing.Size(106, 24)
+        Me.rbNoSocio.Size = New System.Drawing.Size(127, 28)
         Me.rbNoSocio.TabIndex = 2
         Me.rbNoSocio.Text = "No. Asociado"
         Me.rbNoSocio.UseVisualStyleBackColor = False
@@ -168,9 +168,9 @@ Public Class frmMBeneficiarios
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(6, 19)
+        Me.rbDui.Location = New System.Drawing.Point(7, 22)
         Me.rbDui.Name = "rbDui"
-        Me.rbDui.Size = New System.Drawing.Size(112, 24)
+        Me.rbDui.Size = New System.Drawing.Size(135, 28)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "DUI Asociado"
         Me.rbDui.UseVisualStyleBackColor = False
@@ -183,18 +183,19 @@ Public Class frmMBeneficiarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.C1fGrdBeneficiarios.BackColor = System.Drawing.Color.White
         Me.C1fGrdBeneficiarios.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.C1fGrdBeneficiarios.Location = New System.Drawing.Point(23, 181)
+        Me.C1fGrdBeneficiarios.Location = New System.Drawing.Point(28, 209)
         Me.C1fGrdBeneficiarios.Name = "C1fGrdBeneficiarios"
         Me.C1fGrdBeneficiarios.Rows.Count = 2
-        Me.C1fGrdBeneficiarios.Size = New System.Drawing.Size(624, 220)
-        Me.C1fGrdBeneficiarios.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fGrdBeneficiarios.Styles"))
+        Me.C1fGrdBeneficiarios.Rows.DefaultSize = 21
+        Me.C1fGrdBeneficiarios.Size = New System.Drawing.Size(731, 158)
+        Me.C1fGrdBeneficiarios.StyleInfo = resources.GetString("C1fGrdBeneficiarios.StyleInfo")
         Me.C1fGrdBeneficiarios.TabIndex = 14
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(266, 147)
+        Me.btnConsultar1.Location = New System.Drawing.Point(319, 170)
         Me.btnConsultar1.Name = "btnConsultar1"
-        Me.btnConsultar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
         Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 52
         Me.btnConsultar1.Text = "Consultar"
@@ -203,9 +204,9 @@ Public Class frmMBeneficiarios
         '
         'btnEliminar1
         '
-        Me.btnEliminar1.Location = New System.Drawing.Point(185, 147)
+        Me.btnEliminar1.Location = New System.Drawing.Point(222, 170)
         Me.btnEliminar1.Name = "btnEliminar1"
-        Me.btnEliminar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnEliminar1.Size = New System.Drawing.Size(90, 32)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar1.TabIndex = 51
         Me.btnEliminar1.Text = "Eliminar"
@@ -214,9 +215,9 @@ Public Class frmMBeneficiarios
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(104, 147)
+        Me.btnModificar1.Location = New System.Drawing.Point(125, 170)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 50
         Me.btnModificar1.Text = "Modificar"
@@ -225,9 +226,9 @@ Public Class frmMBeneficiarios
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(23, 147)
+        Me.btnAgregar1.Location = New System.Drawing.Point(28, 170)
         Me.btnAgregar1.Name = "btnAgregar1"
-        Me.btnAgregar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 49
         Me.btnAgregar1.Text = "Agregar"
@@ -236,8 +237,8 @@ Public Class frmMBeneficiarios
         '
         'frmMBeneficiarios
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(670, 424)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(782, 424)
         Me.Controls.Add(Me.btnConsultar1)
         Me.Controls.Add(Me.btnEliminar1)
         Me.Controls.Add(Me.btnModificar1)
@@ -245,6 +246,7 @@ Public Class frmMBeneficiarios
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.C1fGrdBeneficiarios)
         Me.Name = "frmMBeneficiarios"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Beneficiarios de Asociados"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -466,6 +468,12 @@ Public Class frmMBeneficiarios
             txtNombres.Enabled = False
             txtNoSocio.Enabled = False
             cbNombres.Enabled = False
+        End If
+    End Sub
+
+    Private Sub frmMBeneficiarios_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 End Class

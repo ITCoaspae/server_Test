@@ -26,17 +26,10 @@ Public Class frmMAhCuentasAhorroDPF
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents rbDui As System.Windows.Forms.RadioButton
     Friend WithEvents fg As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents txtNoCuenta As System.Windows.Forms.TextBox
     Friend WithEvents rbNoCuenta As System.Windows.Forms.RadioButton
-    Friend WithEvents rbNoLibreta As System.Windows.Forms.RadioButton
-    Friend WithEvents txtNoLibreta As System.Windows.Forms.TextBox
-    Friend WithEvents rbTipoAhorro As System.Windows.Forms.RadioButton
-    Friend WithEvents txtCodTipoAhorro As System.Windows.Forms.TextBox
-    Friend WithEvents rbEstado As System.Windows.Forms.RadioButton
-    Friend WithEvents cbEstado As System.Windows.Forms.ComboBox
     Friend WithEvents txtDui As C1.Win.C1Input.C1TextBox
     Friend WithEvents rbNoSocio As System.Windows.Forms.RadioButton
     Friend WithEvents txtNoSocio As System.Windows.Forms.TextBox
@@ -48,11 +41,11 @@ Public Class frmMAhCuentasAhorroDPF
     Friend WithEvents btnModificar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnAgregar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnMostrar1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents lblEstado As System.Windows.Forms.Label
+    Friend WithEvents lblEstado As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMAhCuentasAhorroDPF))
         Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnMostrar1 = New MetroFramework.Controls.MetroButton()
         Me.txtNombres = New System.Windows.Forms.TextBox()
         Me.rbNombres = New System.Windows.Forms.RadioButton()
@@ -60,22 +53,16 @@ Public Class frmMAhCuentasAhorroDPF
         Me.txtNoSocio = New System.Windows.Forms.TextBox()
         Me.rbNoSocio = New System.Windows.Forms.RadioButton()
         Me.txtDui = New C1.Win.C1Input.C1TextBox()
-        Me.cbEstado = New System.Windows.Forms.ComboBox()
-        Me.rbEstado = New System.Windows.Forms.RadioButton()
-        Me.txtCodTipoAhorro = New System.Windows.Forms.TextBox()
-        Me.rbTipoAhorro = New System.Windows.Forms.RadioButton()
-        Me.txtNoLibreta = New System.Windows.Forms.TextBox()
-        Me.rbNoLibreta = New System.Windows.Forms.RadioButton()
         Me.txtNoCuenta = New System.Windows.Forms.TextBox()
         Me.rbNoCuenta = New System.Windows.Forms.RadioButton()
         Me.rbDui = New System.Windows.Forms.RadioButton()
-        Me.lblEstado = New System.Windows.Forms.Label()
         Me.btnCancelarCuenta1 = New MetroFramework.Controls.MetroButton()
         Me.btnConsultar1 = New MetroFramework.Controls.MetroButton()
         Me.btnModificar1 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregar1 = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.lblEstado = New MetroFramework.Controls.MetroLabel()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -88,46 +75,21 @@ Public Class frmMAhCuentasAhorroDPF
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "36,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fg.Location = New System.Drawing.Point(28, 292)
+        Me.fg.ForeColor = System.Drawing.Color.Black
+        Me.fg.Location = New System.Drawing.Point(23, 261)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 2
         Me.fg.Rows.DefaultSize = 22
-        Me.fg.Size = New System.Drawing.Size(824, 217)
+        Me.fg.Size = New System.Drawing.Size(671, 225)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 14
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.btnMostrar1)
-        Me.GroupBox2.Controls.Add(Me.txtNombres)
-        Me.GroupBox2.Controls.Add(Me.rbNombres)
-        Me.GroupBox2.Controls.Add(Me.cbNombres)
-        Me.GroupBox2.Controls.Add(Me.txtNoSocio)
-        Me.GroupBox2.Controls.Add(Me.rbNoSocio)
-        Me.GroupBox2.Controls.Add(Me.txtDui)
-        Me.GroupBox2.Controls.Add(Me.cbEstado)
-        Me.GroupBox2.Controls.Add(Me.rbEstado)
-        Me.GroupBox2.Controls.Add(Me.txtCodTipoAhorro)
-        Me.GroupBox2.Controls.Add(Me.rbTipoAhorro)
-        Me.GroupBox2.Controls.Add(Me.txtNoLibreta)
-        Me.GroupBox2.Controls.Add(Me.rbNoLibreta)
-        Me.GroupBox2.Controls.Add(Me.txtNoCuenta)
-        Me.GroupBox2.Controls.Add(Me.rbNoCuenta)
-        Me.GroupBox2.Controls.Add(Me.rbDui)
-        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(796, 174)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "&Filtrar Cuentas de Ahorro por:"
-        '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(398, 120)
+        Me.btnMostrar1.Location = New System.Drawing.Point(589, 182)
         Me.btnMostrar1.Name = "btnMostrar1"
         Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 176
         Me.btnMostrar1.Text = "Mostrar"
         Me.btnMostrar1.UseSelectable = True
@@ -137,16 +99,16 @@ Public Class frmMAhCuentasAhorroDPF
         '
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Enabled = False
-        Me.txtNombres.Location = New System.Drawing.Point(588, 63)
+        Me.txtNombres.Location = New System.Drawing.Point(212, 184)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(182, 22)
+        Me.txtNombres.Size = New System.Drawing.Size(371, 22)
         Me.txtNombres.TabIndex = 6
         '
         'rbNombres
         '
         Me.rbNombres.BackColor = System.Drawing.Color.White
         Me.rbNombres.ForeColor = System.Drawing.Color.Black
-        Me.rbNombres.Location = New System.Drawing.Point(398, 28)
+        Me.rbNombres.Location = New System.Drawing.Point(23, 149)
         Me.rbNombres.Name = "rbNombres"
         Me.rbNombres.Size = New System.Drawing.Size(183, 27)
         Me.rbNombres.TabIndex = 4
@@ -158,14 +120,14 @@ Public Class frmMAhCuentasAhorroDPF
         Me.cbNombres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNombres.Enabled = False
         Me.cbNombres.Items.AddRange(New Object() {"Apellido 1", "Apellido 2", "Nombres"})
-        Me.cbNombres.Location = New System.Drawing.Point(398, 62)
+        Me.cbNombres.Location = New System.Drawing.Point(23, 182)
         Me.cbNombres.Name = "cbNombres"
         Me.cbNombres.Size = New System.Drawing.Size(183, 24)
         Me.cbNombres.TabIndex = 5
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(209, 65)
+        Me.txtNoSocio.Location = New System.Drawing.Point(212, 123)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.Size = New System.Drawing.Size(182, 22)
         Me.txtNoSocio.TabIndex = 3
@@ -173,7 +135,7 @@ Public Class frmMAhCuentasAhorroDPF
         'rbNoSocio
         '
         Me.rbNoSocio.BackColor = System.Drawing.Color.White
-        Me.rbNoSocio.Location = New System.Drawing.Point(209, 28)
+        Me.rbNoSocio.Location = New System.Drawing.Point(212, 90)
         Me.rbNoSocio.Name = "rbNoSocio"
         Me.rbNoSocio.Size = New System.Drawing.Size(182, 27)
         Me.rbNoSocio.TabIndex = 2
@@ -183,75 +145,16 @@ Public Class frmMAhCuentasAhorroDPF
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(19, 65)
+        Me.txtDui.Location = New System.Drawing.Point(23, 123)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(183, 23)
+        Me.txtDui.Size = New System.Drawing.Size(183, 20)
         Me.txtDui.TabIndex = 1
         Me.txtDui.Tag = Nothing
         '
-        'cbEstado
-        '
-        Me.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbEstado.Items.AddRange(New Object() {"A - Activa", "C - Cerrada / Cancelada", "I - Inactiva", "B - Bloqueada", "D - Digitada"})
-        Me.cbEstado.Location = New System.Drawing.Point(576, 128)
-        Me.cbEstado.Name = "cbEstado"
-        Me.cbEstado.Size = New System.Drawing.Size(62, 24)
-        Me.cbEstado.TabIndex = 11
-        Me.cbEstado.Visible = False
-        '
-        'rbEstado
-        '
-        Me.rbEstado.BackColor = System.Drawing.Color.Teal
-        Me.rbEstado.Location = New System.Drawing.Point(576, 93)
-        Me.rbEstado.Name = "rbEstado"
-        Me.rbEstado.Size = New System.Drawing.Size(62, 28)
-        Me.rbEstado.TabIndex = 10
-        Me.rbEstado.Text = "&Estado"
-        Me.rbEstado.UseVisualStyleBackColor = False
-        Me.rbEstado.Visible = False
-        '
-        'txtCodTipoAhorro
-        '
-        Me.txtCodTipoAhorro.Location = New System.Drawing.Point(646, 129)
-        Me.txtCodTipoAhorro.Name = "txtCodTipoAhorro"
-        Me.txtCodTipoAhorro.Size = New System.Drawing.Size(124, 22)
-        Me.txtCodTipoAhorro.TabIndex = 9
-        Me.txtCodTipoAhorro.Visible = False
-        '
-        'rbTipoAhorro
-        '
-        Me.rbTipoAhorro.BackColor = System.Drawing.Color.Teal
-        Me.rbTipoAhorro.Checked = True
-        Me.rbTipoAhorro.Location = New System.Drawing.Point(646, 95)
-        Me.rbTipoAhorro.Name = "rbTipoAhorro"
-        Me.rbTipoAhorro.Size = New System.Drawing.Size(124, 27)
-        Me.rbTipoAhorro.TabIndex = 8
-        Me.rbTipoAhorro.TabStop = True
-        Me.rbTipoAhorro.Text = "T&ipo de Ahorro"
-        Me.rbTipoAhorro.UseVisualStyleBackColor = False
-        Me.rbTipoAhorro.Visible = False
-        '
-        'txtNoLibreta
-        '
-        Me.txtNoLibreta.Location = New System.Drawing.Point(209, 129)
-        Me.txtNoLibreta.Name = "txtNoLibreta"
-        Me.txtNoLibreta.Size = New System.Drawing.Size(182, 22)
-        Me.txtNoLibreta.TabIndex = 10
-        '
-        'rbNoLibreta
-        '
-        Me.rbNoLibreta.BackColor = System.Drawing.Color.White
-        Me.rbNoLibreta.Location = New System.Drawing.Point(209, 95)
-        Me.rbNoLibreta.Name = "rbNoLibreta"
-        Me.rbNoLibreta.Size = New System.Drawing.Size(182, 27)
-        Me.rbNoLibreta.TabIndex = 9
-        Me.rbNoLibreta.Text = "No. &Libreta"
-        Me.rbNoLibreta.UseVisualStyleBackColor = False
-        '
         'txtNoCuenta
         '
-        Me.txtNoCuenta.Location = New System.Drawing.Point(19, 129)
+        Me.txtNoCuenta.Location = New System.Drawing.Point(400, 123)
         Me.txtNoCuenta.Name = "txtNoCuenta"
         Me.txtNoCuenta.Size = New System.Drawing.Size(183, 22)
         Me.txtNoCuenta.TabIndex = 8
@@ -259,7 +162,7 @@ Public Class frmMAhCuentasAhorroDPF
         'rbNoCuenta
         '
         Me.rbNoCuenta.BackColor = System.Drawing.Color.White
-        Me.rbNoCuenta.Location = New System.Drawing.Point(19, 95)
+        Me.rbNoCuenta.Location = New System.Drawing.Point(400, 90)
         Me.rbNoCuenta.Name = "rbNoCuenta"
         Me.rbNoCuenta.Size = New System.Drawing.Size(183, 27)
         Me.rbNoCuenta.TabIndex = 7
@@ -269,41 +172,31 @@ Public Class frmMAhCuentasAhorroDPF
         'rbDui
         '
         Me.rbDui.BackColor = System.Drawing.Color.White
-        Me.rbDui.Location = New System.Drawing.Point(19, 28)
+        Me.rbDui.Location = New System.Drawing.Point(23, 90)
         Me.rbDui.Name = "rbDui"
         Me.rbDui.Size = New System.Drawing.Size(183, 27)
         Me.rbDui.TabIndex = 0
         Me.rbDui.Text = "&DUI de Asociado"
         Me.rbDui.UseVisualStyleBackColor = False
         '
-        'lblEstado
-        '
-        Me.lblEstado.BackColor = System.Drawing.Color.White
-        Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEstado.ForeColor = System.Drawing.Color.Red
-        Me.lblEstado.Location = New System.Drawing.Point(474, 267)
-        Me.lblEstado.Name = "lblEstado"
-        Me.lblEstado.Size = New System.Drawing.Size(192, 18)
-        Me.lblEstado.TabIndex = 17
-        Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'btnCancelarCuenta1
         '
-        Me.btnCancelarCuenta1.Location = New System.Drawing.Point(319, 253)
+        Me.btnCancelarCuenta1.Location = New System.Drawing.Point(313, 223)
         Me.btnCancelarCuenta1.Name = "btnCancelarCuenta1"
         Me.btnCancelarCuenta1.Size = New System.Drawing.Size(147, 32)
-        Me.btnCancelarCuenta1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnCancelarCuenta1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnCancelarCuenta1.TabIndex = 175
         Me.btnCancelarCuenta1.Text = "Cancelar Cuenta"
         Me.btnCancelarCuenta1.UseSelectable = True
         Me.btnCancelarCuenta1.UseStyleColors = True
+        Me.btnCancelarCuenta1.Visible = False
         '
         'btnConsultar1
         '
-        Me.btnConsultar1.Location = New System.Drawing.Point(222, 253)
+        Me.btnConsultar1.Location = New System.Drawing.Point(217, 222)
         Me.btnConsultar1.Name = "btnConsultar1"
         Me.btnConsultar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnConsultar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnConsultar1.TabIndex = 174
         Me.btnConsultar1.Text = "Consultar"
         Me.btnConsultar1.UseSelectable = True
@@ -311,10 +204,10 @@ Public Class frmMAhCuentasAhorroDPF
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(125, 253)
+        Me.btnModificar1.Location = New System.Drawing.Point(120, 222)
         Me.btnModificar1.Name = "btnModificar1"
         Me.btnModificar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 173
         Me.btnModificar1.Text = "Modificar"
         Me.btnModificar1.UseSelectable = True
@@ -322,39 +215,74 @@ Public Class frmMAhCuentasAhorroDPF
         '
         'btnAgregar1
         '
-        Me.btnAgregar1.Location = New System.Drawing.Point(28, 253)
+        Me.btnAgregar1.Location = New System.Drawing.Point(23, 222)
         Me.btnAgregar1.Name = "btnAgregar1"
         Me.btnAgregar1.Size = New System.Drawing.Size(90, 32)
-        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Green
+        Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnAgregar1.TabIndex = 172
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.UseSelectable = True
         Me.btnAgregar1.UseStyleColors = True
         '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.MetroLabel1.Location = New System.Drawing.Point(23, 60)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(84, 20)
+        Me.MetroLabel1.Style = MetroFramework.MetroColorStyle.Teal
+        Me.MetroLabel1.TabIndex = 176
+        Me.MetroLabel1.Text = "Buscar Por"
+        Me.MetroLabel1.UseStyleColors = True
+        '
+        'lblEstado
+        '
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblEstado.FontWeight = MetroFramework.MetroLabelWeight.Regular
+        Me.lblEstado.Location = New System.Drawing.Point(465, 223)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(0, 0)
+        Me.lblEstado.Style = MetroFramework.MetroColorStyle.Teal
+        Me.lblEstado.TabIndex = 177
+        Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblEstado.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.lblEstado.UseStyleColors = True
+        '
         'frmMAhCuentasAhorroDPF
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(880, 600)
-        Me.Controls.Add(Me.btnCancelarCuenta1)
+        Me.ClientSize = New System.Drawing.Size(717, 577)
         Me.Controls.Add(Me.lblEstado)
+        Me.Controls.Add(Me.btnMostrar1)
+        Me.Controls.Add(Me.MetroLabel1)
+        Me.Controls.Add(Me.txtNombres)
+        Me.Controls.Add(Me.btnCancelarCuenta1)
+        Me.Controls.Add(Me.cbNombres)
+        Me.Controls.Add(Me.rbNombres)
         Me.Controls.Add(Me.btnConsultar1)
+        Me.Controls.Add(Me.txtNoCuenta)
+        Me.Controls.Add(Me.txtNoSocio)
+        Me.Controls.Add(Me.rbNoCuenta)
         Me.Controls.Add(Me.btnModificar1)
+        Me.Controls.Add(Me.rbNoSocio)
         Me.Controls.Add(Me.btnAgregar1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.txtDui)
         Me.Controls.Add(Me.fg)
+        Me.Controls.Add(Me.rbDui)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMAhCuentasAhorroDPF"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Style = MetroFramework.MetroColorStyle.Green
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento - Cuentas de Depósito a Plazo Fijo"
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.txtDui, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -438,8 +366,6 @@ Public Class frmMAhCuentasAhorroDPF
     Private Sub frmMCuentasAhorro_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         vDPF = "6"
-        Me.cbEstado.SelectedIndex = 0
-        btnMostrar1_Click(sender, e)
 
 
     End Sub
@@ -479,16 +405,16 @@ Public Class frmMAhCuentasAhorroDPF
         Me.txtNoCuenta.Focus()
     End Sub
 
-    Private Sub rbNoLibreta_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbNoLibreta.CheckedChanged
-        Me.txtNoLibreta.Focus()
+    Private Sub rbNoLibreta_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        '  Me.txtNoLibreta.Focus()
     End Sub
 
-    Private Sub rbTipoAhorro_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbTipoAhorro.CheckedChanged
-        Me.txtCodTipoAhorro.Focus()
+    Private Sub rbTipoAhorro_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        '  Me.txtCodTipoAhorro.Focus()
     End Sub
 
-    Private Sub rbEstado_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbEstado.CheckedChanged
-        Me.cbEstado.Focus()
+    Private Sub rbEstado_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        '    Me.cbEstado.Focus()
     End Sub
 
     Private Sub rbNombres_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbNombres.CheckedChanged
@@ -502,7 +428,7 @@ Public Class frmMAhCuentasAhorroDPF
         Me.cbNombres.Focus()
     End Sub
 
-    Private Sub txtCodTipoAhorro_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCodTipoAhorro.KeyPress
+    Private Sub txtCodTipoAhorro_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then btnMostrar1_Click(sender, e)
     End Sub
 
@@ -514,7 +440,7 @@ Public Class frmMAhCuentasAhorroDPF
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then btnMostrar1_Click(sender, e)
     End Sub
 
-    Private Sub txtNoLibreta_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNoLibreta.KeyPress
+    Private Sub txtNoLibreta_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then btnMostrar1_Click(sender, e)
     End Sub
 
@@ -526,45 +452,6 @@ Public Class frmMAhCuentasAhorroDPF
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then btnMostrar1_Click(sender, e)
     End Sub
 
-    Private Sub fg_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles fg.Click
-        Try
-            Select Case CStr(fg.Item(fg.Row, "Estado")).Trim
-                Case "D" 'Digitada
-                    Me.lblEstado.Text = "DIGITADA"
-                Case "A" 'A: Activa
-                    Me.lblEstado.Text = "ACTIVA"
-                Case "C" 'C: Cancelada
-                    Me.lblEstado.Text = "CANCELADA"
-                Case "I" 'Inactiva
-                    Me.lblEstado.Text = "INACTIVA"
-                Case "B" 'Bloqueada
-                    Me.lblEstado.Text = "BLOQUEADA"
-            End Select
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
-
-    Private Sub fg_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles fg.KeyPress
-        Try
-            Select Case CStr(fg.Item(fg.Row, "Estado")).Trim
-                Case "D" 'Digitada
-                    Me.lblEstado.Text = "DIGITADA"
-                Case "A" 'A: Activa
-                    Me.lblEstado.Text = "ACTIVA"
-                Case "C" 'C: Cancelada
-                    Me.lblEstado.Text = "CANCELADA"
-                Case "I" 'Inactiva
-                    Me.lblEstado.Text = "INACTIVA"
-                Case "B" 'Bloqueada
-                    Me.lblEstado.Text = "BLOQUEADA"
-            End Select
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
 
     Private Sub btnAgregar1_Click(sender As Object, e As EventArgs) Handles btnAgregar1.Click
         Try
@@ -573,7 +460,7 @@ Public Class frmMAhCuentasAhorroDPF
             frm.ShowDialog()
             btnMostrar1_Click(sender, e)
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -585,8 +472,6 @@ Public Class frmMAhCuentasAhorroDPF
                 frm.pAccion = "Modificar"
                 frm.vConsulta = False
                 frm.btnSaveTb1.Text = "&Modificar"
-                frm.btnSaveTb4.Enabled = True
-                frm.gbPig.Enabled = True
                 frm.btnNew.Enabled = True
                 frm.btDelBen.Enabled = True
                 frm.pCodTipoAhorro = fg.Item(fg.Row, "CodTipoAhorro")
@@ -597,7 +482,7 @@ Public Class frmMAhCuentasAhorroDPF
 
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -611,12 +496,12 @@ Public Class frmMAhCuentasAhorroDPF
                 frm.btnSaveTb1.Text = "&Modificar"
                 frm.pNoCuenta = fg.Item(fg.Row, "NoCuenta")
                 frm.pCodTipoAhorro = fg.Item(fg.Row, "CodTipoAhorro")
-                frm.btnSaveTb4.Visible = False
+
                 frm.btnSaveTb1.Visible = False
-                frm.btnSaveTb3.Visible = False
+
                 frm.btDelBen.Enabled = False
                 frm.btnNew.Enabled = False
-                frm.gbPig.Enabled = True
+                'frm.gbPig.Enabled = True
                 frm.cbAutorizacion.Enabled = False
                 frm.btTasaPactada.Enabled = False
                 frm.StartPosition = FormStartPosition.CenterScreen
@@ -625,7 +510,7 @@ Public Class frmMAhCuentasAhorroDPF
 
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -635,30 +520,21 @@ Public Class frmMAhCuentasAhorroDPF
                 Dim frm As frmMsAhCuentasDPF = New frmMsAhCuentasDPF
                 frm.pAccion = "Modificar"
                 frm.btnSaveTb1.Text = "&Cancelar Cta."
-                frm.btnSaveTb3.Text = "&Cancelar Cta."
+
                 frm.pNoCuenta = fg.Item(fg.Row, "NoCuenta")
                 frm.pCodTipoAhorro = fg.Item(fg.Row, "CodTipoAhorro")
-                'frm.btnAtrasTb3.Left = 304
-                frm.btnSaveTb3.Width = 120
-                frm.btnSaveTb3.Left = 480
                 frm.tbSolic.TabPages.Item(0).Enabled = False
                 frm.tbSolic.TabPages.Item(1).Enabled = False
                 frm.tbSolic.TabPages.Item(2).Enabled = False
                 frm.btnSaveTb1.Enabled = False
                 frm.btnSaveTb1.Visible = False
-                frm.btnSaveTb3.Enabled = True
-                frm.btnSaveTb4.Enabled = False
-                frm.btnSaveTb4.Visible = False
                 frm.StartPosition = FormStartPosition.CenterScreen
                 frm.tbSolic.SelectedIndex = 3
-                frm.txtMotivoCancela.Focus()
-                frm.gbCancela.Enabled = True
                 frm.ShowDialog()
                 btnMostrar1_Click(sender, e)
-
             End If
         Catch ex As Exception
-            MsgBox("Error. Por favor comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -668,14 +544,12 @@ Public Class frmMAhCuentasAhorroDPF
         Dim oAsoc As New wrAsociados.wsLibAsoc, pFiltro As String, dr As DataRow
         Try
             oAh = New wrAhorro.wsLibAhorro
-            If rbNoLibreta.Checked = True Then
-                ds = oAh.ConsultarCuentaAhorro("D", "a.NoLibreta='" & Me.txtNoLibreta.Text.Trim & "' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.NoLibreta", sUsuario, sPassword, sSucursal)
-            ElseIf rbDui.Checked = True Then
+
+            If rbDui.Checked = True Then
                 ds = oAh.ConsultarCuentaAhorro("D", "a.Dui='" & Trim(Me.txtDui.Text) & "' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.Dui", sUsuario, sPassword, sSucursal)
             ElseIf rbNoCuenta.Checked = True Then
                 ds = oAh.ConsultarCuentaAhorro("D", "a.NoCuenta like '" & Trim(Me.txtNoCuenta.Text) & "%' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.Dui", sUsuario, sPassword, sSucursal)
-            ElseIf rbTipoAhorro.Checked = True Then
-                ds = oAh.ConsultarCuentaAhorro("D", "a.CodTipoAhorro='" & Trim(Me.txtCodTipoAhorro.Text) & "' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.Dui", sUsuario, sPassword, sSucursal)
+
             ElseIf rbNombres.Checked = True Then
                 If cbNombres.SelectedIndex = 0 Then
                     ds = oAsoc.ConsultarAsociado("Dui", "Apellido1 like '" & Trim(txtNombres.Text) & "%'", "Apellido1,Apellido2", sUsuario, sPassword, sSucursal)
@@ -700,15 +574,40 @@ Public Class frmMAhCuentasAhorroDPF
                         ds = oAh.ConsultarCuentaAhorro("D", "(" & pFiltro & ") and (Left(a.CodTipoAhorro,1)='" & vDPF & "')", "a.Dui", sUsuario, sPassword, sSucursal)
                     End If
                 End If
-            ElseIf rbEstado.Checked = True Then
-                ds = oAh.ConsultarCuentaAhorro("D", "a.Estado='" & Mid(Trim(Me.cbEstado.Text), 1, 1) & "' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.Dui", sUsuario, sPassword, sSucursal)
+
             ElseIf rbNoSocio.Checked = True Then
                 ds = oAh.ConsultarCuentaAhorro("D", "a.NoSocio='" & Me.txtNoSocio.Text.Trim & "' and Left(a.CodTipoAhorro,1)='" & vDPF & "'", "a.Dui", sUsuario, sPassword, sSucursal)
             End If
             fg.DataSource = ds.Tables(0)
             Encabezado()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub frmMAhCuentasAhorroDPF_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub fg_Click(sender As Object, e As EventArgs) Handles fg.Click
+        Try
+            If fg.Row <> -1 Then
+                Select Case fg.Item(fg.Row, "Estado")
+                    Case "A"
+                        lblEstado.Text = "ACTIVO"
+                    Case "B"
+                        lblEstado.Text = "BLOQUEADO"
+                    Case "C"
+                        lblEstado.Text = "CANCELADO"
+                    Case "D"
+                        lblEstado.Text = "DIGITADO"
+
+                End Select
+            End If
+        Catch ex As Exception
+
         End Try
     End Sub
 End Class

@@ -1,7 +1,7 @@
 Public Class frmMCaTransfCtaContAux
     Inherits MetroFramework.Forms.MetroForm 'Inherits System.Windows.Forms.Form
     Public rsc As System.Resources.ResourceManager
-    Dim Bancos As New wrBancos.wsLibBancos
+
     Private sNoCuenta As String, pCodTransferencia As String ', sSupervisor As String, pPassword As String
     Friend WithEvents btnEliminar1 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnAgregar1 As MetroFramework.Controls.MetroButton
@@ -12,6 +12,13 @@ Public Class frmMCaTransfCtaContAux
     Friend WithEvents Label3 As Label
     Friend WithEvents txtCodCosto As TextBox
     Public dsDetalle As New DataSet
+    Private pCtaPorCobrar As Boolean
+    Private pNoCtaAuxiliar As String
+    Dim ahorro As New wrAhorro.wsLibAhorro
+    Dim admin As New wrAdmin.wsLibAdmin
+    Dim asociados As New wrAsociados.wsLibAsoc
+    Dim Bancos As New wrBancos.wsLibBancos
+    Dim contabilidad As New wrConta.wsLibContab
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -110,10 +117,10 @@ Public Class frmMCaTransfCtaContAux
         Me.gbDestino.Controls.Add(Me.btnAgregar1)
         Me.gbDestino.Controls.Add(Me.btnEliminar1)
         Me.gbDestino.ForeColor = System.Drawing.Color.Teal
-        Me.gbDestino.Location = New System.Drawing.Point(28, 339)
+        Me.gbDestino.Location = New System.Drawing.Point(28, 388)
         Me.gbDestino.Name = "gbDestino"
-        Me.gbDestino.Size = New System.Drawing.Size(777, 240)
-        Me.gbDestino.TabIndex = 1
+        Me.gbDestino.Size = New System.Drawing.Size(777, 188)
+        Me.gbDestino.TabIndex = 3
         Me.gbDestino.TabStop = False
         Me.gbDestino.Text = "Cuenta(s) de Destino:"
         '
@@ -125,20 +132,22 @@ Public Class frmMCaTransfCtaContAux
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
         Me.txtTotal.Size = New System.Drawing.Size(221, 22)
-        Me.txtTotal.TabIndex = 5
+        Me.txtTotal.TabIndex = 2
         '
         'fg
         '
+        Me.fg.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None
         Me.fg.AllowEditing = False
         Me.fg.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.fg.BackColor = System.Drawing.Color.White
         Me.fg.ColumnInfo = "20,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.fg.Location = New System.Drawing.Point(10, 65)
+        Me.fg.ForeColor = System.Drawing.Color.Teal
+        Me.fg.Location = New System.Drawing.Point(10, 64)
         Me.fg.Name = "fg"
         Me.fg.Rows.Count = 1
         Me.fg.Rows.DefaultSize = 22
-        Me.fg.Size = New System.Drawing.Size(758, 166)
+        Me.fg.Size = New System.Drawing.Size(758, 118)
         Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.TabIndex = 3
         '
@@ -148,7 +157,7 @@ Public Class frmMCaTransfCtaContAux
         Me.btnAgregar1.Name = "btnAgregar1"
         Me.btnAgregar1.Size = New System.Drawing.Size(90, 33)
         Me.btnAgregar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnAgregar1.TabIndex = 51
+        Me.btnAgregar1.TabIndex = 0
         Me.btnAgregar1.Text = "Agregar"
         Me.btnAgregar1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btnAgregar1.UseSelectable = True
@@ -160,7 +169,7 @@ Public Class frmMCaTransfCtaContAux
         Me.btnEliminar1.Name = "btnEliminar1"
         Me.btnEliminar1.Size = New System.Drawing.Size(90, 33)
         Me.btnEliminar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnEliminar1.TabIndex = 52
+        Me.btnEliminar1.TabIndex = 1
         Me.btnEliminar1.Text = "Eliminar"
         Me.btnEliminar1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btnEliminar1.UseSelectable = True
@@ -194,82 +203,82 @@ Public Class frmMCaTransfCtaContAux
         Me.GroupBox1.ForeColor = System.Drawing.Color.Teal
         Me.GroupBox1.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(777, 259)
-        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.Size = New System.Drawing.Size(777, 309)
+        Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cuenta de Origen"
         '
         'txtCodCosto
         '
         Me.txtCodCosto.BackColor = System.Drawing.Color.White
-        Me.txtCodCosto.Location = New System.Drawing.Point(362, 175)
+        Me.txtCodCosto.Location = New System.Drawing.Point(134, 190)
         Me.txtCodCosto.Name = "txtCodCosto"
         Me.txtCodCosto.ReadOnly = True
-        Me.txtCodCosto.Size = New System.Drawing.Size(60, 22)
-        Me.txtCodCosto.TabIndex = 170
+        Me.txtCodCosto.Size = New System.Drawing.Size(116, 22)
+        Me.txtCodCosto.TabIndex = 16
         '
         'txtNombCosto
         '
         Me.txtNombCosto.BackColor = System.Drawing.Color.White
-        Me.txtNombCosto.Location = New System.Drawing.Point(431, 175)
+        Me.txtNombCosto.Location = New System.Drawing.Point(256, 190)
         Me.txtNombCosto.Name = "txtNombCosto"
         Me.txtNombCosto.ReadOnly = True
-        Me.txtNombCosto.Size = New System.Drawing.Size(337, 22)
-        Me.txtNombCosto.TabIndex = 169
+        Me.txtNombCosto.Size = New System.Drawing.Size(515, 22)
+        Me.txtNombCosto.TabIndex = 17
         '
         'Label3
         '
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(266, 178)
+        Me.Label3.Location = New System.Drawing.Point(7, 190)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 22)
-        Me.Label3.TabIndex = 168
+        Me.Label3.Size = New System.Drawing.Size(112, 22)
+        Me.Label3.TabIndex = 15
         Me.Label3.Text = "Centro Costos:"
         '
         'txtCuenta
         '
         Me.txtCuenta.BackColor = System.Drawing.Color.White
-        Me.txtCuenta.Location = New System.Drawing.Point(257, 145)
+        Me.txtCuenta.Location = New System.Drawing.Point(256, 162)
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.Size = New System.Drawing.Size(513, 22)
-        Me.txtCuenta.TabIndex = 166
+        Me.txtCuenta.Size = New System.Drawing.Size(515, 22)
+        Me.txtCuenta.TabIndex = 14
         '
         'txtIdCuenta
         '
         Me.txtIdCuenta.BackColor = System.Drawing.Color.White
-        Me.txtIdCuenta.Location = New System.Drawing.Point(134, 145)
+        Me.txtIdCuenta.Location = New System.Drawing.Point(134, 162)
         Me.txtIdCuenta.Name = "txtIdCuenta"
         Me.txtIdCuenta.ReadOnly = True
         Me.txtIdCuenta.Size = New System.Drawing.Size(116, 22)
-        Me.txtIdCuenta.TabIndex = 165
+        Me.txtIdCuenta.TabIndex = 13
         '
         'Label6
         '
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(7, 149)
+        Me.Label6.Location = New System.Drawing.Point(7, 165)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 18)
-        Me.Label6.TabIndex = 167
+        Me.Label6.TabIndex = 12
         Me.Label6.Text = "Cuenta Contable:"
         '
         'txtResponsable
         '
         Me.txtResponsable.BackColor = System.Drawing.Color.White
-        Me.txtResponsable.Location = New System.Drawing.Point(370, 25)
+        Me.txtResponsable.Location = New System.Drawing.Point(134, 53)
         Me.txtResponsable.Name = "txtResponsable"
-        Me.txtResponsable.Size = New System.Drawing.Size(400, 22)
-        Me.txtResponsable.TabIndex = 1
+        Me.txtResponsable.Size = New System.Drawing.Size(637, 22)
+        Me.txtResponsable.TabIndex = 3
         '
         'txtDui
         '
         Me.txtDui.BackColor = System.Drawing.Color.White
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(134, 85)
+        Me.txtDui.Location = New System.Drawing.Point(134, 107)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(116, 23)
-        Me.txtDui.TabIndex = 3
+        Me.txtDui.Size = New System.Drawing.Size(238, 20)
+        Me.txtDui.TabIndex = 7
         Me.txtDui.Tag = Nothing
         '
         'txtNoSocio
@@ -278,60 +287,60 @@ Public Class frmMCaTransfCtaContAux
         Me.txtNoSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNoSocio.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNoSocio.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.txtNoSocio.Location = New System.Drawing.Point(674, 85)
+        Me.txtNoSocio.Location = New System.Drawing.Point(533, 107)
         Me.txtNoSocio.Name = "txtNoSocio"
         Me.txtNoSocio.ReadOnly = True
-        Me.txtNoSocio.Size = New System.Drawing.Size(96, 23)
-        Me.txtNoSocio.TabIndex = 163
+        Me.txtNoSocio.Size = New System.Drawing.Size(238, 23)
+        Me.txtNoSocio.TabIndex = 9
         '
         'Label11
         '
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(7, 120)
+        Me.Label11.Location = New System.Drawing.Point(7, 138)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(78, 18)
-        Me.Label11.TabIndex = 107
+        Me.Label11.TabIndex = 10
         Me.Label11.Text = "Asociado:"
         '
         'Label10
         '
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(571, 88)
+        Me.Label10.Location = New System.Drawing.Point(378, 109)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 18)
-        Me.Label10.TabIndex = 106
+        Me.Label10.Size = New System.Drawing.Size(105, 18)
+        Me.Label10.TabIndex = 8
         Me.Label10.Text = "No. Asociado:"
         '
         'Label8
         '
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(257, 27)
+        Me.Label8.Location = New System.Drawing.Point(7, 56)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(105, 18)
-        Me.Label8.TabIndex = 104
+        Me.Label8.TabIndex = 2
         Me.Label8.Text = "Responsable:"
         '
         'c1txtObservaciones
         '
         Me.c1txtObservaciones.BackColor = System.Drawing.Color.White
         Me.c1txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtObservaciones.Location = New System.Drawing.Point(131, 207)
+        Me.c1txtObservaciones.Location = New System.Drawing.Point(134, 247)
         Me.c1txtObservaciones.MaxLength = 255
         Me.c1txtObservaciones.Multiline = True
         Me.c1txtObservaciones.Name = "c1txtObservaciones"
         Me.c1txtObservaciones.NumericInput = False
         Me.c1txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.c1txtObservaciones.Size = New System.Drawing.Size(636, 36)
-        Me.c1txtObservaciones.TabIndex = 6
+        Me.c1txtObservaciones.Size = New System.Drawing.Size(636, 51)
+        Me.c1txtObservaciones.TabIndex = 21
         Me.c1txtObservaciones.Tag = Nothing
         '
         'Label7
         '
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(7, 211)
+        Me.Label7.Location = New System.Drawing.Point(7, 247)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(106, 19)
-        Me.Label7.TabIndex = 102
+        Me.Label7.TabIndex = 20
         Me.Label7.Text = "Observaciones:"
         '
         'c1txtNoDoc
@@ -340,43 +349,43 @@ Public Class frmMCaTransfCtaContAux
         Me.c1txtNoDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.c1txtNoDoc.CustomFormat = "00000000000000000000"
         Me.c1txtNoDoc.DataType = GetType(Long)
-        Me.c1txtNoDoc.Location = New System.Drawing.Point(134, 55)
+        Me.c1txtNoDoc.Location = New System.Drawing.Point(134, 81)
         Me.c1txtNoDoc.MaxLength = 14
         Me.c1txtNoDoc.Name = "c1txtNoDoc"
         Me.c1txtNoDoc.NumericInput = False
-        Me.c1txtNoDoc.Size = New System.Drawing.Size(116, 23)
-        Me.c1txtNoDoc.TabIndex = 2
+        Me.c1txtNoDoc.Size = New System.Drawing.Size(637, 20)
+        Me.c1txtNoDoc.TabIndex = 5
         Me.c1txtNoDoc.Tag = Nothing
         '
         'Label5
         '
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(7, 55)
+        Me.Label5.Location = New System.Drawing.Point(7, 83)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(106, 19)
-        Me.Label5.TabIndex = 100
+        Me.Label5.Size = New System.Drawing.Size(125, 19)
+        Me.Label5.TabIndex = 4
         Me.Label5.Text = "No. Documento:"
         '
         'Label4
         '
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(7, 175)
+        Me.Label4.Location = New System.Drawing.Point(7, 218)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 36)
-        Me.Label4.TabIndex = 99
-        Me.Label4.Text = "Valor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Transferencia:"
+        Me.Label4.Size = New System.Drawing.Size(96, 23)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Monto:"
         '
         'c1txtNombreAsoc
         '
         Me.c1txtNombreAsoc.BackColor = System.Drawing.Color.White
         Me.c1txtNombreAsoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.c1txtNombreAsoc.Location = New System.Drawing.Point(134, 115)
+        Me.c1txtNombreAsoc.Location = New System.Drawing.Point(134, 136)
         Me.c1txtNombreAsoc.MaxLength = 14
         Me.c1txtNombreAsoc.Name = "c1txtNombreAsoc"
         Me.c1txtNombreAsoc.NumericInput = False
         Me.c1txtNombreAsoc.ReadOnly = True
-        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(636, 23)
-        Me.c1txtNombreAsoc.TabIndex = 94
+        Me.c1txtNombreAsoc.Size = New System.Drawing.Size(636, 20)
+        Me.c1txtNombreAsoc.TabIndex = 11
         Me.c1txtNombreAsoc.Tag = Nothing
         '
         'c1txtMonto
@@ -388,13 +397,13 @@ Public Class frmMCaTransfCtaContAux
         Me.c1txtMonto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.c1txtMonto.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
         Me.c1txtMonto.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1txtMonto.Location = New System.Drawing.Point(134, 175)
+        Me.c1txtMonto.Location = New System.Drawing.Point(134, 218)
         Me.c1txtMonto.Name = "c1txtMonto"
         Me.c1txtMonto.PostValidation.ErrorMessage = "El valor debe ser positivo."
         Me.c1txtMonto.PostValidation.Inherit = C1.Win.C1Input.PostValidationInheritFlags.CaseSensitive
         Me.c1txtMonto.PostValidation.Intervals.AddRange(New C1.Win.C1Input.ValueInterval() {New C1.Win.C1Input.ValueInterval(0R, Nothing, True, True)})
-        Me.c1txtMonto.Size = New System.Drawing.Size(125, 27)
-        Me.c1txtMonto.TabIndex = 5
+        Me.c1txtMonto.Size = New System.Drawing.Size(238, 23)
+        Me.c1txtMonto.TabIndex = 19
         Me.c1txtMonto.Tag = Nothing
         Me.c1txtMonto.Value = 0R
         Me.c1txtMonto.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
@@ -402,10 +411,10 @@ Public Class frmMCaTransfCtaContAux
         'Label2
         '
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(7, 88)
+        Me.Label2.Location = New System.Drawing.Point(7, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 18)
-        Me.Label2.TabIndex = 90
+        Me.Label2.TabIndex = 6
         Me.Label2.Text = "DUI:"
         '
         'dtpFecha
@@ -414,8 +423,8 @@ Public Class frmMCaTransfCtaContAux
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(134, 25)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(116, 22)
-        Me.dtpFecha.TabIndex = 0
+        Me.dtpFecha.Size = New System.Drawing.Size(637, 22)
+        Me.dtpFecha.TabIndex = 1
         '
         'Label1
         '
@@ -423,16 +432,16 @@ Public Class frmMCaTransfCtaContAux
         Me.Label1.Location = New System.Drawing.Point(7, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(120, 18)
-        Me.Label1.TabIndex = 88
+        Me.Label1.TabIndex = 0
         Me.Label1.Text = "Fecha Movimiento:"
         '
         'btNProcesar1
         '
-        Me.btNProcesar1.Location = New System.Drawing.Point(521, 586)
+        Me.btNProcesar1.Location = New System.Drawing.Point(521, 582)
         Me.btNProcesar1.Name = "btNProcesar1"
         Me.btNProcesar1.Size = New System.Drawing.Size(90, 32)
         Me.btNProcesar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btNProcesar1.TabIndex = 56
+        Me.btNProcesar1.TabIndex = 4
         Me.btNProcesar1.Text = "Procesar"
         Me.btNProcesar1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btNProcesar1.UseSelectable = True
@@ -440,11 +449,11 @@ Public Class frmMCaTransfCtaContAux
         '
         'btBorrar1
         '
-        Me.btBorrar1.Location = New System.Drawing.Point(618, 586)
+        Me.btBorrar1.Location = New System.Drawing.Point(618, 582)
         Me.btBorrar1.Name = "btBorrar1"
         Me.btBorrar1.Size = New System.Drawing.Size(90, 32)
         Me.btBorrar1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btBorrar1.TabIndex = 55
+        Me.btBorrar1.TabIndex = 0
         Me.btBorrar1.Text = "Borrar"
         Me.btBorrar1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btBorrar1.UseSelectable = True
@@ -452,11 +461,11 @@ Public Class frmMCaTransfCtaContAux
         '
         'btnImprimir1
         '
-        Me.btnImprimir1.Location = New System.Drawing.Point(715, 586)
+        Me.btnImprimir1.Location = New System.Drawing.Point(715, 582)
         Me.btnImprimir1.Name = "btnImprimir1"
         Me.btnImprimir1.Size = New System.Drawing.Size(90, 32)
         Me.btnImprimir1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.btnImprimir1.TabIndex = 54
+        Me.btnImprimir1.TabIndex = 1
         Me.btnImprimir1.Text = "Imprimir"
         Me.btnImprimir1.Theme = MetroFramework.MetroThemeStyle.Light
         Me.btnImprimir1.UseSelectable = True
@@ -466,7 +475,7 @@ Public Class frmMCaTransfCtaContAux
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle
-        Me.ClientSize = New System.Drawing.Size(829, 706)
+        Me.ClientSize = New System.Drawing.Size(825, 640)
         Me.Controls.Add(Me.btNProcesar1)
         Me.Controls.Add(Me.btBorrar1)
         Me.Controls.Add(Me.btnImprimir1)
@@ -495,12 +504,31 @@ Public Class frmMCaTransfCtaContAux
     End Sub
 
 #End Region
+
+#Region "Propiedades"
+    Public Property ctaPorCobrar() As Boolean
+        Get
+            Return pCtaPorCobrar
+        End Get
+        Set(value As Boolean)
+            pCtaPorCobrar = value
+        End Set
+    End Property
+    Public Property noCtaAuxiliar() As String
+        Get
+            Return pNoCtaAuxiliar
+        End Get
+        Set(value As String)
+            pNoCtaAuxiliar = value
+        End Set
+    End Property
+#End Region
     Private Sub frmMCaTransfCtaContAux_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim oAh As New wrAhorro.wsLibAhorro, oApp As New wrAdmin.wsLibAdmin
-        Me.txtResponsable.Text = sUsuario ' Me.Supervisor
+
+        Me.txtResponsable.Text = sUsuario
         Me.txtIdCuenta.ReadOnly = True
-        Me.dtpFecha.Value = oApp.Fecha
-        dsDetalle = oAh.ObtenerDetalleTransferenciaVacio
+        Me.dtpFecha.Value = Now
+        dsDetalle = ahorro.ObtenerDetalleTransferenciaVacio
     End Sub
     Private Sub Encabezado()
         fg.Cols.Item(1).Caption = "No."
@@ -520,13 +548,11 @@ Public Class frmMCaTransfCtaContAux
 
     Private Sub txtDui_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDui.LostFocus
         If Me.txtDui.Text.Trim = "" Then Exit Sub
-        Dim oAh As wrAhorro.wsLibAhorro, oAsoc As wrAsociados.wsLibAsoc
+
         Dim dr As DataRow, ds As New Data.DataSet
         Try
-            oAh = New wrAhorro.wsLibAhorro
-            oAsoc = New wrAsociados.wsLibAsoc
 
-            ds = oAsoc.ConsultarAsociado("DUI,Nombres+' '+Apellido1+' '+Apellido2+' '+ApellidoCas as NombreAsociado,NoSocio", "Dui='" & Me.txtDui.Value & "'", "DUI", sUsuario, sPassword, sSucursal)
+            ds = asociados.ConsultarAsociado("DUI,Nombres+' '+Apellido1+' '+Apellido2+' '+ApellidoCas as NombreAsociado,NoSocio", "Dui='" & Me.txtDui.Value & "'", "DUI", sUsuario, sPassword, sSucursal)
             If ds.Tables("Cat_Asociados").Rows.Count > 0 Then
                 dr = ds.Tables("Cat_Asociados").Rows(0)
                 Me.txtDui.Value = dr("Dui").ToString.Trim
@@ -553,17 +579,12 @@ Public Class frmMCaTransfCtaContAux
         Dim frm As New frmAGenerico
         Dim sNomb, campos As String
         Dim ds As New Data.DataSet
-        Dim oAh As wrAhorro.wsLibAhorro, oAsoc As wrAsociados.wsLibAsoc
-        Dim oCred As wrCredito.wsLibCred
-
         Try
-            oAh = New wrAhorro.wsLibAhorro
-            oCred = New wrCredito.wsLibCred
-            oAsoc = New wrAsociados.wsLibAsoc
+
 
             campos = " DUI,Nombres+' '+Apellido1+' '+Apellido2+' '+ApellidoCas as NombreAsociado,"
             campos += "NoSocio,NIT,ISSS,LugarExtDUI,FechaExtDUI,NumPasaporte,EstadoIngreso,Fecha_Nac,Direccion "
-            ds = oAsoc.ConsultarAsociado(campos, "", "DUI", sUsuario, sPassword, sSucursal)
+            ds = asociados.ConsultarAsociado(campos, "", "DUI", sUsuario, sPassword, sSucursal)
             frm.Text = "Buscar Asociados"
             frm.Datos = ds
             frm.ColSeleccion = 0
@@ -599,24 +620,20 @@ Public Class frmMCaTransfCtaContAux
 
     Private Sub txtIdCuenta_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtIdCuenta.DoubleClick
         Dim ofrm As New frmAGenerico
-
         ofrm.Text = "Buscar Cuenta Contable"
-        Dim oPerif As wrConta.wsLibContab, ds As New Data.DataSet
+        Dim ds As New DataSet
+        Dim dts As DataSet
+        Dim dr As DataRow
         Try
-            oPerif = New wrConta.wsLibContab
-            ds = oPerif.ObtenerCatContab("idCuenta,Descripcion", "Final='S' and Inhabilitado = 'N' or (CuentaComun = '1')", "idCuenta", sUsuario, sPassword, sSucursal)
+
+            ds = contabilidad.ObtenerCatContab("idCuenta,Descripcion", "Final='S' and Inhabilitado = 'N' or (CuentaComun = '1')", "idCuenta", sUsuario, sPassword, sSucursal)
             ofrm.Datos = ds
             ofrm.ColSeleccion = 0
             ofrm.RefrescarGrid()
             ofrm.ShowDialog()
             Me.txtIdCuenta.Text = ofrm.Resultado.Trim
             Me.txtCuenta.Text = ofrm.Resultado2.Trim
-
-            Dim contabilidad As New wrConta.wsLibContab
-            Dim dts As DataSet
-            Dim dr As DataRow
             dts = contabilidad.RecuperarCodCostoXsucursal(sSucursal)
-
             dr = dts.Tables("CodCostos").Rows(0)
             txtCodCosto.Text = dr("Cod_CCosto")
             txtNombCosto.Text = dr("Descripcion")
@@ -642,7 +659,7 @@ Public Class frmMCaTransfCtaContAux
         Dim pSum As Double, dr As DataRow, x As Integer
         x = 0
         For Each dr In dsDetalle.Tables(0).Rows
-            pSum = pSum + dr("Valor")
+            pSum = pSum + (IIf(dr("IdCuenta") = "22010407" Or dr("IdCuenta") = "22010406" Or dr("IdCuenta") = "22010408" Or dr("IdCuenta") = "22010409", 0, dr("Valor")))
         Next
         If x > 0 Then
             Me.c1txtMonto.Enabled = False
@@ -659,14 +676,18 @@ Public Class frmMCaTransfCtaContAux
             ofrm.NoCuenta = Me.txtIdCuenta.Text.Trim
             ofrm.Dui = Me.txtDui.Value
             ofrm.Fecha = Me.dtpFecha.Value
+            ofrm.montoTransferencia = c1txtMonto.Value
+            ofrm.c1txtMonto.Value = c1txtMonto.Value
             ofrm.FrmT = Me
+            ofrm.ccCuenta = Me.txtCodCosto.Text.trim
+            ofrm.ctaconta1 = Me.txtIdCuenta.Text
             ofrm.ShowDialog()
             fg.DataSource = dsDetalle.Tables(0)
             fg.Refresh()
             Encabezado()
             SumaDetalle()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -686,7 +707,7 @@ Public Class frmMCaTransfCtaContAux
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -713,20 +734,24 @@ Public Class frmMCaTransfCtaContAux
         Try
             Limpiar()
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btNProcesar1_Click(sender As Object, e As EventArgs) Handles btNProcesar1.Click
-        Dim oCred As wrCredito.wsLibCred = New wrCredito.wsLibCred
+
         Dim dsDestino As New DataSet
-        Dim oAhorro As New wrAhorro.wsLibAhorro
-        Dim pResponse As String
+        Dim pResponse As String = ""
         Dim dsOrigen As New DataSet
-        Debug.Print("TEST")
+
         Try
-            pCodTransferencia = oAhorro.ObtenerCorrelativoTransferencia("CodTransferencia", "2", "(MONTH(Fecha) = '" & Me.dtpFecha.Value.Month & "')  AND (YEAR(Fecha) = " & Me.dtpFecha.Value.Year & ")", sUsuario, sPassword, sSucursal)
-            pResponse = oAhorro.TransferenciaCuentas(Me.c1txtNoDoc.Text.Trim, "2", Me.dtpFecha.Value.ToShortDateString, Me.txtDui.Value, Me.txtNoSocio.Text.Trim, Me.txtResponsable.Text.Trim, CDbl(Me.c1txtMonto.Text), Me.c1txtObservaciones.Text.Trim, Me.txtIdCuenta.Text.Trim, pCodTransferencia, Me.txtIdCuenta.Text.Trim, "", dsDetalle, "", "M", Me.c1txtNombreAsoc.Text.Trim, "0", sUsuario, sPassword, sSucursal, txtCodCosto.Text)
+            If ctaPorCobrar = True Then
+                pCodTransferencia = contabilidad.ingresarAbonoCuentaPorCobrarTransferencia(dtpFecha.Value.ToShortDateString, txtDui.Value, txtNoSocio.Text.Trim, sUsuario, c1txtMonto.Value, c1txtObservaciones.Text.Trim, c1txtNoDoc.Value, txtIdCuenta.Text.Trim, False, txtIdCuenta.Text.Trim, noCtaAuxiliar, fg.Item(0, "codCosto").ToString)
+            Else
+                pCodTransferencia = ahorro.ObtenerCorrelativoTransferencia("CodTransferencia", "2", "(MONTH(Fecha) = '" & Me.dtpFecha.Value.Month & "')  AND (YEAR(Fecha) = " & Me.dtpFecha.Value.Year & ")", sUsuario, sPassword, sSucursal)
+                pResponse = ahorro.TransferenciaCuentas(Me.c1txtNoDoc.Text.Trim, "2", Me.dtpFecha.Value.ToShortDateString, Me.txtDui.Value, Me.txtNoSocio.Text.Trim, Me.txtResponsable.Text.Trim, CDbl(Me.c1txtMonto.Text), Me.c1txtObservaciones.Text.Trim, Me.txtIdCuenta.Text.Trim, pCodTransferencia, Me.txtIdCuenta.Text.Trim, "", dsDetalle, "", "M", Me.c1txtNombreAsoc.Text.Trim, "0", sUsuario, sPassword, sSucursal, txtCodCosto.Text)
+            End If
+
             If pResponse <> "" Then
                 MessageBox.Show(pResponse, "Transferencia de Cuentas", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
@@ -740,10 +765,6 @@ Public Class frmMCaTransfCtaContAux
         End Try
     End Sub
 
-    Private Sub txtIdCuenta_TextChanged(sender As Object, e As EventArgs) Handles txtIdCuenta.TextChanged
-
-    End Sub
-
     Private Function VerificaPrestamo() As Boolean
         Dim dr As DataRow
 
@@ -755,11 +776,4 @@ Public Class frmMCaTransfCtaContAux
         Return False
     End Function
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtNombCosto.TextChanged
-
-    End Sub
-
-    Private Sub txtIdCuenta_MouseEnter(sender As Object, e As EventArgs) Handles txtIdCuenta.MouseEnter
-
-    End Sub
 End Class

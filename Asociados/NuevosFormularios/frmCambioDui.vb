@@ -1,10 +1,6 @@
 ﻿Public Class frmCambioDui
     Dim asociados As New wrAsociados.wsLibAsoc
 
-    Private Sub btnCambio_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-
-
-    End Sub
 
     Private Sub txtDuiAnt_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDuiAnt.Click
         Try
@@ -41,24 +37,21 @@
         Dim frm As New frmAGenerico
         Dim sTexto As String
         frm.Text = "Buscar Asociado"
-        Dim oAsoc As wrAsociados.wsLibAsoc, ds As New Data.DataSet, dr As DataRow
+        Dim ds As New Data.DataSet
         Try
-            oAsoc = New wrAsociados.wsLibAsoc
-            ds = oAsoc.ConsultarAsociado("DUI,CodAntiguo,NoSocio,Apellido1,Apellido2,Nombres", "", "Correlativo", sUsuario, sPassword, sSucursal) 'Ópcion que permite la busqueda del dui de los asociados.
-            'ds = oAsoc.ConsultarAsociado("DUI,CodAntiguo,NoSocio,Apellido1,Apellido2,Nombres", "DUI='" & txtDui.Text.Trim & "'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
+
+            ds = asociados.ConsultarAsociado("DUI,concat(rtrim(Nombres),' ',rtrim(Apellido1),' ',rtrim(apellido2),' ', rtrim(apellidocas))[Asociado]", "", "Asociado", sUsuario, sPassword, sSucursal)
+
             frm.Datos = ds
             frm.ColSeleccion = 0
             frm.RefrescarGrid()
+            frm.C1fgrdResultado.Cols.Item(1).Width = 100
+            frm.C1fgrdResultado.Cols.Item(2).Width = 500
             frm.ShowDialog()
-            If frm.Resultado.Trim = "" Then   'Filtrar Registros
+            txtDuiAnt.Text = frm.Resultado.ToString.Trim
+            txtAsociado.Text = frm.Resultado2
 
-            ElseIf frm.Resultado.Trim <> "" Then
-                sTexto = frm.Resultado.Trim
-                ds = oAsoc.ConsultarAsociado("DUI,Nombres,Apellido1,Apellido2,ApellidoCas,NoSocio,CodAntiguo", "DUI='" & sTexto & "'", "DUI,NoSocio", sUsuario, sPassword, sSucursal)
-                dr = ds.Tables(0).Rows(0)
-                Me.txtDuiAnt.Value = Trim(dr("DUI"))
-                Me.lblCliente.Text = Trim(dr("Nombres")) & ", " & dr("Apellido1") & " " & dr("Apellido2") & " " & dr("ApellidoCas")
-            End If
+
         Catch ex As Exception
             MessageBox.Show("Error en la recuperación de datos tabla Asociados- " & "System Error: " & ex.Message.ToString() & " Método: " & ex.TargetSite.Name, "Error de Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -66,32 +59,26 @@
     End Sub
 
     Private Sub btnImprimir1_Click(sender As Object, e As EventArgs) Handles btnImprimir1.Click
-        If MsgBox("¿Desea realizar esta transacción?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+
+        If MetroFramework.MetroMessageBox.Show(Me, "¿Desea continuar con la operación?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
             If txtDuiAnt.Text.Length >= 10 And txtNuevoDui.Text.Length >= 10 Then
                 If asociados.cambioDui(txtDuiAnt.Text.Trim, txtNuevoDui.Text.Trim) > 0 Then
-                    MsgBox("Cambio realizado exitosamente", MsgBoxStyle.Information)
+                    MetroFramework.MetroMessageBox.Show(Me, "Cambio realizado exitosamente", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+
                     Me.Close()
                 End If
             Else
-                MsgBox("El cambio no fue realizado, comunicarse con el administrador de sistema.", MsgBoxStyle.Critical)
+                MetroFramework.MetroMessageBox.Show(Me, "Cambio realizado exitosamente", Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
     End Sub
 
-    Private Sub frmCambioDui_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim dts As New DataSet
-        Dim data As New AutoCompleteStringCollection
-        dts = asociados.ConsultarAsociado("concat(nombres ,' ',Apellido1,' ',apellido2,' ',ApellidoCas) as asociado, dui", " ", " nombres", sUsuario, sPassword, sSucursal)
-        Dim i As Integer
-        For i = 0 To dts.Tables(0).Rows.Count - 1
-            data.Add(dts.Tables(0).Rows(i).Item("asociado").ToString.Trim)
-
-        Next
-
-        Me.TextBox1.AutoCompleteSource = AutoCompleteSource.CustomSource
-        Me.TextBox1.AutoCompleteCustomSource = data
-        Me.TextBox1.AutoCompleteMode = AutoCompleteMode.Suggest
 
 
+    Private Sub frmCambioDui_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

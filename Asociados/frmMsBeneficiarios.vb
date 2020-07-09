@@ -73,18 +73,18 @@ Public Class frmMsBeneficiarios
         Me.GroupBox1.Controls.Add(Me.C1fGrdDetBeneficiarios)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(27, 141)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 163)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(556, 236)
+        Me.GroupBox1.Size = New System.Drawing.Size(668, 272)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalle de Referencias"
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(192, 19)
+        Me.btnEliminar.Location = New System.Drawing.Point(230, 22)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(87, 28)
+        Me.btnEliminar.Size = New System.Drawing.Size(105, 32)
         Me.btnEliminar.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnEliminar.TabIndex = 130
         Me.btnEliminar.Text = "&Eliminar"
@@ -93,9 +93,9 @@ Public Class frmMsBeneficiarios
         '
         'btnModificar1
         '
-        Me.btnModificar1.Location = New System.Drawing.Point(99, 19)
+        Me.btnModificar1.Location = New System.Drawing.Point(119, 22)
         Me.btnModificar1.Name = "btnModificar1"
-        Me.btnModificar1.Size = New System.Drawing.Size(87, 28)
+        Me.btnModificar1.Size = New System.Drawing.Size(104, 32)
         Me.btnModificar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnModificar1.TabIndex = 129
         Me.btnModificar1.Text = "&Modificar"
@@ -104,9 +104,9 @@ Public Class frmMsBeneficiarios
         '
         'btnNuevo1
         '
-        Me.btnNuevo1.Location = New System.Drawing.Point(6, 19)
+        Me.btnNuevo1.Location = New System.Drawing.Point(7, 22)
         Me.btnNuevo1.Name = "btnNuevo1"
-        Me.btnNuevo1.Size = New System.Drawing.Size(87, 28)
+        Me.btnNuevo1.Size = New System.Drawing.Size(105, 32)
         Me.btnNuevo1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnNuevo1.TabIndex = 128
         Me.btnNuevo1.Text = "&Nuevo"
@@ -120,13 +120,14 @@ Public Class frmMsBeneficiarios
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.C1fGrdDetBeneficiarios.BackColor = System.Drawing.Color.White
-        Me.C1fGrdDetBeneficiarios.ColumnInfo = "10,1,0,0,0,85,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
+        Me.C1fGrdDetBeneficiarios.ColumnInfo = "10,1,0,0,0,110,Columns:0{Width:26;}" & Global.Microsoft.VisualBasic.ChrW(9)
         Me.C1fGrdDetBeneficiarios.ForeColor = System.Drawing.Color.Black
-        Me.C1fGrdDetBeneficiarios.Location = New System.Drawing.Point(6, 53)
+        Me.C1fGrdDetBeneficiarios.Location = New System.Drawing.Point(7, 61)
         Me.C1fGrdDetBeneficiarios.Name = "C1fGrdDetBeneficiarios"
         Me.C1fGrdDetBeneficiarios.Rows.Count = 2
-        Me.C1fGrdDetBeneficiarios.Size = New System.Drawing.Size(542, 177)
-        Me.C1fGrdDetBeneficiarios.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("C1fGrdDetBeneficiarios.Styles"))
+        Me.C1fGrdDetBeneficiarios.Rows.DefaultSize = 22
+        Me.C1fGrdDetBeneficiarios.Size = New System.Drawing.Size(651, 204)
+        Me.C1fGrdDetBeneficiarios.StyleInfo = resources.GetString("C1fGrdDetBeneficiarios.StyleInfo")
         Me.C1fGrdDetBeneficiarios.TabIndex = 3
         '
         'GroupBox4
@@ -142,9 +143,9 @@ Public Class frmMsBeneficiarios
         Me.GroupBox4.Controls.Add(Me.Label21)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox4.Location = New System.Drawing.Point(27, 63)
+        Me.GroupBox4.Location = New System.Drawing.Point(32, 73)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(556, 72)
+        Me.GroupBox4.Size = New System.Drawing.Size(668, 83)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos del Asociado"
@@ -152,37 +153,37 @@ Public Class frmMsBeneficiarios
         'txtDui
         '
         Me.txtDui.EditMask = "00000000-0"
-        Me.txtDui.Location = New System.Drawing.Point(44, 16)
+        Me.txtDui.Location = New System.Drawing.Point(53, 18)
         Me.txtDui.Name = "txtDui"
         Me.txtDui.NumericInput = False
-        Me.txtDui.Size = New System.Drawing.Size(120, 20)
+        Me.txtDui.Size = New System.Drawing.Size(144, 25)
         Me.txtDui.TabIndex = 0
         Me.txtDui.Tag = Nothing
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(84, 42)
+        Me.txtNombre.Location = New System.Drawing.Point(101, 48)
         Me.txtNombre.MaxLength = 10
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(464, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(557, 23)
         Me.txtNombre.TabIndex = 3
         '
         'txtCodAntiguo
         '
-        Me.txtCodAntiguo.Location = New System.Drawing.Point(444, 16)
+        Me.txtCodAntiguo.Location = New System.Drawing.Point(533, 18)
         Me.txtCodAntiguo.MaxLength = 10
         Me.txtCodAntiguo.Name = "txtCodAntiguo"
-        Me.txtCodAntiguo.Size = New System.Drawing.Size(104, 20)
+        Me.txtCodAntiguo.Size = New System.Drawing.Size(125, 23)
         Me.txtCodAntiguo.TabIndex = 2
         '
         'Label48
         '
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.Black
-        Me.Label48.Location = New System.Drawing.Point(350, 16)
+        Me.Label48.Location = New System.Drawing.Point(420, 18)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(88, 16)
+        Me.Label48.Size = New System.Drawing.Size(106, 19)
         Me.Label48.TabIndex = 114
         Me.Label48.Text = "Código Antiguo:"
         '
@@ -190,27 +191,27 @@ Public Class frmMsBeneficiarios
         '
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(6, 16)
+        Me.Label31.Location = New System.Drawing.Point(7, 18)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(32, 16)
+        Me.Label31.Size = New System.Drawing.Size(39, 19)
         Me.Label31.TabIndex = 94
         Me.Label31.Text = "Dui:"
         '
         'txtNoSocio
         '
-        Me.txtNoSocio.Location = New System.Drawing.Point(256, 16)
+        Me.txtNoSocio.Location = New System.Drawing.Point(307, 18)
         Me.txtNoSocio.MaxLength = 8
         Me.txtNoSocio.Name = "txtNoSocio"
-        Me.txtNoSocio.Size = New System.Drawing.Size(88, 20)
+        Me.txtNoSocio.Size = New System.Drawing.Size(106, 23)
         Me.txtNoSocio.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(170, 16)
+        Me.Label2.Location = New System.Drawing.Point(204, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "No. Asociado:"
         '
@@ -218,24 +219,25 @@ Public Class frmMsBeneficiarios
         '
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(6, 42)
+        Me.Label21.Location = New System.Drawing.Point(7, 48)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(72, 17)
+        Me.Label21.Size = New System.Drawing.Size(87, 20)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Asociado:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmMsBeneficiarios
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(602, 400)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(725, 511)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(585, 400)
+        Me.MinimumSize = New System.Drawing.Size(702, 462)
         Me.Name = "frmMsBeneficiarios"
         Me.ShowInTaskbar = False
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Mantenimiento de Beneficiarios"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.C1fGrdDetBeneficiarios, System.ComponentModel.ISupportInitialize).EndInit()
@@ -294,7 +296,7 @@ Public Class frmMsBeneficiarios
             C1fGrdDetBeneficiarios.DataSource = ds.Tables(0)
 
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -330,7 +332,7 @@ Public Class frmMsBeneficiarios
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -512,4 +514,9 @@ Public Class frmMsBeneficiarios
         End If
     End Sub
 
+    Private Sub frmMsBeneficiarios_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class

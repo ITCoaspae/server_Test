@@ -99,7 +99,7 @@ Public Class frmMPLBoletaPago
                                Format(Me.DateTimePicker1.Value, "SHORT DATE"), Format(Me.DateTimePicker2.Value, "SHORT DATE"), 4)
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

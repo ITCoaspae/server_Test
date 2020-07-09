@@ -62,11 +62,13 @@ Public Class frmConsultaBitacora
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dg.BackColor = System.Drawing.Color.White
         Me.dg.ColumnInfo = "9,1,0,0,0,85,Columns:0{Width:17;}" & Global.Microsoft.VisualBasic.ChrW(9)
-        Me.dg.Location = New System.Drawing.Point(23, 157)
+        Me.dg.ForeColor = System.Drawing.Color.Black
+        Me.dg.Location = New System.Drawing.Point(28, 181)
         Me.dg.Name = "dg"
         Me.dg.Rows.Count = 2
-        Me.dg.Size = New System.Drawing.Size(582, 236)
-        Me.dg.Styles = New C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("dg.Styles"))
+        Me.dg.Rows.DefaultSize = 21
+        Me.dg.Size = New System.Drawing.Size(572, 203)
+        Me.dg.StyleInfo = resources.GetString("dg.StyleInfo")
         Me.dg.TabIndex = 23
         '
         'GroupBox2
@@ -79,18 +81,18 @@ Public Class frmConsultaBitacora
         Me.GroupBox2.Controls.Add(Me.txtUsuario)
         Me.GroupBox2.Controls.Add(Me.txtTabla)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 63)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(578, 78)
+        Me.GroupBox2.Size = New System.Drawing.Size(693, 90)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "&Filtrar Registros por:"
         '
         'btnMostrar1
         '
-        Me.btnMostrar1.Location = New System.Drawing.Point(497, 40)
+        Me.btnMostrar1.Location = New System.Drawing.Point(596, 46)
         Me.btnMostrar1.Name = "btnMostrar1"
-        Me.btnMostrar1.Size = New System.Drawing.Size(75, 28)
+        Me.btnMostrar1.Size = New System.Drawing.Size(90, 32)
         Me.btnMostrar1.Style = MetroFramework.MetroColorStyle.Teal
         Me.btnMostrar1.TabIndex = 226
         Me.btnMostrar1.Text = "Mostrar"
@@ -100,53 +102,53 @@ Public Class frmConsultaBitacora
         '
         'chkFecha
         '
-        Me.chkFecha.Location = New System.Drawing.Point(322, 19)
+        Me.chkFecha.Location = New System.Drawing.Point(386, 22)
         Me.chkFecha.Name = "chkFecha"
-        Me.chkFecha.Size = New System.Drawing.Size(104, 24)
+        Me.chkFecha.Size = New System.Drawing.Size(125, 28)
         Me.chkFecha.TabIndex = 4
         Me.chkFecha.Text = "&Fecha"
         '
         'chkTabla
         '
-        Me.chkTabla.Location = New System.Drawing.Point(164, 19)
+        Me.chkTabla.Location = New System.Drawing.Point(197, 22)
         Me.chkTabla.Name = "chkTabla"
-        Me.chkTabla.Size = New System.Drawing.Size(104, 24)
+        Me.chkTabla.Size = New System.Drawing.Size(125, 28)
         Me.chkTabla.TabIndex = 2
         Me.chkTabla.Text = "&Tabla"
         '
         'chkUsuario
         '
-        Me.chkUsuario.Location = New System.Drawing.Point(6, 19)
+        Me.chkUsuario.Location = New System.Drawing.Point(7, 22)
         Me.chkUsuario.Name = "chkUsuario"
-        Me.chkUsuario.Size = New System.Drawing.Size(104, 24)
+        Me.chkUsuario.Size = New System.Drawing.Size(125, 28)
         Me.chkUsuario.TabIndex = 0
         Me.chkUsuario.Text = "&Usuario"
         '
         'dtpFecha
         '
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(322, 48)
+        Me.dtpFecha.Location = New System.Drawing.Point(386, 55)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(152, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(183, 22)
         Me.dtpFecha.TabIndex = 5
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(6, 48)
+        Me.txtUsuario.Location = New System.Drawing.Point(7, 55)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(152, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(183, 22)
         Me.txtUsuario.TabIndex = 1
         '
         'txtTabla
         '
-        Me.txtTabla.Location = New System.Drawing.Point(164, 48)
+        Me.txtTabla.Location = New System.Drawing.Point(197, 55)
         Me.txtTabla.Name = "txtTabla"
-        Me.txtTabla.Size = New System.Drawing.Size(152, 20)
+        Me.txtTabla.Size = New System.Drawing.Size(182, 22)
         Me.txtTabla.TabIndex = 3
         '
         'frmConsultaBitacora
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.ClientSize = New System.Drawing.Size(628, 446)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.dg)
@@ -172,7 +174,7 @@ Public Class frmConsultaBitacora
             ds = oAdm.ConsultarBitacora(wrAdmin.TipoBusquedaBitacora.porRangoFechas, Me.dtpFecha.Value.ToShortDateString, Me.dtpFecha.Value.ToShortDateString, wrAdmin.Modulos.Todos, "", "", sUsuario, sPassword, sSucursal)
             dg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error en la Aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error)
+           MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -231,7 +233,13 @@ Public Class frmConsultaBitacora
             ds = oAdm.ConsultarBitacoraxFiltro(pFiltro, sUsuario, sPassword, sSucursal)
             dg.DataSource = ds.Tables(0)
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+             MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub frmConsultaBitacora_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
 End Class

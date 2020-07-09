@@ -1,4 +1,7 @@
-﻿Public Class frmMsCargaPlanillaPagosPrest
+﻿Imports System.IO
+Imports System.Text
+
+Public Class frmMsCargaPlanillaPagosPrest
     Dim prestamos As New wrPrestamo.wsLibPrest
     Dim Bancos As New wrBancos.wsLibBancos
     Dim Creditos As New wrCredito.wsLibCred
@@ -119,15 +122,60 @@
 
     Private Sub btnCargar1_Click(sender As Object, e As EventArgs) Handles btnCargar1.Click
         Try
-            Me.OpenFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
-            Me.OpenFileDialog1.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx||"
-            If Me.OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
-                ObjDataset = ImportarExcel_Datagrid(Me.OpenFileDialog1.FileName)
-                LlenarDg(ObjDataset)
+            Dim dt As DataTable
+            Dim dts As New DataSet
+            dt = New DataTable("cuentas")
+            dt.Columns.Add("dui")
+            dt.Columns.Add("codprestamo")
+            'dtTransferencias.Columns.Add("Cta Origen")
+            dt.Columns.Add("cuota")
+
+
+            Dim fName As String = ""
+            OpenFileDialog1.InitialDirectory = "c:\documents"
+            OpenFileDialog1.Filter = "CSV files(*.csv)|*.csv"
+            OpenFileDialog1.FilterIndex = 2
+            OpenFileDialog1.RestoreDirectory = True
+            If (OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                fName = OpenFileDialog1.FileName
             End If
+            ' txtpathfile.Text = fName
+            Dim TextLine As String = ""
+            Dim SplitLine() As String
+
+
+            If System.IO.File.Exists(fName) = True Then
+                Dim objReader As New System.IO.StreamReader(fName, Encoding.ASCII)
+                Do While objReader.Peek() <> -1
+                    TextLine = objReader.ReadLine()
+                    SplitLine = Split(TextLine, ";")
+
+                    dt.Rows.Add(SplitLine)
+                    'Me.DataGridView1.Rows.Add(SplitLine)
+                Loop
+                ObjDataset.Tables.Add(dt)
+                Me.DataGridView1.DataSource = ObjDataset.Tables(0)
+            Else
+                MsgBox("File Does Not Exist")
+            End If
+
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End Try
+
+
+
+
+        'Try
+        '    Me.OpenFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
+        '    Me.OpenFileDialog1.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx||"
+        '    If Me.OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        '        ObjDataset = ImportarExcel_Datagrid(Me.OpenFileDialog1.FileName)
+        '        LlenarDg(ObjDataset)
+        '    End If
+        'Catch ex As Exception
+        '    MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        'End Try
     End Sub
 
     Private Sub btnProcesar1_Click(sender As Object, e As EventArgs) Handles btnProcesar1.Click
@@ -143,6 +191,7 @@
                                                                              Me.cbCtaOrigen.SelectedValue.ToString, sUsuario, ObjDataset)
                         If resultado <> 0 Then
                             MsgBox("Transacción realizada exitosamente", MsgBoxStyle.Information, "Módulo - Créditos")
+                            DataGridView1.DataSource = Nothing
                         Else
                             MsgBox("Error, por favor comunicarse con el administrador del sistema", MsgBoxStyle.Critical, "Módulo - Créditos")
                         End If
@@ -152,7 +201,38 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox(mensajeError, MsgBoxStyle.Critical)
+            MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        Try
+            Dim archivo As String = "plantillaCargaPrestamo.csv"
+
+
+            Dim folderBrowse As New FolderBrowserDialog
+            Dim ruta As String
+
+            If folderBrowse.ShowDialog() = DialogResult.OK Then
+                ruta = folderBrowse.SelectedPath
+            End If
+
+
+
+
+
+            Dim path As String = ruta & "\" & archivo '"c:\temp\MyTest.txt"
+
+            ' Create or overwrite the file.
+            Dim fs As FileStream = File.Create(path)
+
+            ' Add text to the file.
+            Dim info As Byte() = New UTF8Encoding(True).GetBytes("00000000-0;01000002601;0.00")
+            fs.Write(info, 0, info.Length)
+            fs.Close()
+            MsgBox("Archivo " & archivo.ToString & " creado en: " & ruta, MsgBoxStyle.Information)
+        Catch ex As Exception
+
         End Try
     End Sub
 End Class

@@ -339,6 +339,14 @@ Partial Public Class dsContratoMutuo
         
         Private columnGarantias As Global.System.Data.DataColumn
         
+        Private columnCodTipoGarantias As Global.System.Data.DataColumn
+        
+        Private columnDescripcion As Global.System.Data.DataColumn
+        
+        Private _columngarantias As Global.System.Data.DataColumn
+        
+        Private columncuotaEnletra As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -599,6 +607,38 @@ Partial Public Class dsContratoMutuo
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CodTipoGarantiasColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCodTipoGarantias
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescripcionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescripcion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property _garantiasColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me._columngarantias
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cuotaEnletraColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncuotaEnletra
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -663,9 +703,13 @@ Partial Public Class dsContratoMutuo
                     ByVal TasaLetras As String,  _
                     ByVal FechaImpresion As String,  _
                     ByVal Column1 As String,  _
-                    ByVal Garantias As String) As SP_RPT_ContratoMutuoRow
+                    ByVal Garantias As String,  _
+                    ByVal CodTipoGarantias As String,  _
+                    ByVal Descripcion As String,  _
+                    ByVal _garantias As String,  _
+                    ByVal cuotaEnletra As String) As SP_RPT_ContratoMutuoRow
             Dim rowSP_RPT_ContratoMutuoRow As SP_RPT_ContratoMutuoRow = CType(Me.NewRow,SP_RPT_ContratoMutuoRow)
-            Dim columnValuesArray() As Object = New Object() {Usuario, NoSocio, Asociado, Monto, LineaCredito, CodPrestamo, Cuotas, CuotaMensual, Tasa_Interes, Letras, Nom_Sucursal, Direccion, FormaPago, DUI_Letras, NIT_Letras, Nit_Empresa, EDAD, Municipio, Departamento, Profesion, SocioLetras, EDAD1, PLazoLetras, DiaPago, TasaLetras, FechaImpresion, Column1, Garantias}
+            Dim columnValuesArray() As Object = New Object() {Usuario, NoSocio, Asociado, Monto, LineaCredito, CodPrestamo, Cuotas, CuotaMensual, Tasa_Interes, Letras, Nom_Sucursal, Direccion, FormaPago, DUI_Letras, NIT_Letras, Nit_Empresa, EDAD, Municipio, Departamento, Profesion, SocioLetras, EDAD1, PLazoLetras, DiaPago, TasaLetras, FechaImpresion, Column1, Garantias, CodTipoGarantias, Descripcion, _garantias, cuotaEnletra}
             rowSP_RPT_ContratoMutuoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSP_RPT_ContratoMutuoRow)
             Return rowSP_RPT_ContratoMutuoRow
@@ -722,6 +766,10 @@ Partial Public Class dsContratoMutuo
             Me.columnFechaImpresion = MyBase.Columns("FechaImpresion")
             Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnGarantias = MyBase.Columns("Garantias")
+            Me.columnCodTipoGarantias = MyBase.Columns("CodTipoGarantias")
+            Me.columnDescripcion = MyBase.Columns("Descripcion")
+            Me._columngarantias = MyBase.Columns("garantias")
+            Me.columncuotaEnletra = MyBase.Columns("cuotaEnletra")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -783,7 +831,20 @@ Partial Public Class dsContratoMutuo
             MyBase.Columns.Add(Me.columnColumn1)
             Me.columnGarantias = New Global.System.Data.DataColumn("Garantias", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGarantias)
+            Me.columnCodTipoGarantias = New Global.System.Data.DataColumn("CodTipoGarantias", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCodTipoGarantias)
+            Me.columnDescripcion = New Global.System.Data.DataColumn("Descripcion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescripcion)
+            Me._columngarantias = New Global.System.Data.DataColumn("garantias", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me._columngarantias.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "_garantias")
+            Me._columngarantias.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "_garantiasColumn")
+            Me._columngarantias.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columngarantias")
+            Me._columngarantias.ExtendedProperties.Add("Generator_UserColumnName", "garantias")
+            MyBase.Columns.Add(Me._columngarantias)
+            Me.columncuotaEnletra = New Global.System.Data.DataColumn("cuotaEnletra", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncuotaEnletra)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCodPrestamo}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me.columnCodTipoGarantias}, false))
             Me.columnUsuario.ReadOnly = true
             Me.columnUsuario.MaxLength = 1
             Me.columnNoSocio.AllowDBNull = false
@@ -827,6 +888,14 @@ Partial Public Class dsContratoMutuo
             Me.columnColumn1.MaxLength = 2000
             Me.columnGarantias.ReadOnly = true
             Me.columnGarantias.MaxLength = 2000
+            Me.columnCodTipoGarantias.AllowDBNull = false
+            Me.columnCodTipoGarantias.Unique = true
+            Me.columnCodTipoGarantias.MaxLength = 10
+            Me.columnDescripcion.MaxLength = 100
+            Me._columngarantias.ReadOnly = true
+            Me._columngarantias.MaxLength = 1102
+            Me.columncuotaEnletra.ReadOnly = true
+            Me.columncuotaEnletra.MaxLength = 500
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1385,6 +1454,62 @@ Partial Public Class dsContratoMutuo
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CodTipoGarantias() As String
+            Get
+                Return CType(Me(Me.tableSP_RPT_ContratoMutuo.CodTipoGarantiasColumn),String)
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoMutuo.CodTipoGarantiasColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Descripcion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoMutuo.DescripcionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Descripcion' in table 'SP_RPT_ContratoMutuo' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoMutuo.DescripcionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _garantias() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoMutuo._garantiasColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'garantias' in table 'SP_RPT_ContratoMutuo' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoMutuo._garantiasColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cuotaEnletra() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSP_RPT_ContratoMutuo.cuotaEnletraColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cuotaEnletra' in table 'SP_RPT_ContratoMutuo' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSP_RPT_ContratoMutuo.cuotaEnletraColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsUsuarioNull() As Boolean
             Return Me.IsNull(Me.tableSP_RPT_ContratoMutuo.UsuarioColumn)
         End Function
@@ -1694,6 +1819,42 @@ Partial Public Class dsContratoMutuo
         Public Sub SetGarantiasNull()
             Me(Me.tableSP_RPT_ContratoMutuo.GarantiasColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescripcionNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoMutuo.DescripcionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescripcionNull()
+            Me(Me.tableSP_RPT_ContratoMutuo.DescripcionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_garantiasNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoMutuo._garantiasColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_garantiasNull()
+            Me(Me.tableSP_RPT_ContratoMutuo._garantiasColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscuotaEnletraNull() As Boolean
+            Return Me.IsNull(Me.tableSP_RPT_ContratoMutuo.cuotaEnletraColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcuotaEnletraNull()
+            Me(Me.tableSP_RPT_ContratoMutuo.cuotaEnletraColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1889,6 +2050,10 @@ Namespace dsContratoMutuoTableAdapters
             tableMapping.ColumnMappings.Add("FechaImpresion", "FechaImpresion")
             tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("Garantias", "Garantias")
+            tableMapping.ColumnMappings.Add("CodTipoGarantias", "CodTipoGarantias")
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion")
+            tableMapping.ColumnMappings.Add("garantias", "garantias")
+            tableMapping.ColumnMappings.Add("cuotaEnletra", "cuotaEnletra")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         

@@ -60,7 +60,7 @@
                     chkInhabilitada.Checked = False
                 End If
             Else
-                MsgBox(mensajeError, MsgBoxStyle.Critical)
+                 MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             End If
         End If
     End Sub
@@ -115,7 +115,7 @@
                     MsgBox("Registro ingresado exitosamente.", MsgBoxStyle.Information)
                     Me.Close()
                 Else
-                    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             ElseIf accion = 2 Then 'Modificar
 
@@ -137,7 +137,7 @@
                     MsgBox("Registro actualizado exitosamente.", MsgBoxStyle.Information)
                     Me.Close()
                 Else
-                    MsgBox(mensajeError, MsgBoxStyle.Critical)
+                     MetroFramework.MetroMessageBox.Show(Me, mensajeError, Me.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 End If
             End If
         End If
